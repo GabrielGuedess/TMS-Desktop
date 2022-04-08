@@ -115,7 +115,7 @@
         iQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="buttonDash.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="buttonClientes.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABIAAAATCAYAAACdkl3yAAAABGdBTUEAALGPC/xhBQAAAF1JREFUOE/t
         kUEKACAIBHt6P7eCCTq4boeODYhFyyTYIqJX1SB7O2sFSvD4HF2C54sK8Kxcuq1d1yILeQmxdxNxlfif
@@ -45806,7 +45806,7 @@
         PoLlX4D0Hpe7IAj+AtlOw2d+rSVQAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="button7.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="buttonPesquisaCEP.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAXxJREFUOE+d
         kr9KxEAQxnMP4B/wAez8B4KIJ4qNvoEgEbKbhJDb3RQq1oeFYC8Wgi+grT6BCDY22h1WWoiIIhx3J4h6
