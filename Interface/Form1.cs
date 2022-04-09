@@ -64,29 +64,14 @@ namespace Interface
             }
         }
 
-        private void button1_MouseLeave(object sender, EventArgs e)
-        {
-
-        }
-
         private void buttonDash_Click_1(object sender, EventArgs e)
         {
             activeDash = "Dash";
-
             utilidades.rePaintWhite(e, buttonPrice, buttonEx);
             utilidades.rePaintTransaparent(e, lineEx, linePrice);
-            /* buttonEx.ForeColor = Color.White;
-             lineEx.BackColor = Color.Transparent;
-             buttonPrice.ForeColor = Color.White;
-             linePrice.BackColor = Color.Transparent;*/
+            utilidades.paintButton_Panel(e, buttonClientes, lineDash);
+            contentCliente.Visible = true;
 
-            //if (activeDash == "Dash")
-           // {
-                utilidades.paintButton_Panel(e, buttonClientes, lineDash);
-               /* buttonClientes.ForeColor = Color.FromArgb(0, 98, 255);
-                lineDash.BackColor = Color.FromArgb(0, 98, 255);*/
-                contentCliente.Visible = true;
-            //}
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -95,19 +80,8 @@ namespace Interface
 
             utilidades.rePaintWhite(e, buttonClientes, buttonPrice);
             utilidades.rePaintTransaparent(e, lineDash, linePrice);
-            /*buttonClientes.ForeColor = Color.White;
-            lineDash.BackColor = Color.Transparent;
-            buttonPrice.ForeColor = Color.White;
-            linePrice.BackColor = Color.Transparent;*/
             contentCliente.Visible = false;
-
-            if (activeDash == "Exchange")
-            {
-                utilidades.paintButton_Panel(e, buttonEx, lineEx);
-
-               /* buttonEx.ForeColor = Color.FromArgb(0, 98, 255);
-                lineEx.BackColor = Color.FromArgb(0, 98, 255);*/
-            }
+            utilidades.paintButton_Panel(e, buttonEx, lineEx);
         }
 
         private void buttonPrice_Click(object sender, EventArgs e)
@@ -115,18 +89,7 @@ namespace Interface
             activeDash = "Price";
             utilidades.rePaintWhite(e, buttonClientes, buttonEx);
             utilidades.rePaintTransaparent(e, lineDash, lineEx);
-            /*buttonClientes.ForeColor = Color.White;
-            lineDash.BackColor = Color.Transparent;
-            buttonEx.ForeColor = Color.White;
-            lineEx.BackColor = Color.Transparent;*/
-
-            if (activeDash == "Price")
-            {
-                utilidades.paintButton_Panel(e, buttonPrice, linePrice);
-
-                /*buttonPrice.ForeColor = Color.FromArgb(0, 98, 255);
-                linePrice.BackColor = Color.FromArgb(0, 98, 255);*/
-            }
+            utilidades.paintButton_Panel(e, buttonPrice, linePrice);
         }
 
 
@@ -135,37 +98,8 @@ namespace Interface
             activeOver = "Over";
             utilidades.rePaintWhite(e, buttonCa, buttonUp, buttonDel);
             utilidades.rePaintTransaparent(e, lineCa, lineUp, lineDel);
-            /*buttonCa.ForeColor = Color.White;
-            buttonUp.ForeColor = Color.White;
-            buttonDel.ForeColor = Color.White;
-
-            lineCa.BackColor = Color.Transparent;
-            lineUp.BackColor = Color.Transparent;
-            lineDel.BackColor = Color.Transparent;*/
-
-            if (activeOver == "Over")
-            {
-                utilidades.paintButton_Panel(e, buttonOver, lineOver);
-                /*buttonOver.ForeColor = Color.FromArgb(0, 98, 255);
-                lineOver.BackColor = Color.FromArgb(0, 98, 255);*/
-            }
+            utilidades.paintButton_Panel(e, buttonOver, lineOver);
         }
-
-        /*private void buttonOver_MouseHover(object sender, EventArgs e)
-        {
-            if (activeOver != "Over")
-            {
-                buttonOver.ForeColor = Color.FromArgb(0, 98, 255);
-            }
-        }
-
-        private void buttonOver_MouseLeave(object sender, EventArgs e)
-        {
-            if (activeOver != "Over")
-            {
-                buttonOver.ForeColor = Color.White;
-            }
-        }*/
         private void buttonOver_MouseHover(object sender, EventArgs e)
         {
             if (activeDash != "Dash")
@@ -185,26 +119,10 @@ namespace Interface
         }
         public void buttonCa_Click(object sender, EventArgs e)
         {
-            
             utilidades.rePaintWhite( e, buttonOver, buttonUp, buttonDel);
             activeOver = "Cadastro";
-
-            /*buttonOver.ForeColor = Color.White;
-            buttonUp.ForeColor = Color.White;
-            buttonDel.ForeColor = Color.White;*/
-
-        utilidades.rePaintTransaparent(e, lineOver, lineUp, lineDel);
-
-            /*lineOver.BackColor = Color.Transparent;
-            lineUp.BackColor = Color.Transparent;
-            lineDel.BackColor = Color.Transparent;*/
-
-            if (activeOver == "Cadastro")
-           {
-                utilidades.paintButton_Panel(e, buttonCa, lineCa);
-                /*buttonCa.ForeColor = Color.FromArgb(0, 98, 255);
-                lineCa.BackColor = Color.FromArgb(0, 98, 255);*/
-            }
+            utilidades.rePaintTransaparent(e, lineOver, lineUp, lineDel);
+            utilidades.paintButton_Panel(e, buttonCa, lineCa);  
         }
 
         private void buttonUp_Click(object sender, EventArgs e)
@@ -212,47 +130,15 @@ namespace Interface
             activeOver = "Update";
             utilidades.rePaintWhite(e, buttonOver, buttonCa, buttonDel);
             utilidades.rePaintTransaparent(e, lineOver, lineCa, lineDel);
-
-            /*buttonOver.ForeColor = Color.White;
-            buttonCa.ForeColor = Color.White;
-            buttonDel.ForeColor = Color.White;
-
-            lineOver.BackColor = Color.Transparent;
-            lineCa.BackColor = Color.Transparent;
-            lineDel.BackColor = Color.Transparent;*/
-
-            if (activeOver == "Update")
-            {
-                utilidades.paintButton_Panel(e, buttonUp, lineUp);
-
-                /*buttonUp.ForeColor = Color.FromArgb(0, 98, 255);
-                lineUp.BackColor = Color.FromArgb(0, 98, 255);*/
-            }
-            
+            utilidades.paintButton_Panel(e, buttonUp, lineUp);
         }
-        
 
         private void buttonDel_Click(object sender, EventArgs e)
         {
             activeOver = "Delete";
             utilidades.rePaintWhite(e, buttonOver, buttonCa, buttonUp);
             utilidades.rePaintTransaparent(e, lineOver, lineCa, lineUp);
-
-            /*buttonOver.ForeColor = Color.White;
-            buttonCa.ForeColor = Color.White;
-            buttonUp.ForeColor = Color.White;
-
-            lineOver.BackColor = Color.Transparent;
-            lineCa.BackColor = Color.Transparent;
-            lineUp.BackColor = Color.Transparent;*/
-
-            if (activeOver == "Delete")
-            {
-                utilidades.paintButton_Panel(e, buttonDel, lineDel);
-
-                /*buttonDel.ForeColor = Color.FromArgb(0, 98, 255);
-                lineDel.BackColor = Color.FromArgb(0, 98, 255);*/
-            }
+            utilidades.paintButton_Panel(e, buttonDel, lineDel);
         }
 
         private void panel1_Paint_1(object sender, PaintEventArgs e)
@@ -298,31 +184,15 @@ namespace Interface
                 Y = panelPessoaJuridica.Height / 2 - pessoaFisica.Height / 2
             };
 
-            utilidades.expansivePanels(panel51, panel13, panelTextCPFClient,
+            utilidades.expansivePanels(panel51, panelSerch, panelTextCPFClient,
                 panelTextNomeClient, panelDateTimerClient, panelTextRGClient, panelTextTelefoneCLient,
                 panelTextEmailClient, panelTextCEPClient, panelTextEnderecoClient, panelTextNumHomeClient);
-           /* panel13.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel13.Width, panel13.Height, 10, 10));
-            panel51.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel51.Width, panel51.Height, 10, 10));
-            panelTextCPFClient.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panelTextCPFClient.Width, panelTextCPFClient.Height, 10, 10));
-            panelTextNomeClient.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panelTextNomeClient.Width, panelTextNomeClient.Height, 10, 10));
-            panelDateTimerClient.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panelDateTimerClient.Width, panelDateTimerClient.Height, 10, 10));
-            panelTextRGClient.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panelTextRGClient.Width, panelTextRGClient.Height, 10, 10));
-            panelTextTelefoneCLient.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panelTextTelefoneCLient.Width, panelTextTelefoneCLient.Height, 10, 10));
-            panelTextEmailClient.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panelTextEmailClient.Width, panelTextEmailClient.Height, 10, 10));
-            panelTextCEPClient.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panelTextCEPClient.Width, panelTextCEPClient.Height, 10, 10));
-            panelTextEnderecoClient.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panelTextEnderecoClient.Width, panelTextEnderecoClient.Height, 10, 10));
-            panelTextNumHomeClient.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panelTextNumHomeClient.Width, panelTextNumHomeClient.Height, 10, 10));*/
+           
         }
 
         private void panel15_Paint(object sender, PaintEventArgs e)
         {
             utilidades.RepitarPanelPaint(e, panelPessoaFisica);
-           /* ControlPaint.DrawBorder(e.Graphics, panelPessoaFisica.ClientRectangle,
-            Color.Transparent, 1, ButtonBorderStyle.Solid, // left
-            Color.Transparent, 1, ButtonBorderStyle.Solid, // top
-            Color.Transparent, 1, ButtonBorderStyle.Solid, // right
-            Color.FromArgb(0, 98, 255), 1, ButtonBorderStyle.Solid);// bottom*/
-
             pessoaFisica.Location = new Point()
             {
                 X = panelPessoaFisica.Width / 2 - pessoaFisica.Width / 2,
@@ -333,11 +203,7 @@ namespace Interface
         private void panel20_Paint(object sender, PaintEventArgs e)
         {
             utilidades.RepitarPanelPaint(e, panelPessoaJuridica);
-            /*ControlPaint.DrawBorder(e.Graphics, panelPessoaJuridica.ClientRectangle,
-            Color.Transparent, 1, ButtonBorderStyle.Solid, // left
-            Color.Transparent, 1, ButtonBorderStyle.Solid, // top
-            Color.Transparent, 1, ButtonBorderStyle.Solid, // right
-            Color.FromArgb(0, 98, 255), 1, ButtonBorderStyle.Solid);// bottom*/
+            
 
             pessoaJuridica.Location = new Point()
             {
@@ -346,59 +212,9 @@ namespace Interface
             };
         }
 
-        private void panel22_Paint(object sender, PaintEventArgs e)
-        {
-            panelTextCPFClient.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panelTextCPFClient.Width, panelTextCPFClient.Height, 10, 10));
-        }
-
-        private void panel13_Paint(object sender, PaintEventArgs e)
-        {
-            panel13.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel13.Width, panel13.Height, 10, 10));
-        }
-
         private void panel51_Paint(object sender, PaintEventArgs e)
         {
             panel51.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel51.Width, panel51.Height, 10, 10));
-        }
-
-        private void panel27_Paint(object sender, PaintEventArgs e)
-        {
-            panelTextNomeClient.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panelTextNomeClient.Width, panelTextNomeClient.Height, 10, 10));
-        }
-
-        private void panel30_Paint(object sender, PaintEventArgs e)
-        {
-            panelDateTimerClient.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panelDateTimerClient.Width, panelDateTimerClient.Height, 10, 10));
-        }
-
-        private void panel35_Paint(object sender, PaintEventArgs e)
-        {
-            panelTextRGClient.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panelTextRGClient.Width, panelTextRGClient.Height, 10, 10));
-        }
-
-        private void panel38_Paint(object sender, PaintEventArgs e)
-        {
-            panelTextTelefoneCLient.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panelTextTelefoneCLient.Width, panelTextTelefoneCLient.Height, 10, 10));
-        }
-
-        private void panel40_Paint(object sender, PaintEventArgs e)
-        {
-            panelTextEmailClient.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panelTextEmailClient.Width, panelTextEmailClient.Height, 10, 10));
-        }
-
-        private void panel43_Paint(object sender, PaintEventArgs e)
-        {
-            panelTextCEPClient.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panelTextCEPClient.Width, panelTextCEPClient.Height, 10, 10));
-        }
-
-        private void panel48_Paint(object sender, PaintEventArgs e)
-        {
-            panelTextEnderecoClient.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panelTextEnderecoClient.Width, panelTextEnderecoClient.Height, 10, 10));
-        }
-
-        private void panel49_Paint(object sender, PaintEventArgs e)
-        {
-            panelTextNumHomeClient.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panelTextNumHomeClient.Width, panelTextNumHomeClient.Height, 10, 10));
         }
 
     }

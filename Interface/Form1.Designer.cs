@@ -56,7 +56,6 @@ namespace Interface
             this.button2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.panel13 = new System.Windows.Forms.Panel();
             this.textSearch = new System.Windows.Forms.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -151,6 +150,7 @@ namespace Interface
             this.pessoaJuridica = new System.Windows.Forms.RadioButton();
             this.panelPessoaFisica = new System.Windows.Forms.Panel();
             this.pessoaFisica = new System.Windows.Forms.RadioButton();
+            this.panelSerch = new Interface.Properties.PanelBorderRounded();
             this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
@@ -159,7 +159,6 @@ namespace Interface
             this.panelPrices.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel8.SuspendLayout();
-            this.panel13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel18.SuspendLayout();
@@ -208,6 +207,7 @@ namespace Interface
             this.tableLayoutPanel2.SuspendLayout();
             this.panelPessoaJuridica.SuspendLayout();
             this.panelPessoaFisica.SuspendLayout();
+            this.panelSerch.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel2
@@ -588,7 +588,6 @@ namespace Interface
             // panel8
             // 
             this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel8.Controls.Add(this.panel13);
             this.panel8.Controls.Add(this.tableLayoutPanel1);
             this.panel8.Location = new System.Drawing.Point(288, 0);
             this.panel8.Margin = new System.Windows.Forms.Padding(0);
@@ -596,19 +595,6 @@ namespace Interface
             this.panel8.Padding = new System.Windows.Forms.Padding(25, 0, 25, 0);
             this.panel8.Size = new System.Drawing.Size(1025, 70);
             this.panel8.TabIndex = 6;
-            // 
-            // panel13
-            // 
-            this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panel13.Controls.Add(this.textSearch);
-            this.panel13.Controls.Add(this.pictureBox3);
-            this.panel13.Location = new System.Drawing.Point(25, 17);
-            this.panel13.Margin = new System.Windows.Forms.Padding(0, 17, 25, 0);
-            this.panel13.Name = "panel13";
-            this.panel13.Padding = new System.Windows.Forms.Padding(15, 0, 5, 0);
-            this.panel13.Size = new System.Drawing.Size(211, 36);
-            this.panel13.TabIndex = 2;
-            this.panel13.Paint += new System.Windows.Forms.PaintEventHandler(this.panel13_Paint);
             // 
             // textSearch
             // 
@@ -618,11 +604,11 @@ namespace Interface
             this.textSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.textSearch.ForeColor = System.Drawing.Color.White;
-            this.textSearch.Location = new System.Drawing.Point(40, 8);
+            this.textSearch.Location = new System.Drawing.Point(62, 10);
             this.textSearch.Margin = new System.Windows.Forms.Padding(10, 21, 0, 0);
             this.textSearch.Name = "textSearch";
             this.textSearch.PlaceholderText = "Search";
-            this.textSearch.Size = new System.Drawing.Size(166, 19);
+            this.textSearch.Size = new System.Drawing.Size(144, 19);
             this.textSearch.TabIndex = 6;
             // 
             // pictureBox3
@@ -630,7 +616,7 @@ namespace Interface
             this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(15, 10);
+            this.pictureBox3.Location = new System.Drawing.Point(15, 14);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(0, 2, 0, 0);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(15, 15);
@@ -653,6 +639,7 @@ namespace Interface
             this.tableLayoutPanel1.Controls.Add(this.panel14, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel3, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panelSerch, 0, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(25, 1);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(25, 0, 25, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -1381,7 +1368,7 @@ namespace Interface
             this.textRGClient.ForeColor = System.Drawing.Color.White;
             this.textRGClient.Location = new System.Drawing.Point(10, 10);
             this.textRGClient.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
-            this.textRGClient.Mask = "000.000.000-0";
+            this.textRGClient.Mask = "00.000.000-0";
             this.textRGClient.Name = "textRGClient";
             this.textRGClient.Size = new System.Drawing.Size(225, 19);
             this.textRGClient.TabIndex = 0;
@@ -1693,6 +1680,7 @@ namespace Interface
             // 
             this.panelTextNumHomeClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
             this.panelTextNumHomeClient.Controls.Add(this.textNumHomeClient);
+            this.panelTextNumHomeClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.panelTextNumHomeClient.Location = new System.Drawing.Point(159, 33);
             this.panelTextNumHomeClient.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelTextNumHomeClient.Name = "panelTextNumHomeClient";
@@ -1707,7 +1695,7 @@ namespace Interface
             this.textNumHomeClient.Location = new System.Drawing.Point(5, 10);
             this.textNumHomeClient.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
             this.textNumHomeClient.Name = "textNumHomeClient";
-            this.textNumHomeClient.Size = new System.Drawing.Size(50, 14);
+            this.textNumHomeClient.Size = new System.Drawing.Size(50, 19);
             this.textNumHomeClient.TabIndex = 0;
             // 
             // panelTextEnderecoClient
@@ -1845,6 +1833,17 @@ namespace Interface
             this.pessoaFisica.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.pessoaFisica.UseVisualStyleBackColor = true;
             // 
+            // panelSerch
+            // 
+            this.panelSerch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.panelSerch.Controls.Add(this.pictureBox3);
+            this.panelSerch.Controls.Add(this.textSearch);
+            this.panelSerch.Location = new System.Drawing.Point(5, 0);
+            this.panelSerch.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.panelSerch.Name = "panelSerch";
+            this.panelSerch.Size = new System.Drawing.Size(211, 36);
+            this.panelSerch.TabIndex = 1;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1867,8 +1866,6 @@ namespace Interface
             this.panelPrices.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
-            this.panel13.ResumeLayout(false);
-            this.panel13.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel18.ResumeLayout(false);
@@ -1938,6 +1935,8 @@ namespace Interface
             this.panelPessoaJuridica.PerformLayout();
             this.panelPessoaFisica.ResumeLayout(false);
             this.panelPessoaFisica.PerformLayout();
+            this.panelSerch.ResumeLayout(false);
+            this.panelSerch.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1995,7 +1994,6 @@ namespace Interface
         private Label label2;
         private Label label1;
         private Panel panel19;
-        private Panel panel13;
         private PictureBox pictureBox3;
         private Panel panel17;
         private TableLayoutPanel tableLayoutPanel2;
@@ -2062,5 +2060,6 @@ namespace Interface
         private Properties.textBoxOnlyNum_Letters textNumHomeClient;
         private Properties.PanelBorderRounded panelTextEnderecoClient;
         private Properties.textBoxOnlyNum_Letters textEndecoClient;
+        private Properties.PanelBorderRounded panelSerch;
     }
 }
