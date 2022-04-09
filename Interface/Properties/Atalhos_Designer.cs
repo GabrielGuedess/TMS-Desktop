@@ -24,7 +24,6 @@ namespace Interface.Properties
                 BackColor = Color.FromArgb(15, 15, 19);
                 ForeColor = Color.White;
                 BorderStyle = BorderStyle.None;
-                Size = new Size(225, 19);
                 Margin = new Padding(10, 10, 0, 0);
 
             }
@@ -73,14 +72,35 @@ namespace Interface.Properties
             BackColor = Color.FromArgb(15, 15, 19);
             ForeColor = Color.White;
             BorderStyle = BorderStyle.None;
-            Size = new Size(225, 19);
             Margin = new Padding(10, 10, 0, 0);
             Font = new Font(Font.OriginalFontName, 12);
         }
     }
 
 
+    public class textBoxOnlyNum_Letters : TextBox
+    {
+        protected override void InitLayout()
+        {
+            base.InitLayout();
+            BackColor = Color.FromArgb(15, 15, 19);
+            ForeColor = Color.White;
+            BorderStyle = BorderStyle.None;
+            Margin = new Padding(10, 10, 0, 0);
 
+        }
+        protected override void OnKeyPress(KeyPressEventArgs e)
+        {
+
+            base.OnKeyPress(e);
+
+            if (char.IsLetterOrDigit(e.KeyChar) || char.IsControl(e.KeyChar) || char.IsWhiteSpace(e.KeyChar) )
+                e.Handled = false;
+            
+            else
+                e.Handled = true;
+        }
+    }
 
 
     public class Utilidades

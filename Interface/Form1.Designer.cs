@@ -94,16 +94,16 @@ namespace Interface
             this.panelCPF = new System.Windows.Forms.Panel();
             this.SubpanelCPF = new System.Windows.Forms.Panel();
             this.panelTextCPFClient = new Interface.Properties.PanelBorderRounded();
-            this.masckedboxTemplete1 = new Interface.Properties.masckedboxTemplete();
+            this.textCPFClient = new Interface.Properties.masckedboxTemplete();
             this.labelCPFClient = new System.Windows.Forms.Label();
             this.panelNomeClient = new System.Windows.Forms.Panel();
-            this.panelTextNomeClient = new System.Windows.Forms.Panel();
-            this.textNomeClient = new System.Windows.Forms.TextBox();
             this.subpanelNomeClient = new System.Windows.Forms.Panel();
+            this.panelTextNomeClient = new Interface.Properties.PanelBorderRounded();
+            this.textNomeClient = new Interface.Properties.textBoxOnlyLetters();
             this.labelNomeClient = new System.Windows.Forms.Label();
             this.panelDtNascClient = new System.Windows.Forms.Panel();
             this.subpanelDtNascClient = new System.Windows.Forms.Panel();
-            this.panelDateTimerClient = new System.Windows.Forms.Panel();
+            this.panelDateTimerClient = new Interface.Properties.PanelBorderRounded();
             this.dateDTNascClient = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.panelGeneroClient = new System.Windows.Forms.Panel();
@@ -112,24 +112,24 @@ namespace Interface
             this.labelGeneroClient = new System.Windows.Forms.Label();
             this.panelRGClient = new System.Windows.Forms.Panel();
             this.subpanelRGClient = new System.Windows.Forms.Panel();
-            this.panelTextRGClient = new System.Windows.Forms.Panel();
-            this.textRGClient = new System.Windows.Forms.TextBox();
+            this.panelTextRGClient = new Interface.Properties.PanelBorderRounded();
+            this.textRGClient = new Interface.Properties.masckedboxTemplete();
             this.label7 = new System.Windows.Forms.Label();
             this.panelTelefoneClient = new System.Windows.Forms.Panel();
             this.subpanelTelefoneClient = new System.Windows.Forms.Panel();
-            this.panelTextTelefoneCLient = new System.Windows.Forms.Panel();
-            this.textTelefoneClient = new System.Windows.Forms.TextBox();
+            this.panelTextTelefoneCLient = new Interface.Properties.PanelBorderRounded();
+            this.textTelefoneClient = new Interface.Properties.masckedboxTemplete();
             this.labelTelefoneClient = new System.Windows.Forms.Label();
             this.panelEmailClient = new System.Windows.Forms.Panel();
             this.subpanelEmailClient = new System.Windows.Forms.Panel();
-            this.panelTextEmailClient = new System.Windows.Forms.Panel();
-            this.textEmailClient = new System.Windows.Forms.TextBox();
+            this.panelTextEmailClient = new Interface.Properties.PanelBorderRounded();
+            this.textEmailClient = new Interface.Properties.textBoxTemplete();
             this.labelEmailClient = new System.Windows.Forms.Label();
             this.panelCEP = new System.Windows.Forms.Panel();
             this.subpanelCEPClient = new System.Windows.Forms.Panel();
-            this.panelTextCEPClient = new System.Windows.Forms.Panel();
+            this.panelTextCEPClient = new Interface.Properties.PanelBorderRounded();
             this.buttonPesquisaCEP = new System.Windows.Forms.Button();
-            this.textCEPClient = new System.Windows.Forms.TextBox();
+            this.textCEPClient = new Interface.Properties.masckedboxTemplete();
             this.label10 = new System.Windows.Forms.Label();
             this.panelCidadeUFClient = new System.Windows.Forms.Panel();
             this.subpanelCidadeUFClient = new System.Windows.Forms.Panel();
@@ -139,11 +139,11 @@ namespace Interface
             this.labelUFClient = new System.Windows.Forms.Label();
             this.panelEndereco = new System.Windows.Forms.Panel();
             this.subpanelEndereco = new System.Windows.Forms.Panel();
-            this.panelTextNumHomeClient = new System.Windows.Forms.Panel();
-            this.textNumHomeClient = new System.Windows.Forms.TextBox();
+            this.panelTextNumHomeClient = new Interface.Properties.PanelBorderRounded();
+            this.textNumHomeClient = new Interface.Properties.textBoxOnlyNum_Letters();
+            this.panelTextEnderecoClient = new Interface.Properties.PanelBorderRounded();
+            this.textEndecoClient = new Interface.Properties.textBoxOnlyNum_Letters();
             this.label14 = new System.Windows.Forms.Label();
-            this.panelTextEnderecoClient = new System.Windows.Forms.Panel();
-            this.textEndecoClient = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.panel17 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -179,8 +179,8 @@ namespace Interface
             this.SubpanelCPF.SuspendLayout();
             this.panelTextCPFClient.SuspendLayout();
             this.panelNomeClient.SuspendLayout();
-            this.panelTextNomeClient.SuspendLayout();
             this.subpanelNomeClient.SuspendLayout();
+            this.panelTextNomeClient.SuspendLayout();
             this.panelDtNascClient.SuspendLayout();
             this.subpanelDtNascClient.SuspendLayout();
             this.panelDateTimerClient.SuspendLayout();
@@ -1050,7 +1050,7 @@ namespace Interface
             this.panel50.Location = new System.Drawing.Point(40, 501);
             this.panel50.Margin = new System.Windows.Forms.Padding(0, 50, 0, 0);
             this.panel50.Name = "panel50";
-            this.panel50.Size = new System.Drawing.Size(759, 50);
+            this.panel50.Size = new System.Drawing.Size(708, 50);
             this.panel50.TabIndex = 5;
             // 
             // panel51
@@ -1059,7 +1059,7 @@ namespace Interface
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel51.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(98)))), ((int)(((byte)(255)))));
             this.panel51.Controls.Add(this.button10);
-            this.panel51.Location = new System.Drawing.Point(559, 0);
+            this.panel51.Location = new System.Drawing.Point(508, 0);
             this.panel51.Margin = new System.Windows.Forms.Padding(0);
             this.panel51.Name = "panel51";
             this.panel51.Size = new System.Drawing.Size(200, 50);
@@ -1140,25 +1140,25 @@ namespace Interface
             // panelTextCPFClient
             // 
             this.panelTextCPFClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelTextCPFClient.Controls.Add(this.masckedboxTemplete1);
+            this.panelTextCPFClient.Controls.Add(this.textCPFClient);
             this.panelTextCPFClient.Location = new System.Drawing.Point(5, 33);
             this.panelTextCPFClient.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelTextCPFClient.Name = "panelTextCPFClient";
             this.panelTextCPFClient.Size = new System.Drawing.Size(245, 36);
             this.panelTextCPFClient.TabIndex = 1;
             // 
-            // masckedboxTemplete1
+            // textCPFClient
             // 
-            this.masckedboxTemplete1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.masckedboxTemplete1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.masckedboxTemplete1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.masckedboxTemplete1.ForeColor = System.Drawing.Color.White;
-            this.masckedboxTemplete1.Location = new System.Drawing.Point(10, 9);
-            this.masckedboxTemplete1.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
-            this.masckedboxTemplete1.Mask = "000.000.000-00";
-            this.masckedboxTemplete1.Name = "masckedboxTemplete1";
-            this.masckedboxTemplete1.Size = new System.Drawing.Size(235, 19);
-            this.masckedboxTemplete1.TabIndex = 6;
+            this.textCPFClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.textCPFClient.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textCPFClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textCPFClient.ForeColor = System.Drawing.Color.White;
+            this.textCPFClient.Location = new System.Drawing.Point(10, 10);
+            this.textCPFClient.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
+            this.textCPFClient.Mask = "000.000.000-00";
+            this.textCPFClient.Name = "textCPFClient";
+            this.textCPFClient.Size = new System.Drawing.Size(225, 19);
+            this.textCPFClient.TabIndex = 6;
             // 
             // labelCPFClient
             // 
@@ -1175,7 +1175,6 @@ namespace Interface
             // panelNomeClient
             // 
             this.panelNomeClient.BackColor = System.Drawing.Color.Transparent;
-            this.panelNomeClient.Controls.Add(this.panelTextNomeClient);
             this.panelNomeClient.Controls.Add(this.subpanelNomeClient);
             this.panelNomeClient.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelNomeClient.Location = new System.Drawing.Point(292, 0);
@@ -1184,45 +1183,40 @@ namespace Interface
             this.panelNomeClient.Size = new System.Drawing.Size(292, 100);
             this.panelNomeClient.TabIndex = 1;
             // 
-            // panelTextNomeClient
-            // 
-            this.panelTextNomeClient.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelTextNomeClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelTextNomeClient.Controls.Add(this.textNomeClient);
-            this.panelTextNomeClient.Location = new System.Drawing.Point(17, 54);
-            this.panelTextNomeClient.Margin = new System.Windows.Forms.Padding(0);
-            this.panelTextNomeClient.Name = "panelTextNomeClient";
-            this.panelTextNomeClient.Padding = new System.Windows.Forms.Padding(15, 0, 10, 0);
-            this.panelTextNomeClient.Size = new System.Drawing.Size(255, 36);
-            this.panelTextNomeClient.TabIndex = 7;
-            this.panelTextNomeClient.Paint += new System.Windows.Forms.PaintEventHandler(this.panel27_Paint);
-            // 
-            // textNomeClient
-            // 
-            this.textNomeClient.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textNomeClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.textNomeClient.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textNomeClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.textNomeClient.ForeColor = System.Drawing.Color.White;
-            this.textNomeClient.Location = new System.Drawing.Point(10, 8);
-            this.textNomeClient.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
-            this.textNomeClient.Name = "textNomeClient";
-            this.textNomeClient.Size = new System.Drawing.Size(235, 19);
-            this.textNomeClient.TabIndex = 6;
-            // 
             // subpanelNomeClient
             // 
             this.subpanelNomeClient.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.subpanelNomeClient.BackColor = System.Drawing.Color.Transparent;
+            this.subpanelNomeClient.Controls.Add(this.panelTextNomeClient);
             this.subpanelNomeClient.Controls.Add(this.labelNomeClient);
             this.subpanelNomeClient.Location = new System.Drawing.Point(17, 21);
             this.subpanelNomeClient.Margin = new System.Windows.Forms.Padding(20, 10, 20, 10);
             this.subpanelNomeClient.Name = "subpanelNomeClient";
             this.subpanelNomeClient.Size = new System.Drawing.Size(255, 69);
             this.subpanelNomeClient.TabIndex = 8;
+            // 
+            // panelTextNomeClient
+            // 
+            this.panelTextNomeClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.panelTextNomeClient.Controls.Add(this.textNomeClient);
+            this.panelTextNomeClient.Location = new System.Drawing.Point(5, 33);
+            this.panelTextNomeClient.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.panelTextNomeClient.Name = "panelTextNomeClient";
+            this.panelTextNomeClient.Size = new System.Drawing.Size(245, 36);
+            this.panelTextNomeClient.TabIndex = 1;
+            // 
+            // textNomeClient
+            // 
+            this.textNomeClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.textNomeClient.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textNomeClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textNomeClient.ForeColor = System.Drawing.Color.White;
+            this.textNomeClient.Location = new System.Drawing.Point(10, 10);
+            this.textNomeClient.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
+            this.textNomeClient.Name = "textNomeClient";
+            this.textNomeClient.Size = new System.Drawing.Size(225, 19);
+            this.textNomeClient.TabIndex = 0;
             // 
             // labelNomeClient
             // 
@@ -1261,16 +1255,13 @@ namespace Interface
             // 
             // panelDateTimerClient
             // 
-            this.panelDateTimerClient.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelDateTimerClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
             this.panelDateTimerClient.Controls.Add(this.dateDTNascClient);
-            this.panelDateTimerClient.Location = new System.Drawing.Point(0, 33);
-            this.panelDateTimerClient.Margin = new System.Windows.Forms.Padding(0);
+            this.panelDateTimerClient.Location = new System.Drawing.Point(5, 33);
+            this.panelDateTimerClient.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelDateTimerClient.Name = "panelDateTimerClient";
-            this.panelDateTimerClient.Size = new System.Drawing.Size(254, 36);
-            this.panelDateTimerClient.TabIndex = 7;
-            this.panelDateTimerClient.Paint += new System.Windows.Forms.PaintEventHandler(this.panel30_Paint);
+            this.panelDateTimerClient.Size = new System.Drawing.Size(245, 36);
+            this.panelDateTimerClient.TabIndex = 2;
             // 
             // dateDTNascClient
             // 
@@ -1280,11 +1271,11 @@ namespace Interface
             this.dateDTNascClient.CalendarTitleForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.dateDTNascClient.CalendarTrailingForeColor = System.Drawing.Color.Snow;
             this.dateDTNascClient.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateDTNascClient.Location = new System.Drawing.Point(10, 7);
+            this.dateDTNascClient.Location = new System.Drawing.Point(10, 10);
             this.dateDTNascClient.Margin = new System.Windows.Forms.Padding(10, 10, 10, 0);
             this.dateDTNascClient.MaxDate = new System.DateTime(2022, 3, 17, 1, 2, 53, 0);
             this.dateDTNascClient.Name = "dateDTNascClient";
-            this.dateDTNascClient.Size = new System.Drawing.Size(234, 21);
+            this.dateDTNascClient.Size = new System.Drawing.Size(225, 21);
             this.dateDTNascClient.TabIndex = 3;
             this.dateDTNascClient.Value = new System.DateTime(2022, 3, 17, 0, 0, 0, 0);
             // 
@@ -1374,32 +1365,26 @@ namespace Interface
             // 
             // panelTextRGClient
             // 
-            this.panelTextRGClient.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelTextRGClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
             this.panelTextRGClient.Controls.Add(this.textRGClient);
-            this.panelTextRGClient.Location = new System.Drawing.Point(0, 32);
-            this.panelTextRGClient.Margin = new System.Windows.Forms.Padding(0);
+            this.panelTextRGClient.Location = new System.Drawing.Point(5, 32);
+            this.panelTextRGClient.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelTextRGClient.Name = "panelTextRGClient";
-            this.panelTextRGClient.Padding = new System.Windows.Forms.Padding(15, 0, 10, 0);
-            this.panelTextRGClient.Size = new System.Drawing.Size(255, 36);
-            this.panelTextRGClient.TabIndex = 7;
-            this.panelTextRGClient.Paint += new System.Windows.Forms.PaintEventHandler(this.panel35_Paint);
+            this.panelTextRGClient.Size = new System.Drawing.Size(245, 36);
+            this.panelTextRGClient.TabIndex = 1;
             // 
             // textRGClient
             // 
-            this.textRGClient.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.textRGClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
             this.textRGClient.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textRGClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.textRGClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textRGClient.ForeColor = System.Drawing.Color.White;
-            this.textRGClient.Location = new System.Drawing.Point(10, 8);
+            this.textRGClient.Location = new System.Drawing.Point(10, 10);
             this.textRGClient.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
+            this.textRGClient.Mask = "000.000.000-0";
             this.textRGClient.Name = "textRGClient";
-            this.textRGClient.PlaceholderText = "12.345.678-9";
-            this.textRGClient.Size = new System.Drawing.Size(235, 19);
-            this.textRGClient.TabIndex = 6;
+            this.textRGClient.Size = new System.Drawing.Size(225, 19);
+            this.textRGClient.TabIndex = 0;
             // 
             // label7
             // 
@@ -1438,31 +1423,26 @@ namespace Interface
             // 
             // panelTextTelefoneCLient
             // 
-            this.panelTextTelefoneCLient.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelTextTelefoneCLient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
             this.panelTextTelefoneCLient.Controls.Add(this.textTelefoneClient);
-            this.panelTextTelefoneCLient.Location = new System.Drawing.Point(0, 32);
-            this.panelTextTelefoneCLient.Margin = new System.Windows.Forms.Padding(0);
+            this.panelTextTelefoneCLient.Location = new System.Drawing.Point(5, 32);
+            this.panelTextTelefoneCLient.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelTextTelefoneCLient.Name = "panelTextTelefoneCLient";
-            this.panelTextTelefoneCLient.Padding = new System.Windows.Forms.Padding(15, 0, 10, 0);
-            this.panelTextTelefoneCLient.Size = new System.Drawing.Size(254, 36);
-            this.panelTextTelefoneCLient.TabIndex = 7;
-            this.panelTextTelefoneCLient.Paint += new System.Windows.Forms.PaintEventHandler(this.panel38_Paint);
+            this.panelTextTelefoneCLient.Size = new System.Drawing.Size(245, 36);
+            this.panelTextTelefoneCLient.TabIndex = 1;
             // 
             // textTelefoneClient
             // 
-            this.textTelefoneClient.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.textTelefoneClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
             this.textTelefoneClient.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textTelefoneClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.textTelefoneClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textTelefoneClient.ForeColor = System.Drawing.Color.White;
-            this.textTelefoneClient.Location = new System.Drawing.Point(10, 8);
+            this.textTelefoneClient.Location = new System.Drawing.Point(10, 10);
             this.textTelefoneClient.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
+            this.textTelefoneClient.Mask = "(00) 00000-0000";
             this.textTelefoneClient.Name = "textTelefoneClient";
-            this.textTelefoneClient.Size = new System.Drawing.Size(234, 19);
-            this.textTelefoneClient.TabIndex = 6;
+            this.textTelefoneClient.Size = new System.Drawing.Size(225, 19);
+            this.textTelefoneClient.TabIndex = 0;
             // 
             // labelTelefoneClient
             // 
@@ -1501,31 +1481,25 @@ namespace Interface
             // 
             // panelTextEmailClient
             // 
-            this.panelTextEmailClient.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelTextEmailClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
             this.panelTextEmailClient.Controls.Add(this.textEmailClient);
-            this.panelTextEmailClient.Location = new System.Drawing.Point(0, 33);
-            this.panelTextEmailClient.Margin = new System.Windows.Forms.Padding(0);
+            this.panelTextEmailClient.Location = new System.Drawing.Point(5, 33);
+            this.panelTextEmailClient.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelTextEmailClient.Name = "panelTextEmailClient";
-            this.panelTextEmailClient.Padding = new System.Windows.Forms.Padding(15, 0, 10, 0);
-            this.panelTextEmailClient.Size = new System.Drawing.Size(255, 36);
-            this.panelTextEmailClient.TabIndex = 7;
-            this.panelTextEmailClient.Paint += new System.Windows.Forms.PaintEventHandler(this.panel40_Paint);
+            this.panelTextEmailClient.Size = new System.Drawing.Size(245, 36);
+            this.panelTextEmailClient.TabIndex = 1;
             // 
             // textEmailClient
             // 
-            this.textEmailClient.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.textEmailClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
             this.textEmailClient.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textEmailClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.textEmailClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textEmailClient.ForeColor = System.Drawing.Color.White;
-            this.textEmailClient.Location = new System.Drawing.Point(11, 10);
+            this.textEmailClient.Location = new System.Drawing.Point(10, 10);
             this.textEmailClient.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
             this.textEmailClient.Name = "textEmailClient";
-            this.textEmailClient.Size = new System.Drawing.Size(234, 19);
-            this.textEmailClient.TabIndex = 6;
+            this.textEmailClient.Size = new System.Drawing.Size(225, 19);
+            this.textEmailClient.TabIndex = 0;
             // 
             // labelEmailClient
             // 
@@ -1564,18 +1538,14 @@ namespace Interface
             // 
             // panelTextCEPClient
             // 
-            this.panelTextCEPClient.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelTextCEPClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
             this.panelTextCEPClient.Controls.Add(this.buttonPesquisaCEP);
             this.panelTextCEPClient.Controls.Add(this.textCEPClient);
-            this.panelTextCEPClient.Location = new System.Drawing.Point(0, 33);
-            this.panelTextCEPClient.Margin = new System.Windows.Forms.Padding(0);
+            this.panelTextCEPClient.Location = new System.Drawing.Point(5, 33);
+            this.panelTextCEPClient.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelTextCEPClient.Name = "panelTextCEPClient";
-            this.panelTextCEPClient.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.panelTextCEPClient.Size = new System.Drawing.Size(255, 36);
-            this.panelTextCEPClient.TabIndex = 7;
-            this.panelTextCEPClient.Paint += new System.Windows.Forms.PaintEventHandler(this.panel43_Paint);
+            this.panelTextCEPClient.Size = new System.Drawing.Size(245, 36);
+            this.panelTextCEPClient.TabIndex = 1;
             // 
             // buttonPesquisaCEP
             // 
@@ -1586,27 +1556,25 @@ namespace Interface
             this.buttonPesquisaCEP.FlatAppearance.BorderSize = 0;
             this.buttonPesquisaCEP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPesquisaCEP.Image = ((System.Drawing.Image)(resources.GetObject("buttonPesquisaCEP.Image")));
-            this.buttonPesquisaCEP.Location = new System.Drawing.Point(219, 0);
+            this.buttonPesquisaCEP.Location = new System.Drawing.Point(207, 0);
             this.buttonPesquisaCEP.Margin = new System.Windows.Forms.Padding(0);
             this.buttonPesquisaCEP.Name = "buttonPesquisaCEP";
-            this.buttonPesquisaCEP.Size = new System.Drawing.Size(36, 36);
+            this.buttonPesquisaCEP.Size = new System.Drawing.Size(28, 37);
             this.buttonPesquisaCEP.TabIndex = 8;
             this.buttonPesquisaCEP.UseVisualStyleBackColor = false;
             // 
             // textCEPClient
             // 
-            this.textCEPClient.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.textCEPClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
             this.textCEPClient.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textCEPClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.textCEPClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textCEPClient.ForeColor = System.Drawing.Color.White;
             this.textCEPClient.Location = new System.Drawing.Point(10, 10);
-            this.textCEPClient.Margin = new System.Windows.Forms.Padding(10, 10, 10, 0);
+            this.textCEPClient.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
+            this.textCEPClient.Mask = "000000-000";
             this.textCEPClient.Name = "textCEPClient";
-            this.textCEPClient.PlaceholderText = "13165-000";
-            this.textCEPClient.Size = new System.Drawing.Size(199, 19);
-            this.textCEPClient.TabIndex = 6;
+            this.textCEPClient.Size = new System.Drawing.Size(225, 19);
+            this.textCEPClient.TabIndex = 0;
             // 
             // label10
             // 
@@ -1712,8 +1680,8 @@ namespace Interface
             | System.Windows.Forms.AnchorStyles.Right)));
             this.subpanelEndereco.BackColor = System.Drawing.Color.Transparent;
             this.subpanelEndereco.Controls.Add(this.panelTextNumHomeClient);
-            this.subpanelEndereco.Controls.Add(this.label14);
             this.subpanelEndereco.Controls.Add(this.panelTextEnderecoClient);
+            this.subpanelEndereco.Controls.Add(this.label14);
             this.subpanelEndereco.Controls.Add(this.label13);
             this.subpanelEndereco.Location = new System.Drawing.Point(17, 26);
             this.subpanelEndereco.Margin = new System.Windows.Forms.Padding(20, 10, 20, 10);
@@ -1723,30 +1691,46 @@ namespace Interface
             // 
             // panelTextNumHomeClient
             // 
-            this.panelTextNumHomeClient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.panelTextNumHomeClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
             this.panelTextNumHomeClient.Controls.Add(this.textNumHomeClient);
-            this.panelTextNumHomeClient.Location = new System.Drawing.Point(169, 33);
-            this.panelTextNumHomeClient.Margin = new System.Windows.Forms.Padding(0);
+            this.panelTextNumHomeClient.Location = new System.Drawing.Point(159, 33);
+            this.panelTextNumHomeClient.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelTextNumHomeClient.Name = "panelTextNumHomeClient";
-            this.panelTextNumHomeClient.Padding = new System.Windows.Forms.Padding(15, 0, 10, 0);
-            this.panelTextNumHomeClient.Size = new System.Drawing.Size(62, 36);
-            this.panelTextNumHomeClient.TabIndex = 8;
-            this.panelTextNumHomeClient.Paint += new System.Windows.Forms.PaintEventHandler(this.panel49_Paint);
+            this.panelTextNumHomeClient.Size = new System.Drawing.Size(67, 36);
+            this.panelTextNumHomeClient.TabIndex = 10;
             // 
             // textNumHomeClient
             // 
-            this.textNumHomeClient.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.textNumHomeClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
             this.textNumHomeClient.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textNumHomeClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.textNumHomeClient.ForeColor = System.Drawing.Color.White;
-            this.textNumHomeClient.Location = new System.Drawing.Point(12, 10);
+            this.textNumHomeClient.Location = new System.Drawing.Point(5, 10);
             this.textNumHomeClient.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
             this.textNumHomeClient.Name = "textNumHomeClient";
-            this.textNumHomeClient.Size = new System.Drawing.Size(41, 19);
-            this.textNumHomeClient.TabIndex = 6;
+            this.textNumHomeClient.Size = new System.Drawing.Size(50, 14);
+            this.textNumHomeClient.TabIndex = 0;
+            // 
+            // panelTextEnderecoClient
+            // 
+            this.panelTextEnderecoClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.panelTextEnderecoClient.Controls.Add(this.textEndecoClient);
+            this.panelTextEnderecoClient.Location = new System.Drawing.Point(5, 33);
+            this.panelTextEnderecoClient.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.panelTextEnderecoClient.Name = "panelTextEnderecoClient";
+            this.panelTextEnderecoClient.Size = new System.Drawing.Size(144, 36);
+            this.panelTextEnderecoClient.TabIndex = 9;
+            // 
+            // textEndecoClient
+            // 
+            this.textEndecoClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.textEndecoClient.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textEndecoClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textEndecoClient.ForeColor = System.Drawing.Color.White;
+            this.textEndecoClient.Location = new System.Drawing.Point(5, 10);
+            this.textEndecoClient.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
+            this.textEndecoClient.Name = "textEndecoClient";
+            this.textEndecoClient.Size = new System.Drawing.Size(130, 19);
+            this.textEndecoClient.TabIndex = 0;
             // 
             // label14
             // 
@@ -1754,40 +1738,12 @@ namespace Interface
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(169, 4);
+            this.label14.Location = new System.Drawing.Point(159, 4);
             this.label14.Margin = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(24, 17);
             this.label14.TabIndex = 8;
             this.label14.Text = "N°";
-            // 
-            // panelTextEnderecoClient
-            // 
-            this.panelTextEnderecoClient.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelTextEnderecoClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelTextEnderecoClient.Controls.Add(this.textEndecoClient);
-            this.panelTextEnderecoClient.Location = new System.Drawing.Point(0, 33);
-            this.panelTextEnderecoClient.Margin = new System.Windows.Forms.Padding(0);
-            this.panelTextEnderecoClient.Name = "panelTextEnderecoClient";
-            this.panelTextEnderecoClient.Padding = new System.Windows.Forms.Padding(15, 0, 10, 0);
-            this.panelTextEnderecoClient.Size = new System.Drawing.Size(124, 36);
-            this.panelTextEnderecoClient.TabIndex = 7;
-            this.panelTextEnderecoClient.Paint += new System.Windows.Forms.PaintEventHandler(this.panel48_Paint);
-            // 
-            // textEndecoClient
-            // 
-            this.textEndecoClient.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textEndecoClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.textEndecoClient.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textEndecoClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.textEndecoClient.ForeColor = System.Drawing.Color.White;
-            this.textEndecoClient.Location = new System.Drawing.Point(10, 10);
-            this.textEndecoClient.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
-            this.textEndecoClient.Name = "textEndecoClient";
-            this.textEndecoClient.Size = new System.Drawing.Size(74, 19);
-            this.textEndecoClient.TabIndex = 6;
             // 
             // label13
             // 
@@ -1935,10 +1891,10 @@ namespace Interface
             this.panelTextCPFClient.ResumeLayout(false);
             this.panelTextCPFClient.PerformLayout();
             this.panelNomeClient.ResumeLayout(false);
-            this.panelTextNomeClient.ResumeLayout(false);
-            this.panelTextNomeClient.PerformLayout();
             this.subpanelNomeClient.ResumeLayout(false);
             this.subpanelNomeClient.PerformLayout();
+            this.panelTextNomeClient.ResumeLayout(false);
+            this.panelTextNomeClient.PerformLayout();
             this.panelDtNascClient.ResumeLayout(false);
             this.subpanelDtNascClient.ResumeLayout(false);
             this.subpanelDtNascClient.PerformLayout();
@@ -2052,12 +2008,9 @@ namespace Interface
         private Panel SubpanelCPF;
         private Panel panelNomeClient;
         private Panel subpanelNomeClient;
-        private Panel panelTextNomeClient;
-        private TextBox textNomeClient;
         private Label labelNomeClient;
         private Panel panelDtNascClient;
         private Panel subpanelDtNascClient;
-        private Panel panelDateTimerClient;
         private DateTimePicker dateDTNascClient;
         private Label label5;
         private Panel panelGeneroClient;
@@ -2066,23 +2019,15 @@ namespace Interface
         private ComboBox comboGemeroClient;
         private Panel panelRGClient;
         private Panel subpanelRGClient;
-        private Panel panelTextRGClient;
-        private TextBox textRGClient;
         private Label label7;
         private Panel panelTelefoneClient;
         private Panel subpanelTelefoneClient;
-        private Panel panelTextTelefoneCLient;
-        private TextBox textTelefoneClient;
         private Label labelTelefoneClient;
         private Panel panelEmailClient;
         private Panel subpanelEmailClient;
-        private Panel panelTextEmailClient;
-        private TextBox textEmailClient;
         private Label labelEmailClient;
         private Panel panelCEP;
         private Panel subpanelCEPClient;
-        private Panel panelTextCEPClient;
-        private TextBox textCEPClient;
         private Label label10;
         private Panel panelCidadeUFClient;
         private Panel subpanelCidadeUFClient;
@@ -2092,11 +2037,7 @@ namespace Interface
         private ComboBox comboUFClient;
         private Panel panelEndereco;
         private Panel subpanelEndereco;
-        private Panel panelTextNumHomeClient;
-        private TextBox textNumHomeClient;
         private Label label14;
-        private Panel panelTextEnderecoClient;
-        private TextBox textEndecoClient;
         private Label label13;
         private Panel panel50;
         private Panel panel51;
@@ -2105,6 +2046,21 @@ namespace Interface
         private Panel panelPessoaFisica;
         private RadioButton pessoaFisica;
         private Properties.PanelBorderRounded panelTextCPFClient;
-        private Properties.masckedboxTemplete masckedboxTemplete1;
+        private Properties.masckedboxTemplete textCPFClient;
+        private Properties.PanelBorderRounded panelTextNomeClient;
+        private Properties.textBoxOnlyLetters textNomeClient;
+        private Properties.PanelBorderRounded panelDateTimerClient;
+        private Properties.PanelBorderRounded panelTextRGClient;
+        private Properties.masckedboxTemplete textRGClient;
+        private Properties.PanelBorderRounded panelTextTelefoneCLient;
+        private Properties.masckedboxTemplete textTelefoneClient;
+        private Properties.PanelBorderRounded panelTextEmailClient;
+        private Properties.textBoxTemplete textEmailClient;
+        private Properties.PanelBorderRounded panelTextCEPClient;
+        private Properties.masckedboxTemplete textCEPClient;
+        private Properties.PanelBorderRounded panelTextNumHomeClient;
+        private Properties.textBoxOnlyNum_Letters textNumHomeClient;
+        private Properties.PanelBorderRounded panelTextEnderecoClient;
+        private Properties.textBoxOnlyNum_Letters textEndecoClient;
     }
 }
