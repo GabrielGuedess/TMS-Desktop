@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Interface
 {
-    public partial class Form2 : Form
+    public partial class Login : Form
     {
-        public Form2()
+        public Login()
         {
             InitializeComponent();
         }
@@ -54,7 +54,7 @@ namespace Interface
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form1 Form = new Form1();
+            Dash Form = new Dash();
 
             this.Hide();
 
