@@ -237,16 +237,37 @@ namespace Interface.Properties
             }
         }
 
-        public void paintButton_Panel(Button button, Panel panel)
+        public void paintButtonPanel(Button button, Panel panel)
         {
             button.ForeColor = Color.FromArgb(0, 98, 255);
             panel.BackColor = Color.FromArgb(0, 98, 255);
         }
 
-        public void removePaintButton_Panel(Button button, Panel panel)
+        public void paintButton(Button button)
+        {
+            button.ForeColor = Color.FromArgb(0, 98, 255);
+        }
+
+        public void paintLine(Panel line)
+        {
+            line.BackColor = Color.FromArgb(0, 98, 255);
+        }
+
+
+        public void removePaintButtonPanel(Button button, Panel panel)
         {
             button.ForeColor = Color.FromArgb(255, 255, 255);
             panel.BackColor = Color.Transparent;
+        }
+
+        public void removePaintButton(Button button)
+        {
+            button.ForeColor = Color.FromArgb(255, 255, 255);
+        }
+
+        public void removePaintLine(Panel line)
+        {
+            line.BackColor = Color.Transparent;
         }
 
         public void RepitarPanelPaint(PaintEventArgs e, Panel panel)
@@ -257,7 +278,7 @@ namespace Interface.Properties
             Color.Transparent, 1, ButtonBorderStyle.Solid,
             Color.FromArgb(0, 98, 255), 1, ButtonBorderStyle.Solid);
         }
-        public void expansivePanels(params Panel[] panels)
+        public void expansivePanels(int rounded, params Panel[] panels)
         {
             [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
 
@@ -273,7 +294,48 @@ namespace Interface.Properties
 
             foreach (Panel panel in panels)
             {
-                panel.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel.Width, panel.Height, 10, 10));
+                panel.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel.Width, panel.Height, rounded, rounded));
+            }
+        }
+
+        public void expansiveDataGrid(int rounded, params DataGridView[] dataGrids)
+        {
+            [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+
+            static extern IntPtr CreateRoundRectRgn
+            (
+                int nLeftRect,
+                int nTopRect,
+                int nRightRect,
+                int nBottomRect,
+                int nWidthEllipse,
+                int nHeightEllipse
+            );
+
+            foreach (DataGridView panel in dataGrids)
+            {
+                panel.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel.Width, panel.Height, rounded, rounded));
+            }
+        }
+
+
+        public void expansiveButton(int rounded, params Button[] buttons)
+        {
+            [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+
+            static extern IntPtr CreateRoundRectRgn
+            (
+                int nLeftRect,
+                int nTopRect,
+                int nRightRect,
+                int nBottomRect,
+                int nWidthEllipse,
+                int nHeightEllipse
+            );
+
+            foreach (Button panel in buttons)
+            {
+                panel.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel.Width, panel.Height, rounded, rounded));
             }
         }
     }

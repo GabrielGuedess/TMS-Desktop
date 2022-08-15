@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using Interface.Properties;
 
 namespace Interface
 {
     public partial class Login : Form
     {
+
+        readonly Utilidades utils = new();
         public Login()
         {
             InitializeComponent();
@@ -19,20 +13,12 @@ namespace Interface
 
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
-            ControlPaint.DrawBorder(e.Graphics, panel3.ClientRectangle,
-            Color.FromArgb(30, 30, 36), 1, ButtonBorderStyle.Solid, // left
-            Color.FromArgb(30, 30, 36), 1, ButtonBorderStyle.Solid, // top
-            Color.FromArgb(30, 30, 36), 1, ButtonBorderStyle.Solid, // right
-            Color.FromArgb(30, 30, 36), 1, ButtonBorderStyle.Solid);// bottom
+            utils.paintTheBorders(e, panel3, Color.FromArgb(30, 30, 36), true, true, true, true);
         }
 
         private void panel4_Paint(object sender, PaintEventArgs e)
         {
-            ControlPaint.DrawBorder(e.Graphics, panel4.ClientRectangle,
-            Color.FromArgb(30, 30, 36), 1, ButtonBorderStyle.Solid, // left
-            Color.FromArgb(30, 30, 36), 1, ButtonBorderStyle.Solid, // top
-            Color.FromArgb(30, 30, 36), 1, ButtonBorderStyle.Solid, // right
-            Color.FromArgb(30, 30, 36), 1, ButtonBorderStyle.Solid);// bottom
+            utils.paintTheBorders(e, panel4, Color.FromArgb(30, 30, 36), true, true, true, true);
         }
 
 
@@ -61,6 +47,16 @@ namespace Interface
             Form.ShowDialog();
 
             this.Close();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            utils.expansivePanels(20, panel1);
+        }
+
+        private void button1_Paint(object sender, PaintEventArgs e)
+        {
+            utils.expansiveButton(10, button1);
         }
     }
 }

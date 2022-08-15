@@ -68,27 +68,25 @@ namespace Interface
             this.textSearch = new System.Windows.Forms.TextBox();
             this.containerOverview = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lineOver = new System.Windows.Forms.Panel();
+            this.lineOverview = new System.Windows.Forms.Panel();
             this.buttonOver = new System.Windows.Forms.Button();
             this.containerCadastro = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.buttonCa = new System.Windows.Forms.Button();
-            this.lineCa = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
+            this.lineCadastro = new System.Windows.Forms.Panel();
             this.containerUpdate = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
             this.buttonUp = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.lineUp = new System.Windows.Forms.Panel();
+            this.lineUpdate = new System.Windows.Forms.Panel();
             this.button9 = new System.Windows.Forms.Button();
             this.containerDelete = new System.Windows.Forms.Panel();
             this.panel16 = new System.Windows.Forms.Panel();
             this.buttonDel = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.lineDel = new System.Windows.Forms.Panel();
+            this.lineDelete = new System.Windows.Forms.Panel();
             this.button13 = new System.Windows.Forms.Button();
             this.body = new System.Windows.Forms.Panel();
+            this.overview1 = new Interface.Overview();
             this.cadastroClientes1 = new Interface.CadastroClientes();
             this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -655,7 +653,7 @@ namespace Interface
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.lineOver);
+            this.panel1.Controls.Add(this.lineOverview);
             this.panel1.Controls.Add(this.buttonOver);
             this.panel1.Location = new System.Drawing.Point(13, 21);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
@@ -664,15 +662,15 @@ namespace Interface
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
             // 
-            // lineOver
+            // lineOverview
             // 
-            this.lineOver.BackColor = System.Drawing.Color.Transparent;
-            this.lineOver.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lineOver.Location = new System.Drawing.Point(0, 45);
-            this.lineOver.Margin = new System.Windows.Forms.Padding(0);
-            this.lineOver.Name = "lineOver";
-            this.lineOver.Size = new System.Drawing.Size(90, 2);
-            this.lineOver.TabIndex = 1;
+            this.lineOverview.BackColor = System.Drawing.Color.Transparent;
+            this.lineOverview.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lineOverview.Location = new System.Drawing.Point(0, 45);
+            this.lineOverview.Margin = new System.Windows.Forms.Padding(0);
+            this.lineOverview.Name = "lineOverview";
+            this.lineOverview.Size = new System.Drawing.Size(90, 2);
+            this.lineOverview.TabIndex = 1;
             // 
             // buttonOver
             // 
@@ -683,7 +681,7 @@ namespace Interface
             this.buttonOver.FlatAppearance.BorderSize = 0;
             this.buttonOver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonOver.ForeColor = System.Drawing.Color.White;
-            this.buttonOver.Location = new System.Drawing.Point(0, 0);
+            this.buttonOver.Location = new System.Drawing.Point(0, -1);
             this.buttonOver.Margin = new System.Windows.Forms.Padding(0);
             this.buttonOver.Name = "buttonOver";
             this.buttonOver.Size = new System.Drawing.Size(90, 23);
@@ -709,8 +707,7 @@ namespace Interface
             // 
             this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.Controls.Add(this.buttonCa);
-            this.panel3.Controls.Add(this.lineCa);
-            this.panel3.Controls.Add(this.button6);
+            this.panel3.Controls.Add(this.lineCadastro);
             this.panel3.Location = new System.Drawing.Point(13, 21);
             this.panel3.Margin = new System.Windows.Forms.Padding(0);
             this.panel3.Name = "panel3";
@@ -736,30 +733,15 @@ namespace Interface
             this.buttonCa.UseVisualStyleBackColor = false;
             this.buttonCa.Click += new System.EventHandler(this.buttonCa_Click);
             // 
-            // lineCa
+            // lineCadastro
             // 
-            this.lineCa.BackColor = System.Drawing.Color.Transparent;
-            this.lineCa.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lineCa.Location = new System.Drawing.Point(0, 45);
-            this.lineCa.Margin = new System.Windows.Forms.Padding(0);
-            this.lineCa.Name = "lineCa";
-            this.lineCa.Size = new System.Drawing.Size(90, 2);
-            this.lineCa.TabIndex = 1;
-            // 
-            // button6
-            // 
-            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(0, 0);
-            this.button6.Margin = new System.Windows.Forms.Padding(0);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(47, 23);
-            this.button6.TabIndex = 1;
-            this.button6.Text = "Overview";
+            this.lineCadastro.BackColor = System.Drawing.Color.Transparent;
+            this.lineCadastro.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lineCadastro.Location = new System.Drawing.Point(0, 45);
+            this.lineCadastro.Margin = new System.Windows.Forms.Padding(0);
+            this.lineCadastro.Name = "lineCadastro";
+            this.lineCadastro.Size = new System.Drawing.Size(90, 2);
+            this.lineCadastro.TabIndex = 1;
             // 
             // containerUpdate
             // 
@@ -776,8 +758,7 @@ namespace Interface
             // 
             this.panel14.BackColor = System.Drawing.Color.Transparent;
             this.panel14.Controls.Add(this.buttonUp);
-            this.panel14.Controls.Add(this.button8);
-            this.panel14.Controls.Add(this.lineUp);
+            this.panel14.Controls.Add(this.lineUpdate);
             this.panel14.Controls.Add(this.button9);
             this.panel14.Location = new System.Drawing.Point(13, 20);
             this.panel14.Margin = new System.Windows.Forms.Padding(0);
@@ -804,30 +785,15 @@ namespace Interface
             this.buttonUp.UseVisualStyleBackColor = false;
             this.buttonUp.Click += new System.EventHandler(this.buttonUp_Click);
             // 
-            // button8
+            // lineUpdate
             // 
-            this.button8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(0, 1);
-            this.button8.Margin = new System.Windows.Forms.Padding(0);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(47, 23);
-            this.button8.TabIndex = 2;
-            this.button8.Text = "Overview";
-            // 
-            // lineUp
-            // 
-            this.lineUp.BackColor = System.Drawing.Color.Transparent;
-            this.lineUp.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lineUp.Location = new System.Drawing.Point(0, 45);
-            this.lineUp.Margin = new System.Windows.Forms.Padding(0);
-            this.lineUp.Name = "lineUp";
-            this.lineUp.Size = new System.Drawing.Size(90, 2);
-            this.lineUp.TabIndex = 1;
+            this.lineUpdate.BackColor = System.Drawing.Color.Transparent;
+            this.lineUpdate.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lineUpdate.Location = new System.Drawing.Point(0, 45);
+            this.lineUpdate.Margin = new System.Windows.Forms.Padding(0);
+            this.lineUpdate.Name = "lineUpdate";
+            this.lineUpdate.Size = new System.Drawing.Size(90, 2);
+            this.lineUpdate.TabIndex = 1;
             // 
             // button9
             // 
@@ -860,8 +826,7 @@ namespace Interface
             this.panel16.BackColor = System.Drawing.Color.Transparent;
             this.panel16.Controls.Add(this.buttonDel);
             this.panel16.Controls.Add(this.button11);
-            this.panel16.Controls.Add(this.button12);
-            this.panel16.Controls.Add(this.lineDel);
+            this.panel16.Controls.Add(this.lineDelete);
             this.panel16.Controls.Add(this.button13);
             this.panel16.Location = new System.Drawing.Point(14, 21);
             this.panel16.Margin = new System.Windows.Forms.Padding(0);
@@ -903,30 +868,15 @@ namespace Interface
             this.button11.TabIndex = 3;
             this.button11.Text = "Overview";
             // 
-            // button12
+            // lineDelete
             // 
-            this.button12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button12.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button12.FlatAppearance.BorderSize = 0;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.ForeColor = System.Drawing.Color.White;
-            this.button12.Location = new System.Drawing.Point(0, 1);
-            this.button12.Margin = new System.Windows.Forms.Padding(0);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(47, 23);
-            this.button12.TabIndex = 2;
-            this.button12.Text = "Overview";
-            // 
-            // lineDel
-            // 
-            this.lineDel.BackColor = System.Drawing.Color.Transparent;
-            this.lineDel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lineDel.Location = new System.Drawing.Point(0, 45);
-            this.lineDel.Margin = new System.Windows.Forms.Padding(0);
-            this.lineDel.Name = "lineDel";
-            this.lineDel.Size = new System.Drawing.Size(90, 2);
-            this.lineDel.TabIndex = 1;
+            this.lineDelete.BackColor = System.Drawing.Color.Transparent;
+            this.lineDelete.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lineDelete.Location = new System.Drawing.Point(0, 45);
+            this.lineDelete.Margin = new System.Windows.Forms.Padding(0);
+            this.lineDelete.Name = "lineDelete";
+            this.lineDelete.Size = new System.Drawing.Size(90, 2);
+            this.lineDelete.TabIndex = 1;
             // 
             // button13
             // 
@@ -950,6 +900,7 @@ namespace Interface
             | System.Windows.Forms.AnchorStyles.Right)));
             this.body.AutoScroll = true;
             this.body.BackColor = System.Drawing.Color.Black;
+            this.body.Controls.Add(this.overview1);
             this.body.Controls.Add(this.cadastroClientes1);
             this.body.Location = new System.Drawing.Point(288, 68);
             this.body.Margin = new System.Windows.Forms.Padding(0);
@@ -958,6 +909,16 @@ namespace Interface
             this.body.Size = new System.Drawing.Size(1025, 563);
             this.body.TabIndex = 7;
             this.body.Paint += new System.Windows.Forms.PaintEventHandler(this.body_Paint);
+            // 
+            // overview1
+            // 
+            this.overview1.BackColor = System.Drawing.Color.Transparent;
+            this.overview1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.overview1.Location = new System.Drawing.Point(25, 25);
+            this.overview1.Margin = new System.Windows.Forms.Padding(0);
+            this.overview1.Name = "overview1";
+            this.overview1.Size = new System.Drawing.Size(975, 513);
+            this.overview1.TabIndex = 1;
             // 
             // cadastroClientes1
             // 
@@ -969,7 +930,7 @@ namespace Interface
             this.cadastroClientes1.Size = new System.Drawing.Size(975, 513);
             this.cadastroClientes1.TabIndex = 0;
             // 
-            // Form1
+            // Dash
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -980,7 +941,7 @@ namespace Interface
             this.Controls.Add(this.panel2);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.MinimumSize = new System.Drawing.Size(1000, 0);
-            this.Name = "Form1";
+            this.Name = "Dash";
             this.Text = "i";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Resize += new System.EventHandler(this.Form1_Resize);
@@ -1046,19 +1007,16 @@ namespace Interface
         private Panel panel16;
         private Button buttonDel;
         private Button button11;
-        private Button button12;
-        private Panel lineDel;
+        private Panel lineDelete;
         private Button button13;
         private Panel panel14;
         private Button buttonUp;
-        private Button button8;
-        private Panel lineUp;
+        private Panel lineUpdate;
         private Button button9;
         private Panel panel3;
         private Button buttonCa;
-        private Panel lineCa;
-        private Button button6;
-        private Panel lineOver;
+        private Panel lineCadastro;
+        private Panel lineOverview;
         private Panel panel18;
         private Button button15;
         private PictureBox pictureBox2;
@@ -1072,5 +1030,6 @@ namespace Interface
         private Panel containerUpdate;
         private Panel containerDelete;
         private CadastroClientes cadastroClientes1;
+        private Overview overview1;
     }
 }

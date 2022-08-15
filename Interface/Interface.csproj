@@ -9,6 +9,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="UpdateClientes.cs" />
+    <Compile Remove="UpdateClientes.Designer.cs" />
+    <Compile Remove="UserControl1.cs" />
+    <Compile Remove="UserControl1.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="UpdateClientes.resx" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>

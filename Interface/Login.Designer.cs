@@ -176,6 +176,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(600, 576);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // button1
             // 
@@ -193,6 +194,7 @@
             this.button1.Text = "Login";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Paint += new System.Windows.Forms.PaintEventHandler(this.button1_Paint);
             // 
             // panel4
             // 
@@ -277,7 +279,7 @@
             this.textBox2.Size = new System.Drawing.Size(249, 20);
             this.textBox2.TabIndex = 3;
             // 
-            // Form2
+            // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -285,7 +287,7 @@
             this.ClientSize = new System.Drawing.Size(1184, 675);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "Form2";
+            this.Name = "Login";
             this.Text = "Form2";
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();

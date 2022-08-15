@@ -21,6 +21,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroClientes));
             this.panel17 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panelPessoaJuridica = new System.Windows.Forms.Panel();
@@ -28,19 +29,25 @@
             this.panelPessoaFisica = new System.Windows.Forms.Panel();
             this.pessoaFisica = new System.Windows.Forms.RadioButton();
             this.ClienteCPF = new Interface.UserControl1();
+            this.searchPanel = new System.Windows.Forms.Panel();
+            this.panelSerch = new Interface.Properties.PanelBorderRoundedOnLeft();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.textSearch = new System.Windows.Forms.TextBox();
             this.ClienteCNPJ = new Interface.ClienteCNPJ();
             this.panel17.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panelPessoaJuridica.SuspendLayout();
             this.panelPessoaFisica.SuspendLayout();
+            this.searchPanel.SuspendLayout();
+            this.panelSerch.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel17
             // 
-            this.panel17.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel17.BackColor = System.Drawing.Color.Transparent;
             this.panel17.Controls.Add(this.tableLayoutPanel2);
+            this.panel17.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel17.Location = new System.Drawing.Point(0, 0);
             this.panel17.Margin = new System.Windows.Forms.Padding(0);
             this.panel17.Name = "panel17";
@@ -49,13 +56,12 @@
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Controls.Add(this.panelPessoaJuridica, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.panelPessoaFisica, 0, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -90,7 +96,7 @@
             this.pessoaJuridica.Name = "pessoaJuridica";
             this.pessoaJuridica.Size = new System.Drawing.Size(138, 24);
             this.pessoaJuridica.TabIndex = 3;
-            this.pessoaJuridica.Text = "Pessoa Juridica";
+            this.pessoaJuridica.Text = "Pessoa Jurídica";
             this.pessoaJuridica.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.pessoaJuridica.UseVisualStyleBackColor = true;
             this.pessoaJuridica.CheckedChanged += new System.EventHandler(this.pessoaJuridica_CheckedChanged);
@@ -131,11 +137,61 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ClienteCPF.BackColor = System.Drawing.Color.Transparent;
-            this.ClienteCPF.Location = new System.Drawing.Point(0, 62);
+            this.ClienteCPF.Location = new System.Drawing.Point(0, 124);
             this.ClienteCPF.Margin = new System.Windows.Forms.Padding(0);
             this.ClienteCPF.Name = "ClienteCPF";
-            this.ClienteCPF.Size = new System.Drawing.Size(975, 476);
+            this.ClienteCPF.Size = new System.Drawing.Size(975, 653);
             this.ClienteCPF.TabIndex = 6;
+            // 
+            // searchPanel
+            // 
+            this.searchPanel.BackColor = System.Drawing.Color.Transparent;
+            this.searchPanel.Controls.Add(this.panelSerch);
+            this.searchPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.searchPanel.Location = new System.Drawing.Point(0, 62);
+            this.searchPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.searchPanel.Name = "searchPanel";
+            this.searchPanel.Padding = new System.Windows.Forms.Padding(0, 13, 0, 13);
+            this.searchPanel.Size = new System.Drawing.Size(975, 62);
+            this.searchPanel.TabIndex = 8;
+            // 
+            // panelSerch
+            // 
+            this.panelSerch.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.panelSerch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.panelSerch.Controls.Add(this.pictureBox3);
+            this.panelSerch.Controls.Add(this.textSearch);
+            this.panelSerch.Location = new System.Drawing.Point(314, 13);
+            this.panelSerch.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.panelSerch.Name = "panelSerch";
+            this.panelSerch.Size = new System.Drawing.Size(347, 36);
+            this.panelSerch.TabIndex = 2;
+            this.panelSerch.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSerch_Paint);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(10, 12);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(15, 15);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
+            // 
+            // textSearch
+            // 
+            this.textSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.textSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.textSearch.ForeColor = System.Drawing.Color.White;
+            this.textSearch.Location = new System.Drawing.Point(35, 8);
+            this.textSearch.Margin = new System.Windows.Forms.Padding(10, 8, 10, 0);
+            this.textSearch.Name = "textSearch";
+            this.textSearch.PlaceholderText = "Search";
+            this.textSearch.Size = new System.Drawing.Size(302, 19);
+            this.textSearch.TabIndex = 6;
             // 
             // ClienteCNPJ
             // 
@@ -143,10 +199,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ClienteCNPJ.BackColor = System.Drawing.Color.Transparent;
-            this.ClienteCNPJ.Location = new System.Drawing.Point(0, 62);
+            this.ClienteCNPJ.Location = new System.Drawing.Point(0, 124);
             this.ClienteCNPJ.Margin = new System.Windows.Forms.Padding(0);
             this.ClienteCNPJ.Name = "ClienteCNPJ";
-            this.ClienteCNPJ.Size = new System.Drawing.Size(975, 637);
+            this.ClienteCNPJ.Size = new System.Drawing.Size(975, 653);
             this.ClienteCNPJ.TabIndex = 4;
             // 
             // CadastroClientes
@@ -154,19 +210,25 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.searchPanel);
             this.Controls.Add(this.ClienteCNPJ);
             this.Controls.Add(this.ClienteCPF);
             this.Controls.Add(this.panel17);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "CadastroClientes";
-            this.Size = new System.Drawing.Size(975, 538);
+            this.Size = new System.Drawing.Size(975, 715);
             this.Load += new System.EventHandler(this.CadastroClientes_Load);
+            this.Resize += new System.EventHandler(this.CadastroClientes_Resize);
             this.panel17.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panelPessoaJuridica.ResumeLayout(false);
             this.panelPessoaJuridica.PerformLayout();
             this.panelPessoaFisica.ResumeLayout(false);
             this.panelPessoaFisica.PerformLayout();
+            this.searchPanel.ResumeLayout(false);
+            this.panelSerch.ResumeLayout(false);
+            this.panelSerch.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -180,6 +242,10 @@
         private Panel panelPessoaFisica;
         private RadioButton pessoaFisica;
         private UserControl1 ClienteCPF;
+        private Panel searchPanel;
+        private Properties.PanelBorderRoundedOnLeft panelSerch;
+        private PictureBox pictureBox3;
+        private TextBox textSearch;
         private ClienteCNPJ ClienteCNPJ;
     }
 }
