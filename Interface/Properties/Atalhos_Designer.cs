@@ -1,6 +1,4 @@
-﻿using System.Windows.Forms;
-using System.Drawing;
-using System.Runtime.InteropServices;
+﻿using System.Runtime.InteropServices;
 using System.Drawing.Drawing2D;
 
 namespace Interface.Properties

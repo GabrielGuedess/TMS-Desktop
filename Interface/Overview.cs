@@ -5,6 +5,14 @@ namespace Interface
     public partial class Overview : UserControl
     {
         readonly Utilidades utils = new();
+
+        public string TypeControl
+        {
+            set
+            {
+                buscar.Text = value;
+            }
+        }
         public Overview()
         {
             InitializeComponent();

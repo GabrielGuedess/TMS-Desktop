@@ -12,13 +12,13 @@ namespace Interface
                 ClienteCPF.TypeControl = value;
                 ClienteCNPJ.TypeControl = value;
 
-                if (value == "Cadastro")
+                if (value.Contains("Cadastro"))
                 {
                     searchPanel.Visible = false;
                     ClienteCPF.Location = new Point(0, 62);
                     ClienteCNPJ.Location = new Point(0, 62);
                 }
-                if (value == "Update")
+                if (value.Contains("Update"))
                 {
                     searchPanel.Visible = true;
                     ClienteCPF.Location = new Point(0, 124);

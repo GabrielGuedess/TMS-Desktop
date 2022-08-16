@@ -54,9 +54,7 @@ namespace Interface
         {
             foreach (Panel panel in panels)
             {
-                string panelName = panel.Name.Replace("line", "");
-
-                if (activeOver == panelName)
+                if (panel.Name.Contains(activeOver))
                 {
                     utils.paintLine(panel);
                 }
@@ -67,40 +65,103 @@ namespace Interface
             }
         }
 
-        public void ClientesNavigation(Overview overview, CadastroClientes cadastroClientes, Button button, Panel line)
+        public void ColorsNavigationDashLines(params Panel[] panels)
         {
-            utils.paintButtonPanel(button, line);
+            foreach (Panel panel in panels)
+            {
+                if (panel.Name.Contains(activeDash))
+                {
+                    utils.paintLine(panel);
+                }
+                else
+                {
+                    utils.removePaintLine(panel);
+                }
+            }
+        }
 
+        public void ColorsNavigationDashButtons(params Button[] buttons)
+        {
+            foreach (Button button in buttons)
+            {
+                if (button.Text.Contains(activeDash))
+                {
+                    utils.paintButton(button);
+                }
+                else
+                {
+                    utils.removePaintButton(button);
+                }
+            }
+        }
+
+        public void NavigationRoutes(Overview overview, CadastroClientes cadastroClientes, CadastroRotas cadastroRotas)
+        {
             if (activeDash == "Clientes")
             {
                 if (activeOver == "Overview")
                 {
                     overview.Visible = true;
+                    overview.TypeControl = "Overview-Clientes";
                     cadastroClientes.Visible = false;
+                    cadastroRotas.Visible = false;
                 }
 
                 if (activeOver == "Cadastro")
                 {
                     overview.Visible = false;
                     cadastroClientes.Visible = true;
-                    cadastroClientes.TypeControl = "Cadastro";
+                    cadastroClientes.TypeControl = "Cadastro-Clientes";
+                    cadastroRotas.Visible = false;
                 }
 
                 if (activeOver == "Update")
                 {
                     overview.Visible = false;
                     cadastroClientes.Visible = true;
-                    cadastroClientes.TypeControl = "Update";
+                    cadastroClientes.TypeControl = "Update-Clientes";
+                    cadastroRotas.Visible = false;
                 }
 
                 if (activeOver == "Delete")
                 {
-                    overview.Visible = false;
+                    overview.Visible = true;
+                    overview.TypeControl = "Delete-Clientes";
                     cadastroClientes.Visible = false;
-                    MessageBox.Show("Delete");
+                    cadastroRotas.Visible = false;
                 }
             }
 
+            if (activeDash == "Rotas")
+            {
+                if (activeOver == "Overview")
+                {
+                    overview.Visible = true;
+                    overview.TypeControl = "Overview-Rotas";
+                    cadastroRotas.Visible = false;
+                }
+
+                if (activeOver == "Cadastro")
+                {
+                    overview.Visible = false;
+                    cadastroRotas.Visible = true;
+                    cadastroRotas.TypeControl = "Update-Rotas";
+                }
+
+                if (activeOver == "Update")
+                {
+                    overview.Visible = false;
+                    cadastroRotas.Visible = true;
+                    cadastroRotas.TypeControl = "Update-Rotas";
+                }
+
+                if (activeOver == "Delete")
+                {
+                    overview.Visible = true;
+                    overview.TypeControl = "Delete-Rotas";
+                    cadastroRotas.Visible = false;
+                }
+            }
         }
     }
 }
