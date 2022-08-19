@@ -1,6 +1,6 @@
 ﻿namespace Interface
 {
-    partial class CadastroRotas
+    partial class CadastroRoutes
     {
         /// <summary> 
         /// Variável de designer necessária.
@@ -28,27 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroRotas));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroRoutes));
+            this.searchPanel = new System.Windows.Forms.Panel();
+            this.panelSerch = new Interface.Properties.PanelBorderRoundedOnLeft();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.textSearch = new System.Windows.Forms.TextBox();
             this.map = new GMap.NET.WindowsForms.GMapControl();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.panelCPF = new System.Windows.Forms.Panel();
-            this.SubpanelCPF = new System.Windows.Forms.Panel();
-            this.panelTextCPFClient = new Interface.Properties.PanelBorderRounded();
-            this.labelCPFClient = new System.Windows.Forms.Label();
-            this.panelNomeClient = new System.Windows.Forms.Panel();
-            this.subpanelNomeClient = new System.Windows.Forms.Panel();
-            this.panelTextNomeClient = new Interface.Properties.PanelBorderRounded();
-            this.labelNomeClient = new System.Windows.Forms.Label();
-            this.contentUsuario = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panelBorderRoundedNome = new Interface.Properties.PanelBorderRounded();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panelBorderRounded2 = new Interface.Properties.PanelBorderRounded();
-            this.label1 = new System.Windows.Forms.Label();
             this.contentRotas = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -76,6 +61,8 @@
             this.panelTextRGClient = new Interface.Properties.PanelBorderRounded();
             this.label7 = new System.Windows.Forms.Label();
             this.panelButton = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.calcularRota = new System.Windows.Forms.Button();
             this.cadastrarRota = new System.Windows.Forms.Button();
             this.cadastrarUsuario = new System.Windows.Forms.Button();
@@ -83,21 +70,9 @@
             this.cadastrar = new System.Windows.Forms.Button();
             this.panel51 = new System.Windows.Forms.Panel();
             this.button10 = new System.Windows.Forms.Button();
-            this.searchPanel = new System.Windows.Forms.Panel();
-            this.panelSerch = new Interface.Properties.PanelBorderRoundedOnLeft();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.textSearch = new System.Windows.Forms.TextBox();
-            this.panelMap = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel3.SuspendLayout();
-            this.panelCPF.SuspendLayout();
-            this.SubpanelCPF.SuspendLayout();
-            this.panelNomeClient.SuspendLayout();
-            this.subpanelNomeClient.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.searchPanel.SuspendLayout();
+            this.panelSerch.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.contentRotas.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -114,15 +89,60 @@
             this.subpanelRGClient.SuspendLayout();
             this.panelButton.SuspendLayout();
             this.panel51.SuspendLayout();
-            this.searchPanel.SuspendLayout();
-            this.panelSerch.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panelMap.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // searchPanel
+            // 
+            this.searchPanel.BackColor = System.Drawing.Color.Transparent;
+            this.searchPanel.Controls.Add(this.panelSerch);
+            this.searchPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.searchPanel.Location = new System.Drawing.Point(0, 0);
+            this.searchPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.searchPanel.Name = "searchPanel";
+            this.searchPanel.Padding = new System.Windows.Forms.Padding(0, 13, 0, 13);
+            this.searchPanel.Size = new System.Drawing.Size(975, 62);
+            this.searchPanel.TabIndex = 15;
+            // 
+            // panelSerch
+            // 
+            this.panelSerch.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.panelSerch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.panelSerch.Controls.Add(this.pictureBox3);
+            this.panelSerch.Controls.Add(this.textSearch);
+            this.panelSerch.Location = new System.Drawing.Point(323, 13);
+            this.panelSerch.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.panelSerch.Name = "panelSerch";
+            this.panelSerch.Size = new System.Drawing.Size(347, 36);
+            this.panelSerch.TabIndex = 2;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(10, 12);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(15, 15);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
+            // 
+            // textSearch
+            // 
+            this.textSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.textSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.textSearch.ForeColor = System.Drawing.Color.White;
+            this.textSearch.Location = new System.Drawing.Point(35, 8);
+            this.textSearch.Margin = new System.Windows.Forms.Padding(10, 8, 10, 0);
+            this.textSearch.Name = "textSearch";
+            this.textSearch.PlaceholderText = "Search";
+            this.textSearch.Size = new System.Drawing.Size(302, 19);
+            this.textSearch.TabIndex = 6;
             // 
             // map
             // 
-            this.map.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.map.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.map.Bearing = 0F;
             this.map.CanDragMap = true;
@@ -130,7 +150,7 @@
             this.map.GrayScaleMode = false;
             this.map.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
             this.map.LevelsKeepInMemory = 5;
-            this.map.Location = new System.Drawing.Point(0, 2);
+            this.map.Location = new System.Drawing.Point(40, 40);
             this.map.Margin = new System.Windows.Forms.Padding(0);
             this.map.MarkersEnabled = true;
             this.map.MaxZoom = 2;
@@ -145,254 +165,29 @@
             this.map.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
             this.map.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
             this.map.ShowTileGridLines = false;
-            this.map.Size = new System.Drawing.Size(975, 402);
-            this.map.TabIndex = 0;
+            this.map.Size = new System.Drawing.Size(895, 500);
+            this.map.TabIndex = 16;
             this.map.Zoom = 0D;
-            // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel3.ColumnCount = 3;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33332F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tableLayoutPanel3.Controls.Add(this.panelCPF, 0, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(200, 100);
-            this.tableLayoutPanel3.TabIndex = 0;
-            // 
-            // panelCPF
-            // 
-            this.panelCPF.BackColor = System.Drawing.Color.Transparent;
-            this.panelCPF.Controls.Add(this.SubpanelCPF);
-            this.panelCPF.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelCPF.Location = new System.Drawing.Point(0, 0);
-            this.panelCPF.Margin = new System.Windows.Forms.Padding(0);
-            this.panelCPF.Name = "panelCPF";
-            this.panelCPF.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.panelCPF.Size = new System.Drawing.Size(66, 100);
-            this.panelCPF.TabIndex = 0;
-            // 
-            // SubpanelCPF
-            // 
-            this.SubpanelCPF.BackColor = System.Drawing.Color.Transparent;
-            this.SubpanelCPF.Controls.Add(this.panelTextCPFClient);
-            this.SubpanelCPF.Controls.Add(this.labelCPFClient);
-            this.SubpanelCPF.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SubpanelCPF.Location = new System.Drawing.Point(20, 20);
-            this.SubpanelCPF.Margin = new System.Windows.Forms.Padding(0);
-            this.SubpanelCPF.Name = "SubpanelCPF";
-            this.SubpanelCPF.Size = new System.Drawing.Size(26, 70);
-            this.SubpanelCPF.TabIndex = 7;
-            // 
-            // panelTextCPFClient
-            // 
-            this.panelTextCPFClient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelTextCPFClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelTextCPFClient.Location = new System.Drawing.Point(5, 22);
-            this.panelTextCPFClient.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.panelTextCPFClient.Name = "panelTextCPFClient";
-            this.panelTextCPFClient.Size = new System.Drawing.Size(74, 33);
-            this.panelTextCPFClient.TabIndex = 2;
-            // 
-            // labelCPFClient
-            // 
-            this.labelCPFClient.AutoSize = true;
-            this.labelCPFClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.labelCPFClient.ForeColor = System.Drawing.Color.White;
-            this.labelCPFClient.Location = new System.Drawing.Point(5, 5);
-            this.labelCPFClient.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
-            this.labelCPFClient.Name = "labelCPFClient";
-            this.labelCPFClient.Size = new System.Drawing.Size(34, 17);
-            this.labelCPFClient.TabIndex = 0;
-            this.labelCPFClient.Text = "CPF";
-            // 
-            // panelNomeClient
-            // 
-            this.panelNomeClient.BackColor = System.Drawing.Color.Transparent;
-            this.panelNomeClient.Controls.Add(this.subpanelNomeClient);
-            this.panelNomeClient.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelNomeClient.Location = new System.Drawing.Point(66, 0);
-            this.panelNomeClient.Margin = new System.Windows.Forms.Padding(0);
-            this.panelNomeClient.Name = "panelNomeClient";
-            this.panelNomeClient.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.panelNomeClient.Size = new System.Drawing.Size(66, 100);
-            this.panelNomeClient.TabIndex = 1;
-            // 
-            // subpanelNomeClient
-            // 
-            this.subpanelNomeClient.BackColor = System.Drawing.Color.Transparent;
-            this.subpanelNomeClient.Controls.Add(this.panelTextNomeClient);
-            this.subpanelNomeClient.Controls.Add(this.labelNomeClient);
-            this.subpanelNomeClient.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.subpanelNomeClient.Location = new System.Drawing.Point(20, 20);
-            this.subpanelNomeClient.Margin = new System.Windows.Forms.Padding(0);
-            this.subpanelNomeClient.Name = "subpanelNomeClient";
-            this.subpanelNomeClient.Size = new System.Drawing.Size(26, 70);
-            this.subpanelNomeClient.TabIndex = 8;
-            // 
-            // panelTextNomeClient
-            // 
-            this.panelTextNomeClient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelTextNomeClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelTextNomeClient.Location = new System.Drawing.Point(5, 22);
-            this.panelTextNomeClient.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.panelTextNomeClient.Name = "panelTextNomeClient";
-            this.panelTextNomeClient.Size = new System.Drawing.Size(74, 33);
-            this.panelTextNomeClient.TabIndex = 1;
-            // 
-            // labelNomeClient
-            // 
-            this.labelNomeClient.AutoSize = true;
-            this.labelNomeClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.labelNomeClient.ForeColor = System.Drawing.Color.White;
-            this.labelNomeClient.Location = new System.Drawing.Point(5, 5);
-            this.labelNomeClient.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
-            this.labelNomeClient.Name = "labelNomeClient";
-            this.labelNomeClient.Size = new System.Drawing.Size(45, 17);
-            this.labelNomeClient.TabIndex = 0;
-            this.labelNomeClient.Text = "Nome";
-            // 
-            // contentUsuario
-            // 
-            this.contentUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.contentUsuario.AutoScroll = true;
-            this.contentUsuario.AutoScrollMargin = new System.Drawing.Size(0, 20);
-            this.contentUsuario.BackColor = System.Drawing.Color.Transparent;
-            this.contentUsuario.Location = new System.Drawing.Point(0, 0);
-            this.contentUsuario.Name = "contentUsuario";
-            this.contentUsuario.Size = new System.Drawing.Size(200, 100);
-            this.contentUsuario.TabIndex = 0;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33332F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tableLayoutPanel1.Controls.Add(this.panel3, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(200, 100);
-            this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Transparent;
-            this.panel3.Controls.Add(this.panel4);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(0);
-            this.panel3.Name = "panel3";
-            this.panel3.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.panel3.Size = new System.Drawing.Size(66, 100);
-            this.panel3.TabIndex = 14;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.Transparent;
-            this.panel4.Controls.Add(this.panelBorderRoundedNome);
-            this.panel4.Controls.Add(this.label2);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(20, 20);
-            this.panel4.Margin = new System.Windows.Forms.Padding(0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(26, 70);
-            this.panel4.TabIndex = 8;
-            // 
-            // panelBorderRoundedNome
-            // 
-            this.panelBorderRoundedNome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelBorderRoundedNome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelBorderRoundedNome.Location = new System.Drawing.Point(5, 22);
-            this.panelBorderRoundedNome.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.panelBorderRoundedNome.Name = "panelBorderRoundedNome";
-            this.panelBorderRoundedNome.Size = new System.Drawing.Size(74, 33);
-            this.panelBorderRoundedNome.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(5, 5);
-            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 17);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Nome";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 100);
-            this.panel1.Margin = new System.Windows.Forms.Padding(0);
-            this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.panel1.Size = new System.Drawing.Size(66, 100);
-            this.panel1.TabIndex = 5;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Controls.Add(this.panelBorderRounded2);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(20, 20);
-            this.panel2.Margin = new System.Windows.Forms.Padding(0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(26, 70);
-            this.panel2.TabIndex = 8;
-            // 
-            // panelBorderRounded2
-            // 
-            this.panelBorderRounded2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelBorderRounded2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelBorderRounded2.Location = new System.Drawing.Point(5, 21);
-            this.panelBorderRounded2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.panelBorderRounded2.Name = "panelBorderRounded2";
-            this.panelBorderRounded2.Size = new System.Drawing.Size(73, 33);
-            this.panelBorderRounded2.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(5, 5);
-            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Senha";
             // 
             // contentRotas
             // 
-            this.contentRotas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.contentRotas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.contentRotas.AutoScroll = true;
             this.contentRotas.AutoScrollMargin = new System.Drawing.Size(0, 20);
             this.contentRotas.BackColor = System.Drawing.Color.Transparent;
             this.contentRotas.Controls.Add(this.tableLayoutPanel2);
+            this.contentRotas.Controls.Add(this.map);
             this.contentRotas.Controls.Add(this.panelButton);
-            this.contentRotas.Location = new System.Drawing.Point(0, 562);
+            this.contentRotas.Location = new System.Drawing.Point(0, 62);
             this.contentRotas.Margin = new System.Windows.Forms.Padding(0);
             this.contentRotas.Name = "contentRotas";
             this.contentRotas.Padding = new System.Windows.Forms.Padding(40);
-            this.contentRotas.Size = new System.Drawing.Size(975, 426);
-            this.contentRotas.TabIndex = 12;
+            this.contentRotas.Size = new System.Drawing.Size(975, 939);
+            this.contentRotas.TabIndex = 17;
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33332F));
@@ -404,8 +199,8 @@
             this.tableLayoutPanel2.Controls.Add(this.panelDtNascClient, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.panelGeneroClient, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.panelRGClient, 1, 1);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(40, 40);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(40, 580);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0, 40, 0, 0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
@@ -488,10 +283,10 @@
             // 
             this.panelBorderRounded3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelBorderRounded3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelBorderRounded3.Location = new System.Drawing.Point(5, 37);
+            this.panelBorderRounded3.Location = new System.Drawing.Point(6, 37);
             this.panelBorderRounded3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelBorderRounded3.Name = "panelBorderRounded3";
-            this.panelBorderRounded3.Size = new System.Drawing.Size(248, 33);
+            this.panelBorderRounded3.Size = new System.Drawing.Size(247, 33);
             this.panelBorderRounded3.TabIndex = 2;
             // 
             // label4
@@ -689,21 +484,60 @@
             // 
             // panelButton
             // 
-            this.panelButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.panelButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelButton.BackColor = System.Drawing.Color.Transparent;
+            this.panelButton.Controls.Add(this.button1);
+            this.panelButton.Controls.Add(this.button2);
             this.panelButton.Controls.Add(this.calcularRota);
             this.panelButton.Controls.Add(this.cadastrarRota);
             this.panelButton.Controls.Add(this.cadastrarUsuario);
             this.panelButton.Controls.Add(this.cadastrarCNPJ);
             this.panelButton.Controls.Add(this.cadastrar);
             this.panelButton.Controls.Add(this.panel51);
-            this.panelButton.Location = new System.Drawing.Point(0, 340);
+            this.panelButton.Location = new System.Drawing.Point(0, 833);
             this.panelButton.Margin = new System.Windows.Forms.Padding(0, 100, 0, 0);
             this.panelButton.Name = "panelButton";
             this.panelButton.Padding = new System.Windows.Forms.Padding(40, 0, 40, 0);
             this.panelButton.Size = new System.Drawing.Size(975, 50);
             this.panelButton.TabIndex = 7;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(199)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(535, 0);
+            this.button1.Margin = new System.Windows.Forms.Padding(0, 0, 40, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(180, 50);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "Calcular Rota";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Paint += new System.Windows.Forms.PaintEventHandler(this.button1_Paint);
+            // 
+            // button2
+            // 
+            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(199)))));
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(755, 0);
+            this.button2.Margin = new System.Windows.Forms.Padding(0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(180, 50);
+            this.button2.TabIndex = 16;
+            this.button2.Text = "Cadastrar";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Paint += new System.Windows.Forms.PaintEventHandler(this.button2_Paint);
             // 
             // calcularRota
             // 
@@ -714,14 +548,13 @@
             this.calcularRota.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.calcularRota.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.calcularRota.ForeColor = System.Drawing.Color.White;
-            this.calcularRota.Location = new System.Drawing.Point(535, 0);
+            this.calcularRota.Location = new System.Drawing.Point(1270, -25);
             this.calcularRota.Margin = new System.Windows.Forms.Padding(0, 0, 40, 0);
             this.calcularRota.Name = "calcularRota";
             this.calcularRota.Size = new System.Drawing.Size(180, 50);
             this.calcularRota.TabIndex = 15;
             this.calcularRota.Text = "Calcular Rota";
             this.calcularRota.UseVisualStyleBackColor = false;
-            this.calcularRota.Paint += new System.Windows.Forms.PaintEventHandler(this.calcularRota_Paint);
             // 
             // cadastrarRota
             // 
@@ -732,14 +565,13 @@
             this.cadastrarRota.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cadastrarRota.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.cadastrarRota.ForeColor = System.Drawing.Color.White;
-            this.cadastrarRota.Location = new System.Drawing.Point(755, 0);
+            this.cadastrarRota.Location = new System.Drawing.Point(1490, -25);
             this.cadastrarRota.Margin = new System.Windows.Forms.Padding(0);
             this.cadastrarRota.Name = "cadastrarRota";
             this.cadastrarRota.Size = new System.Drawing.Size(180, 50);
             this.cadastrarRota.TabIndex = 14;
             this.cadastrarRota.Text = "Cadastrar";
             this.cadastrarRota.UseVisualStyleBackColor = false;
-            this.cadastrarRota.Paint += new System.Windows.Forms.PaintEventHandler(this.cadastrarRota_Paint);
             // 
             // cadastrarUsuario
             // 
@@ -750,7 +582,7 @@
             this.cadastrarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cadastrarUsuario.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.cadastrarUsuario.ForeColor = System.Drawing.Color.White;
-            this.cadastrarUsuario.Location = new System.Drawing.Point(1490, -25);
+            this.cadastrarUsuario.Location = new System.Drawing.Point(2225, -50);
             this.cadastrarUsuario.Margin = new System.Windows.Forms.Padding(0, 30, 0, 0);
             this.cadastrarUsuario.Name = "cadastrarUsuario";
             this.cadastrarUsuario.Size = new System.Drawing.Size(180, 50);
@@ -767,7 +599,7 @@
             this.cadastrarCNPJ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cadastrarCNPJ.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.cadastrarCNPJ.ForeColor = System.Drawing.Color.White;
-            this.cadastrarCNPJ.Location = new System.Drawing.Point(2242, -50);
+            this.cadastrarCNPJ.Location = new System.Drawing.Point(2977, -75);
             this.cadastrarCNPJ.Margin = new System.Windows.Forms.Padding(0, 30, 0, 0);
             this.cadastrarCNPJ.Name = "cadastrarCNPJ";
             this.cadastrarCNPJ.Size = new System.Drawing.Size(180, 50);
@@ -784,7 +616,7 @@
             this.cadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cadastrar.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.cadastrar.ForeColor = System.Drawing.Color.White;
-            this.cadastrar.Location = new System.Drawing.Point(2977, -75);
+            this.cadastrar.Location = new System.Drawing.Point(3712, -100);
             this.cadastrar.Margin = new System.Windows.Forms.Padding(0, 30, 0, 0);
             this.cadastrar.Name = "cadastrar";
             this.cadastrar.Size = new System.Drawing.Size(180, 50);
@@ -794,11 +626,11 @@
             // 
             // panel51
             // 
-            this.panel51.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.panel51.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel51.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(98)))), ((int)(((byte)(255)))));
             this.panel51.Controls.Add(this.button10);
-            this.panel51.Location = new System.Drawing.Point(9489, 0);
+            this.panel51.Location = new System.Drawing.Point(10224, 0);
             this.panel51.Margin = new System.Windows.Forms.Padding(0);
             this.panel51.Name = "panel51";
             this.panel51.Size = new System.Drawing.Size(200, 0);
@@ -806,7 +638,7 @@
             // 
             // button10
             // 
-            this.button10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.button10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button10.BackColor = System.Drawing.Color.Transparent;
             this.button10.FlatAppearance.BorderSize = 0;
@@ -822,93 +654,20 @@
             this.button10.Text = "Salvar";
             this.button10.UseVisualStyleBackColor = false;
             // 
-            // searchPanel
-            // 
-            this.searchPanel.BackColor = System.Drawing.Color.Transparent;
-            this.searchPanel.Controls.Add(this.panelSerch);
-            this.searchPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.searchPanel.Location = new System.Drawing.Point(0, 0);
-            this.searchPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.searchPanel.Name = "searchPanel";
-            this.searchPanel.Padding = new System.Windows.Forms.Padding(0, 13, 0, 13);
-            this.searchPanel.Size = new System.Drawing.Size(975, 62);
-            this.searchPanel.TabIndex = 14;
-            // 
-            // panelSerch
-            // 
-            this.panelSerch.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.panelSerch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelSerch.Controls.Add(this.pictureBox3);
-            this.panelSerch.Controls.Add(this.textSearch);
-            this.panelSerch.Location = new System.Drawing.Point(323, 13);
-            this.panelSerch.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.panelSerch.Name = "panelSerch";
-            this.panelSerch.Size = new System.Drawing.Size(347, 36);
-            this.panelSerch.TabIndex = 2;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(10, 12);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(15, 15);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
-            // 
-            // textSearch
-            // 
-            this.textSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.textSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.textSearch.ForeColor = System.Drawing.Color.White;
-            this.textSearch.Location = new System.Drawing.Point(35, 8);
-            this.textSearch.Margin = new System.Windows.Forms.Padding(10, 8, 10, 0);
-            this.textSearch.Name = "textSearch";
-            this.textSearch.PlaceholderText = "Search";
-            this.textSearch.Size = new System.Drawing.Size(302, 19);
-            this.textSearch.TabIndex = 6;
-            // 
-            // panelMap
-            // 
-            this.panelMap.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelMap.BackColor = System.Drawing.Color.RosyBrown;
-            this.panelMap.Controls.Add(this.map);
-            this.panelMap.Location = new System.Drawing.Point(0, 62);
-            this.panelMap.Margin = new System.Windows.Forms.Padding(0);
-            this.panelMap.Name = "panelMap";
-            this.panelMap.Size = new System.Drawing.Size(975, 500);
-            this.panelMap.TabIndex = 15;
-            // 
-            // Rotas
+            // CadastroRoutes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.Controls.Add(this.panelMap);
-            this.Controls.Add(this.contentRotas);
             this.Controls.Add(this.searchPanel);
-            this.Margin = new System.Windows.Forms.Padding(0);
-            this.Name = "Rotas";
-            this.Size = new System.Drawing.Size(975, 1032);
-            this.Load += new System.EventHandler(this.Rotas_Load);
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.panelCPF.ResumeLayout(false);
-            this.SubpanelCPF.ResumeLayout(false);
-            this.SubpanelCPF.PerformLayout();
-            this.panelNomeClient.ResumeLayout(false);
-            this.subpanelNomeClient.ResumeLayout(false);
-            this.subpanelNomeClient.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.Controls.Add(this.contentRotas);
+            this.Name = "CadastroRoutes";
+            this.Size = new System.Drawing.Size(975, 974);
+            this.Load += new System.EventHandler(this.CadastroRoutes_Load);
+            this.searchPanel.ResumeLayout(false);
+            this.panelSerch.ResumeLayout(false);
+            this.panelSerch.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.contentRotas.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
@@ -931,37 +690,17 @@
             this.subpanelRGClient.PerformLayout();
             this.panelButton.ResumeLayout(false);
             this.panel51.ResumeLayout(false);
-            this.searchPanel.ResumeLayout(false);
-            this.panelSerch.ResumeLayout(false);
-            this.panelSerch.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.panelMap.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private Panel searchPanel;
+        private Properties.PanelBorderRoundedOnLeft panelSerch;
+        private PictureBox pictureBox3;
+        private TextBox textSearch;
         private GMap.NET.WindowsForms.GMapControl map;
-        private TableLayoutPanel tableLayoutPanel3;
-        private Panel panelCPF;
-        private Panel SubpanelCPF;
-        private Properties.PanelBorderRounded panelTextCPFClient;
-        private Label labelCPFClient;
-        private Panel panelNomeClient;
-        private Panel subpanelNomeClient;
-        private Properties.PanelBorderRounded panelTextNomeClient;
-        private Label labelNomeClient;
-        private Panel contentUsuario;
-        private TableLayoutPanel tableLayoutPanel1;
-        private Panel panel3;
-        private Panel panel4;
-        private Properties.PanelBorderRounded panelBorderRoundedNome;
-        private Label label2;
-        private Panel panel1;
-        private Panel panel2;
-        private Properties.PanelBorderRounded panelBorderRounded2;
-        private Label label1;
         private Panel contentRotas;
         private TableLayoutPanel tableLayoutPanel2;
         private Panel panel6;
@@ -989,17 +728,14 @@
         private Properties.PanelBorderRounded panelTextRGClient;
         private Label label7;
         private Panel panelButton;
+        private Button calcularRota;
+        private Button cadastrarRota;
         private Button cadastrarUsuario;
         private Button cadastrarCNPJ;
         private Button cadastrar;
         private Panel panel51;
         private Button button10;
-        private Panel searchPanel;
-        private Properties.PanelBorderRoundedOnLeft panelSerch;
-        private PictureBox pictureBox3;
-        private TextBox textSearch;
-        private Button cadastrarRota;
-        private Button calcularRota;
-        private Panel panelMap;
+        private Button button1;
+        private Button button2;
     }
 }

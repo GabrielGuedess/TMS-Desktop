@@ -9,7 +9,7 @@ using Microsoft.VisualBasic.Logging;
 
 namespace Interface
 {
-    public partial class CadastroRotas : UserControl
+    public partial class CadastroRoutes : UserControl
     {
         readonly Utilidades utils = new();
 
@@ -22,33 +22,27 @@ namespace Interface
                 if (value.Contains("Cadastro"))
                 {
                     searchPanel.Visible = false;
-                    panelMap.Location = new Point(0, 0);
-                    contentRotas.Location = new Point(0, 510);
+                    contentRotas.Location = new Point(0, 0);
                 }
                 if (value.Contains("Update"))
                 {
                     searchPanel.Visible = true;
-                    panelMap.Location = new Point(0, 562);
-                    contentRotas.Location = new Point(0, 572);
+                    contentRotas.Location = new Point(0, 62);
                 }
             }
         }
-
-        private List<PointLatLng> _points;
-
-        public CadastroRotas()
+        public CadastroRoutes()
         {
             InitializeComponent();
-            _points = new List<PointLatLng>();
         }
 
-        private void Rotas_Load(object sender, EventArgs e)
+        private void CadastroRoutes_Load(object sender, EventArgs e)
         {
             map.ShowCenter = false;
             map.MouseWheelZoomEnabled = false;
         }
 
-        private void verRota_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             map.Visible = true;
             map.Height = 500;
@@ -90,14 +84,14 @@ namespace Interface
             //map.Overlays.Add(markers);
         }
 
-        private void calcularRota_Paint(object sender, PaintEventArgs e)
+        private void button1_Paint(object sender, PaintEventArgs e)
         {
             utils.expansiveButton(10, calcularRota);
 
             contentRotas.Location = new Point(0, 62);
         }
 
-        private void cadastrarRota_Paint(object sender, PaintEventArgs e)
+        private void button2_Paint(object sender, PaintEventArgs e)
         {
             utils.expansiveButton(10, cadastrarRota);
         }

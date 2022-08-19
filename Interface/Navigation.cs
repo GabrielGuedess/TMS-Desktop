@@ -11,28 +11,14 @@ namespace Interface
         private string activeOver = "";
         public string TypeControlDash
         {
-            get
-            {
-                return activeDash;
-            }
-            set
-            {
-                activeDash = value;
-
-            }
+            get => activeDash;
+            set => activeDash = value;
         }
 
         public string TypeControlOver
         {
-            get
-            {
-                return activeOver;
-            }
-            set
-            {
-                activeOver = value;
-
-            }
+            get => activeOver;
+            set => activeOver = value;
         }
 
         public void ColorsNavigationButtons(params Button[] buttons)
@@ -84,7 +70,7 @@ namespace Interface
         {
             foreach (Button button in buttons)
             {
-                if (button.Text.Contains(activeDash))
+                if (button.Name.Contains(activeDash))
                 {
                     utils.paintButton(button);
                 }
@@ -95,72 +81,93 @@ namespace Interface
             }
         }
 
-        public void NavigationRoutes(Overview overview, CadastroClientes cadastroClientes, CadastroRotas cadastroRotas)
+        public void NavigationRoutes(
+            Overview overview,
+            CadastroClientes cadastroClientes,
+            CadastroRoutes cadastroRotas,
+            CadastroUsuarios cadastroUsuarios,
+            CadastroMotoristas cadastroMotoristas,
+            CadastroVeiculos cadastroVeiculos,
+            CadastroTerceiros cadastroTerceiros,
+            CadastroSinistros cadastroSinistros,
+            CadastroNotasFicais cadastroNotasFicais
+            )
         {
-            if (activeDash == "Clientes")
+            if (activeOver == "Overview")
             {
-                if (activeOver == "Overview")
-                {
-                    overview.Visible = true;
-                    overview.TypeControl = "Overview-Clientes";
-                    cadastroClientes.Visible = false;
-                    cadastroRotas.Visible = false;
-                }
+                overview.Visible = true;
+                overview.TypeControl = $"Overview-{activeDash}";
 
-                if (activeOver == "Cadastro")
-                {
-                    overview.Visible = false;
-                    cadastroClientes.Visible = true;
-                    cadastroClientes.TypeControl = "Cadastro-Clientes";
-                    cadastroRotas.Visible = false;
-                }
-
-                if (activeOver == "Update")
-                {
-                    overview.Visible = false;
-                    cadastroClientes.Visible = true;
-                    cadastroClientes.TypeControl = "Update-Clientes";
-                    cadastroRotas.Visible = false;
-                }
-
-                if (activeOver == "Delete")
-                {
-                    overview.Visible = true;
-                    overview.TypeControl = "Delete-Clientes";
-                    cadastroClientes.Visible = false;
-                    cadastroRotas.Visible = false;
-                }
+                cadastroClientes.Visible = false;
+                cadastroUsuarios.Visible = false;
+                cadastroRotas.Visible = false;
+                cadastroMotoristas.Visible = false;
+                cadastroVeiculos.Visible = false;
+                cadastroTerceiros.Visible = false;
+                cadastroSinistros.Visible = false;
+                cadastroNotasFicais.Visible = false;
             }
 
-            if (activeDash == "Rotas")
+            if (activeOver == "Cadastro")
             {
-                if (activeOver == "Overview")
-                {
-                    overview.Visible = true;
-                    overview.TypeControl = "Overview-Rotas";
-                    cadastroRotas.Visible = false;
-                }
+                overview.Visible = false;
 
-                if (activeOver == "Cadastro")
-                {
-                    overview.Visible = false;
-                    cadastroRotas.Visible = true;
-                    cadastroRotas.TypeControl = "Update-Rotas";
-                }
+                cadastroClientes.Visible = activeDash == "Clientes";
+                cadastroUsuarios.Visible = activeDash == "Usuarios";
+                cadastroRotas.Visible = activeDash == "Rotas";
+                cadastroMotoristas.Visible = activeDash == "Motoristas";
+                cadastroVeiculos.Visible = activeDash == "Veiculos";
+                cadastroTerceiros.Visible = activeDash == "Terceiros";
+                cadastroSinistros.Visible = activeDash == "Sinistros";
+                cadastroNotasFicais.Visible = activeDash == "Notas";
 
-                if (activeOver == "Update")
-                {
-                    overview.Visible = false;
-                    cadastroRotas.Visible = true;
-                    cadastroRotas.TypeControl = "Update-Rotas";
-                }
 
-                if (activeOver == "Delete")
-                {
-                    overview.Visible = true;
-                    overview.TypeControl = "Delete-Rotas";
-                    cadastroRotas.Visible = false;
-                }
+                cadastroClientes.TypeControl = $"Cadastro-{activeDash}";
+                cadastroUsuarios.TypeControl = $"Cadastro-{activeDash}";
+                cadastroRotas.TypeControl = $"Cadastro-{activeDash}";
+                cadastroMotoristas.TypeControl = $"Cadastro-{activeDash}";
+                cadastroVeiculos.TypeControl = $"Cadastro-{activeDash}";
+                cadastroTerceiros.TypeControl = $"Cadastro-{activeDash}";
+                cadastroSinistros.TypeControl = $"Cadastro-{activeDash}";
+                cadastroNotasFicais.TypeControl = $"Cadastro-{activeDash}";
+            }
+
+            if (activeOver == "Update")
+            {
+                overview.Visible = false;
+
+                cadastroClientes.Visible = activeDash == "Clientes";
+                cadastroUsuarios.Visible = activeDash == "Usuarios";
+                cadastroRotas.Visible = activeDash == "Rotas";
+                cadastroMotoristas.Visible = activeDash == "Motoristas";
+                cadastroVeiculos.Visible = activeDash == "Veiculos";
+                cadastroTerceiros.Visible = activeDash == "Terceiros";
+                cadastroSinistros.Visible = activeDash == "Sinistros";
+                cadastroNotasFicais.Visible = activeDash == "Notas";
+
+                cadastroClientes.TypeControl = $"Update-{activeDash}";
+                cadastroUsuarios.TypeControl = $"Update-{activeDash}";
+                cadastroRotas.TypeControl = $"Update-{activeDash}";
+                cadastroMotoristas.TypeControl = $"Update-{activeDash}";
+                cadastroVeiculos.TypeControl = $"Update-{activeDash}";
+                cadastroTerceiros.TypeControl = $"Update-{activeDash}";
+                cadastroSinistros.TypeControl = $"Update-{activeDash}";
+                cadastroNotasFicais.TypeControl = $"Update-{activeDash}";
+            }
+
+            if (activeOver == "Delete")
+            {
+                overview.Visible = true;
+                overview.TypeControl = $"Delete-{activeDash}";
+
+                cadastroClientes.Visible = false;
+                cadastroUsuarios.Visible = false;
+                cadastroRotas.Visible = false;
+                cadastroMotoristas.Visible = false;
+                cadastroVeiculos.Visible = false;
+                cadastroTerceiros.Visible = false;
+                cadastroSinistros.Visible = false;
+                cadastroNotasFicais.Visible = false;
             }
         }
     }

@@ -16,16 +16,10 @@ namespace Interface
         {
             set
             {
-                if (value == "Cadastro")
-                {
-                    MessageBox.Show("Cadastro");
-                }
-                if (value == "Update")
-                {
-                    MessageBox.Show("Update");
-                }
+                rotas1.TypeControl = value;
             }
         }
+
         public CadastroRotas()
         {
             InitializeComponent();
