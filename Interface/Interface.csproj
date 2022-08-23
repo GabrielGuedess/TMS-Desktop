@@ -9,6 +9,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="CadastroNotas.cs" />
+    <Compile Remove="CadastroNotas.Designer.cs" />
     <Compile Remove="CadastroRotas.cs" />
     <Compile Remove="CadastroRotas.Designer.cs" />
     <Compile Remove="Rotas.cs" />
@@ -20,6 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Remove="CadastroNotas.resx" />
     <EmbeddedResource Remove="CadastroRotas.resx" />
     <EmbeddedResource Remove="Rotas.resx" />
     <EmbeddedResource Remove="UpdateClientes.resx" />

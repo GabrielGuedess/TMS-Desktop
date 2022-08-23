@@ -24,7 +24,9 @@ namespace Interface
                 cadastroVeiculos1,
                 cadastroTerceiros1,
                 cadastroSinistros1,
-                cadastroNotasFicais1
+                cadastroNotasFicais1,
+                cadastroTarifaseTaxas1,
+                cadastroRedesDeTransporte1
               );
 
             // Métodos para mostrar qual a pagina selecionada no momento
@@ -42,7 +44,9 @@ namespace Interface
                 buttonVeiculos,
                 buttonTerceiros,
                 buttonSinistros,
-                buttonNotasFicais
+                buttonNotasFicais,
+                buttonTarifasETaxas,
+                buttonRedesDeTransporte
               );
 
             navigationDash.ColorsNavigationDashLines(
@@ -53,7 +57,9 @@ namespace Interface
                 lineVeiculos,
                 lineTerceiros,
                 lineSinistros,
-                lineNotasFicais
+                lineNotasFicais,
+                lineTarifasETaxas,
+                lineRedesDeTransporte
               );
         }
 
@@ -111,6 +117,14 @@ namespace Interface
         private void buttonNotasFicais_Click(object sender, EventArgs e)
         {
             NavigationController("Notas", navigationDash.TypeControlOver);
+        }
+        private void buttonTarifasETaxas_Click(object sender, EventArgs e)
+        {
+            NavigationController("Tarifas", navigationDash.TypeControlOver);
+        }
+        private void buttonRedesDeTransporte_Click(object sender, EventArgs e)
+        {
+            NavigationController("Redes", navigationDash.TypeControlOver);
         }
 
         private void buttonOver_Click(object sender, EventArgs e)

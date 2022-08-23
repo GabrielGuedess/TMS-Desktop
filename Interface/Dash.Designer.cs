@@ -45,10 +45,7 @@ namespace Interface
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel18 = new System.Windows.Forms.Panel();
-            this.panel19 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.userProfile1 = new Interface.UserProfile();
             this.button15 = new System.Windows.Forms.Button();
             this.containerOverview = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -72,6 +69,9 @@ namespace Interface
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.textSearch = new System.Windows.Forms.TextBox();
             this.body = new System.Windows.Forms.Panel();
+            this.cadastroRedesDeTransporte1 = new Interface.CadastroRedesDeTransporte();
+            this.cadastroTarifaseTaxas1 = new Interface.CadastroTarifasETaxas();
+            this.cadastroClientes1 = new Interface.CadastroClientes();
             this.cadastroMotoristas1 = new Interface.CadastroMotoristas();
             this.overview1 = new Interface.Overview();
             this.cadastroSinistros1 = new Interface.CadastroSinistros();
@@ -80,7 +80,6 @@ namespace Interface
             this.cadastroVeiculos1 = new Interface.CadastroVeiculos();
             this.cadastroRoutes1 = new Interface.CadastroRoutes();
             this.cadastroUsuarios1 = new Interface.CadastroUsuarios();
-            this.cadastroClientes1 = new Interface.CadastroClientes();
             this.panelScroll = new System.Windows.Forms.Panel();
             this.panel51 = new System.Windows.Forms.Panel();
             this.lineRedesDeTransporte = new System.Windows.Forms.Panel();
@@ -120,8 +119,6 @@ namespace Interface
             this.panelSerch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel18.SuspendLayout();
-            this.panel19.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.containerOverview.SuspendLayout();
             this.panel1.SuspendLayout();
             this.containerCadastro.SuspendLayout();
@@ -324,7 +321,7 @@ namespace Interface
             // 
             this.panel18.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel18.Controls.Add(this.panel19);
+            this.panel18.Controls.Add(this.userProfile1);
             this.panel18.Controls.Add(this.button15);
             this.panel18.Location = new System.Drawing.Point(721, 0);
             this.panel18.Margin = new System.Windows.Forms.Padding(0);
@@ -332,54 +329,15 @@ namespace Interface
             this.panel18.Size = new System.Drawing.Size(254, 67);
             this.panel18.TabIndex = 0;
             // 
-            // panel19
+            // userProfile1
             // 
-            this.panel19.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.panel19.Controls.Add(this.label2);
-            this.panel19.Controls.Add(this.pictureBox2);
-            this.panel19.Controls.Add(this.label1);
-            this.panel19.Location = new System.Drawing.Point(78, 14);
-            this.panel19.Margin = new System.Windows.Forms.Padding(0);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(170, 38);
-            this.panel19.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(124)))));
-            this.label2.Location = new System.Drawing.Point(48, 21);
-            this.label2.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 17);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Design";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(38, 38);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(48, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 17);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Gabriel Guedes";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.userProfile1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.userProfile1.BackColor = System.Drawing.Color.Transparent;
+            this.userProfile1.Location = new System.Drawing.Point(84, 14);
+            this.userProfile1.Margin = new System.Windows.Forms.Padding(0);
+            this.userProfile1.Name = "userProfile1";
+            this.userProfile1.Size = new System.Drawing.Size(170, 38);
+            this.userProfile1.TabIndex = 11;
             // 
             // button15
             // 
@@ -683,6 +641,8 @@ namespace Interface
             | System.Windows.Forms.AnchorStyles.Right)));
             this.body.AutoScroll = true;
             this.body.BackColor = System.Drawing.Color.Black;
+            this.body.Controls.Add(this.cadastroRedesDeTransporte1);
+            this.body.Controls.Add(this.cadastroTarifaseTaxas1);
             this.body.Controls.Add(this.cadastroClientes1);
             this.body.Controls.Add(this.cadastroMotoristas1);
             this.body.Controls.Add(this.overview1);
@@ -699,6 +659,39 @@ namespace Interface
             this.body.Size = new System.Drawing.Size(1025, 609);
             this.body.TabIndex = 7;
             this.body.Paint += new System.Windows.Forms.PaintEventHandler(this.body_Paint);
+            // 
+            // cadastroRedesDeTransporte1
+            // 
+            this.cadastroRedesDeTransporte1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cadastroRedesDeTransporte1.BackColor = System.Drawing.Color.Transparent;
+            this.cadastroRedesDeTransporte1.Location = new System.Drawing.Point(25, 25);
+            this.cadastroRedesDeTransporte1.Margin = new System.Windows.Forms.Padding(0);
+            this.cadastroRedesDeTransporte1.Name = "cadastroRedesDeTransporte1";
+            this.cadastroRedesDeTransporte1.Size = new System.Drawing.Size(941, 608);
+            this.cadastroRedesDeTransporte1.TabIndex = 10;
+            // 
+            // cadastroTarifaseTaxas1
+            // 
+            this.cadastroTarifaseTaxas1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cadastroTarifaseTaxas1.BackColor = System.Drawing.Color.Transparent;
+            this.cadastroTarifaseTaxas1.Location = new System.Drawing.Point(25, 25);
+            this.cadastroTarifaseTaxas1.Margin = new System.Windows.Forms.Padding(0);
+            this.cadastroTarifaseTaxas1.Name = "cadastroTarifaseTaxas1";
+            this.cadastroTarifaseTaxas1.Size = new System.Drawing.Size(969, 465);
+            this.cadastroTarifaseTaxas1.TabIndex = 9;
+            // 
+            // cadastroClientes1
+            // 
+            this.cadastroClientes1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cadastroClientes1.BackColor = System.Drawing.Color.Transparent;
+            this.cadastroClientes1.Location = new System.Drawing.Point(25, 25);
+            this.cadastroClientes1.Margin = new System.Windows.Forms.Padding(0);
+            this.cadastroClientes1.Name = "cadastroClientes1";
+            this.cadastroClientes1.Size = new System.Drawing.Size(958, 715);
+            this.cadastroClientes1.TabIndex = 0;
             // 
             // cadastroMotoristas1
             // 
@@ -770,6 +763,7 @@ namespace Interface
             // 
             this.cadastroRoutes1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.cadastroRoutes1.BackColor = System.Drawing.Color.Transparent;
             this.cadastroRoutes1.Location = new System.Drawing.Point(25, 25);
             this.cadastroRoutes1.Margin = new System.Windows.Forms.Padding(0);
             this.cadastroRoutes1.Name = "cadastroRoutes1";
@@ -786,17 +780,6 @@ namespace Interface
             this.cadastroUsuarios1.Name = "cadastroUsuarios1";
             this.cadastroUsuarios1.Size = new System.Drawing.Size(958, 521);
             this.cadastroUsuarios1.TabIndex = 1;
-            // 
-            // cadastroClientes1
-            // 
-            this.cadastroClientes1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cadastroClientes1.BackColor = System.Drawing.Color.Transparent;
-            this.cadastroClientes1.Location = new System.Drawing.Point(25, 25);
-            this.cadastroClientes1.Margin = new System.Windows.Forms.Padding(0);
-            this.cadastroClientes1.Name = "cadastroClientes1";
-            this.cadastroClientes1.Size = new System.Drawing.Size(958, 715);
-            this.cadastroClientes1.TabIndex = 0;
             // 
             // panelScroll
             // 
@@ -867,6 +850,7 @@ namespace Interface
             this.buttonRedesDeTransporte.Text = "        Redes de Transporte";
             this.buttonRedesDeTransporte.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonRedesDeTransporte.UseVisualStyleBackColor = false;
+            this.buttonRedesDeTransporte.Click += new System.EventHandler(this.buttonRedesDeTransporte_Click);
             // 
             // panel49
             // 
@@ -913,6 +897,7 @@ namespace Interface
             this.buttonTarifasETaxas.Text = "        Tarifas e Taxas";
             this.buttonTarifasETaxas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonTarifasETaxas.UseVisualStyleBackColor = false;
+            this.buttonTarifasETaxas.Click += new System.EventHandler(this.buttonTarifasETaxas_Click);
             // 
             // panel47
             // 
@@ -1303,6 +1288,7 @@ namespace Interface
             this.MinimumSize = new System.Drawing.Size(1000, 0);
             this.Name = "Dash";
             this.Text = "i";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Resize += new System.EventHandler(this.Form1_Resize);
             this.flowLayoutPanel2.ResumeLayout(false);
@@ -1314,9 +1300,6 @@ namespace Interface
             this.panelSerch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel18.ResumeLayout(false);
-            this.panel19.ResumeLayout(false);
-            this.panel19.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.containerOverview.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.containerCadastro.ResumeLayout(false);
@@ -1367,10 +1350,6 @@ namespace Interface
         private Panel lineOverview;
         private Panel panel18;
         private Button button15;
-        private PictureBox pictureBox2;
-        private Label label2;
-        private Label label1;
-        private Panel panel19;
         private PictureBox pictureBox3;
         private Panel containerOverview;
         private Panel containerCadastro;
@@ -1423,5 +1402,8 @@ namespace Interface
         private Properties.PanelBorderRoundedOnLeft panelSerch;
         private PictureBox pictureBox4;
         private TextBox textBox1;
+        private CadastroTarifasETaxas cadastroTarifaseTaxas1;
+        private CadastroRedesDeTransporte cadastroRedesDeTransporte1;
+        private UserProfile userProfile1;
     }
 }

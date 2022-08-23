@@ -289,6 +289,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "Login";
             this.Text = "Form2";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
