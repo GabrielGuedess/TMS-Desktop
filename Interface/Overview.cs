@@ -6,11 +6,72 @@ namespace Interface
     {
         readonly Utilidades utils = new();
 
+        readonly Navigation navigationDash = new();
+
         public string TypeControl
         {
             set
             {
                 buscar.Text = value;
+
+                if (value.Contains("Clientes"))
+                {
+                    maskInput.Text = "";
+                    maskInput.Mask = "000.000.000-00";
+                }
+
+                if (value.Contains("Usuarios"))
+                {
+                    maskInput.Text = "";
+                    maskInput.Mask = "000.000.000-00";
+                }
+
+                if (value.Contains("Rotas"))
+                {
+                    maskInput.Text = "";
+                    maskInput.Mask = "";
+                }
+
+                if (value.Contains("Motoristas"))
+                {
+                    maskInput.Text = "";
+                    maskInput.Mask = "000.000.000-00";
+                }
+
+                if (value.Contains("Veiculos"))
+                {
+                    maskInput.Text = "";
+                    maskInput.Mask = "&&&&&&&";
+                }
+
+                if (value.Contains("Terceiros"))
+                {
+                    maskInput.Text = "";
+                    maskInput.Mask = "000.000.000-00";
+                }
+
+                if (value.Contains("Sinistros"))
+                {
+                    maskInput.Text = "";
+                    maskInput.Mask = "";
+                }
+
+                if (value.Contains("Notas"))
+                {
+                    maskInput.Text = "";
+                    maskInput.Mask = "";
+                }
+
+                if (value.Contains("Tarifas"))
+                {
+                    maskInput.Text = "";
+                    maskInput.Mask = "";
+                }
+                if (value.Contains("Redes"))
+                {
+                    maskInput.Text = "";
+                    maskInput.Mask = "";
+                }
             }
         }
         public Overview()

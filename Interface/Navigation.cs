@@ -98,7 +98,7 @@ namespace Interface
             if (activeOver == "Overview")
             {
                 overview.Visible = true;
-                overview.TypeControl = $"Overview-{activeDash}";
+                overview.TypeControl = $"{activeOver}-{activeDash}";
 
                 cadastroClientes.Visible = false;
                 cadastroUsuarios.Visible = false;
@@ -128,16 +128,16 @@ namespace Interface
                 cadastroRedesDeTransporte.Visible = activeDash == "Redes";
 
 
-                cadastroClientes.TypeControl = $"Cadastro-{activeDash}";
-                cadastroUsuarios.TypeControl = $"Cadastro-{activeDash}";
-                cadastroRotas.TypeControl = $"Cadastro-{activeDash}";
-                cadastroMotoristas.TypeControl = $"Cadastro-{activeDash}";
-                cadastroVeiculos.TypeControl = $"Cadastro-{activeDash}";
-                cadastroTerceiros.TypeControl = $"Cadastro-{activeDash}";
-                cadastroSinistros.TypeControl = $"Cadastro-{activeDash}";
-                cadastroNotasFicais.TypeControl = $"Cadastro-{activeDash}";
-                cadastroTarifasETaxas.TypeControl = $"Cadastro-{activeDash}";
-                cadastroRedesDeTransporte.TypeControl = $"Cadastro-{activeDash}";
+                cadastroClientes.TypeControl = $"{activeOver}-{activeDash}";
+                cadastroUsuarios.TypeControl = $"{activeOver}-{activeDash}";
+                cadastroRotas.TypeControl = $"{activeOver}-{activeDash}";
+                cadastroMotoristas.TypeControl = $"{activeOver}-{activeDash}";
+                cadastroVeiculos.TypeControl = $"{activeOver}-{activeDash}";
+                cadastroTerceiros.TypeControl = $"{activeOver}-{activeDash}";
+                cadastroSinistros.TypeControl = $"{activeOver}-{activeDash}";
+                cadastroNotasFicais.TypeControl = $"{activeOver}-{activeDash}";
+                cadastroTarifasETaxas.TypeControl = $"{activeOver}-{activeDash}";
+                cadastroRedesDeTransporte.TypeControl = $"{activeOver}-{activeDash}";
             }
 
             if (activeOver == "Update")
@@ -155,22 +155,22 @@ namespace Interface
                 cadastroTarifasETaxas.Visible = activeDash == "Tarifas";
                 cadastroRedesDeTransporte.Visible = activeDash == "Redes";
 
-                cadastroClientes.TypeControl = $"Update-{activeDash}";
-                cadastroUsuarios.TypeControl = $"Update-{activeDash}";
-                cadastroRotas.TypeControl = $"Update-{activeDash}";
-                cadastroMotoristas.TypeControl = $"Update-{activeDash}";
-                cadastroVeiculos.TypeControl = $"Update-{activeDash}";
-                cadastroTerceiros.TypeControl = $"Update-{activeDash}";
-                cadastroSinistros.TypeControl = $"Update-{activeDash}";
-                cadastroNotasFicais.TypeControl = $"Update-{activeDash}";
-                cadastroTarifasETaxas.TypeControl = $"Update-{activeDash}";
-                cadastroRedesDeTransporte.TypeControl = $"Update-{activeDash}";
+                cadastroClientes.TypeControl = $"{activeOver}-{activeDash}";
+                cadastroUsuarios.TypeControl = $"{activeOver}-{activeDash}";
+                cadastroRotas.TypeControl = $"{activeOver}-{activeDash}";
+                cadastroMotoristas.TypeControl = $"{activeOver}-{activeDash}";
+                cadastroVeiculos.TypeControl = $"{activeOver}-{activeDash}";
+                cadastroTerceiros.TypeControl = $"{activeOver}-{activeDash}";
+                cadastroSinistros.TypeControl = $"{activeOver}-{activeDash}";
+                cadastroNotasFicais.TypeControl = $"{activeOver}-{activeDash}";
+                cadastroTarifasETaxas.TypeControl = $"{activeOver}-{activeDash}";
+                cadastroRedesDeTransporte.TypeControl = $"{activeOver}-{activeDash}";
             }
 
             if (activeOver == "Delete")
             {
                 overview.Visible = true;
-                overview.TypeControl = $"Delete-{activeDash}";
+                overview.TypeControl = $"{activeOver}-{activeDash}";
 
                 cadastroClientes.Visible = false;
                 cadastroUsuarios.Visible = false;

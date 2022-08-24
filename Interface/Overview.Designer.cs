@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Overview));
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panelSerch = new Interface.Properties.PanelBorderRoundedOnLeft();
-            this.textSearch = new System.Windows.Forms.TextBox();
+            this.maskInput = new Interface.Properties.masckedboxTemplete();
             this.panel17 = new System.Windows.Forms.Panel();
             this.contentCPF = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -65,8 +65,8 @@
             // 
             this.panelSerch.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.panelSerch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.panelSerch.Controls.Add(this.maskInput);
             this.panelSerch.Controls.Add(this.pictureBox3);
-            this.panelSerch.Controls.Add(this.textSearch);
             this.panelSerch.Location = new System.Drawing.Point(326, 13);
             this.panelSerch.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelSerch.Name = "panelSerch";
@@ -74,20 +74,18 @@
             this.panelSerch.TabIndex = 2;
             this.panelSerch.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSerch_Paint);
             // 
-            // textSearch
+            // maskInput
             // 
-            this.textSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.textSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.textSearch.ForeColor = System.Drawing.Color.White;
-            this.textSearch.Location = new System.Drawing.Point(35, 8);
-            this.textSearch.Margin = new System.Windows.Forms.Padding(10, 8, 10, 0);
-            this.textSearch.Name = "textSearch";
-            this.textSearch.PlaceholderText = "Search";
-            this.textSearch.Size = new System.Drawing.Size(271, 19);
-            this.textSearch.TabIndex = 6;
+            this.maskInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.maskInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.maskInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.maskInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.maskInput.ForeColor = System.Drawing.Color.White;
+            this.maskInput.Location = new System.Drawing.Point(35, 8);
+            this.maskInput.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
+            this.maskInput.Name = "maskInput";
+            this.maskInput.Size = new System.Drawing.Size(271, 19);
+            this.maskInput.TabIndex = 3;
             // 
             // panel17
             // 
@@ -116,7 +114,7 @@
             this.contentCPF.Margin = new System.Windows.Forms.Padding(0);
             this.contentCPF.Name = "contentCPF";
             this.contentCPF.Padding = new System.Windows.Forms.Padding(40);
-            this.contentCPF.Size = new System.Drawing.Size(975, 451);
+            this.contentCPF.Size = new System.Drawing.Size(975, 648);
             this.contentCPF.TabIndex = 10;
             // 
             // dataGridView1
@@ -129,7 +127,7 @@
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(861, 426);
+            this.dataGridView1.Size = new System.Drawing.Size(895, 426);
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.Resize += new System.EventHandler(this.dataGridView1_Resize);
             // 
@@ -140,11 +138,11 @@
             this.panelButton.BackColor = System.Drawing.Color.Transparent;
             this.panelButton.Controls.Add(this.buscar);
             this.panelButton.Controls.Add(this.panel51);
-            this.panelButton.Location = new System.Drawing.Point(0, 564);
+            this.panelButton.Location = new System.Drawing.Point(0, 558);
             this.panelButton.Margin = new System.Windows.Forms.Padding(0, 50, 0, 0);
             this.panelButton.Name = "panelButton";
             this.panelButton.Padding = new System.Windows.Forms.Padding(40, 0, 40, 0);
-            this.panelButton.Size = new System.Drawing.Size(958, 50);
+            this.panelButton.Size = new System.Drawing.Size(975, 50);
             this.panelButton.TabIndex = 5;
             // 
             // buscar
@@ -156,7 +154,7 @@
             this.buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buscar.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.buscar.ForeColor = System.Drawing.Color.White;
-            this.buscar.Location = new System.Drawing.Point(721, 0);
+            this.buscar.Location = new System.Drawing.Point(755, 0);
             this.buscar.Margin = new System.Windows.Forms.Padding(0, 30, 0, 0);
             this.buscar.Name = "buscar";
             this.buscar.Size = new System.Drawing.Size(180, 50);
@@ -171,7 +169,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel51.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(98)))), ((int)(((byte)(255)))));
             this.panel51.Controls.Add(this.button10);
-            this.panel51.Location = new System.Drawing.Point(8008, 0);
+            this.panel51.Location = new System.Drawing.Point(8025, 0);
             this.panel51.Margin = new System.Windows.Forms.Padding(0);
             this.panel51.Name = "panel51";
             this.panel51.Size = new System.Drawing.Size(200, 0);
@@ -204,7 +202,7 @@
             this.Controls.Add(this.panel17);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "Overview";
-            this.Size = new System.Drawing.Size(975, 513);
+            this.Size = new System.Drawing.Size(975, 710);
             this.Resize += new System.EventHandler(this.Overview_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panelSerch.ResumeLayout(false);
@@ -222,7 +220,6 @@
 
         private PictureBox pictureBox3;
         private Properties.PanelBorderRoundedOnLeft panelSerch;
-        private TextBox textSearch;
         private Panel panel17;
         private Panel contentCPF;
         private DataGridView dataGridView1;
@@ -230,5 +227,6 @@
         private Panel panel51;
         private Button button10;
         private Button buscar;
+        private Properties.masckedboxTemplete maskInput;
     }
 }

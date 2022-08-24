@@ -13,6 +13,8 @@
     <Compile Remove="CadastroNotas.Designer.cs" />
     <Compile Remove="CadastroRotas.cs" />
     <Compile Remove="CadastroRotas.Designer.cs" />
+    <Compile Remove="Form1.cs" />
+    <Compile Remove="Form1.Designer.cs" />
     <Compile Remove="Rotas.cs" />
     <Compile Remove="Rotas.Designer.cs" />
     <Compile Remove="UpdateClientes.cs" />
@@ -24,6 +26,7 @@
   <ItemGroup>
     <EmbeddedResource Remove="CadastroNotas.resx" />
     <EmbeddedResource Remove="CadastroRotas.resx" />
+    <EmbeddedResource Remove="Form1.resx" />
     <EmbeddedResource Remove="Rotas.resx" />
     <EmbeddedResource Remove="UpdateClientes.resx" />
   </ItemGroup>
