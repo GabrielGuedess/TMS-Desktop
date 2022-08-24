@@ -50,4 +50,12 @@
     </EmbeddedResource>
   </ItemGroup>
 
+  <ItemGroup>
+    <EditorConfigFiles Remove="C:\Users\Gabriel\source\repos\TMS\Interface\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="C:\Users\Gabriel\source\repos\TMS\Interface\.editorconfig" />
+  </ItemGroup>
+
 </Project>
