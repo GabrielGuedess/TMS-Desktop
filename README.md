@@ -6,6 +6,7 @@
 ![GitHub forks](https://img.shields.io/github/forks/GabrielGuedess/TMS?color=%230264C7&style=for-the-badge)
 ![GitHub Repo stars](https://img.shields.io/github/stars/GabrielGuedess/TMS?color=%230264C7&style=for-the-badge)
 ![GitHub issues](https://img.shields.io/github/issues/GabrielGuedess/TMS?color=%230264C7&style=for-the-badge)
+![GitHub](https://img.shields.io/github/license/GabrielGuedess/TMS?color=%230264C8&style=for-the-badge)
 
 
 <!-- PROJECT LOGO -->
