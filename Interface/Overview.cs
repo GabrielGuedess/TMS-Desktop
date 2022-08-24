@@ -49,7 +49,7 @@ namespace Interface
                 {
                     typeData.Text = "Placa";
                     maskInput.Text = "";
-                    maskInput.Mask = "&&&&&&&";
+                    maskInput.Mask = ">&&&&&&&";
                 }
 
                 if (value.Contains("Terceiros"))
