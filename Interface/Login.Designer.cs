@@ -220,11 +220,11 @@
             this.checkBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.checkBox1.ForeColor = System.Drawing.Color.Transparent;
             this.checkBox1.Image = ((System.Drawing.Image)(resources.GetObject("checkBox1.Image")));
-            this.checkBox1.Location = new System.Drawing.Point(320, 2);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.checkBox1.Location = new System.Drawing.Point(321, 1);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(1);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.checkBox1.Size = new System.Drawing.Size(28, 26);
+            this.checkBox1.Size = new System.Drawing.Size(28, 28);
             this.checkBox1.TabIndex = 9;
             this.checkBox1.UseVisualStyleBackColor = false;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);

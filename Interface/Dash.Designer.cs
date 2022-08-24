@@ -641,10 +641,6 @@ namespace Interface
             | System.Windows.Forms.AnchorStyles.Right)));
             this.body.AutoScroll = true;
             this.body.BackColor = System.Drawing.Color.Black;
-            this.body.Controls.Add(this.cadastroRedesDeTransporte1);
-            this.body.Controls.Add(this.cadastroTarifaseTaxas1);
-            this.body.Controls.Add(this.cadastroClientes1);
-            this.body.Controls.Add(this.cadastroMotoristas1);
             this.body.Controls.Add(this.overview1);
             this.body.Controls.Add(this.cadastroSinistros1);
             this.body.Controls.Add(this.cadastroNotasFicais1);
@@ -652,6 +648,10 @@ namespace Interface
             this.body.Controls.Add(this.cadastroVeiculos1);
             this.body.Controls.Add(this.cadastroRoutes1);
             this.body.Controls.Add(this.cadastroUsuarios1);
+            this.body.Controls.Add(this.cadastroRedesDeTransporte1);
+            this.body.Controls.Add(this.cadastroTarifaseTaxas1);
+            this.body.Controls.Add(this.cadastroClientes1);
+            this.body.Controls.Add(this.cadastroMotoristas1);
             this.body.Location = new System.Drawing.Point(288, 70);
             this.body.Margin = new System.Windows.Forms.Padding(0);
             this.body.Name = "body";
@@ -712,7 +712,7 @@ namespace Interface
             this.overview1.Location = new System.Drawing.Point(25, 25);
             this.overview1.Margin = new System.Windows.Forms.Padding(0);
             this.overview1.Name = "overview1";
-            this.overview1.Size = new System.Drawing.Size(958, 715);
+            this.overview1.Size = new System.Drawing.Size(958, 833);
             this.overview1.TabIndex = 8;
             // 
             // cadastroSinistros1

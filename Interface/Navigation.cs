@@ -95,7 +95,7 @@ namespace Interface
             CadastroRedesDeTransporte cadastroRedesDeTransporte
             )
         {
-            if (activeOver == "Overview")
+            if (activeOver == "Overview" || activeOver == "Delete")
             {
                 overview.Visible = true;
                 overview.TypeControl = $"{activeOver}-{activeDash}";
@@ -112,7 +112,7 @@ namespace Interface
                 cadastroRedesDeTransporte.Visible = false;
             }
 
-            if (activeOver == "Cadastro")
+            if (activeOver == "Cadastro" || activeOver == "Update")
             {
                 overview.Visible = false;
 
@@ -138,50 +138,6 @@ namespace Interface
                 cadastroNotasFicais.TypeControl = $"{activeOver}-{activeDash}";
                 cadastroTarifasETaxas.TypeControl = $"{activeOver}-{activeDash}";
                 cadastroRedesDeTransporte.TypeControl = $"{activeOver}-{activeDash}";
-            }
-
-            if (activeOver == "Update")
-            {
-                overview.Visible = false;
-
-                cadastroClientes.Visible = activeDash == "Clientes";
-                cadastroUsuarios.Visible = activeDash == "Usuarios";
-                cadastroRotas.Visible = activeDash == "Rotas";
-                cadastroMotoristas.Visible = activeDash == "Motoristas";
-                cadastroVeiculos.Visible = activeDash == "Veiculos";
-                cadastroTerceiros.Visible = activeDash == "Terceiros";
-                cadastroSinistros.Visible = activeDash == "Sinistros";
-                cadastroNotasFicais.Visible = activeDash == "Notas";
-                cadastroTarifasETaxas.Visible = activeDash == "Tarifas";
-                cadastroRedesDeTransporte.Visible = activeDash == "Redes";
-
-                cadastroClientes.TypeControl = $"{activeOver}-{activeDash}";
-                cadastroUsuarios.TypeControl = $"{activeOver}-{activeDash}";
-                cadastroRotas.TypeControl = $"{activeOver}-{activeDash}";
-                cadastroMotoristas.TypeControl = $"{activeOver}-{activeDash}";
-                cadastroVeiculos.TypeControl = $"{activeOver}-{activeDash}";
-                cadastroTerceiros.TypeControl = $"{activeOver}-{activeDash}";
-                cadastroSinistros.TypeControl = $"{activeOver}-{activeDash}";
-                cadastroNotasFicais.TypeControl = $"{activeOver}-{activeDash}";
-                cadastroTarifasETaxas.TypeControl = $"{activeOver}-{activeDash}";
-                cadastroRedesDeTransporte.TypeControl = $"{activeOver}-{activeDash}";
-            }
-
-            if (activeOver == "Delete")
-            {
-                overview.Visible = true;
-                overview.TypeControl = $"{activeOver}-{activeDash}";
-
-                cadastroClientes.Visible = false;
-                cadastroUsuarios.Visible = false;
-                cadastroRotas.Visible = false;
-                cadastroMotoristas.Visible = false;
-                cadastroVeiculos.Visible = false;
-                cadastroTerceiros.Visible = false;
-                cadastroSinistros.Visible = false;
-                cadastroNotasFicais.Visible = false;
-                cadastroTarifasETaxas.Visible = false;
-                cadastroRedesDeTransporte.Visible = false;
             }
         }
     }

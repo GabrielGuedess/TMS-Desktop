@@ -26,13 +26,13 @@ namespace Interface
         {
             if (checkBox1.Checked)
             {
-                checkBox1.Image = Image.FromFile("C:\\Users\\Gabriel\\Downloads\\eye.png");
+                checkBox1.Image = Resources.eye;
                 textBox2.PasswordChar = '\0';
                 checkBox1.BackColor = Color.FromArgb(8, 8, 11);
             }
             else
             {
-                checkBox1.Image = Image.FromFile("C:\\Users\\Gabriel\\Downloads\\eyeOpen.png");
+                checkBox1.Image = Resources.eyeOpen;
                 textBox2.PasswordChar = '*';
                 checkBox1.BackColor = Color.FromArgb(8, 8, 11);
             }
@@ -42,11 +42,11 @@ namespace Interface
         {
             Dash Form = new Dash();
 
-            this.Hide();
+            Hide();
 
             Form.ShowDialog();
 
-            this.Close();
+            Close();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

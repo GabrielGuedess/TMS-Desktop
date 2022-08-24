@@ -6,72 +6,89 @@ namespace Interface
     {
         readonly Utilidades utils = new();
 
-        readonly Navigation navigationDash = new();
-
         public string TypeControl
         {
             set
             {
                 buscar.Text = value;
+                panelContainerRadio.Visible = false;
+                contentOverview.Location = new Point(0, 62);
 
                 if (value.Contains("Clientes"))
                 {
+                    panelContainerRadio.Visible = true;
+                    contentOverview.Location = new Point(0, 124);
+
+                    typeData.Text = CPF.Checked ? "CPF" : "CNPJ";
                     maskInput.Text = "";
-                    maskInput.Mask = "000.000.000-00";
+                    maskInput.Mask = CPF.Checked ? "000.000.000-00" : "00.000.000/0000-00";
                 }
 
                 if (value.Contains("Usuarios"))
                 {
+                    typeData.Text = "CPF";
                     maskInput.Text = "";
                     maskInput.Mask = "000.000.000-00";
                 }
 
                 if (value.Contains("Rotas"))
                 {
+                    typeData.Text = "ID";
                     maskInput.Text = "";
                     maskInput.Mask = "";
                 }
 
                 if (value.Contains("Motoristas"))
                 {
+                    typeData.Text = "CPF";
                     maskInput.Text = "";
                     maskInput.Mask = "000.000.000-00";
                 }
 
                 if (value.Contains("Veiculos"))
                 {
+                    typeData.Text = "Placa";
                     maskInput.Text = "";
                     maskInput.Mask = "&&&&&&&";
                 }
 
                 if (value.Contains("Terceiros"))
                 {
+                    typeData.Text = "CPF";
                     maskInput.Text = "";
                     maskInput.Mask = "000.000.000-00";
                 }
 
                 if (value.Contains("Sinistros"))
                 {
+                    typeData.Text = "Código";
                     maskInput.Text = "";
                     maskInput.Mask = "";
                 }
 
                 if (value.Contains("Notas"))
                 {
+                    typeData.Text = "Chave de Acesso";
                     maskInput.Text = "";
                     maskInput.Mask = "";
                 }
 
                 if (value.Contains("Tarifas"))
                 {
+                    typeData.Text = "Nome da empresa";
                     maskInput.Text = "";
                     maskInput.Mask = "";
                 }
+
                 if (value.Contains("Redes"))
                 {
+                    typeData.Text = "Num ID";
                     maskInput.Text = "";
                     maskInput.Mask = "";
                 }
+
+                maskInput.Width = 271 - typeData.Width;
+                maskInput.Location = new Point(35 + (typeData.Width + 10), 7);
             }
         }
         public Overview()
@@ -102,6 +119,36 @@ namespace Interface
         private void buscar_Paint(object sender, PaintEventArgs e)
         {
             utils.expansiveButton(10, buscar);
+        }
+
+        private void CPF_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CPF.Checked)
+            {
+                CNPJ.Checked = false;
+                typeData.Text = "CPF";
+                maskInput.Mask = "000.000.000-00";
+            }
+        }
+
+        private void CNPJ_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CNPJ.Checked)
+            {
+                CPF.Checked = false;
+                typeData.Text = "CNPJ";
+                maskInput.Mask = "00.000.000/0000-00";
+            }
+        }
+
+        private void panelCPF_Paint(object sender, PaintEventArgs e)
+        {
+            utils.alignCenterRadioButtons(CPF, panelCPF, true, true);
+        }
+
+        private void panelCNPJ_Paint(object sender, PaintEventArgs e)
+        {
+            utils.alignCenterRadioButtons(CNPJ, panelCNPJ, true, true);
         }
     }
 }
