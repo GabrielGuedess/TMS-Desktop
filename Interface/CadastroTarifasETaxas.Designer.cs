@@ -31,17 +31,20 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroTarifasETaxas));
             this.searchPanel = new System.Windows.Forms.Panel();
             this.panelSerch = new Interface.Properties.PanelBorderRoundedOnLeft();
+            this.typeData = new System.Windows.Forms.Label();
+            this.textBoxOnlyNum_Letters1 = new Interface.Properties.textBoxOnlyNum_Letters();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.textSearch = new System.Windows.Forms.TextBox();
             this.contentTarifas = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelBorderRounded2 = new Interface.Properties.PanelBorderRounded();
+            this.textBoxOnlyNum_Letters2 = new Interface.Properties.textBoxOnlyNum_Letters();
             this.label1 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panelDescricao = new Interface.Properties.PanelBorderRounded();
+            this.textBoxOnlyLetters1 = new Interface.Properties.textBoxOnlyLetters();
             this.label3 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -68,8 +71,10 @@
             this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panelBorderRounded2.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
+            this.panelDescricao.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panelButton.SuspendLayout();
@@ -92,14 +97,43 @@
             // 
             this.panelSerch.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.panelSerch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.panelSerch.Controls.Add(this.typeData);
+            this.panelSerch.Controls.Add(this.textBoxOnlyNum_Letters1);
             this.panelSerch.Controls.Add(this.pictureBox3);
-            this.panelSerch.Controls.Add(this.textSearch);
             this.panelSerch.Location = new System.Drawing.Point(325, 13);
             this.panelSerch.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelSerch.Name = "panelSerch";
             this.panelSerch.Size = new System.Drawing.Size(347, 36);
             this.panelSerch.TabIndex = 2;
             this.panelSerch.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSerch_Paint);
+            // 
+            // typeData
+            // 
+            this.typeData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.typeData.AutoSize = true;
+            this.typeData.BackColor = System.Drawing.Color.Transparent;
+            this.typeData.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.typeData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(91)))), ((int)(((byte)(101)))));
+            this.typeData.Location = new System.Drawing.Point(33, 8);
+            this.typeData.Margin = new System.Windows.Forms.Padding(10, 7, 0, 6);
+            this.typeData.Name = "typeData";
+            this.typeData.Size = new System.Drawing.Size(70, 21);
+            this.typeData.TabIndex = 4;
+            this.typeData.Text = "Empresa";
+            // 
+            // textBoxOnlyNum_Letters1
+            // 
+            this.textBoxOnlyNum_Letters1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxOnlyNum_Letters1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.textBoxOnlyNum_Letters1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxOnlyNum_Letters1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxOnlyNum_Letters1.ForeColor = System.Drawing.Color.White;
+            this.textBoxOnlyNum_Letters1.Location = new System.Drawing.Point(113, 7);
+            this.textBoxOnlyNum_Letters1.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.textBoxOnlyNum_Letters1.Name = "textBoxOnlyNum_Letters1";
+            this.textBoxOnlyNum_Letters1.Size = new System.Drawing.Size(222, 22);
+            this.textBoxOnlyNum_Letters1.TabIndex = 2;
             // 
             // pictureBox3
             // 
@@ -112,19 +146,6 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 1;
             this.pictureBox3.TabStop = false;
-            // 
-            // textSearch
-            // 
-            this.textSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.textSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.textSearch.ForeColor = System.Drawing.Color.White;
-            this.textSearch.Location = new System.Drawing.Point(35, 8);
-            this.textSearch.Margin = new System.Windows.Forms.Padding(10, 8, 10, 0);
-            this.textSearch.Name = "textSearch";
-            this.textSearch.PlaceholderText = "Search";
-            this.textSearch.Size = new System.Drawing.Size(302, 19);
-            this.textSearch.TabIndex = 6;
             // 
             // contentTarifas
             // 
@@ -189,11 +210,25 @@
             // 
             this.panelBorderRounded2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelBorderRounded2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.panelBorderRounded2.Controls.Add(this.textBoxOnlyNum_Letters2);
             this.panelBorderRounded2.Location = new System.Drawing.Point(5, 37);
             this.panelBorderRounded2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelBorderRounded2.Name = "panelBorderRounded2";
             this.panelBorderRounded2.Size = new System.Drawing.Size(248, 33);
             this.panelBorderRounded2.TabIndex = 2;
+            // 
+            // textBoxOnlyNum_Letters2
+            // 
+            this.textBoxOnlyNum_Letters2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxOnlyNum_Letters2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.textBoxOnlyNum_Letters2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxOnlyNum_Letters2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxOnlyNum_Letters2.ForeColor = System.Drawing.Color.White;
+            this.textBoxOnlyNum_Letters2.Location = new System.Drawing.Point(10, 5);
+            this.textBoxOnlyNum_Letters2.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.textBoxOnlyNum_Letters2.Name = "textBoxOnlyNum_Letters2";
+            this.textBoxOnlyNum_Letters2.Size = new System.Drawing.Size(228, 22);
+            this.textBoxOnlyNum_Letters2.TabIndex = 1;
             // 
             // label1
             // 
@@ -235,11 +270,24 @@
             // 
             this.panelDescricao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelDescricao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.panelDescricao.Controls.Add(this.textBoxOnlyLetters1);
             this.panelDescricao.Location = new System.Drawing.Point(5, 37);
             this.panelDescricao.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelDescricao.Name = "panelDescricao";
             this.panelDescricao.Size = new System.Drawing.Size(248, 33);
             this.panelDescricao.TabIndex = 1;
+            // 
+            // textBoxOnlyLetters1
+            // 
+            this.textBoxOnlyLetters1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.textBoxOnlyLetters1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxOnlyLetters1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxOnlyLetters1.ForeColor = System.Drawing.Color.White;
+            this.textBoxOnlyLetters1.Location = new System.Drawing.Point(10, 6);
+            this.textBoxOnlyLetters1.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.textBoxOnlyLetters1.Name = "textBoxOnlyLetters1";
+            this.textBoxOnlyLetters1.Size = new System.Drawing.Size(228, 22);
+            this.textBoxOnlyLetters1.TabIndex = 0;
             // 
             // label3
             // 
@@ -344,7 +392,7 @@
             this.CadastrarTarifaOuTaxa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CadastrarTarifaOuTaxa.FlatAppearance.BorderSize = 0;
             this.CadastrarTarifaOuTaxa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CadastrarTarifaOuTaxa.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.CadastrarTarifaOuTaxa.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.CadastrarTarifaOuTaxa.ForeColor = System.Drawing.Color.White;
             this.CadastrarTarifaOuTaxa.Location = new System.Drawing.Point(755, 0);
             this.CadastrarTarifaOuTaxa.Margin = new System.Windows.Forms.Padding(0);
@@ -362,7 +410,7 @@
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Location = new System.Drawing.Point(1490, -25);
             this.button4.Margin = new System.Windows.Forms.Padding(0);
@@ -379,7 +427,7 @@
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Location = new System.Drawing.Point(2225, -50);
             this.button3.Margin = new System.Windows.Forms.Padding(0);
@@ -396,7 +444,7 @@
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(2740, -75);
             this.button1.Margin = new System.Windows.Forms.Padding(0, 0, 40, 0);
@@ -413,7 +461,7 @@
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(2960, -75);
             this.button2.Margin = new System.Windows.Forms.Padding(0);
@@ -430,7 +478,7 @@
             this.calcularRota.Cursor = System.Windows.Forms.Cursors.Hand;
             this.calcularRota.FlatAppearance.BorderSize = 0;
             this.calcularRota.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.calcularRota.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.calcularRota.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.calcularRota.ForeColor = System.Drawing.Color.White;
             this.calcularRota.Location = new System.Drawing.Point(3475, -100);
             this.calcularRota.Margin = new System.Windows.Forms.Padding(0, 0, 40, 0);
@@ -447,7 +495,7 @@
             this.cadastrarRota.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cadastrarRota.FlatAppearance.BorderSize = 0;
             this.cadastrarRota.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cadastrarRota.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cadastrarRota.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.cadastrarRota.ForeColor = System.Drawing.Color.White;
             this.cadastrarRota.Location = new System.Drawing.Point(3695, -100);
             this.cadastrarRota.Margin = new System.Windows.Forms.Padding(0);
@@ -464,7 +512,7 @@
             this.cadastrarUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cadastrarUsuario.FlatAppearance.BorderSize = 0;
             this.cadastrarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cadastrarUsuario.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cadastrarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.cadastrarUsuario.ForeColor = System.Drawing.Color.White;
             this.cadastrarUsuario.Location = new System.Drawing.Point(4430, -125);
             this.cadastrarUsuario.Margin = new System.Windows.Forms.Padding(0, 30, 0, 0);
@@ -481,7 +529,7 @@
             this.cadastrarCNPJ.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cadastrarCNPJ.FlatAppearance.BorderSize = 0;
             this.cadastrarCNPJ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cadastrarCNPJ.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cadastrarCNPJ.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.cadastrarCNPJ.ForeColor = System.Drawing.Color.White;
             this.cadastrarCNPJ.Location = new System.Drawing.Point(5182, -150);
             this.cadastrarCNPJ.Margin = new System.Windows.Forms.Padding(0, 30, 0, 0);
@@ -498,7 +546,7 @@
             this.cadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cadastrar.FlatAppearance.BorderSize = 0;
             this.cadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cadastrar.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.cadastrar.ForeColor = System.Drawing.Color.White;
             this.cadastrar.Location = new System.Drawing.Point(5917, -175);
             this.cadastrar.Margin = new System.Windows.Forms.Padding(0, 30, 0, 0);
@@ -558,9 +606,13 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panelBorderRounded2.ResumeLayout(false);
+            this.panelBorderRounded2.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            this.panelDescricao.ResumeLayout(false);
+            this.panelDescricao.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
@@ -575,7 +627,6 @@
         private Panel searchPanel;
         private Properties.PanelBorderRoundedOnLeft panelSerch;
         private PictureBox pictureBox3;
-        private TextBox textSearch;
         private Panel contentTarifas;
         private TableLayoutPanel tableLayoutPanel2;
         private Panel panel6;
@@ -604,5 +655,9 @@
         private RadioButton radioButton2;
         private RadioButton radioButton1;
         private Button CadastrarTarifaOuTaxa;
+        private Properties.textBoxOnlyNum_Letters textBoxOnlyNum_Letters2;
+        private Properties.textBoxOnlyLetters textBoxOnlyLetters1;
+        private Properties.textBoxOnlyNum_Letters textBoxOnlyNum_Letters1;
+        private Label typeData;
     }
 }

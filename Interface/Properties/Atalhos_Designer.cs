@@ -1,8 +1,222 @@
 ﻿using System.Runtime.InteropServices;
 using System.Drawing.Drawing2D;
+using System.Windows.Forms;
 
 namespace Interface.Properties
 {
+
+    public class TextMoney : TextBox
+    {
+        protected override void InitLayout()
+        {
+            base.InitLayout();
+            BackColor = Color.FromArgb(15, 15, 19);
+            ForeColor = Color.White;
+            BorderStyle = BorderStyle.None;
+            Size = new Size(225, 19);
+            Margin = new Padding(10, 6, 10, 5);
+            Font = new Font(new FontFamily("Segoe UI"), 12, FontStyle.Regular);
+
+        }
+        string valor;
+        protected override void OnKeyPress(KeyPressEventArgs e)
+        {
+            
+            base.OnKeyPress(e);
+
+            if (char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar) || char.IsWhiteSpace(e.KeyChar))
+            {
+                KeyUp += new KeyEventHandler(key);
+                void key(Object o, KeyEventArgs e)
+                {
+                    valor = Text;
+                    if (valor == "")
+                        valor = "R$ 0,00";
+
+                    valor = valor.Replace("R$", "").Replace(",", "");
+
+                    if (valor.Length == 1)
+                        valor = "00,0" + valor;
+                    else if (valor.Length == 2)
+                        valor = "00," + valor;
+                    else
+                        valor = valor.Insert(valor.Length - 2, ",");
+
+                    Text = string.Format("{0:c}", Convert.ToDouble(valor));
+                    Select(Text.Length, 0);
+                }
+
+                
+            }
+
+            else
+                e.Handled = true;
+        }
+    }
+    public class TextKg : TextBox
+    {
+        protected override void InitLayout()
+        {
+            base.InitLayout();
+            BackColor = Color.FromArgb(15, 15, 19);
+            ForeColor = Color.White;
+            BorderStyle = BorderStyle.None;
+            Size = new Size(225, 19);
+            Margin = new Padding(10, 6, 10, 5);
+            Font = new Font(new FontFamily("Segoe UI"), 12, FontStyle.Regular);
+
+        }
+        string valor;
+        protected override void OnKeyPress(KeyPressEventArgs e)
+        {
+
+            base.OnKeyPress(e);
+
+            if (char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar) || char.IsWhiteSpace(e.KeyChar))
+            {
+                KeyUp += new KeyEventHandler(key);
+                void key(Object o, KeyEventArgs e)
+                {
+                    valor = Text;
+                    if (valor == "")
+                        valor = "0,00 Kg";
+
+                    valor = valor.Replace("Kg", "").Replace(",", "");
+
+                    if (valor.Length == 1)
+                        valor = "00,00" + valor;
+                    else if (valor.Length == 2)
+                        valor = "00,0" + valor;
+                    else if (valor.Length == 2)
+                        valor = "00,0" + valor;
+                    else
+                        valor = valor.Insert(valor.Length - 3, ",");
+
+                    Text = string.Format("{0:n} Kg", Convert.ToDouble(valor));
+                    Select(Text.Length - 3, 0);
+                }
+
+
+            }
+            else
+                e.Handled = true;
+        }
+    }
+
+    public class TextKm : TextBox
+    {
+        protected override void InitLayout()
+        {
+            base.InitLayout();
+            BackColor = Color.FromArgb(15, 15, 19);
+            ForeColor = Color.White;
+            BorderStyle = BorderStyle.None;
+            Size = new Size(225, 19);
+            Margin = new Padding(10, 6, 10, 5);
+            Font = new Font(new FontFamily("Segoe UI"), 12, FontStyle.Regular);
+
+        }
+        string valor;
+        protected override void OnKeyPress(KeyPressEventArgs e)
+        {
+
+            base.OnKeyPress(e);
+
+            if (char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar) || char.IsWhiteSpace(e.KeyChar))
+            {
+                KeyUp += new KeyEventHandler(key);
+                void key(Object o, KeyEventArgs e)
+                {
+                    valor = Text;
+                    if (valor == "")
+                        valor = "0,00 Km";
+
+                    valor = valor.Replace("Km", "").Replace(",", "");
+
+                    if (valor.Length == 1)
+                        valor = "00,00" + valor;
+                    else if (valor.Length == 2)
+                        valor = "00,0" + valor;
+                    else if (valor.Length == 2)
+                        valor = "00,0" + valor;
+                    else
+                        valor = valor.Insert(valor.Length - 3, ",");
+
+                    Text = string.Format("{0:n} Km", Convert.ToDouble(valor));
+                    Select(Text.Length - 3, 0);
+                }
+
+
+            }
+            else
+                e.Handled = true;
+        }
+    }
+
+    public class TextM3 : TextBox
+    {
+        protected override void InitLayout()
+        {
+            base.InitLayout();
+            BackColor = Color.FromArgb(15, 15, 19);
+            ForeColor = Color.White;
+            BorderStyle = BorderStyle.None;
+            Size = new Size(225, 19);
+            Margin = new Padding(10, 6, 10, 5);
+            Font = new Font(new FontFamily("Segoe UI"), 12, FontStyle.Regular);
+
+        }
+        string valor;
+        protected override void OnKeyPress(KeyPressEventArgs e)
+        {
+
+            base.OnKeyPress(e);
+
+            if (char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar) || char.IsWhiteSpace(e.KeyChar))
+            {
+                KeyUp += new KeyEventHandler(key);
+                void key(Object o, KeyEventArgs e)
+                {
+                    valor = Text;
+                    if (valor == "")
+                        valor = "0,00 m³";
+
+                    valor = valor.Replace("m³", "").Replace(",", "");
+
+                    if (valor.Length == 1)
+                        valor = "00,00" + valor;
+                    else if (valor.Length == 2)
+                        valor = "00,0" + valor;
+                    else if (valor.Length == 2)
+                        valor = "00,0" + valor;
+                    else
+                        valor = valor.Insert(valor.Length - 3, ",");
+
+                    Text = string.Format("{0:n} m³", Convert.ToDouble(valor));
+                    Select(Text.Length - 3, 0);
+                }
+
+
+            }
+            else
+                e.Handled = true;
+        }
+    }
+    public class EmpDateTimer : DateTimePicker
+    {
+        protected override void InitLayout()
+        {
+            Margin = new Padding(10, 6, 10, 5);
+            base.InitLayout();
+            CustomFormat = " ";
+            Format = DateTimePickerFormat.Custom;
+        }
+        protected override void OnValueChanged(EventArgs eventargs)
+        {
+            base.OnValueChanged(eventargs);
+            Format = DateTimePickerFormat.Short;
+        }
+    }
     public class textBoxTemplete : TextBox
     {
         protected override void InitLayout()
@@ -12,7 +226,8 @@ namespace Interface.Properties
             ForeColor = Color.White;
             BorderStyle = BorderStyle.None;
             Size = new Size(225, 19);
-            Margin = new Padding(10, 10, 0, 0);
+            Margin = new Padding(10, 6, 10, 5);
+            Font = new Font(new FontFamily("Segoe UI"), 12, FontStyle.Regular);
         }
     }
     public class textBoxOnlyLetters : TextBox
@@ -23,8 +238,8 @@ namespace Interface.Properties
             BackColor = Color.FromArgb(15, 15, 19);
             ForeColor = Color.White;
             BorderStyle = BorderStyle.None;
-            Margin = new Padding(10, 10, 0, 0);
-
+            Margin = new Padding(10, 6, 10, 5);
+            Font = new Font(new FontFamily("Segoe UI"), 12, FontStyle.Regular);
         }
         protected override void OnKeyPress(KeyPressEventArgs e)
         {
@@ -60,6 +275,70 @@ namespace Interface.Properties
             Margin = new Padding(5, 0, 5, 0);
             Anchor = AnchorStyles.Left | AnchorStyles.Right;
 
+        }
+    }
+
+    public class masckedboxTemplete : MaskedTextBox
+    {
+        protected override void InitLayout()
+        {
+            base.InitLayout();
+            BackColor = Color.FromArgb(15, 15, 19);
+            ForeColor = Color.White;
+            BorderStyle = BorderStyle.None;
+            Margin = new Padding(10, 6, 10, 5);
+            Font = new Font(new FontFamily("Segoe UI"), 12, FontStyle.Regular);
+            Anchor = AnchorStyles.Left | AnchorStyles.Right;
+        }
+    }
+    public class textBoxnOnlyNum : TextBox
+    {
+        protected override void InitLayout()
+        {
+            base.InitLayout();
+            BackColor = Color.FromArgb(15, 15, 19);
+            ForeColor = Color.White;
+            BorderStyle = BorderStyle.None;
+            Margin = new Padding(10, 6, 10, 5);
+            Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            Font = new Font(new FontFamily("Segoe UI"), 12, FontStyle.Regular);
+        }
+        protected override void OnKeyPress(KeyPressEventArgs e)
+        {
+
+            base.OnKeyPress(e);
+
+            if (char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar))
+                e.Handled = false;
+
+            else
+                e.Handled = true;
+        }
+    }
+
+
+    public class textBoxOnlyNum_Letters : TextBox
+    {
+        protected override void InitLayout()
+        {
+            base.InitLayout();
+            BackColor = Color.FromArgb(15, 15, 19);
+            ForeColor = Color.White;
+            BorderStyle = BorderStyle.None;
+            Margin = new Padding(10, 6, 10, 5);
+            Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            Font = new Font(new FontFamily("Segoe UI"), 12, FontStyle.Regular);
+        }
+        protected override void OnKeyPress(KeyPressEventArgs e)
+        {
+
+            base.OnKeyPress(e);
+
+            if (char.IsLetterOrDigit(e.KeyChar) || char.IsControl(e.KeyChar) || char.IsWhiteSpace(e.KeyChar))
+                e.Handled = false;
+
+            else
+                e.Handled = true;
         }
     }
 
@@ -126,45 +405,7 @@ namespace Interface.Properties
         }
     }
 
-    public class masckedboxTemplete : MaskedTextBox
-    {
-        protected override void InitLayout()
-        {
-            base.InitLayout();
-            BackColor = Color.FromArgb(15, 15, 19);
-            ForeColor = Color.White;
-            BorderStyle = BorderStyle.None;
-            Margin = new Padding(10, 10, 0, 0);
-            Font = new Font(Font.Name, 12);
-            Anchor = AnchorStyles.Left | AnchorStyles.Right;
-        }
-    }
 
-
-    public class textBoxOnlyNum_Letters : TextBox
-    {
-        protected override void InitLayout()
-        {
-            base.InitLayout();
-            BackColor = Color.FromArgb(15, 15, 19);
-            ForeColor = Color.White;
-            BorderStyle = BorderStyle.None;
-            Margin = new Padding(10, 10, 0, 0);
-            Anchor = AnchorStyles.Left | AnchorStyles.Right;
-
-        }
-        protected override void OnKeyPress(KeyPressEventArgs e)
-        {
-
-            base.OnKeyPress(e);
-
-            if (char.IsLetterOrDigit(e.KeyChar) || char.IsControl(e.KeyChar) || char.IsWhiteSpace(e.KeyChar))
-                e.Handled = false;
-
-            else
-                e.Handled = true;
-        }
-    }
 
 
     public class Utilidades

@@ -31,8 +31,9 @@
             this.ClienteCPF = new Interface.UserControl1();
             this.searchPanel = new System.Windows.Forms.Panel();
             this.panelSerch = new Interface.Properties.PanelBorderRoundedOnLeft();
+            this.labelTypePerson = new System.Windows.Forms.Label();
+            this.mkBoxCdClientSearch = new Interface.Properties.masckedboxTemplete();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.textSearch = new System.Windows.Forms.TextBox();
             this.ClienteCNPJ = new Interface.ClienteCNPJ();
             this.panel17.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -159,14 +160,44 @@
             // 
             this.panelSerch.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.panelSerch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.panelSerch.Controls.Add(this.labelTypePerson);
+            this.panelSerch.Controls.Add(this.mkBoxCdClientSearch);
             this.panelSerch.Controls.Add(this.pictureBox3);
-            this.panelSerch.Controls.Add(this.textSearch);
             this.panelSerch.Location = new System.Drawing.Point(314, 13);
             this.panelSerch.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelSerch.Name = "panelSerch";
             this.panelSerch.Size = new System.Drawing.Size(347, 36);
             this.panelSerch.TabIndex = 2;
             this.panelSerch.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSerch_Paint);
+            // 
+            // labelTypePerson
+            // 
+            this.labelTypePerson.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelTypePerson.AutoSize = true;
+            this.labelTypePerson.BackColor = System.Drawing.Color.Transparent;
+            this.labelTypePerson.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelTypePerson.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(91)))), ((int)(((byte)(101)))));
+            this.labelTypePerson.Location = new System.Drawing.Point(35, 7);
+            this.labelTypePerson.Margin = new System.Windows.Forms.Padding(10, 7, 0, 6);
+            this.labelTypePerson.Name = "labelTypePerson";
+            this.labelTypePerson.Size = new System.Drawing.Size(37, 21);
+            this.labelTypePerson.TabIndex = 4;
+            this.labelTypePerson.Text = "CPF";
+            this.labelTypePerson.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSerch_Paint);
+            // 
+            // mkBoxCdClientSearch
+            // 
+            this.mkBoxCdClientSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.mkBoxCdClientSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.mkBoxCdClientSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mkBoxCdClientSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.mkBoxCdClientSearch.ForeColor = System.Drawing.Color.White;
+            this.mkBoxCdClientSearch.Location = new System.Drawing.Point(82, 7);
+            this.mkBoxCdClientSearch.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.mkBoxCdClientSearch.Name = "mkBoxCdClientSearch";
+            this.mkBoxCdClientSearch.Size = new System.Drawing.Size(224, 22);
+            this.mkBoxCdClientSearch.TabIndex = 2;
             // 
             // pictureBox3
             // 
@@ -179,19 +210,6 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 1;
             this.pictureBox3.TabStop = false;
-            // 
-            // textSearch
-            // 
-            this.textSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.textSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.textSearch.ForeColor = System.Drawing.Color.White;
-            this.textSearch.Location = new System.Drawing.Point(35, 8);
-            this.textSearch.Margin = new System.Windows.Forms.Padding(10, 8, 10, 0);
-            this.textSearch.Name = "textSearch";
-            this.textSearch.PlaceholderText = "Search";
-            this.textSearch.Size = new System.Drawing.Size(302, 19);
-            this.textSearch.TabIndex = 6;
             // 
             // ClienteCNPJ
             // 
@@ -245,7 +263,8 @@
         private Panel searchPanel;
         private Properties.PanelBorderRoundedOnLeft panelSerch;
         private PictureBox pictureBox3;
-        private TextBox textSearch;
         private ClienteCNPJ ClienteCNPJ;
+        private Properties.masckedboxTemplete mkBoxCdClientSearch;
+        private Label labelTypePerson;
     }
 }

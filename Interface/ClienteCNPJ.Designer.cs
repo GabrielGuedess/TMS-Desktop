@@ -33,33 +33,43 @@
             this.panelCPF = new System.Windows.Forms.Panel();
             this.SubpanelCPF = new System.Windows.Forms.Panel();
             this.panelTextCPFClient = new Interface.Properties.PanelBorderRounded();
+            this.masckedboxTemplete1 = new Interface.Properties.masckedboxTemplete();
             this.labelCPFClient = new System.Windows.Forms.Label();
             this.panelNomeClient = new System.Windows.Forms.Panel();
             this.subpanelNomeClient = new System.Windows.Forms.Panel();
             this.panelTextNomeClient = new Interface.Properties.PanelBorderRounded();
+            this.textBoxTemplete1 = new Interface.Properties.textBoxTemplete();
             this.labelNomeClient = new System.Windows.Forms.Label();
             this.panelDtNascClient = new System.Windows.Forms.Panel();
             this.subpanelDtNascClient = new System.Windows.Forms.Panel();
             this.panelDateTimerClient = new Interface.Properties.PanelBorderRounded();
+            this.masckedboxTemplete2 = new Interface.Properties.masckedboxTemplete();
             this.label5 = new System.Windows.Forms.Label();
             this.panelGeneroClient = new System.Windows.Forms.Panel();
             this.subpanelGeneroClient = new System.Windows.Forms.Panel();
+            this.panelBorderRounded1 = new Interface.Properties.PanelBorderRounded();
+            this.textBoxOnlyNum_Letters1 = new Interface.Properties.textBoxOnlyNum_Letters();
+            this.textBoxOnlyLetters1 = new Interface.Properties.textBoxOnlyLetters();
             this.labelGeneroClient = new System.Windows.Forms.Label();
             this.panelRGClient = new System.Windows.Forms.Panel();
             this.subpanelRGClient = new System.Windows.Forms.Panel();
             this.panelTextRGClient = new Interface.Properties.PanelBorderRounded();
+            this.masckedboxTemplete3 = new Interface.Properties.masckedboxTemplete();
             this.label7 = new System.Windows.Forms.Label();
             this.panelTelefoneClient = new System.Windows.Forms.Panel();
             this.subpanelTelefoneClient = new System.Windows.Forms.Panel();
             this.panelTextTelefoneCLient = new Interface.Properties.PanelBorderRounded();
+            this.masckedboxTemplete4 = new Interface.Properties.masckedboxTemplete();
             this.labelTelefoneClient = new System.Windows.Forms.Label();
             this.panelEmailClient = new System.Windows.Forms.Panel();
             this.subpanelEmailClient = new System.Windows.Forms.Panel();
             this.panelTextEmailClient = new Interface.Properties.PanelBorderRounded();
+            this.textBoxTemplete2 = new Interface.Properties.textBoxTemplete();
             this.labelEmailClient = new System.Windows.Forms.Label();
             this.panelCEP = new System.Windows.Forms.Panel();
             this.subpanelCEPClient = new System.Windows.Forms.Panel();
             this.panelTextCEPClient = new Interface.Properties.PanelBorderRounded();
+            this.masckedboxTemplete5 = new Interface.Properties.masckedboxTemplete();
             this.label10 = new System.Windows.Forms.Label();
             this.panelCidadeUFClient = new System.Windows.Forms.Panel();
             this.subpanelCidadeUFClient = new System.Windows.Forms.Panel();
@@ -70,35 +80,44 @@
             this.panelEndereco = new System.Windows.Forms.Panel();
             this.subpanelEndereco = new System.Windows.Forms.Panel();
             this.panelTextEnderecoClient = new Interface.Properties.PanelBorderRounded();
+            this.textBoxTemplete3 = new Interface.Properties.textBoxTemplete();
             this.label13 = new System.Windows.Forms.Label();
             this.panelButton = new System.Windows.Forms.Panel();
             this.cadastrarCNPJ = new System.Windows.Forms.Button();
             this.cadastrar = new System.Windows.Forms.Button();
             this.panel51 = new System.Windows.Forms.Panel();
             this.button10 = new System.Windows.Forms.Button();
-            this.panelBorderRounded1 = new Interface.Properties.PanelBorderRounded();
             this.contentCNPJ.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.panelCPF.SuspendLayout();
             this.SubpanelCPF.SuspendLayout();
+            this.panelTextCPFClient.SuspendLayout();
             this.panelNomeClient.SuspendLayout();
             this.subpanelNomeClient.SuspendLayout();
+            this.panelTextNomeClient.SuspendLayout();
             this.panelDtNascClient.SuspendLayout();
             this.subpanelDtNascClient.SuspendLayout();
+            this.panelDateTimerClient.SuspendLayout();
             this.panelGeneroClient.SuspendLayout();
             this.subpanelGeneroClient.SuspendLayout();
+            this.panelBorderRounded1.SuspendLayout();
             this.panelRGClient.SuspendLayout();
             this.subpanelRGClient.SuspendLayout();
+            this.panelTextRGClient.SuspendLayout();
             this.panelTelefoneClient.SuspendLayout();
             this.subpanelTelefoneClient.SuspendLayout();
+            this.panelTextTelefoneCLient.SuspendLayout();
             this.panelEmailClient.SuspendLayout();
             this.subpanelEmailClient.SuspendLayout();
+            this.panelTextEmailClient.SuspendLayout();
             this.panelCEP.SuspendLayout();
             this.subpanelCEPClient.SuspendLayout();
+            this.panelTextCEPClient.SuspendLayout();
             this.panelCidadeUFClient.SuspendLayout();
             this.subpanelCidadeUFClient.SuspendLayout();
             this.panelEndereco.SuspendLayout();
             this.subpanelEndereco.SuspendLayout();
+            this.panelTextEnderecoClient.SuspendLayout();
             this.panelButton.SuspendLayout();
             this.panel51.SuspendLayout();
             this.SuspendLayout();
@@ -177,11 +196,26 @@
             // 
             this.panelTextCPFClient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelTextCPFClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.panelTextCPFClient.Controls.Add(this.masckedboxTemplete1);
             this.panelTextCPFClient.Location = new System.Drawing.Point(5, 37);
             this.panelTextCPFClient.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelTextCPFClient.Name = "panelTextCPFClient";
             this.panelTextCPFClient.Size = new System.Drawing.Size(248, 33);
             this.panelTextCPFClient.TabIndex = 2;
+            // 
+            // masckedboxTemplete1
+            // 
+            this.masckedboxTemplete1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.masckedboxTemplete1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.masckedboxTemplete1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.masckedboxTemplete1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.masckedboxTemplete1.ForeColor = System.Drawing.Color.White;
+            this.masckedboxTemplete1.Location = new System.Drawing.Point(10, 6);
+            this.masckedboxTemplete1.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.masckedboxTemplete1.Mask = "0000";
+            this.masckedboxTemplete1.Name = "masckedboxTemplete1";
+            this.masckedboxTemplete1.Size = new System.Drawing.Size(228, 22);
+            this.masckedboxTemplete1.TabIndex = 0;
             // 
             // labelCPFClient
             // 
@@ -223,11 +257,24 @@
             // 
             this.panelTextNomeClient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelTextNomeClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.panelTextNomeClient.Controls.Add(this.textBoxTemplete1);
             this.panelTextNomeClient.Location = new System.Drawing.Point(5, 37);
             this.panelTextNomeClient.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelTextNomeClient.Name = "panelTextNomeClient";
             this.panelTextNomeClient.Size = new System.Drawing.Size(248, 33);
             this.panelTextNomeClient.TabIndex = 1;
+            // 
+            // textBoxTemplete1
+            // 
+            this.textBoxTemplete1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.textBoxTemplete1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxTemplete1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxTemplete1.ForeColor = System.Drawing.Color.White;
+            this.textBoxTemplete1.Location = new System.Drawing.Point(13, 6);
+            this.textBoxTemplete1.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.textBoxTemplete1.Name = "textBoxTemplete1";
+            this.textBoxTemplete1.Size = new System.Drawing.Size(225, 22);
+            this.textBoxTemplete1.TabIndex = 0;
             // 
             // labelNomeClient
             // 
@@ -268,11 +315,26 @@
             // 
             this.panelDateTimerClient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelDateTimerClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.panelDateTimerClient.Controls.Add(this.masckedboxTemplete2);
             this.panelDateTimerClient.Location = new System.Drawing.Point(5, 37);
             this.panelDateTimerClient.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelDateTimerClient.Name = "panelDateTimerClient";
             this.panelDateTimerClient.Size = new System.Drawing.Size(249, 33);
             this.panelDateTimerClient.TabIndex = 2;
+            // 
+            // masckedboxTemplete2
+            // 
+            this.masckedboxTemplete2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.masckedboxTemplete2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.masckedboxTemplete2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.masckedboxTemplete2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.masckedboxTemplete2.ForeColor = System.Drawing.Color.White;
+            this.masckedboxTemplete2.Location = new System.Drawing.Point(11, 5);
+            this.masckedboxTemplete2.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.masckedboxTemplete2.Mask = "000.000.000.000";
+            this.masckedboxTemplete2.Name = "masckedboxTemplete2";
+            this.masckedboxTemplete2.Size = new System.Drawing.Size(228, 22);
+            this.masckedboxTemplete2.TabIndex = 0;
             // 
             // label5
             // 
@@ -308,6 +370,43 @@
             this.subpanelGeneroClient.Name = "subpanelGeneroClient";
             this.subpanelGeneroClient.Size = new System.Drawing.Size(258, 70);
             this.subpanelGeneroClient.TabIndex = 9;
+            // 
+            // panelBorderRounded1
+            // 
+            this.panelBorderRounded1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelBorderRounded1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.panelBorderRounded1.Controls.Add(this.textBoxOnlyNum_Letters1);
+            this.panelBorderRounded1.Controls.Add(this.textBoxOnlyLetters1);
+            this.panelBorderRounded1.Location = new System.Drawing.Point(5, 36);
+            this.panelBorderRounded1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.panelBorderRounded1.Name = "panelBorderRounded1";
+            this.panelBorderRounded1.Size = new System.Drawing.Size(248, 33);
+            this.panelBorderRounded1.TabIndex = 3;
+            // 
+            // textBoxOnlyNum_Letters1
+            // 
+            this.textBoxOnlyNum_Letters1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxOnlyNum_Letters1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.textBoxOnlyNum_Letters1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxOnlyNum_Letters1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxOnlyNum_Letters1.ForeColor = System.Drawing.Color.White;
+            this.textBoxOnlyNum_Letters1.Location = new System.Drawing.Point(10, 6);
+            this.textBoxOnlyNum_Letters1.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.textBoxOnlyNum_Letters1.Name = "textBoxOnlyNum_Letters1";
+            this.textBoxOnlyNum_Letters1.Size = new System.Drawing.Size(228, 22);
+            this.textBoxOnlyNum_Letters1.TabIndex = 1;
+            // 
+            // textBoxOnlyLetters1
+            // 
+            this.textBoxOnlyLetters1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.textBoxOnlyLetters1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxOnlyLetters1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxOnlyLetters1.ForeColor = System.Drawing.Color.White;
+            this.textBoxOnlyLetters1.Location = new System.Drawing.Point(29, 1);
+            this.textBoxOnlyLetters1.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.textBoxOnlyLetters1.Name = "textBoxOnlyLetters1";
+            this.textBoxOnlyLetters1.Size = new System.Drawing.Size(100, 22);
+            this.textBoxOnlyLetters1.TabIndex = 0;
             // 
             // labelGeneroClient
             // 
@@ -348,11 +447,26 @@
             // 
             this.panelTextRGClient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelTextRGClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.panelTextRGClient.Controls.Add(this.masckedboxTemplete3);
             this.panelTextRGClient.Location = new System.Drawing.Point(5, 36);
             this.panelTextRGClient.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelTextRGClient.Name = "panelTextRGClient";
             this.panelTextRGClient.Size = new System.Drawing.Size(248, 33);
             this.panelTextRGClient.TabIndex = 2;
+            // 
+            // masckedboxTemplete3
+            // 
+            this.masckedboxTemplete3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.masckedboxTemplete3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.masckedboxTemplete3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.masckedboxTemplete3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.masckedboxTemplete3.ForeColor = System.Drawing.Color.White;
+            this.masckedboxTemplete3.Location = new System.Drawing.Point(10, 6);
+            this.masckedboxTemplete3.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.masckedboxTemplete3.Mask = "(00) 00000-0000";
+            this.masckedboxTemplete3.Name = "masckedboxTemplete3";
+            this.masckedboxTemplete3.Size = new System.Drawing.Size(228, 22);
+            this.masckedboxTemplete3.TabIndex = 0;
             // 
             // label7
             // 
@@ -393,11 +507,26 @@
             // 
             this.panelTextTelefoneCLient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelTextTelefoneCLient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.panelTextTelefoneCLient.Controls.Add(this.masckedboxTemplete4);
             this.panelTextTelefoneCLient.Location = new System.Drawing.Point(5, 36);
             this.panelTextTelefoneCLient.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelTextTelefoneCLient.Name = "panelTextTelefoneCLient";
             this.panelTextTelefoneCLient.Size = new System.Drawing.Size(249, 33);
             this.panelTextTelefoneCLient.TabIndex = 2;
+            // 
+            // masckedboxTemplete4
+            // 
+            this.masckedboxTemplete4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.masckedboxTemplete4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.masckedboxTemplete4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.masckedboxTemplete4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.masckedboxTemplete4.ForeColor = System.Drawing.Color.White;
+            this.masckedboxTemplete4.Location = new System.Drawing.Point(10, 5);
+            this.masckedboxTemplete4.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.masckedboxTemplete4.Mask = "(00) 0000-0000";
+            this.masckedboxTemplete4.Name = "masckedboxTemplete4";
+            this.masckedboxTemplete4.Size = new System.Drawing.Size(228, 22);
+            this.masckedboxTemplete4.TabIndex = 1;
             // 
             // labelTelefoneClient
             // 
@@ -438,11 +567,24 @@
             // 
             this.panelTextEmailClient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelTextEmailClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.panelTextEmailClient.Controls.Add(this.textBoxTemplete2);
             this.panelTextEmailClient.Location = new System.Drawing.Point(5, 36);
             this.panelTextEmailClient.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelTextEmailClient.Name = "panelTextEmailClient";
             this.panelTextEmailClient.Size = new System.Drawing.Size(248, 33);
             this.panelTextEmailClient.TabIndex = 2;
+            // 
+            // textBoxTemplete2
+            // 
+            this.textBoxTemplete2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.textBoxTemplete2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxTemplete2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxTemplete2.ForeColor = System.Drawing.Color.White;
+            this.textBoxTemplete2.Location = new System.Drawing.Point(10, 6);
+            this.textBoxTemplete2.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.textBoxTemplete2.Name = "textBoxTemplete2";
+            this.textBoxTemplete2.Size = new System.Drawing.Size(225, 22);
+            this.textBoxTemplete2.TabIndex = 0;
             // 
             // labelEmailClient
             // 
@@ -483,11 +625,26 @@
             // 
             this.panelTextCEPClient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelTextCEPClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.panelTextCEPClient.Controls.Add(this.masckedboxTemplete5);
             this.panelTextCEPClient.Location = new System.Drawing.Point(5, 36);
             this.panelTextCEPClient.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelTextCEPClient.Name = "panelTextCEPClient";
             this.panelTextCEPClient.Size = new System.Drawing.Size(248, 33);
             this.panelTextCEPClient.TabIndex = 2;
+            // 
+            // masckedboxTemplete5
+            // 
+            this.masckedboxTemplete5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.masckedboxTemplete5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.masckedboxTemplete5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.masckedboxTemplete5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.masckedboxTemplete5.ForeColor = System.Drawing.Color.White;
+            this.masckedboxTemplete5.Location = new System.Drawing.Point(10, 5);
+            this.masckedboxTemplete5.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.masckedboxTemplete5.Mask = "00000-000";
+            this.masckedboxTemplete5.Name = "masckedboxTemplete5";
+            this.masckedboxTemplete5.Size = new System.Drawing.Size(228, 22);
+            this.masckedboxTemplete5.TabIndex = 1;
             // 
             // label10
             // 
@@ -559,6 +716,34 @@
             this.comboUFClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.comboUFClient.ForeColor = System.Drawing.Color.White;
             this.comboUFClient.FormattingEnabled = true;
+            this.comboUFClient.ItemHeight = 25;
+            this.comboUFClient.Items.AddRange(new object[] {
+            "AL",
+            "AP",
+            "AM",
+            "BA",
+            "CE",
+            "DF",
+            "ES",
+            "GO",
+            "MA",
+            "MT",
+            "MS",
+            "MG",
+            "PA",
+            "PB",
+            "PR",
+            "PE",
+            "PI",
+            "RJ",
+            "RN",
+            "RS",
+            "RO",
+            "RR",
+            "SC",
+            "SP",
+            "SE",
+            "TO"});
             this.comboUFClient.Location = new System.Drawing.Point(5, 36);
             this.comboUFClient.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.comboUFClient.Name = "comboUFClient";
@@ -604,11 +789,24 @@
             // 
             this.panelTextEnderecoClient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelTextEnderecoClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.panelTextEnderecoClient.Controls.Add(this.textBoxTemplete3);
             this.panelTextEnderecoClient.Location = new System.Drawing.Point(5, 36);
             this.panelTextEnderecoClient.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelTextEnderecoClient.Name = "panelTextEnderecoClient";
             this.panelTextEnderecoClient.Size = new System.Drawing.Size(248, 33);
             this.panelTextEnderecoClient.TabIndex = 2;
+            // 
+            // textBoxTemplete3
+            // 
+            this.textBoxTemplete3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.textBoxTemplete3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxTemplete3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxTemplete3.ForeColor = System.Drawing.Color.White;
+            this.textBoxTemplete3.Location = new System.Drawing.Point(12, 5);
+            this.textBoxTemplete3.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.textBoxTemplete3.Name = "textBoxTemplete3";
+            this.textBoxTemplete3.Size = new System.Drawing.Size(225, 22);
+            this.textBoxTemplete3.TabIndex = 1;
             // 
             // label13
             // 
@@ -644,7 +842,7 @@
             this.cadastrarCNPJ.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cadastrarCNPJ.FlatAppearance.BorderSize = 0;
             this.cadastrarCNPJ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cadastrarCNPJ.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cadastrarCNPJ.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.cadastrarCNPJ.ForeColor = System.Drawing.Color.White;
             this.cadastrarCNPJ.Location = new System.Drawing.Point(755, 0);
             this.cadastrarCNPJ.Margin = new System.Windows.Forms.Padding(0, 30, 0, 0);
@@ -661,7 +859,7 @@
             this.cadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cadastrar.FlatAppearance.BorderSize = 0;
             this.cadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cadastrar.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.cadastrar.ForeColor = System.Drawing.Color.White;
             this.cadastrar.Location = new System.Drawing.Point(1490, -25);
             this.cadastrar.Margin = new System.Windows.Forms.Padding(0, 30, 0, 0);
@@ -701,16 +899,6 @@
             this.button10.Text = "Salvar";
             this.button10.UseVisualStyleBackColor = false;
             // 
-            // panelBorderRounded1
-            // 
-            this.panelBorderRounded1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelBorderRounded1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelBorderRounded1.Location = new System.Drawing.Point(5, 36);
-            this.panelBorderRounded1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.panelBorderRounded1.Name = "panelBorderRounded1";
-            this.panelBorderRounded1.Size = new System.Drawing.Size(248, 33);
-            this.panelBorderRounded1.TabIndex = 3;
-            // 
             // ClienteCNPJ
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -725,33 +913,51 @@
             this.panelCPF.ResumeLayout(false);
             this.SubpanelCPF.ResumeLayout(false);
             this.SubpanelCPF.PerformLayout();
+            this.panelTextCPFClient.ResumeLayout(false);
+            this.panelTextCPFClient.PerformLayout();
             this.panelNomeClient.ResumeLayout(false);
             this.subpanelNomeClient.ResumeLayout(false);
             this.subpanelNomeClient.PerformLayout();
+            this.panelTextNomeClient.ResumeLayout(false);
+            this.panelTextNomeClient.PerformLayout();
             this.panelDtNascClient.ResumeLayout(false);
             this.subpanelDtNascClient.ResumeLayout(false);
             this.subpanelDtNascClient.PerformLayout();
+            this.panelDateTimerClient.ResumeLayout(false);
+            this.panelDateTimerClient.PerformLayout();
             this.panelGeneroClient.ResumeLayout(false);
             this.subpanelGeneroClient.ResumeLayout(false);
             this.subpanelGeneroClient.PerformLayout();
+            this.panelBorderRounded1.ResumeLayout(false);
+            this.panelBorderRounded1.PerformLayout();
             this.panelRGClient.ResumeLayout(false);
             this.subpanelRGClient.ResumeLayout(false);
             this.subpanelRGClient.PerformLayout();
+            this.panelTextRGClient.ResumeLayout(false);
+            this.panelTextRGClient.PerformLayout();
             this.panelTelefoneClient.ResumeLayout(false);
             this.subpanelTelefoneClient.ResumeLayout(false);
             this.subpanelTelefoneClient.PerformLayout();
+            this.panelTextTelefoneCLient.ResumeLayout(false);
+            this.panelTextTelefoneCLient.PerformLayout();
             this.panelEmailClient.ResumeLayout(false);
             this.subpanelEmailClient.ResumeLayout(false);
             this.subpanelEmailClient.PerformLayout();
+            this.panelTextEmailClient.ResumeLayout(false);
+            this.panelTextEmailClient.PerformLayout();
             this.panelCEP.ResumeLayout(false);
             this.subpanelCEPClient.ResumeLayout(false);
             this.subpanelCEPClient.PerformLayout();
+            this.panelTextCEPClient.ResumeLayout(false);
+            this.panelTextCEPClient.PerformLayout();
             this.panelCidadeUFClient.ResumeLayout(false);
             this.subpanelCidadeUFClient.ResumeLayout(false);
             this.subpanelCidadeUFClient.PerformLayout();
             this.panelEndereco.ResumeLayout(false);
             this.subpanelEndereco.ResumeLayout(false);
             this.subpanelEndereco.PerformLayout();
+            this.panelTextEnderecoClient.ResumeLayout(false);
+            this.panelTextEnderecoClient.PerformLayout();
             this.panelButton.ResumeLayout(false);
             this.panel51.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -808,5 +1014,16 @@
         private Properties.PanelBorderRounded panelTextEnderecoClient;
         private Label label13;
         private Properties.PanelBorderRounded panelBorderRounded1;
+        private Properties.masckedboxTemplete masckedboxTemplete1;
+        private Properties.textBoxTemplete textBoxTemplete1;
+        private Properties.masckedboxTemplete masckedboxTemplete2;
+        private Properties.textBoxOnlyNum_Letters textBoxOnlyNum_Letters1;
+        private Properties.textBoxOnlyLetters textBoxOnlyLetters1;
+        private Properties.masckedboxTemplete masckedboxTemplete3;
+        private Properties.masckedboxTemplete masckedboxTemplete4;
+        private Properties.textBoxTemplete textBoxTemplete2;
+        private Properties.masckedboxTemplete masckedboxTemplete5;
+        private Properties.textBoxTemplete textBoxTemplete3;
+        private Properties.TextMoney textMoney1;
     }
 }

@@ -32,7 +32,7 @@ namespace Interface
         private void CadastroVeiculos_Resize(object sender, EventArgs e)
         {
             utils.alignCenterPanels(panelSerch, searchPanel, true, true);
-            utils.expansivePanels(10, panelPlaca, panelTipo, panelAno, panelCapacidade, panelRNTRC, panelMotorista, panelValor);
+            utils.expansivePanels(10, panelPlaca, panelAno, panelCapacidade, panelRNTRC, panelMotorista, panelValor);
         }
 
         private void panelSerch_Paint(object sender, PaintEventArgs e)

@@ -150,5 +150,6 @@ namespace Interface
         {
             utils.alignCenterRadioButtons(CNPJ, panelCNPJ, true, true);
         }
+
     }
 }

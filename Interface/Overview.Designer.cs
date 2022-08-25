@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Overview));
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panelSerch = new Interface.Properties.PanelBorderRoundedOnLeft();
-            this.typeData = new System.Windows.Forms.Label();
             this.maskInput = new Interface.Properties.masckedboxTemplete();
             this.panel17 = new System.Windows.Forms.Panel();
             this.contentOverview = new System.Windows.Forms.Panel();
@@ -52,6 +51,7 @@
             this.CNPJ = new System.Windows.Forms.RadioButton();
             this.panelCPF = new System.Windows.Forms.Panel();
             this.CPF = new System.Windows.Forms.RadioButton();
+            this.typeData = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panelSerch.SuspendLayout();
             this.panel17.SuspendLayout();
@@ -95,21 +95,6 @@
             this.panelSerch.TabIndex = 2;
             this.panelSerch.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSerch_Paint);
             // 
-            // typeData
-            // 
-            this.typeData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.typeData.AutoSize = true;
-            this.typeData.BackColor = System.Drawing.Color.Transparent;
-            this.typeData.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.typeData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(91)))), ((int)(((byte)(101)))));
-            this.typeData.Location = new System.Drawing.Point(35, 7);
-            this.typeData.Margin = new System.Windows.Forms.Padding(10, 7, 0, 6);
-            this.typeData.Name = "typeData";
-            this.typeData.Size = new System.Drawing.Size(37, 21);
-            this.typeData.TabIndex = 3;
-            this.typeData.Text = "CPF";
-            // 
             // maskInput
             // 
             this.maskInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -117,10 +102,10 @@
             this.maskInput.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.maskInput.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.maskInput.ForeColor = System.Drawing.Color.White;
-            this.maskInput.Location = new System.Drawing.Point(35, 7);
-            this.maskInput.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
+            this.maskInput.Location = new System.Drawing.Point(84, 7);
+            this.maskInput.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.maskInput.Name = "maskInput";
-            this.maskInput.Size = new System.Drawing.Size(271, 22);
+            this.maskInput.Size = new System.Drawing.Size(222, 22);
             this.maskInput.TabIndex = 3;
             // 
             // panel17
@@ -187,7 +172,7 @@
             this.buscar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buscar.FlatAppearance.BorderSize = 0;
             this.buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buscar.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.buscar.ForeColor = System.Drawing.Color.White;
             this.buscar.Location = new System.Drawing.Point(755, 0);
             this.buscar.Margin = new System.Windows.Forms.Padding(0, 30, 0, 0);
@@ -396,6 +381,21 @@
             this.CPF.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.CPF.UseVisualStyleBackColor = true;
             this.CPF.CheckedChanged += new System.EventHandler(this.CPF_CheckedChanged);
+            // 
+            // typeData
+            // 
+            this.typeData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.typeData.AutoSize = true;
+            this.typeData.BackColor = System.Drawing.Color.Transparent;
+            this.typeData.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.typeData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(91)))), ((int)(((byte)(101)))));
+            this.typeData.Location = new System.Drawing.Point(35, 7);
+            this.typeData.Margin = new System.Windows.Forms.Padding(10, 7, 0, 6);
+            this.typeData.Name = "typeData";
+            this.typeData.Size = new System.Drawing.Size(37, 21);
+            this.typeData.TabIndex = 3;
+            this.typeData.Text = "CPF";
             // 
             // Overview
             // 

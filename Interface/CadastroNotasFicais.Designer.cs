@@ -31,38 +31,45 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroNotasFicais));
             this.searchPanel = new System.Windows.Forms.Panel();
             this.panelSerch = new Interface.Properties.PanelBorderRoundedOnLeft();
+            this.textBoxOnlyNum_Letters6 = new Interface.Properties.textBoxOnlyNum_Letters();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.textSearch = new System.Windows.Forms.TextBox();
             this.contentNotas = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panelCPF = new System.Windows.Forms.Panel();
             this.SubpanelCPF = new System.Windows.Forms.Panel();
             this.panelID = new Interface.Properties.PanelBorderRounded();
+            this.textBoxOnlyNum_Letters1 = new Interface.Properties.textBoxOnlyNum_Letters();
             this.labelCPFClient = new System.Windows.Forms.Label();
             this.panelNomeClient = new System.Windows.Forms.Panel();
             this.subpanelNomeClient = new System.Windows.Forms.Panel();
             this.panelTextNomeClient = new Interface.Properties.PanelBorderRounded();
+            this.textBoxOnlyNum_Letters2 = new Interface.Properties.textBoxOnlyNum_Letters();
             this.labelNomeClient = new System.Windows.Forms.Label();
             this.panelDtNascClient = new System.Windows.Forms.Panel();
             this.subpanelDtNascClient = new System.Windows.Forms.Panel();
             this.panelDateTimerClient = new Interface.Properties.PanelBorderRounded();
+            this.textBoxnOnlyNum1 = new Interface.Properties.textBoxnOnlyNum();
             this.label5 = new System.Windows.Forms.Label();
             this.panelGeneroClient = new System.Windows.Forms.Panel();
             this.subpanelGeneroClient = new System.Windows.Forms.Panel();
             this.panelTipo = new Interface.Properties.PanelBorderRounded();
+            this.textBoxOnlyNum_Letters5 = new Interface.Properties.textBoxOnlyNum_Letters();
             this.labelGeneroClient = new System.Windows.Forms.Label();
             this.panelRGClient = new System.Windows.Forms.Panel();
             this.subpanelRGClient = new System.Windows.Forms.Panel();
             this.panelTextRGClient = new Interface.Properties.PanelBorderRounded();
+            this.textBoxOnlyNum_Letters4 = new Interface.Properties.textBoxOnlyNum_Letters();
             this.label7 = new System.Windows.Forms.Label();
             this.panelTelefoneClient = new System.Windows.Forms.Panel();
             this.subpanelTelefoneClient = new System.Windows.Forms.Panel();
             this.panelTextTelefoneCLient = new Interface.Properties.PanelBorderRounded();
+            this.textBoxOnlyNum_Letters3 = new Interface.Properties.textBoxOnlyNum_Letters();
             this.labelTelefoneClient = new System.Windows.Forms.Label();
             this.panelButton = new System.Windows.Forms.Panel();
             this.cadastrarNota = new System.Windows.Forms.Button();
             this.panel51 = new System.Windows.Forms.Panel();
             this.button10 = new System.Windows.Forms.Button();
+            this.typeData = new System.Windows.Forms.Label();
             this.searchPanel.SuspendLayout();
             this.panelSerch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -70,16 +77,22 @@
             this.tableLayoutPanel3.SuspendLayout();
             this.panelCPF.SuspendLayout();
             this.SubpanelCPF.SuspendLayout();
+            this.panelID.SuspendLayout();
             this.panelNomeClient.SuspendLayout();
             this.subpanelNomeClient.SuspendLayout();
+            this.panelTextNomeClient.SuspendLayout();
             this.panelDtNascClient.SuspendLayout();
             this.subpanelDtNascClient.SuspendLayout();
+            this.panelDateTimerClient.SuspendLayout();
             this.panelGeneroClient.SuspendLayout();
             this.subpanelGeneroClient.SuspendLayout();
+            this.panelTipo.SuspendLayout();
             this.panelRGClient.SuspendLayout();
             this.subpanelRGClient.SuspendLayout();
+            this.panelTextRGClient.SuspendLayout();
             this.panelTelefoneClient.SuspendLayout();
             this.subpanelTelefoneClient.SuspendLayout();
+            this.panelTextTelefoneCLient.SuspendLayout();
             this.panelButton.SuspendLayout();
             this.panel51.SuspendLayout();
             this.SuspendLayout();
@@ -100,14 +113,28 @@
             // 
             this.panelSerch.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.panelSerch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.panelSerch.Controls.Add(this.typeData);
+            this.panelSerch.Controls.Add(this.textBoxOnlyNum_Letters6);
             this.panelSerch.Controls.Add(this.pictureBox3);
-            this.panelSerch.Controls.Add(this.textSearch);
             this.panelSerch.Location = new System.Drawing.Point(312, 13);
             this.panelSerch.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelSerch.Name = "panelSerch";
             this.panelSerch.Size = new System.Drawing.Size(347, 36);
             this.panelSerch.TabIndex = 2;
             this.panelSerch.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSerch_Paint);
+            // 
+            // textBoxOnlyNum_Letters6
+            // 
+            this.textBoxOnlyNum_Letters6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxOnlyNum_Letters6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.textBoxOnlyNum_Letters6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxOnlyNum_Letters6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxOnlyNum_Letters6.ForeColor = System.Drawing.Color.White;
+            this.textBoxOnlyNum_Letters6.Location = new System.Drawing.Point(171, 9);
+            this.textBoxOnlyNum_Letters6.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.textBoxOnlyNum_Letters6.Name = "textBoxOnlyNum_Letters6";
+            this.textBoxOnlyNum_Letters6.Size = new System.Drawing.Size(166, 22);
+            this.textBoxOnlyNum_Letters6.TabIndex = 2;
             // 
             // pictureBox3
             // 
@@ -120,19 +147,6 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 1;
             this.pictureBox3.TabStop = false;
-            // 
-            // textSearch
-            // 
-            this.textSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.textSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.textSearch.ForeColor = System.Drawing.Color.White;
-            this.textSearch.Location = new System.Drawing.Point(35, 8);
-            this.textSearch.Margin = new System.Windows.Forms.Padding(10, 8, 10, 0);
-            this.textSearch.Name = "textSearch";
-            this.textSearch.PlaceholderText = "Search";
-            this.textSearch.Size = new System.Drawing.Size(302, 19);
-            this.textSearch.TabIndex = 6;
             // 
             // contentNotas
             // 
@@ -202,11 +216,25 @@
             // 
             this.panelID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.panelID.Controls.Add(this.textBoxOnlyNum_Letters1);
             this.panelID.Location = new System.Drawing.Point(5, 37);
             this.panelID.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelID.Name = "panelID";
             this.panelID.Size = new System.Drawing.Size(248, 33);
             this.panelID.TabIndex = 2;
+            // 
+            // textBoxOnlyNum_Letters1
+            // 
+            this.textBoxOnlyNum_Letters1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxOnlyNum_Letters1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.textBoxOnlyNum_Letters1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxOnlyNum_Letters1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxOnlyNum_Letters1.ForeColor = System.Drawing.Color.White;
+            this.textBoxOnlyNum_Letters1.Location = new System.Drawing.Point(10, 5);
+            this.textBoxOnlyNum_Letters1.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.textBoxOnlyNum_Letters1.Name = "textBoxOnlyNum_Letters1";
+            this.textBoxOnlyNum_Letters1.Size = new System.Drawing.Size(228, 22);
+            this.textBoxOnlyNum_Letters1.TabIndex = 1;
             // 
             // labelCPFClient
             // 
@@ -248,11 +276,25 @@
             // 
             this.panelTextNomeClient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelTextNomeClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.panelTextNomeClient.Controls.Add(this.textBoxOnlyNum_Letters2);
             this.panelTextNomeClient.Location = new System.Drawing.Point(0, 37);
             this.panelTextNomeClient.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelTextNomeClient.Name = "panelTextNomeClient";
             this.panelTextNomeClient.Size = new System.Drawing.Size(248, 33);
             this.panelTextNomeClient.TabIndex = 1;
+            // 
+            // textBoxOnlyNum_Letters2
+            // 
+            this.textBoxOnlyNum_Letters2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxOnlyNum_Letters2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.textBoxOnlyNum_Letters2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxOnlyNum_Letters2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxOnlyNum_Letters2.ForeColor = System.Drawing.Color.White;
+            this.textBoxOnlyNum_Letters2.Location = new System.Drawing.Point(10, 5);
+            this.textBoxOnlyNum_Letters2.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.textBoxOnlyNum_Letters2.Name = "textBoxOnlyNum_Letters2";
+            this.textBoxOnlyNum_Letters2.Size = new System.Drawing.Size(228, 22);
+            this.textBoxOnlyNum_Letters2.TabIndex = 2;
             // 
             // labelNomeClient
             // 
@@ -293,11 +335,25 @@
             // 
             this.panelDateTimerClient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelDateTimerClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.panelDateTimerClient.Controls.Add(this.textBoxnOnlyNum1);
             this.panelDateTimerClient.Location = new System.Drawing.Point(6, 37);
             this.panelDateTimerClient.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelDateTimerClient.Name = "panelDateTimerClient";
             this.panelDateTimerClient.Size = new System.Drawing.Size(248, 33);
             this.panelDateTimerClient.TabIndex = 2;
+            // 
+            // textBoxnOnlyNum1
+            // 
+            this.textBoxnOnlyNum1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxnOnlyNum1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.textBoxnOnlyNum1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxnOnlyNum1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxnOnlyNum1.ForeColor = System.Drawing.Color.White;
+            this.textBoxnOnlyNum1.Location = new System.Drawing.Point(10, 6);
+            this.textBoxnOnlyNum1.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.textBoxnOnlyNum1.Name = "textBoxnOnlyNum1";
+            this.textBoxnOnlyNum1.Size = new System.Drawing.Size(228, 22);
+            this.textBoxnOnlyNum1.TabIndex = 0;
             // 
             // label5
             // 
@@ -338,11 +394,25 @@
             // 
             this.panelTipo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelTipo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.panelTipo.Controls.Add(this.textBoxOnlyNum_Letters5);
             this.panelTipo.Location = new System.Drawing.Point(5, 36);
             this.panelTipo.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelTipo.Name = "panelTipo";
             this.panelTipo.Size = new System.Drawing.Size(248, 33);
             this.panelTipo.TabIndex = 3;
+            // 
+            // textBoxOnlyNum_Letters5
+            // 
+            this.textBoxOnlyNum_Letters5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxOnlyNum_Letters5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.textBoxOnlyNum_Letters5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxOnlyNum_Letters5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxOnlyNum_Letters5.ForeColor = System.Drawing.Color.White;
+            this.textBoxOnlyNum_Letters5.Location = new System.Drawing.Point(10, 5);
+            this.textBoxOnlyNum_Letters5.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.textBoxOnlyNum_Letters5.Name = "textBoxOnlyNum_Letters5";
+            this.textBoxOnlyNum_Letters5.Size = new System.Drawing.Size(228, 22);
+            this.textBoxOnlyNum_Letters5.TabIndex = 1;
             // 
             // labelGeneroClient
             // 
@@ -383,11 +453,25 @@
             // 
             this.panelTextRGClient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelTextRGClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.panelTextRGClient.Controls.Add(this.textBoxOnlyNum_Letters4);
             this.panelTextRGClient.Location = new System.Drawing.Point(5, 36);
             this.panelTextRGClient.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelTextRGClient.Name = "panelTextRGClient";
             this.panelTextRGClient.Size = new System.Drawing.Size(248, 33);
             this.panelTextRGClient.TabIndex = 2;
+            // 
+            // textBoxOnlyNum_Letters4
+            // 
+            this.textBoxOnlyNum_Letters4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxOnlyNum_Letters4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.textBoxOnlyNum_Letters4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxOnlyNum_Letters4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxOnlyNum_Letters4.ForeColor = System.Drawing.Color.White;
+            this.textBoxOnlyNum_Letters4.Location = new System.Drawing.Point(10, 5);
+            this.textBoxOnlyNum_Letters4.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.textBoxOnlyNum_Letters4.Name = "textBoxOnlyNum_Letters4";
+            this.textBoxOnlyNum_Letters4.Size = new System.Drawing.Size(228, 22);
+            this.textBoxOnlyNum_Letters4.TabIndex = 1;
             // 
             // label7
             // 
@@ -428,11 +512,25 @@
             // 
             this.panelTextTelefoneCLient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelTextTelefoneCLient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.panelTextTelefoneCLient.Controls.Add(this.textBoxOnlyNum_Letters3);
             this.panelTextTelefoneCLient.Location = new System.Drawing.Point(6, 36);
             this.panelTextTelefoneCLient.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelTextTelefoneCLient.Name = "panelTextTelefoneCLient";
             this.panelTextTelefoneCLient.Size = new System.Drawing.Size(249, 33);
             this.panelTextTelefoneCLient.TabIndex = 2;
+            // 
+            // textBoxOnlyNum_Letters3
+            // 
+            this.textBoxOnlyNum_Letters3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxOnlyNum_Letters3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.textBoxOnlyNum_Letters3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxOnlyNum_Letters3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxOnlyNum_Letters3.ForeColor = System.Drawing.Color.White;
+            this.textBoxOnlyNum_Letters3.Location = new System.Drawing.Point(10, 5);
+            this.textBoxOnlyNum_Letters3.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.textBoxOnlyNum_Letters3.Name = "textBoxOnlyNum_Letters3";
+            this.textBoxOnlyNum_Letters3.Size = new System.Drawing.Size(228, 22);
+            this.textBoxOnlyNum_Letters3.TabIndex = 1;
             // 
             // labelTelefoneClient
             // 
@@ -467,7 +565,7 @@
             this.cadastrarNota.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cadastrarNota.FlatAppearance.BorderSize = 0;
             this.cadastrarNota.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cadastrarNota.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cadastrarNota.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.cadastrarNota.ForeColor = System.Drawing.Color.White;
             this.cadastrarNota.Location = new System.Drawing.Point(755, 0);
             this.cadastrarNota.Margin = new System.Windows.Forms.Padding(0, 30, 0, 0);
@@ -508,6 +606,21 @@
             this.button10.Text = "Salvar";
             this.button10.UseVisualStyleBackColor = false;
             // 
+            // typeData
+            // 
+            this.typeData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.typeData.AutoSize = true;
+            this.typeData.BackColor = System.Drawing.Color.Transparent;
+            this.typeData.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.typeData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(91)))), ((int)(((byte)(101)))));
+            this.typeData.Location = new System.Drawing.Point(35, 7);
+            this.typeData.Margin = new System.Windows.Forms.Padding(10, 7, 0, 6);
+            this.typeData.Name = "typeData";
+            this.typeData.Size = new System.Drawing.Size(126, 21);
+            this.typeData.TabIndex = 4;
+            this.typeData.Text = "Chave de Acesso";
+            // 
             // CadastroNotasFicais
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -528,21 +641,33 @@
             this.panelCPF.ResumeLayout(false);
             this.SubpanelCPF.ResumeLayout(false);
             this.SubpanelCPF.PerformLayout();
+            this.panelID.ResumeLayout(false);
+            this.panelID.PerformLayout();
             this.panelNomeClient.ResumeLayout(false);
             this.subpanelNomeClient.ResumeLayout(false);
             this.subpanelNomeClient.PerformLayout();
+            this.panelTextNomeClient.ResumeLayout(false);
+            this.panelTextNomeClient.PerformLayout();
             this.panelDtNascClient.ResumeLayout(false);
             this.subpanelDtNascClient.ResumeLayout(false);
             this.subpanelDtNascClient.PerformLayout();
+            this.panelDateTimerClient.ResumeLayout(false);
+            this.panelDateTimerClient.PerformLayout();
             this.panelGeneroClient.ResumeLayout(false);
             this.subpanelGeneroClient.ResumeLayout(false);
             this.subpanelGeneroClient.PerformLayout();
+            this.panelTipo.ResumeLayout(false);
+            this.panelTipo.PerformLayout();
             this.panelRGClient.ResumeLayout(false);
             this.subpanelRGClient.ResumeLayout(false);
             this.subpanelRGClient.PerformLayout();
+            this.panelTextRGClient.ResumeLayout(false);
+            this.panelTextRGClient.PerformLayout();
             this.panelTelefoneClient.ResumeLayout(false);
             this.subpanelTelefoneClient.ResumeLayout(false);
             this.subpanelTelefoneClient.PerformLayout();
+            this.panelTextTelefoneCLient.ResumeLayout(false);
+            this.panelTextTelefoneCLient.PerformLayout();
             this.panelButton.ResumeLayout(false);
             this.panel51.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -554,7 +679,6 @@
         private Panel searchPanel;
         private Properties.PanelBorderRoundedOnLeft panelSerch;
         private PictureBox pictureBox3;
-        private TextBox textSearch;
         private Panel contentNotas;
         private TableLayoutPanel tableLayoutPanel3;
         private Panel panelCPF;
@@ -585,5 +709,13 @@
         private Panel panel51;
         private Button button10;
         private Button cadastrarNota;
+        private Properties.textBoxOnlyNum_Letters textBoxOnlyNum_Letters1;
+        private Properties.textBoxOnlyNum_Letters textBoxOnlyNum_Letters2;
+        private Properties.textBoxnOnlyNum textBoxnOnlyNum1;
+        private Properties.textBoxOnlyNum_Letters textBoxOnlyNum_Letters5;
+        private Properties.textBoxOnlyNum_Letters textBoxOnlyNum_Letters4;
+        private Properties.textBoxOnlyNum_Letters textBoxOnlyNum_Letters3;
+        private Properties.textBoxOnlyNum_Letters textBoxOnlyNum_Letters6;
+        private Label typeData;
     }
 }

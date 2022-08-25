@@ -33,7 +33,7 @@ namespace Interface
         private void CadastroSinistros_Resize(object sender, EventArgs e)
         {
             utils.alignCenterPanels(panelSerch, searchPanel, true, true);
-            utils.expansivePanels(10, panelSinistro);
+            //utils.expansivePanels(10, panelSinistro);
         }
 
         private void panelSerch_Paint(object sender, PaintEventArgs e)

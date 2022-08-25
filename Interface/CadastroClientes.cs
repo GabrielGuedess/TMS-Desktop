@@ -58,7 +58,10 @@ namespace Interface
             if (pessoaFisica.Checked)
             {
                 pessoaJuridica.Checked = false;
-                textSearch.PlaceholderText = "CPF";
+                labelTypePerson.Text = "CPF";
+                mkBoxCdClientSearch.Text = "";
+                mkBoxCdClientSearch.Height = mkBoxCdClientSearch.Height + 20; 
+                mkBoxCdClientSearch.Mask = ("000.000.000-00");
             }
         }
 
@@ -69,7 +72,9 @@ namespace Interface
             if (pessoaJuridica.Checked)
             {
                 pessoaFisica.Checked = false;
-                textSearch.PlaceholderText = "CNPJ";
+                labelTypePerson.Text = "CNPF";
+                mkBoxCdClientSearch.Text = "";
+                mkBoxCdClientSearch.Mask = "00.000.000/0000-00";
             }
         }
 
@@ -82,5 +87,6 @@ namespace Interface
         {
             utils.alignCenterPanels(panelSerch, panel17, true, true);
         }
+
     }
 }

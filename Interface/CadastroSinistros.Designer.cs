@@ -31,21 +31,24 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroSinistros));
             this.searchPanel = new System.Windows.Forms.Panel();
             this.panelSerch = new Interface.Properties.PanelBorderRoundedOnLeft();
+            this.typeData = new System.Windows.Forms.Label();
+            this.textBoxOnlyNum_Letters1 = new Interface.Properties.textBoxOnlyNum_Letters();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.textSearch = new System.Windows.Forms.TextBox();
             this.contentSinistros = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panelCPF = new System.Windows.Forms.Panel();
             this.SubpanelCPF = new System.Windows.Forms.Panel();
-            this.panelSinistro = new Interface.Properties.PanelBorderRounded();
+            this.comboGemeroClient = new System.Windows.Forms.ComboBox();
             this.labelCPFClient = new System.Windows.Forms.Label();
             this.panelNomeClient = new System.Windows.Forms.Panel();
             this.subpanelNomeClient = new System.Windows.Forms.Panel();
             this.panelTextNomeClient = new Interface.Properties.PanelBorderRounded();
+            this.textBoxOnlyNum_Letters2 = new Interface.Properties.textBoxOnlyNum_Letters();
             this.labelNomeClient = new System.Windows.Forms.Label();
             this.panelDtNascClient = new System.Windows.Forms.Panel();
             this.subpanelDtNascClient = new System.Windows.Forms.Panel();
             this.panelDateTimerClient = new Interface.Properties.PanelBorderRounded();
+            this.textBoxOnlyNum_Letters3 = new Interface.Properties.textBoxOnlyNum_Letters();
             this.label5 = new System.Windows.Forms.Label();
             this.panelButton = new System.Windows.Forms.Panel();
             this.cadastrarSinistro = new System.Windows.Forms.Button();
@@ -60,8 +63,10 @@
             this.SubpanelCPF.SuspendLayout();
             this.panelNomeClient.SuspendLayout();
             this.subpanelNomeClient.SuspendLayout();
+            this.panelTextNomeClient.SuspendLayout();
             this.panelDtNascClient.SuspendLayout();
             this.subpanelDtNascClient.SuspendLayout();
+            this.panelDateTimerClient.SuspendLayout();
             this.panelButton.SuspendLayout();
             this.panel51.SuspendLayout();
             this.SuspendLayout();
@@ -82,14 +87,43 @@
             // 
             this.panelSerch.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.panelSerch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.panelSerch.Controls.Add(this.typeData);
+            this.panelSerch.Controls.Add(this.textBoxOnlyNum_Letters1);
             this.panelSerch.Controls.Add(this.pictureBox3);
-            this.panelSerch.Controls.Add(this.textSearch);
             this.panelSerch.Location = new System.Drawing.Point(311, 13);
             this.panelSerch.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelSerch.Name = "panelSerch";
             this.panelSerch.Size = new System.Drawing.Size(347, 36);
             this.panelSerch.TabIndex = 2;
             this.panelSerch.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSerch_Paint);
+            // 
+            // typeData
+            // 
+            this.typeData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.typeData.AutoSize = true;
+            this.typeData.BackColor = System.Drawing.Color.Transparent;
+            this.typeData.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.typeData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(91)))), ((int)(((byte)(101)))));
+            this.typeData.Location = new System.Drawing.Point(35, 7);
+            this.typeData.Margin = new System.Windows.Forms.Padding(10, 7, 0, 6);
+            this.typeData.Name = "typeData";
+            this.typeData.Size = new System.Drawing.Size(60, 21);
+            this.typeData.TabIndex = 4;
+            this.typeData.Text = "Código";
+            // 
+            // textBoxOnlyNum_Letters1
+            // 
+            this.textBoxOnlyNum_Letters1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxOnlyNum_Letters1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.textBoxOnlyNum_Letters1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxOnlyNum_Letters1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxOnlyNum_Letters1.ForeColor = System.Drawing.Color.White;
+            this.textBoxOnlyNum_Letters1.Location = new System.Drawing.Point(105, 7);
+            this.textBoxOnlyNum_Letters1.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.textBoxOnlyNum_Letters1.Name = "textBoxOnlyNum_Letters1";
+            this.textBoxOnlyNum_Letters1.Size = new System.Drawing.Size(232, 22);
+            this.textBoxOnlyNum_Letters1.TabIndex = 2;
             // 
             // pictureBox3
             // 
@@ -102,19 +136,6 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 1;
             this.pictureBox3.TabStop = false;
-            // 
-            // textSearch
-            // 
-            this.textSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.textSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.textSearch.ForeColor = System.Drawing.Color.White;
-            this.textSearch.Location = new System.Drawing.Point(35, 8);
-            this.textSearch.Margin = new System.Windows.Forms.Padding(10, 8, 10, 0);
-            this.textSearch.Name = "textSearch";
-            this.textSearch.PlaceholderText = "Search";
-            this.textSearch.Size = new System.Drawing.Size(302, 19);
-            this.textSearch.TabIndex = 6;
             // 
             // contentSinistros
             // 
@@ -169,7 +190,7 @@
             // SubpanelCPF
             // 
             this.SubpanelCPF.BackColor = System.Drawing.Color.Transparent;
-            this.SubpanelCPF.Controls.Add(this.panelSinistro);
+            this.SubpanelCPF.Controls.Add(this.comboGemeroClient);
             this.SubpanelCPF.Controls.Add(this.labelCPFClient);
             this.SubpanelCPF.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SubpanelCPF.Location = new System.Drawing.Point(20, 20);
@@ -178,15 +199,28 @@
             this.SubpanelCPF.Size = new System.Drawing.Size(258, 70);
             this.SubpanelCPF.TabIndex = 7;
             // 
-            // panelSinistro
+            // comboGemeroClient
             // 
-            this.panelSinistro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelSinistro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelSinistro.Location = new System.Drawing.Point(5, 37);
-            this.panelSinistro.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.panelSinistro.Name = "panelSinistro";
-            this.panelSinistro.Size = new System.Drawing.Size(248, 33);
-            this.panelSinistro.TabIndex = 2;
+            this.comboGemeroClient.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboGemeroClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
+            this.comboGemeroClient.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboGemeroClient.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.comboGemeroClient.ForeColor = System.Drawing.Color.White;
+            this.comboGemeroClient.FormattingEnabled = true;
+            this.comboGemeroClient.Items.AddRange(new object[] {
+            "Pequena monta. ",
+            "Média monta.",
+            "Grande monta.",
+            "Roubo e furto.",
+            "Acidentes de trânsito.",
+            "Danos a terceiros. ",
+            "Causas naturais."});
+            this.comboGemeroClient.Location = new System.Drawing.Point(5, 35);
+            this.comboGemeroClient.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.comboGemeroClient.Name = "comboGemeroClient";
+            this.comboGemeroClient.Size = new System.Drawing.Size(248, 29);
+            this.comboGemeroClient.TabIndex = 5;
             // 
             // labelCPFClient
             // 
@@ -228,11 +262,25 @@
             // 
             this.panelTextNomeClient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelTextNomeClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.panelTextNomeClient.Controls.Add(this.textBoxOnlyNum_Letters2);
             this.panelTextNomeClient.Location = new System.Drawing.Point(5, 37);
             this.panelTextNomeClient.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelTextNomeClient.Name = "panelTextNomeClient";
             this.panelTextNomeClient.Size = new System.Drawing.Size(248, 33);
             this.panelTextNomeClient.TabIndex = 1;
+            // 
+            // textBoxOnlyNum_Letters2
+            // 
+            this.textBoxOnlyNum_Letters2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxOnlyNum_Letters2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.textBoxOnlyNum_Letters2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxOnlyNum_Letters2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxOnlyNum_Letters2.ForeColor = System.Drawing.Color.White;
+            this.textBoxOnlyNum_Letters2.Location = new System.Drawing.Point(10, 5);
+            this.textBoxOnlyNum_Letters2.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.textBoxOnlyNum_Letters2.Name = "textBoxOnlyNum_Letters2";
+            this.textBoxOnlyNum_Letters2.Size = new System.Drawing.Size(228, 22);
+            this.textBoxOnlyNum_Letters2.TabIndex = 1;
             // 
             // labelNomeClient
             // 
@@ -273,11 +321,25 @@
             // 
             this.panelDateTimerClient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelDateTimerClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.panelDateTimerClient.Controls.Add(this.textBoxOnlyNum_Letters3);
             this.panelDateTimerClient.Location = new System.Drawing.Point(6, 37);
             this.panelDateTimerClient.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelDateTimerClient.Name = "panelDateTimerClient";
             this.panelDateTimerClient.Size = new System.Drawing.Size(248, 33);
             this.panelDateTimerClient.TabIndex = 2;
+            // 
+            // textBoxOnlyNum_Letters3
+            // 
+            this.textBoxOnlyNum_Letters3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxOnlyNum_Letters3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.textBoxOnlyNum_Letters3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxOnlyNum_Letters3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxOnlyNum_Letters3.ForeColor = System.Drawing.Color.White;
+            this.textBoxOnlyNum_Letters3.Location = new System.Drawing.Point(10, 5);
+            this.textBoxOnlyNum_Letters3.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.textBoxOnlyNum_Letters3.Name = "textBoxOnlyNum_Letters3";
+            this.textBoxOnlyNum_Letters3.Size = new System.Drawing.Size(228, 22);
+            this.textBoxOnlyNum_Letters3.TabIndex = 1;
             // 
             // label5
             // 
@@ -312,7 +374,7 @@
             this.cadastrarSinistro.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cadastrarSinistro.FlatAppearance.BorderSize = 0;
             this.cadastrarSinistro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cadastrarSinistro.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cadastrarSinistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.cadastrarSinistro.ForeColor = System.Drawing.Color.White;
             this.cadastrarSinistro.Location = new System.Drawing.Point(755, 0);
             this.cadastrarSinistro.Margin = new System.Windows.Forms.Padding(0, 30, 0, 0);
@@ -375,9 +437,13 @@
             this.panelNomeClient.ResumeLayout(false);
             this.subpanelNomeClient.ResumeLayout(false);
             this.subpanelNomeClient.PerformLayout();
+            this.panelTextNomeClient.ResumeLayout(false);
+            this.panelTextNomeClient.PerformLayout();
             this.panelDtNascClient.ResumeLayout(false);
             this.subpanelDtNascClient.ResumeLayout(false);
             this.subpanelDtNascClient.PerformLayout();
+            this.panelDateTimerClient.ResumeLayout(false);
+            this.panelDateTimerClient.PerformLayout();
             this.panelButton.ResumeLayout(false);
             this.panel51.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -389,12 +455,10 @@
         private Panel searchPanel;
         private Properties.PanelBorderRoundedOnLeft panelSerch;
         private PictureBox pictureBox3;
-        private TextBox textSearch;
         private Panel contentSinistros;
         private TableLayoutPanel tableLayoutPanel3;
         private Panel panelCPF;
         private Panel SubpanelCPF;
-        private Properties.PanelBorderRounded panelSinistro;
         private Label labelCPFClient;
         private Panel panelNomeClient;
         private Panel subpanelNomeClient;
@@ -408,5 +472,10 @@
         private Panel panel51;
         private Button button10;
         private Button cadastrarSinistro;
+        private Properties.textBoxOnlyNum_Letters textBoxOnlyNum_Letters2;
+        private Properties.textBoxOnlyNum_Letters textBoxOnlyNum_Letters3;
+        private ComboBox comboGemeroClient;
+        private Properties.textBoxOnlyNum_Letters textBoxOnlyNum_Letters1;
+        private Label typeData;
     }
 }
