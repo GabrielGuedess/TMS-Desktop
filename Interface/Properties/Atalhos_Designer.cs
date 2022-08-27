@@ -1,6 +1,7 @@
 ﻿using System.Runtime.InteropServices;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
+using GMap.NET.WindowsForms;
 
 namespace Interface.Properties
 {
@@ -289,6 +290,7 @@ namespace Interface.Properties
             Margin = new Padding(10, 6, 10, 5);
             Font = new Font(new FontFamily("Segoe UI"), 12, FontStyle.Regular);
             Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
         }
     }
     public class textBoxnOnlyNum : TextBox
