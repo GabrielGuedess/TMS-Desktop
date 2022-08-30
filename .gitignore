@@ -17,7 +17,7 @@
 mono_crash.*
 
 # Build results
-[Dd]ebug/
+
 [Dd]ebugPublic/
 [Rr]elease/
 [Rr]eleases/
@@ -27,7 +27,7 @@ x86/
 [Aa][Rr][Mm]/
 [Aa][Rr][Mm]64/
 bld/
-[Bb]in/
+runtimes/
 [Oo]bj/
 [Ll]og/
 [Ll]ogs/
@@ -50,7 +50,7 @@ TestResult.xml
 nunit-*.xml
 
 # Build Results of an ATL Project
-[Dd]ebugPS/
+
 [Rr]eleasePS/
 dlldata.c
 
@@ -452,3 +452,20 @@ $RECYCLE.BIN/
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+/Interface/bin/Debug/net6.0-windows/EntityFramework.dll
+/Interface/bin/Debug/net6.0-windows/EntityFramework.SqlServer.dll
+/Interface/bin/Debug/net6.0-windows/GMap.NET.Core.dll
+/Interface/bin/Debug/net6.0-windows/GMap.NET.WindowsForms.dll
+/Interface/bin/Debug/net6.0-windows/Interface.deps.json
+/Interface/bin/Debug/net6.0-windows/Interface.dll
+/Interface/bin/Debug/net6.0-windows/Interface.runtimeconfig.json
+/Interface/bin/Debug/net6.0-windows/Interface.exe
+/Interface/bin/Debug/net6.0-windows/Newtonsoft.Json.dll
+/Interface/bin/Debug/net6.0-windows/System.Data.OleDb.dll
+/Interface/bin/Debug/net6.0-windows/System.Data.SqlClient.dll
+/Interface/bin/Debug/net6.0-windows/System.Data.SQLite.dll
+/Interface/bin/Debug/net6.0-windows/System.Data.SQLite.EF6.dll
+/Interface/bin/Debug/net6.0-windows/TMS.deps.json
+/Interface/bin/Debug/net6.0-windows/TMS.dll
+/Interface/bin/Debug/net6.0-windows/TMS.exe
+/Interface/bin/Debug/net6.0-windows/TMS.runtimeconfig.json

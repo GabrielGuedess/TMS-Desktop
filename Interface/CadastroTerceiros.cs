@@ -1,4 +1,5 @@
 ﻿using Interface.Properties;
+using System.Data.OleDb;
 
 namespace Interface
 {
@@ -46,5 +47,40 @@ namespace Interface
             utils.expansiveButton(10, cadastrarTerceiro);
         }
 
+        private void cadastrarTerceiro_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var pasta = Application.StartupPath + @"/bd/Banco de dados V2.mdb";
+                var conexao = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + pasta;
+                string SQL;
+                //Comando SQL
+                SQL = "Insert Into tbTerceiros (CPF, Nome , Email, Telefone," +
+                    " Celular, CEP, Endereco, Numero, Complemento, Bairro, Cidade," +
+                    " Estado, NumeroCNH, CategoriaCNH, VencimentoCNH, NumeroRNTRC, VencimentoRNTRC" +
+                    ", TipoVeiculo, CursoMOPP, TipoContrato, Situacao, DataInicioAtividades," +
+                    " DataFimAtividades) Values ";
+                SQL += $"('{mkCPF.Text}', '{tbNome.Text}', '{textEmail.Text}', '{mkTelefone.Text}', '{mkCelular.Text}'" +
+                    $", '{mkCEP.Text}', '{tbLogradouro.Text}', '{tbNumCasa.Text}', '{tbComplemento.Text}', '{tbBairro.Text}'" +
+                    $", '{comboCidade.Text}', '{comboUF.Text}', '{mkCNH.Text}', '{comboCategoriaCNH.Text}','{dateVencimentoCNH.Text}', '{mkRNTRC.Text}'" +
+                    $", '{dateVencimentoRENTRC.Text}', '{comboTipoVeiculo.Text}', '{comboMOPP.Text}'" +
+                    $", '{comboTipoContrato.Text}', '{comboSituacaoContrato.Text}', '{dateInicioAtividade.Text}', '{dateFimAtividade.Text}')";
+                OleDbConnection DB = new OleDbConnection(conexao);
+                DB.Open();
+                // Cria o comando do SQL na conexão aberta
+                OleDbCommand comando = new OleDbCommand(SQL, DB);
+
+                // Médodo para executar o comando SQL que não retorna dados.
+                comando.ExecuteNonQuery();
+
+                MessageBox.Show("Dados gravados com sucesso", "Dados cadastrados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DB.Close();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show(erro.Message);
+            }
+
+        }
     }
 }

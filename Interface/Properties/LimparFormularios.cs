@@ -9,70 +9,70 @@ namespace Interface.Properties
 {
     public class LimparFormularios
     {
-        public void ClearControl(Control ctrl)
+        public void CleanControl(Control elementPai)
         {
-            foreach (Control c in ctrl.Controls)
+            foreach (Control control in elementPai.Controls)
             {
-                if (c is textBoxnOnlyNum)
+                if (control is textBoxnOnlyNum)
                 {
-                    ((textBoxnOnlyNum)c).Text = "";
+                    ((textBoxnOnlyNum)control).Text = "";
                 }
-                else if (c is textBoxOnlyLetters)
+                else if (control is textBoxOnlyLetters)
                 {
-                    ((textBoxOnlyLetters)c).Text = "";
+                    ((textBoxOnlyLetters)control).Text = "";
                 }
-                else if (c is textBoxOnlyNum_Letters)
+                else if (control is textBoxOnlyNum_Letters)
                 {
-                    ((textBoxOnlyNum_Letters)c).Text = "";
+                    ((textBoxOnlyNum_Letters)control).Text = "";
                 }
-                else if (c is textBoxTemplete)
+                else if (control is textBoxTemplete)
                 {
-                    ((textBoxTemplete)c).Text = "";
+                    ((textBoxTemplete)control).Text = "";
                 }
-                else if (c is TextKg)
+                else if (control is TextKg)
                 {
-                    ((TextKg)c).Text = "";
+                    ((TextKg)control).Text = "";
                 }
-                else if (c is TextKm)
+                else if (control is TextKm)
                 {
-                    ((TextKm)c).Text = "";
+                    ((TextKm)control).Text = "";
                 }
-                else if (c is TextM3)
+                else if (control is TextM3)
                 {
-                    ((TextM3)c).Text = "";
+                    ((TextM3)control).Text = "";
                 }
-                else if (c is TextMoney)
+                else if (control is TextMoney)
                 {
-                    ((TextMoney)c).Text = "";
+                    ((TextMoney)control).Text = "";
                 }
-                else if (c is ComboBox)
+                else if (control is ComboBox)
                 {
-                    ((ComboBox)c).SelectedIndex = -1;
+                    ((ComboBox)control).SelectedIndex = -1;
                 }
-                else if (c is DateTimePicker)
+                else if (control is DateTimePicker)
                 {
-                    ((EmpDateTimer)c).Format = DateTimePickerFormat.Custom;
+                    ((EmpDateTimer)control).Format = DateTimePickerFormat.Custom;
                 }
 
-                else if (c is MaskedTextBox)
+                else if (control is MaskedTextBox)
                 {
-                    ((masckedboxTemplete)c).Text = "";
+                    ((masckedboxTemplete)control).Text = "";
                 }
-                else if (c is Panel)
+                else if (control is Panel)
                 {
-                    ClearControl(c);
+                    CleanControl(control);
                 }
-                else if (c is PanelBorderRounded)
+                else if (control is PanelBorderRounded)
                 {
-                    ClearControl(c);
+                    CleanControl(control);
                 }
-                else if (c is PanelBorderRoundedOnLeft)
+                else if (control is PanelBorderRoundedOnLeft)
                 {
-                    ClearControl(c);
+                    CleanControl(control);
                 }
-                else if (c is PanelBorderRoundedOnRight)
+                else if (control is PanelBorderRoundedOnRight)
                 {
-                    ClearControl(c);
+                    CleanControl(control);
                 }
             }
         }
