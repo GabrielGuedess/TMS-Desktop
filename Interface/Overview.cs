@@ -6,13 +6,20 @@ namespace Interface
     {
         readonly Utilidades utils = new();
 
+        readonly Database database = new();
+
         public string TypeControl
         {
             set
             {
                 buscar.Text = value;
+
                 panelContainerRadio.Visible = false;
                 contentOverview.Location = new Point(0, 62);
+
+                database.GetData = value;
+                database.PessoaData = CPF.Checked ? "Clientes_Fisicos" : "Clientes_Juridicos";
+                database.GetDataGridView(dataGridView1, maskInput);
 
                 if (value.Contains("Clientes"))
                 {
@@ -125,6 +132,9 @@ namespace Interface
         {
             if (CPF.Checked)
             {
+                database.PessoaData = "Clientes_Fisicos";
+                database.GetDataGridView(dataGridView1, maskInput);
+
                 CNPJ.Checked = false;
                 typeData.Text = "CPF";
                 maskInput.Mask = "000.000.000-00";
@@ -135,6 +145,9 @@ namespace Interface
         {
             if (CNPJ.Checked)
             {
+                database.PessoaData = "Clientes_Juridicos";
+                database.GetDataGridView(dataGridView1, maskInput);
+
                 CPF.Checked = false;
                 typeData.Text = "CNPJ";
                 maskInput.Mask = "00.000.000/0000-00";
@@ -151,5 +164,9 @@ namespace Interface
             utils.alignCenterRadioButtons(CNPJ, panelCNPJ, true, true);
         }
 
+        private void buscar_Click(object sender, EventArgs e)
+        {
+            database.GetDataGridView(dataGridView1, maskInput);
+        }
     }
 }

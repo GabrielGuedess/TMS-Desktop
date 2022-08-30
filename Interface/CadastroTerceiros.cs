@@ -34,7 +34,7 @@ namespace Interface
         private void CadastroTerceiros_Resize(object sender, EventArgs e)
         {
             utils.alignCenterPanels(panelSerch, searchPanel, true, true);
-            utils.expansivePanels(10, panelCPF, panelTextCPFClient, panelEmail, panelTextEndereco, panelCNH,  panelFim);
+            utils.expansivePanels(10, panelCPF, panelTextCPFClient, panelEmail, panelTextEndereco, panelCNH, panelFim);
         }
 
         private void panelSerch_Paint(object sender, PaintEventArgs e)
@@ -51,8 +51,7 @@ namespace Interface
         {
             try
             {
-                var pasta = Application.StartupPath + @"/bd/Banco de dados V2.mdb";
-                var conexao = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + pasta;
+                var conexao = $@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source={Resources.Database}";
                 string SQL;
                 //Comando SQL
                 SQL = "Insert Into tbTerceiros (CPF, Nome , Email, Telefone," +
