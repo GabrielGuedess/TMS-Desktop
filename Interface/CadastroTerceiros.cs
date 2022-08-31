@@ -51,6 +51,10 @@ namespace Interface
         {
             try
             {
+                if (validarControles() == false)
+                {
+                    return;
+                }
                 var pasta = Application.StartupPath + @"/bd/Banco de dados V2.mdb";
                 var conexao = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + pasta;
                 string SQL;
@@ -80,6 +84,106 @@ namespace Interface
             {
                 MessageBox.Show(erro.Message);
             }
+
+        }
+
+        private bool validarControles()
+        {
+
+            MessageBoxButtons botao = MessageBoxButtons.OK;
+
+            MessageBoxIcon icone = MessageBoxIcon.Information;
+
+
+
+            if (mkCPF.Text.Length < 11)
+            {
+                MessageBox.Show("É necessário preencher o campo CPF corretamente!", "Erro", botao, icone);
+                mkCPF.Focus();
+                return false;
+            }
+
+            else if (tbNome.Text == String.Empty)
+            {
+                MessageBox.Show("É necessário preencher o campo Nome!", "Erro", botao, icone);
+                tbNome.Focus();
+                return false;
+            }
+
+            else if (mkCelular.Text.Length < 11)
+            {
+                MessageBox.Show("É necessário preencher o campo celular corretamente!", "Erro", botao, icone);
+                mkCelular.Focus();
+                return false;
+            }
+            else if (mkTelefone.Text.Length > 1 && mkTelefone.Text.Length < 10)
+            {
+                MessageBox.Show("É necessário preencher o campo telefone corretamente!", "Erro", botao, icone);
+                mkTelefone.Focus();
+                return false;
+            }
+            else if (mkCEP.Text.Length < 8)
+            {
+                MessageBox.Show("É necessário preencher o campo CEP corretamente!", "Erro", botao, icone);
+                mkCEP.Focus();
+                return false;
+            }
+            else if (mkRNTRC.Text.Length < 9)
+            {
+                MessageBox.Show("É necessário preencher o campo Nº RNTRC corretamente!", "Erro", botao, icone);
+                mkRNTRC.Focus();
+                return false;
+            }
+            else if (mkCNH.Text.Length < 10)
+            {
+                MessageBox.Show("É necessário preencher o campo Nº CNH corretamente!", "Erro", botao, icone);
+                mkCNH.Focus();
+                return false;
+            }
+            else if (dateVencimentoRENTRC.Text == " ")
+            {
+                MessageBox.Show("É necessário preencher o campo de vencimento da RNTRC corretamente!", "Erro", botao, icone);
+                dateVencimentoRENTRC.Focus();
+                return false;
+            }
+            else if (dateVencimentoCNH.Text == " ")
+            {
+                MessageBox.Show("É necessário preencher o campo de vencimento da CNH corretamente!", "Erro", botao, icone);
+                dateVencimentoCNH.Focus();
+                return false;
+            }
+            else if (dateInicioAtividade.Text == " ")
+            {
+                MessageBox.Show("É necessário preencher o campo de Data de Início das Atividades corretamente!", "Erro", botao, icone);
+                dateInicioAtividade.Focus();
+                return false;
+            }
+            else if (comboMOPP.Text == "")
+            {
+                MessageBox.Show("É necessário preencher o campo Curso MOPP corretamente!", "Erro", botao, icone);
+                comboMOPP.Focus();
+                return false;
+            }
+            else if (comboTipoVeiculo.Text == "")
+            {
+                MessageBox.Show("É necessário preencher o campo de Tipo de Veículo corretamente!", "Erro", botao, icone);
+                comboTipoVeiculo.Focus();
+                return false;
+            }
+            else if (comboTipoContrato.Text == "")
+            {
+                MessageBox.Show("É necessário preencher o campo Tipo de Contrato corretamente!", "Erro", botao, icone);
+                comboTipoContrato.Focus();
+                return false;
+            }
+            else if (comboSituacaoContrato.Text == "")
+            {
+                MessageBox.Show("É necessário preencher o campo Situação corretamente!", "Erro", botao, icone);
+                comboSituacaoContrato.Focus();
+                return false;
+            }
+
+            return true;
 
         }
     }

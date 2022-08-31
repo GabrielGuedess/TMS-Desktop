@@ -88,5 +88,49 @@ namespace Interface
             utils.alignCenterPanels(panelSerch, panel17, true, true);
         }
 
+        private bool validar()
+        {
+            if (ClienteCPF.Text.Length < 11 )
+            {
+                MessageBox.Show("CPF digitado é invalido");
+                return false;
+            }
+           /* if (c.Text.Length < 11)
+            {
+                MessageBox.Show("Celular digitado é inválido");
+                return false;
+            }
+            if (MtxtBtelefone.Text.Length > 1 && MtxtBtelefone.Text.Length < 10)
+            {
+                MessageBox.Show("Telefone digitado é inválido");
+                return false;
+            }
+            if (MtxtBCEP.Text.Length < 8)
+            {
+                MessageBox.Show("CEP digitado é inválido");
+                return false;
+            }
+            if (MtxtBnumCNH.Text.Length < 10)
+            {
+                MessageBox.Show("CNH digitada é inválido");
+                return false;
+            }
+            if (MtxtBvencimentoCNH.Text == " ")
+            {
+                MessageBox.Show("Preencha o campo de Vencimento da CNH");
+                return false;
+            }
+            if (cmBveiculoP.Text == "")
+            {
+                MessageBox.Show("Preencha o campo veiculo próprio");
+                return false;
+            }
+            if (cmBmopp.Text == "")
+            {
+                MessageBox.Show("Preencha o campo Curso MOPP");
+                return false;
+            }*/
+            return true;
+        }
     }
 }
