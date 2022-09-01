@@ -145,7 +145,6 @@
             this.panelEndereco = new System.Windows.Forms.Panel();
             this.subpanelEndereco = new System.Windows.Forms.Panel();
             this.panelBorderRounded5 = new Interface.Properties.PanelBorderRounded();
-            this.tbNumCasa = new Interface.Properties.textBoxnOnlyNum();
             this.label21 = new System.Windows.Forms.Label();
             this.panelTextEndereco = new Interface.Properties.PanelBorderRounded();
             this.tbLogradouro = new Interface.Properties.textBoxOnlyNum_Letters();
@@ -168,6 +167,7 @@
             this.panel16 = new System.Windows.Forms.Panel();
             this.panelBorderRounded7 = new Interface.Properties.PanelBorderRounded();
             this.label14 = new System.Windows.Forms.Label();
+            this.tbNumCasa = new Interface.Properties.textBoxOnlyNum_Letters();
             this.contentTerceiros.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.panel17.SuspendLayout();
@@ -1770,19 +1770,6 @@
             this.panelBorderRounded5.Size = new System.Drawing.Size(64, 33);
             this.panelBorderRounded5.TabIndex = 4;
             // 
-            // tbNumCasa
-            // 
-            this.tbNumCasa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbNumCasa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.tbNumCasa.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbNumCasa.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbNumCasa.ForeColor = System.Drawing.Color.White;
-            this.tbNumCasa.Location = new System.Drawing.Point(8, 5);
-            this.tbNumCasa.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.tbNumCasa.Name = "tbNumCasa";
-            this.tbNumCasa.Size = new System.Drawing.Size(51, 22);
-            this.tbNumCasa.TabIndex = 0;
-            // 
             // label21
             // 
             this.label21.AutoSize = true;
@@ -2070,6 +2057,19 @@
             this.label14.TabIndex = 0;
             this.label14.Text = "Categoria da CHN";
             // 
+            // tbNumCasa
+            // 
+            this.tbNumCasa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbNumCasa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.tbNumCasa.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbNumCasa.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbNumCasa.ForeColor = System.Drawing.Color.White;
+            this.tbNumCasa.Location = new System.Drawing.Point(7, 6);
+            this.tbNumCasa.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.tbNumCasa.Name = "tbNumCasa";
+            this.tbNumCasa.Size = new System.Drawing.Size(52, 22);
+            this.tbNumCasa.TabIndex = 22;
+            // 
             // CadastroTerceiros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -2337,8 +2337,8 @@
         private Properties.textBoxOnlyNum_Letters tbBairro;
         private Label label20;
         private Properties.PanelBorderRounded panelBorderRounded5;
-        private Properties.textBoxnOnlyNum tbNumCasa;
         private Label label21;
         private Properties.textBoxOnlyNum_Letters tbLogradouro;
+        private Properties.textBoxOnlyNum_Letters tbNumCasa;
     }
 }
