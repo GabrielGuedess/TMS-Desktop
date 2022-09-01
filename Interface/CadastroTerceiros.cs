@@ -34,7 +34,7 @@ namespace Interface
         private void CadastroTerceiros_Resize(object sender, EventArgs e)
         {
             utils.alignCenterPanels(panelSerch, searchPanel, true, true);
-            utils.expansivePanels(10, panelCPF, panelTextCPFClient, panelEmail, panelTextEndereco, panelCNH,  panelFim);
+            utils.expansivePanels(10, panelCPF, panelTextCPFClient, panelEmail, panelTextEndereco, panelCNH, panelFim);
         }
 
         private void panelSerch_Paint(object sender, PaintEventArgs e)
