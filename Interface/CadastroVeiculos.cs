@@ -47,7 +47,7 @@ namespace Interface
         }
         private bool validar()
         {
-            if (mkPlaca.Text == string.Empty)
+            if (mkPlaca.MaskCompleted == false)
             {
                 MessageBox.Show("O campo Placa é obrigatório!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 mkPlaca.Focus();
@@ -77,7 +77,7 @@ namespace Interface
 
             if (tbModelo.Text == "")
             {
-                MessageBox.Show("O campo Marca é obrigatório!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("O campo Modelo é obrigatório!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 tbModelo.Focus();
                 return false;
             }
@@ -139,12 +139,40 @@ namespace Interface
                 return false;
             }
 
-            
-
             if (tbCIOT.Text.Length > 1 && tbCIOT.TextLength < 16)
             {
                 MessageBox.Show("Necessário preencher o campo CIOT corretamente!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 tbCIOT.Focus();
+                return false;
+            }
+            if (tbValorPagoHora.Text == string.Empty)
+            {
+                MessageBox.Show("Necessário preencher o campo Valor pago por hora!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                tbValorPagoHora.Focus();
+                return false;
+            }
+            if (tbValorPagoKM.Text == string.Empty)
+            {
+                MessageBox.Show("Necessário preencher o campo Valor pago por Km!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                tbValorPagoKM.Focus();
+                return false;
+            }
+            if (tbCor.Text == string.Empty)
+            {
+                MessageBox.Show("Necessário preencher o campo Cor!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                tbCor.Focus();
+                return false;
+            }
+            if (tbTara.Text == string.Empty)
+            {
+                MessageBox.Show("Necessário preencher o campo Tara(Kg)!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                tbTara.Focus();
+                return false;
+            }
+            if (comboTipoVeiculo.Text == string.Empty)
+            {
+                MessageBox.Show("Necessário preencher o campo Tipo Veículo!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                tbTara.Focus();
                 return false;
             }
             return true;
@@ -165,8 +193,11 @@ namespace Interface
                 " '" + tbTara.Text + "','" + tbCapacidadeM3.Text + "','" + mkRenavam.Text + "','"
                 + mkRNTRC.Text + "','" + tbCIOT.Text + "','" + tbMotorista.Text + "','" + mkCPF.Text + "'," +
                 "'" + comboUF.Text + "','" + comboCidade.Text + "','" + tbValorPagoHora.Text + "','" + tbValorPagoKM.Text + "" +
-                "','" + tbPgot.Text + "','" + tipo_c.Text + "','" + tipo_v.Text + "')";
-
+                "','" + tbPgot.Text + "','" + tbAdiconalCarroceria.Text+ "','" + tbAdicionalMotorista.Text + "')";
+            ConnectDB connectDB = new ConnectDB();
+            connectDB.cadastrar(SQL);
+            LimparFormularios limpar = new();
+            limpar.CleanControl(contentVeiculos);
         }
     }
 }
