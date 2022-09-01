@@ -97,9 +97,6 @@ namespace Interface
             }
             else
             {
-                var pasta = Application.StartupPath + @"/bd/Banco de dados V2.mdb"; ;
-                var conexao = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + pasta;
-
                 string SQL;
                 //Comando SQL
                 SQL = "Insert Into C_Motoristas (NUM_ID, NOME,RG,CPF,DATA_NASCIMENTO,TELEFONE,CELULAR,EMAIL," +
@@ -109,6 +106,10 @@ namespace Interface
                     $", '{mkCelular.Text} ', ' {tbEmail.Text}', '{tbLogradouro.Text}', '{tbNumeroCasa.Text}', '{tbBairro.Text}'" +
                     $", '{tbComplemento.Text}', '{mkCEP.Text}', '{comboCidade.Text}', '{comboUF.Text}','{mkCNH.Text}', '{comboCNH.Text}'" +
                     $", '{dateVencimentoCNH.Text}', '{comboVeiculoProprio.Text}', '{comboMOPP.Text}')";
+                ConnectDB connectDB = new ConnectDB();
+                connectDB.cadastrar(SQL);
+                LimparFormularios limpar = new();
+                limpar.CleanControl(contentMotorista);
             }
         }
 

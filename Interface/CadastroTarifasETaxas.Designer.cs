@@ -39,17 +39,17 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelBorderRounded2 = new Interface.Properties.PanelBorderRounded();
-            this.textBoxOnlyNum_Letters2 = new Interface.Properties.textBoxOnlyNum_Letters();
+            this.tbNomeEmpresa = new Interface.Properties.textBoxOnlyNum_Letters();
             this.label1 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panelDescricao = new Interface.Properties.PanelBorderRounded();
-            this.textBoxOnlyLetters1 = new Interface.Properties.textBoxOnlyLetters();
+            this.tbDescricaoTaxa = new Interface.Properties.textBoxOnlyLetters();
             this.label3 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.checkTaxa = new System.Windows.Forms.RadioButton();
+            this.checkTarifa = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
             this.panelButton = new System.Windows.Forms.Panel();
             this.CadastrarTarifaOuTaxa = new System.Windows.Forms.Button();
@@ -210,25 +210,25 @@
             // 
             this.panelBorderRounded2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelBorderRounded2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelBorderRounded2.Controls.Add(this.textBoxOnlyNum_Letters2);
+            this.panelBorderRounded2.Controls.Add(this.tbNomeEmpresa);
             this.panelBorderRounded2.Location = new System.Drawing.Point(5, 37);
             this.panelBorderRounded2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelBorderRounded2.Name = "panelBorderRounded2";
             this.panelBorderRounded2.Size = new System.Drawing.Size(248, 33);
             this.panelBorderRounded2.TabIndex = 2;
             // 
-            // textBoxOnlyNum_Letters2
+            // tbNomeEmpresa
             // 
-            this.textBoxOnlyNum_Letters2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxOnlyNum_Letters2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.textBoxOnlyNum_Letters2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxOnlyNum_Letters2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxOnlyNum_Letters2.ForeColor = System.Drawing.Color.White;
-            this.textBoxOnlyNum_Letters2.Location = new System.Drawing.Point(10, 5);
-            this.textBoxOnlyNum_Letters2.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.textBoxOnlyNum_Letters2.Name = "textBoxOnlyNum_Letters2";
-            this.textBoxOnlyNum_Letters2.Size = new System.Drawing.Size(228, 22);
-            this.textBoxOnlyNum_Letters2.TabIndex = 1;
+            this.tbNomeEmpresa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbNomeEmpresa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.tbNomeEmpresa.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbNomeEmpresa.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbNomeEmpresa.ForeColor = System.Drawing.Color.White;
+            this.tbNomeEmpresa.Location = new System.Drawing.Point(10, 5);
+            this.tbNomeEmpresa.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.tbNomeEmpresa.Name = "tbNomeEmpresa";
+            this.tbNomeEmpresa.Size = new System.Drawing.Size(228, 22);
+            this.tbNomeEmpresa.TabIndex = 1;
             // 
             // label1
             // 
@@ -270,24 +270,24 @@
             // 
             this.panelDescricao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelDescricao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelDescricao.Controls.Add(this.textBoxOnlyLetters1);
+            this.panelDescricao.Controls.Add(this.tbDescricaoTaxa);
             this.panelDescricao.Location = new System.Drawing.Point(5, 37);
             this.panelDescricao.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelDescricao.Name = "panelDescricao";
             this.panelDescricao.Size = new System.Drawing.Size(248, 33);
             this.panelDescricao.TabIndex = 1;
             // 
-            // textBoxOnlyLetters1
+            // tbDescricaoTaxa
             // 
-            this.textBoxOnlyLetters1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.textBoxOnlyLetters1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxOnlyLetters1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxOnlyLetters1.ForeColor = System.Drawing.Color.White;
-            this.textBoxOnlyLetters1.Location = new System.Drawing.Point(10, 6);
-            this.textBoxOnlyLetters1.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.textBoxOnlyLetters1.Name = "textBoxOnlyLetters1";
-            this.textBoxOnlyLetters1.Size = new System.Drawing.Size(228, 22);
-            this.textBoxOnlyLetters1.TabIndex = 0;
+            this.tbDescricaoTaxa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.tbDescricaoTaxa.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbDescricaoTaxa.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbDescricaoTaxa.ForeColor = System.Drawing.Color.White;
+            this.tbDescricaoTaxa.Location = new System.Drawing.Point(10, 6);
+            this.tbDescricaoTaxa.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.tbDescricaoTaxa.Name = "tbDescricaoTaxa";
+            this.tbDescricaoTaxa.Size = new System.Drawing.Size(228, 22);
+            this.tbDescricaoTaxa.TabIndex = 0;
             // 
             // label3
             // 
@@ -315,8 +315,8 @@
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.Transparent;
-            this.panel9.Controls.Add(this.radioButton2);
-            this.panel9.Controls.Add(this.radioButton1);
+            this.panel9.Controls.Add(this.checkTaxa);
+            this.panel9.Controls.Add(this.checkTarifa);
             this.panel9.Controls.Add(this.label4);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel9.Location = new System.Drawing.Point(20, 20);
@@ -325,30 +325,30 @@
             this.panel9.Size = new System.Drawing.Size(259, 70);
             this.panel9.TabIndex = 8;
             // 
-            // radioButton2
+            // checkTaxa
             // 
-            this.radioButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.ForeColor = System.Drawing.Color.White;
-            this.radioButton2.Location = new System.Drawing.Point(180, 40);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(48, 19);
-            this.radioButton2.TabIndex = 2;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Taxa";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.checkTaxa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkTaxa.AutoSize = true;
+            this.checkTaxa.ForeColor = System.Drawing.Color.White;
+            this.checkTaxa.Location = new System.Drawing.Point(180, 40);
+            this.checkTaxa.Name = "checkTaxa";
+            this.checkTaxa.Size = new System.Drawing.Size(48, 19);
+            this.checkTaxa.TabIndex = 2;
+            this.checkTaxa.TabStop = true;
+            this.checkTaxa.Text = "Taxa";
+            this.checkTaxa.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // checkTarifa
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.ForeColor = System.Drawing.Color.White;
-            this.radioButton1.Location = new System.Drawing.Point(22, 40);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(53, 19);
-            this.radioButton1.TabIndex = 1;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Tarifa";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.checkTarifa.AutoSize = true;
+            this.checkTarifa.ForeColor = System.Drawing.Color.White;
+            this.checkTarifa.Location = new System.Drawing.Point(22, 40);
+            this.checkTarifa.Name = "checkTarifa";
+            this.checkTarifa.Size = new System.Drawing.Size(53, 19);
+            this.checkTarifa.TabIndex = 1;
+            this.checkTarifa.TabStop = true;
+            this.checkTarifa.Text = "Tarifa";
+            this.checkTarifa.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -401,6 +401,7 @@
             this.CadastrarTarifaOuTaxa.TabIndex = 20;
             this.CadastrarTarifaOuTaxa.Text = "Cadastrar";
             this.CadastrarTarifaOuTaxa.UseVisualStyleBackColor = false;
+            this.CadastrarTarifaOuTaxa.Click += new System.EventHandler(this.CadastrarTarifaOuTaxa_Click);
             this.CadastrarTarifaOuTaxa.Paint += new System.Windows.Forms.PaintEventHandler(this.CadastrarTarifaOuTaxa_Paint);
             // 
             // button4
@@ -652,11 +653,11 @@
         private Panel panel2;
         private Properties.PanelBorderRounded panelBorderRounded2;
         private Label label1;
-        private RadioButton radioButton2;
-        private RadioButton radioButton1;
+        private RadioButton checkTaxa;
+        private RadioButton checkTarifa;
         private Button CadastrarTarifaOuTaxa;
-        private Properties.textBoxOnlyNum_Letters textBoxOnlyNum_Letters2;
-        private Properties.textBoxOnlyLetters textBoxOnlyLetters1;
+        private Properties.textBoxOnlyNum_Letters tbNomeEmpresa;
+        private Properties.textBoxOnlyLetters tbDescricaoTaxa;
         private Properties.textBoxOnlyNum_Letters textBoxOnlyNum_Letters1;
         private Label typeData;
     }

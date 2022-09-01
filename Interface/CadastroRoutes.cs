@@ -82,6 +82,7 @@ namespace Interface
             //markers.Markers.Add(marker);
 
             //map.Overlays.Add(markers);
+
         }
 
         private void button1_Paint(object sender, PaintEventArgs e)
@@ -94,6 +95,72 @@ namespace Interface
         private void button2_Paint(object sender, PaintEventArgs e)
         {
             utils.expansiveButton(10, cadastrarRota);
+        }
+
+        private bool validar()
+        {
+            if(tbIDRota.Text == String.Empty)
+            {
+                return false;
+            }
+            else if(tbStatusViagem.Text == string.Empty)
+            {
+                return false;
+            }
+            else if(tbMotorista.Text == string.Empty)
+            {
+                return false;
+            }
+            else if (tbProgresso.Text == string.Empty)
+            {
+                return false;
+            }
+            else if (tbEntrega.Text == string.Empty)
+            {
+                return false;
+            }
+            else if (comboVeiculo.Text == string.Empty)
+            {
+                return false;
+            }
+            else if (tbDistanciaTotal.Text == string.Empty)
+            {
+                return false;
+            }
+            else if (tbProximaEntrega.Text == string.Empty)
+            {
+                return false;
+            }
+            else if (tbCustoEstimado.Text == string.Empty)
+            {
+                return false;
+            }
+            else if (tbConhecimentoTransporte.Text == string.Empty)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (validar() == false)
+            {
+                return;
+            }
+            else
+            {
+                string SQL = "Insert Into Rotas (ID_Rota, Entrega, Motorista, Veiculos, D_Total, " +
+                    "S_Viagem, C_Estimado, Progresso, P_Destino, C_Transp) Values " +
+                    $"('{tbIDRota.Text}', '{tbEntrega.Text}', '{tbMotorista.Text}', '{comboVeiculo.Text}', " +
+                    $"'{tbDistanciaTotal.Text}', '{tbStatusViagem.Text}', '{tbCustoEstimado.Text}', " +
+                    $"'{tbProgresso.Text}', '{tbProximaEntrega.Text}', '{tbConhecimentoTransporte.Text}')";
+
+                ConnectDB connectDB = new ConnectDB();
+                connectDB.cadastrar(SQL);
+                LimparFormularios limpar = new();
+                limpar.CleanControl(contentRotas);
+            }
         }
     }
 }

@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroVeiculos));
             this.searchPanel = new System.Windows.Forms.Panel();
             this.panelSerch = new Interface.Properties.PanelBorderRoundedOnLeft();
+            this.typeData = new System.Windows.Forms.Label();
             this.masckedboxTemplete6 = new Interface.Properties.masckedboxTemplete();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.contentVeiculos = new System.Windows.Forms.Panel();
@@ -38,101 +39,101 @@
             this.panel19 = new System.Windows.Forms.Panel();
             this.panel20 = new System.Windows.Forms.Panel();
             this.panelValor = new Interface.Properties.PanelBorderRounded();
-            this.textMoney2 = new Interface.Properties.TextMoney();
+            this.tbValorPagoHora = new Interface.Properties.TextMoney();
             this.label14 = new System.Windows.Forms.Label();
             this.panel17 = new System.Windows.Forms.Panel();
             this.panel18 = new System.Windows.Forms.Panel();
             this.panelBorderRounded10 = new Interface.Properties.PanelBorderRounded();
-            this.textBoxnOnlyNum1 = new Interface.Properties.textBoxnOnlyNum();
+            this.tbPgot = new Interface.Properties.textBoxnOnlyNum();
             this.label12 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panelRNTRC = new Interface.Properties.PanelBorderRounded();
-            this.masckedboxTemplete5 = new Interface.Properties.masckedboxTemplete();
+            this.mkRNTRC = new Interface.Properties.masckedboxTemplete();
             this.label6 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panelBorderRounded5 = new Interface.Properties.PanelBorderRounded();
-            this.masckedboxTemplete2 = new Interface.Properties.masckedboxTemplete();
+            this.mkRenavam = new Interface.Properties.masckedboxTemplete();
             this.label4 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panelBorderRounded4 = new Interface.Properties.PanelBorderRounded();
-            this.textBoxnOnlyNum2 = new Interface.Properties.textBoxnOnlyNum();
+            this.tbCIOT = new Interface.Properties.textBoxnOnlyNum();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panelBorderRounded3 = new Interface.Properties.PanelBorderRounded();
-            this.textM31 = new Interface.Properties.TextM3();
+            this.tbCapacidadeM3 = new Interface.Properties.TextM3();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelBorderRounded2 = new Interface.Properties.PanelBorderRounded();
-            this.textKg2 = new Interface.Properties.TextKg();
+            this.tbTara = new Interface.Properties.TextKg();
             this.label1 = new System.Windows.Forms.Label();
             this.panelCPF = new System.Windows.Forms.Panel();
             this.SubpanelCPF = new System.Windows.Forms.Panel();
             this.panelPlaca = new Interface.Properties.PanelBorderRounded();
-            this.masckedboxTemplete3 = new Interface.Properties.masckedboxTemplete();
+            this.mkPlaca = new Interface.Properties.masckedboxTemplete();
             this.labelCPFClient = new System.Windows.Forms.Label();
             this.panelNomeClient = new System.Windows.Forms.Panel();
             this.subpanelNomeClient = new System.Windows.Forms.Panel();
             this.panelTextNomeClient = new Interface.Properties.PanelBorderRounded();
-            this.textBoxOnlyLetters1 = new Interface.Properties.textBoxOnlyLetters();
+            this.tbMarca = new Interface.Properties.textBoxOnlyLetters();
             this.labelNomeClient = new System.Windows.Forms.Label();
             this.panelDtNascClient = new System.Windows.Forms.Panel();
             this.subpanelDtNascClient = new System.Windows.Forms.Panel();
             this.panelDateTimerClient = new Interface.Properties.PanelBorderRounded();
-            this.textBoxOnlyNum_Letters1 = new Interface.Properties.textBoxOnlyNum_Letters();
+            this.tbModelo = new Interface.Properties.textBoxOnlyNum_Letters();
             this.label5 = new System.Windows.Forms.Label();
             this.panelGeneroClient = new System.Windows.Forms.Panel();
             this.subpanelGeneroClient = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboTipoVeiculo = new System.Windows.Forms.ComboBox();
             this.labelGeneroClient = new System.Windows.Forms.Label();
             this.panelRGClient = new System.Windows.Forms.Panel();
             this.subpanelRGClient = new System.Windows.Forms.Panel();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboTipoCarroceria = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panelTelefoneClient = new System.Windows.Forms.Panel();
             this.subpanelTelefoneClient = new System.Windows.Forms.Panel();
             this.panelTextTelefoneCLient = new Interface.Properties.PanelBorderRounded();
-            this.textBoxOnlyNum_Letters4 = new Interface.Properties.textBoxOnlyNum_Letters();
+            this.tbEixo = new Interface.Properties.textBoxOnlyNum_Letters();
             this.labelTelefoneClient = new System.Windows.Forms.Label();
             this.panelEmailClient = new System.Windows.Forms.Panel();
             this.subpanelEmailClient = new System.Windows.Forms.Panel();
             this.panelAno = new Interface.Properties.PanelBorderRounded();
-            this.masckedboxTemplete1 = new Interface.Properties.masckedboxTemplete();
+            this.mkAnoFabricacao = new Interface.Properties.masckedboxTemplete();
             this.labelEmailClient = new System.Windows.Forms.Label();
             this.panelCEP = new System.Windows.Forms.Panel();
             this.subpanelCEPClient = new System.Windows.Forms.Panel();
             this.panelTextCEPClient = new Interface.Properties.PanelBorderRounded();
-            this.textBoxOnlyLetters2 = new Interface.Properties.textBoxOnlyLetters();
+            this.tbCor = new Interface.Properties.textBoxOnlyLetters();
             this.label10 = new System.Windows.Forms.Label();
             this.panelCidadeUFClient = new System.Windows.Forms.Panel();
             this.subpanelCidadeUFClient = new System.Windows.Forms.Panel();
             this.labelCidadeClient = new System.Windows.Forms.Label();
-            this.comboCidadeClient = new System.Windows.Forms.ComboBox();
-            this.comboUFClient = new System.Windows.Forms.ComboBox();
+            this.comboCidade = new System.Windows.Forms.ComboBox();
+            this.comboUF = new System.Windows.Forms.ComboBox();
             this.labelUFClient = new System.Windows.Forms.Label();
             this.panelEndereco = new System.Windows.Forms.Panel();
             this.subpanelEndereco = new System.Windows.Forms.Panel();
             this.panelCapacidade = new Interface.Properties.PanelBorderRounded();
-            this.textKg1 = new Interface.Properties.TextKg();
+            this.tbCapacidadeKG = new Interface.Properties.TextKg();
             this.label13 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panelMotorista = new Interface.Properties.PanelBorderRounded();
-            this.textBoxOnlyLetters3 = new Interface.Properties.textBoxOnlyLetters();
+            this.tbMotorista = new Interface.Properties.textBoxOnlyLetters();
             this.label8 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
             this.panelBorderRounded8 = new Interface.Properties.PanelBorderRounded();
-            this.masckedboxTemplete4 = new Interface.Properties.masckedboxTemplete();
+            this.mkCPF = new Interface.Properties.masckedboxTemplete();
             this.label9 = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
             this.panel16 = new System.Windows.Forms.Panel();
             this.panelBorderRounded9 = new Interface.Properties.PanelBorderRounded();
-            this.textMoney3 = new Interface.Properties.TextMoney();
+            this.tbValorPagoKM = new Interface.Properties.TextMoney();
             this.textMoney1 = new Interface.Properties.TextMoney();
             this.label11 = new System.Windows.Forms.Label();
             this.panelButton = new System.Windows.Forms.Panel();
@@ -141,7 +142,6 @@
             this.cadastrar = new System.Windows.Forms.Button();
             this.panel51 = new System.Windows.Forms.Panel();
             this.button10 = new System.Windows.Forms.Button();
-            this.typeData = new System.Windows.Forms.Label();
             this.searchPanel.SuspendLayout();
             this.panelSerch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -234,6 +234,21 @@
             this.panelSerch.TabIndex = 2;
             this.panelSerch.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSerch_Paint);
             // 
+            // typeData
+            // 
+            this.typeData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.typeData.AutoSize = true;
+            this.typeData.BackColor = System.Drawing.Color.Transparent;
+            this.typeData.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.typeData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(91)))), ((int)(((byte)(101)))));
+            this.typeData.Location = new System.Drawing.Point(35, 9);
+            this.typeData.Margin = new System.Windows.Forms.Padding(10, 7, 0, 6);
+            this.typeData.Name = "typeData";
+            this.typeData.Size = new System.Drawing.Size(46, 21);
+            this.typeData.TabIndex = 4;
+            this.typeData.Text = "Placa";
+            // 
             // masckedboxTemplete6
             // 
             this.masckedboxTemplete6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -247,6 +262,7 @@
             this.masckedboxTemplete6.Name = "masckedboxTemplete6";
             this.masckedboxTemplete6.Size = new System.Drawing.Size(249, 22);
             this.masckedboxTemplete6.TabIndex = 2;
+            this.masckedboxTemplete6.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // pictureBox3
             // 
@@ -346,24 +362,24 @@
             // 
             this.panelValor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelValor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelValor.Controls.Add(this.textMoney2);
+            this.panelValor.Controls.Add(this.tbValorPagoHora);
             this.panelValor.Location = new System.Drawing.Point(5, 36);
             this.panelValor.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelValor.Name = "panelValor";
             this.panelValor.Size = new System.Drawing.Size(247, 33);
             this.panelValor.TabIndex = 2;
             // 
-            // textMoney2
+            // tbValorPagoHora
             // 
-            this.textMoney2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.textMoney2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textMoney2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textMoney2.ForeColor = System.Drawing.Color.White;
-            this.textMoney2.Location = new System.Drawing.Point(9, 6);
-            this.textMoney2.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.textMoney2.Name = "textMoney2";
-            this.textMoney2.Size = new System.Drawing.Size(225, 22);
-            this.textMoney2.TabIndex = 0;
+            this.tbValorPagoHora.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.tbValorPagoHora.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbValorPagoHora.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbValorPagoHora.ForeColor = System.Drawing.Color.White;
+            this.tbValorPagoHora.Location = new System.Drawing.Point(9, 6);
+            this.tbValorPagoHora.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.tbValorPagoHora.Name = "tbValorPagoHora";
+            this.tbValorPagoHora.Size = new System.Drawing.Size(225, 22);
+            this.tbValorPagoHora.TabIndex = 0;
             // 
             // label14
             // 
@@ -373,9 +389,9 @@
             this.label14.Location = new System.Drawing.Point(5, 4);
             this.label14.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(124, 17);
+            this.label14.Size = new System.Drawing.Size(138, 17);
             this.label14.TabIndex = 0;
-            this.label14.Text = "Valor Pago por Kg";
+            this.label14.Text = "Valor Pago por Hora";
             // 
             // panel17
             // 
@@ -404,25 +420,25 @@
             // 
             this.panelBorderRounded10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelBorderRounded10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelBorderRounded10.Controls.Add(this.textBoxnOnlyNum1);
+            this.panelBorderRounded10.Controls.Add(this.tbPgot);
             this.panelBorderRounded10.Location = new System.Drawing.Point(5, 36);
             this.panelBorderRounded10.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelBorderRounded10.Name = "panelBorderRounded10";
             this.panelBorderRounded10.Size = new System.Drawing.Size(248, 33);
             this.panelBorderRounded10.TabIndex = 2;
             // 
-            // textBoxnOnlyNum1
+            // tbPgot
             // 
-            this.textBoxnOnlyNum1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxnOnlyNum1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.textBoxnOnlyNum1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxnOnlyNum1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxnOnlyNum1.ForeColor = System.Drawing.Color.White;
-            this.textBoxnOnlyNum1.Location = new System.Drawing.Point(11, 6);
-            this.textBoxnOnlyNum1.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.textBoxnOnlyNum1.Name = "textBoxnOnlyNum1";
-            this.textBoxnOnlyNum1.Size = new System.Drawing.Size(228, 22);
-            this.textBoxnOnlyNum1.TabIndex = 0;
+            this.tbPgot.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbPgot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.tbPgot.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbPgot.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbPgot.ForeColor = System.Drawing.Color.White;
+            this.tbPgot.Location = new System.Drawing.Point(11, 6);
+            this.tbPgot.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.tbPgot.Name = "tbPgot";
+            this.tbPgot.Size = new System.Drawing.Size(228, 22);
+            this.tbPgot.TabIndex = 0;
             // 
             // label12
             // 
@@ -463,26 +479,27 @@
             // 
             this.panelRNTRC.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelRNTRC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelRNTRC.Controls.Add(this.masckedboxTemplete5);
+            this.panelRNTRC.Controls.Add(this.mkRNTRC);
             this.panelRNTRC.Location = new System.Drawing.Point(5, 36);
             this.panelRNTRC.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelRNTRC.Name = "panelRNTRC";
             this.panelRNTRC.Size = new System.Drawing.Size(247, 33);
             this.panelRNTRC.TabIndex = 2;
             // 
-            // masckedboxTemplete5
+            // mkRNTRC
             // 
-            this.masckedboxTemplete5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.masckedboxTemplete5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.masckedboxTemplete5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.masckedboxTemplete5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.masckedboxTemplete5.ForeColor = System.Drawing.Color.White;
-            this.masckedboxTemplete5.Location = new System.Drawing.Point(9, 5);
-            this.masckedboxTemplete5.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.masckedboxTemplete5.Mask = "(00) 00000-0000";
-            this.masckedboxTemplete5.Name = "masckedboxTemplete5";
-            this.masckedboxTemplete5.Size = new System.Drawing.Size(228, 22);
-            this.masckedboxTemplete5.TabIndex = 2;
+            this.mkRNTRC.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.mkRNTRC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.mkRNTRC.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mkRNTRC.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.mkRNTRC.ForeColor = System.Drawing.Color.White;
+            this.mkRNTRC.Location = new System.Drawing.Point(9, 5);
+            this.mkRNTRC.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.mkRNTRC.Mask = "(00) 00000-0000";
+            this.mkRNTRC.Name = "mkRNTRC";
+            this.mkRNTRC.Size = new System.Drawing.Size(228, 22);
+            this.mkRNTRC.TabIndex = 2;
+            this.mkRNTRC.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // label6
             // 
@@ -523,26 +540,27 @@
             // 
             this.panelBorderRounded5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelBorderRounded5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelBorderRounded5.Controls.Add(this.masckedboxTemplete2);
+            this.panelBorderRounded5.Controls.Add(this.mkRenavam);
             this.panelBorderRounded5.Location = new System.Drawing.Point(5, 36);
             this.panelBorderRounded5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelBorderRounded5.Name = "panelBorderRounded5";
             this.panelBorderRounded5.Size = new System.Drawing.Size(249, 33);
             this.panelBorderRounded5.TabIndex = 2;
             // 
-            // masckedboxTemplete2
+            // mkRenavam
             // 
-            this.masckedboxTemplete2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.masckedboxTemplete2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.masckedboxTemplete2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.masckedboxTemplete2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.masckedboxTemplete2.ForeColor = System.Drawing.Color.White;
-            this.masckedboxTemplete2.Location = new System.Drawing.Point(10, 5);
-            this.masckedboxTemplete2.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.masckedboxTemplete2.Mask = "(00) 00000-0000";
-            this.masckedboxTemplete2.Name = "masckedboxTemplete2";
-            this.masckedboxTemplete2.Size = new System.Drawing.Size(228, 22);
-            this.masckedboxTemplete2.TabIndex = 1;
+            this.mkRenavam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.mkRenavam.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.mkRenavam.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mkRenavam.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.mkRenavam.ForeColor = System.Drawing.Color.White;
+            this.mkRenavam.Location = new System.Drawing.Point(10, 5);
+            this.mkRenavam.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.mkRenavam.Mask = "(00) 00000-0000";
+            this.mkRenavam.Name = "mkRenavam";
+            this.mkRenavam.Size = new System.Drawing.Size(228, 22);
+            this.mkRenavam.TabIndex = 1;
+            this.mkRenavam.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // label4
             // 
@@ -583,25 +601,25 @@
             // 
             this.panelBorderRounded4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelBorderRounded4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelBorderRounded4.Controls.Add(this.textBoxnOnlyNum2);
+            this.panelBorderRounded4.Controls.Add(this.tbCIOT);
             this.panelBorderRounded4.Location = new System.Drawing.Point(5, 37);
             this.panelBorderRounded4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelBorderRounded4.Name = "panelBorderRounded4";
             this.panelBorderRounded4.Size = new System.Drawing.Size(249, 33);
             this.panelBorderRounded4.TabIndex = 2;
             // 
-            // textBoxnOnlyNum2
+            // tbCIOT
             // 
-            this.textBoxnOnlyNum2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxnOnlyNum2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.textBoxnOnlyNum2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxnOnlyNum2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxnOnlyNum2.ForeColor = System.Drawing.Color.White;
-            this.textBoxnOnlyNum2.Location = new System.Drawing.Point(10, 5);
-            this.textBoxnOnlyNum2.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.textBoxnOnlyNum2.Name = "textBoxnOnlyNum2";
-            this.textBoxnOnlyNum2.Size = new System.Drawing.Size(228, 22);
-            this.textBoxnOnlyNum2.TabIndex = 1;
+            this.tbCIOT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbCIOT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.tbCIOT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbCIOT.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbCIOT.ForeColor = System.Drawing.Color.White;
+            this.tbCIOT.Location = new System.Drawing.Point(10, 5);
+            this.tbCIOT.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.tbCIOT.Name = "tbCIOT";
+            this.tbCIOT.Size = new System.Drawing.Size(228, 22);
+            this.tbCIOT.TabIndex = 1;
             // 
             // label3
             // 
@@ -642,24 +660,24 @@
             // 
             this.panelBorderRounded3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelBorderRounded3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelBorderRounded3.Controls.Add(this.textM31);
+            this.panelBorderRounded3.Controls.Add(this.tbCapacidadeM3);
             this.panelBorderRounded3.Location = new System.Drawing.Point(5, 36);
             this.panelBorderRounded3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelBorderRounded3.Name = "panelBorderRounded3";
             this.panelBorderRounded3.Size = new System.Drawing.Size(248, 33);
             this.panelBorderRounded3.TabIndex = 2;
             // 
-            // textM31
+            // tbCapacidadeM3
             // 
-            this.textM31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.textM31.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textM31.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textM31.ForeColor = System.Drawing.Color.White;
-            this.textM31.Location = new System.Drawing.Point(12, 6);
-            this.textM31.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.textM31.Name = "textM31";
-            this.textM31.Size = new System.Drawing.Size(225, 22);
-            this.textM31.TabIndex = 0;
+            this.tbCapacidadeM3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.tbCapacidadeM3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbCapacidadeM3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbCapacidadeM3.ForeColor = System.Drawing.Color.White;
+            this.tbCapacidadeM3.Location = new System.Drawing.Point(12, 6);
+            this.tbCapacidadeM3.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.tbCapacidadeM3.Name = "tbCapacidadeM3";
+            this.tbCapacidadeM3.Size = new System.Drawing.Size(225, 22);
+            this.tbCapacidadeM3.TabIndex = 0;
             // 
             // label2
             // 
@@ -700,24 +718,24 @@
             // 
             this.panelBorderRounded2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelBorderRounded2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelBorderRounded2.Controls.Add(this.textKg2);
+            this.panelBorderRounded2.Controls.Add(this.tbTara);
             this.panelBorderRounded2.Location = new System.Drawing.Point(5, 36);
             this.panelBorderRounded2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelBorderRounded2.Name = "panelBorderRounded2";
             this.panelBorderRounded2.Size = new System.Drawing.Size(247, 33);
             this.panelBorderRounded2.TabIndex = 2;
             // 
-            // textKg2
+            // tbTara
             // 
-            this.textKg2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.textKg2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textKg2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textKg2.ForeColor = System.Drawing.Color.White;
-            this.textKg2.Location = new System.Drawing.Point(11, 5);
-            this.textKg2.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.textKg2.Name = "textKg2";
-            this.textKg2.Size = new System.Drawing.Size(225, 22);
-            this.textKg2.TabIndex = 1;
+            this.tbTara.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.tbTara.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbTara.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbTara.ForeColor = System.Drawing.Color.White;
+            this.tbTara.Location = new System.Drawing.Point(11, 5);
+            this.tbTara.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.tbTara.Name = "tbTara";
+            this.tbTara.Size = new System.Drawing.Size(225, 22);
+            this.tbTara.TabIndex = 1;
             // 
             // label1
             // 
@@ -759,26 +777,27 @@
             // 
             this.panelPlaca.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelPlaca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelPlaca.Controls.Add(this.masckedboxTemplete3);
+            this.panelPlaca.Controls.Add(this.mkPlaca);
             this.panelPlaca.Location = new System.Drawing.Point(5, 37);
             this.panelPlaca.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelPlaca.Name = "panelPlaca";
             this.panelPlaca.Size = new System.Drawing.Size(248, 33);
             this.panelPlaca.TabIndex = 2;
             // 
-            // masckedboxTemplete3
+            // mkPlaca
             // 
-            this.masckedboxTemplete3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.masckedboxTemplete3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.masckedboxTemplete3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.masckedboxTemplete3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.masckedboxTemplete3.ForeColor = System.Drawing.Color.White;
-            this.masckedboxTemplete3.Location = new System.Drawing.Point(10, 6);
-            this.masckedboxTemplete3.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.masckedboxTemplete3.Mask = "&&&&&&&";
-            this.masckedboxTemplete3.Name = "masckedboxTemplete3";
-            this.masckedboxTemplete3.Size = new System.Drawing.Size(228, 22);
-            this.masckedboxTemplete3.TabIndex = 1;
+            this.mkPlaca.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.mkPlaca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.mkPlaca.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mkPlaca.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.mkPlaca.ForeColor = System.Drawing.Color.White;
+            this.mkPlaca.Location = new System.Drawing.Point(10, 6);
+            this.mkPlaca.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.mkPlaca.Mask = "&&&&&&&";
+            this.mkPlaca.Name = "mkPlaca";
+            this.mkPlaca.Size = new System.Drawing.Size(228, 22);
+            this.mkPlaca.TabIndex = 1;
+            this.mkPlaca.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // labelCPFClient
             // 
@@ -820,24 +839,24 @@
             // 
             this.panelTextNomeClient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelTextNomeClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelTextNomeClient.Controls.Add(this.textBoxOnlyLetters1);
+            this.panelTextNomeClient.Controls.Add(this.tbMarca);
             this.panelTextNomeClient.Location = new System.Drawing.Point(5, 37);
             this.panelTextNomeClient.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelTextNomeClient.Name = "panelTextNomeClient";
             this.panelTextNomeClient.Size = new System.Drawing.Size(248, 33);
             this.panelTextNomeClient.TabIndex = 1;
             // 
-            // textBoxOnlyLetters1
+            // tbMarca
             // 
-            this.textBoxOnlyLetters1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.textBoxOnlyLetters1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxOnlyLetters1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxOnlyLetters1.ForeColor = System.Drawing.Color.White;
-            this.textBoxOnlyLetters1.Location = new System.Drawing.Point(10, 6);
-            this.textBoxOnlyLetters1.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.textBoxOnlyLetters1.Name = "textBoxOnlyLetters1";
-            this.textBoxOnlyLetters1.Size = new System.Drawing.Size(228, 22);
-            this.textBoxOnlyLetters1.TabIndex = 0;
+            this.tbMarca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.tbMarca.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbMarca.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbMarca.ForeColor = System.Drawing.Color.White;
+            this.tbMarca.Location = new System.Drawing.Point(10, 6);
+            this.tbMarca.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.tbMarca.Name = "tbMarca";
+            this.tbMarca.Size = new System.Drawing.Size(228, 22);
+            this.tbMarca.TabIndex = 0;
             // 
             // labelNomeClient
             // 
@@ -878,25 +897,25 @@
             // 
             this.panelDateTimerClient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelDateTimerClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelDateTimerClient.Controls.Add(this.textBoxOnlyNum_Letters1);
+            this.panelDateTimerClient.Controls.Add(this.tbModelo);
             this.panelDateTimerClient.Location = new System.Drawing.Point(6, 37);
             this.panelDateTimerClient.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelDateTimerClient.Name = "panelDateTimerClient";
             this.panelDateTimerClient.Size = new System.Drawing.Size(248, 33);
             this.panelDateTimerClient.TabIndex = 2;
             // 
-            // textBoxOnlyNum_Letters1
+            // tbModelo
             // 
-            this.textBoxOnlyNum_Letters1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxOnlyNum_Letters1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.textBoxOnlyNum_Letters1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxOnlyNum_Letters1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxOnlyNum_Letters1.ForeColor = System.Drawing.Color.White;
-            this.textBoxOnlyNum_Letters1.Location = new System.Drawing.Point(10, 6);
-            this.textBoxOnlyNum_Letters1.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.textBoxOnlyNum_Letters1.Name = "textBoxOnlyNum_Letters1";
-            this.textBoxOnlyNum_Letters1.Size = new System.Drawing.Size(228, 22);
-            this.textBoxOnlyNum_Letters1.TabIndex = 0;
+            this.tbModelo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbModelo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.tbModelo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbModelo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbModelo.ForeColor = System.Drawing.Color.White;
+            this.tbModelo.Location = new System.Drawing.Point(10, 6);
+            this.tbModelo.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.tbModelo.Name = "tbModelo";
+            this.tbModelo.Size = new System.Drawing.Size(228, 22);
+            this.tbModelo.TabIndex = 0;
             // 
             // label5
             // 
@@ -924,7 +943,7 @@
             // subpanelGeneroClient
             // 
             this.subpanelGeneroClient.BackColor = System.Drawing.Color.Transparent;
-            this.subpanelGeneroClient.Controls.Add(this.comboBox1);
+            this.subpanelGeneroClient.Controls.Add(this.comboTipoVeiculo);
             this.subpanelGeneroClient.Controls.Add(this.labelGeneroClient);
             this.subpanelGeneroClient.Dock = System.Windows.Forms.DockStyle.Fill;
             this.subpanelGeneroClient.Location = new System.Drawing.Point(20, 20);
@@ -933,15 +952,15 @@
             this.subpanelGeneroClient.Size = new System.Drawing.Size(258, 70);
             this.subpanelGeneroClient.TabIndex = 9;
             // 
-            // comboBox1
+            // comboTipoVeiculo
             // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.comboTipoVeiculo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.comboBox1.ForeColor = System.Drawing.Color.White;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboTipoVeiculo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
+            this.comboTipoVeiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.comboTipoVeiculo.ForeColor = System.Drawing.Color.White;
+            this.comboTipoVeiculo.FormattingEnabled = true;
+            this.comboTipoVeiculo.Items.AddRange(new object[] {
             "3/4",
             "Automóveis",
             "Bi-Truck ou pesado",
@@ -957,11 +976,11 @@
             "Van",
             "VUC",
             "Outros..."});
-            this.comboBox1.Location = new System.Drawing.Point(5, 36);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(238, 33);
-            this.comboBox1.TabIndex = 7;
+            this.comboTipoVeiculo.Location = new System.Drawing.Point(5, 36);
+            this.comboTipoVeiculo.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.comboTipoVeiculo.Name = "comboTipoVeiculo";
+            this.comboTipoVeiculo.Size = new System.Drawing.Size(238, 33);
+            this.comboTipoVeiculo.TabIndex = 7;
             // 
             // labelGeneroClient
             // 
@@ -989,7 +1008,7 @@
             // subpanelRGClient
             // 
             this.subpanelRGClient.BackColor = System.Drawing.Color.Transparent;
-            this.subpanelRGClient.Controls.Add(this.comboBox2);
+            this.subpanelRGClient.Controls.Add(this.comboTipoCarroceria);
             this.subpanelRGClient.Controls.Add(this.label7);
             this.subpanelRGClient.Dock = System.Windows.Forms.DockStyle.Fill;
             this.subpanelRGClient.Location = new System.Drawing.Point(20, 20);
@@ -998,15 +1017,15 @@
             this.subpanelRGClient.Size = new System.Drawing.Size(258, 70);
             this.subpanelRGClient.TabIndex = 8;
             // 
-            // comboBox2
+            // comboTipoCarroceria
             // 
-            this.comboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.comboTipoCarroceria.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.comboBox2.ForeColor = System.Drawing.Color.White;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.comboTipoCarroceria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
+            this.comboTipoCarroceria.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.comboTipoCarroceria.ForeColor = System.Drawing.Color.White;
+            this.comboTipoCarroceria.FormattingEnabled = true;
+            this.comboTipoCarroceria.Items.AddRange(new object[] {
             "Grade baixa – Carga seca",
             "Grade alta – Graneleira",
             "Caçamba",
@@ -1023,11 +1042,11 @@
             "Tanque",
             "Poliguindaste",
             "Outros..."});
-            this.comboBox2.Location = new System.Drawing.Point(5, 36);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(238, 33);
-            this.comboBox2.TabIndex = 8;
+            this.comboTipoCarroceria.Location = new System.Drawing.Point(5, 36);
+            this.comboTipoCarroceria.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.comboTipoCarroceria.Name = "comboTipoCarroceria";
+            this.comboTipoCarroceria.Size = new System.Drawing.Size(238, 33);
+            this.comboTipoCarroceria.TabIndex = 8;
             // 
             // label7
             // 
@@ -1068,25 +1087,25 @@
             // 
             this.panelTextTelefoneCLient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelTextTelefoneCLient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelTextTelefoneCLient.Controls.Add(this.textBoxOnlyNum_Letters4);
+            this.panelTextTelefoneCLient.Controls.Add(this.tbEixo);
             this.panelTextTelefoneCLient.Location = new System.Drawing.Point(6, 37);
             this.panelTextTelefoneCLient.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelTextTelefoneCLient.Name = "panelTextTelefoneCLient";
             this.panelTextTelefoneCLient.Size = new System.Drawing.Size(248, 33);
             this.panelTextTelefoneCLient.TabIndex = 2;
             // 
-            // textBoxOnlyNum_Letters4
+            // tbEixo
             // 
-            this.textBoxOnlyNum_Letters4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxOnlyNum_Letters4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.textBoxOnlyNum_Letters4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxOnlyNum_Letters4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxOnlyNum_Letters4.ForeColor = System.Drawing.Color.White;
-            this.textBoxOnlyNum_Letters4.Location = new System.Drawing.Point(10, 5);
-            this.textBoxOnlyNum_Letters4.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.textBoxOnlyNum_Letters4.Name = "textBoxOnlyNum_Letters4";
-            this.textBoxOnlyNum_Letters4.Size = new System.Drawing.Size(228, 22);
-            this.textBoxOnlyNum_Letters4.TabIndex = 1;
+            this.tbEixo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbEixo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.tbEixo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbEixo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbEixo.ForeColor = System.Drawing.Color.White;
+            this.tbEixo.Location = new System.Drawing.Point(10, 5);
+            this.tbEixo.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.tbEixo.Name = "tbEixo";
+            this.tbEixo.Size = new System.Drawing.Size(228, 22);
+            this.tbEixo.TabIndex = 1;
             // 
             // labelTelefoneClient
             // 
@@ -1127,26 +1146,27 @@
             // 
             this.panelAno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelAno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelAno.Controls.Add(this.masckedboxTemplete1);
+            this.panelAno.Controls.Add(this.mkAnoFabricacao);
             this.panelAno.Location = new System.Drawing.Point(5, 36);
             this.panelAno.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelAno.Name = "panelAno";
             this.panelAno.Size = new System.Drawing.Size(248, 33);
             this.panelAno.TabIndex = 2;
             // 
-            // masckedboxTemplete1
+            // mkAnoFabricacao
             // 
-            this.masckedboxTemplete1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.masckedboxTemplete1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.masckedboxTemplete1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.masckedboxTemplete1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.masckedboxTemplete1.ForeColor = System.Drawing.Color.White;
-            this.masckedboxTemplete1.Location = new System.Drawing.Point(10, 5);
-            this.masckedboxTemplete1.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.masckedboxTemplete1.Mask = "0000";
-            this.masckedboxTemplete1.Name = "masckedboxTemplete1";
-            this.masckedboxTemplete1.Size = new System.Drawing.Size(228, 22);
-            this.masckedboxTemplete1.TabIndex = 1;
+            this.mkAnoFabricacao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.mkAnoFabricacao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.mkAnoFabricacao.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mkAnoFabricacao.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.mkAnoFabricacao.ForeColor = System.Drawing.Color.White;
+            this.mkAnoFabricacao.Location = new System.Drawing.Point(10, 5);
+            this.mkAnoFabricacao.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.mkAnoFabricacao.Mask = "0000";
+            this.mkAnoFabricacao.Name = "mkAnoFabricacao";
+            this.mkAnoFabricacao.Size = new System.Drawing.Size(228, 22);
+            this.mkAnoFabricacao.TabIndex = 1;
+            this.mkAnoFabricacao.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // labelEmailClient
             // 
@@ -1187,24 +1207,24 @@
             // 
             this.panelTextCEPClient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelTextCEPClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelTextCEPClient.Controls.Add(this.textBoxOnlyLetters2);
+            this.panelTextCEPClient.Controls.Add(this.tbCor);
             this.panelTextCEPClient.Location = new System.Drawing.Point(5, 36);
             this.panelTextCEPClient.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelTextCEPClient.Name = "panelTextCEPClient";
             this.panelTextCEPClient.Size = new System.Drawing.Size(248, 33);
             this.panelTextCEPClient.TabIndex = 2;
             // 
-            // textBoxOnlyLetters2
+            // tbCor
             // 
-            this.textBoxOnlyLetters2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.textBoxOnlyLetters2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxOnlyLetters2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxOnlyLetters2.ForeColor = System.Drawing.Color.White;
-            this.textBoxOnlyLetters2.Location = new System.Drawing.Point(10, 6);
-            this.textBoxOnlyLetters2.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.textBoxOnlyLetters2.Name = "textBoxOnlyLetters2";
-            this.textBoxOnlyLetters2.Size = new System.Drawing.Size(228, 22);
-            this.textBoxOnlyLetters2.TabIndex = 0;
+            this.tbCor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.tbCor.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbCor.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbCor.ForeColor = System.Drawing.Color.White;
+            this.tbCor.Location = new System.Drawing.Point(10, 6);
+            this.tbCor.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.tbCor.Name = "tbCor";
+            this.tbCor.Size = new System.Drawing.Size(228, 22);
+            this.tbCor.TabIndex = 0;
             // 
             // label10
             // 
@@ -1233,8 +1253,8 @@
             // 
             this.subpanelCidadeUFClient.BackColor = System.Drawing.Color.Transparent;
             this.subpanelCidadeUFClient.Controls.Add(this.labelCidadeClient);
-            this.subpanelCidadeUFClient.Controls.Add(this.comboCidadeClient);
-            this.subpanelCidadeUFClient.Controls.Add(this.comboUFClient);
+            this.subpanelCidadeUFClient.Controls.Add(this.comboCidade);
+            this.subpanelCidadeUFClient.Controls.Add(this.comboUF);
             this.subpanelCidadeUFClient.Controls.Add(this.labelUFClient);
             this.subpanelCidadeUFClient.Dock = System.Windows.Forms.DockStyle.Fill;
             this.subpanelCidadeUFClient.Location = new System.Drawing.Point(20, 20);
@@ -1255,28 +1275,28 @@
             this.labelCidadeClient.TabIndex = 7;
             this.labelCidadeClient.Text = "Cidade";
             // 
-            // comboCidadeClient
+            // comboCidade
             // 
-            this.comboCidadeClient.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.comboCidade.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboCidadeClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
-            this.comboCidadeClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.comboCidadeClient.ForeColor = System.Drawing.Color.White;
-            this.comboCidadeClient.FormattingEnabled = true;
-            this.comboCidadeClient.Location = new System.Drawing.Point(125, 36);
-            this.comboCidadeClient.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.comboCidadeClient.Name = "comboCidadeClient";
-            this.comboCidadeClient.Size = new System.Drawing.Size(129, 33);
-            this.comboCidadeClient.TabIndex = 6;
+            this.comboCidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
+            this.comboCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.comboCidade.ForeColor = System.Drawing.Color.White;
+            this.comboCidade.FormattingEnabled = true;
+            this.comboCidade.Location = new System.Drawing.Point(125, 36);
+            this.comboCidade.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.comboCidade.Name = "comboCidade";
+            this.comboCidade.Size = new System.Drawing.Size(129, 33);
+            this.comboCidade.TabIndex = 6;
             // 
-            // comboUFClient
+            // comboUF
             // 
-            this.comboUFClient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.comboUFClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
-            this.comboUFClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.comboUFClient.ForeColor = System.Drawing.Color.White;
-            this.comboUFClient.FormattingEnabled = true;
-            this.comboUFClient.Items.AddRange(new object[] {
+            this.comboUF.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.comboUF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
+            this.comboUF.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.comboUF.ForeColor = System.Drawing.Color.White;
+            this.comboUF.FormattingEnabled = true;
+            this.comboUF.Items.AddRange(new object[] {
             "AL",
             "AP",
             "AM",
@@ -1303,11 +1323,11 @@
             "SP",
             "SE",
             "TO"});
-            this.comboUFClient.Location = new System.Drawing.Point(6, 36);
-            this.comboUFClient.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.comboUFClient.Name = "comboUFClient";
-            this.comboUFClient.Size = new System.Drawing.Size(72, 33);
-            this.comboUFClient.TabIndex = 5;
+            this.comboUF.Location = new System.Drawing.Point(6, 36);
+            this.comboUF.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.comboUF.Name = "comboUF";
+            this.comboUF.Size = new System.Drawing.Size(72, 33);
+            this.comboUF.TabIndex = 5;
             // 
             // labelUFClient
             // 
@@ -1348,24 +1368,24 @@
             // 
             this.panelCapacidade.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelCapacidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelCapacidade.Controls.Add(this.textKg1);
+            this.panelCapacidade.Controls.Add(this.tbCapacidadeKG);
             this.panelCapacidade.Location = new System.Drawing.Point(5, 36);
             this.panelCapacidade.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelCapacidade.Name = "panelCapacidade";
             this.panelCapacidade.Size = new System.Drawing.Size(249, 33);
             this.panelCapacidade.TabIndex = 2;
             // 
-            // textKg1
+            // tbCapacidadeKG
             // 
-            this.textKg1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.textKg1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textKg1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textKg1.ForeColor = System.Drawing.Color.White;
-            this.textKg1.Location = new System.Drawing.Point(10, 6);
-            this.textKg1.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.textKg1.Name = "textKg1";
-            this.textKg1.Size = new System.Drawing.Size(225, 22);
-            this.textKg1.TabIndex = 0;
+            this.tbCapacidadeKG.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.tbCapacidadeKG.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbCapacidadeKG.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbCapacidadeKG.ForeColor = System.Drawing.Color.White;
+            this.tbCapacidadeKG.Location = new System.Drawing.Point(10, 6);
+            this.tbCapacidadeKG.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.tbCapacidadeKG.Name = "tbCapacidadeKG";
+            this.tbCapacidadeKG.Size = new System.Drawing.Size(225, 22);
+            this.tbCapacidadeKG.TabIndex = 0;
             // 
             // label13
             // 
@@ -1406,24 +1426,24 @@
             // 
             this.panelMotorista.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelMotorista.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelMotorista.Controls.Add(this.textBoxOnlyLetters3);
+            this.panelMotorista.Controls.Add(this.tbMotorista);
             this.panelMotorista.Location = new System.Drawing.Point(5, 36);
             this.panelMotorista.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelMotorista.Name = "panelMotorista";
             this.panelMotorista.Size = new System.Drawing.Size(248, 33);
             this.panelMotorista.TabIndex = 2;
             // 
-            // textBoxOnlyLetters3
+            // tbMotorista
             // 
-            this.textBoxOnlyLetters3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.textBoxOnlyLetters3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxOnlyLetters3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxOnlyLetters3.ForeColor = System.Drawing.Color.White;
-            this.textBoxOnlyLetters3.Location = new System.Drawing.Point(10, 5);
-            this.textBoxOnlyLetters3.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.textBoxOnlyLetters3.Name = "textBoxOnlyLetters3";
-            this.textBoxOnlyLetters3.Size = new System.Drawing.Size(228, 22);
-            this.textBoxOnlyLetters3.TabIndex = 1;
+            this.tbMotorista.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.tbMotorista.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbMotorista.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbMotorista.ForeColor = System.Drawing.Color.White;
+            this.tbMotorista.Location = new System.Drawing.Point(10, 5);
+            this.tbMotorista.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.tbMotorista.Name = "tbMotorista";
+            this.tbMotorista.Size = new System.Drawing.Size(228, 22);
+            this.tbMotorista.TabIndex = 1;
             // 
             // label8
             // 
@@ -1464,26 +1484,27 @@
             // 
             this.panelBorderRounded8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelBorderRounded8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelBorderRounded8.Controls.Add(this.masckedboxTemplete4);
+            this.panelBorderRounded8.Controls.Add(this.mkCPF);
             this.panelBorderRounded8.Location = new System.Drawing.Point(5, 36);
             this.panelBorderRounded8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelBorderRounded8.Name = "panelBorderRounded8";
             this.panelBorderRounded8.Size = new System.Drawing.Size(249, 33);
             this.panelBorderRounded8.TabIndex = 2;
             // 
-            // masckedboxTemplete4
+            // mkCPF
             // 
-            this.masckedboxTemplete4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.masckedboxTemplete4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.masckedboxTemplete4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.masckedboxTemplete4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.masckedboxTemplete4.ForeColor = System.Drawing.Color.White;
-            this.masckedboxTemplete4.Location = new System.Drawing.Point(10, 5);
-            this.masckedboxTemplete4.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.masckedboxTemplete4.Mask = "(00) 00000-0000";
-            this.masckedboxTemplete4.Name = "masckedboxTemplete4";
-            this.masckedboxTemplete4.Size = new System.Drawing.Size(228, 22);
-            this.masckedboxTemplete4.TabIndex = 1;
+            this.mkCPF.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.mkCPF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.mkCPF.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mkCPF.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.mkCPF.ForeColor = System.Drawing.Color.White;
+            this.mkCPF.Location = new System.Drawing.Point(10, 5);
+            this.mkCPF.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.mkCPF.Mask = "(00) 00000-0000";
+            this.mkCPF.Name = "mkCPF";
+            this.mkCPF.Size = new System.Drawing.Size(228, 22);
+            this.mkCPF.TabIndex = 1;
+            this.mkCPF.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // label9
             // 
@@ -1524,7 +1545,7 @@
             // 
             this.panelBorderRounded9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelBorderRounded9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelBorderRounded9.Controls.Add(this.textMoney3);
+            this.panelBorderRounded9.Controls.Add(this.tbValorPagoKM);
             this.panelBorderRounded9.Controls.Add(this.textMoney1);
             this.panelBorderRounded9.Location = new System.Drawing.Point(5, 36);
             this.panelBorderRounded9.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
@@ -1532,17 +1553,17 @@
             this.panelBorderRounded9.Size = new System.Drawing.Size(248, 33);
             this.panelBorderRounded9.TabIndex = 2;
             // 
-            // textMoney3
+            // tbValorPagoKM
             // 
-            this.textMoney3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.textMoney3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textMoney3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textMoney3.ForeColor = System.Drawing.Color.White;
-            this.textMoney3.Location = new System.Drawing.Point(12, 5);
-            this.textMoney3.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.textMoney3.Name = "textMoney3";
-            this.textMoney3.Size = new System.Drawing.Size(225, 22);
-            this.textMoney3.TabIndex = 1;
+            this.tbValorPagoKM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.tbValorPagoKM.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbValorPagoKM.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbValorPagoKM.ForeColor = System.Drawing.Color.White;
+            this.tbValorPagoKM.Location = new System.Drawing.Point(12, 5);
+            this.tbValorPagoKM.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.tbValorPagoKM.Name = "tbValorPagoKM";
+            this.tbValorPagoKM.Size = new System.Drawing.Size(225, 22);
+            this.tbValorPagoKM.TabIndex = 1;
             // 
             // textMoney1
             // 
@@ -1564,9 +1585,9 @@
             this.label11.Location = new System.Drawing.Point(5, 4);
             this.label11.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(124, 17);
+            this.label11.Size = new System.Drawing.Size(127, 17);
             this.label11.TabIndex = 0;
-            this.label11.Text = "Valor Pago por Kg";
+            this.label11.Text = "Valor Pago por Km";
             // 
             // panelButton
             // 
@@ -1665,21 +1686,6 @@
             this.button10.TabIndex = 1;
             this.button10.Text = "Salvar";
             this.button10.UseVisualStyleBackColor = false;
-            // 
-            // typeData
-            // 
-            this.typeData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.typeData.AutoSize = true;
-            this.typeData.BackColor = System.Drawing.Color.Transparent;
-            this.typeData.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.typeData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(91)))), ((int)(((byte)(101)))));
-            this.typeData.Location = new System.Drawing.Point(35, 9);
-            this.typeData.Margin = new System.Windows.Forms.Padding(10, 7, 0, 6);
-            this.typeData.Name = "typeData";
-            this.typeData.Size = new System.Drawing.Size(46, 21);
-            this.typeData.TabIndex = 4;
-            this.typeData.Text = "Placa";
             // 
             // CadastroVeiculos
             // 
@@ -1866,8 +1872,8 @@
         private Panel panelCidadeUFClient;
         private Panel subpanelCidadeUFClient;
         private Label labelCidadeClient;
-        private ComboBox comboCidadeClient;
-        private ComboBox comboUFClient;
+        private ComboBox comboCidade;
+        private ComboBox comboUF;
         private Label labelUFClient;
         private Panel panelEndereco;
         private Panel subpanelEndereco;
@@ -1891,26 +1897,26 @@
         private Panel panel51;
         private Button button10;
         private Button cadastrarVeiculo;
-        private Properties.masckedboxTemplete masckedboxTemplete2;
-        private Properties.masckedboxTemplete masckedboxTemplete3;
-        private Properties.masckedboxTemplete masckedboxTemplete1;
-        private Properties.masckedboxTemplete masckedboxTemplete4;
-        private Properties.textBoxOnlyLetters textBoxOnlyLetters1;
-        private Properties.textBoxOnlyNum_Letters textBoxOnlyNum_Letters1;
-        private Properties.masckedboxTemplete masckedboxTemplete5;
-        private Properties.textBoxOnlyNum_Letters textBoxOnlyNum_Letters4;
-        private Properties.textBoxOnlyLetters textBoxOnlyLetters2;
-        private Properties.textBoxOnlyLetters textBoxOnlyLetters3;
+        private Properties.masckedboxTemplete mkRenavam;
+        private Properties.masckedboxTemplete mkPlaca;
+        private Properties.masckedboxTemplete mkAnoFabricacao;
+        private Properties.masckedboxTemplete mkCPF;
+        private Properties.textBoxOnlyLetters tbMarca;
+        private Properties.textBoxOnlyNum_Letters tbModelo;
+        private Properties.masckedboxTemplete mkRNTRC;
+        private Properties.textBoxOnlyNum_Letters tbEixo;
+        private Properties.textBoxOnlyLetters tbCor;
+        private Properties.textBoxOnlyLetters tbMotorista;
         private Properties.TextMoney textMoney1;
-        private Properties.TextKg textKg2;
-        private Properties.TextKg textKg1;
-        private Properties.TextMoney textMoney2;
-        private Properties.textBoxnOnlyNum textBoxnOnlyNum1;
-        private Properties.textBoxnOnlyNum textBoxnOnlyNum2;
-        private Properties.TextMoney textMoney3;
-        private Properties.TextM3 textM31;
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
+        private Properties.TextKg tbTara;
+        private Properties.TextKg tbCapacidadeKG;
+        private Properties.TextMoney tbValorPagoHora;
+        private Properties.textBoxnOnlyNum tbPgot;
+        private Properties.textBoxnOnlyNum tbCIOT;
+        private Properties.TextMoney tbValorPagoKM;
+        private Properties.TextM3 tbCapacidadeM3;
+        private ComboBox comboTipoVeiculo;
+        private ComboBox comboTipoCarroceria;
         private Properties.masckedboxTemplete masckedboxTemplete6;
         private Label typeData;
     }

@@ -55,8 +55,7 @@ namespace Interface
                 {
                     return;
                 }
-                var pasta = Application.StartupPath + @"/bd/Banco de dados V2.mdb";
-                var conexao = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + pasta;
+                
                 string SQL;
                 //Comando SQL
                 SQL = "Insert Into tbTerceiros (CPF, Nome , Email, Telefone," +
@@ -69,16 +68,10 @@ namespace Interface
                     $", '{comboCidade.Text}', '{comboUF.Text}', '{mkCNH.Text}', '{comboCategoriaCNH.Text}','{dateVencimentoCNH.Text}', '{mkRNTRC.Text}'" +
                     $", '{dateVencimentoRENTRC.Text}', '{comboTipoVeiculo.Text}', '{comboMOPP.Text}'" +
                     $", '{comboTipoContrato.Text}', '{comboSituacaoContrato.Text}', '{dateInicioAtividade.Text}', '{dateFimAtividade.Text}')";
-                OleDbConnection DB = new OleDbConnection(conexao);
-                DB.Open();
-                // Cria o comando do SQL na conexão aberta
-                OleDbCommand comando = new OleDbCommand(SQL, DB);
-
-                // Médodo para executar o comando SQL que não retorna dados.
-                comando.ExecuteNonQuery();
-
-                MessageBox.Show("Dados gravados com sucesso", "Dados cadastrados", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                DB.Close();
+                ConnectDB connectDB = new ConnectDB();
+                connectDB.cadastrar(SQL);
+                LimparFormularios limpar = new();
+                limpar.CleanControl(contentTerceiros);
             }
             catch (Exception erro)
             {

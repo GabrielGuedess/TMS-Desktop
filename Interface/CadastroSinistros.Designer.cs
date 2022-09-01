@@ -38,17 +38,17 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panelCPF = new System.Windows.Forms.Panel();
             this.SubpanelCPF = new System.Windows.Forms.Panel();
-            this.comboGemeroClient = new System.Windows.Forms.ComboBox();
+            this.comboTipoSinistro = new System.Windows.Forms.ComboBox();
             this.labelCPFClient = new System.Windows.Forms.Label();
             this.panelNomeClient = new System.Windows.Forms.Panel();
             this.subpanelNomeClient = new System.Windows.Forms.Panel();
             this.panelTextNomeClient = new Interface.Properties.PanelBorderRounded();
-            this.textBoxOnlyNum_Letters2 = new Interface.Properties.textBoxOnlyNum_Letters();
+            this.tbCodigdoSinistro = new Interface.Properties.textBoxOnlyNum_Letters();
             this.labelNomeClient = new System.Windows.Forms.Label();
             this.panelDtNascClient = new System.Windows.Forms.Panel();
             this.subpanelDtNascClient = new System.Windows.Forms.Panel();
             this.panelDateTimerClient = new Interface.Properties.PanelBorderRounded();
-            this.textBoxOnlyNum_Letters3 = new Interface.Properties.textBoxOnlyNum_Letters();
+            this.tbDescricaoSinistro = new Interface.Properties.textBoxOnlyNum_Letters();
             this.label5 = new System.Windows.Forms.Label();
             this.panelButton = new System.Windows.Forms.Panel();
             this.cadastrarSinistro = new System.Windows.Forms.Button();
@@ -190,7 +190,7 @@
             // SubpanelCPF
             // 
             this.SubpanelCPF.BackColor = System.Drawing.Color.Transparent;
-            this.SubpanelCPF.Controls.Add(this.comboGemeroClient);
+            this.SubpanelCPF.Controls.Add(this.comboTipoSinistro);
             this.SubpanelCPF.Controls.Add(this.labelCPFClient);
             this.SubpanelCPF.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SubpanelCPF.Location = new System.Drawing.Point(20, 20);
@@ -199,16 +199,16 @@
             this.SubpanelCPF.Size = new System.Drawing.Size(258, 70);
             this.SubpanelCPF.TabIndex = 7;
             // 
-            // comboGemeroClient
+            // comboTipoSinistro
             // 
-            this.comboGemeroClient.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.comboTipoSinistro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboGemeroClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
-            this.comboGemeroClient.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboGemeroClient.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.comboGemeroClient.ForeColor = System.Drawing.Color.White;
-            this.comboGemeroClient.FormattingEnabled = true;
-            this.comboGemeroClient.Items.AddRange(new object[] {
+            this.comboTipoSinistro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
+            this.comboTipoSinistro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboTipoSinistro.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.comboTipoSinistro.ForeColor = System.Drawing.Color.White;
+            this.comboTipoSinistro.FormattingEnabled = true;
+            this.comboTipoSinistro.Items.AddRange(new object[] {
             "Pequena monta. ",
             "Média monta.",
             "Grande monta.",
@@ -216,11 +216,11 @@
             "Acidentes de trânsito.",
             "Danos a terceiros. ",
             "Causas naturais."});
-            this.comboGemeroClient.Location = new System.Drawing.Point(5, 35);
-            this.comboGemeroClient.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.comboGemeroClient.Name = "comboGemeroClient";
-            this.comboGemeroClient.Size = new System.Drawing.Size(248, 29);
-            this.comboGemeroClient.TabIndex = 5;
+            this.comboTipoSinistro.Location = new System.Drawing.Point(5, 35);
+            this.comboTipoSinistro.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.comboTipoSinistro.Name = "comboTipoSinistro";
+            this.comboTipoSinistro.Size = new System.Drawing.Size(248, 29);
+            this.comboTipoSinistro.TabIndex = 5;
             // 
             // labelCPFClient
             // 
@@ -262,25 +262,26 @@
             // 
             this.panelTextNomeClient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelTextNomeClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelTextNomeClient.Controls.Add(this.textBoxOnlyNum_Letters2);
+            this.panelTextNomeClient.Controls.Add(this.tbCodigdoSinistro);
             this.panelTextNomeClient.Location = new System.Drawing.Point(5, 37);
             this.panelTextNomeClient.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelTextNomeClient.Name = "panelTextNomeClient";
             this.panelTextNomeClient.Size = new System.Drawing.Size(248, 33);
             this.panelTextNomeClient.TabIndex = 1;
             // 
-            // textBoxOnlyNum_Letters2
+            // tbCodigdoSinistro
             // 
-            this.textBoxOnlyNum_Letters2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxOnlyNum_Letters2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.textBoxOnlyNum_Letters2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxOnlyNum_Letters2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxOnlyNum_Letters2.ForeColor = System.Drawing.Color.White;
-            this.textBoxOnlyNum_Letters2.Location = new System.Drawing.Point(10, 5);
-            this.textBoxOnlyNum_Letters2.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.textBoxOnlyNum_Letters2.Name = "textBoxOnlyNum_Letters2";
-            this.textBoxOnlyNum_Letters2.Size = new System.Drawing.Size(228, 22);
-            this.textBoxOnlyNum_Letters2.TabIndex = 1;
+            this.tbCodigdoSinistro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbCodigdoSinistro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.tbCodigdoSinistro.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbCodigdoSinistro.Enabled = false;
+            this.tbCodigdoSinistro.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbCodigdoSinistro.ForeColor = System.Drawing.Color.White;
+            this.tbCodigdoSinistro.Location = new System.Drawing.Point(10, 5);
+            this.tbCodigdoSinistro.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.tbCodigdoSinistro.Name = "tbCodigdoSinistro";
+            this.tbCodigdoSinistro.Size = new System.Drawing.Size(228, 22);
+            this.tbCodigdoSinistro.TabIndex = 1;
             // 
             // labelNomeClient
             // 
@@ -321,25 +322,25 @@
             // 
             this.panelDateTimerClient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelDateTimerClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelDateTimerClient.Controls.Add(this.textBoxOnlyNum_Letters3);
+            this.panelDateTimerClient.Controls.Add(this.tbDescricaoSinistro);
             this.panelDateTimerClient.Location = new System.Drawing.Point(6, 37);
             this.panelDateTimerClient.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelDateTimerClient.Name = "panelDateTimerClient";
             this.panelDateTimerClient.Size = new System.Drawing.Size(248, 33);
             this.panelDateTimerClient.TabIndex = 2;
             // 
-            // textBoxOnlyNum_Letters3
+            // tbDescricaoSinistro
             // 
-            this.textBoxOnlyNum_Letters3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxOnlyNum_Letters3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.textBoxOnlyNum_Letters3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxOnlyNum_Letters3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxOnlyNum_Letters3.ForeColor = System.Drawing.Color.White;
-            this.textBoxOnlyNum_Letters3.Location = new System.Drawing.Point(10, 5);
-            this.textBoxOnlyNum_Letters3.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.textBoxOnlyNum_Letters3.Name = "textBoxOnlyNum_Letters3";
-            this.textBoxOnlyNum_Letters3.Size = new System.Drawing.Size(228, 22);
-            this.textBoxOnlyNum_Letters3.TabIndex = 1;
+            this.tbDescricaoSinistro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbDescricaoSinistro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.tbDescricaoSinistro.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbDescricaoSinistro.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbDescricaoSinistro.ForeColor = System.Drawing.Color.White;
+            this.tbDescricaoSinistro.Location = new System.Drawing.Point(10, 5);
+            this.tbDescricaoSinistro.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.tbDescricaoSinistro.Name = "tbDescricaoSinistro";
+            this.tbDescricaoSinistro.Size = new System.Drawing.Size(228, 22);
+            this.tbDescricaoSinistro.TabIndex = 1;
             // 
             // label5
             // 
@@ -383,6 +384,7 @@
             this.cadastrarSinistro.TabIndex = 12;
             this.cadastrarSinistro.Text = "Cadastrar";
             this.cadastrarSinistro.UseVisualStyleBackColor = false;
+            this.cadastrarSinistro.Click += new System.EventHandler(this.cadastrarSinistro_Click);
             this.cadastrarSinistro.Paint += new System.Windows.Forms.PaintEventHandler(this.cadastrarSinistro_Paint);
             // 
             // panel51
@@ -472,9 +474,9 @@
         private Panel panel51;
         private Button button10;
         private Button cadastrarSinistro;
-        private Properties.textBoxOnlyNum_Letters textBoxOnlyNum_Letters2;
-        private Properties.textBoxOnlyNum_Letters textBoxOnlyNum_Letters3;
-        private ComboBox comboGemeroClient;
+        private Properties.textBoxOnlyNum_Letters tbCodigdoSinistro;
+        private Properties.textBoxOnlyNum_Letters tbDescricaoSinistro;
+        private ComboBox comboTipoSinistro;
         private Properties.textBoxOnlyNum_Letters textBoxOnlyNum_Letters1;
         private Label typeData;
     }

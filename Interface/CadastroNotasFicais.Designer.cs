@@ -31,45 +31,45 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroNotasFicais));
             this.searchPanel = new System.Windows.Forms.Panel();
             this.panelSerch = new Interface.Properties.PanelBorderRoundedOnLeft();
-            this.textBoxOnlyNum_Letters6 = new Interface.Properties.textBoxOnlyNum_Letters();
+            this.typeData = new System.Windows.Forms.Label();
+            this.tbSearchChaveAcesso = new Interface.Properties.textBoxOnlyNum_Letters();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.contentNotas = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panelCPF = new System.Windows.Forms.Panel();
             this.SubpanelCPF = new System.Windows.Forms.Panel();
             this.panelID = new Interface.Properties.PanelBorderRounded();
-            this.textBoxOnlyNum_Letters1 = new Interface.Properties.textBoxOnlyNum_Letters();
+            this.tbIDNotaFiscal = new Interface.Properties.textBoxOnlyNum_Letters();
             this.labelCPFClient = new System.Windows.Forms.Label();
             this.panelNomeClient = new System.Windows.Forms.Panel();
             this.subpanelNomeClient = new System.Windows.Forms.Panel();
             this.panelTextNomeClient = new Interface.Properties.PanelBorderRounded();
-            this.textBoxOnlyNum_Letters2 = new Interface.Properties.textBoxOnlyNum_Letters();
+            this.tbChaveAcesso = new Interface.Properties.textBoxOnlyNum_Letters();
             this.labelNomeClient = new System.Windows.Forms.Label();
             this.panelDtNascClient = new System.Windows.Forms.Panel();
             this.subpanelDtNascClient = new System.Windows.Forms.Panel();
             this.panelDateTimerClient = new Interface.Properties.PanelBorderRounded();
-            this.textBoxnOnlyNum1 = new Interface.Properties.textBoxnOnlyNum();
+            this.tbNumero = new Interface.Properties.textBoxnOnlyNum();
             this.label5 = new System.Windows.Forms.Label();
             this.panelGeneroClient = new System.Windows.Forms.Panel();
             this.subpanelGeneroClient = new System.Windows.Forms.Panel();
             this.panelTipo = new Interface.Properties.PanelBorderRounded();
-            this.textBoxOnlyNum_Letters5 = new Interface.Properties.textBoxOnlyNum_Letters();
+            this.tbTipoNota = new Interface.Properties.textBoxOnlyNum_Letters();
             this.labelGeneroClient = new System.Windows.Forms.Label();
             this.panelRGClient = new System.Windows.Forms.Panel();
             this.subpanelRGClient = new System.Windows.Forms.Panel();
             this.panelTextRGClient = new Interface.Properties.PanelBorderRounded();
-            this.textBoxOnlyNum_Letters4 = new Interface.Properties.textBoxOnlyNum_Letters();
+            this.tbSerieNota = new Interface.Properties.textBoxOnlyNum_Letters();
             this.label7 = new System.Windows.Forms.Label();
             this.panelTelefoneClient = new System.Windows.Forms.Panel();
             this.subpanelTelefoneClient = new System.Windows.Forms.Panel();
             this.panelTextTelefoneCLient = new Interface.Properties.PanelBorderRounded();
-            this.textBoxOnlyNum_Letters3 = new Interface.Properties.textBoxOnlyNum_Letters();
+            this.tbDescricaoNota = new Interface.Properties.textBoxOnlyNum_Letters();
             this.labelTelefoneClient = new System.Windows.Forms.Label();
             this.panelButton = new System.Windows.Forms.Panel();
             this.cadastrarNota = new System.Windows.Forms.Button();
             this.panel51 = new System.Windows.Forms.Panel();
             this.button10 = new System.Windows.Forms.Button();
-            this.typeData = new System.Windows.Forms.Label();
             this.searchPanel.SuspendLayout();
             this.panelSerch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -114,7 +114,7 @@
             this.panelSerch.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.panelSerch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
             this.panelSerch.Controls.Add(this.typeData);
-            this.panelSerch.Controls.Add(this.textBoxOnlyNum_Letters6);
+            this.panelSerch.Controls.Add(this.tbSearchChaveAcesso);
             this.panelSerch.Controls.Add(this.pictureBox3);
             this.panelSerch.Location = new System.Drawing.Point(312, 13);
             this.panelSerch.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
@@ -123,18 +123,33 @@
             this.panelSerch.TabIndex = 2;
             this.panelSerch.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSerch_Paint);
             // 
-            // textBoxOnlyNum_Letters6
+            // typeData
             // 
-            this.textBoxOnlyNum_Letters6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxOnlyNum_Letters6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.textBoxOnlyNum_Letters6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxOnlyNum_Letters6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxOnlyNum_Letters6.ForeColor = System.Drawing.Color.White;
-            this.textBoxOnlyNum_Letters6.Location = new System.Drawing.Point(171, 9);
-            this.textBoxOnlyNum_Letters6.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.textBoxOnlyNum_Letters6.Name = "textBoxOnlyNum_Letters6";
-            this.textBoxOnlyNum_Letters6.Size = new System.Drawing.Size(166, 22);
-            this.textBoxOnlyNum_Letters6.TabIndex = 2;
+            this.typeData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.typeData.AutoSize = true;
+            this.typeData.BackColor = System.Drawing.Color.Transparent;
+            this.typeData.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.typeData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(91)))), ((int)(((byte)(101)))));
+            this.typeData.Location = new System.Drawing.Point(35, 7);
+            this.typeData.Margin = new System.Windows.Forms.Padding(10, 7, 0, 6);
+            this.typeData.Name = "typeData";
+            this.typeData.Size = new System.Drawing.Size(126, 21);
+            this.typeData.TabIndex = 4;
+            this.typeData.Text = "Chave de Acesso";
+            // 
+            // tbSearchChaveAcesso
+            // 
+            this.tbSearchChaveAcesso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbSearchChaveAcesso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.tbSearchChaveAcesso.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbSearchChaveAcesso.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbSearchChaveAcesso.ForeColor = System.Drawing.Color.White;
+            this.tbSearchChaveAcesso.Location = new System.Drawing.Point(171, 9);
+            this.tbSearchChaveAcesso.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.tbSearchChaveAcesso.Name = "tbSearchChaveAcesso";
+            this.tbSearchChaveAcesso.Size = new System.Drawing.Size(166, 22);
+            this.tbSearchChaveAcesso.TabIndex = 2;
             // 
             // pictureBox3
             // 
@@ -216,25 +231,26 @@
             // 
             this.panelID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelID.Controls.Add(this.textBoxOnlyNum_Letters1);
+            this.panelID.Controls.Add(this.tbIDNotaFiscal);
             this.panelID.Location = new System.Drawing.Point(5, 37);
             this.panelID.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelID.Name = "panelID";
             this.panelID.Size = new System.Drawing.Size(248, 33);
             this.panelID.TabIndex = 2;
             // 
-            // textBoxOnlyNum_Letters1
+            // tbIDNotaFiscal
             // 
-            this.textBoxOnlyNum_Letters1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxOnlyNum_Letters1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.textBoxOnlyNum_Letters1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxOnlyNum_Letters1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxOnlyNum_Letters1.ForeColor = System.Drawing.Color.White;
-            this.textBoxOnlyNum_Letters1.Location = new System.Drawing.Point(10, 5);
-            this.textBoxOnlyNum_Letters1.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.textBoxOnlyNum_Letters1.Name = "textBoxOnlyNum_Letters1";
-            this.textBoxOnlyNum_Letters1.Size = new System.Drawing.Size(228, 22);
-            this.textBoxOnlyNum_Letters1.TabIndex = 1;
+            this.tbIDNotaFiscal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbIDNotaFiscal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.tbIDNotaFiscal.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbIDNotaFiscal.Enabled = false;
+            this.tbIDNotaFiscal.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbIDNotaFiscal.ForeColor = System.Drawing.Color.White;
+            this.tbIDNotaFiscal.Location = new System.Drawing.Point(10, 5);
+            this.tbIDNotaFiscal.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.tbIDNotaFiscal.Name = "tbIDNotaFiscal";
+            this.tbIDNotaFiscal.Size = new System.Drawing.Size(228, 22);
+            this.tbIDNotaFiscal.TabIndex = 1;
             // 
             // labelCPFClient
             // 
@@ -276,25 +292,25 @@
             // 
             this.panelTextNomeClient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelTextNomeClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelTextNomeClient.Controls.Add(this.textBoxOnlyNum_Letters2);
+            this.panelTextNomeClient.Controls.Add(this.tbChaveAcesso);
             this.panelTextNomeClient.Location = new System.Drawing.Point(0, 37);
             this.panelTextNomeClient.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelTextNomeClient.Name = "panelTextNomeClient";
             this.panelTextNomeClient.Size = new System.Drawing.Size(248, 33);
             this.panelTextNomeClient.TabIndex = 1;
             // 
-            // textBoxOnlyNum_Letters2
+            // tbChaveAcesso
             // 
-            this.textBoxOnlyNum_Letters2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxOnlyNum_Letters2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.textBoxOnlyNum_Letters2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxOnlyNum_Letters2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxOnlyNum_Letters2.ForeColor = System.Drawing.Color.White;
-            this.textBoxOnlyNum_Letters2.Location = new System.Drawing.Point(10, 5);
-            this.textBoxOnlyNum_Letters2.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.textBoxOnlyNum_Letters2.Name = "textBoxOnlyNum_Letters2";
-            this.textBoxOnlyNum_Letters2.Size = new System.Drawing.Size(228, 22);
-            this.textBoxOnlyNum_Letters2.TabIndex = 2;
+            this.tbChaveAcesso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbChaveAcesso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.tbChaveAcesso.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbChaveAcesso.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbChaveAcesso.ForeColor = System.Drawing.Color.White;
+            this.tbChaveAcesso.Location = new System.Drawing.Point(10, 5);
+            this.tbChaveAcesso.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.tbChaveAcesso.Name = "tbChaveAcesso";
+            this.tbChaveAcesso.Size = new System.Drawing.Size(228, 22);
+            this.tbChaveAcesso.TabIndex = 2;
             // 
             // labelNomeClient
             // 
@@ -335,25 +351,25 @@
             // 
             this.panelDateTimerClient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelDateTimerClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelDateTimerClient.Controls.Add(this.textBoxnOnlyNum1);
+            this.panelDateTimerClient.Controls.Add(this.tbNumero);
             this.panelDateTimerClient.Location = new System.Drawing.Point(6, 37);
             this.panelDateTimerClient.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelDateTimerClient.Name = "panelDateTimerClient";
             this.panelDateTimerClient.Size = new System.Drawing.Size(248, 33);
             this.panelDateTimerClient.TabIndex = 2;
             // 
-            // textBoxnOnlyNum1
+            // tbNumero
             // 
-            this.textBoxnOnlyNum1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxnOnlyNum1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.textBoxnOnlyNum1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxnOnlyNum1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxnOnlyNum1.ForeColor = System.Drawing.Color.White;
-            this.textBoxnOnlyNum1.Location = new System.Drawing.Point(10, 6);
-            this.textBoxnOnlyNum1.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.textBoxnOnlyNum1.Name = "textBoxnOnlyNum1";
-            this.textBoxnOnlyNum1.Size = new System.Drawing.Size(228, 22);
-            this.textBoxnOnlyNum1.TabIndex = 0;
+            this.tbNumero.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbNumero.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.tbNumero.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbNumero.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbNumero.ForeColor = System.Drawing.Color.White;
+            this.tbNumero.Location = new System.Drawing.Point(10, 6);
+            this.tbNumero.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.tbNumero.Name = "tbNumero";
+            this.tbNumero.Size = new System.Drawing.Size(228, 22);
+            this.tbNumero.TabIndex = 0;
             // 
             // label5
             // 
@@ -394,25 +410,25 @@
             // 
             this.panelTipo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelTipo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelTipo.Controls.Add(this.textBoxOnlyNum_Letters5);
+            this.panelTipo.Controls.Add(this.tbTipoNota);
             this.panelTipo.Location = new System.Drawing.Point(5, 36);
             this.panelTipo.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelTipo.Name = "panelTipo";
             this.panelTipo.Size = new System.Drawing.Size(248, 33);
             this.panelTipo.TabIndex = 3;
             // 
-            // textBoxOnlyNum_Letters5
+            // tbTipoNota
             // 
-            this.textBoxOnlyNum_Letters5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxOnlyNum_Letters5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.textBoxOnlyNum_Letters5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxOnlyNum_Letters5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxOnlyNum_Letters5.ForeColor = System.Drawing.Color.White;
-            this.textBoxOnlyNum_Letters5.Location = new System.Drawing.Point(10, 5);
-            this.textBoxOnlyNum_Letters5.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.textBoxOnlyNum_Letters5.Name = "textBoxOnlyNum_Letters5";
-            this.textBoxOnlyNum_Letters5.Size = new System.Drawing.Size(228, 22);
-            this.textBoxOnlyNum_Letters5.TabIndex = 1;
+            this.tbTipoNota.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbTipoNota.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.tbTipoNota.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbTipoNota.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbTipoNota.ForeColor = System.Drawing.Color.White;
+            this.tbTipoNota.Location = new System.Drawing.Point(10, 5);
+            this.tbTipoNota.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.tbTipoNota.Name = "tbTipoNota";
+            this.tbTipoNota.Size = new System.Drawing.Size(228, 22);
+            this.tbTipoNota.TabIndex = 1;
             // 
             // labelGeneroClient
             // 
@@ -453,25 +469,25 @@
             // 
             this.panelTextRGClient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelTextRGClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelTextRGClient.Controls.Add(this.textBoxOnlyNum_Letters4);
+            this.panelTextRGClient.Controls.Add(this.tbSerieNota);
             this.panelTextRGClient.Location = new System.Drawing.Point(5, 36);
             this.panelTextRGClient.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelTextRGClient.Name = "panelTextRGClient";
             this.panelTextRGClient.Size = new System.Drawing.Size(248, 33);
             this.panelTextRGClient.TabIndex = 2;
             // 
-            // textBoxOnlyNum_Letters4
+            // tbSerieNota
             // 
-            this.textBoxOnlyNum_Letters4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxOnlyNum_Letters4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.textBoxOnlyNum_Letters4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxOnlyNum_Letters4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxOnlyNum_Letters4.ForeColor = System.Drawing.Color.White;
-            this.textBoxOnlyNum_Letters4.Location = new System.Drawing.Point(10, 5);
-            this.textBoxOnlyNum_Letters4.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.textBoxOnlyNum_Letters4.Name = "textBoxOnlyNum_Letters4";
-            this.textBoxOnlyNum_Letters4.Size = new System.Drawing.Size(228, 22);
-            this.textBoxOnlyNum_Letters4.TabIndex = 1;
+            this.tbSerieNota.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbSerieNota.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.tbSerieNota.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbSerieNota.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbSerieNota.ForeColor = System.Drawing.Color.White;
+            this.tbSerieNota.Location = new System.Drawing.Point(10, 5);
+            this.tbSerieNota.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.tbSerieNota.Name = "tbSerieNota";
+            this.tbSerieNota.Size = new System.Drawing.Size(228, 22);
+            this.tbSerieNota.TabIndex = 1;
             // 
             // label7
             // 
@@ -512,25 +528,25 @@
             // 
             this.panelTextTelefoneCLient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelTextTelefoneCLient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelTextTelefoneCLient.Controls.Add(this.textBoxOnlyNum_Letters3);
+            this.panelTextTelefoneCLient.Controls.Add(this.tbDescricaoNota);
             this.panelTextTelefoneCLient.Location = new System.Drawing.Point(6, 36);
             this.panelTextTelefoneCLient.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelTextTelefoneCLient.Name = "panelTextTelefoneCLient";
             this.panelTextTelefoneCLient.Size = new System.Drawing.Size(249, 33);
             this.panelTextTelefoneCLient.TabIndex = 2;
             // 
-            // textBoxOnlyNum_Letters3
+            // tbDescricaoNota
             // 
-            this.textBoxOnlyNum_Letters3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxOnlyNum_Letters3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.textBoxOnlyNum_Letters3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxOnlyNum_Letters3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxOnlyNum_Letters3.ForeColor = System.Drawing.Color.White;
-            this.textBoxOnlyNum_Letters3.Location = new System.Drawing.Point(10, 5);
-            this.textBoxOnlyNum_Letters3.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.textBoxOnlyNum_Letters3.Name = "textBoxOnlyNum_Letters3";
-            this.textBoxOnlyNum_Letters3.Size = new System.Drawing.Size(228, 22);
-            this.textBoxOnlyNum_Letters3.TabIndex = 1;
+            this.tbDescricaoNota.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbDescricaoNota.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.tbDescricaoNota.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbDescricaoNota.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbDescricaoNota.ForeColor = System.Drawing.Color.White;
+            this.tbDescricaoNota.Location = new System.Drawing.Point(10, 5);
+            this.tbDescricaoNota.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.tbDescricaoNota.Name = "tbDescricaoNota";
+            this.tbDescricaoNota.Size = new System.Drawing.Size(228, 22);
+            this.tbDescricaoNota.TabIndex = 1;
             // 
             // labelTelefoneClient
             // 
@@ -574,6 +590,7 @@
             this.cadastrarNota.TabIndex = 12;
             this.cadastrarNota.Text = "Cadastrar";
             this.cadastrarNota.UseVisualStyleBackColor = false;
+            this.cadastrarNota.Click += new System.EventHandler(this.cadastrarNota_Click);
             this.cadastrarNota.Paint += new System.Windows.Forms.PaintEventHandler(this.cadastrarNota_Paint);
             // 
             // panel51
@@ -605,21 +622,6 @@
             this.button10.TabIndex = 1;
             this.button10.Text = "Salvar";
             this.button10.UseVisualStyleBackColor = false;
-            // 
-            // typeData
-            // 
-            this.typeData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.typeData.AutoSize = true;
-            this.typeData.BackColor = System.Drawing.Color.Transparent;
-            this.typeData.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.typeData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(91)))), ((int)(((byte)(101)))));
-            this.typeData.Location = new System.Drawing.Point(35, 7);
-            this.typeData.Margin = new System.Windows.Forms.Padding(10, 7, 0, 6);
-            this.typeData.Name = "typeData";
-            this.typeData.Size = new System.Drawing.Size(126, 21);
-            this.typeData.TabIndex = 4;
-            this.typeData.Text = "Chave de Acesso";
             // 
             // CadastroNotasFicais
             // 
@@ -709,13 +711,13 @@
         private Panel panel51;
         private Button button10;
         private Button cadastrarNota;
-        private Properties.textBoxOnlyNum_Letters textBoxOnlyNum_Letters1;
-        private Properties.textBoxOnlyNum_Letters textBoxOnlyNum_Letters2;
-        private Properties.textBoxnOnlyNum textBoxnOnlyNum1;
-        private Properties.textBoxOnlyNum_Letters textBoxOnlyNum_Letters5;
-        private Properties.textBoxOnlyNum_Letters textBoxOnlyNum_Letters4;
-        private Properties.textBoxOnlyNum_Letters textBoxOnlyNum_Letters3;
-        private Properties.textBoxOnlyNum_Letters textBoxOnlyNum_Letters6;
+        private Properties.textBoxOnlyNum_Letters tbIDNotaFiscal;
+        private Properties.textBoxOnlyNum_Letters tbChaveAcesso;
+        private Properties.textBoxnOnlyNum tbNumero;
+        private Properties.textBoxOnlyNum_Letters tbTipoNota;
+        private Properties.textBoxOnlyNum_Letters tbSerieNota;
+        private Properties.textBoxOnlyNum_Letters tbDescricaoNota;
+        private Properties.textBoxOnlyNum_Letters tbSearchChaveAcesso;
         private Label typeData;
     }
 }

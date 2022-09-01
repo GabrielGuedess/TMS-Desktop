@@ -211,6 +211,7 @@ namespace Interface.Properties
             base.InitLayout();
             CustomFormat = " ";
             Format = DateTimePickerFormat.Custom;
+            Anchor = AnchorStyles.Left | AnchorStyles.Right;
         }
         protected override void OnValueChanged(EventArgs eventargs)
         {

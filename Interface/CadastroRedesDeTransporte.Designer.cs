@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroRedesDeTransporte));
             this.searchPanel = new System.Windows.Forms.Panel();
             this.panelSerch = new Interface.Properties.PanelBorderRoundedOnLeft();
+            this.typeData = new System.Windows.Forms.Label();
             this.textBoxOnlyNum_Letters4 = new Interface.Properties.textBoxOnlyNum_Letters();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.contentRedes = new System.Windows.Forms.Panel();
@@ -39,33 +40,32 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel25 = new System.Windows.Forms.Panel();
             this.panel26 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboCategoriaCNH = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel27 = new System.Windows.Forms.Panel();
             this.panel28 = new System.Windows.Forms.Panel();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboTipoVeiculo = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panelBorderRoundedID = new Interface.Properties.PanelBorderRounded();
-            this.textBoxOnlyNum_Letters1 = new Interface.Properties.textBoxOnlyNum_Letters();
+            this.tbIDRede = new Interface.Properties.textBoxOnlyNum_Letters();
             this.labelId = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panelBorderRounded3 = new Interface.Properties.PanelBorderRounded();
-            this.textBoxOnlyNum_Letters2 = new Interface.Properties.textBoxOnlyNum_Letters();
+            this.tbTipoRede = new Interface.Properties.textBoxOnlyNum_Letters();
             this.label2 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panelBorderRounded4 = new Interface.Properties.PanelBorderRounded();
-            this.textBoxOnlyNum_Letters3 = new Interface.Properties.textBoxOnlyNum_Letters();
+            this.tbDescricaoRede = new Interface.Properties.textBoxOnlyNum_Letters();
             this.label3 = new System.Windows.Forms.Label();
             this.panelButton = new System.Windows.Forms.Panel();
             this.cadastrarRede = new System.Windows.Forms.Button();
             this.panel51 = new System.Windows.Forms.Panel();
             this.button10 = new System.Windows.Forms.Button();
-            this.typeData = new System.Windows.Forms.Label();
             this.searchPanel.SuspendLayout();
             this.panelSerch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -114,6 +114,21 @@
             this.panelSerch.Size = new System.Drawing.Size(347, 36);
             this.panelSerch.TabIndex = 2;
             this.panelSerch.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSerch_Paint);
+            // 
+            // typeData
+            // 
+            this.typeData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.typeData.AutoSize = true;
+            this.typeData.BackColor = System.Drawing.Color.Transparent;
+            this.typeData.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.typeData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(91)))), ((int)(((byte)(101)))));
+            this.typeData.Location = new System.Drawing.Point(35, 7);
+            this.typeData.Margin = new System.Windows.Forms.Padding(10, 7, 0, 6);
+            this.typeData.Name = "typeData";
+            this.typeData.Size = new System.Drawing.Size(64, 21);
+            this.typeData.TabIndex = 4;
+            this.typeData.Text = "Num ID";
             // 
             // textBoxOnlyNum_Letters4
             // 
@@ -217,7 +232,7 @@
             // panel26
             // 
             this.panel26.BackColor = System.Drawing.Color.Transparent;
-            this.panel26.Controls.Add(this.comboBox1);
+            this.panel26.Controls.Add(this.comboCategoriaCNH);
             this.panel26.Controls.Add(this.label7);
             this.panel26.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel26.Location = new System.Drawing.Point(20, 20);
@@ -226,16 +241,16 @@
             this.panel26.Size = new System.Drawing.Size(258, 70);
             this.panel26.TabIndex = 7;
             // 
-            // comboBox1
+            // comboCategoriaCNH
             // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.comboCategoriaCNH.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.comboBox1.ForeColor = System.Drawing.SystemColors.Window;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboCategoriaCNH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
+            this.comboCategoriaCNH.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboCategoriaCNH.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.comboCategoriaCNH.ForeColor = System.Drawing.SystemColors.Window;
+            this.comboCategoriaCNH.FormattingEnabled = true;
+            this.comboCategoriaCNH.Items.AddRange(new object[] {
             "A",
             "B",
             "C",
@@ -245,11 +260,11 @@
             "A/C",
             "A/D",
             "A/E"});
-            this.comboBox1.Location = new System.Drawing.Point(5, 37);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(248, 29);
-            this.comboBox1.TabIndex = 6;
+            this.comboCategoriaCNH.Location = new System.Drawing.Point(5, 37);
+            this.comboCategoriaCNH.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.comboCategoriaCNH.Name = "comboCategoriaCNH";
+            this.comboCategoriaCNH.Size = new System.Drawing.Size(248, 29);
+            this.comboCategoriaCNH.TabIndex = 6;
             // 
             // label7
             // 
@@ -278,7 +293,7 @@
             // panel28
             // 
             this.panel28.BackColor = System.Drawing.Color.Transparent;
-            this.panel28.Controls.Add(this.comboBox2);
+            this.panel28.Controls.Add(this.comboTipoVeiculo);
             this.panel28.Controls.Add(this.label10);
             this.panel28.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel28.Location = new System.Drawing.Point(20, 20);
@@ -287,16 +302,16 @@
             this.panel28.Size = new System.Drawing.Size(258, 70);
             this.panel28.TabIndex = 8;
             // 
-            // comboBox2
+            // comboTipoVeiculo
             // 
-            this.comboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.comboTipoVeiculo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.comboBox2.ForeColor = System.Drawing.Color.White;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.comboTipoVeiculo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
+            this.comboTipoVeiculo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboTipoVeiculo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.comboTipoVeiculo.ForeColor = System.Drawing.Color.White;
+            this.comboTipoVeiculo.FormattingEnabled = true;
+            this.comboTipoVeiculo.Items.AddRange(new object[] {
             "Moto",
             "Vans (VUC)",
             "Furgões",
@@ -310,11 +325,11 @@
             "Bitrem Articulado",
             "Rodotrem",
             "Outros"});
-            this.comboBox2.Location = new System.Drawing.Point(5, 37);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(248, 29);
-            this.comboBox2.TabIndex = 7;
+            this.comboTipoVeiculo.Location = new System.Drawing.Point(5, 37);
+            this.comboTipoVeiculo.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.comboTipoVeiculo.Name = "comboTipoVeiculo";
+            this.comboTipoVeiculo.Size = new System.Drawing.Size(248, 29);
+            this.comboTipoVeiculo.TabIndex = 7;
             // 
             // label10
             // 
@@ -378,25 +393,26 @@
             // 
             this.panelBorderRoundedID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelBorderRoundedID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelBorderRoundedID.Controls.Add(this.textBoxOnlyNum_Letters1);
+            this.panelBorderRoundedID.Controls.Add(this.tbIDRede);
             this.panelBorderRoundedID.Location = new System.Drawing.Point(5, 37);
             this.panelBorderRoundedID.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelBorderRoundedID.Name = "panelBorderRoundedID";
             this.panelBorderRoundedID.Size = new System.Drawing.Size(242, 33);
             this.panelBorderRoundedID.TabIndex = 2;
             // 
-            // textBoxOnlyNum_Letters1
+            // tbIDRede
             // 
-            this.textBoxOnlyNum_Letters1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxOnlyNum_Letters1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.textBoxOnlyNum_Letters1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxOnlyNum_Letters1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxOnlyNum_Letters1.ForeColor = System.Drawing.Color.White;
-            this.textBoxOnlyNum_Letters1.Location = new System.Drawing.Point(7, 5);
-            this.textBoxOnlyNum_Letters1.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.textBoxOnlyNum_Letters1.Name = "textBoxOnlyNum_Letters1";
-            this.textBoxOnlyNum_Letters1.Size = new System.Drawing.Size(228, 22);
-            this.textBoxOnlyNum_Letters1.TabIndex = 1;
+            this.tbIDRede.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbIDRede.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.tbIDRede.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbIDRede.Enabled = false;
+            this.tbIDRede.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbIDRede.ForeColor = System.Drawing.Color.White;
+            this.tbIDRede.Location = new System.Drawing.Point(7, 5);
+            this.tbIDRede.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.tbIDRede.Name = "tbIDRede";
+            this.tbIDRede.Size = new System.Drawing.Size(228, 22);
+            this.tbIDRede.TabIndex = 1;
             // 
             // labelId
             // 
@@ -438,25 +454,25 @@
             // 
             this.panelBorderRounded3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelBorderRounded3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelBorderRounded3.Controls.Add(this.textBoxOnlyNum_Letters2);
+            this.panelBorderRounded3.Controls.Add(this.tbTipoRede);
             this.panelBorderRounded3.Location = new System.Drawing.Point(5, 37);
             this.panelBorderRounded3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelBorderRounded3.Name = "panelBorderRounded3";
             this.panelBorderRounded3.Size = new System.Drawing.Size(241, 33);
             this.panelBorderRounded3.TabIndex = 1;
             // 
-            // textBoxOnlyNum_Letters2
+            // tbTipoRede
             // 
-            this.textBoxOnlyNum_Letters2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxOnlyNum_Letters2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.textBoxOnlyNum_Letters2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxOnlyNum_Letters2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxOnlyNum_Letters2.ForeColor = System.Drawing.Color.White;
-            this.textBoxOnlyNum_Letters2.Location = new System.Drawing.Point(6, 5);
-            this.textBoxOnlyNum_Letters2.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.textBoxOnlyNum_Letters2.Name = "textBoxOnlyNum_Letters2";
-            this.textBoxOnlyNum_Letters2.Size = new System.Drawing.Size(228, 22);
-            this.textBoxOnlyNum_Letters2.TabIndex = 2;
+            this.tbTipoRede.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbTipoRede.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.tbTipoRede.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbTipoRede.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbTipoRede.ForeColor = System.Drawing.Color.White;
+            this.tbTipoRede.Location = new System.Drawing.Point(6, 5);
+            this.tbTipoRede.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.tbTipoRede.Name = "tbTipoRede";
+            this.tbTipoRede.Size = new System.Drawing.Size(228, 22);
+            this.tbTipoRede.TabIndex = 2;
             // 
             // label2
             // 
@@ -497,25 +513,25 @@
             // 
             this.panelBorderRounded4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelBorderRounded4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelBorderRounded4.Controls.Add(this.textBoxOnlyNum_Letters3);
+            this.panelBorderRounded4.Controls.Add(this.tbDescricaoRede);
             this.panelBorderRounded4.Location = new System.Drawing.Point(5, 37);
             this.panelBorderRounded4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelBorderRounded4.Name = "panelBorderRounded4";
             this.panelBorderRounded4.Size = new System.Drawing.Size(242, 33);
             this.panelBorderRounded4.TabIndex = 2;
             // 
-            // textBoxOnlyNum_Letters3
+            // tbDescricaoRede
             // 
-            this.textBoxOnlyNum_Letters3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxOnlyNum_Letters3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.textBoxOnlyNum_Letters3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxOnlyNum_Letters3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxOnlyNum_Letters3.ForeColor = System.Drawing.Color.White;
-            this.textBoxOnlyNum_Letters3.Location = new System.Drawing.Point(7, 5);
-            this.textBoxOnlyNum_Letters3.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.textBoxOnlyNum_Letters3.Name = "textBoxOnlyNum_Letters3";
-            this.textBoxOnlyNum_Letters3.Size = new System.Drawing.Size(228, 22);
-            this.textBoxOnlyNum_Letters3.TabIndex = 2;
+            this.tbDescricaoRede.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbDescricaoRede.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.tbDescricaoRede.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbDescricaoRede.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbDescricaoRede.ForeColor = System.Drawing.Color.White;
+            this.tbDescricaoRede.Location = new System.Drawing.Point(7, 5);
+            this.tbDescricaoRede.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.tbDescricaoRede.Name = "tbDescricaoRede";
+            this.tbDescricaoRede.Size = new System.Drawing.Size(228, 22);
+            this.tbDescricaoRede.TabIndex = 2;
             // 
             // label3
             // 
@@ -536,7 +552,7 @@
             this.panelButton.BackColor = System.Drawing.Color.Transparent;
             this.panelButton.Controls.Add(this.cadastrarRede);
             this.panelButton.Controls.Add(this.panel51);
-            this.panelButton.Location = new System.Drawing.Point(0, 434);
+            this.panelButton.Location = new System.Drawing.Point(0, 391);
             this.panelButton.Margin = new System.Windows.Forms.Padding(0, 100, 0, 0);
             this.panelButton.Name = "panelButton";
             this.panelButton.Padding = new System.Windows.Forms.Padding(40, 0, 40, 0);
@@ -559,6 +575,7 @@
             this.cadastrarRede.TabIndex = 14;
             this.cadastrarRede.Text = "Cadastrar";
             this.cadastrarRede.UseVisualStyleBackColor = false;
+            this.cadastrarRede.Click += new System.EventHandler(this.cadastrarRede_Click);
             this.cadastrarRede.Paint += new System.Windows.Forms.PaintEventHandler(this.cadastrarRede_Paint);
             // 
             // panel51
@@ -591,21 +608,6 @@
             this.button10.Text = "Salvar";
             this.button10.UseVisualStyleBackColor = false;
             // 
-            // typeData
-            // 
-            this.typeData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.typeData.AutoSize = true;
-            this.typeData.BackColor = System.Drawing.Color.Transparent;
-            this.typeData.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.typeData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(91)))), ((int)(((byte)(101)))));
-            this.typeData.Location = new System.Drawing.Point(35, 7);
-            this.typeData.Margin = new System.Windows.Forms.Padding(10, 7, 0, 6);
-            this.typeData.Name = "typeData";
-            this.typeData.Size = new System.Drawing.Size(64, 21);
-            this.typeData.TabIndex = 4;
-            this.typeData.Text = "Num ID";
-            // 
             // CadastroRedesDeTransporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -615,7 +617,7 @@
             this.Controls.Add(this.searchPanel);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "CadastroRedesDeTransporte";
-            this.Size = new System.Drawing.Size(975, 608);
+            this.Size = new System.Drawing.Size(975, 514);
             this.Resize += new System.EventHandler(this.CadastroRedesDeTransporte_Resize);
             this.searchPanel.ResumeLayout(false);
             this.panelSerch.ResumeLayout(false);
@@ -684,11 +686,11 @@
         private Panel panel51;
         private Button button10;
         private Button cadastrarRede;
-        private Properties.textBoxOnlyNum_Letters textBoxOnlyNum_Letters1;
-        private Properties.textBoxOnlyNum_Letters textBoxOnlyNum_Letters2;
-        private Properties.textBoxOnlyNum_Letters textBoxOnlyNum_Letters3;
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
+        private Properties.textBoxOnlyNum_Letters tbIDRede;
+        private Properties.textBoxOnlyNum_Letters tbTipoRede;
+        private Properties.textBoxOnlyNum_Letters tbDescricaoRede;
+        private ComboBox comboCategoriaCNH;
+        private ComboBox comboTipoVeiculo;
         private Properties.textBoxOnlyNum_Letters textBoxOnlyNum_Letters4;
         private Label typeData;
     }

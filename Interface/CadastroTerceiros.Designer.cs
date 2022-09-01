@@ -435,6 +435,7 @@
             // 
             // dateInicioAtividade
             // 
+            this.dateInicioAtividade.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dateInicioAtividade.CustomFormat = " ";
             this.dateInicioAtividade.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateInicioAtividade.Location = new System.Drawing.Point(10, 5);
@@ -491,6 +492,7 @@
             // 
             // dateFimAtividade
             // 
+            this.dateFimAtividade.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dateFimAtividade.CustomFormat = " ";
             this.dateFimAtividade.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateFimAtividade.Location = new System.Drawing.Point(10, 5);
@@ -650,8 +652,7 @@
             // 
             // comboMOPP
             // 
-            this.comboMOPP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboMOPP.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.comboMOPP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
             this.comboMOPP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboMOPP.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -751,6 +752,7 @@
             // 
             // dateVencimentoCNH
             // 
+            this.dateVencimentoCNH.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dateVencimentoCNH.CustomFormat = " ";
             this.dateVencimentoCNH.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateVencimentoCNH.Location = new System.Drawing.Point(10, 5);
@@ -884,6 +886,7 @@
             // 
             // dateVencimentoRENTRC
             // 
+            this.dateVencimentoRENTRC.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dateVencimentoRENTRC.CustomFormat = " ";
             this.dateVencimentoRENTRC.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateVencimentoRENTRC.Location = new System.Drawing.Point(10, 5);
@@ -1311,6 +1314,7 @@
             // 
             // dateNascimento
             // 
+            this.dateNascimento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dateNascimento.CustomFormat = " ";
             this.dateNascimento.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.dateNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;

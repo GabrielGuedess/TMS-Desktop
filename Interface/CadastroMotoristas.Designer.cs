@@ -309,7 +309,7 @@
             this.mkCNH.ForeColor = System.Drawing.Color.White;
             this.mkCNH.Location = new System.Drawing.Point(10, 5);
             this.mkCNH.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.mkCNH.Mask = "00000-000";
+            this.mkCNH.Mask = "0000000000";
             this.mkCNH.Name = "mkCNH";
             this.mkCNH.Size = new System.Drawing.Size(228, 22);
             this.mkCNH.TabIndex = 3;
@@ -424,6 +424,7 @@
             // 
             // dateVencimentoCNH
             // 
+            this.dateVencimentoCNH.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dateVencimentoCNH.CustomFormat = " ";
             this.dateVencimentoCNH.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateVencimentoCNH.Location = new System.Drawing.Point(10, 5);
@@ -1064,6 +1065,7 @@
             // 
             // dateNascimento
             // 
+            this.dateNascimento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dateNascimento.CustomFormat = " ";
             this.dateNascimento.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.dateNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
@@ -1430,7 +1432,7 @@
             this.mkCEP.ForeColor = System.Drawing.Color.White;
             this.mkCEP.Location = new System.Drawing.Point(10, 6);
             this.mkCEP.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.mkCEP.Mask = "00000-00";
+            this.mkCEP.Mask = "00000-000";
             this.mkCEP.Name = "mkCEP";
             this.mkCEP.Size = new System.Drawing.Size(121, 22);
             this.mkCEP.TabIndex = 3;

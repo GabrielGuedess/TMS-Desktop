@@ -767,7 +767,7 @@ namespace Interface
             this.cadastroRoutes1.Location = new System.Drawing.Point(25, 25);
             this.cadastroRoutes1.Margin = new System.Windows.Forms.Padding(0);
             this.cadastroRoutes1.Name = "cadastroRoutes1";
-            this.cadastroRoutes1.Size = new System.Drawing.Size(955, 1000);
+            this.cadastroRoutes1.Size = new System.Drawing.Size(955, 1250);
             this.cadastroRoutes1.TabIndex = 2;
             // 
             // cadastroUsuarios1
