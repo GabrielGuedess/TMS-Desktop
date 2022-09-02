@@ -47,31 +47,31 @@ namespace Interface
         }
         private bool validar()
         {
-            if (tbTipoRede.Text == "") //transformar em campo obrigatório
+            if (tbTipoRede.Text == String.Empty) 
             {
                 MessageBox.Show("O campo Tipo de Rede é obrigatório", "Erro", MessageBoxButtons.OK);
                 tbTipoRede.Focus();
                 return false;
             }
 
-            if (tbDescricaoRede.Text == "") //transformar em campo obrigatório
+            if (tbDescricaoRede.Text == String.Empty)
             {
                 MessageBox.Show("O campo Descrição da Rede é obrigatório", "Erro", MessageBoxButtons.OK);
                 tbDescricaoRede.Focus();
                 return false;
             }
 
-            if (comboCategoriaCNH.Text == "") //transformar em campo obrigatório
+            if (comboCategoriaCNH.Text == String.Empty) 
             {
                 MessageBox.Show("O campo Categoria da CNH é obrigatório", "Erro", MessageBoxButtons.OK);
                 comboCategoriaCNH.Focus();
                 return false;
             }
 
-            if (tbTipoRede.Text == "") //transformar em campo obrigatório
+            if (comboTipoVeiculo.Text == String.Empty) 
             {
                 MessageBox.Show("O campo Tipo de Veículo é obrigatório", "Erro", MessageBoxButtons.OK);
-                tbTipoRede.Focus();
+                comboTipoVeiculo.Focus();
                 return false;
             }
             return true;

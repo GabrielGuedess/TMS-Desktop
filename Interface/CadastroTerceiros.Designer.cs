@@ -145,6 +145,7 @@
             this.panelEndereco = new System.Windows.Forms.Panel();
             this.subpanelEndereco = new System.Windows.Forms.Panel();
             this.panelBorderRounded5 = new Interface.Properties.PanelBorderRounded();
+            this.tbNumCasa = new Interface.Properties.textBoxOnlyNum_Letters();
             this.label21 = new System.Windows.Forms.Label();
             this.panelTextEndereco = new Interface.Properties.PanelBorderRounded();
             this.tbLogradouro = new Interface.Properties.textBoxOnlyNum_Letters();
@@ -167,7 +168,6 @@
             this.panel16 = new System.Windows.Forms.Panel();
             this.panelBorderRounded7 = new Interface.Properties.PanelBorderRounded();
             this.label14 = new System.Windows.Forms.Label();
-            this.tbNumCasa = new Interface.Properties.textBoxOnlyNum_Letters();
             this.contentTerceiros.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.panel17.SuspendLayout();
@@ -606,7 +606,7 @@
             this.mkCNH.ForeColor = System.Drawing.Color.White;
             this.mkCNH.Location = new System.Drawing.Point(10, 5);
             this.mkCNH.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.mkCNH.Mask = "00000-000";
+            this.mkCNH.Mask = "00000000000";
             this.mkCNH.Name = "mkCNH";
             this.mkCNH.Size = new System.Drawing.Size(228, 22);
             this.mkCNH.TabIndex = 2;
@@ -1613,7 +1613,7 @@
             this.mkCEP.ForeColor = System.Drawing.Color.White;
             this.mkCEP.Location = new System.Drawing.Point(10, 5);
             this.mkCEP.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.mkCEP.Mask = "00000-00";
+            this.mkCEP.Mask = "00000-000";
             this.mkCEP.Name = "mkCEP";
             this.mkCEP.Size = new System.Drawing.Size(228, 22);
             this.mkCEP.TabIndex = 2;
@@ -1769,6 +1769,19 @@
             this.panelBorderRounded5.Name = "panelBorderRounded5";
             this.panelBorderRounded5.Size = new System.Drawing.Size(64, 33);
             this.panelBorderRounded5.TabIndex = 4;
+            // 
+            // tbNumCasa
+            // 
+            this.tbNumCasa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbNumCasa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.tbNumCasa.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbNumCasa.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbNumCasa.ForeColor = System.Drawing.Color.White;
+            this.tbNumCasa.Location = new System.Drawing.Point(7, 6);
+            this.tbNumCasa.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.tbNumCasa.Name = "tbNumCasa";
+            this.tbNumCasa.Size = new System.Drawing.Size(52, 22);
+            this.tbNumCasa.TabIndex = 22;
             // 
             // label21
             // 
@@ -2056,19 +2069,6 @@
             this.label14.Size = new System.Drawing.Size(122, 17);
             this.label14.TabIndex = 0;
             this.label14.Text = "Categoria da CHN";
-            // 
-            // tbNumCasa
-            // 
-            this.tbNumCasa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbNumCasa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.tbNumCasa.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbNumCasa.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbNumCasa.ForeColor = System.Drawing.Color.White;
-            this.tbNumCasa.Location = new System.Drawing.Point(7, 6);
-            this.tbNumCasa.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.tbNumCasa.Name = "tbNumCasa";
-            this.tbNumCasa.Size = new System.Drawing.Size(52, 22);
-            this.tbNumCasa.TabIndex = 22;
             // 
             // CadastroTerceiros
             // 

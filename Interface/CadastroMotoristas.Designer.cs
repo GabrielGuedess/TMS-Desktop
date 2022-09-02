@@ -70,7 +70,7 @@
             this.panel22 = new System.Windows.Forms.Panel();
             this.panelBorderRounded5 = new Interface.Properties.PanelBorderRounded();
             this.tbNumeroCasa = new Interface.Properties.textBoxnOnlyNum();
-            this.tbNumCasa = new Interface.Properties.textBoxnOnlyNum();
+            
             this.label21 = new System.Windows.Forms.Label();
             this.panelBorderRoundedEndereco = new Interface.Properties.PanelBorderRounded();
             this.tbLogradouro = new Interface.Properties.textBoxTemplete();
@@ -727,7 +727,6 @@
             this.panelBorderRounded5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelBorderRounded5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
             this.panelBorderRounded5.Controls.Add(this.tbNumeroCasa);
-            this.panelBorderRounded5.Controls.Add(this.tbNumCasa);
             this.panelBorderRounded5.Location = new System.Drawing.Point(189, 37);
             this.panelBorderRounded5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelBorderRounded5.Name = "panelBorderRounded5";
@@ -747,18 +746,7 @@
             this.tbNumeroCasa.Size = new System.Drawing.Size(51, 22);
             this.tbNumeroCasa.TabIndex = 1;
             // 
-            // tbNumCasa
-            // 
-            this.tbNumCasa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbNumCasa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.tbNumCasa.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbNumCasa.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbNumCasa.ForeColor = System.Drawing.Color.White;
-            this.tbNumCasa.Location = new System.Drawing.Point(8, -29);
-            this.tbNumCasa.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.tbNumCasa.Name = "tbNumCasa";
-            this.tbNumCasa.Size = new System.Drawing.Size(3, 22);
-            this.tbNumCasa.TabIndex = 0;
+          
             // 
             // label21
             // 
@@ -950,6 +938,7 @@
             this.tbID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tbID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
             this.tbID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbID.Enabled = false;
             this.tbID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tbID.ForeColor = System.Drawing.Color.White;
             this.tbID.Location = new System.Drawing.Point(10, 6);
@@ -1809,7 +1798,6 @@
         private Panel panel21;
         private Panel panel22;
         private Properties.PanelBorderRounded panelBorderRounded5;
-        private Properties.textBoxnOnlyNum tbNumCasa;
         private Label label21;
         private Properties.PanelBorderRounded panelBorderRoundedEndereco;
         private Properties.textBoxTemplete tbLogradouro;

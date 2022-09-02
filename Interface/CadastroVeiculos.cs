@@ -175,6 +175,13 @@ namespace Interface
                 tbTara.Focus();
                 return false;
             }
+            if (comboTipoCarroceria.Text == string.Empty)
+            {
+                MessageBox.Show("Necessário preencher o campo Tipo Carroceria!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                comboTipoCarroceria.Focus();
+                return false;
+            }
+
             return true;
         }
 

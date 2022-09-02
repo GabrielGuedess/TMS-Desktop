@@ -20,6 +20,12 @@ namespace Interface
 
         private bool validar()
         {
+            if(mkCNPJ.Text.Length < 14)
+            {
+                MessageBox.Show("O campo CNPF é obrigatório!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                mkCNPJ.Focus();
+                return false;
+            }
             if (tbRazaoSocial.Text == string.Empty)
             {
                 MessageBox.Show("O campo Razão Social é obrigatório!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);

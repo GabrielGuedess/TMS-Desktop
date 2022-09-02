@@ -89,7 +89,7 @@ namespace Interface
 
 
 
-            if (mkCPF.Text.Length < 11)
+            if (mkCPF.MaskCompleted == false)
             {
                 MessageBox.Show("É necessário preencher o campo CPF corretamente!", "Erro", botao, icone);
                 mkCPF.Focus();
@@ -103,7 +103,7 @@ namespace Interface
                 return false;
             }
 
-            else if (mkCelular.Text.Length < 11)
+            else if (mkCelular.MaskCompleted == false)
             {
                 MessageBox.Show("É necessário preencher o campo celular corretamente!", "Erro", botao, icone);
                 mkCelular.Focus();
@@ -115,19 +115,19 @@ namespace Interface
                 mkTelefone.Focus();
                 return false;
             }
-            else if (mkCEP.Text.Length < 8)
+            else if (mkCEP.MaskCompleted == false)
             {
                 MessageBox.Show("É necessário preencher o campo CEP corretamente!", "Erro", botao, icone);
                 mkCEP.Focus();
                 return false;
             }
-            else if (mkRNTRC.Text.Length < 9)
+            else if (mkRNTRC.MaskCompleted == false)
             {
                 MessageBox.Show("É necessário preencher o campo Nº RNTRC corretamente!", "Erro", botao, icone);
                 mkRNTRC.Focus();
                 return false;
             }
-            else if (mkCNH.Text.Length < 10)
+            else if (mkCNH.MaskCompleted == false)
             {
                 MessageBox.Show("É necessário preencher o campo Nº CNH corretamente!", "Erro", botao, icone);
                 mkCNH.Focus();
@@ -151,31 +151,78 @@ namespace Interface
                 dateInicioAtividade.Focus();
                 return false;
             }
-            else if (comboMOPP.Text == "")
+            else if (comboMOPP.Text == String.Empty)
             {
                 MessageBox.Show("É necessário preencher o campo Curso MOPP corretamente!", "Erro", botao, icone);
                 comboMOPP.Focus();
                 return false;
             }
-            else if (comboTipoVeiculo.Text == "")
+            else if (comboTipoVeiculo.Text == String.Empty)
             {
                 MessageBox.Show("É necessário preencher o campo de Tipo de Veículo corretamente!", "Erro", botao, icone);
                 comboTipoVeiculo.Focus();
                 return false;
             }
-            else if (comboTipoContrato.Text == "")
+            else if (comboTipoContrato.Text == String.Empty)
             {
                 MessageBox.Show("É necessário preencher o campo Tipo de Contrato corretamente!", "Erro", botao, icone);
                 comboTipoContrato.Focus();
                 return false;
             }
-            else if (comboSituacaoContrato.Text == "")
+            else if (comboSituacaoContrato.Text == String.Empty)
             {
                 MessageBox.Show("É necessário preencher o campo Situação corretamente!", "Erro", botao, icone);
                 comboSituacaoContrato.Focus();
                 return false;
             }
-
+            else if (tbLogradouro.Text == String.Empty)
+            {
+                MessageBox.Show("É necessário preencher o campo Logradouro corretamente!", "Erro", botao, icone);
+                tbLogradouro.Focus();
+                return false;
+            }
+            else if (tbBairro.Text == String.Empty)
+            {
+                MessageBox.Show("É necessário preencher o campo Bairro corretamente!", "Erro", botao, icone);
+                tbBairro.Focus();
+                return false;
+            }
+            else if (tbNumCasa.Text == String.Empty)
+            {
+                MessageBox.Show("É necessário preencher o campo N° corretamente!", "Erro", botao, icone);
+               tbNumCasa.Focus();
+                return false;
+            }
+            else if (comboCidade.Text == String.Empty)
+            {
+                MessageBox.Show("É necessário preencher o campo Cidade corretamente!", "Erro", botao, icone);
+                comboCidade.Focus();
+                return false;
+            }
+            else if (comboUF.Text == String.Empty)
+            {
+                MessageBox.Show("É necessário preencher o campo UF corretamente!", "Erro", botao, icone);
+                comboUF.Focus();
+                return false;
+            }
+            else if (comboGenero.Text == String.Empty)
+            {
+                MessageBox.Show("É necessário preencher o campo Genero corretamente!", "Erro", botao, icone);
+                comboGenero.Focus();
+                return false;
+            }
+            else if (textEmail.Text == String.Empty)
+            {
+                MessageBox.Show("É necessário preencher o campo Email corretamente!", "Erro", botao, icone);
+                textEmail.Focus();
+                return false;
+            }
+            else if (comboCategoriaCNH.Text == String.Empty)
+            {
+                MessageBox.Show("É necessário preencher o campo Categoria CNH corretamente!", "Erro", botao, icone);
+                comboCategoriaCNH.Focus();
+                return false;
+            }
             return true;
 
         }

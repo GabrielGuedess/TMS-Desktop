@@ -646,7 +646,7 @@
             this.mkRNTRC.ForeColor = System.Drawing.Color.White;
             this.mkRNTRC.Location = new System.Drawing.Point(5, 6);
             this.mkRNTRC.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.mkRNTRC.Mask = "(00) 00000-0000";
+            this.mkRNTRC.Mask = "00000000";
             this.mkRNTRC.Name = "mkRNTRC";
             this.mkRNTRC.Size = new System.Drawing.Size(193, 22);
             this.mkRNTRC.TabIndex = 2;
@@ -707,7 +707,7 @@
             this.mkRenavam.ForeColor = System.Drawing.Color.White;
             this.mkRenavam.Location = new System.Drawing.Point(5, 6);
             this.mkRenavam.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.mkRenavam.Mask = "(00) 00000-0000";
+            this.mkRenavam.Mask = "000000000";
             this.mkRenavam.Name = "mkRenavam";
             this.mkRenavam.Size = new System.Drawing.Size(213, 22);
             this.mkRenavam.TabIndex = 1;
@@ -1651,7 +1651,7 @@
             this.mkCPF.ForeColor = System.Drawing.Color.White;
             this.mkCPF.Location = new System.Drawing.Point(5, 6);
             this.mkCPF.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.mkCPF.Mask = "(00) 00000-0000";
+            this.mkCPF.Mask = "000.000.000-00";
             this.mkCPF.Name = "mkCPF";
             this.mkCPF.Size = new System.Drawing.Size(213, 22);
             this.mkCPF.TabIndex = 1;
