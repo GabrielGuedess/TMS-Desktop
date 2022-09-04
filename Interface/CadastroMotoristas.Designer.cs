@@ -137,7 +137,6 @@
             this.typeData = new System.Windows.Forms.Label();
             this.maskInput = new Interface.Properties.masckedboxTemplete();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.panel37 = new System.Windows.Forms.Panel();
             this.contentMotorista.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel25.SuspendLayout();
@@ -197,7 +196,6 @@
             this.searchPanel.SuspendLayout();
             this.panelSerch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panel37.SuspendLayout();
             this.SuspendLayout();
             // 
             // contentMotorista
@@ -716,7 +714,6 @@
             // panel22
             // 
             this.panel22.BackColor = System.Drawing.Color.Transparent;
-            this.panel22.Controls.Add(this.panel37);
             this.panel22.Controls.Add(this.panelBorderRoundedEndereco);
             this.panel22.Controls.Add(this.label15);
             this.panel22.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1631,15 +1628,6 @@
             this.pictureBox3.TabIndex = 1;
             this.pictureBox3.TabStop = false;
             // 
-            // panel37
-            // 
-            this.panel37.Controls.Add(this.panelBorderRounded5);
-            this.panel37.Controls.Add(this.label21);
-            this.panel37.Location = new System.Drawing.Point(176, 0);
-            this.panel37.Name = "panel37";
-            this.panel37.Size = new System.Drawing.Size(76, 70);
-            this.panel37.TabIndex = 17;
-            // 
             // CadastroMotoristas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1742,8 +1730,6 @@
             this.panelSerch.ResumeLayout(false);
             this.panelSerch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.panel37.ResumeLayout(false);
-            this.panel37.PerformLayout();
             this.ResumeLayout(false);
 
         }
