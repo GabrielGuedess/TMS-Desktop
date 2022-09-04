@@ -51,7 +51,11 @@ namespace Interface
         {
             try
             {
-                if (validarControles() == false)
+                List<string> notValidar = new();
+                notValidar.Add(mkTelefone.Name);
+                notValidar.Add(dateFimAtividade.Name);
+                notValidar.Add(tbComplemento.Name);
+                if (Validation.Validar(contentTerceiros, notValidar) == false)
                 {
                     return;
                 }
@@ -80,7 +84,7 @@ namespace Interface
 
         }
 
-        private bool validarControles()
+        /*private bool validarControles()
         {
 
             MessageBoxButtons botao = MessageBoxButtons.OK;
@@ -225,6 +229,6 @@ namespace Interface
             }
             return true;
 
-        }
+        }*/
     }
 }

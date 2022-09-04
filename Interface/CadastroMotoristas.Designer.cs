@@ -70,7 +70,6 @@
             this.panel22 = new System.Windows.Forms.Panel();
             this.panelBorderRounded5 = new Interface.Properties.PanelBorderRounded();
             this.tbNumeroCasa = new Interface.Properties.textBoxnOnlyNum();
-            
             this.label21 = new System.Windows.Forms.Label();
             this.panelBorderRoundedEndereco = new Interface.Properties.PanelBorderRounded();
             this.tbLogradouro = new Interface.Properties.textBoxTemplete();
@@ -137,6 +136,7 @@
             this.typeData = new System.Windows.Forms.Label();
             this.maskInput = new Interface.Properties.masckedboxTemplete();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.panel37 = new System.Windows.Forms.Panel();
             this.contentMotorista.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel25.SuspendLayout();
@@ -196,6 +196,7 @@
             this.searchPanel.SuspendLayout();
             this.panelSerch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel37.SuspendLayout();
             this.SuspendLayout();
             // 
             // contentMotorista
@@ -711,8 +712,7 @@
             // panel22
             // 
             this.panel22.BackColor = System.Drawing.Color.Transparent;
-            this.panel22.Controls.Add(this.panelBorderRounded5);
-            this.panel22.Controls.Add(this.label21);
+            this.panel22.Controls.Add(this.panel37);
             this.panel22.Controls.Add(this.panelBorderRoundedEndereco);
             this.panel22.Controls.Add(this.label15);
             this.panel22.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -727,10 +727,10 @@
             this.panelBorderRounded5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelBorderRounded5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
             this.panelBorderRounded5.Controls.Add(this.tbNumeroCasa);
-            this.panelBorderRounded5.Location = new System.Drawing.Point(189, 37);
+            this.panelBorderRounded5.Location = new System.Drawing.Point(5, 36);
             this.panelBorderRounded5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelBorderRounded5.Name = "panelBorderRounded5";
-            this.panelBorderRounded5.Size = new System.Drawing.Size(57, 33);
+            this.panelBorderRounded5.Size = new System.Drawing.Size(66, 33);
             this.panelBorderRounded5.TabIndex = 6;
             // 
             // tbNumeroCasa
@@ -743,17 +743,15 @@
             this.tbNumeroCasa.Location = new System.Drawing.Point(5, 5);
             this.tbNumeroCasa.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbNumeroCasa.Name = "tbNumeroCasa";
-            this.tbNumeroCasa.Size = new System.Drawing.Size(51, 22);
+            this.tbNumeroCasa.Size = new System.Drawing.Size(56, 22);
             this.tbNumeroCasa.TabIndex = 1;
-            // 
-          
             // 
             // label21
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.label21.ForeColor = System.Drawing.Color.White;
-            this.label21.Location = new System.Drawing.Point(189, 4);
+            this.label21.Location = new System.Drawing.Point(5, 5);
             this.label21.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(24, 17);
@@ -780,7 +778,7 @@
             this.tbLogradouro.Location = new System.Drawing.Point(12, 5);
             this.tbLogradouro.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbLogradouro.Name = "tbLogradouro";
-            this.tbLogradouro.Size = new System.Drawing.Size(225, 22);
+            this.tbLogradouro.Size = new System.Drawing.Size(146, 22);
             this.tbLogradouro.TabIndex = 2;
             // 
             // label15
@@ -1182,7 +1180,7 @@
             this.mkRG.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.mkRG.Mask = "00.000.000-0";
             this.mkRG.Name = "mkRG";
-            this.mkRG.Size = new System.Drawing.Size(207, 22);
+            this.mkRG.Size = new System.Drawing.Size(233, 22);
             this.mkRG.TabIndex = 2;
             this.mkRG.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
@@ -1304,7 +1302,7 @@
             this.mkCelular.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.mkCelular.Mask = "(00) 00000-0000";
             this.mkCelular.Name = "mkCelular";
-            this.mkCelular.Size = new System.Drawing.Size(294, 22);
+            this.mkCelular.Size = new System.Drawing.Size(243, 22);
             this.mkCelular.TabIndex = 5;
             this.mkCelular.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
@@ -1606,6 +1604,15 @@
             this.pictureBox3.TabIndex = 1;
             this.pictureBox3.TabStop = false;
             // 
+            // panel37
+            // 
+            this.panel37.Controls.Add(this.panelBorderRounded5);
+            this.panel37.Controls.Add(this.label21);
+            this.panel37.Location = new System.Drawing.Point(176, 0);
+            this.panel37.Name = "panel37";
+            this.panel37.Size = new System.Drawing.Size(76, 70);
+            this.panel37.TabIndex = 17;
+            // 
             // CadastroMotoristas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1708,6 +1715,8 @@
             this.panelSerch.ResumeLayout(false);
             this.panelSerch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel37.ResumeLayout(false);
+            this.panel37.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1821,5 +1830,6 @@
         private Properties.PanelBorderRounded panelBorderRounded2;
         private Properties.textBoxTemplete tbComplemento;
         private Label label19;
+        private Panel panel37;
     }
 }

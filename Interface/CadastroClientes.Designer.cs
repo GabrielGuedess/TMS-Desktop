@@ -198,6 +198,7 @@
             this.mkBoxCdClientSearch.Name = "mkBoxCdClientSearch";
             this.mkBoxCdClientSearch.Size = new System.Drawing.Size(224, 22);
             this.mkBoxCdClientSearch.TabIndex = 2;
+            this.mkBoxCdClientSearch.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // pictureBox3
             // 
@@ -228,8 +229,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.Controls.Add(this.searchPanel);
             this.Controls.Add(this.ClienteCNPJ);
+            this.Controls.Add(this.searchPanel);
             this.Controls.Add(this.ClienteCPF);
             this.Controls.Add(this.panel17);
             this.Margin = new System.Windows.Forms.Padding(0);

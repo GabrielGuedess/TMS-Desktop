@@ -36,7 +36,6 @@ namespace Interface.Properties
         {
             try
             {
-                string result;
                 DB.Open();
                 OleDbCommand comando = new OleDbCommand();
                 comando.Connection = DB;

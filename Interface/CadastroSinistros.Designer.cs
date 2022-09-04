@@ -46,10 +46,10 @@
             this.tbCodigdoSinistro = new Interface.Properties.textBoxOnlyNum_Letters();
             this.labelNomeClient = new System.Windows.Forms.Label();
             this.panelDtNascClient = new System.Windows.Forms.Panel();
-            this.subpanelDtNascClient = new System.Windows.Forms.Panel();
+            this.subpanelDescicaoSinistro = new System.Windows.Forms.Panel();
+            this.labelDescricaoSinistro = new System.Windows.Forms.Label();
             this.panelDateTimerClient = new Interface.Properties.PanelBorderRounded();
             this.tbDescricaoSinistro = new Interface.Properties.textBoxOnlyNum_Letters();
-            this.label5 = new System.Windows.Forms.Label();
             this.panelButton = new System.Windows.Forms.Panel();
             this.cadastrarSinistro = new System.Windows.Forms.Button();
             this.panel51 = new System.Windows.Forms.Panel();
@@ -65,7 +65,7 @@
             this.subpanelNomeClient.SuspendLayout();
             this.panelTextNomeClient.SuspendLayout();
             this.panelDtNascClient.SuspendLayout();
-            this.subpanelDtNascClient.SuspendLayout();
+            this.subpanelDescicaoSinistro.SuspendLayout();
             this.panelDateTimerClient.SuspendLayout();
             this.panelButton.SuspendLayout();
             this.panel51.SuspendLayout();
@@ -297,7 +297,7 @@
             // 
             // panelDtNascClient
             // 
-            this.panelDtNascClient.Controls.Add(this.subpanelDtNascClient);
+            this.panelDtNascClient.Controls.Add(this.subpanelDescicaoSinistro);
             this.panelDtNascClient.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDtNascClient.Location = new System.Drawing.Point(596, 0);
             this.panelDtNascClient.Margin = new System.Windows.Forms.Padding(0);
@@ -306,17 +306,29 @@
             this.panelDtNascClient.Size = new System.Drawing.Size(299, 100);
             this.panelDtNascClient.TabIndex = 2;
             // 
-            // subpanelDtNascClient
+            // subpanelDescicaoSinistro
             // 
-            this.subpanelDtNascClient.BackColor = System.Drawing.Color.Transparent;
-            this.subpanelDtNascClient.Controls.Add(this.panelDateTimerClient);
-            this.subpanelDtNascClient.Controls.Add(this.label5);
-            this.subpanelDtNascClient.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.subpanelDtNascClient.Location = new System.Drawing.Point(20, 20);
-            this.subpanelDtNascClient.Margin = new System.Windows.Forms.Padding(0);
-            this.subpanelDtNascClient.Name = "subpanelDtNascClient";
-            this.subpanelDtNascClient.Size = new System.Drawing.Size(259, 70);
-            this.subpanelDtNascClient.TabIndex = 9;
+            this.subpanelDescicaoSinistro.BackColor = System.Drawing.Color.Transparent;
+            this.subpanelDescicaoSinistro.Controls.Add(this.labelDescricaoSinistro);
+            this.subpanelDescicaoSinistro.Controls.Add(this.panelDateTimerClient);
+            this.subpanelDescicaoSinistro.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.subpanelDescicaoSinistro.Location = new System.Drawing.Point(20, 20);
+            this.subpanelDescicaoSinistro.Margin = new System.Windows.Forms.Padding(0);
+            this.subpanelDescicaoSinistro.Name = "subpanelDescicaoSinistro";
+            this.subpanelDescicaoSinistro.Size = new System.Drawing.Size(259, 70);
+            this.subpanelDescicaoSinistro.TabIndex = 9;
+            // 
+            // labelDescricaoSinistro
+            // 
+            this.labelDescricaoSinistro.AutoSize = true;
+            this.labelDescricaoSinistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.labelDescricaoSinistro.ForeColor = System.Drawing.Color.White;
+            this.labelDescricaoSinistro.Location = new System.Drawing.Point(6, 5);
+            this.labelDescricaoSinistro.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
+            this.labelDescricaoSinistro.Name = "labelDescricaoSinistro";
+            this.labelDescricaoSinistro.Size = new System.Drawing.Size(142, 17);
+            this.labelDescricaoSinistro.TabIndex = 0;
+            this.labelDescricaoSinistro.Text = "Descrição do Sinistro";
             // 
             // panelDateTimerClient
             // 
@@ -341,18 +353,6 @@
             this.tbDescricaoSinistro.Name = "tbDescricaoSinistro";
             this.tbDescricaoSinistro.Size = new System.Drawing.Size(228, 22);
             this.tbDescricaoSinistro.TabIndex = 1;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(5, 5);
-            this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(142, 17);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Descrição do Sinistro";
             // 
             // panelButton
             // 
@@ -442,8 +442,8 @@
             this.panelTextNomeClient.ResumeLayout(false);
             this.panelTextNomeClient.PerformLayout();
             this.panelDtNascClient.ResumeLayout(false);
-            this.subpanelDtNascClient.ResumeLayout(false);
-            this.subpanelDtNascClient.PerformLayout();
+            this.subpanelDescicaoSinistro.ResumeLayout(false);
+            this.subpanelDescicaoSinistro.PerformLayout();
             this.panelDateTimerClient.ResumeLayout(false);
             this.panelDateTimerClient.PerformLayout();
             this.panelButton.ResumeLayout(false);
@@ -467,9 +467,9 @@
         private Properties.PanelBorderRounded panelTextNomeClient;
         private Label labelNomeClient;
         private Panel panelDtNascClient;
-        private Panel subpanelDtNascClient;
+        private Panel subpanelDescicaoSinistro;
         private Properties.PanelBorderRounded panelDateTimerClient;
-        private Label label5;
+        private Label labelDescricaoSinistro;
         private Panel panelButton;
         private Panel panel51;
         private Button button10;

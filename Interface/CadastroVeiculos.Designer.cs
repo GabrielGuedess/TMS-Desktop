@@ -153,6 +153,7 @@
             this.cadastrar = new System.Windows.Forms.Button();
             this.panel51 = new System.Windows.Forms.Panel();
             this.button10 = new System.Windows.Forms.Button();
+            this.panel25 = new System.Windows.Forms.Panel();
             this.searchPanel.SuspendLayout();
             this.panelSerch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -223,6 +224,7 @@
             this.panelBorderRounded9.SuspendLayout();
             this.panelButton.SuspendLayout();
             this.panel51.SuspendLayout();
+            this.panel25.SuspendLayout();
             this.SuspendLayout();
             // 
             // searchPanel
@@ -1391,6 +1393,7 @@
             // 
             // panelCidadeUFClient
             // 
+            this.panelCidadeUFClient.Controls.Add(this.panel25);
             this.panelCidadeUFClient.Controls.Add(this.subpanelCidadeUFClient);
             this.panelCidadeUFClient.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelCidadeUFClient.Location = new System.Drawing.Point(550, 200);
@@ -1405,8 +1408,6 @@
             this.subpanelCidadeUFClient.BackColor = System.Drawing.Color.Transparent;
             this.subpanelCidadeUFClient.Controls.Add(this.labelCidadeClient);
             this.subpanelCidadeUFClient.Controls.Add(this.comboCidade);
-            this.subpanelCidadeUFClient.Controls.Add(this.comboUF);
-            this.subpanelCidadeUFClient.Controls.Add(this.labelUFClient);
             this.subpanelCidadeUFClient.Dock = System.Windows.Forms.DockStyle.Fill;
             this.subpanelCidadeUFClient.Location = new System.Drawing.Point(20, 20);
             this.subpanelCidadeUFClient.Margin = new System.Windows.Forms.Padding(0);
@@ -1474,7 +1475,7 @@
             "SP",
             "SE",
             "TO"});
-            this.comboUF.Location = new System.Drawing.Point(6, 36);
+            this.comboUF.Location = new System.Drawing.Point(5, 35);
             this.comboUF.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.comboUF.Name = "comboUF";
             this.comboUF.Size = new System.Drawing.Size(72, 33);
@@ -1839,6 +1840,15 @@
             this.button10.Text = "Salvar";
             this.button10.UseVisualStyleBackColor = false;
             // 
+            // panel25
+            // 
+            this.panel25.Controls.Add(this.labelUFClient);
+            this.panel25.Controls.Add(this.comboUF);
+            this.panel25.Location = new System.Drawing.Point(20, 20);
+            this.panel25.Name = "panel25";
+            this.panel25.Size = new System.Drawing.Size(89, 70);
+            this.panel25.TabIndex = 15;
+            // 
             // CadastroVeiculos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1962,6 +1972,8 @@
             this.panelBorderRounded9.PerformLayout();
             this.panelButton.ResumeLayout(false);
             this.panel51.ResumeLayout(false);
+            this.panel25.ResumeLayout(false);
+            this.panel25.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2092,5 +2104,6 @@
         private Properties.textBoxOnlyNum_Letters tbAdicionalMotorista;
         private Properties.textBoxOnlyNum_Letters textBoxOnlyNum_Letters1;
         private Label label12;
+        private Panel panel25;
     }
 }

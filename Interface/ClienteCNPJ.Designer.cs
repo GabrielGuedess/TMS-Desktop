@@ -81,18 +81,20 @@
             this.label10 = new System.Windows.Forms.Label();
             this.panelCidadeUFClient = new System.Windows.Forms.Panel();
             this.subpanelCidadeUFClient = new System.Windows.Forms.Panel();
-            this.labelCidadeClient = new System.Windows.Forms.Label();
-            this.comboCidade = new System.Windows.Forms.ComboBox();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.comboUF = new System.Windows.Forms.ComboBox();
             this.labelUFClient = new System.Windows.Forms.Label();
+            this.labelCidadeClient = new System.Windows.Forms.Label();
+            this.comboCidade = new System.Windows.Forms.ComboBox();
             this.panelEndereco = new System.Windows.Forms.Panel();
             this.subpanelEndereco = new System.Windows.Forms.Panel();
-            this.panelBorderRounded3 = new Interface.Properties.PanelBorderRounded();
-            this.tbNumCasa = new Interface.Properties.textBoxTemplete();
-            this.label2 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.panelTextEnderecoClient = new Interface.Properties.PanelBorderRounded();
             this.tbLogradouro = new Interface.Properties.textBoxTemplete();
             this.label13 = new System.Windows.Forms.Label();
+            this.panelBorderRounded3 = new Interface.Properties.PanelBorderRounded();
+            this.tbNumCasa = new Interface.Properties.textBoxTemplete();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelBorderRounded2 = new Interface.Properties.PanelBorderRounded();
@@ -134,10 +136,12 @@
             this.panelTextCEPClient.SuspendLayout();
             this.panelCidadeUFClient.SuspendLayout();
             this.subpanelCidadeUFClient.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.panelEndereco.SuspendLayout();
             this.subpanelEndereco.SuspendLayout();
-            this.panelBorderRounded3.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.panelTextEnderecoClient.SuspendLayout();
+            this.panelBorderRounded3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelBorderRounded2.SuspendLayout();
@@ -326,7 +330,7 @@
             this.panelTextCPFClient.Location = new System.Drawing.Point(5, 37);
             this.panelTextCPFClient.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelTextCPFClient.Name = "panelTextCPFClient";
-            this.panelTextCPFClient.Size = new System.Drawing.Size(159, 33);
+            this.panelTextCPFClient.Size = new System.Drawing.Size(109, 33);
             this.panelTextCPFClient.TabIndex = 2;
             // 
             // mkCNPJ
@@ -340,7 +344,7 @@
             this.mkCNPJ.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.mkCNPJ.Mask = "99.999.999/9999-99";
             this.mkCNPJ.Name = "mkCNPJ";
-            this.mkCNPJ.Size = new System.Drawing.Size(139, 22);
+            this.mkCNPJ.Size = new System.Drawing.Size(39, 22);
             this.mkCNPJ.TabIndex = 0;
             this.mkCNPJ.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
@@ -388,7 +392,7 @@
             this.panelTextNomeClient.Location = new System.Drawing.Point(5, 37);
             this.panelTextNomeClient.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelTextNomeClient.Name = "panelTextNomeClient";
-            this.panelTextNomeClient.Size = new System.Drawing.Size(242, 33);
+            this.panelTextNomeClient.Size = new System.Drawing.Size(192, 33);
             this.panelTextNomeClient.TabIndex = 1;
             // 
             // tbNomeFantasia
@@ -446,7 +450,7 @@
             this.panelDateTimerClient.Location = new System.Drawing.Point(5, 37);
             this.panelDateTimerClient.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelDateTimerClient.Name = "panelDateTimerClient";
-            this.panelDateTimerClient.Size = new System.Drawing.Size(244, 33);
+            this.panelDateTimerClient.Size = new System.Drawing.Size(195, 33);
             this.panelDateTimerClient.TabIndex = 2;
             // 
             // mkInscricaoEstatudal
@@ -460,7 +464,7 @@
             this.mkInscricaoEstatudal.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.mkInscricaoEstatudal.Mask = "000.000.000.000";
             this.mkInscricaoEstatudal.Name = "mkInscricaoEstatudal";
-            this.mkInscricaoEstatudal.Size = new System.Drawing.Size(223, 22);
+            this.mkInscricaoEstatudal.Size = new System.Drawing.Size(125, 22);
             this.mkInscricaoEstatudal.TabIndex = 0;
             this.mkInscricaoEstatudal.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
@@ -508,7 +512,7 @@
             this.panelBorderRounded1.Location = new System.Drawing.Point(5, 36);
             this.panelBorderRounded1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelBorderRounded1.Name = "panelBorderRounded1";
-            this.panelBorderRounded1.Size = new System.Drawing.Size(242, 33);
+            this.panelBorderRounded1.Size = new System.Drawing.Size(192, 33);
             this.panelBorderRounded1.TabIndex = 3;
             // 
             // tbRazaoSocial
@@ -521,7 +525,7 @@
             this.tbRazaoSocial.Location = new System.Drawing.Point(10, 6);
             this.tbRazaoSocial.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbRazaoSocial.Name = "tbRazaoSocial";
-            this.tbRazaoSocial.Size = new System.Drawing.Size(222, 22);
+            this.tbRazaoSocial.Size = new System.Drawing.Size(122, 22);
             this.tbRazaoSocial.TabIndex = 1;
             // 
             // textBoxOnlyLetters1
@@ -579,7 +583,7 @@
             this.panelTextRGClient.Location = new System.Drawing.Point(5, 36);
             this.panelTextRGClient.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelTextRGClient.Name = "panelTextRGClient";
-            this.panelTextRGClient.Size = new System.Drawing.Size(242, 33);
+            this.panelTextRGClient.Size = new System.Drawing.Size(192, 33);
             this.panelTextRGClient.TabIndex = 2;
             // 
             // mkCelular
@@ -593,7 +597,7 @@
             this.mkCelular.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.mkCelular.Mask = "(00) 00000-0000";
             this.mkCelular.Name = "mkCelular";
-            this.mkCelular.Size = new System.Drawing.Size(222, 22);
+            this.mkCelular.Size = new System.Drawing.Size(122, 22);
             this.mkCelular.TabIndex = 0;
             this.mkCelular.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
@@ -640,7 +644,7 @@
             this.panelTextTelefoneCLient.Location = new System.Drawing.Point(5, 36);
             this.panelTextTelefoneCLient.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelTextTelefoneCLient.Name = "panelTextTelefoneCLient";
-            this.panelTextTelefoneCLient.Size = new System.Drawing.Size(244, 33);
+            this.panelTextTelefoneCLient.Size = new System.Drawing.Size(195, 33);
             this.panelTextTelefoneCLient.TabIndex = 2;
             // 
             // mkTelefone
@@ -654,7 +658,7 @@
             this.mkTelefone.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.mkTelefone.Mask = "(00) 0000-0000";
             this.mkTelefone.Name = "mkTelefone";
-            this.mkTelefone.Size = new System.Drawing.Size(223, 22);
+            this.mkTelefone.Size = new System.Drawing.Size(125, 22);
             this.mkTelefone.TabIndex = 1;
             this.mkTelefone.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
@@ -701,7 +705,7 @@
             this.panelTextEmailClient.Location = new System.Drawing.Point(5, 36);
             this.panelTextEmailClient.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelTextEmailClient.Name = "panelTextEmailClient";
-            this.panelTextEmailClient.Size = new System.Drawing.Size(242, 33);
+            this.panelTextEmailClient.Size = new System.Drawing.Size(192, 33);
             this.panelTextEmailClient.TabIndex = 2;
             // 
             // tbEmail
@@ -759,7 +763,7 @@
             this.panelTextCEPClient.Location = new System.Drawing.Point(5, 36);
             this.panelTextCEPClient.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelTextCEPClient.Name = "panelTextCEPClient";
-            this.panelTextCEPClient.Size = new System.Drawing.Size(242, 33);
+            this.panelTextCEPClient.Size = new System.Drawing.Size(192, 33);
             this.panelTextCEPClient.TabIndex = 2;
             // 
             // mkCEP
@@ -773,7 +777,7 @@
             this.mkCEP.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.mkCEP.Mask = "00000-000";
             this.mkCEP.Name = "mkCEP";
-            this.mkCEP.Size = new System.Drawing.Size(222, 22);
+            this.mkCEP.Size = new System.Drawing.Size(122, 22);
             this.mkCEP.TabIndex = 1;
             this.mkCEP.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
@@ -803,10 +807,9 @@
             // subpanelCidadeUFClient
             // 
             this.subpanelCidadeUFClient.BackColor = System.Drawing.Color.Transparent;
+            this.subpanelCidadeUFClient.Controls.Add(this.panel5);
             this.subpanelCidadeUFClient.Controls.Add(this.labelCidadeClient);
             this.subpanelCidadeUFClient.Controls.Add(this.comboCidade);
-            this.subpanelCidadeUFClient.Controls.Add(this.comboUF);
-            this.subpanelCidadeUFClient.Controls.Add(this.labelUFClient);
             this.subpanelCidadeUFClient.Dock = System.Windows.Forms.DockStyle.Fill;
             this.subpanelCidadeUFClient.Location = new System.Drawing.Point(20, 20);
             this.subpanelCidadeUFClient.Margin = new System.Windows.Forms.Padding(0);
@@ -814,31 +817,14 @@
             this.subpanelCidadeUFClient.Size = new System.Drawing.Size(254, 70);
             this.subpanelCidadeUFClient.TabIndex = 12;
             // 
-            // labelCidadeClient
+            // panel5
             // 
-            this.labelCidadeClient.AutoSize = true;
-            this.labelCidadeClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.labelCidadeClient.ForeColor = System.Drawing.Color.White;
-            this.labelCidadeClient.Location = new System.Drawing.Point(125, 5);
-            this.labelCidadeClient.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
-            this.labelCidadeClient.Name = "labelCidadeClient";
-            this.labelCidadeClient.Size = new System.Drawing.Size(52, 17);
-            this.labelCidadeClient.TabIndex = 7;
-            this.labelCidadeClient.Text = "Cidade";
-            // 
-            // comboCidade
-            // 
-            this.comboCidade.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboCidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
-            this.comboCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.comboCidade.ForeColor = System.Drawing.Color.White;
-            this.comboCidade.FormattingEnabled = true;
-            this.comboCidade.Location = new System.Drawing.Point(125, 36);
-            this.comboCidade.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.comboCidade.Name = "comboCidade";
-            this.comboCidade.Size = new System.Drawing.Size(124, 33);
-            this.comboCidade.TabIndex = 6;
+            this.panel5.Controls.Add(this.comboUF);
+            this.panel5.Controls.Add(this.labelUFClient);
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(91, 70);
+            this.panel5.TabIndex = 15;
             // 
             // comboUF
             // 
@@ -875,7 +861,7 @@
             "SP",
             "SE",
             "TO"});
-            this.comboUF.Location = new System.Drawing.Point(5, 36);
+            this.comboUF.Location = new System.Drawing.Point(5, 37);
             this.comboUF.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.comboUF.Name = "comboUF";
             this.comboUF.Size = new System.Drawing.Size(72, 33);
@@ -893,6 +879,32 @@
             this.labelUFClient.TabIndex = 0;
             this.labelUFClient.Text = "UF";
             // 
+            // labelCidadeClient
+            // 
+            this.labelCidadeClient.AutoSize = true;
+            this.labelCidadeClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.labelCidadeClient.ForeColor = System.Drawing.Color.White;
+            this.labelCidadeClient.Location = new System.Drawing.Point(125, 5);
+            this.labelCidadeClient.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
+            this.labelCidadeClient.Name = "labelCidadeClient";
+            this.labelCidadeClient.Size = new System.Drawing.Size(52, 17);
+            this.labelCidadeClient.TabIndex = 7;
+            this.labelCidadeClient.Text = "Cidade";
+            // 
+            // comboCidade
+            // 
+            this.comboCidade.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboCidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
+            this.comboCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.comboCidade.ForeColor = System.Drawing.Color.White;
+            this.comboCidade.FormattingEnabled = true;
+            this.comboCidade.Location = new System.Drawing.Point(102, 37);
+            this.comboCidade.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.comboCidade.Name = "comboCidade";
+            this.comboCidade.Size = new System.Drawing.Size(75, 33);
+            this.comboCidade.TabIndex = 6;
+            // 
             // panelEndereco
             // 
             this.panelEndereco.Controls.Add(this.subpanelEndereco);
@@ -907,10 +919,9 @@
             // subpanelEndereco
             // 
             this.subpanelEndereco.BackColor = System.Drawing.Color.Transparent;
+            this.subpanelEndereco.Controls.Add(this.panel6);
             this.subpanelEndereco.Controls.Add(this.panelBorderRounded3);
             this.subpanelEndereco.Controls.Add(this.label2);
-            this.subpanelEndereco.Controls.Add(this.panelTextEnderecoClient);
-            this.subpanelEndereco.Controls.Add(this.label13);
             this.subpanelEndereco.Dock = System.Windows.Forms.DockStyle.Fill;
             this.subpanelEndereco.Location = new System.Drawing.Point(20, 20);
             this.subpanelEndereco.Margin = new System.Windows.Forms.Padding(0);
@@ -918,15 +929,59 @@
             this.subpanelEndereco.Size = new System.Drawing.Size(252, 71);
             this.subpanelEndereco.TabIndex = 12;
             // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.panelTextEnderecoClient);
+            this.panel6.Controls.Add(this.label13);
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(178, 71);
+            this.panel6.TabIndex = 15;
+            // 
+            // panelTextEnderecoClient
+            // 
+            this.panelTextEnderecoClient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelTextEnderecoClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.panelTextEnderecoClient.Controls.Add(this.tbLogradouro);
+            this.panelTextEnderecoClient.Location = new System.Drawing.Point(5, 40);
+            this.panelTextEnderecoClient.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.panelTextEnderecoClient.Name = "panelTextEnderecoClient";
+            this.panelTextEnderecoClient.Size = new System.Drawing.Size(166, 29);
+            this.panelTextEnderecoClient.TabIndex = 2;
+            // 
+            // tbLogradouro
+            // 
+            this.tbLogradouro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.tbLogradouro.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbLogradouro.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbLogradouro.ForeColor = System.Drawing.Color.White;
+            this.tbLogradouro.Location = new System.Drawing.Point(5, 6);
+            this.tbLogradouro.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.tbLogradouro.Name = "tbLogradouro";
+            this.tbLogradouro.Size = new System.Drawing.Size(151, 22);
+            this.tbLogradouro.TabIndex = 1;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(5, 9);
+            this.label13.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(82, 17);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "Logradouro";
+            // 
             // panelBorderRounded3
             // 
             this.panelBorderRounded3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelBorderRounded3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
             this.panelBorderRounded3.Controls.Add(this.tbNumCasa);
-            this.panelBorderRounded3.Location = new System.Drawing.Point(191, 35);
+            this.panelBorderRounded3.Location = new System.Drawing.Point(186, 35);
             this.panelBorderRounded3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelBorderRounded3.Name = "panelBorderRounded3";
-            this.panelBorderRounded3.Size = new System.Drawing.Size(56, 33);
+            this.panelBorderRounded3.Size = new System.Drawing.Size(61, 33);
             this.panelBorderRounded3.TabIndex = 4;
             // 
             // tbNumCasa
@@ -938,7 +993,7 @@
             this.tbNumCasa.Location = new System.Drawing.Point(5, 5);
             this.tbNumCasa.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbNumCasa.Name = "tbNumCasa";
-            this.tbNumCasa.Size = new System.Drawing.Size(41, 22);
+            this.tbNumCasa.Size = new System.Drawing.Size(225, 22);
             this.tbNumCasa.TabIndex = 1;
             // 
             // label2
@@ -952,41 +1007,6 @@
             this.label2.Size = new System.Drawing.Size(24, 17);
             this.label2.TabIndex = 3;
             this.label2.Text = "N°";
-            // 
-            // panelTextEnderecoClient
-            // 
-            this.panelTextEnderecoClient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelTextEnderecoClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelTextEnderecoClient.Controls.Add(this.tbLogradouro);
-            this.panelTextEnderecoClient.Location = new System.Drawing.Point(5, 36);
-            this.panelTextEnderecoClient.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.panelTextEnderecoClient.Name = "panelTextEnderecoClient";
-            this.panelTextEnderecoClient.Size = new System.Drawing.Size(178, 33);
-            this.panelTextEnderecoClient.TabIndex = 2;
-            // 
-            // tbLogradouro
-            // 
-            this.tbLogradouro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.tbLogradouro.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbLogradouro.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbLogradouro.ForeColor = System.Drawing.Color.White;
-            this.tbLogradouro.Location = new System.Drawing.Point(12, 5);
-            this.tbLogradouro.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.tbLogradouro.Name = "tbLogradouro";
-            this.tbLogradouro.Size = new System.Drawing.Size(156, 22);
-            this.tbLogradouro.TabIndex = 1;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(5, 4);
-            this.label13.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(82, 17);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "Logradouro";
             // 
             // panel1
             // 
@@ -1067,7 +1087,7 @@
             this.cadastrarCNPJ.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cadastrarCNPJ.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.cadastrarCNPJ.ForeColor = System.Drawing.Color.White;
-            this.cadastrarCNPJ.Location = new System.Drawing.Point(738, 0);
+            this.cadastrarCNPJ.Location = new System.Drawing.Point(589, 0);
             this.cadastrarCNPJ.Margin = new System.Windows.Forms.Padding(0, 30, 0, 0);
             this.cadastrarCNPJ.Name = "cadastrarCNPJ";
             this.cadastrarCNPJ.Size = new System.Drawing.Size(180, 50);
@@ -1085,7 +1105,7 @@
             this.cadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.cadastrar.ForeColor = System.Drawing.Color.White;
-            this.cadastrar.Location = new System.Drawing.Point(1473, -25);
+            this.cadastrar.Location = new System.Drawing.Point(1324, -25);
             this.cadastrar.Margin = new System.Windows.Forms.Padding(0, 30, 0, 0);
             this.cadastrar.Name = "cadastrar";
             this.cadastrar.Size = new System.Drawing.Size(180, 50);
@@ -1099,7 +1119,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel51.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(98)))), ((int)(((byte)(255)))));
             this.panel51.Controls.Add(this.button10);
-            this.panel51.Location = new System.Drawing.Point(7985, 0);
+            this.panel51.Location = new System.Drawing.Point(7836, 0);
             this.panel51.Margin = new System.Windows.Forms.Padding(0);
             this.panel51.Name = "panel51";
             this.panel51.Size = new System.Drawing.Size(200, 0);
@@ -1182,13 +1202,17 @@
             this.panelCidadeUFClient.ResumeLayout(false);
             this.subpanelCidadeUFClient.ResumeLayout(false);
             this.subpanelCidadeUFClient.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.panelEndereco.ResumeLayout(false);
             this.subpanelEndereco.ResumeLayout(false);
             this.subpanelEndereco.PerformLayout();
-            this.panelBorderRounded3.ResumeLayout(false);
-            this.panelBorderRounded3.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.panelTextEnderecoClient.ResumeLayout(false);
             this.panelTextEnderecoClient.PerformLayout();
+            this.panelBorderRounded3.ResumeLayout(false);
+            this.panelBorderRounded3.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -1276,5 +1300,7 @@
         private Label label1;
         private ComboBox comboSituacaoCNPJ;
         private Label label4;
+        private Panel panel5;
+        private Panel panel6;
     }
 }

@@ -67,7 +67,7 @@ namespace Interface
             tbCodigdoSinistro.Text = "R" + numIDsg;
         }
 
-        private bool validar()
+        /*private bool validar()
         {
             if(tbCodigdoSinistro.Text == String.Empty)
             {
@@ -90,11 +90,12 @@ namespace Interface
             }
 
             return true;
-        }
+        }*/
 
         private void cadastrarSinistro_Click(object sender, EventArgs e)
         {
-            if (validar() == false)
+            Validation validacion = new();
+            if( Validation.Validar(contentSinistros)  == false)
             {
                 return;
             }
