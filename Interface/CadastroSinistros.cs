@@ -1,5 +1,5 @@
 ﻿using Interface.Properties;
-using System.Data.SQLite;
+using System.Data;
 
 namespace Interface
 {
@@ -7,21 +7,49 @@ namespace Interface
     {
         readonly Utilidades utils = new();
 
+        LimparFormularios limpar = new();
+
+        private string Type = "";
+
         public string TypeControl
         {
             set
             {
+                Type = value;
+
                 cadastrarSinistro.Text = value;
 
                 if (value.Contains("Cadastro"))
                 {
                     searchPanel.Visible = false;
                     contentSinistros.Location = new Point(0, 0);
+
+                    tbCodigdoSinistro.ReadOnly = false;
+                    tbCodigdoSinistro.Cursor = Cursors.IBeam;
+                    buscarCodigo.Visible = false;
                 }
                 if (value.Contains("Update"))
                 {
                     searchPanel.Visible = true;
                     contentSinistros.Location = new Point(0, 62);
+
+                    tbCodigdoSinistro.ReadOnly = true;
+                    tbCodigdoSinistro.Cursor = Cursors.No;
+                    buscarCodigo.Visible = true;
+                }
+            }
+        }
+        public DataRow OverviewDataResponse
+        {
+            set
+            {
+                cod.Text = value["ID"].ToString();
+
+                if (value != null)
+                {
+                    tbCodigdoSinistro.Text = value["ID"].ToString();
+                    comboTipoSinistro.Text = value["TipoSinistro"].ToString();
+                    tbDescricaoSinistro.Text = value["DescricaoSinistro"].ToString();
                 }
             }
         }
@@ -35,7 +63,6 @@ namespace Interface
         private void CadastroSinistros_Resize(object sender, EventArgs e)
         {
             utils.alignCenterPanels(panelSerch, searchPanel, true, true);
-            //utils.expansivePanels(10, panelSinistro);
         }
 
         private void panelSerch_Paint(object sender, PaintEventArgs e)
@@ -47,13 +74,17 @@ namespace Interface
         {
             utils.expansiveButton(10, cadastrarSinistro);
         }
+        private void buscarCodigo_Paint(object sender, PaintEventArgs e)
+        {
+            utils.expansiveButton(10, buscarCodigo);
+        }
 
         private void atualizarIDSinistro()
         {
             ConnectDB connectDB = new ConnectDB();
             string SQL = "SELECT MAX (ID) FROM tbSinistros";
             var dados = connectDB.pesquisar(SQL);
-            string data = (string)dados.Rows[0][0];
+            string data = (string)dados!.Rows[0][0];
             string IdSinistro = data.Replace("R", "");
             int numID = int.Parse(IdSinistro);
             numID++;
@@ -67,9 +98,69 @@ namespace Interface
             tbCodigdoSinistro.Text = "R" + numIDsg;
         }
 
-        /*private bool validar()
+        private void cadastrarSinistro_Click(object sender, EventArgs e)
         {
-            if(tbCodigdoSinistro.Text == String.Empty)
+            if (Type.Contains("Cadastro") && validar())
+            {
+                string SQL = "Insert Into tbSinistros(TipoSinistro, DescricaoSinistro, ID) Values";
+
+                SQL += "('" + comboTipoSinistro.Text + "','" + tbDescricaoSinistro.Text + "','" + tbCodigdoSinistro.Text + "')";
+                ConnectDB connectDB = new ConnectDB();
+                connectDB.cadastrar(SQL);
+
+                limpar.CleanControl(contentSinistros);
+                limpar.CleanControl(searchPanel);
+
+                atualizarIDSinistro();
+            }
+
+            if (Type.Contains("Update") && validar())
+            {
+                string SQLUp = $"UPDATE tbSinistros SET " +
+                $"TipoSinistro= '{comboTipoSinistro.Text}', " +
+                $"DescricaoSinistro= '{tbDescricaoSinistro.Text}' " +
+                $"WHERE ID = '{cod.Text.Replace('.', ',')}'";
+
+                ConnectDB connectDB = new();
+                connectDB.cadastrar(SQLUp);
+
+                limpar.CleanControl(contentSinistros);
+                limpar.CleanControl(searchPanel);
+            }
+        }
+
+        private void buscarCodigo_Click(object sender, EventArgs e)
+        {
+            if (cod.Text != "")
+            {
+                ConnectDB connectDB = new();
+                DataRow dados = connectDB.pesquisarRow($"SELECT * FROM tbSinistros WHERE ID = '{cod.Text}'", contentSinistros)!;
+
+                if (dados != null)
+                {
+                    cod.Text = dados["ID"].ToString();
+
+                    comboTipoSinistro.Text = dados["TipoSinistro"].ToString();
+                    tbDescricaoSinistro.Text = dados["DescricaoSinistro"].ToString();
+                }
+            }
+            else
+            {
+                MessageBox.Show($"É necessário preencher o campo {typeData.Text} corretamente!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                cod.Focus();
+            }
+        }
+
+        private void cod_TextChanged(object sender, EventArgs e)
+        {
+            tbCodigdoSinistro.Text = cod.Text;
+
+            utils.feedbackColorInputNumLetters(cod, typeData);
+        }
+
+        private bool validar()
+        {
+            if (tbCodigdoSinistro.Text == String.Empty)
             {
                 MessageBox.Show("O campo Codigo de Sinistro é Obrigatorio", "Erro", MessageBoxButtons.OK);
                 tbCodigdoSinistro.Focus();
@@ -90,26 +181,6 @@ namespace Interface
             }
 
             return true;
-        }*/
-
-        private void cadastrarSinistro_Click(object sender, EventArgs e)
-        {
-            Validation validacion = new();
-            if( Validation.Validar(contentSinistros)  == false)
-            {
-                return;
-            }
-            else
-            {
-                string SQL = "Insert Into tbSinistros(TipoSinistro, DescricaoSinistro, ID) Values";
-
-                SQL += "('" + comboTipoSinistro.Text + "','" + tbDescricaoSinistro.Text + "','" + tbCodigdoSinistro.Text + "')";
-                ConnectDB connectDB = new ConnectDB();
-                connectDB.cadastrar(SQL);
-                LimparFormularios limpar = new();
-                limpar.CleanControl(contentSinistros);
-                atualizarIDSinistro();
-            }
         }
     }
 }

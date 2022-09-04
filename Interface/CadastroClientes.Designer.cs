@@ -119,6 +119,7 @@
             this.pessoaFisica.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pessoaFisica.AutoSize = true;
+            this.pessoaFisica.Checked = true;
             this.pessoaFisica.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pessoaFisica.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.pessoaFisica.ForeColor = System.Drawing.Color.White;
@@ -127,6 +128,7 @@
             this.pessoaFisica.Name = "pessoaFisica";
             this.pessoaFisica.Size = new System.Drawing.Size(125, 24);
             this.pessoaFisica.TabIndex = 2;
+            this.pessoaFisica.TabStop = true;
             this.pessoaFisica.Text = "Pessoa Física";
             this.pessoaFisica.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.pessoaFisica.UseVisualStyleBackColor = true;
@@ -143,6 +145,8 @@
             this.ClienteCPF.Name = "ClienteCPF";
             this.ClienteCPF.Size = new System.Drawing.Size(975, 653);
             this.ClienteCPF.TabIndex = 6;
+            this.ClienteCPF.TypeControl = "";
+            this.ClienteCPF.Visible = false;
             // 
             // searchPanel
             // 
@@ -196,9 +200,10 @@
             this.mkBoxCdClientSearch.Location = new System.Drawing.Point(82, 7);
             this.mkBoxCdClientSearch.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.mkBoxCdClientSearch.Name = "mkBoxCdClientSearch";
-            this.mkBoxCdClientSearch.Size = new System.Drawing.Size(224, 22);
+            this.mkBoxCdClientSearch.Size = new System.Drawing.Size(255, 22);
             this.mkBoxCdClientSearch.TabIndex = 2;
             this.mkBoxCdClientSearch.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.mkBoxCdClientSearch.TextChanged += new System.EventHandler(this.mkBoxCdClientSearch_TextChanged);
             // 
             // pictureBox3
             // 
@@ -223,16 +228,17 @@
             this.ClienteCNPJ.Name = "ClienteCNPJ";
             this.ClienteCNPJ.Size = new System.Drawing.Size(975, 653);
             this.ClienteCNPJ.TabIndex = 4;
+            this.ClienteCNPJ.Visible = false;
             // 
             // CadastroClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.Controls.Add(this.ClienteCNPJ);
             this.Controls.Add(this.searchPanel);
-            this.Controls.Add(this.ClienteCPF);
             this.Controls.Add(this.panel17);
+            this.Controls.Add(this.ClienteCPF);
+            this.Controls.Add(this.ClienteCNPJ);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "CadastroClientes";
             this.Size = new System.Drawing.Size(975, 715);

@@ -1,10 +1,13 @@
 ﻿using Interface.Properties;
+using System.Data;
 
 namespace Interface
 {
     public partial class CadastroClientes : UserControl
     {
         readonly Utilidades utils = new();
+
+        readonly LimparFormularios limpar = new();
         public string TypeControl
         {
             set
@@ -27,16 +30,38 @@ namespace Interface
             }
         }
 
+        public Overview? overview { get; set; }
+
+        public string Pessoa = "";
+
+        public DataRow OverviewDataResponse
+        {
+            set
+            {
+                mkBoxCdClientSearch.Text = value[Pessoa].ToString();
+
+                if (Pessoa != "" && Pessoa.Contains("CPF"))
+                {
+                    ClienteCPF.DataForUpdate = value;
+                }
+
+                if (Pessoa != "" && Pessoa.Contains("CNPJ"))
+                {
+                    ClienteCNPJ.DataForUpdate = value;
+                }
+            }
+        }
+
         public CadastroClientes()
         {
             InitializeComponent();
         }
-
         private void CadastroClientes_Load(object sender, EventArgs e)
         {
-            ClienteCPF.Visible = false;
-            ClienteCNPJ.Visible = false;
-            pessoaFisica.Checked = true;
+            ClienteCPF.Visible = pessoaFisica.Checked;
+            ClienteCNPJ.Visible = pessoaFisica.Checked;
+
+            mkBoxCdClientSearch.Mask = pessoaFisica.Checked ? "000.000.000-00" : "00.000.000/0000-00";
         }
 
         private void panelPessoaFisica_Paint(object sender, PaintEventArgs e)
@@ -51,33 +76,6 @@ namespace Interface
             utils.alignCenterRadioButtons(pessoaJuridica, panelPessoaJuridica, true, true);
         }
 
-        private void pessoaFisica_CheckedChanged(object sender, EventArgs e)
-        {
-            ClienteCPF.Visible = pessoaFisica.Checked;
-
-            if (pessoaFisica.Checked)
-            {
-                pessoaJuridica.Checked = false;
-                labelTypePerson.Text = "CPF";
-                mkBoxCdClientSearch.Text = "";
-                mkBoxCdClientSearch.Height = mkBoxCdClientSearch.Height + 20; 
-                mkBoxCdClientSearch.Mask = ("000.000.000-00");
-            }
-        }
-
-        private void pessoaJuridica_CheckedChanged(object sender, EventArgs e)
-        {
-            ClienteCNPJ.Visible = pessoaJuridica.Checked;
-
-            if (pessoaJuridica.Checked)
-            {
-                pessoaFisica.Checked = false;
-                labelTypePerson.Text = "CNPF";
-                mkBoxCdClientSearch.Text = "";
-                mkBoxCdClientSearch.Mask = "00.000.000/0000-00";
-            }
-        }
-
         private void CadastroClientes_Resize(object sender, EventArgs e)
         {
             utils.alignCenterPanels(panelSerch, panel17, true, true);
@@ -88,49 +86,67 @@ namespace Interface
             utils.alignCenterPanels(panelSerch, panel17, true, true);
         }
 
-        private bool validar()
+        public void pessoaFisica_CheckedChanged(object sender, EventArgs e)
         {
-            if (ClienteCPF.Text.Length < 11 )
+            ClienteCPF.Visible = pessoaFisica.Checked;
+
+            if (pessoaFisica.Checked)
             {
-                MessageBox.Show("CPF digitado é invalido");
-                return false;
+                var overviewCPF =
+                    overview!.Controls["panelContainerRadio"].Controls["tableLayoutPanel1"].Controls["panelCPF"].Controls["CPF"] as RadioButton;
+
+                overviewCPF!.Checked = true;
+
+                pessoaJuridica.Checked = false;
+                labelTypePerson.Text = "CPF";
+
+                mkBoxCdClientSearch.Text = "";
+                mkBoxCdClientSearch.Height = mkBoxCdClientSearch.Height + 20;
+                mkBoxCdClientSearch.Mask = "000.000.000-00";
+
+                limpar.CleanControl(ClienteCPF.Controls["contentCPF"]);
             }
-           /* if (c.Text.Length < 11)
+        }
+
+        public void pessoaJuridica_CheckedChanged(object sender, EventArgs e)
+        {
+            ClienteCNPJ.Visible = pessoaJuridica.Checked;
+
+            if (pessoaJuridica.Checked)
             {
-                MessageBox.Show("Celular digitado é inválido");
-                return false;
+                var overviewCPF =
+                    overview!.Controls["panelContainerRadio"].Controls["tableLayoutPanel1"].Controls["panelCNPJ"].Controls["CNPJ"] as RadioButton;
+
+                overviewCPF!.Checked = true;
+
+                pessoaFisica.Checked = false;
+
+                labelTypePerson.Text = "CNPF";
+
+                mkBoxCdClientSearch.Text = "";
+                mkBoxCdClientSearch.Mask = "00.000.000/0000-00";
+
+                limpar.CleanControl(ClienteCNPJ.Controls["contentCNPJ"]);
             }
-            if (MtxtBtelefone.Text.Length > 1 && MtxtBtelefone.Text.Length < 10)
+        }
+
+        private void mkBoxCdClientSearch_TextChanged(object sender, EventArgs e)
+        {
+            if (pessoaFisica.Checked)
             {
-                MessageBox.Show("Telefone digitado é inválido");
-                return false;
+                masckedboxTemplete? inputMaskCPF = ClienteCPF.Controls["contentCPF"].Controls["tableLayoutPanel3"].Controls["panelCPF"].Controls["SubpanelCPF"].Controls["panelTextCPFClient"].Controls["mkCPF"] as masckedboxTemplete;
+
+                inputMaskCPF!.Text = mkBoxCdClientSearch.Text;
             }
-            if (MtxtBCEP.Text.Length < 8)
+
+            if (pessoaJuridica.Checked)
             {
-                MessageBox.Show("CEP digitado é inválido");
-                return false;
+                masckedboxTemplete? inputMaskCNPJ = ClienteCNPJ.Controls["contentCNPJ"].Controls["tableLayoutPanel3"].Controls["panelCPF"].Controls["SubpanelCPF"].Controls["panelTextCPFClient"].Controls["mkCNPJ"] as masckedboxTemplete;
+
+                inputMaskCNPJ!.Text = mkBoxCdClientSearch.Text;
             }
-            if (MtxtBnumCNH.Text.Length < 10)
-            {
-                MessageBox.Show("CNH digitada é inválido");
-                return false;
-            }
-            if (MtxtBvencimentoCNH.Text == " ")
-            {
-                MessageBox.Show("Preencha o campo de Vencimento da CNH");
-                return false;
-            }
-            if (cmBveiculoP.Text == "")
-            {
-                MessageBox.Show("Preencha o campo veiculo próprio");
-                return false;
-            }
-            if (cmBmopp.Text == "")
-            {
-                MessageBox.Show("Preencha o campo Curso MOPP");
-                return false;
-            }*/
-            return true;
+
+            utils.feedbackColorInput(mkBoxCdClientSearch, labelTypePerson);
         }
     }
 }

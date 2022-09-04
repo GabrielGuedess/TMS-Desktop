@@ -32,7 +32,7 @@
             this.searchPanel = new System.Windows.Forms.Panel();
             this.panelSerch = new Interface.Properties.PanelBorderRoundedOnLeft();
             this.typeData = new System.Windows.Forms.Label();
-            this.textBoxnOnlyNum2 = new Interface.Properties.textBoxnOnlyNum();
+            this.IdRotas = new Interface.Properties.textBoxnOnlyNum();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.map = new GMap.NET.WindowsForms.GMapControl();
             this.contentRotas = new System.Windows.Forms.Panel();
@@ -87,6 +87,7 @@
             this.comboVeiculo = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panelButton = new System.Windows.Forms.Panel();
+            this.buscarRota = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.calcularRota = new System.Windows.Forms.Button();
@@ -151,17 +152,18 @@
             this.panelSerch.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.panelSerch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
             this.panelSerch.Controls.Add(this.typeData);
-            this.panelSerch.Controls.Add(this.textBoxnOnlyNum2);
+            this.panelSerch.Controls.Add(this.IdRotas);
             this.panelSerch.Controls.Add(this.pictureBox3);
             this.panelSerch.Location = new System.Drawing.Point(323, 13);
             this.panelSerch.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelSerch.Name = "panelSerch";
             this.panelSerch.Size = new System.Drawing.Size(347, 36);
             this.panelSerch.TabIndex = 2;
+            this.panelSerch.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSerch_Paint);
             // 
             // typeData
             // 
-            this.typeData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.typeData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.typeData.AutoSize = true;
             this.typeData.BackColor = System.Drawing.Color.Transparent;
@@ -173,19 +175,21 @@
             this.typeData.Size = new System.Drawing.Size(25, 21);
             this.typeData.TabIndex = 4;
             this.typeData.Text = "ID";
+            this.typeData.Click += new System.EventHandler(this.typeData_Click);
             // 
-            // textBoxnOnlyNum2
+            // IdRotas
             // 
-            this.textBoxnOnlyNum2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxnOnlyNum2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.textBoxnOnlyNum2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxnOnlyNum2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxnOnlyNum2.ForeColor = System.Drawing.Color.White;
-            this.textBoxnOnlyNum2.Location = new System.Drawing.Point(70, 7);
-            this.textBoxnOnlyNum2.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.textBoxnOnlyNum2.Name = "textBoxnOnlyNum2";
-            this.textBoxnOnlyNum2.Size = new System.Drawing.Size(267, 22);
-            this.textBoxnOnlyNum2.TabIndex = 2;
+            this.IdRotas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.IdRotas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.IdRotas.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.IdRotas.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.IdRotas.ForeColor = System.Drawing.Color.White;
+            this.IdRotas.Location = new System.Drawing.Point(70, 7);
+            this.IdRotas.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.IdRotas.Name = "IdRotas";
+            this.IdRotas.Size = new System.Drawing.Size(267, 22);
+            this.IdRotas.TabIndex = 2;
+            this.IdRotas.TextChanged += new System.EventHandler(this.IdRotas_TextChanged);
             // 
             // pictureBox3
             // 
@@ -201,7 +205,7 @@
             // 
             // map
             // 
-            this.map.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.map.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.map.Bearing = 0F;
             this.map.CanDragMap = true;
@@ -209,7 +213,7 @@
             this.map.GrayScaleMode = false;
             this.map.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
             this.map.LevelsKeepInMemory = 5;
-            this.map.Location = new System.Drawing.Point(40, 40);
+            this.map.Location = new System.Drawing.Point(40, 36);
             this.map.Margin = new System.Windows.Forms.Padding(0);
             this.map.MarkersEnabled = true;
             this.map.MaxZoom = 2;
@@ -237,16 +241,16 @@
             this.contentRotas.Controls.Add(this.tableLayoutPanel2);
             this.contentRotas.Controls.Add(this.map);
             this.contentRotas.Controls.Add(this.panelButton);
-            this.contentRotas.Location = new System.Drawing.Point(0, -9);
+            this.contentRotas.Location = new System.Drawing.Point(0, 62);
             this.contentRotas.Margin = new System.Windows.Forms.Padding(0);
             this.contentRotas.Name = "contentRotas";
             this.contentRotas.Padding = new System.Windows.Forms.Padding(40);
-            this.contentRotas.Size = new System.Drawing.Size(975, 1073);
+            this.contentRotas.Size = new System.Drawing.Size(975, 1183);
             this.contentRotas.TabIndex = 17;
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33332F));
@@ -828,7 +832,7 @@
             // 
             // comboVeiculo
             // 
-            this.comboVeiculo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.comboVeiculo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboVeiculo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
             this.comboVeiculo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -869,9 +873,10 @@
             // 
             // panelButton
             // 
-            this.panelButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panelButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelButton.BackColor = System.Drawing.Color.Transparent;
+            this.panelButton.Controls.Add(this.buscarRota);
             this.panelButton.Controls.Add(this.button1);
             this.panelButton.Controls.Add(this.button2);
             this.panelButton.Controls.Add(this.calcularRota);
@@ -880,12 +885,32 @@
             this.panelButton.Controls.Add(this.cadastrarCNPJ);
             this.panelButton.Controls.Add(this.cadastrar);
             this.panelButton.Controls.Add(this.panel51);
-            this.panelButton.Location = new System.Drawing.Point(0, 1000);
+            this.panelButton.Location = new System.Drawing.Point(0, 1080);
             this.panelButton.Margin = new System.Windows.Forms.Padding(0, 100, 0, 0);
             this.panelButton.Name = "panelButton";
             this.panelButton.Padding = new System.Windows.Forms.Padding(40, 0, 40, 0);
             this.panelButton.Size = new System.Drawing.Size(975, 50);
             this.panelButton.TabIndex = 7;
+            // 
+            // buscarRota
+            // 
+            this.buscarRota.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.buscarRota.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(199)))));
+            this.buscarRota.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buscarRota.FlatAppearance.BorderSize = 0;
+            this.buscarRota.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buscarRota.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.buscarRota.ForeColor = System.Drawing.Color.White;
+            this.buscarRota.Location = new System.Drawing.Point(315, 0);
+            this.buscarRota.Margin = new System.Windows.Forms.Padding(0, 0, 40, 0);
+            this.buscarRota.Name = "buscarRota";
+            this.buscarRota.Size = new System.Drawing.Size(180, 50);
+            this.buscarRota.TabIndex = 18;
+            this.buscarRota.Text = "Buscar ID";
+            this.buscarRota.UseVisualStyleBackColor = false;
+            this.buscarRota.Visible = false;
+            this.buscarRota.Click += new System.EventHandler(this.buscarRota_Click);
+            this.buscarRota.Paint += new System.Windows.Forms.PaintEventHandler(this.buscarRota_Paint);
             // 
             // button1
             // 
@@ -1012,7 +1037,7 @@
             // 
             // panel51
             // 
-            this.panel51.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.panel51.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel51.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(98)))), ((int)(((byte)(255)))));
             this.panel51.Controls.Add(this.button10);
@@ -1024,7 +1049,7 @@
             // 
             // button10
             // 
-            this.button10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.button10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button10.BackColor = System.Drawing.Color.Transparent;
             this.button10.FlatAppearance.BorderSize = 0;
@@ -1049,8 +1074,9 @@
             this.Controls.Add(this.contentRotas);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "CadastroRoutes";
-            this.Size = new System.Drawing.Size(975, 1087);
+            this.Size = new System.Drawing.Size(975, 1287);
             this.Load += new System.EventHandler(this.CadastroRoutes_Load);
+            this.Resize += new System.EventHandler(this.CadastroRoutes_Resize);
             this.searchPanel.ResumeLayout(false);
             this.panelSerch.ResumeLayout(false);
             this.panelSerch.PerformLayout();
@@ -1177,8 +1203,9 @@
         private Properties.TextKm tbDistanciaTotal;
         private Properties.textBoxOnlyNum_Letters tbProximaEntrega;
         private Properties.TextMoney tbCustoEstimado;
-        private Properties.textBoxnOnlyNum textBoxnOnlyNum2;
+        private Properties.textBoxnOnlyNum IdRotas;
         private Properties.textBoxnOnlyNum tbIDRota;
         private Label typeData;
+        private Button buscarRota;
     }
 }

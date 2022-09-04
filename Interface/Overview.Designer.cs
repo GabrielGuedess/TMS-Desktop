@@ -42,6 +42,7 @@
             this.contentOverview = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panelButton = new System.Windows.Forms.Panel();
+            this.buttonVerSelecionado = new System.Windows.Forms.Button();
             this.buscar = new System.Windows.Forms.Button();
             this.panel51 = new System.Windows.Forms.Panel();
             this.button10 = new System.Windows.Forms.Button();
@@ -102,7 +103,7 @@
             // 
             // typeData
             // 
-            this.typeData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.typeData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.typeData.AutoSize = true;
             this.typeData.BackColor = System.Drawing.Color.Transparent;
@@ -114,6 +115,7 @@
             this.typeData.Size = new System.Drawing.Size(37, 21);
             this.typeData.TabIndex = 3;
             this.typeData.Text = "CPF";
+            this.typeData.Click += new System.EventHandler(this.typeData_Click);
             // 
             // maskInput
             // 
@@ -128,6 +130,7 @@
             this.maskInput.Size = new System.Drawing.Size(222, 22);
             this.maskInput.TabIndex = 3;
             this.maskInput.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.maskInput.TextChanged += new System.EventHandler(this.maskInput_TextChanged);
             // 
             // panel17
             // 
@@ -144,7 +147,7 @@
             // 
             // contentOverview
             // 
-            this.contentOverview.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.contentOverview.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.contentOverview.AutoScroll = true;
             this.contentOverview.AutoScrollMargin = new System.Drawing.Size(0, 20);
@@ -168,9 +171,10 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.Highlight;
             this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -188,11 +192,14 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(91)))), ((int)(((byte)(101)))));
+            this.dataGridView1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.dataGridView1.Location = new System.Drawing.Point(40, 40);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -209,14 +216,17 @@
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.Size = new System.Drawing.Size(895, 426);
+            this.dataGridView1.StandardTab = true;
             this.dataGridView1.TabIndex = 6;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.Resize += new System.EventHandler(this.dataGridView1_Resize);
             // 
             // panelButton
             // 
-            this.panelButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.panelButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelButton.BackColor = System.Drawing.Color.Transparent;
+            this.panelButton.Controls.Add(this.buttonVerSelecionado);
             this.panelButton.Controls.Add(this.buscar);
             this.panelButton.Controls.Add(this.panel51);
             this.panelButton.Location = new System.Drawing.Point(0, 566);
@@ -225,6 +235,25 @@
             this.panelButton.Padding = new System.Windows.Forms.Padding(40, 0, 40, 0);
             this.panelButton.Size = new System.Drawing.Size(975, 50);
             this.panelButton.TabIndex = 5;
+            // 
+            // buttonVerSelecionado
+            // 
+            this.buttonVerSelecionado.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.buttonVerSelecionado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(199)))));
+            this.buttonVerSelecionado.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonVerSelecionado.FlatAppearance.BorderSize = 0;
+            this.buttonVerSelecionado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonVerSelecionado.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.buttonVerSelecionado.ForeColor = System.Drawing.Color.White;
+            this.buttonVerSelecionado.Location = new System.Drawing.Point(535, 0);
+            this.buttonVerSelecionado.Margin = new System.Windows.Forms.Padding(0, 0, 40, 0);
+            this.buttonVerSelecionado.Name = "buttonVerSelecionado";
+            this.buttonVerSelecionado.Size = new System.Drawing.Size(180, 50);
+            this.buttonVerSelecionado.TabIndex = 10;
+            this.buttonVerSelecionado.Text = "Ver Selecionado";
+            this.buttonVerSelecionado.UseVisualStyleBackColor = false;
+            this.buttonVerSelecionado.Click += new System.EventHandler(this.buttonVerSelecionado_Click);
+            this.buttonVerSelecionado.Paint += new System.Windows.Forms.PaintEventHandler(this.buttonVerSelecionado_Paint);
             // 
             // buscar
             // 
@@ -236,7 +265,7 @@
             this.buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.buscar.ForeColor = System.Drawing.Color.White;
             this.buscar.Location = new System.Drawing.Point(755, 0);
-            this.buscar.Margin = new System.Windows.Forms.Padding(0, 30, 0, 0);
+            this.buscar.Margin = new System.Windows.Forms.Padding(0, 0, 40, 0);
             this.buscar.Name = "buscar";
             this.buscar.Size = new System.Drawing.Size(180, 50);
             this.buscar.TabIndex = 9;
@@ -247,7 +276,7 @@
             // 
             // panel51
             // 
-            this.panel51.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.panel51.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel51.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(98)))), ((int)(((byte)(255)))));
             this.panel51.Controls.Add(this.button10);
@@ -259,7 +288,7 @@
             // 
             // button10
             // 
-            this.button10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.button10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button10.BackColor = System.Drawing.Color.Transparent;
             this.button10.FlatAppearance.BorderSize = 0;
@@ -299,7 +328,7 @@
             // 
             // panelPessoaJuridica
             // 
-            this.panelPessoaJuridica.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.panelPessoaJuridica.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelPessoaJuridica.BackColor = System.Drawing.Color.Transparent;
             this.panelPessoaJuridica.Controls.Add(this.pessoaJuridica);
@@ -311,7 +340,7 @@
             // 
             // pessoaJuridica
             // 
-            this.pessoaJuridica.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.pessoaJuridica.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pessoaJuridica.AutoSize = true;
             this.pessoaJuridica.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -339,7 +368,7 @@
             // 
             // pessoaFisica
             // 
-            this.pessoaFisica.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.pessoaFisica.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pessoaFisica.AutoSize = true;
             this.pessoaFisica.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -383,7 +412,7 @@
             // 
             // panelCNPJ
             // 
-            this.panelCNPJ.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.panelCNPJ.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelCNPJ.BackColor = System.Drawing.Color.Transparent;
             this.panelCNPJ.Controls.Add(this.CNPJ);
@@ -396,7 +425,7 @@
             // 
             // CNPJ
             // 
-            this.CNPJ.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.CNPJ.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.CNPJ.AutoSize = true;
             this.CNPJ.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -426,7 +455,7 @@
             // 
             // CPF
             // 
-            this.CPF.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.CPF.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.CPF.AutoSize = true;
             this.CPF.Checked = true;
@@ -504,5 +533,6 @@
         private Panel panelCPF;
         private RadioButton CPF;
         private Label typeData;
+        private Button buttonVerSelecionado;
     }
 }

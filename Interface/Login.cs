@@ -1,4 +1,6 @@
 ﻿using Interface.Properties;
+using System.Runtime.InteropServices;
+using System.Windows.Forms.VisualStyles;
 
 namespace Interface
 {
@@ -6,6 +8,7 @@ namespace Interface
     {
 
         readonly Utilidades utils = new();
+
         public Login()
         {
             InitializeComponent();

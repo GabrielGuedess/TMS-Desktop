@@ -1,4 +1,5 @@
 using Interface.Properties;
+using System.Data;
 
 namespace Interface
 {
@@ -8,11 +9,84 @@ namespace Interface
 
         readonly Navigation navigationDash = new();
 
+        public string RouteDash = "";
+
+        public DataRow OverviewDataRequest
+        {
+            set
+            {
+                if (overview1.CacheType == "Clientes_Fisicos")
+                {
+                    cadastroClientes1.Pessoa = "CPF";
+                    cadastroClientes1.OverviewDataResponse = value;
+                }
+
+                if (overview1.CacheType == "Clientes_Juridicos")
+                {
+                    cadastroClientes1.Pessoa = "CNPJ";
+                    cadastroClientes1.OverviewDataResponse = value;
+                }
+
+                if (overview1.CacheType.Contains("Usuarios"))
+                {
+                    cadastroUsuarios1.OverviewDataResponse = value;
+                }
+
+                if (overview1.CacheType.Contains("Rotas"))
+                {
+                    cadastroRoutes1.OverviewDataResponse = value;
+                }
+
+                if (overview1.CacheType.Contains("Motoristas"))
+                {
+                    cadastroMotoristas1.OverviewDataResponse = value;
+                }
+
+                if (overview1.CacheType.Contains("Veiculos"))
+                {
+                    cadastroVeiculos1.OverviewDataResponse = value; ;
+                }
+
+                if (overview1.CacheType.Contains("Terceiros"))
+                {
+                    cadastroTerceiros1.OverviewDataResponse = value;
+                }
+
+                if (overview1.CacheType.Contains("Sinistros"))
+                {
+                    cadastroSinistros1.OverviewDataResponse = value;
+                }
+
+                if (overview1.CacheType.Contains("Notas"))
+                {
+                    cadastroNotasFicais1.OverviewDataResponse = value;
+                }
+
+                if (overview1.CacheType.Contains("Tarifas"))
+                {
+                    cadastroTarifaseTaxas1.OverviewDataResponse = value;
+                }
+
+                if (overview1.CacheType.Contains("Redes"))
+                {
+                    cadastroRedesDeTransporte1.OverviewDataResponse = value;
+                }
+
+            }
+        }
+
+        public string RouteDashRequest
+        {
+            get => RouteDash;
+        }
+
         private void NavigationController(string dash, string over)
         {
             // Declaração do tipo de Form seja renderizado
             navigationDash.TypeControlDash = dash;
             navigationDash.TypeControlOver = over;
+
+            RouteDash = dash;
 
             // Método para realizar a troca de pagina (igual um SPA)
             navigationDash.NavigationRoutes(
@@ -66,6 +140,11 @@ namespace Interface
         public Dash()
         {
             InitializeComponent();
+
+            overview1.dash = this;
+            overview1.clientes = cadastroClientes1;
+
+            cadastroClientes1.overview = overview1;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -136,7 +215,7 @@ namespace Interface
             NavigationController(navigationDash.TypeControlDash, "Cadastro");
         }
 
-        private void buttonUp_Click(object sender, EventArgs e)
+        public void buttonUp_Click(object sender, EventArgs e)
         {
             NavigationController(navigationDash.TypeControlDash, "Update");
         }

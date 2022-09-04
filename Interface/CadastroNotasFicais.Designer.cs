@@ -67,6 +67,7 @@
             this.tbDescricaoNota = new Interface.Properties.textBoxOnlyNum_Letters();
             this.labelTelefoneClient = new System.Windows.Forms.Label();
             this.panelButton = new System.Windows.Forms.Panel();
+            this.buscarCod = new System.Windows.Forms.Button();
             this.cadastrarNota = new System.Windows.Forms.Button();
             this.panel51 = new System.Windows.Forms.Panel();
             this.button10 = new System.Windows.Forms.Button();
@@ -125,7 +126,7 @@
             // 
             // typeData
             // 
-            this.typeData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.typeData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.typeData.AutoSize = true;
             this.typeData.BackColor = System.Drawing.Color.Transparent;
@@ -137,6 +138,7 @@
             this.typeData.Size = new System.Drawing.Size(126, 21);
             this.typeData.TabIndex = 4;
             this.typeData.Text = "Chave de Acesso";
+            this.typeData.Click += new System.EventHandler(this.typeData_Click);
             // 
             // tbSearchChaveAcesso
             // 
@@ -150,6 +152,7 @@
             this.tbSearchChaveAcesso.Name = "tbSearchChaveAcesso";
             this.tbSearchChaveAcesso.Size = new System.Drawing.Size(166, 22);
             this.tbSearchChaveAcesso.TabIndex = 2;
+            this.tbSearchChaveAcesso.TextChanged += new System.EventHandler(this.tbSearchChaveAcesso_TextChanged);
             // 
             // pictureBox3
             // 
@@ -165,7 +168,7 @@
             // 
             // contentNotas
             // 
-            this.contentNotas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.contentNotas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.contentNotas.AutoScroll = true;
             this.contentNotas.AutoScrollMargin = new System.Drawing.Size(0, 20);
@@ -181,7 +184,7 @@
             // 
             // tableLayoutPanel3
             // 
-            this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33332F));
@@ -562,9 +565,10 @@
             // 
             // panelButton
             // 
-            this.panelButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panelButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelButton.BackColor = System.Drawing.Color.Transparent;
+            this.panelButton.Controls.Add(this.buscarCod);
             this.panelButton.Controls.Add(this.cadastrarNota);
             this.panelButton.Controls.Add(this.panel51);
             this.panelButton.Location = new System.Drawing.Point(0, 340);
@@ -573,6 +577,26 @@
             this.panelButton.Padding = new System.Windows.Forms.Padding(40, 0, 40, 0);
             this.panelButton.Size = new System.Drawing.Size(975, 50);
             this.panelButton.TabIndex = 5;
+            // 
+            // buscarCod
+            // 
+            this.buscarCod.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.buscarCod.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(199)))));
+            this.buscarCod.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buscarCod.FlatAppearance.BorderSize = 0;
+            this.buscarCod.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buscarCod.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.buscarCod.ForeColor = System.Drawing.Color.White;
+            this.buscarCod.Location = new System.Drawing.Point(535, 0);
+            this.buscarCod.Margin = new System.Windows.Forms.Padding(0, 0, 40, 0);
+            this.buscarCod.Name = "buscarCod";
+            this.buscarCod.Size = new System.Drawing.Size(180, 50);
+            this.buscarCod.TabIndex = 15;
+            this.buscarCod.Text = "Buscar Código";
+            this.buscarCod.UseVisualStyleBackColor = false;
+            this.buscarCod.Visible = false;
+            this.buscarCod.Click += new System.EventHandler(this.buscarCod_Click);
+            this.buscarCod.Paint += new System.Windows.Forms.PaintEventHandler(this.buscarCPF_Paint);
             // 
             // cadastrarNota
             // 
@@ -584,7 +608,7 @@
             this.cadastrarNota.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.cadastrarNota.ForeColor = System.Drawing.Color.White;
             this.cadastrarNota.Location = new System.Drawing.Point(755, 0);
-            this.cadastrarNota.Margin = new System.Windows.Forms.Padding(0, 30, 0, 0);
+            this.cadastrarNota.Margin = new System.Windows.Forms.Padding(0, 0, 40, 0);
             this.cadastrarNota.Name = "cadastrarNota";
             this.cadastrarNota.Size = new System.Drawing.Size(180, 50);
             this.cadastrarNota.TabIndex = 12;
@@ -595,7 +619,7 @@
             // 
             // panel51
             // 
-            this.panel51.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.panel51.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel51.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(98)))), ((int)(((byte)(255)))));
             this.panel51.Controls.Add(this.button10);
@@ -607,7 +631,7 @@
             // 
             // button10
             // 
-            this.button10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.button10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button10.BackColor = System.Drawing.Color.Transparent;
             this.button10.FlatAppearance.BorderSize = 0;
@@ -719,5 +743,6 @@
         private Properties.textBoxOnlyNum_Letters tbDescricaoNota;
         private Properties.textBoxOnlyNum_Letters tbSearchChaveAcesso;
         private Label typeData;
+        private Button buscarCod;
     }
 }

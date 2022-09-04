@@ -63,6 +63,7 @@
             this.panelTextRGClient = new Interface.Properties.PanelBorderRounded();
             this.label7 = new System.Windows.Forms.Label();
             this.panelButton = new System.Windows.Forms.Panel();
+            this.buscarCPF = new System.Windows.Forms.Button();
             this.cadastrarUsuario = new System.Windows.Forms.Button();
             this.cadastrarCNPJ = new System.Windows.Forms.Button();
             this.cadastrar = new System.Windows.Forms.Button();
@@ -71,7 +72,7 @@
             this.searchPanel = new System.Windows.Forms.Panel();
             this.panelSerch = new Interface.Properties.PanelBorderRoundedOnLeft();
             this.typeData = new System.Windows.Forms.Label();
-            this.masckedboxTemplete2 = new Interface.Properties.masckedboxTemplete();
+            this.searchUsuario = new Interface.Properties.masckedboxTemplete();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.contentUsuario.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -515,6 +516,7 @@
             this.panelButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelButton.BackColor = System.Drawing.Color.Transparent;
+            this.panelButton.Controls.Add(this.buscarCPF);
             this.panelButton.Controls.Add(this.cadastrarUsuario);
             this.panelButton.Controls.Add(this.cadastrarCNPJ);
             this.panelButton.Controls.Add(this.cadastrar);
@@ -526,6 +528,26 @@
             this.panelButton.Size = new System.Drawing.Size(975, 50);
             this.panelButton.TabIndex = 7;
             // 
+            // buscarCPF
+            // 
+            this.buscarCPF.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.buscarCPF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(199)))));
+            this.buscarCPF.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buscarCPF.FlatAppearance.BorderSize = 0;
+            this.buscarCPF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buscarCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.buscarCPF.ForeColor = System.Drawing.Color.White;
+            this.buscarCPF.Location = new System.Drawing.Point(535, 0);
+            this.buscarCPF.Margin = new System.Windows.Forms.Padding(0, 0, 40, 0);
+            this.buscarCPF.Name = "buscarCPF";
+            this.buscarCPF.Size = new System.Drawing.Size(180, 50);
+            this.buscarCPF.TabIndex = 14;
+            this.buscarCPF.Text = "Buscar CPF";
+            this.buscarCPF.UseVisualStyleBackColor = false;
+            this.buscarCPF.Visible = false;
+            this.buscarCPF.Click += new System.EventHandler(this.buscarCPF_Click);
+            this.buscarCPF.Paint += new System.Windows.Forms.PaintEventHandler(this.buscarCPF_Paint);
+            // 
             // cadastrarUsuario
             // 
             this.cadastrarUsuario.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -536,7 +558,7 @@
             this.cadastrarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.cadastrarUsuario.ForeColor = System.Drawing.Color.White;
             this.cadastrarUsuario.Location = new System.Drawing.Point(755, 0);
-            this.cadastrarUsuario.Margin = new System.Windows.Forms.Padding(0, 30, 0, 0);
+            this.cadastrarUsuario.Margin = new System.Windows.Forms.Padding(0, 0, 40, 0);
             this.cadastrarUsuario.Name = "cadastrarUsuario";
             this.cadastrarUsuario.Size = new System.Drawing.Size(180, 50);
             this.cadastrarUsuario.TabIndex = 13;
@@ -626,7 +648,7 @@
             this.panelSerch.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.panelSerch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
             this.panelSerch.Controls.Add(this.typeData);
-            this.panelSerch.Controls.Add(this.masckedboxTemplete2);
+            this.panelSerch.Controls.Add(this.searchUsuario);
             this.panelSerch.Controls.Add(this.pictureBox3);
             this.panelSerch.Location = new System.Drawing.Point(322, 13);
             this.panelSerch.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
@@ -649,21 +671,23 @@
             this.typeData.Size = new System.Drawing.Size(37, 21);
             this.typeData.TabIndex = 4;
             this.typeData.Text = "CPF";
+            this.typeData.Click += new System.EventHandler(this.typeData_Click);
             // 
-            // masckedboxTemplete2
+            // searchUsuario
             // 
-            this.masckedboxTemplete2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.masckedboxTemplete2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.masckedboxTemplete2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.masckedboxTemplete2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.masckedboxTemplete2.ForeColor = System.Drawing.Color.White;
-            this.masckedboxTemplete2.Location = new System.Drawing.Point(82, 8);
-            this.masckedboxTemplete2.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.masckedboxTemplete2.Mask = "000.000.000-00";
-            this.masckedboxTemplete2.Name = "masckedboxTemplete2";
-            this.masckedboxTemplete2.Size = new System.Drawing.Size(255, 22);
-            this.masckedboxTemplete2.TabIndex = 2;
-            this.masckedboxTemplete2.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.searchUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.searchUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.searchUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.searchUsuario.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.searchUsuario.ForeColor = System.Drawing.Color.White;
+            this.searchUsuario.Location = new System.Drawing.Point(82, 8);
+            this.searchUsuario.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.searchUsuario.Mask = "000.000.000-00";
+            this.searchUsuario.Name = "searchUsuario";
+            this.searchUsuario.Size = new System.Drawing.Size(255, 22);
+            this.searchUsuario.TabIndex = 2;
+            this.searchUsuario.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.searchUsuario.TextChanged += new System.EventHandler(this.searchUsuario_TextChanged);
             // 
             // pictureBox3
             // 
@@ -774,7 +798,8 @@
         private Properties.masckedboxTemplete mkCelular;
         private Properties.textBoxTemplete tbSenha;
         private Properties.textBoxTemplete tbSenhaConfirmacao;
-        private Properties.masckedboxTemplete masckedboxTemplete2;
+        private Properties.masckedboxTemplete searchUsuario;
         private Label typeData;
+        private Button buscarCPF;
     }
 }
