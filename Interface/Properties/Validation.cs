@@ -4,15 +4,21 @@ using System.Linq;
 using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Interface.Properties
 {
     public class Validation
     {
-        public static bool Validar(Control controls)
+        public static bool Validar(Control elementPai)
         {
-            foreach (Control control in controls.Controls)
+            // recebe o elemento pai e faz uma verificação nos seus filhos(controles)
+            //para ser qual é o seu tipo
+            foreach (Control control in elementPai.Controls)
             {
+                //se o elemento filho do Pai for um Panel, é necessario passar
+                //esse elemento filho para o método Validar para ver qual 
+                // se esse filho tem os controles que precisa ser validado
                 if (control is Panel)
                 {
 
@@ -34,205 +40,26 @@ namespace Interface.Properties
                     if (Validar(control) == false)
                         return false;
                 }
-                else if (control is textBoxnOnlyNum)
-                {
-                    if (control.Text == String.Empty)
-                    {
-                        string nameComponente = "";
-                        foreach (Control x in control.Parent.Parent.Controls)
-                        {
-                            if (x is System.Windows.Forms.Label)
-                            {
-                                nameComponente = x.Text;
-                            }
-                        }
-                        MessageBox.Show($"O campo {nameComponente} é obrigatório", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        control.Focus();
-                        return false;
-                    }
+                //esse é o método responsável por fazer a verificação 
+                //dos campos
+                else if (verificarControl(control) == false){
+                    return false;
                 }
-                else if (control is textBoxOnlyLetters)
-                {
-                    if (control.Text == String.Empty)
-                    {
-                        string nameComponente = "";
-                        foreach (Control x in control.Parent.Parent.Controls)
-                        {
-                            if (x is System.Windows.Forms.Label)
-                            {
-                                nameComponente = x.Text;
-                            }
-                        }
-                        MessageBox.Show($"O campo {nameComponente} é obrigatório", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        control.Focus();
-                        return false;
-                    }
-                }
-                else if (control is textBoxOnlyNum_Letters)
-                {
-                    if (control.Text == String.Empty)
-                    {
-                        string nameComponente = "";
-                        foreach (Control x in control.Parent.Parent.Controls)
-                        {
-                            if (x is System.Windows.Forms.Label)
-                            {
-                                nameComponente = x.Text;
-                            }
-                        }
-                        MessageBox.Show($"O campo {nameComponente} é obrigatório", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        control.Focus();
-                        return false;
-                    }
-                }
-                else if (control is textBoxTemplete)
-                {
-                    if (control.Text == String.Empty)
-                    {
-                        string nameComponente = "";
-                        foreach (Control x in control.Parent.Parent.Controls)
-                        {
-                            if (x is System.Windows.Forms.Label)
-                            {
-                                nameComponente = x.Text;
-                            }
-                        }
-                        MessageBox.Show($"O campo {nameComponente} é obrigatório", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        control.Focus();
-                        return false;
-                    }
-                }
-                else if (control is TextKg)
-                {
-                    if (control.Text == String.Empty)
-                    {
-                        string nameComponente = "";
-                        foreach (Control x in control.Parent.Parent.Controls)
-                        {
-                            if (x is System.Windows.Forms.Label)
-                            {
-                                nameComponente = x.Text;
-                            }
-                        }
-                        MessageBox.Show($"O campo {nameComponente} é obrigatório", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        control.Focus();
-                        return false;
-                    }
-                }
-                else if (control is TextKm)
-                {
-                    if (control.Text == String.Empty)
-                    {
-                        string nameComponente = "";
-                        foreach (Control x in control.Parent.Controls)
-                        {
-                            if (x is System.Windows.Forms.Label)
-                            {
-                                nameComponente = x.Text;
-                            }
-                        }
-                        MessageBox.Show($"O campo {nameComponente} é obrigatório", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        control.Focus();
-                        return false;
-                    }
-                }
-                else if (control is TextM3)
-                {
-                    if (control.Text == String.Empty)
-                    {
-                        string nameComponente = "";
-                        foreach (Control x in control.Parent.Parent.Controls)
-                        {
-                            if (x is System.Windows.Forms.Label)
-                            {
-                                nameComponente = x.Text;
-                            }
-                        }
-                        MessageBox.Show($"O campo {nameComponente} é obrigatório", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        control.Focus();
-                        return false;
-                    }
-                }
-                else if (control is TextMoney)
-                {
-                    if (control.Text == String.Empty)
-                    {
-                        string nameComponente = "";
-                        foreach (Control x in control.Parent.Parent.Controls)
-                        {
-                            if (x is System.Windows.Forms.Label)
-                            {
-                                nameComponente = x.Text;
-                            }
-                        }
-                        MessageBox.Show($"O campo {nameComponente} é obrigatório", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        control.Focus();
-                        return false;
-                    }
-                }
-                else if (control is ComboBox)
-                {
-                    if (control.Text == String.Empty)
-                    {
-                        string nameComponente = "";
-                        foreach (Control x in control.Parent.Controls)
-                        {
-                            if (x is System.Windows.Forms.Label)
-                            {
-                                nameComponente = x.Text;
-                            }
-                        }
-                        MessageBox.Show($"O campo {nameComponente} é obrigatório", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        control.Focus();
-                        return false;
-                    }
-                }
-                else if (control is DateTimePicker)
-                {
-                    DateTimePicker datePicker = (DateTimePicker)control;
-                    if (datePicker.Format == DateTimePickerFormat.Custom)
-                    {
-                        string nameComponente = "";
-                        foreach (Control x in control.Parent.Parent.Controls)
-                        {
-                            if (x is System.Windows.Forms.Label)
-                            {
-                                nameComponente = x.Text;
-                            }
-                        }
-                        MessageBox.Show($"O campo {nameComponente} é obrigatório", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        control.Focus();
-                        return false;
-                    }
-                }
-
-                else if (control is masckedboxTemplete)
-                {
-                    masckedboxTemplete m = (masckedboxTemplete)control;
-                    if (m.MaskCompleted == false)
-                    {
-                        string nameComponente = "";
-                        foreach (Control x in control.Parent.Parent.Controls)
-                        {
-                            if (x is System.Windows.Forms.Label)
-                            {
-                                nameComponente = x.Text;
-                            }
-                        }
-                        MessageBox.Show($"O campo {nameComponente} é obrigatório", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        control.Focus();
-                        return false;
-                    }
-                }
-
             }
             return true;
         }
 
-        public static bool Validar(Control controls, List<string> notValidar)
+        // Esse é a Sobrecarga do método validar que permite
+        // deixar de verificar alguns campos que não são 
+        // Obrigatorios
+        public static bool Validar(Control elementPai, List<string> notValidar)
         {
-            foreach (Control control in controls.Controls)
+            foreach (Control control in elementPai.Controls)
             {
+                //Atraves da List que o método recebe ele 
+                //verifica se os filhos(Controls) do controle que está sendo verificado
+                //está na List e se tiver ele returna true e não 
+                //faz a verificação do campo
                 foreach (string item in notValidar)
                 {
                     if (control.Name == item)
@@ -242,7 +69,6 @@ namespace Interface.Properties
                 }
                 if (control is Panel)
                 {
-
                     if (Validar(control, notValidar) == false)
                         return false;
                 }
@@ -261,198 +87,117 @@ namespace Interface.Properties
                     if (Validar(control, notValidar) == false)
                         return false;
                 }
-                else if (control is textBoxnOnlyNum)
+                else if (verificarControl(control) == false)
                 {
-                    if (control.Text == String.Empty)
-                    {
-                        string nameComponente = "";
-                        foreach (Control x in control.Parent.Parent.Controls)
-                        {
-                            if (x is System.Windows.Forms.Label)
-                            {
-                                nameComponente = x.Text;
-                            }
-                        }
-                        MessageBox.Show($"O campo {nameComponente} é obrigatório", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        control.Focus();
-                        return false;
-                    }
-                }
-                else if (control is textBoxOnlyLetters)
-                {
-                    if (control.Text == String.Empty)
-                    {
-                        string nameComponente = "";
-                        foreach (Control x in control.Parent.Parent.Controls)
-                        {
-                            if (x is System.Windows.Forms.Label)
-                            {
-                                nameComponente = x.Text;
-                            }
-                        }
-                        MessageBox.Show($"O campo {nameComponente} é obrigatório", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        control.Focus();
-                        return false;
-                    }
-                }
-                else if (control is textBoxOnlyNum_Letters)
-                {
-                    if (control.Text == String.Empty)
-                    {
-                        string nameComponente = "";
-                        foreach (Control x in control.Parent.Parent.Controls)
-                        {
-                            if (x is System.Windows.Forms.Label)
-                            {
-                                nameComponente = x.Text;
-                            }
-                        }
-                        MessageBox.Show($"O campo {nameComponente} é obrigatório", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        control.Focus();
-                        return false;
-                    }
-                }
-                else if (control is textBoxTemplete)
-                {
-                    if (control.Text == String.Empty)
-                    {
-                        string nameComponente = "";
-                        foreach (Control x in control.Parent.Parent.Controls)
-                        {
-                            if (x is System.Windows.Forms.Label)
-                            {
-                                nameComponente = x.Text;
-                            }
-                        }
-                        MessageBox.Show($"O campo {nameComponente} é obrigatório", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        control.Focus();
-                        return false;
-                    }
-                }
-                else if (control is TextKg)
-                {
-                    if (control.Text == String.Empty)
-                    {
-                        string nameComponente = "";
-                        foreach (Control x in control.Parent.Parent.Controls)
-                        {
-                            if (x is System.Windows.Forms.Label)
-                            {
-                                nameComponente = x.Text;
-                            }
-                        }
-                        MessageBox.Show($"O campo {nameComponente} é obrigatório", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        control.Focus();
-                        return false;
-                    }
-                }
-                else if (control is TextKm)
-                {
-                    if (control.Text == String.Empty)
-                    {
-                        string nameComponente = "";
-                        foreach (Control x in control.Parent.Controls)
-                        {
-                            if (x is System.Windows.Forms.Label)
-                            {
-                                nameComponente = x.Text;
-                            }
-                        }
-                        MessageBox.Show($"O campo {nameComponente} é obrigatório", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        control.Focus();
-                        return false;
-                    }
-                }
-                else if (control is TextM3)
-                {
-                    if (control.Text == String.Empty)
-                    {
-                        string nameComponente = "";
-                        foreach (Control x in control.Parent.Parent.Controls)
-                        {
-                            if (x is System.Windows.Forms.Label)
-                            {
-                                nameComponente = x.Text;
-                            }
-                        }
-                        MessageBox.Show($"O campo {nameComponente} é obrigatório", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        control.Focus();
-                        return false;
-                    }
-                }
-                else if (control is TextMoney)
-                {
-                    if (control.Text == String.Empty)
-                    {
-                        string nameComponente = "";
-                        foreach (Control x in control.Parent.Parent.Controls)
-                        {
-                            if (x is System.Windows.Forms.Label)
-                            {
-                                nameComponente = x.Text;
-                            }
-                        }
-                        MessageBox.Show($"O campo {nameComponente} é obrigatório", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        control.Focus();
-                        return false;
-                    }
-                }
-                else if (control is ComboBox)
-                {
-                    if (control.Text == String.Empty)
-                    {
-                        string nameComponente = "";
-                        foreach (Control x in control.Parent.Controls)
-                        {
-                            if (x is System.Windows.Forms.Label)
-                            {
-                                nameComponente = x.Text;
-                            }
-                        }
-                        MessageBox.Show($"O campo {nameComponente} é obrigatório", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        control.Focus();
-                        return false;
-                    }
-                }
-                else if (control is DateTimePicker)
-                {
-                    DateTimePicker datePicker = (DateTimePicker)control;
-                    if (datePicker.Format == DateTimePickerFormat.Custom)
-                    {
-                        string nameComponente = "";
-                        foreach (Control x in control.Parent.Parent.Controls)
-                        {
-                            if (x is System.Windows.Forms.Label)
-                            {
-                                nameComponente = x.Text;
-                            }
-                        }
-                        MessageBox.Show($"O campo {nameComponente} é obrigatório", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        control.Focus();
-                        return false;
-                    }
-                }
-
-                else if (control is masckedboxTemplete)
-                {
-                    masckedboxTemplete m = (masckedboxTemplete)control;
-                    if (m.MaskCompleted == false)
-                    {
-                        string nameComponente = "";
-                        foreach (Control x in control.Parent.Parent.Controls)
-                        {
-                            if (x is System.Windows.Forms.Label)
-                            {
-                                nameComponente = x.Text;
-                            }
-                        }
-                        MessageBox.Show($"O campo {nameComponente} é obrigatório", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        control.Focus();
-                        return false;
-                    }
+                    return false;
                 }
             }
             return true;
+        }
+
+        //recebe os filhos do controle Pai e verefica qual é 
+        //seu tipo e partir disso chama o método message 
+        private static bool verificarControl(Control control)
+        {
+            
+            if (control is textBoxnOnlyNum)
+            {
+                if (message(control) == false)
+                    return false;
+            }
+            else if (control is textBoxOnlyLetters)
+            {
+                if (message(control) == false)
+                    return false;
+            }
+            else if (control is textBoxOnlyNum_Letters)
+            {
+                if (message(control) == false)
+                    return false;
+            }
+            else if (control is textBoxTemplete)
+            {
+                if (message(control) == false)
+                    return false;
+            }
+            else if (control is TextKg)
+            {
+                if (message(control) == false)
+                    return false;
+            }
+            else if (control is TextKm)
+            {
+                if (message(control) == false)
+                    return false;
+            }
+            else if (control is TextM3)
+            {
+                if (message(control) == false)
+                    return false;
+            }
+            else if (control is TextMoney)
+            {
+                if (message(control) == false)
+                    return false;
+            }
+            else if (control is ComboBox)
+            {
+                if (message(control) == false)
+                    return false;
+            }
+            else if (control is DateTimePicker)
+            {
+                DateTimePicker datePicker = (DateTimePicker)control;
+                if (datePicker.Format == DateTimePickerFormat.Custom)
+                {
+                    message(control);
+                    return false;
+                }
+            }
+            else if (control is masckedboxTemplete)
+            {
+                masckedboxTemplete maskedBox = (masckedboxTemplete)control;
+                if (maskedBox.MaskCompleted == false)
+                {
+                    message(control);
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        //O método message é responsavel por mostrar 
+        //a messagem que o campo deve ser preenchido na 
+        //tela do usuário 
+        private static bool message(Control control)
+        {
+            if (control.Text == String.Empty)
+            {
+                MessageBox.Show($"O campo {nameCampo(control)} é obrigatório estar preenchido corretemente", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                control.Focus();
+                return false;
+            }
+            return true;
+        }
+        //Esse método é resposável por ler a Label que cada
+        //campo tem e retornar o texto dessa lavel
+        private static string nameCampo(Control control)
+        {
+            foreach (Control label in control.Parent.Controls)
+            {
+                if (label is System.Windows.Forms.Label)
+                {
+                    return label.Text;
+                }
+            }
+            foreach (Control label in control.Parent.Parent.Controls)
+            {
+                if (label is System.Windows.Forms.Label)
+                {
+                    return label.Text;
+                }
+            }
+            return "";
         }
     }
 }
