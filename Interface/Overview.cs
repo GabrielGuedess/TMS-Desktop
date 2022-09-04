@@ -1,4 +1,6 @@
 ﻿using Interface.Properties;
+using Newtonsoft.Json.Linq;
+using System.Data;
 
 namespace Interface
 {
@@ -8,91 +10,56 @@ namespace Interface
 
         readonly Database database = new();
 
+        readonly LimparFormularios limpar = new();
+
+        readonly Mapper mapper = new();
+
+        public Dash? dash { get; set; }
+
+        public CadastroClientes? clientes { get; set; }
+
+        private DataRow? DataGridRequest;
+
+        public string CacheType = "Clientes";
+
+        bool selectOrDelete;
+
         public string TypeControl
         {
+            get
+            {
+                return CacheType;
+            }
+
             set
             {
                 buscar.Text = value;
+
+                CacheType = value.Contains("Clientes") ? CPF.Checked ? "Clientes_Fisicos" : "Clientes_Juridicos" : value;
+
+                selectOrDelete = value.Contains("Overview");
 
                 panelContainerRadio.Visible = false;
                 contentOverview.Location = new Point(0, 62);
 
                 database.GetData = value;
-                database.PessoaData = CPF.Checked ? "Clientes_Fisicos" : "Clientes_Juridicos";
+                database.isCPF = CPF.Checked;
                 database.GetDataGridView(dataGridView1, maskInput);
 
-                if (value.Contains("Clientes"))
+                for (int i = 0; i < dataGridView1.Columns.Count; i++)
                 {
-                    panelContainerRadio.Visible = true;
-                    contentOverview.Location = new Point(0, 124);
-
-                    typeData.Text = CPF.Checked ? "CPF" : "CNPJ";
-                    maskInput.Text = "";
-                    maskInput.Mask = CPF.Checked ? "000.000.000-00" : "00.000.000/0000-00";
+                    if (dataGridView1.Columns.Count < 10)
+                    {
+                        dataGridView1.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                    }
+                    else
+                    {
+                        dataGridView1.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+                    }
                 }
 
-                if (value.Contains("Usuarios"))
-                {
-                    typeData.Text = "CPF";
-                    maskInput.Text = "";
-                    maskInput.Mask = "000.000.000-00";
-                }
-
-                if (value.Contains("Rotas"))
-                {
-                    typeData.Text = "ID";
-                    maskInput.Text = "";
-                    maskInput.Mask = "";
-                }
-
-                if (value.Contains("Motoristas"))
-                {
-                    typeData.Text = "CPF";
-                    maskInput.Text = "";
-                    maskInput.Mask = "000.000.000-00";
-                }
-
-                if (value.Contains("Veiculos"))
-                {
-                    typeData.Text = "Placa";
-                    maskInput.Text = "";
-                    maskInput.Mask = ">&&&&&&&";
-                }
-
-                if (value.Contains("Terceiros"))
-                {
-                    typeData.Text = "CPF";
-                    maskInput.Text = "";
-                    maskInput.Mask = "000.000.000-00";
-                }
-
-                if (value.Contains("Sinistros"))
-                {
-                    typeData.Text = "Código";
-                    maskInput.Text = "";
-                    maskInput.Mask = "";
-                }
-
-                if (value.Contains("Notas"))
-                {
-                    typeData.Text = "Chave de Acesso";
-                    maskInput.Text = "";
-                    maskInput.Mask = "";
-                }
-
-                if (value.Contains("Tarifas"))
-                {
-                    typeData.Text = "Nome da empresa";
-                    maskInput.Text = "";
-                    maskInput.Mask = "";
-                }
-
-                if (value.Contains("Redes"))
-                {
-                    typeData.Text = "Num ID";
-                    maskInput.Text = "";
-                    maskInput.Mask = "";
-                }
+                mapper.mapperForOverview(value, typeData, maskInput, panelContainerRadio, contentOverview, CPF.Checked);
+                mapper.mapperForDatabase(value, CPF.Checked);
 
                 maskInput.Width = 271 - typeData.Width;
                 maskInput.Location = new Point(35 + (typeData.Width + 10), 7);
@@ -132,12 +99,24 @@ namespace Interface
         {
             if (CPF.Checked)
             {
-                database.PessoaData = "Clientes_Fisicos";
-                database.GetDataGridView(dataGridView1, maskInput);
+                var clientesCPF =
+                    clientes!.Controls["panel17"].Controls["tableLayoutPanel2"].Controls["panelPessoaFisica"].Controls["pessoaFisica"] as RadioButton;
+
+                clientesCPF!.Checked = true;
+
+                CacheType = TypeControl.Contains("Clientes") ? "Clientes_Fisicos" : TypeControl;
+
+                mapper.mapperForDatabase(CacheType, true);
+
+                database.isCPF = true;
 
                 CNPJ.Checked = false;
                 typeData.Text = "CPF";
                 maskInput.Mask = "000.000.000-00";
+                maskInput.Text = "";
+
+                database.GetData = database.Route!;
+                database.GetDataGridView(dataGridView1, maskInput);
             }
         }
 
@@ -145,12 +124,23 @@ namespace Interface
         {
             if (CNPJ.Checked)
             {
-                database.PessoaData = "Clientes_Juridicos";
-                database.GetDataGridView(dataGridView1, maskInput);
+                var clientesCNPJ =
+                    clientes!.Controls["panel17"].Controls["tableLayoutPanel2"].Controls["panelPessoaJuridica"].Controls["pessoaJuridica"] as RadioButton;
+
+                clientesCNPJ!.Checked = true;
+
+                CacheType = TypeControl.Contains("Clientes") ? "Clientes_Juridicos" : TypeControl;
+
+                mapper.mapperForDatabase(CacheType, false);
+
+                database.isCPF = false;
 
                 CPF.Checked = false;
                 typeData.Text = "CNPJ";
                 maskInput.Mask = "00.000.000/0000-00";
+                maskInput.Text = "";
+
+                database.GetDataGridView(dataGridView1, maskInput);
             }
         }
 
@@ -166,7 +156,113 @@ namespace Interface
 
         private void buscar_Click(object sender, EventArgs e)
         {
-            database.GetDataGridView(dataGridView1, maskInput);
+            if (selectOrDelete)
+            {
+                database.GetDataGridView(dataGridView1, maskInput);
+            }
+
+            if (!selectOrDelete)
+            {
+                database.GetDataGridView(dataGridView1, maskInput, "Delete");
+            }
+
+            if (maskInput.MaskCompleted)
+            {
+                int rowIndex = -1;
+
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+                    if (row.Cells[CPF.Checked ? "CPF" : "CNPJ"].Value.ToString()!.Equals(maskInput.Text))
+                    {
+                        rowIndex = row.Index;
+                        break;
+                    }
+                }
+
+                if (rowIndex >= 0)
+                {
+                    dataGridView1.Rows[rowIndex].Selected = true;
+
+                    DataRow dados = ((DataRowView)dataGridView1.Rows[rowIndex].DataBoundItem).Row;
+
+                    DataGridRequest = dados;
+                }
+                else
+                {
+                    MessageBox.Show($"{typeData.Text} não encontrado!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            else
+            {
+                MessageBox.Show($"É necessário preencher o campo {typeData.Text} corretamente!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+        }
+
+        private void buttonVerSelecionado_Paint(object sender, PaintEventArgs e)
+        {
+            utils.expansiveButton(10, buttonVerSelecionado);
+        }
+
+        private void buttonVerSelecionado_Click(object sender, EventArgs e)
+        {
+            if (DataGridRequest != null)
+            {
+                dash!.OverviewDataRequest = DataGridRequest!;
+
+                dash.buttonUp_Click(sender, e);
+            }
+            else
+            {
+                MessageBox.Show($"Nenhum item selecionado!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+
+                DataRow dados = ((DataRowView)row.DataBoundItem).Row;
+
+                DataGridRequest = dados;
+            }
+        }
+
+        private void typeData_Click(object sender, EventArgs e)
+        {
+            maskInput.Focus();
+        }
+
+        private void maskInput_TextChanged(object sender, EventArgs e)
+        {
+            utils.feedbackColorInput(maskInput, typeData);
+
+            dataGridView1.ClearSelection();
+
+            if (maskInput.MaskCompleted)
+            {
+                int rowIndex = -1;
+
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+                    if (row.Cells[mapper.TypeWhereDatabase].Value.ToString()!.Equals(maskInput.Text))
+                    {
+                        rowIndex = row.Index;
+                        break;
+                    }
+                }
+
+                if (rowIndex >= 0)
+                {
+                    dataGridView1.Rows[rowIndex].Selected = true;
+
+                    DataRow dados = ((DataRowView)dataGridView1.Rows[rowIndex].DataBoundItem).Row;
+
+                    DataGridRequest = dados;
+                }
+            }
         }
     }
 }

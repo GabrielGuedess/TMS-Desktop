@@ -1,27 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
+﻿using System.Data;
 using System.Data.OleDb;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Interface.Properties
 {
     public class ConnectDB
     {
-        private static string pasta = Application.StartupPath + @"/bd/Banco de dados V2.mdb";
-        private static string conexao = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + pasta;
-        private OleDbConnection DB = new OleDbConnection(conexao);
+        readonly LimparFormularios limpar = new();
+
+        private OleDbConnection DB = new OleDbConnection($@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source={Application.StartupPath + "/bd/Banco de dados V2.mdb"}");
+
         public void cadastrar(string SQL)
         {
             try
             {
                 DB.Open();
-                // Cria o comando do SQL na conexão aberta
+
                 OleDbCommand comando = new OleDbCommand(SQL, DB);
 
-                // Médodo para executar o comando SQL que não retorna dados.
                 comando.ExecuteNonQuery();
 
                 MessageBox.Show("Dados gravados com sucesso", "Dados cadastrados", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -32,16 +27,19 @@ namespace Interface.Properties
                 MessageBox.Show(erro.Message);
             }
         }
-        public DataTable pesquisar(string SQL)
+        public DataTable? pesquisar(string SQL)
         {
             try
             {
                 DB.Open();
                 OleDbCommand comando = new OleDbCommand();
+
                 comando.Connection = DB;
-                DataTable dados = new DataTable();
+                DataTable? dados = new DataTable();
+
                 OleDbDataAdapter adaptador = new OleDbDataAdapter(SQL, DB);
                 adaptador.Fill(dados);
+
                 if (dados.Rows.Count == 0)
                 {
                     dados = null;
@@ -51,12 +49,55 @@ namespace Interface.Properties
                     DB.Close();
                 }
 
-                return dados;
+                return dados!;
 
             }
             catch (Exception erro)
             {
                 MessageBox.Show(erro.Message);
+
+                return null;
+            }
+
+        }
+
+        public DataRow? pesquisarRow(string SQL, Panel panelClear)
+        {
+            try
+            {
+                DB.Open();
+
+                OleDbCommand comando = new OleDbCommand();
+                comando.Connection = DB;
+
+                DataTable dados = new DataTable();
+                OleDbDataAdapter adaptador = new OleDbDataAdapter(SQL, DB);
+
+                adaptador.Fill(dados);
+
+                if (dados.Rows.Count > 0)
+                {
+                    DataRow dadosRow = dados.Rows[0];
+
+                    DB.Close();
+
+                    return dadosRow;
+                }
+                else
+                {
+                    MessageBox.Show("Dado não encontrado", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    limpar.CleanControl(panelClear);
+
+                    DB.Close();
+
+                    return null;
+                }
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show(erro.Message);
+
                 return null;
             }
 

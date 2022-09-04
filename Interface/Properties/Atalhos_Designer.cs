@@ -1,7 +1,5 @@
 ﻿using System.Runtime.InteropServices;
 using System.Drawing.Drawing2D;
-using System.Windows.Forms;
-using GMap.NET.WindowsForms;
 
 namespace Interface.Properties
 {
@@ -22,7 +20,7 @@ namespace Interface.Properties
         string valor;
         protected override void OnKeyPress(KeyPressEventArgs e)
         {
-            
+
             base.OnKeyPress(e);
 
             if (char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar) || char.IsWhiteSpace(e.KeyChar))
@@ -47,7 +45,7 @@ namespace Interface.Properties
                     Select(Text.Length, 0);
                 }
 
-                
+
             }
 
             else
@@ -560,7 +558,6 @@ namespace Interface.Properties
             }
         }
 
-
         public void expansiveButton(int rounded, params Button[] buttons)
         {
             [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
@@ -578,6 +575,50 @@ namespace Interface.Properties
             foreach (Button panel in buttons)
             {
                 panel.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel.Width, panel.Height, rounded, rounded));
+            }
+        }
+
+        public void feedbackColorInput(masckedboxTemplete mask, Label typeData)
+        {
+            if (mask.MaskCompleted && mask.Text != "")
+            {
+                typeData.ForeColor = Color.FromArgb(75, 181, 67);
+            }
+
+            if (!mask.MaskCompleted && mask.Text != "")
+            {
+                typeData.ForeColor = Color.FromArgb(255, 51, 51);
+            }
+
+            if (mask.Text == "")
+            {
+                typeData.ForeColor = Color.FromArgb(91, 91, 101);
+            }
+        }
+
+        public void feedbackColorInputNum(textBoxnOnlyNum mask, Label typeData)
+        {
+            if (mask.Text != "")
+            {
+                typeData.ForeColor = Color.FromArgb(75, 181, 67);
+            }
+
+            if (mask.Text == "")
+            {
+                typeData.ForeColor = Color.FromArgb(91, 91, 101);
+            }
+        }
+
+        public void feedbackColorInputNumLetters(textBoxOnlyNum_Letters mask, Label typeData)
+        {
+            if (mask.Text != "")
+            {
+                typeData.ForeColor = Color.FromArgb(75, 181, 67);
+            }
+
+            if (mask.Text == "")
+            {
+                typeData.ForeColor = Color.FromArgb(91, 91, 101);
             }
         }
     }

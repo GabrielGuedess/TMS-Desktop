@@ -6,6 +6,7 @@ using GMap.NET.WindowsForms.Markers;
 using GMap.NET.WindowsForms.ToolTips;
 using Interface.Properties;
 using Microsoft.VisualBasic.Logging;
+using System.Data;
 
 namespace Interface
 {
@@ -13,21 +14,57 @@ namespace Interface
     {
         readonly Utilidades utils = new();
 
+        LimparFormularios limpar = new();
+
+        private string Type = "";
+
         public string TypeControl
         {
             set
             {
-                cadastrarRota.Text = value;
+                Type = value;
+
+                button2.Text = value;
 
                 if (value.Contains("Cadastro"))
                 {
                     searchPanel.Visible = false;
                     contentRotas.Location = new Point(0, 0);
+
+                    tbIDRota.ReadOnly = false;
+                    tbIDRota.Cursor = Cursors.IBeam;
+                    buscarRota.Visible = false;
                 }
                 if (value.Contains("Update"))
                 {
                     searchPanel.Visible = true;
                     contentRotas.Location = new Point(0, 62);
+
+                    tbIDRota.ReadOnly = true;
+                    tbIDRota.Cursor = Cursors.No;
+                    buscarRota.Visible = true;
+                }
+            }
+        }
+
+        public DataRow OverviewDataResponse
+        {
+            set
+            {
+                IdRotas.Text = value["ID_Rota"].ToString();
+
+                if (value != null)
+                {
+                    tbIDRota.Text = value["ID_Rota"].ToString();
+                    tbStatusViagem.Text = value["S_Viagem"].ToString();
+                    tbMotorista.Text = value["Motorista"].ToString();
+                    comboVeiculo.Text = value["Veiculos"].ToString();
+                    tbDistanciaTotal.Text = value["D_Total"].ToString();
+                    tbProgresso.Text = value["Progresso"].ToString();
+                    tbEntrega.Text = value["Entrega"].ToString();
+                    tbProximaEntrega.Text = value["P_Destino"].ToString();
+                    tbCustoEstimado.Text = value["C_Estimado"].ToString();
+                    tbConhecimentoTransporte.Text = value["C_Transp"].ToString();
                 }
             }
         }
@@ -87,31 +124,115 @@ namespace Interface
 
         private void button1_Paint(object sender, PaintEventArgs e)
         {
-            utils.expansiveButton(10, calcularRota);
+            utils.expansiveButton(10, button1);
 
             contentRotas.Location = new Point(0, 62);
         }
 
         private void button2_Paint(object sender, PaintEventArgs e)
         {
-            utils.expansiveButton(10, cadastrarRota);
+            utils.expansiveButton(10, button2);
         }
+
+        private void buscarRota_Paint(object sender, PaintEventArgs e)
+        {
+            utils.expansiveButton(10, buscarRota);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (Type.Contains("Cadastro") && validar())
+            {
+                string SQL = "Insert Into Rotas (ID_Rota, Entrega, Motorista, Veiculos, D_Total, " +
+                    "S_Viagem, C_Estimado, Progresso, P_Destino, C_Transp) Values " +
+                    $"('{tbIDRota.Text}', '{tbEntrega.Text}', '{tbMotorista.Text}', '{comboVeiculo.Text}', " +
+                    $"'{tbDistanciaTotal.Text}', '{tbStatusViagem.Text}', '{tbCustoEstimado.Text}', " +
+                    $"'{tbProgresso.Text}', '{tbProximaEntrega.Text}', '{tbConhecimentoTransporte.Text}')";
+
+                ConnectDB connectDB = new ConnectDB();
+                connectDB.cadastrar(SQL);
+
+                limpar.CleanControl(contentRotas);
+                limpar.CleanControl(searchPanel);
+            }
+
+            if (Type.Contains("Update") && validar())
+            {
+                string SQLUp = $"UPDATE Rotas SET " +
+                $"Entrega= '{tbEntrega.Text}', " +
+                $"Motorista= '{tbMotorista.Text}', " +
+                $"Veiculos= '{comboVeiculo.Text}', " +
+                $"D_Total= '{tbDistanciaTotal.Text}', " +
+                $"S_Viagem= '{tbStatusViagem.Text}', " +
+                $"C_Estimado= '{tbCustoEstimado.Text}', " +
+                $"Progresso= '{tbProgresso.Text}', " +
+                $"P_Destino= '{tbProximaEntrega.Text}', " +
+                $"C_Transp= '{tbConhecimentoTransporte.Text}' " +
+                $"WHERE ID_Rota = '{IdRotas.Text.Replace('.', ',')}'";
+
+                ConnectDB connectDB = new();
+                connectDB.cadastrar(SQLUp);
+
+                limpar.CleanControl(contentRotas);
+                limpar.CleanControl(searchPanel);
+            }
+        }
+
+        private void buscarRota_Click(object sender, EventArgs e)
+        {
+            if (IdRotas.Text != "")
+            {
+                ConnectDB connectDB = new();
+                DataRow dados = connectDB.pesquisarRow($"SELECT * FROM Rotas WHERE ID_Rota = '{IdRotas.Text}'", contentRotas)!;
+
+                if (dados != null)
+                {
+                    IdRotas.Text = dados["ID_Rota"].ToString();
+
+                    tbEntrega.Text = dados["Entrega"].ToString();
+                    tbMotorista.Text = dados["Motorista"].ToString();
+                    comboVeiculo.Text = dados["Veiculos"].ToString();
+                    tbDistanciaTotal.Text = dados["D_Total"].ToString();
+                    tbStatusViagem.Text = dados["S_Viagem"].ToString();
+                    tbCustoEstimado.Text = dados["C_Estimado"].ToString();
+                    tbProgresso.Text = dados["Progresso"].ToString();
+                    tbProximaEntrega.Text = dados["P_Destino"].ToString();
+                    tbConhecimentoTransporte.Text = dados["C_Transp"].ToString();
+                }
+            }
+            else
+            {
+                MessageBox.Show($"É necessário preencher o campo {typeData.Text} corretamente!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                IdRotas.Focus();
+            }
+        }
+
+        private void panelSerch_Paint(object sender, PaintEventArgs e)
+        {
+            utils.alignCenterPanels(panelSerch, searchPanel, true, true);
+        }
+
+        private void CadastroRoutes_Resize(object sender, EventArgs e)
+        {
+            utils.alignCenterPanels(panelSerch, searchPanel, true, true);
+        }
+
 
         private bool validar()
         {
-            if(tbIDRota.Text == String.Empty)
+            if (tbIDRota.Text == String.Empty)
             {
                 MessageBox.Show("O campo Id Rota é Obrigatorio", "Erro", MessageBoxButtons.OK);
                 tbIDRota.Focus();
                 return false;
             }
-            else if(tbStatusViagem.Text == string.Empty)
+            else if (tbStatusViagem.Text == string.Empty)
             {
                 MessageBox.Show("O campo Codigo Status da Viagem é Obrigatorio", "Erro", MessageBoxButtons.OK);
                 tbStatusViagem.Focus();
                 return false;
             }
-            else if(tbMotorista.Text == string.Empty)
+            else if (tbMotorista.Text == string.Empty)
             {
                 MessageBox.Show("O campo Codigo Motorista(s) é Obrigatorio", "Erro", MessageBoxButtons.OK);
                 tbMotorista.Focus();
@@ -162,25 +283,16 @@ namespace Interface
             return true;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void typeData_Click(object sender, EventArgs e)
         {
-            if (validar() == false)
-            {
-                return;
-            }
-            else
-            {
-                string SQL = "Insert Into Rotas (ID_Rota, Entrega, Motorista, Veiculos, D_Total, " +
-                    "S_Viagem, C_Estimado, Progresso, P_Destino, C_Transp) Values " +
-                    $"('{tbIDRota.Text}', '{tbEntrega.Text}', '{tbMotorista.Text}', '{comboVeiculo.Text}', " +
-                    $"'{tbDistanciaTotal.Text}', '{tbStatusViagem.Text}', '{tbCustoEstimado.Text}', " +
-                    $"'{tbProgresso.Text}', '{tbProximaEntrega.Text}', '{tbConhecimentoTransporte.Text}')";
+            IdRotas.Focus();
+        }
 
-                ConnectDB connectDB = new ConnectDB();
-                connectDB.cadastrar(SQL);
-                LimparFormularios limpar = new();
-                limpar.CleanControl(contentRotas);
-            }
+        private void IdRotas_TextChanged(object sender, EventArgs e)
+        {
+            tbIDRota.Text = IdRotas.Text;
+
+            utils.feedbackColorInputNum(IdRotas, typeData);
         }
     }
 }

@@ -32,7 +32,7 @@
             this.searchPanel = new System.Windows.Forms.Panel();
             this.panelSerch = new Interface.Properties.PanelBorderRoundedOnLeft();
             this.typeData = new System.Windows.Forms.Label();
-            this.textBoxOnlyNum_Letters4 = new Interface.Properties.textBoxOnlyNum_Letters();
+            this.maskRedeID = new Interface.Properties.textBoxOnlyNum_Letters();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.contentRedes = new System.Windows.Forms.Panel();
             this.label18 = new System.Windows.Forms.Label();
@@ -50,7 +50,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panelBorderRoundedID = new Interface.Properties.PanelBorderRounded();
-            this.tbIDRede = new Interface.Properties.textBoxOnlyNum_Letters();
+            this.numID = new Interface.Properties.textBoxOnlyNum_Letters();
             this.labelId = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -63,6 +63,7 @@
             this.tbDescricaoRede = new Interface.Properties.textBoxOnlyNum_Letters();
             this.label3 = new System.Windows.Forms.Label();
             this.panelButton = new System.Windows.Forms.Panel();
+            this.buscarNumId = new System.Windows.Forms.Button();
             this.cadastrarRede = new System.Windows.Forms.Button();
             this.panel51 = new System.Windows.Forms.Panel();
             this.button10 = new System.Windows.Forms.Button();
@@ -106,7 +107,7 @@
             this.panelSerch.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.panelSerch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
             this.panelSerch.Controls.Add(this.typeData);
-            this.panelSerch.Controls.Add(this.textBoxOnlyNum_Letters4);
+            this.panelSerch.Controls.Add(this.maskRedeID);
             this.panelSerch.Controls.Add(this.pictureBox3);
             this.panelSerch.Location = new System.Drawing.Point(314, 13);
             this.panelSerch.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
@@ -126,22 +127,24 @@
             this.typeData.Location = new System.Drawing.Point(35, 7);
             this.typeData.Margin = new System.Windows.Forms.Padding(10, 7, 0, 6);
             this.typeData.Name = "typeData";
-            this.typeData.Size = new System.Drawing.Size(64, 21);
+            this.typeData.Size = new System.Drawing.Size(67, 21);
             this.typeData.TabIndex = 4;
-            this.typeData.Text = "Num ID";
+            this.typeData.Text = "ID_Rede";
+            this.typeData.Click += new System.EventHandler(this.typeData_Click);
             // 
-            // textBoxOnlyNum_Letters4
+            // maskRedeID
             // 
-            this.textBoxOnlyNum_Letters4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxOnlyNum_Letters4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.textBoxOnlyNum_Letters4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxOnlyNum_Letters4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxOnlyNum_Letters4.ForeColor = System.Drawing.Color.White;
-            this.textBoxOnlyNum_Letters4.Location = new System.Drawing.Point(109, 7);
-            this.textBoxOnlyNum_Letters4.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.textBoxOnlyNum_Letters4.Name = "textBoxOnlyNum_Letters4";
-            this.textBoxOnlyNum_Letters4.Size = new System.Drawing.Size(261, 22);
-            this.textBoxOnlyNum_Letters4.TabIndex = 2;
+            this.maskRedeID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.maskRedeID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.maskRedeID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.maskRedeID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.maskRedeID.ForeColor = System.Drawing.Color.White;
+            this.maskRedeID.Location = new System.Drawing.Point(112, 7);
+            this.maskRedeID.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.maskRedeID.Name = "maskRedeID";
+            this.maskRedeID.Size = new System.Drawing.Size(225, 22);
+            this.maskRedeID.TabIndex = 2;
+            this.maskRedeID.TextChanged += new System.EventHandler(this.numId_TextChanged);
             // 
             // pictureBox3
             // 
@@ -393,26 +396,26 @@
             // 
             this.panelBorderRoundedID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelBorderRoundedID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelBorderRoundedID.Controls.Add(this.tbIDRede);
+            this.panelBorderRoundedID.Controls.Add(this.numID);
             this.panelBorderRoundedID.Location = new System.Drawing.Point(5, 37);
             this.panelBorderRoundedID.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelBorderRoundedID.Name = "panelBorderRoundedID";
-            this.panelBorderRoundedID.Size = new System.Drawing.Size(242, 33);
+            this.panelBorderRoundedID.Size = new System.Drawing.Size(248, 33);
             this.panelBorderRoundedID.TabIndex = 2;
             // 
-            // tbIDRede
+            // numID
             // 
-            this.tbIDRede.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbIDRede.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.tbIDRede.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbIDRede.Enabled = false;
-            this.tbIDRede.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbIDRede.ForeColor = System.Drawing.Color.White;
-            this.tbIDRede.Location = new System.Drawing.Point(7, 5);
-            this.tbIDRede.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.tbIDRede.Name = "tbIDRede";
-            this.tbIDRede.Size = new System.Drawing.Size(228, 22);
-            this.tbIDRede.TabIndex = 1;
+            this.numID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.numID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.numID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.numID.Enabled = false;
+            this.numID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.numID.ForeColor = System.Drawing.Color.White;
+            this.numID.Location = new System.Drawing.Point(7, 5);
+            this.numID.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.numID.Name = "numID";
+            this.numID.Size = new System.Drawing.Size(231, 22);
+            this.numID.TabIndex = 1;
             // 
             // labelId
             // 
@@ -422,9 +425,9 @@
             this.labelId.Location = new System.Drawing.Point(5, 5);
             this.labelId.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
             this.labelId.Name = "labelId";
-            this.labelId.Size = new System.Drawing.Size(79, 17);
+            this.labelId.Size = new System.Drawing.Size(54, 17);
             this.labelId.TabIndex = 0;
-            this.labelId.Text = "ID da Rede";
+            this.labelId.Text = "Num ID";
             // 
             // panel5
             // 
@@ -458,7 +461,7 @@
             this.panelBorderRounded3.Location = new System.Drawing.Point(5, 37);
             this.panelBorderRounded3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelBorderRounded3.Name = "panelBorderRounded3";
-            this.panelBorderRounded3.Size = new System.Drawing.Size(241, 33);
+            this.panelBorderRounded3.Size = new System.Drawing.Size(248, 33);
             this.panelBorderRounded3.TabIndex = 1;
             // 
             // tbTipoRede
@@ -471,7 +474,7 @@
             this.tbTipoRede.Location = new System.Drawing.Point(6, 5);
             this.tbTipoRede.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbTipoRede.Name = "tbTipoRede";
-            this.tbTipoRede.Size = new System.Drawing.Size(228, 22);
+            this.tbTipoRede.Size = new System.Drawing.Size(232, 22);
             this.tbTipoRede.TabIndex = 2;
             // 
             // label2
@@ -517,7 +520,7 @@
             this.panelBorderRounded4.Location = new System.Drawing.Point(5, 37);
             this.panelBorderRounded4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelBorderRounded4.Name = "panelBorderRounded4";
-            this.panelBorderRounded4.Size = new System.Drawing.Size(242, 33);
+            this.panelBorderRounded4.Size = new System.Drawing.Size(249, 33);
             this.panelBorderRounded4.TabIndex = 2;
             // 
             // tbDescricaoRede
@@ -530,7 +533,7 @@
             this.tbDescricaoRede.Location = new System.Drawing.Point(7, 5);
             this.tbDescricaoRede.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbDescricaoRede.Name = "tbDescricaoRede";
-            this.tbDescricaoRede.Size = new System.Drawing.Size(228, 22);
+            this.tbDescricaoRede.Size = new System.Drawing.Size(232, 22);
             this.tbDescricaoRede.TabIndex = 2;
             // 
             // label3
@@ -550,6 +553,7 @@
             this.panelButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelButton.BackColor = System.Drawing.Color.Transparent;
+            this.panelButton.Controls.Add(this.buscarNumId);
             this.panelButton.Controls.Add(this.cadastrarRede);
             this.panelButton.Controls.Add(this.panel51);
             this.panelButton.Location = new System.Drawing.Point(0, 391);
@@ -558,6 +562,26 @@
             this.panelButton.Padding = new System.Windows.Forms.Padding(40, 0, 40, 0);
             this.panelButton.Size = new System.Drawing.Size(975, 50);
             this.panelButton.TabIndex = 7;
+            // 
+            // buscarNumId
+            // 
+            this.buscarNumId.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.buscarNumId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(199)))));
+            this.buscarNumId.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buscarNumId.FlatAppearance.BorderSize = 0;
+            this.buscarNumId.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buscarNumId.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.buscarNumId.ForeColor = System.Drawing.Color.White;
+            this.buscarNumId.Location = new System.Drawing.Point(535, 0);
+            this.buscarNumId.Margin = new System.Windows.Forms.Padding(0, 0, 40, 0);
+            this.buscarNumId.Name = "buscarNumId";
+            this.buscarNumId.Size = new System.Drawing.Size(180, 50);
+            this.buscarNumId.TabIndex = 15;
+            this.buscarNumId.Text = "Buscar Rede ID";
+            this.buscarNumId.UseVisualStyleBackColor = false;
+            this.buscarNumId.Visible = false;
+            this.buscarNumId.Click += new System.EventHandler(this.buscarNumId_Click);
+            this.buscarNumId.Paint += new System.Windows.Forms.PaintEventHandler(this.buscarNumId_Paint);
             // 
             // cadastrarRede
             // 
@@ -568,8 +592,8 @@
             this.cadastrarRede.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cadastrarRede.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.cadastrarRede.ForeColor = System.Drawing.Color.White;
-            this.cadastrarRede.Location = new System.Drawing.Point(735, 0);
-            this.cadastrarRede.Margin = new System.Windows.Forms.Padding(0, 30, 0, 0);
+            this.cadastrarRede.Location = new System.Drawing.Point(755, 0);
+            this.cadastrarRede.Margin = new System.Windows.Forms.Padding(0, 0, 40, 0);
             this.cadastrarRede.Name = "cadastrarRede";
             this.cadastrarRede.Size = new System.Drawing.Size(180, 50);
             this.cadastrarRede.TabIndex = 14;
@@ -686,12 +710,13 @@
         private Panel panel51;
         private Button button10;
         private Button cadastrarRede;
-        private Properties.textBoxOnlyNum_Letters tbIDRede;
+        private Properties.textBoxOnlyNum_Letters numID;
         private Properties.textBoxOnlyNum_Letters tbTipoRede;
         private Properties.textBoxOnlyNum_Letters tbDescricaoRede;
         private ComboBox comboCategoriaCNH;
         private ComboBox comboTipoVeiculo;
-        private Properties.textBoxOnlyNum_Letters textBoxOnlyNum_Letters4;
+        private Properties.textBoxOnlyNum_Letters maskRedeID;
         private Label typeData;
+        private Button buscarNumId;
     }
 }

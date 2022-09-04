@@ -32,7 +32,7 @@
             this.searchPanel = new System.Windows.Forms.Panel();
             this.panelSerch = new Interface.Properties.PanelBorderRoundedOnLeft();
             this.typeData = new System.Windows.Forms.Label();
-            this.textBoxOnlyNum_Letters1 = new Interface.Properties.textBoxOnlyNum_Letters();
+            this.cod = new Interface.Properties.textBoxOnlyNum_Letters();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.contentSinistros = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -51,6 +51,7 @@
             this.panelDateTimerClient = new Interface.Properties.PanelBorderRounded();
             this.tbDescricaoSinistro = new Interface.Properties.textBoxOnlyNum_Letters();
             this.panelButton = new System.Windows.Forms.Panel();
+            this.buscarCodigo = new System.Windows.Forms.Button();
             this.cadastrarSinistro = new System.Windows.Forms.Button();
             this.panel51 = new System.Windows.Forms.Panel();
             this.button10 = new System.Windows.Forms.Button();
@@ -88,7 +89,7 @@
             this.panelSerch.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.panelSerch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
             this.panelSerch.Controls.Add(this.typeData);
-            this.panelSerch.Controls.Add(this.textBoxOnlyNum_Letters1);
+            this.panelSerch.Controls.Add(this.cod);
             this.panelSerch.Controls.Add(this.pictureBox3);
             this.panelSerch.Location = new System.Drawing.Point(311, 13);
             this.panelSerch.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
@@ -112,18 +113,19 @@
             this.typeData.TabIndex = 4;
             this.typeData.Text = "Código";
             // 
-            // textBoxOnlyNum_Letters1
+            // cod
             // 
-            this.textBoxOnlyNum_Letters1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxOnlyNum_Letters1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.textBoxOnlyNum_Letters1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxOnlyNum_Letters1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxOnlyNum_Letters1.ForeColor = System.Drawing.Color.White;
-            this.textBoxOnlyNum_Letters1.Location = new System.Drawing.Point(105, 7);
-            this.textBoxOnlyNum_Letters1.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.textBoxOnlyNum_Letters1.Name = "textBoxOnlyNum_Letters1";
-            this.textBoxOnlyNum_Letters1.Size = new System.Drawing.Size(232, 22);
-            this.textBoxOnlyNum_Letters1.TabIndex = 2;
+            this.cod.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cod.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.cod.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.cod.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cod.ForeColor = System.Drawing.Color.White;
+            this.cod.Location = new System.Drawing.Point(105, 7);
+            this.cod.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.cod.Name = "cod";
+            this.cod.Size = new System.Drawing.Size(232, 22);
+            this.cod.TabIndex = 2;
+            this.cod.TextChanged += new System.EventHandler(this.cod_TextChanged);
             // 
             // pictureBox3
             // 
@@ -359,6 +361,7 @@
             this.panelButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelButton.BackColor = System.Drawing.Color.Transparent;
+            this.panelButton.Controls.Add(this.buscarCodigo);
             this.panelButton.Controls.Add(this.cadastrarSinistro);
             this.panelButton.Controls.Add(this.panel51);
             this.panelButton.Location = new System.Drawing.Point(0, 240);
@@ -367,6 +370,26 @@
             this.panelButton.Padding = new System.Windows.Forms.Padding(40, 0, 40, 0);
             this.panelButton.Size = new System.Drawing.Size(975, 50);
             this.panelButton.TabIndex = 5;
+            // 
+            // buscarCodigo
+            // 
+            this.buscarCodigo.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.buscarCodigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(199)))));
+            this.buscarCodigo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buscarCodigo.FlatAppearance.BorderSize = 0;
+            this.buscarCodigo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buscarCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.buscarCodigo.ForeColor = System.Drawing.Color.White;
+            this.buscarCodigo.Location = new System.Drawing.Point(535, 0);
+            this.buscarCodigo.Margin = new System.Windows.Forms.Padding(0, 0, 40, 0);
+            this.buscarCodigo.Name = "buscarCodigo";
+            this.buscarCodigo.Size = new System.Drawing.Size(180, 50);
+            this.buscarCodigo.TabIndex = 15;
+            this.buscarCodigo.Text = "Buscar Código";
+            this.buscarCodigo.UseVisualStyleBackColor = false;
+            this.buscarCodigo.Visible = false;
+            this.buscarCodigo.Click += new System.EventHandler(this.buscarCodigo_Click);
+            this.buscarCodigo.Paint += new System.Windows.Forms.PaintEventHandler(this.buscarCodigo_Paint);
             // 
             // cadastrarSinistro
             // 
@@ -378,7 +401,7 @@
             this.cadastrarSinistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.cadastrarSinistro.ForeColor = System.Drawing.Color.White;
             this.cadastrarSinistro.Location = new System.Drawing.Point(755, 0);
-            this.cadastrarSinistro.Margin = new System.Windows.Forms.Padding(0, 30, 0, 0);
+            this.cadastrarSinistro.Margin = new System.Windows.Forms.Padding(0, 0, 40, 0);
             this.cadastrarSinistro.Name = "cadastrarSinistro";
             this.cadastrarSinistro.Size = new System.Drawing.Size(180, 50);
             this.cadastrarSinistro.TabIndex = 12;
@@ -477,7 +500,8 @@
         private Properties.textBoxOnlyNum_Letters tbCodigdoSinistro;
         private Properties.textBoxOnlyNum_Letters tbDescricaoSinistro;
         private ComboBox comboTipoSinistro;
-        private Properties.textBoxOnlyNum_Letters textBoxOnlyNum_Letters1;
+        private Properties.textBoxOnlyNum_Letters cod;
         private Label typeData;
+        private Button buscarCodigo;
     }
 }

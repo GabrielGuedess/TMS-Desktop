@@ -1,137 +1,104 @@
 ﻿using System.Data;
 using System.Data.OleDb;
+using Interface.Properties;
 
 namespace Interface
 {
     internal class Database
     {
-        string TypeData = "";
-        string TypePessoa = "";
+        private Mapper mapper = new();
 
-        string TypeWhere = "";
+        private DataTable dados = new();
 
-        DataTable dados = new();
+        public string? Route;
 
         public string GetData
         {
-
             set
             {
                 dados.Rows.Clear();
                 dados.Columns.Clear();
 
-                TypeData = value;
+                Route = value;
             }
         }
 
-        public string PessoaData
+        public bool isCPF
         {
-
             set
             {
                 dados.Rows.Clear();
                 dados.Columns.Clear();
 
-                TypePessoa = value;
+                mapper.mapperForDatabase(Route!, value);
             }
         }
 
-        public void GetDataGridView(DataGridView dataGridView, MaskedTextBox maskedTextBox)
+        public void GetDataGridView(DataGridView dataGridView, MaskedTextBox maskedTextBox, string selectOrDelete = "Select")
         {
             try
             {
                 dados.Rows.Clear();
                 dados.Columns.Clear();
+
                 dataGridView.DataSource = null;
+                dataGridView.Rows.Clear();
+                dataGridView.Columns.Clear();
 
-                if (TypeData.Contains("Clientes"))
+                if (selectOrDelete.Contains("Select"))
                 {
-                    TypeData = TypePessoa;
-                    TypeWhere = TypeData == "Clientes_Fisicos" ? "CPF" : "CPNJ";
-                }
+                    OleDbConnection conexao = new($@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source={Application.StartupPath + "/bd/Banco de dados V2.mdb"}");
 
-                if (TypeData.Contains("Usuarios"))
-                {
-                    TypeData = "Usuario";
-                    TypeWhere = "CPF";
-                }
+                    conexao.Open();
 
-                if (TypeData.Contains("Rotas"))
-                {
-                    TypeData = "Rotas";
-                    TypeWhere = "ID_Rota";
-                }
+                    if (maskedTextBox.MaskCompleted == true && maskedTextBox.Text != "")
+                    {
+                        OleDbCommand cmdWhere = new($"SELECT * FROM {mapper.TypeDataDatabase} WHERE {mapper.TypeWhereDatabase} = '{maskedTextBox.Text}'", conexao);
 
-                if (TypeData.Contains("Motoristas"))
-                {
-                    TypeData = "C_Motoristas";
-                    TypeWhere = "CPF";
-                }
+                        OleDbDataAdapter sdaWhere = new(cmdWhere);
 
-                if (TypeData.Contains("Veiculos"))
-                {
-                    TypeData = "tbVeiculos";
-                    TypeWhere = "Placa";
-                }
+                        sdaWhere.Fill(dados);
 
-                if (TypeData.Contains("Terceiros"))
-                {
-                    TypeData = "tbTerceiros";
-                    TypeWhere = "CPF";
-                }
+                        dataGridView.DataSource = dados;
+                    }
 
-                if (TypeData.Contains("Sinistros"))
-                {
-                    TypeData = "tbSinistros";
-                    TypeWhere = "ID";
-                }
+                    OleDbCommand cmd = new($"SELECT * FROM {mapper.TypeDataDatabase}", conexao);
 
-                if (TypeData.Contains("Notas"))
-                {
-                    TypeData = "C_Nota_Fiscal";
-                    TypeWhere = "CHAVE_ACESSO";
-                }
+                    OleDbDataAdapter sda = new(cmd);
 
-                if (TypeData.Contains("Tarifas"))
-                {
-                    TypeData = "Tarifas_taxas";
-                    TypeWhere = "Nome_Emp";
-                }
-
-                if (TypeData.Contains("Redes"))
-                {
-                    TypeData = "C_Redes_de_Transporte";
-                    TypeWhere = "NUM_ID";
-                }
-
-                
-
-                OleDbConnection conexao = new($@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source={Application.StartupPath + "/bd/Banco de dados V2.mdb"}");
-
-                OleDbCommand cmd = new($"SELECT * FROM {TypeData}", conexao);
-
-                OleDbDataAdapter sda = new(cmd);
-
-                sda.Fill(dados);
-
-                dataGridView.DataSource = dados;
-
-                if (maskedTextBox.MaskCompleted == true && maskedTextBox.Text != "")
-                {
-                    dados.Rows.Clear();
-                    dados.Columns.Clear();
-
-                    OleDbCommand cmdWhere = new($"SELECT * FROM {TypeData} WHERE {TypeWhere} = '{maskedTextBox.Text}'", conexao);
-
-                    OleDbDataAdapter sdaWhere = new(cmdWhere);
-
-                    sdaWhere.Fill(dados);
+                    sda.Fill(dados);
 
                     dataGridView.DataSource = dados;
+
+                    conexao.Close();
                 }
 
-                conexao.Close();
+                if (selectOrDelete.Contains("Delete") && maskedTextBox.MaskCompleted == true && maskedTextBox.Text != "")
+                {
+                    OleDbConnection conexao = new($@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source={Application.StartupPath + "/bd/Banco de dados V2.mdb"}");
+
+                    conexao.Open();
+
+                    string cmdDelete = $"DELETE * FROM {mapper.TypeDataDatabase} WHERE {mapper.TypeWhereDatabase} = '{maskedTextBox.Text}'";
+
+                    OleDbCommand sdaDelte = new(cmdDelete, conexao);
+
+                    sdaDelte.ExecuteNonQuery();
+
+                    MessageBox.Show("Deletado com sucesso!", "Aviso");
+
+                    OleDbCommand cmd = new($"SELECT * FROM {mapper.TypeDataDatabase}", conexao);
+
+                    OleDbDataAdapter sda = new(cmd);
+
+                    sda.Fill(dados);
+
+                    dataGridView.DataSource = dados;
+
+                    conexao.Close();
+                }
             }
+
             catch (Exception e)
             {
                 MessageBox.Show(e.Message);
