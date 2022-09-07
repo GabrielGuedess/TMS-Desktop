@@ -50,7 +50,6 @@
             this.panel19 = new System.Windows.Forms.Panel();
             this.panel20 = new System.Windows.Forms.Panel();
             this.panelValor = new Interface.Properties.PanelBorderRounded();
-            this.tbPgot = new Interface.Properties.textBoxnOnlyNum();
             this.label14 = new System.Windows.Forms.Label();
             this.panel17 = new System.Windows.Forms.Panel();
             this.panel18 = new System.Windows.Forms.Panel();
@@ -122,10 +121,11 @@
             this.label10 = new System.Windows.Forms.Label();
             this.panelCidadeUFClient = new System.Windows.Forms.Panel();
             this.subpanelCidadeUFClient = new System.Windows.Forms.Panel();
+            this.panel25 = new System.Windows.Forms.Panel();
+            this.comboUF = new System.Windows.Forms.ComboBox();
+            this.label24 = new System.Windows.Forms.Label();
             this.labelCidadeClient = new System.Windows.Forms.Label();
             this.comboCidade = new System.Windows.Forms.ComboBox();
-            this.comboUF = new System.Windows.Forms.ComboBox();
-            this.labelUFClient = new System.Windows.Forms.Label();
             this.panelEndereco = new System.Windows.Forms.Panel();
             this.subpanelEndereco = new System.Windows.Forms.Panel();
             this.panelCapacidade = new Interface.Properties.PanelBorderRounded();
@@ -145,7 +145,6 @@
             this.panel16 = new System.Windows.Forms.Panel();
             this.panelBorderRounded9 = new Interface.Properties.PanelBorderRounded();
             this.tbValorPagoKM = new Interface.Properties.TextMoney();
-            this.textMoney1 = new Interface.Properties.TextMoney();
             this.label11 = new System.Windows.Forms.Label();
             this.panelButton = new System.Windows.Forms.Panel();
             this.buscarPlaca = new System.Windows.Forms.Button();
@@ -154,6 +153,8 @@
             this.cadastrar = new System.Windows.Forms.Button();
             this.panel51 = new System.Windows.Forms.Panel();
             this.button10 = new System.Windows.Forms.Button();
+            this.labelUFClient = new System.Windows.Forms.Label();
+            this.tbPgot = new Interface.Properties.TextMoney();
             this.searchPanel.SuspendLayout();
             this.panelSerch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -210,6 +211,7 @@
             this.panelTextCEPClient.SuspendLayout();
             this.panelCidadeUFClient.SuspendLayout();
             this.subpanelCidadeUFClient.SuspendLayout();
+            this.panel25.SuspendLayout();
             this.panelEndereco.SuspendLayout();
             this.subpanelEndereco.SuspendLayout();
             this.panelCapacidade.SuspendLayout();
@@ -254,7 +256,7 @@
             // 
             // typeData
             // 
-            this.typeData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.typeData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.typeData.AutoSize = true;
             this.typeData.BackColor = System.Drawing.Color.Transparent;
@@ -298,7 +300,7 @@
             // 
             // contentVeiculos
             // 
-            this.contentVeiculos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.contentVeiculos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.contentVeiculos.AutoScroll = true;
             this.contentVeiculos.AutoScrollMargin = new System.Drawing.Size(0, 20);
@@ -314,7 +316,7 @@
             // 
             // tableLayoutPanel3
             // 
-            this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33332F));
@@ -521,19 +523,6 @@
             this.panelValor.Name = "panelValor";
             this.panelValor.Size = new System.Drawing.Size(248, 33);
             this.panelValor.TabIndex = 2;
-            // 
-            // tbPgot
-            // 
-            this.tbPgot.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbPgot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.tbPgot.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbPgot.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbPgot.ForeColor = System.Drawing.Color.White;
-            this.tbPgot.Location = new System.Drawing.Point(5, 6);
-            this.tbPgot.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.tbPgot.Name = "tbPgot";
-            this.tbPgot.Size = new System.Drawing.Size(236, 22);
-            this.tbPgot.TabIndex = 0;
             // 
             // label14
             // 
@@ -1108,7 +1097,7 @@
             // 
             // comboTipoVeiculo
             // 
-            this.comboTipoVeiculo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.comboTipoVeiculo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboTipoVeiculo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
             this.comboTipoVeiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -1173,7 +1162,7 @@
             // 
             // comboTipoCarroceria
             // 
-            this.comboTipoCarroceria.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.comboTipoCarroceria.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboTipoCarroceria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
             this.comboTipoCarroceria.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -1406,6 +1395,7 @@
             // subpanelCidadeUFClient
             // 
             this.subpanelCidadeUFClient.BackColor = System.Drawing.Color.Transparent;
+            this.subpanelCidadeUFClient.Controls.Add(this.panel25);
             this.subpanelCidadeUFClient.Controls.Add(this.labelCidadeClient);
             this.subpanelCidadeUFClient.Controls.Add(this.comboCidade);
             this.subpanelCidadeUFClient.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1415,31 +1405,14 @@
             this.subpanelCidadeUFClient.Size = new System.Drawing.Size(259, 70);
             this.subpanelCidadeUFClient.TabIndex = 12;
             // 
-            // labelCidadeClient
+            // panel25
             // 
-            this.labelCidadeClient.AutoSize = true;
-            this.labelCidadeClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.labelCidadeClient.ForeColor = System.Drawing.Color.White;
-            this.labelCidadeClient.Location = new System.Drawing.Point(125, 5);
-            this.labelCidadeClient.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
-            this.labelCidadeClient.Name = "labelCidadeClient";
-            this.labelCidadeClient.Size = new System.Drawing.Size(52, 17);
-            this.labelCidadeClient.TabIndex = 7;
-            this.labelCidadeClient.Text = "Cidade";
-            // 
-            // comboCidade
-            // 
-            this.comboCidade.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboCidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
-            this.comboCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.comboCidade.ForeColor = System.Drawing.Color.White;
-            this.comboCidade.FormattingEnabled = true;
-            this.comboCidade.Location = new System.Drawing.Point(125, 36);
-            this.comboCidade.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.comboCidade.Name = "comboCidade";
-            this.comboCidade.Size = new System.Drawing.Size(134, 33);
-            this.comboCidade.TabIndex = 6;
+            this.panel25.Controls.Add(this.comboUF);
+            this.panel25.Controls.Add(this.label24);
+            this.panel25.Location = new System.Drawing.Point(0, 0);
+            this.panel25.Name = "panel25";
+            this.panel25.Size = new System.Drawing.Size(97, 69);
+            this.panel25.TabIndex = 8;
             // 
             // comboUF
             // 
@@ -1475,23 +1448,49 @@
             "SP",
             "SE",
             "TO"});
-            this.comboUF.Location = new System.Drawing.Point(5, 35);
+            this.comboUF.Location = new System.Drawing.Point(5, 37);
             this.comboUF.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.comboUF.Name = "comboUF";
             this.comboUF.Size = new System.Drawing.Size(72, 33);
-            this.comboUF.TabIndex = 5;
+            this.comboUF.TabIndex = 13;
             // 
-            // labelUFClient
+            // label24
             // 
-            this.labelUFClient.AutoSize = true;
-            this.labelUFClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.labelUFClient.ForeColor = System.Drawing.Color.White;
-            this.labelUFClient.Location = new System.Drawing.Point(5, 5);
-            this.labelUFClient.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
-            this.labelUFClient.Name = "labelUFClient";
-            this.labelUFClient.Size = new System.Drawing.Size(26, 17);
-            this.labelUFClient.TabIndex = 0;
-            this.labelUFClient.Text = "UF";
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.label24.ForeColor = System.Drawing.Color.White;
+            this.label24.Location = new System.Drawing.Point(5, 5);
+            this.label24.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(26, 17);
+            this.label24.TabIndex = 12;
+            this.label24.Text = "UF";
+            // 
+            // labelCidadeClient
+            // 
+            this.labelCidadeClient.AutoSize = true;
+            this.labelCidadeClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.labelCidadeClient.ForeColor = System.Drawing.Color.White;
+            this.labelCidadeClient.Location = new System.Drawing.Point(125, 5);
+            this.labelCidadeClient.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
+            this.labelCidadeClient.Name = "labelCidadeClient";
+            this.labelCidadeClient.Size = new System.Drawing.Size(52, 17);
+            this.labelCidadeClient.TabIndex = 7;
+            this.labelCidadeClient.Text = "Cidade";
+            // 
+            // comboCidade
+            // 
+            this.comboCidade.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboCidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
+            this.comboCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.comboCidade.ForeColor = System.Drawing.Color.White;
+            this.comboCidade.FormattingEnabled = true;
+            this.comboCidade.Location = new System.Drawing.Point(125, 36);
+            this.comboCidade.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.comboCidade.Name = "comboCidade";
+            this.comboCidade.Size = new System.Drawing.Size(134, 33);
+            this.comboCidade.TabIndex = 6;
             // 
             // panelEndereco
             // 
@@ -1698,7 +1697,6 @@
             this.panelBorderRounded9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelBorderRounded9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
             this.panelBorderRounded9.Controls.Add(this.tbValorPagoKM);
-            this.panelBorderRounded9.Controls.Add(this.textMoney1);
             this.panelBorderRounded9.Location = new System.Drawing.Point(5, 36);
             this.panelBorderRounded9.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelBorderRounded9.Name = "panelBorderRounded9";
@@ -1717,18 +1715,6 @@
             this.tbValorPagoKM.Size = new System.Drawing.Size(225, 22);
             this.tbValorPagoKM.TabIndex = 1;
             // 
-            // textMoney1
-            // 
-            this.textMoney1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.textMoney1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textMoney1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textMoney1.ForeColor = System.Drawing.Color.White;
-            this.textMoney1.Location = new System.Drawing.Point(10, 6);
-            this.textMoney1.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.textMoney1.Name = "textMoney1";
-            this.textMoney1.Size = new System.Drawing.Size(225, 22);
-            this.textMoney1.TabIndex = 0;
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -1743,7 +1729,7 @@
             // 
             // panelButton
             // 
-            this.panelButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.panelButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelButton.BackColor = System.Drawing.Color.Transparent;
             this.panelButton.Controls.Add(this.buscarPlaca);
@@ -1833,7 +1819,7 @@
             // 
             // panel51
             // 
-            this.panel51.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.panel51.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel51.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(98)))), ((int)(((byte)(255)))));
             this.panel51.Controls.Add(this.button10);
@@ -1845,7 +1831,7 @@
             // 
             // button10
             // 
-            this.button10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.button10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button10.BackColor = System.Drawing.Color.Transparent;
             this.button10.FlatAppearance.BorderSize = 0;
@@ -1860,6 +1846,30 @@
             this.button10.TabIndex = 1;
             this.button10.Text = "Salvar";
             this.button10.UseVisualStyleBackColor = false;
+            // 
+            // labelUFClient
+            // 
+            this.labelUFClient.AutoSize = true;
+            this.labelUFClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.labelUFClient.ForeColor = System.Drawing.Color.White;
+            this.labelUFClient.Location = new System.Drawing.Point(5, 5);
+            this.labelUFClient.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
+            this.labelUFClient.Name = "labelUFClient";
+            this.labelUFClient.Size = new System.Drawing.Size(26, 17);
+            this.labelUFClient.TabIndex = 0;
+            this.labelUFClient.Text = "UF";
+            // 
+            // tbPgot
+            // 
+            this.tbPgot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.tbPgot.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbPgot.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbPgot.ForeColor = System.Drawing.Color.White;
+            this.tbPgot.Location = new System.Drawing.Point(5, 6);
+            this.tbPgot.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.tbPgot.Name = "tbPgot";
+            this.tbPgot.Size = new System.Drawing.Size(231, 22);
+            this.tbPgot.TabIndex = 1;
             // 
             // CadastroVeiculos
             // 
@@ -1962,6 +1972,8 @@
             this.panelCidadeUFClient.ResumeLayout(false);
             this.subpanelCidadeUFClient.ResumeLayout(false);
             this.subpanelCidadeUFClient.PerformLayout();
+            this.panel25.ResumeLayout(false);
+            this.panel25.PerformLayout();
             this.panelEndereco.ResumeLayout(false);
             this.subpanelEndereco.ResumeLayout(false);
             this.subpanelEndereco.PerformLayout();
@@ -2057,7 +2069,6 @@
         private Panel subpanelCidadeUFClient;
         private Label labelCidadeClient;
         private ComboBox comboCidade;
-        private ComboBox comboUF;
         private Label labelUFClient;
         private Panel panelEndereco;
         private Panel subpanelEndereco;
@@ -2091,11 +2102,9 @@
         private Properties.textBoxOnlyNum_Letters tbEixo;
         private Properties.textBoxOnlyLetters tbCor;
         private Properties.textBoxOnlyLetters tbMotorista;
-        private Properties.TextMoney textMoney1;
         private Properties.TextKg tbTara;
         private Properties.TextKg tbCapacidadeKG;
         private Properties.TextMoney tbValorPagoHora;
-        private Properties.textBoxnOnlyNum tbPgot;
         private Properties.textBoxnOnlyNum tbCIOT;
         private Properties.TextMoney tbValorPagoKM;
         private Properties.TextM3 tbCapacidadeM3;
@@ -2115,5 +2124,9 @@
         private Properties.textBoxOnlyNum_Letters textBoxOnlyNum_Letters1;
         private Label label12;
         private Button buscarPlaca;
+        private Panel panel25;
+        private ComboBox comboUF;
+        private Label label24;
+        private Properties.TextMoney tbPgot;
     }
 }

@@ -82,7 +82,7 @@ namespace Interface
 
         private void CadastrarTarifaOuTaxa_Click(object sender, EventArgs e)
         {
-            if (Type.Contains("Cadastro") && validar())
+            if (Type.Contains("Cadastro") && Validation.Validar(contentTarifas) && validar())
             {
                 string selected = string.Empty;
                 if (checkTaxa.Checked)
@@ -103,7 +103,7 @@ namespace Interface
                 limpar.CleanControl(panelSerch);
             }
 
-            if (Type.Contains("Update") && validar())
+            if (Type.Contains("Update") && Validation.Validar(contentTarifas) && validar())
             {
                 string SQLUp = $"UPDATE Tarifas_Taxas SET " +
                 $"Taxa_Tarifa= '{(checkTarifa.Checked ? checkTarifa.Text : checkTaxa.Text)}', " +
@@ -155,18 +155,7 @@ namespace Interface
 
         private bool validar()
         {
-            if (tbDescricaoTaxa.Text == String.Empty)
-            {
-                MessageBox.Show("É obrigatório descrever sobre taxa", "Erro", MessageBoxButtons.OK);
-                tbDescricaoTaxa.Focus();
-                return false;
-            }
-            else if (tbNomeEmpresa.Text == String.Empty)
-            {
-                MessageBox.Show("Digite o nome da empresa", "Erro", MessageBoxButtons.OK);
-                return false;
-            }
-            else if (!checkTaxa.Checked && !checkTarifa.Checked)
+            if (!checkTaxa.Checked && !checkTarifa.Checked)
             {
                 MessageBox.Show("Escolha uma se é taxa ou tarifa", "Erro", MessageBoxButtons.OK);
                 return false;

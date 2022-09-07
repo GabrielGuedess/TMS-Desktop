@@ -141,7 +141,7 @@ namespace Interface
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (Type.Contains("Cadastro") && validar())
+            if (Type.Contains("Cadastro") && Validation.Validar(contentRotas))
             {
                 string SQL = "Insert Into Rotas (ID_Rota, Entrega, Motorista, Veiculos, D_Total, " +
                     "S_Viagem, C_Estimado, Progresso, P_Destino, C_Transp) Values " +
@@ -156,7 +156,7 @@ namespace Interface
                 limpar.CleanControl(searchPanel);
             }
 
-            if (Type.Contains("Update") && validar())
+            if (Type.Contains("Update") && Validation.Validar(contentRotas))
             {
                 string SQLUp = $"UPDATE Rotas SET " +
                 $"Entrega= '{tbEntrega.Text}', " +
@@ -215,72 +215,6 @@ namespace Interface
         private void CadastroRoutes_Resize(object sender, EventArgs e)
         {
             utils.alignCenterPanels(panelSerch, searchPanel, true, true);
-        }
-
-
-        private bool validar()
-        {
-            if (tbIDRota.Text == String.Empty)
-            {
-                MessageBox.Show("O campo Id Rota é Obrigatorio", "Erro", MessageBoxButtons.OK);
-                tbIDRota.Focus();
-                return false;
-            }
-            else if (tbStatusViagem.Text == string.Empty)
-            {
-                MessageBox.Show("O campo Codigo Status da Viagem é Obrigatorio", "Erro", MessageBoxButtons.OK);
-                tbStatusViagem.Focus();
-                return false;
-            }
-            else if (tbMotorista.Text == string.Empty)
-            {
-                MessageBox.Show("O campo Codigo Motorista(s) é Obrigatorio", "Erro", MessageBoxButtons.OK);
-                tbMotorista.Focus();
-                return false;
-            }
-            else if (tbProgresso.Text == string.Empty)
-            {
-                MessageBox.Show("O campo Codigo Progresso é Obrigatorio", "Erro", MessageBoxButtons.OK);
-                tbProgresso.Focus();
-                return false;
-            }
-            else if (tbEntrega.Text == string.Empty)
-            {
-                MessageBox.Show("O campo Entrega é Obrigatorio", "Erro", MessageBoxButtons.OK);
-                tbEntrega.Focus();
-                return false;
-            }
-            else if (comboVeiculo.Text == string.Empty)
-            {
-                MessageBox.Show("O campo Veículo(s) é Obrigatorio", "Erro", MessageBoxButtons.OK);
-                comboVeiculo.Focus();
-                return false;
-            }
-            else if (tbDistanciaTotal.Text == string.Empty)
-            {
-                MessageBox.Show("O campo Distancia total é Obrigatorio", "Erro", MessageBoxButtons.OK);
-                tbDistanciaTotal.Focus();
-                return false;
-            }
-            else if (tbProximaEntrega.Text == string.Empty)
-            {
-                MessageBox.Show("O campo Proxima Entrega é Obrigatorio", "Erro", MessageBoxButtons.OK);
-                tbProximaEntrega.Focus();
-                return false;
-            }
-            else if (tbCustoEstimado.Text == string.Empty)
-            {
-                MessageBox.Show("O campo Custo Estimado é Obrigatorio", "Erro", MessageBoxButtons.OK);
-                tbCustoEstimado.Focus();
-                return false;
-            }
-            else if (tbConhecimentoTransporte.Text == string.Empty)
-            {
-                MessageBox.Show("O campo Conhecimento de Transporte é Obrigatorio", "Erro", MessageBoxButtons.OK);
-                tbConhecimentoTransporte.Focus();
-                return false;
-            }
-            return true;
         }
 
         private void typeData_Click(object sender, EventArgs e)

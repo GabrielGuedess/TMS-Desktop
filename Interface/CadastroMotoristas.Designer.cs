@@ -68,18 +68,19 @@
             this.label20 = new System.Windows.Forms.Label();
             this.panel21 = new System.Windows.Forms.Panel();
             this.panel22 = new System.Windows.Forms.Panel();
-            this.panelBorderRounded5 = new Interface.Properties.PanelBorderRounded();
-            this.tbNumeroCasa = new Interface.Properties.textBoxnOnlyNum();
-            this.label21 = new System.Windows.Forms.Label();
+            this.panel37 = new System.Windows.Forms.Panel();
+            this.panelBorderRounded10 = new Interface.Properties.PanelBorderRounded();
+            this.label22 = new System.Windows.Forms.Label();
             this.panelBorderRoundedEndereco = new Interface.Properties.PanelBorderRounded();
             this.tbLogradouro = new Interface.Properties.textBoxTemplete();
             this.label15 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel20 = new System.Windows.Forms.Panel();
+            this.panel38 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.comboUF = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.comboCidade = new System.Windows.Forms.ComboBox();
-            this.comboUF = new System.Windows.Forms.ComboBox();
-            this.label14 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panelBorderRoundedID = new Interface.Properties.PanelBorderRounded();
@@ -132,11 +133,14 @@
             this.cadastrar = new System.Windows.Forms.Button();
             this.panel51 = new System.Windows.Forms.Panel();
             this.button10 = new System.Windows.Forms.Button();
+            this.panelBorderRounded5 = new Interface.Properties.PanelBorderRounded();
+            this.label21 = new System.Windows.Forms.Label();
             this.searchPanel = new System.Windows.Forms.Panel();
             this.panelSerch = new Interface.Properties.PanelBorderRoundedOnLeft();
             this.typeData = new System.Windows.Forms.Label();
             this.maskInput = new Interface.Properties.masckedboxTemplete();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.tbNumCasa = new Interface.Properties.textBoxOnlyNum_Letters();
             this.contentMotorista.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel25.SuspendLayout();
@@ -160,10 +164,12 @@
             this.panelBorderRounded8.SuspendLayout();
             this.panel21.SuspendLayout();
             this.panel22.SuspendLayout();
-            this.panelBorderRounded5.SuspendLayout();
+            this.panel37.SuspendLayout();
+            this.panelBorderRounded10.SuspendLayout();
             this.panelBorderRoundedEndereco.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel20.SuspendLayout();
+            this.panel38.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panelBorderRoundedID.SuspendLayout();
@@ -200,7 +206,7 @@
             // 
             // contentMotorista
             // 
-            this.contentMotorista.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.contentMotorista.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.contentMotorista.AutoScroll = true;
             this.contentMotorista.AutoScrollMargin = new System.Drawing.Size(0, 20);
@@ -243,7 +249,7 @@
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33332F));
@@ -353,7 +359,7 @@
             // 
             // comboCNH
             // 
-            this.comboCNH.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.comboCNH.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboCNH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
             this.comboCNH.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -470,7 +476,7 @@
             // 
             // comboVeiculoProprio
             // 
-            this.comboVeiculoProprio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.comboVeiculoProprio.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboVeiculoProprio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
             this.comboVeiculoProprio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -523,7 +529,7 @@
             // 
             // comboMOPP
             // 
-            this.comboMOPP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.comboMOPP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboMOPP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
             this.comboMOPP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -553,7 +559,7 @@
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33332F));
@@ -714,6 +720,7 @@
             // panel22
             // 
             this.panel22.BackColor = System.Drawing.Color.Transparent;
+            this.panel22.Controls.Add(this.panel37);
             this.panel22.Controls.Add(this.panelBorderRoundedEndereco);
             this.panel22.Controls.Add(this.label15);
             this.panel22.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -723,41 +730,37 @@
             this.panel22.Size = new System.Drawing.Size(258, 70);
             this.panel22.TabIndex = 12;
             // 
-            // panelBorderRounded5
+            // panel37
             // 
-            this.panelBorderRounded5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelBorderRounded5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelBorderRounded5.Controls.Add(this.tbNumeroCasa);
-            this.panelBorderRounded5.Location = new System.Drawing.Point(5, 36);
-            this.panelBorderRounded5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.panelBorderRounded5.Name = "panelBorderRounded5";
-            this.panelBorderRounded5.Size = new System.Drawing.Size(63, 33);
-            this.panelBorderRounded5.TabIndex = 6;
+            this.panel37.Controls.Add(this.panelBorderRounded10);
+            this.panel37.Controls.Add(this.label22);
+            this.panel37.Location = new System.Drawing.Point(182, 0);
+            this.panel37.Name = "panel37";
+            this.panel37.Size = new System.Drawing.Size(76, 70);
+            this.panel37.TabIndex = 3;
             // 
-            // tbNumeroCasa
+            // panelBorderRounded10
             // 
-            this.tbNumeroCasa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbNumeroCasa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.tbNumeroCasa.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbNumeroCasa.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbNumeroCasa.ForeColor = System.Drawing.Color.White;
-            this.tbNumeroCasa.Location = new System.Drawing.Point(5, 5);
-            this.tbNumeroCasa.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.tbNumeroCasa.Name = "tbNumeroCasa";
-            this.tbNumeroCasa.Size = new System.Drawing.Size(57, 22);
-            this.tbNumeroCasa.TabIndex = 1;
+            this.panelBorderRounded10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelBorderRounded10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.panelBorderRounded10.Controls.Add(this.tbNumCasa);
+            this.panelBorderRounded10.Location = new System.Drawing.Point(7, 36);
+            this.panelBorderRounded10.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.panelBorderRounded10.Name = "panelBorderRounded10";
+            this.panelBorderRounded10.Size = new System.Drawing.Size(64, 33);
+            this.panelBorderRounded10.TabIndex = 2;
             // 
-            // label21
+            // label22
             // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.label21.ForeColor = System.Drawing.Color.White;
-            this.label21.Location = new System.Drawing.Point(5, 5);
-            this.label21.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(24, 17);
-            this.label21.TabIndex = 5;
-            this.label21.Text = "N°";
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.label22.ForeColor = System.Drawing.Color.White;
+            this.label22.Location = new System.Drawing.Point(5, 4);
+            this.label22.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(24, 17);
+            this.label22.TabIndex = 1;
+            this.label22.Text = "N°";
             // 
             // panelBorderRoundedEndereco
             // 
@@ -779,7 +782,7 @@
             this.tbLogradouro.Location = new System.Drawing.Point(12, 5);
             this.tbLogradouro.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbLogradouro.Name = "tbLogradouro";
-            this.tbLogradouro.Size = new System.Drawing.Size(146, 22);
+            this.tbLogradouro.Size = new System.Drawing.Size(225, 22);
             this.tbLogradouro.TabIndex = 2;
             // 
             // label15
@@ -808,10 +811,9 @@
             // panel20
             // 
             this.panel20.BackColor = System.Drawing.Color.Transparent;
+            this.panel20.Controls.Add(this.panel38);
             this.panel20.Controls.Add(this.label12);
             this.panel20.Controls.Add(this.comboCidade);
-            this.panel20.Controls.Add(this.comboUF);
-            this.panel20.Controls.Add(this.label14);
             this.panel20.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel20.Location = new System.Drawing.Point(20, 20);
             this.panel20.Margin = new System.Windows.Forms.Padding(0);
@@ -819,31 +821,26 @@
             this.panel20.Size = new System.Drawing.Size(258, 70);
             this.panel20.TabIndex = 13;
             // 
-            // label12
+            // panel38
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(125, 5);
-            this.label12.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(52, 17);
-            this.label12.TabIndex = 7;
-            this.label12.Text = "Cidade";
+            this.panel38.Controls.Add(this.label14);
+            this.panel38.Controls.Add(this.comboUF);
+            this.panel38.Location = new System.Drawing.Point(0, 0);
+            this.panel38.Name = "panel38";
+            this.panel38.Size = new System.Drawing.Size(98, 70);
+            this.panel38.TabIndex = 8;
             // 
-            // comboCidade
+            // label14
             // 
-            this.comboCidade.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboCidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
-            this.comboCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.comboCidade.ForeColor = System.Drawing.Color.White;
-            this.comboCidade.FormattingEnabled = true;
-            this.comboCidade.Location = new System.Drawing.Point(101, 36);
-            this.comboCidade.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.comboCidade.Name = "comboCidade";
-            this.comboCidade.Size = new System.Drawing.Size(152, 33);
-            this.comboCidade.TabIndex = 6;
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(5, 5);
+            this.label14.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(26, 17);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "UF";
             // 
             // comboUF
             // 
@@ -879,23 +876,37 @@
             "SP",
             "SE",
             "TO"});
-            this.comboUF.Location = new System.Drawing.Point(10, 36);
+            this.comboUF.Location = new System.Drawing.Point(5, 35);
             this.comboUF.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.comboUF.Name = "comboUF";
             this.comboUF.Size = new System.Drawing.Size(72, 33);
             this.comboUF.TabIndex = 5;
             // 
-            // label14
+            // label12
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(5, 5);
-            this.label14.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(26, 17);
-            this.label14.TabIndex = 0;
-            this.label14.Text = "UF";
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(125, 5);
+            this.label12.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(52, 17);
+            this.label12.TabIndex = 7;
+            this.label12.Text = "Cidade";
+            // 
+            // comboCidade
+            // 
+            this.comboCidade.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboCidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
+            this.comboCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.comboCidade.ForeColor = System.Drawing.Color.White;
+            this.comboCidade.FormattingEnabled = true;
+            this.comboCidade.Location = new System.Drawing.Point(101, 36);
+            this.comboCidade.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.comboCidade.Name = "comboCidade";
+            this.comboCidade.Size = new System.Drawing.Size(152, 33);
+            this.comboCidade.TabIndex = 6;
             // 
             // panel3
             // 
@@ -1289,7 +1300,7 @@
             this.panelBorderRoundedEmail.Location = new System.Drawing.Point(5, 36);
             this.panelBorderRoundedEmail.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelBorderRoundedEmail.Name = "panelBorderRoundedEmail";
-            this.panelBorderRoundedEmail.Size = new System.Drawing.Size(281, 33);
+            this.panelBorderRoundedEmail.Size = new System.Drawing.Size(248, 33);
             this.panelBorderRoundedEmail.TabIndex = 2;
             // 
             // mkCelular
@@ -1303,7 +1314,7 @@
             this.mkCelular.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.mkCelular.Mask = "(00) 00000-0000";
             this.mkCelular.Name = "mkCelular";
-            this.mkCelular.Size = new System.Drawing.Size(243, 22);
+            this.mkCelular.Size = new System.Drawing.Size(233, 22);
             this.mkCelular.TabIndex = 5;
             this.mkCelular.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
@@ -1440,7 +1451,7 @@
             // 
             // panelButton
             // 
-            this.panelButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.panelButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelButton.BackColor = System.Drawing.Color.Transparent;
             this.panelButton.Controls.Add(this.buscarCPF);
@@ -1530,7 +1541,7 @@
             // 
             // panel51
             // 
-            this.panel51.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.panel51.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel51.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(98)))), ((int)(((byte)(255)))));
             this.panel51.Controls.Add(this.button10);
@@ -1542,7 +1553,7 @@
             // 
             // button10
             // 
-            this.button10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.button10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button10.BackColor = System.Drawing.Color.Transparent;
             this.button10.FlatAppearance.BorderSize = 0;
@@ -1557,6 +1568,28 @@
             this.button10.TabIndex = 1;
             this.button10.Text = "Salvar";
             this.button10.UseVisualStyleBackColor = false;
+            // 
+            // panelBorderRounded5
+            // 
+            this.panelBorderRounded5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelBorderRounded5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.panelBorderRounded5.Location = new System.Drawing.Point(5, 36);
+            this.panelBorderRounded5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.panelBorderRounded5.Name = "panelBorderRounded5";
+            this.panelBorderRounded5.Size = new System.Drawing.Size(63, 33);
+            this.panelBorderRounded5.TabIndex = 6;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.label21.ForeColor = System.Drawing.Color.White;
+            this.label21.Location = new System.Drawing.Point(5, 5);
+            this.label21.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(24, 17);
+            this.label21.TabIndex = 5;
+            this.label21.Text = "N°";
             // 
             // searchPanel
             // 
@@ -1586,7 +1619,7 @@
             // 
             // typeData
             // 
-            this.typeData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.typeData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.typeData.AutoSize = true;
             this.typeData.BackColor = System.Drawing.Color.Transparent;
@@ -1627,6 +1660,19 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 1;
             this.pictureBox3.TabStop = false;
+            // 
+            // tbNumCasa
+            // 
+            this.tbNumCasa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbNumCasa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.tbNumCasa.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbNumCasa.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbNumCasa.ForeColor = System.Drawing.Color.White;
+            this.tbNumCasa.Location = new System.Drawing.Point(10, 5);
+            this.tbNumCasa.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.tbNumCasa.Name = "tbNumCasa";
+            this.tbNumCasa.Size = new System.Drawing.Size(49, 22);
+            this.tbNumCasa.TabIndex = 0;
             // 
             // CadastroMotoristas
             // 
@@ -1673,13 +1719,17 @@
             this.panel21.ResumeLayout(false);
             this.panel22.ResumeLayout(false);
             this.panel22.PerformLayout();
-            this.panelBorderRounded5.ResumeLayout(false);
-            this.panelBorderRounded5.PerformLayout();
+            this.panel37.ResumeLayout(false);
+            this.panel37.PerformLayout();
+            this.panelBorderRounded10.ResumeLayout(false);
+            this.panelBorderRounded10.PerformLayout();
             this.panelBorderRoundedEndereco.ResumeLayout(false);
             this.panelBorderRoundedEndereco.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel20.ResumeLayout(false);
             this.panel20.PerformLayout();
+            this.panel38.ResumeLayout(false);
+            this.panel38.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -1837,12 +1887,16 @@
         private Properties.PanelBorderRounded panelBorderRounded8;
         private Properties.textBoxTemplete tbBairro;
         private Label label20;
-        private Properties.textBoxnOnlyNum tbNumeroCasa;
         private Panel panel35;
         private Panel panel36;
         private Properties.PanelBorderRounded panelBorderRounded2;
         private Properties.textBoxTemplete tbComplemento;
         private Label label19;
         private Button buscarCPF;
+        private Panel panel37;
+        private Properties.PanelBorderRounded panelBorderRounded10;
+        private Label label22;
+        private Panel panel38;
+        private Properties.textBoxOnlyNum_Letters tbNumCasa;
     }
 }

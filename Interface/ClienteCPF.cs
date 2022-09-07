@@ -86,7 +86,10 @@ namespace Interface
 
         private void cadastrar_Click(object sender, EventArgs e)
         {
-            if (Type.Contains("Cadastro") && validar())
+            List<string> notValidar = new();
+            notValidar.Add(mkTelefone.Name);
+            notValidar.Add(tbComplemento.Name);
+            if (Type.Contains("Cadastro") && Validation.Validar(contentCPF, notValidar))
             {
                 string SQL = "insert into Clientes_Fisicos (Nome, CPF, RG, Data_Nasc, Genero, CEP, Logradouro, Numero," +
                     " Bairro, UF, Cidade, Email, Telefone, Celular, Complemento) values";
@@ -104,7 +107,7 @@ namespace Interface
                 limpar.CleanControl(Parent.Controls["searchPanel"].Controls["panelSerch"]);
             }
 
-            if (Type.Contains("Update") && validar())
+            if (Type.Contains("Update") && Validation.Validar(contentCPF, notValidar))
             {
                 string SQLUp = $"UPDATE Clientes_Fisicos SET " +
                 $"Nome= '{tbNome.Text}', " +
@@ -163,102 +166,6 @@ namespace Interface
                 MessageBox.Show("É necessário preencher o campo CPF corretamente!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 mkCPF.Focus();
             }
-        }
-
-        private bool validar()
-        {
-            if (mkCPF.MaskCompleted == false)
-            {
-                MessageBox.Show("É necessário preencher o campo CPF corretamente!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                mkCPF.Focus();
-                return false;
-            }
-            if (tbNome.Text == string.Empty)
-            {
-                MessageBox.Show("É necessário preencher o campo Nome corretamente!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                tbNome.Focus();
-                return false;
-            }
-            if (dateNascimento.Text == " ")
-            {
-                MessageBox.Show("É necessário preencher o campo Data de Nascimento corretamente!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                dateNascimento.Focus();
-                return false;
-            }
-            if (comboGenero.Text == string.Empty)
-            {
-                MessageBox.Show("É necessário preencher o campo Genero corretamente!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                comboGenero.Focus();
-                return false;
-            }
-            if (mkRG.MaskCompleted == false)
-            {
-                MessageBox.Show("É necessário preencher o campo RG corretamente!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                mkRG.Focus();
-                return false;
-            }
-            if (mkTelefone.Text.Length > 1 && mkTelefone.Text.Length < 10)
-            {
-                MessageBox.Show("É necessário preencher o campo Telefone corretamente!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                mkTelefone.Focus();
-                return false;
-            }
-            if (mkCelular.MaskCompleted == false)
-            {
-                MessageBox.Show("É necessário preencher o campo Celular corretamente!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                mkCelular.Focus();
-                return false;
-            }
-            if (tbEmail.Text == string.Empty)
-            {
-                MessageBox.Show("É necessário preencher o campo Email corretamente!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                tbEmail.Focus();
-                return false;
-            }
-            if (mkCEP.MaskCompleted == false)
-            {
-                MessageBox.Show("É necessário preencher o campo CEP corretamente!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                mkCEP.Focus();
-                return false;
-            }
-            if (comboUF.Text == string.Empty)
-            {
-                MessageBox.Show("É necessário preencher o campo UF corretamente!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                comboUF.Focus();
-                return false;
-            }
-            if (comboCidade.Text == string.Empty)
-            {
-                MessageBox.Show("É necessário preencher o campo Cidade corretamente!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                comboCidade.Focus();
-                return false;
-            }
-            if (tbLogradouro.Text == string.Empty)
-            {
-                MessageBox.Show("É necessário preencher o campo Logradouro corretamente!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                tbLogradouro.Focus();
-                return false;
-            }
-            if (tbNumCasa.Text == string.Empty)
-            {
-                MessageBox.Show("É necessário preencher o campo N° corretamente!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                tbNumCasa.Focus();
-                return false;
-            }
-            if (tbLogradouro.Text == string.Empty)
-            {
-                MessageBox.Show("É necessário preencher o campo Logradouro corretamente!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                tbLogradouro.Focus();
-                return false;
-            }
-            if (tbBairro.Text == string.Empty)
-            {
-                MessageBox.Show("É necessário preencher o campo Bairro corretamente!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                tbLogradouro.Focus();
-                return false;
-            }
-
-            return true;
         }
     }
 }

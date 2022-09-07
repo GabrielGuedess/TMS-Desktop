@@ -106,7 +106,7 @@ namespace Interface
         }
         private void cadastrarRede_Click(object sender, EventArgs e)
         {
-            if (Type.Contains("Cadastro") && validar())
+            if (Type.Contains("Cadastro") && Validation.Validar(contentRedes))
             {
                 string SQL = "Insert Into C_Redes_de_Transporte (NUM_ID, TIPO_REDE, DESCRICAO_REDE, TIPO_MOTORISTA, TIPO_VEICULOS) Values";
                 SQL += "('" + numID.Text + "','" + tbTipoRede.Text + "','" + tbDescricaoRede.Text + "','" + comboCategoriaCNH.Text + "','" + comboTipoVeiculo.Text + "')";
@@ -120,7 +120,7 @@ namespace Interface
                 atualizarIDRede();
             }
 
-            if (Type.Contains("Update") && validar())
+            if (Type.Contains("Update") && Validation.Validar(contentRedes))
             {
                 string SQLUp = $"UPDATE C_Redes_de_Transporte SET " +
                 $"NUM_ID= '{numID.Text}', " +
@@ -171,38 +171,6 @@ namespace Interface
         private void numId_TextChanged(object sender, EventArgs e)
         {
             utils.feedbackColorInputNumLetters(maskRedeID, typeData);
-        }
-
-        private bool validar()
-        {
-            if (tbTipoRede.Text == String.Empty)
-            {
-                MessageBox.Show("O campo Tipo de Rede é obrigatório", "Erro", MessageBoxButtons.OK);
-                tbTipoRede.Focus();
-                return false;
-            }
-
-            if (tbDescricaoRede.Text == String.Empty)
-            {
-                MessageBox.Show("O campo Descrição da Rede é obrigatório", "Erro", MessageBoxButtons.OK);
-                tbDescricaoRede.Focus();
-                return false;
-            }
-
-            if (comboCategoriaCNH.Text == String.Empty)
-            {
-                MessageBox.Show("O campo Categoria da CNH é obrigatório", "Erro", MessageBoxButtons.OK);
-                comboCategoriaCNH.Focus();
-                return false;
-            }
-
-            if (comboTipoVeiculo.Text == String.Empty)
-            {
-                MessageBox.Show("O campo Tipo de Veículo é obrigatório", "Erro", MessageBoxButtons.OK);
-                comboTipoVeiculo.Focus();
-                return false;
-            }
-            return true;
         }
     }
 }

@@ -91,7 +91,9 @@ namespace Interface
 
         private void cadastrarUsuario_Click(object sender, EventArgs e)
         {
-            if (Type.Contains("Cadastro") && validar())
+            List<string> notValidar = new();
+            notValidar.Add(tbSenhaConfirmacao.Name);
+            if (Type.Contains("Cadastro") && Validation.Validar(contentUsuario, notValidar) && Validation.validarSenha(tbSenha, tbSenhaConfirmacao))
             {
                 string SQL = "insert into Usuario (CPF, Nome, Senha, Num_Cel, Email) values";
                 SQL += "('" + mkCPF.Text + "','" + tbNome.Text + "','" + tbSenha.Text + "','" + mkCelular.Text + "','" + tbEmail.Text + "')";
@@ -105,7 +107,7 @@ namespace Interface
                 limpar.CleanControl(searchPanel);
             }
 
-            if (Type.Contains("Update") && validar())
+            if (Type.Contains("Update") && Validation.Validar(contentUsuario, notValidar) && Validation.validarSenha(tbSenha, tbSenhaConfirmacao))
             {
                 string SQLUp = $"UPDATE Usuario SET " +
                 $"Nome= '{tbNome.Text}', " +
@@ -158,47 +160,5 @@ namespace Interface
             searchUsuario.Focus();
         }
 
-        private bool validar()
-        {
-            if (tbNome.Text == "")
-            {
-                MessageBox.Show("O campo Nome é obrigatório!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                tbNome.Focus();
-                return false;
-            }
-            if (tbSenha.Text == string.Empty)
-            {
-                MessageBox.Show("O campo Senha é obrigatório!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                tbSenha.Focus();
-                return false;
-            }
-            if (mkCPF.Text == string.Empty)
-            {
-                MessageBox.Show("O campo CPF é obrigatório!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                mkCPF.Focus();
-                return false;
-            }
-            if (mkCelular.Text == string.Empty)
-            {
-                MessageBox.Show("O campo Celular é obrigatório!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                mkCelular.Focus();
-                return false;
-            }
-            if (tbEmail.Text == string.Empty)
-            {
-                MessageBox.Show("O campo E-mail é obrigatório!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                tbEmail.Focus();
-                return false;
-            }
-
-            if (tbSenha.Text != tbSenhaConfirmacao.Text)
-            {
-                MessageBox.Show("As senha não se correspondem!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                tbSenha.Focus();
-                return false;
-            }
-
-            return true;
-        }
     }
 }

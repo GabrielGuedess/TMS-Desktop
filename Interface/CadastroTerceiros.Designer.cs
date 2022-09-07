@@ -1,4 +1,6 @@
-﻿namespace Interface
+﻿using Interface.Properties;
+
+namespace Interface
 {
     partial class CadastroTerceiros
     {
@@ -58,9 +60,10 @@
             this.mkCNH = new Interface.Properties.masckedboxTemplete();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel30 = new System.Windows.Forms.Panel();
             this.comboMOPP = new System.Windows.Forms.ComboBox();
-            this.label23 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.comboCategoriaCNH = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -135,16 +138,18 @@
             this.mkCEP = new Interface.Properties.masckedboxTemplete();
             this.label10 = new System.Windows.Forms.Label();
             this.panelCidadeUFClient = new System.Windows.Forms.Panel();
-            this.labelUFClient = new System.Windows.Forms.Label();
-            this.comboUF = new System.Windows.Forms.ComboBox();
-            this.subpanelCidadeUFClient = new System.Windows.Forms.Panel();
-            this.labelCidadeClient = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
             this.comboCidade = new System.Windows.Forms.ComboBox();
+            this.subpanelCidadeUFClient = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label24 = new System.Windows.Forms.Label();
             this.panelEndereco = new System.Windows.Forms.Panel();
             this.subpanelEndereco = new System.Windows.Forms.Panel();
-            this.panelBorderRounded5 = new Interface.Properties.PanelBorderRounded();
+            this.panel37 = new System.Windows.Forms.Panel();
+            this.panelBorderRounded11 = new Interface.Properties.PanelBorderRounded();
             this.tbNumCasa = new Interface.Properties.textBoxOnlyNum_Letters();
-            this.label21 = new System.Windows.Forms.Label();
+            this.panelBorderRounded9 = new Interface.Properties.PanelBorderRounded();
+            this.label23 = new System.Windows.Forms.Label();
             this.panelTextEndereco = new Interface.Properties.PanelBorderRounded();
             this.tbLogradouro = new Interface.Properties.textBoxOnlyNum_Letters();
             this.label13 = new System.Windows.Forms.Label();
@@ -153,6 +158,11 @@
             this.cadastrarTerceiro = new System.Windows.Forms.Button();
             this.panel51 = new System.Windows.Forms.Panel();
             this.button10 = new System.Windows.Forms.Button();
+            this.labelUFClient = new System.Windows.Forms.Label();
+            this.comboUF = new System.Windows.Forms.ComboBox();
+            this.labelCidadeClient = new System.Windows.Forms.Label();
+            this.panelBorderRounded5 = new Interface.Properties.PanelBorderRounded();
+            this.label21 = new System.Windows.Forms.Label();
             this.searchPanel = new System.Windows.Forms.Panel();
             this.panelSerch = new Interface.Properties.PanelBorderRoundedOnLeft();
             this.typeData = new System.Windows.Forms.Label();
@@ -184,6 +194,7 @@
             this.panel2.SuspendLayout();
             this.panelCNH.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel30.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -231,7 +242,8 @@
             this.subpanelCidadeUFClient.SuspendLayout();
             this.panelEndereco.SuspendLayout();
             this.subpanelEndereco.SuspendLayout();
-            this.panelBorderRounded5.SuspendLayout();
+            this.panel37.SuspendLayout();
+            this.panelBorderRounded11.SuspendLayout();
             this.panelTextEndereco.SuspendLayout();
             this.panelButton.SuspendLayout();
             this.panel51.SuspendLayout();
@@ -247,7 +259,7 @@
             // 
             // contentTerceiros
             // 
-            this.contentTerceiros.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.contentTerceiros.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.contentTerceiros.AutoScroll = true;
             this.contentTerceiros.AutoScrollMargin = new System.Drawing.Size(0, 20);
@@ -268,7 +280,7 @@
             // 
             // tableLayoutPanel4
             // 
-            this.tableLayoutPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.tableLayoutPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel4.ColumnCount = 3;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33332F));
@@ -315,7 +327,7 @@
             // 
             // comboTipoContrato
             // 
-            this.comboTipoContrato.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.comboTipoContrato.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboTipoContrato.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
             this.comboTipoContrato.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -369,7 +381,7 @@
             // 
             // comboSituacaoContrato
             // 
-            this.comboSituacaoContrato.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.comboSituacaoContrato.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboSituacaoContrato.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
             this.comboSituacaoContrato.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -538,7 +550,7 @@
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33332F));
@@ -626,6 +638,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.Controls.Add(this.panel30);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(298, 0);
@@ -634,6 +647,45 @@
             this.panel3.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
             this.panel3.Size = new System.Drawing.Size(298, 100);
             this.panel3.TabIndex = 1;
+            // 
+            // panel30
+            // 
+            this.panel30.Controls.Add(this.comboMOPP);
+            this.panel30.Controls.Add(this.label26);
+            this.panel30.Location = new System.Drawing.Point(150, 20);
+            this.panel30.Name = "panel30";
+            this.panel30.Size = new System.Drawing.Size(128, 70);
+            this.panel30.TabIndex = 6;
+            // 
+            // comboMOPP
+            // 
+            this.comboMOPP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboMOPP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
+            this.comboMOPP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboMOPP.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.comboMOPP.ForeColor = System.Drawing.SystemColors.Window;
+            this.comboMOPP.FormattingEnabled = true;
+            this.comboMOPP.Items.AddRange(new object[] {
+            "Sim",
+            "Não"});
+            this.comboMOPP.Location = new System.Drawing.Point(5, 36);
+            this.comboMOPP.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.comboMOPP.Name = "comboMOPP";
+            this.comboMOPP.Size = new System.Drawing.Size(118, 29);
+            this.comboMOPP.TabIndex = 6;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.label26.ForeColor = System.Drawing.Color.White;
+            this.label26.Location = new System.Drawing.Point(5, 5);
+            this.label26.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(84, 17);
+            this.label26.TabIndex = 1;
+            this.label26.Text = "Curso Mopp";
             // 
             // panel4
             // 
@@ -647,38 +699,9 @@
             this.panel4.Size = new System.Drawing.Size(258, 70);
             this.panel4.TabIndex = 8;
             // 
-            // comboMOPP
-            // 
-            this.comboMOPP.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.comboMOPP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
-            this.comboMOPP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboMOPP.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.comboMOPP.ForeColor = System.Drawing.SystemColors.Window;
-            this.comboMOPP.FormattingEnabled = true;
-            this.comboMOPP.Items.AddRange(new object[] {
-            "SIM",
-            "NÃO"});
-            this.comboMOPP.Location = new System.Drawing.Point(5, 34);
-            this.comboMOPP.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.comboMOPP.Name = "comboMOPP";
-            this.comboMOPP.Size = new System.Drawing.Size(116, 29);
-            this.comboMOPP.TabIndex = 7;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.label23.ForeColor = System.Drawing.Color.White;
-            this.label23.Location = new System.Drawing.Point(5, 2);
-            this.label23.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(89, 17);
-            this.label23.TabIndex = 6;
-            this.label23.Text = "Curso MOPP";
-            // 
             // comboCategoriaCNH
             // 
-            this.comboCategoriaCNH.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.comboCategoriaCNH.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboCategoriaCNH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
             this.comboCategoriaCNH.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -913,7 +936,7 @@
             // 
             // comboTipoVeiculo
             // 
-            this.comboTipoVeiculo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.comboTipoVeiculo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboTipoVeiculo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
             this.comboTipoVeiculo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -966,7 +989,7 @@
             // 
             // tableLayoutPanel3
             // 
-            this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33332F));
@@ -1328,7 +1351,7 @@
             // 
             // comboGenero
             // 
-            this.comboGenero.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.comboGenero.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboGenero.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
             this.comboGenero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -1600,6 +1623,8 @@
             // 
             // panelCidadeUFClient
             // 
+            this.panelCidadeUFClient.Controls.Add(this.label25);
+            this.panelCidadeUFClient.Controls.Add(this.comboCidade);
             this.panelCidadeUFClient.Controls.Add(this.subpanelCidadeUFClient);
             this.panelCidadeUFClient.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelCidadeUFClient.Location = new System.Drawing.Point(596, 200);
@@ -1609,40 +1634,49 @@
             this.panelCidadeUFClient.Size = new System.Drawing.Size(299, 100);
             this.panelCidadeUFClient.TabIndex = 8;
             // 
-            // labelCidadeClient
+            // label25
             // 
-            this.labelCidadeClient.AutoSize = true;
-            this.labelCidadeClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.labelCidadeClient.ForeColor = System.Drawing.Color.White;
-            this.labelCidadeClient.Location = new System.Drawing.Point(125, 4);
-            this.labelCidadeClient.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
-            this.labelCidadeClient.Name = "labelCidadeClient";
-            this.labelCidadeClient.Size = new System.Drawing.Size(52, 17);
-            this.labelCidadeClient.TabIndex = 7;
-            this.labelCidadeClient.Text = "Cidade";
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.label25.ForeColor = System.Drawing.Color.White;
+            this.label25.Location = new System.Drawing.Point(148, 24);
+            this.label25.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(52, 17);
+            this.label25.TabIndex = 13;
+            this.label25.Text = "Cidade";
             // 
             // comboCidade
             // 
-            this.comboCidade.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.comboCidade.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboCidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
             this.comboCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.comboCidade.ForeColor = System.Drawing.Color.White;
             this.comboCidade.FormattingEnabled = true;
-            this.comboCidade.Location = new System.Drawing.Point(125, 36);
+            this.comboCidade.Location = new System.Drawing.Point(148, 55);
             this.comboCidade.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.comboCidade.Name = "comboCidade";
-            this.comboCidade.Size = new System.Drawing.Size(129, 33);
-            this.comboCidade.TabIndex = 6;
+            this.comboCidade.Size = new System.Drawing.Size(130, 33);
+            this.comboCidade.TabIndex = 12;
             // 
-            // comboUF
+            // subpanelCidadeUFClient
             // 
-            this.comboUF.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.comboUF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
-            this.comboUF.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.comboUF.ForeColor = System.Drawing.Color.White;
-            this.comboUF.FormattingEnabled = true;
-            this.comboUF.Items.AddRange(new object[] {
+            this.subpanelCidadeUFClient.Controls.Add(this.comboBox1);
+            this.subpanelCidadeUFClient.Controls.Add(this.label24);
+            this.subpanelCidadeUFClient.Location = new System.Drawing.Point(0, 0);
+            this.subpanelCidadeUFClient.Name = "subpanelCidadeUFClient";
+            this.subpanelCidadeUFClient.Size = new System.Drawing.Size(140, 100);
+            this.subpanelCidadeUFClient.TabIndex = 0;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.comboBox1.ForeColor = System.Drawing.Color.White;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
             "AL",
             "AP",
             "AM",
@@ -1669,23 +1703,23 @@
             "SP",
             "SE",
             "TO"});
-            this.comboUF.Location = new System.Drawing.Point(5, 36);
-            this.comboUF.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.comboUF.Name = "comboUF";
-            this.comboUF.Size = new System.Drawing.Size(72, 33);
-            this.comboUF.TabIndex = 5;
+            this.comboBox1.Location = new System.Drawing.Point(5, 55);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(72, 33);
+            this.comboBox1.TabIndex = 11;
             // 
-            // labelUFClient
+            // label24
             // 
-            this.labelUFClient.AutoSize = true;
-            this.labelUFClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.labelUFClient.ForeColor = System.Drawing.Color.White;
-            this.labelUFClient.Location = new System.Drawing.Point(5, 4);
-            this.labelUFClient.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
-            this.labelUFClient.Name = "labelUFClient";
-            this.labelUFClient.Size = new System.Drawing.Size(26, 17);
-            this.labelUFClient.TabIndex = 0;
-            this.labelUFClient.Text = "UF";
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.label24.ForeColor = System.Drawing.Color.White;
+            this.label24.Location = new System.Drawing.Point(5, 24);
+            this.label24.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(26, 17);
+            this.label24.TabIndex = 10;
+            this.label24.Text = "UF";
             // 
             // panelEndereco
             // 
@@ -1701,6 +1735,7 @@
             // subpanelEndereco
             // 
             this.subpanelEndereco.BackColor = System.Drawing.Color.Transparent;
+            this.subpanelEndereco.Controls.Add(this.panel37);
             this.subpanelEndereco.Controls.Add(this.panelTextEndereco);
             this.subpanelEndereco.Controls.Add(this.label13);
             this.subpanelEndereco.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1710,16 +1745,26 @@
             this.subpanelEndereco.Size = new System.Drawing.Size(258, 70);
             this.subpanelEndereco.TabIndex = 12;
             // 
-            // panelBorderRounded5
+            // panel37
             // 
-            this.panelBorderRounded5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelBorderRounded5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelBorderRounded5.Controls.Add(this.tbNumCasa);
-            this.panelBorderRounded5.Location = new System.Drawing.Point(5, 36);
-            this.panelBorderRounded5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.panelBorderRounded5.Name = "panelBorderRounded5";
-            this.panelBorderRounded5.Size = new System.Drawing.Size(69, 33);
-            this.panelBorderRounded5.TabIndex = 4;
+            this.panel37.Controls.Add(this.panelBorderRounded11);
+            this.panel37.Controls.Add(this.panelBorderRounded9);
+            this.panel37.Controls.Add(this.label23);
+            this.panel37.Location = new System.Drawing.Point(182, 0);
+            this.panel37.Name = "panel37";
+            this.panel37.Size = new System.Drawing.Size(76, 70);
+            this.panel37.TabIndex = 4;
+            // 
+            // panelBorderRounded11
+            // 
+            this.panelBorderRounded11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelBorderRounded11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.panelBorderRounded11.Controls.Add(this.tbNumCasa);
+            this.panelBorderRounded11.Location = new System.Drawing.Point(5, 36);
+            this.panelBorderRounded11.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.panelBorderRounded11.Name = "panelBorderRounded11";
+            this.panelBorderRounded11.Size = new System.Drawing.Size(64, 33);
+            this.panelBorderRounded11.TabIndex = 3;
             // 
             // tbNumCasa
             // 
@@ -1728,23 +1773,33 @@
             this.tbNumCasa.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbNumCasa.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tbNumCasa.ForeColor = System.Drawing.Color.White;
-            this.tbNumCasa.Location = new System.Drawing.Point(6, 5);
+            this.tbNumCasa.Location = new System.Drawing.Point(8, 5);
             this.tbNumCasa.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbNumCasa.Name = "tbNumCasa";
-            this.tbNumCasa.Size = new System.Drawing.Size(57, 22);
-            this.tbNumCasa.TabIndex = 22;
+            this.tbNumCasa.Size = new System.Drawing.Size(49, 22);
+            this.tbNumCasa.TabIndex = 1;
             // 
-            // label21
+            // panelBorderRounded9
             // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.label21.ForeColor = System.Drawing.Color.White;
-            this.label21.Location = new System.Drawing.Point(5, 4);
-            this.label21.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(24, 17);
-            this.label21.TabIndex = 3;
-            this.label21.Text = "N°";
+            this.panelBorderRounded9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelBorderRounded9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.panelBorderRounded9.Location = new System.Drawing.Point(7, 21);
+            this.panelBorderRounded9.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.panelBorderRounded9.Name = "panelBorderRounded9";
+            this.panelBorderRounded9.Size = new System.Drawing.Size(0, 33);
+            this.panelBorderRounded9.TabIndex = 2;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.label23.ForeColor = System.Drawing.Color.White;
+            this.label23.Location = new System.Drawing.Point(5, 4);
+            this.label23.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(24, 17);
+            this.label23.TabIndex = 1;
+            this.label23.Text = "N°";
             // 
             // panelTextEndereco
             // 
@@ -1784,7 +1839,7 @@
             // 
             // panelButton
             // 
-            this.panelButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.panelButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelButton.BackColor = System.Drawing.Color.Transparent;
             this.panelButton.Controls.Add(this.buscarCPF);
@@ -1838,7 +1893,7 @@
             // 
             // panel51
             // 
-            this.panel51.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.panel51.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel51.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(98)))), ((int)(((byte)(255)))));
             this.panel51.Controls.Add(this.button10);
@@ -1850,7 +1905,7 @@
             // 
             // button10
             // 
-            this.button10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.button10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button10.BackColor = System.Drawing.Color.Transparent;
             this.button10.FlatAppearance.BorderSize = 0;
@@ -1865,6 +1920,92 @@
             this.button10.TabIndex = 1;
             this.button10.Text = "Salvar";
             this.button10.UseVisualStyleBackColor = false;
+            // 
+            // labelUFClient
+            // 
+            this.labelUFClient.AutoSize = true;
+            this.labelUFClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.labelUFClient.ForeColor = System.Drawing.Color.White;
+            this.labelUFClient.Location = new System.Drawing.Point(5, 4);
+            this.labelUFClient.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
+            this.labelUFClient.Name = "labelUFClient";
+            this.labelUFClient.Size = new System.Drawing.Size(26, 17);
+            this.labelUFClient.TabIndex = 0;
+            this.labelUFClient.Text = "UF";
+            // 
+            // comboUF
+            // 
+            this.comboUF.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.comboUF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
+            this.comboUF.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.comboUF.ForeColor = System.Drawing.Color.White;
+            this.comboUF.FormattingEnabled = true;
+            this.comboUF.Items.AddRange(new object[] {
+            "AL",
+            "AP",
+            "AM",
+            "BA",
+            "CE",
+            "DF",
+            "ES",
+            "GO",
+            "MA",
+            "MT",
+            "MS",
+            "MG",
+            "PA",
+            "PB",
+            "PR",
+            "PE",
+            "PI",
+            "RJ",
+            "RN",
+            "RS",
+            "RO",
+            "RR",
+            "SC",
+            "SP",
+            "SE",
+            "TO"});
+            this.comboUF.Location = new System.Drawing.Point(5, 36);
+            this.comboUF.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.comboUF.Name = "comboUF";
+            this.comboUF.Size = new System.Drawing.Size(72, 33);
+            this.comboUF.TabIndex = 5;
+            // 
+            // labelCidadeClient
+            // 
+            this.labelCidadeClient.AutoSize = true;
+            this.labelCidadeClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.labelCidadeClient.ForeColor = System.Drawing.Color.White;
+            this.labelCidadeClient.Location = new System.Drawing.Point(125, 4);
+            this.labelCidadeClient.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
+            this.labelCidadeClient.Name = "labelCidadeClient";
+            this.labelCidadeClient.Size = new System.Drawing.Size(52, 17);
+            this.labelCidadeClient.TabIndex = 7;
+            this.labelCidadeClient.Text = "Cidade";
+            // 
+            // panelBorderRounded5
+            // 
+            this.panelBorderRounded5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelBorderRounded5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.panelBorderRounded5.Location = new System.Drawing.Point(5, 36);
+            this.panelBorderRounded5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.panelBorderRounded5.Name = "panelBorderRounded5";
+            this.panelBorderRounded5.Size = new System.Drawing.Size(69, 33);
+            this.panelBorderRounded5.TabIndex = 4;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.label21.ForeColor = System.Drawing.Color.White;
+            this.label21.Location = new System.Drawing.Point(5, 4);
+            this.label21.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(24, 17);
+            this.label21.TabIndex = 3;
+            this.label21.Text = "N°";
             // 
             // searchPanel
             // 
@@ -1894,7 +2035,7 @@
             // 
             // typeData
             // 
-            this.typeData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.typeData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.typeData.AutoSize = true;
             this.typeData.BackColor = System.Drawing.Color.Transparent;
@@ -1938,7 +2079,7 @@
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33332F));
@@ -2040,7 +2181,7 @@
             this.label14.Location = new System.Drawing.Point(5, 5);
             this.label14.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(122, 17);
+            this.label14.Size = new System.Drawing.Size(0, 17);
             this.label14.TabIndex = 0;
             // 
             // CadastroTerceiros
@@ -2078,6 +2219,8 @@
             this.panelCNH.ResumeLayout(false);
             this.panelCNH.PerformLayout();
             this.panel3.ResumeLayout(false);
+            this.panel30.ResumeLayout(false);
+            this.panel30.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -2146,13 +2289,16 @@
             this.panelTextCEPClient.ResumeLayout(false);
             this.panelTextCEPClient.PerformLayout();
             this.panelCidadeUFClient.ResumeLayout(false);
+            this.panelCidadeUFClient.PerformLayout();
             this.subpanelCidadeUFClient.ResumeLayout(false);
             this.subpanelCidadeUFClient.PerformLayout();
             this.panelEndereco.ResumeLayout(false);
             this.subpanelEndereco.ResumeLayout(false);
             this.subpanelEndereco.PerformLayout();
-            this.panelBorderRounded5.ResumeLayout(false);
-            this.panelBorderRounded5.PerformLayout();
+            this.panel37.ResumeLayout(false);
+            this.panel37.PerformLayout();
+            this.panelBorderRounded11.ResumeLayout(false);
+            this.panelBorderRounded11.PerformLayout();
             this.panelTextEndereco.ResumeLayout(false);
             this.panelTextEndereco.PerformLayout();
             this.panelButton.ResumeLayout(false);
@@ -2211,7 +2357,6 @@
         private Panel panelCidadeUFClient;
         private Panel subpanelCidadeUFClient;
         private Label labelCidadeClient;
-        private ComboBox comboCidade;
         private ComboBox comboUF;
         private Label labelUFClient;
         private Panel panelEndereco;
@@ -2294,8 +2439,6 @@
         private ComboBox comboTipoVeiculo;
         private Properties.masckedboxTemplete maskCpf;
         private Label typeData;
-        private ComboBox comboMOPP;
-        private Label label23;
         private Panel panel27;
         private Panel panel28;
         private Panel panel29;
@@ -2310,7 +2453,18 @@
         private Properties.PanelBorderRounded panelBorderRounded5;
         private Label label21;
         private Properties.textBoxOnlyNum_Letters tbLogradouro;
-        private Properties.textBoxOnlyNum_Letters tbNumCasa;
         private Button buscarCPF;
+        private ComboBox comboBox1;
+        private Label label24;
+        private Label label25;
+        private ComboBox comboCidade;
+        private Panel panel30;
+        private ComboBox comboMOPP;
+        private Label label26;
+        private Panel panel37;
+        private Properties.PanelBorderRounded panelBorderRounded9;
+        private Label label23;
+        private Properties.PanelBorderRounded panelBorderRounded11;
+        private Properties.textBoxOnlyNum_Letters tbNumCasa;
     }
 }

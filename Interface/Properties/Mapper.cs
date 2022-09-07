@@ -127,7 +127,7 @@
             {
                 typeData.Text = "Chave de Acesso";
                 maskInput.Text = "";
-                maskInput.Mask = "";
+                maskInput.Mask = "00-0000-00000000000000-00-000-000000000-00000000-0";
             }
 
             if (route.Contains("Tarifas"))

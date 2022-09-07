@@ -107,6 +107,8 @@
             this.button10 = new System.Windows.Forms.Button();
             this.dateDTNascClient = new System.Windows.Forms.DateTimePicker();
             this.buttonPesquisaCEP = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.contentCPF.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.panelCPF.SuspendLayout();
@@ -149,11 +151,13 @@
             this.panelBorderRounded3.SuspendLayout();
             this.panelButton.SuspendLayout();
             this.panel51.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // contentCPF
             // 
-            this.contentCPF.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.contentCPF.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.contentCPF.AutoScroll = true;
             this.contentCPF.AutoScrollMargin = new System.Drawing.Size(0, 20);
@@ -169,7 +173,7 @@
             // 
             // tableLayoutPanel3
             // 
-            this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33332F));
@@ -403,7 +407,7 @@
             // 
             // comboGenero
             // 
-            this.comboGenero.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.comboGenero.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboGenero.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
             this.comboGenero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -749,10 +753,9 @@
             // subpanelEndereco
             // 
             this.subpanelEndereco.BackColor = System.Drawing.Color.Transparent;
+            this.subpanelEndereco.Controls.Add(this.panel1);
             this.subpanelEndereco.Controls.Add(this.label3);
             this.subpanelEndereco.Controls.Add(this.comboCidade);
-            this.subpanelEndereco.Controls.Add(this.comboUF);
-            this.subpanelEndereco.Controls.Add(this.label8);
             this.subpanelEndereco.Dock = System.Windows.Forms.DockStyle.Fill;
             this.subpanelEndereco.Location = new System.Drawing.Point(20, 20);
             this.subpanelEndereco.Margin = new System.Windows.Forms.Padding(0);
@@ -774,7 +777,7 @@
             // 
             // comboCidade
             // 
-            this.comboCidade.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.comboCidade.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboCidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
             this.comboCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -820,7 +823,7 @@
             "SP",
             "SE",
             "TO"});
-            this.comboUF.Location = new System.Drawing.Point(4, 35);
+            this.comboUF.Location = new System.Drawing.Point(5, 37);
             this.comboUF.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.comboUF.Name = "comboUF";
             this.comboUF.Size = new System.Drawing.Size(72, 33);
@@ -831,7 +834,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(4, 3);
+            this.label8.Location = new System.Drawing.Point(5, 3);
             this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(26, 17);
@@ -851,9 +854,8 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.panel7);
             this.panel3.Controls.Add(this.panelBorderRounded1);
-            this.panel3.Controls.Add(this.panelBorderRoundedOnRight1);
-            this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(20, 20);
@@ -890,7 +892,7 @@
             this.panelBorderRoundedOnRight1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.panelBorderRoundedOnRight1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
             this.panelBorderRoundedOnRight1.Controls.Add(this.tbNumCasa);
-            this.panelBorderRoundedOnRight1.Location = new System.Drawing.Point(193, 35);
+            this.panelBorderRoundedOnRight1.Location = new System.Drawing.Point(5, 35);
             this.panelBorderRoundedOnRight1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelBorderRoundedOnRight1.Name = "panelBorderRoundedOnRight1";
             this.panelBorderRoundedOnRight1.Size = new System.Drawing.Size(60, 33);
@@ -903,7 +905,7 @@
             this.tbNumCasa.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbNumCasa.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tbNumCasa.ForeColor = System.Drawing.Color.White;
-            this.tbNumCasa.Location = new System.Drawing.Point(10, 6);
+            this.tbNumCasa.Location = new System.Drawing.Point(5, 6);
             this.tbNumCasa.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbNumCasa.Name = "tbNumCasa";
             this.tbNumCasa.Size = new System.Drawing.Size(40, 22);
@@ -915,7 +917,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(193, 3);
+            this.label6.Location = new System.Drawing.Point(5, 3);
             this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(24, 17);
@@ -1065,7 +1067,7 @@
             // 
             // panelButton
             // 
-            this.panelButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.panelButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelButton.BackColor = System.Drawing.Color.Transparent;
             this.panelButton.Controls.Add(this.buscarCPF);
@@ -1119,7 +1121,7 @@
             // 
             // panel51
             // 
-            this.panel51.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.panel51.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel51.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(98)))), ((int)(((byte)(255)))));
             this.panel51.Controls.Add(this.button10);
@@ -1131,7 +1133,7 @@
             // 
             // button10
             // 
-            this.button10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.button10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button10.BackColor = System.Drawing.Color.Transparent;
             this.button10.FlatAppearance.BorderSize = 0;
@@ -1149,7 +1151,7 @@
             // 
             // dateDTNascClient
             // 
-            this.dateDTNascClient.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.dateDTNascClient.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dateDTNascClient.CalendarForeColor = System.Drawing.Color.White;
             this.dateDTNascClient.CalendarTitleForeColor = System.Drawing.SystemColors.ActiveBorder;
@@ -1165,7 +1167,7 @@
             // 
             // buttonPesquisaCEP
             // 
-            this.buttonPesquisaCEP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.buttonPesquisaCEP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonPesquisaCEP.BackColor = System.Drawing.Color.Transparent;
             this.buttonPesquisaCEP.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -1178,6 +1180,24 @@
             this.buttonPesquisaCEP.Size = new System.Drawing.Size(28, 0);
             this.buttonPesquisaCEP.TabIndex = 8;
             this.buttonPesquisaCEP.UseVisualStyleBackColor = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.comboUF);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(116, 70);
+            this.panel1.TabIndex = 12;
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.label6);
+            this.panel7.Controls.Add(this.panelBorderRoundedOnRight1);
+            this.panel7.Location = new System.Drawing.Point(191, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(67, 70);
+            this.panel7.TabIndex = 20;
             // 
             // UserControl1
             // 
@@ -1255,6 +1275,10 @@
             this.panelBorderRounded3.PerformLayout();
             this.panelButton.ResumeLayout(false);
             this.panel51.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1339,5 +1363,7 @@
         private Properties.textBoxOnlyLetters tbLogradouro;
         private Properties.textBoxnOnlyNum tbNumCasa;
         private Button buscarCPF;
+        private Panel panel1;
+        private Panel panel7;
     }
 }

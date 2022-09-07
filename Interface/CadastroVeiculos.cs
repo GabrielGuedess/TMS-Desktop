@@ -103,7 +103,10 @@ namespace Interface
 
         private void cadastrarVeiculo_Click(object sender, EventArgs e)
         {
-            if (Type.Contains("Cadastro") && validar())
+            List<string> notValidar = new();
+            notValidar.Add(tbAdiconalCarroceria.Name);
+            notValidar.Add(tbAdicionalMotorista.Name);
+            if (Type.Contains("Cadastro") && Validation.Validar(contentVeiculos,notValidar))
             {
                 string SQL = "Insert Into tbVeiculos (Placa, Marca, Modelo, TipoVeiculo, TipoCarroceria, QuantidadeEixo, AnoFabricacao," +
                     " Cor, PesoCapacidade, PesoTara, CapacidadeM3, Renavam, RNTRC, CIOT, Nome, CPF, UF, Cidade, ValorHora, ValorKM, FranquiaKm," +
@@ -123,7 +126,7 @@ namespace Interface
                 limpar.CleanControl(searchPanel);
             }
 
-            if (Type.Contains("Update") && validar())
+            if (Type.Contains("Update") && Validation.Validar(contentVeiculos, notValidar))
             {
                 string SQLUp = $"UPDATE tbVeiculos SET " +
                 $"Marca= '{tbMarca.Text}', " +
@@ -212,146 +215,6 @@ namespace Interface
             mkPlaca.Text = maskPlaca.Text;
 
             utils.feedbackColorInput(maskPlaca, typeData);
-        }
-
-        private bool validar()
-        {
-            if (mkPlaca.MaskCompleted == false)
-            {
-                MessageBox.Show("O campo Placa é obrigatório!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                mkPlaca.Focus();
-                return false;
-            }
-
-            if (comboUF.Text == "")
-            {
-                MessageBox.Show("O campo UF é obrigatório!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                comboUF.Focus();
-                return false;
-            }
-
-            if (comboCidade.Text == "")
-            {
-                MessageBox.Show("O campo Cidade é obrigatório!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                comboCidade.Focus();
-                return false;
-            }
-
-            if (tbMarca.Text == "")
-            {
-                MessageBox.Show("O campo Marca é obrigatório!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                tbMarca.Focus();
-                return false;
-            }
-
-            if (tbModelo.Text == "")
-            {
-                MessageBox.Show("O campo Modelo é obrigatório!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                tbModelo.Focus();
-                return false;
-            }
-
-            if (mkAnoFabricacao.MaskCompleted == false)
-            {
-                MessageBox.Show("O campo Ano de Fabricação é obrigatório!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                mkAnoFabricacao.Focus();
-                return false;
-            }
-
-
-            if (mkRenavam.MaskCompleted == false)
-            {
-                MessageBox.Show("O campo Código Renavam é obrigatório!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                mkRenavam.Focus();
-                return false;
-            }
-
-            if (mkRNTRC.MaskCompleted == false)
-            {
-                MessageBox.Show("O campo RNTRC é obrigatório!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                mkRNTRC.Focus();
-                return false;
-            }
-
-            if (tbCapacidadeKG.Text == string.Empty)
-            {
-                MessageBox.Show("O campo Capacidade(Kg) é obrigatório!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                tbCapacidadeKG.Focus();
-                return false;
-            }
-
-            if (tbCapacidadeM3.Text == string.Empty)
-            {
-                MessageBox.Show("O campo Capacidade(m³) é obrigatório!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                tbCapacidadeM3.Focus();
-                return false;
-            }
-
-            if (tbEixo.Text == string.Empty)
-            {
-                MessageBox.Show("O campo Eixo é obrigatório!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                tbEixo.Focus();
-                return false;
-            }
-
-            if (tbMotorista.Text == string.Empty)
-            {
-                MessageBox.Show("O campo Motorista é obrigatório!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                tbMotorista.Focus();
-                return false;
-            }
-
-            if (mkCPF.MaskCompleted == false)
-            {
-                MessageBox.Show("Necessário preencher o campo CPF corretamente!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                mkCPF.Focus();
-                return false;
-            }
-
-            if (tbCIOT.Text.Length > 1 && tbCIOT.TextLength < 16)
-            {
-                MessageBox.Show("Necessário preencher o campo CIOT corretamente!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                tbCIOT.Focus();
-                return false;
-            }
-            if (tbValorPagoHora.Text == string.Empty)
-            {
-                MessageBox.Show("Necessário preencher o campo Valor pago por hora!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                tbValorPagoHora.Focus();
-                return false;
-            }
-            if (tbValorPagoKM.Text == string.Empty)
-            {
-                MessageBox.Show("Necessário preencher o campo Valor pago por Km!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                tbValorPagoKM.Focus();
-                return false;
-            }
-            if (tbCor.Text == string.Empty)
-            {
-                MessageBox.Show("Necessário preencher o campo Cor!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                tbCor.Focus();
-                return false;
-            }
-            if (tbTara.Text == string.Empty)
-            {
-                MessageBox.Show("Necessário preencher o campo Tara(Kg)!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                tbTara.Focus();
-                return false;
-            }
-            if (comboTipoVeiculo.Text == string.Empty)
-            {
-                MessageBox.Show("Necessário preencher o campo Tipo Veículo!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                tbTara.Focus();
-                return false;
-            }
-            if (comboTipoCarroceria.Text == string.Empty)
-            {
-                MessageBox.Show("Necessário preencher o campo Tipo Carroceria!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                comboTipoCarroceria.Focus();
-                return false;
-            }
-
-            return true;
         }
     }
 }

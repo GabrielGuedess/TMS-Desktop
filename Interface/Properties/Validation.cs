@@ -47,13 +47,14 @@ namespace Interface.Properties
                 }
             }
             return true;
-        }
+            }
 
         // Esse é a Sobrecarga do método validar que permite
         // deixar de verificar alguns campos que não são 
         // Obrigatorios
         public static bool Validar(Control elementPai, List<string> notValidar)
         {
+            
             foreach (Control control in elementPai.Controls)
             {
                 //Atraves da List que o método recebe ele 
@@ -99,7 +100,6 @@ namespace Interface.Properties
         //seu tipo e partir disso chama o método message 
         private static bool verificarControl(Control control)
         {
-            
             if (control is textBoxnOnlyNum)
             {
                 if (message(control) == false)
@@ -171,7 +171,7 @@ namespace Interface.Properties
         //tela do usuário 
         private static bool message(Control control)
         {
-            if (control.Text == String.Empty)
+            if (control.Text == String.Empty || control is masckedboxTemplete || control is EmpDateTimer)
             {
                 MessageBox.Show($"O campo {nameCampo(control)} é obrigatório estar preenchido corretemente", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 control.Focus();
@@ -198,6 +198,26 @@ namespace Interface.Properties
                 }
             }
             return "";
+        }
+        public static bool validarTelefone(masckedboxTemplete mkTelefone)
+        {
+            if (mkTelefone.Text.Length > 1 && mkTelefone.Text.Length < 10)
+            {
+                MessageBox.Show("É necessário preencher o campo telefone corretamente!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                mkTelefone.Focus();
+                return false;
+            }
+            return true;
+        }
+        public static bool validarSenha(textBoxTemplete tbSenha, textBoxTemplete tbSenhaConfimação)
+        {
+            if (tbSenha.Text != tbSenhaConfimação.Text)
+            {
+                MessageBox.Show("As senhas não se conhecidem!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                tbSenha.Focus();
+                return false;
+            }
+            return true;
         }
     }
 }

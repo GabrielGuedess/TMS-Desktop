@@ -24,8 +24,8 @@ namespace Interface
                     searchPanel.Visible = false;
                     contentNotas.Location = new Point(0, 0);
 
-                    tbChaveAcesso.ReadOnly = false;
-                    tbChaveAcesso.Cursor = Cursors.IBeam;
+                    mkChaveAcesso.ReadOnly = false;
+                    mkChaveAcesso.Cursor = Cursors.IBeam;
                     buscarCod.Visible = false;
                 }
                 if (value.Contains("Update"))
@@ -33,8 +33,8 @@ namespace Interface
                     searchPanel.Visible = true;
                     contentNotas.Location = new Point(0, 62);
 
-                    tbChaveAcesso.ReadOnly = true;
-                    tbChaveAcesso.Cursor = Cursors.No;
+                    mkChaveAcesso.ReadOnly = true;
+                    mkChaveAcesso.Cursor = Cursors.No;
                     buscarCod.Visible = true;
                 }
             }
@@ -44,12 +44,12 @@ namespace Interface
         {
             set
             {
-                tbSearchChaveAcesso.Text = value["CHAVE_ACESSO"].ToString();
+                mkSearchChaveAcesso.Text = value["CHAVE_ACESSO"].ToString();
 
                 if (value != null)
                 {
                     tbIDNotaFiscal.Text = value["NUM_ID"].ToString();
-                    tbChaveAcesso.Text = value["CHAVE_ACESSO"].ToString();
+                    mkChaveAcesso.Text = value["CHAVE_ACESSO"].ToString();
                     tbNumero.Text = value["NUMERO"].ToString();
                     tbTipoNota.Text = value["TIPO"].ToString();
                     tbSerieNota.Text = value["SERIE"].ToString();
@@ -105,10 +105,10 @@ namespace Interface
 
         private void cadastrarNota_Click(object sender, EventArgs e)
         {
-            if (Type.Contains("Cadastro") && validar())
+            if (Type.Contains("Cadastro") && Validation.Validar(contentNotas))
             {
                 string SQL = "Insert Into C_Nota_Fiscal (NUM_ID, CHAVE_ACESSO,NUMERO,TIPO,SERIE,DESCRICAO) Values";
-                SQL += $"('{tbIDNotaFiscal.Text.TrimStart()} ','{tbChaveAcesso.Text}','{tbNumero.Text}', '{tbTipoNota.Text}', '{tbSerieNota.Text}', '{tbDescricaoNota.Text}')";
+                SQL += $"('{tbIDNotaFiscal.Text.TrimStart()} ','{mkChaveAcesso.Text}','{tbNumero.Text}', '{tbTipoNota.Text}', '{tbSerieNota.Text}', '{tbDescricaoNota.Text}')";
                 ConnectDB connectDB = new ConnectDB();
                 connectDB.cadastrar(SQL);
 
@@ -118,7 +118,7 @@ namespace Interface
                 atualizarIDNota();
             }
 
-            if (Type.Contains("Update") && validar())
+            if (Type.Contains("Update") && Validation.Validar(contentNotas))
             {
                 string SQLUp = $"UPDATE C_Nota_Fiscal SET " +
                 $"NUM_ID= '{tbIDNotaFiscal.Text}', " +
@@ -126,7 +126,7 @@ namespace Interface
                 $"TIPO= '{tbTipoNota.Text}', " +
                 $"SERIE= '{tbSerieNota.Text}', " +
                 $"DESCRICAO= '{tbDescricaoNota.Text}' " +
-                $"WHERE CHAVE_ACESSO = '{tbSearchChaveAcesso.Text.Replace('.', ',')}'";
+                $"WHERE CHAVE_ACESSO = '{mkSearchChaveAcesso.Text.Replace('.', ',')}'";
 
                 ConnectDB connectDB = new();
                 connectDB.cadastrar(SQLUp);
@@ -138,14 +138,14 @@ namespace Interface
 
         private void buscarCod_Click(object sender, EventArgs e)
         {
-            if (tbSearchChaveAcesso.Text != "")
+            if (mkSearchChaveAcesso.Text != "")
             {
                 ConnectDB connectDB = new();
-                DataRow dados = connectDB.pesquisarRow($"SELECT * FROM C_Nota_Fiscal WHERE CHAVE_ACESSO = '{tbSearchChaveAcesso.Text}'", contentNotas)!;
+                DataRow dados = connectDB.pesquisarRow($"SELECT * FROM C_Nota_Fiscal WHERE CHAVE_ACESSO = '{mkSearchChaveAcesso.Text}'", contentNotas)!;
 
                 if (dados != null)
                 {
-                    tbSearchChaveAcesso.Text = dados["CHAVE_ACESSO"].ToString();
+                    mkSearchChaveAcesso.Text = dados["CHAVE_ACESSO"].ToString();
 
                     tbIDNotaFiscal.Text = dados["NUM_ID"].ToString();
                     tbNumero.Text = dados["NUMERO"].ToString();
@@ -157,50 +157,20 @@ namespace Interface
             else
             {
                 MessageBox.Show($"É necessário preencher o campo {typeData.Text} corretamente!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                tbSearchChaveAcesso.Focus();
+                mkSearchChaveAcesso.Focus();
             }
         }
 
         private void typeData_Click(object sender, EventArgs e)
         {
-            tbSearchChaveAcesso.Focus();
+            mkSearchChaveAcesso.Focus();
         }
 
         private void tbSearchChaveAcesso_TextChanged(object sender, EventArgs e)
         {
-            tbChaveAcesso.Text = tbSearchChaveAcesso.Text;
+            mkChaveAcesso.Text = mkSearchChaveAcesso.Text;
 
-            utils.feedbackColorInputNumLetters(tbSearchChaveAcesso, typeData);
-        }
-        private bool validar()
-        {
-            if (tbChaveAcesso.Text.Length < 44)
-            {
-                MessageBox.Show("Chave de Acesso digitada é inválida!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return false;
-            }
-            else if (tbNumero.Text == "")
-            {
-                MessageBox.Show("Digite o Numero da nota fiscal!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return false;
-            }
-            else if (tbTipoNota.Text == "")
-            {
-                MessageBox.Show("Escolha o tipo de nota fiscal!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return false;
-            }
-            else if (tbSerieNota.Text == "")
-            {
-                MessageBox.Show("Digite a série da nota fiscal!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return false;
-            }
-            else if (tbDescricaoNota.Text == "")
-            {
-                MessageBox.Show("Digite uma descrição para nota fiscal!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return false;
-            }
-
-            return true;
+            utils.feedbackColorInput(mkSearchChaveAcesso, typeData);
         }
     }
 }

@@ -100,7 +100,7 @@ namespace Interface
 
         private void cadastrarSinistro_Click(object sender, EventArgs e)
         {
-            if (Type.Contains("Cadastro") && validar())
+            if (Type.Contains("Cadastro") && Validation.Validar(contentSinistros))
             {
                 string SQL = "Insert Into tbSinistros(TipoSinistro, DescricaoSinistro, ID) Values";
 
@@ -114,7 +114,7 @@ namespace Interface
                 atualizarIDSinistro();
             }
 
-            if (Type.Contains("Update") && validar())
+            if (Type.Contains("Update") && Validation.Validar(contentSinistros))
             {
                 string SQLUp = $"UPDATE tbSinistros SET " +
                 $"TipoSinistro= '{comboTipoSinistro.Text}', " +
@@ -156,31 +156,6 @@ namespace Interface
             tbCodigdoSinistro.Text = cod.Text;
 
             utils.feedbackColorInputNumLetters(cod, typeData);
-        }
-
-        private bool validar()
-        {
-            if (tbCodigdoSinistro.Text == String.Empty)
-            {
-                MessageBox.Show("O campo Codigo de Sinistro é Obrigatorio", "Erro", MessageBoxButtons.OK);
-                tbCodigdoSinistro.Focus();
-
-                return false;
-            }
-            else if (comboTipoSinistro.Text == String.Empty)
-            {
-                MessageBox.Show("O campo Tipo de Sinistro é obrigatório", "Erro", MessageBoxButtons.OK);
-                comboTipoSinistro.Focus();
-                return false;
-            }
-            else if (tbDescricaoSinistro.Text == String.Empty)
-            {
-                MessageBox.Show("É obrigatório adicinar uma descrição ao sinistro", "Erro", MessageBoxButtons.OK);
-                tbDescricaoSinistro.Focus();
-                return false;
-            }
-
-            return true;
         }
     }
 }
