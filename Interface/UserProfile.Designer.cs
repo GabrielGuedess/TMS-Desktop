@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserProfile));
             this.panel19 = new System.Windows.Forms.Panel();
-            this.userPhoto1 = new Interface.Properties.userPhoto();
+            this.userPhoto1 = new Interface.TemplateComponents.UserPhoto();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel19.SuspendLayout();
@@ -108,6 +108,6 @@
         private Panel panel19;
         private Label label2;
         private Label label1;
-        private Properties.userPhoto userPhoto1;
+        private Interface.TemplateComponents.UserPhoto userPhoto1;
     }
 }

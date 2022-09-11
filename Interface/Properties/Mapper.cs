@@ -1,4 +1,6 @@
-﻿namespace Interface.Properties
+﻿using Interface.TemplateComponents;
+
+namespace Interface.Properties
 {
     internal class Mapper
     {
@@ -69,7 +71,7 @@
             }
         }
 
-        public void mapperForOverview(string route, Label typeData, masckedboxTemplete maskInput, Panel panelRadio, Panel panelOverview, bool CPF = true)
+        public void mapperForOverview(string route, Label typeData, MasckedboxTemplete maskInput, Panel panelRadio, Panel panelOverview, bool CPF = true)
         {
             if (route.Contains("Clientes"))
             {

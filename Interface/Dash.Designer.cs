@@ -41,7 +41,7 @@ namespace Interface
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.panelSerch = new Interface.Properties.PanelBorderRoundedOnLeft();
+            this.panelSerch = new Interface.TemplateComponents.PanelBorderRoundedOnLeft();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel18 = new System.Windows.Forms.Panel();
@@ -1399,7 +1399,7 @@ namespace Interface
         private CadastroClientes cadastroClientes1;
         private CadastroMotoristas cadastroMotoristas1;
         private Overview overview1;
-        private Properties.PanelBorderRoundedOnLeft panelSerch;
+        private TemplateComponents.PanelBorderRoundedOnLeft panelSerch;
         private PictureBox pictureBox4;
         private TextBox textBox1;
         private CadastroTarifasETaxas cadastroTarifaseTaxas1;

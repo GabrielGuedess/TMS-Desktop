@@ -1,4 +1,5 @@
 ﻿using Interface.Properties;
+using Interface.TemplateComponents;
 using System.Data;
 
 namespace Interface
@@ -134,14 +135,14 @@ namespace Interface
         {
             if (pessoaFisica.Checked)
             {
-                masckedboxTemplete? inputMaskCPF = ClienteCPF.Controls["contentCPF"].Controls["tableLayoutPanel3"].Controls["panelCPF"].Controls["SubpanelCPF"].Controls["panelTextCPFClient"].Controls["mkCPF"] as masckedboxTemplete;
+                MasckedboxTemplete? inputMaskCPF = ClienteCPF.Controls["contentCPF"].Controls["tableLayoutPanel3"].Controls["panelCPF"].Controls["SubpanelCPF"].Controls["panelTextCPFClient"].Controls["mkCPF"] as MasckedboxTemplete;
 
                 inputMaskCPF!.Text = mkBoxCdClientSearch.Text;
             }
 
             if (pessoaJuridica.Checked)
             {
-                masckedboxTemplete? inputMaskCNPJ = ClienteCNPJ.Controls["contentCNPJ"].Controls["tableLayoutPanel3"].Controls["panelCPF"].Controls["SubpanelCPF"].Controls["panelTextCPFClient"].Controls["mkCNPJ"] as masckedboxTemplete;
+                MasckedboxTemplete? inputMaskCNPJ = ClienteCNPJ.Controls["contentCNPJ"].Controls["tableLayoutPanel3"].Controls["panelCPF"].Controls["SubpanelCPF"].Controls["panelTextCPFClient"].Controls["mkCNPJ"] as MasckedboxTemplete;
 
                 inputMaskCNPJ!.Text = mkBoxCdClientSearch.Text;
             }

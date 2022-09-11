@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Interface.TemplateComponents;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection.Emit;
@@ -100,22 +101,22 @@ namespace Interface.Properties
         //seu tipo e partir disso chama o método message 
         private static bool verificarControl(Control control)
         {
-            if (control is textBoxnOnlyNum)
+            if (control is TextBoxOnlyNum)
             {
                 if (message(control) == false)
                     return false;
             }
-            else if (control is textBoxOnlyLetters)
+            else if (control is TextBoxOnlyLetters)
             {
                 if (message(control) == false)
                     return false;
             }
-            else if (control is textBoxOnlyNum_Letters)
+            else if (control is TextBoxOnlyNum_Letters)
             {
                 if (message(control) == false)
                     return false;
             }
-            else if (control is textBoxTemplete)
+            else if (control is TextBoxTemplete)
             {
                 if (message(control) == false)
                     return false;
@@ -125,7 +126,7 @@ namespace Interface.Properties
                 if (message(control) == false)
                     return false;
             }
-            else if (control is TextKm)
+            else if (control is TextKM)
             {
                 if (message(control) == false)
                     return false;
@@ -154,9 +155,9 @@ namespace Interface.Properties
                     return false;
                 }
             }
-            else if (control is masckedboxTemplete)
+            else if (control is MasckedboxTemplete)
             {
-                masckedboxTemplete maskedBox = (masckedboxTemplete)control;
+                MasckedboxTemplete maskedBox = (MasckedboxTemplete)control;
                 if (maskedBox.MaskCompleted == false)
                 {
                     message(control);
@@ -171,7 +172,7 @@ namespace Interface.Properties
         //tela do usuário 
         private static bool message(Control control)
         {
-            if (control.Text == String.Empty || control is masckedboxTemplete || control is EmpDateTimer)
+            if (control.Text == String.Empty || control is MasckedboxTemplete || control is EmpDateTimer)
             {
                 MessageBox.Show($"O campo {nameCampo(control)} é obrigatório estar preenchido corretemente", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 control.Focus();
@@ -199,7 +200,7 @@ namespace Interface.Properties
             }
             return "";
         }
-        public static bool validarTelefone(masckedboxTemplete mkTelefone)
+        public static bool validarTelefone(MasckedboxTemplete mkTelefone)
         {
             if (mkTelefone.Text.Length > 1 && mkTelefone.Text.Length < 10)
             {
@@ -209,7 +210,7 @@ namespace Interface.Properties
             }
             return true;
         }
-        public static bool validarSenha(textBoxTemplete tbSenha, textBoxTemplete tbSenhaConfimação)
+        public static bool validarSenha(TextBoxTemplete tbSenha, TextBoxTemplete tbSenhaConfimação)
         {
             if (tbSenha.Text != tbSenhaConfimação.Text)
             {

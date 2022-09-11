@@ -1,4 +1,5 @@
 ﻿using Interface.Properties;
+using Interface.TemplateComponents;
 using System.Data;
 
 namespace Interface
@@ -135,7 +136,7 @@ namespace Interface
         }
         private void buscarCPF_Click(object sender, EventArgs e)
         {
-            masckedboxTemplete? inputMask = Parent.Controls["searchPanel"].Controls["panelSerch"].Controls["mkBoxCdClientSearch"] as masckedboxTemplete;
+            MasckedboxTemplete? inputMask = Parent.Controls["searchPanel"].Controls["panelSerch"].Controls["mkBoxCdClientSearch"] as MasckedboxTemplete;
 
             if (inputMask!.MaskCompleted)
             {
@@ -166,6 +167,16 @@ namespace Interface
                 MessageBox.Show("É necessário preencher o campo CPF corretamente!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 mkCPF.Focus();
             }
+        }
+
+        private void mkCEP_Leave(object sender, EventArgs e)
+        {
+            ClientCEP clientCEP = new();
+            var result = clientCEP.getCEP(mkCEP.Text);
+            tbBairro.Text = result.Bairro;
+            comboCidade.Text = result.Cidade;
+            comboUF.Text = result.UF;
+            tbLogradouro.Text = result.Logradouro;
         }
     }
 }

@@ -35,9 +35,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.panelSerch = new Interface.Properties.PanelBorderRoundedOnLeft();
+            this.panelSerch = new Interface.TemplateComponents.PanelBorderRoundedOnLeft();
             this.typeData = new System.Windows.Forms.Label();
-            this.maskInput = new Interface.Properties.masckedboxTemplete();
+            this.maskInput = new Interface.TemplateComponents.MasckedboxTemplete();
             this.panel17 = new System.Windows.Forms.Panel();
             this.contentOverview = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -511,7 +511,7 @@
         #endregion
 
         private PictureBox pictureBox3;
-        private Properties.PanelBorderRoundedOnLeft panelSerch;
+        private TemplateComponents.PanelBorderRoundedOnLeft panelSerch;
         private Panel panel17;
         private Panel contentOverview;
         private DataGridView dataGridView1;
@@ -519,7 +519,7 @@
         private Panel panel51;
         private Button button10;
         private Button buscar;
-        private Properties.masckedboxTemplete maskInput;
+        private TemplateComponents.MasckedboxTemplete maskInput;
         private Panel panel1;
         private TableLayoutPanel tableLayoutPanel2;
         private Panel panelPessoaJuridica;

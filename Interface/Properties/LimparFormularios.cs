@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Interface.Properties;
-
+using Interface.TemplateComponents;
 namespace Interface.Properties
 {
     public class LimparFormularios
@@ -13,29 +13,29 @@ namespace Interface.Properties
         {
             foreach (Control control in elementPai.Controls)
             {
-                if (control is textBoxnOnlyNum)
+                if (control is TextBoxOnlyNum)
                 {
-                    ((textBoxnOnlyNum)control).Text = "";
+                    ((TextBoxOnlyNum)control).Text = "";
                 }
-                else if (control is textBoxOnlyLetters)
+                else if (control is TextBoxOnlyLetters)
                 {
-                    ((textBoxOnlyLetters)control).Text = "";
+                    ((TextBoxOnlyLetters)control).Text = "";
                 }
-                else if (control is textBoxOnlyNum_Letters)
+                else if (control is TextBoxOnlyNum_Letters)
                 {
-                    ((textBoxOnlyNum_Letters)control).Text = "";
+                    ((TextBoxOnlyNum_Letters)control).Text = "";
                 }
-                else if (control is textBoxTemplete)
+                else if (control is TextBoxTemplete)
                 {
-                    ((textBoxTemplete)control).Text = "";
+                    ((TextBoxTemplete)control).Text = "";
                 }
                 else if (control is TextKg)
                 {
                     ((TextKg)control).Text = "";
                 }
-                else if (control is TextKm)
+                else if (control is TextKM)
                 {
-                    ((TextKm)control).Text = "";
+                    ((TextKM)control).Text = "";
                 }
                 else if (control is TextM3)
                 {
@@ -56,7 +56,7 @@ namespace Interface.Properties
 
                 else if (control is MaskedTextBox)
                 {
-                    ((masckedboxTemplete)control).Text = "";
+                    ((MasckedboxTemplete)control).Text = "";
                 }
                 else if (control is Panel)
                 {

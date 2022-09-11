@@ -30,9 +30,9 @@
             this.pessoaFisica = new System.Windows.Forms.RadioButton();
             this.ClienteCPF = new Interface.UserControl1();
             this.searchPanel = new System.Windows.Forms.Panel();
-            this.panelSerch = new Interface.Properties.PanelBorderRoundedOnLeft();
+            this.panelSerch = new Interface.TemplateComponents.PanelBorderRoundedOnLeft();
             this.labelTypePerson = new System.Windows.Forms.Label();
-            this.mkBoxCdClientSearch = new Interface.Properties.masckedboxTemplete();
+            this.mkBoxCdClientSearch = new Interface.TemplateComponents.MasckedboxTemplete();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.ClienteCNPJ = new Interface.ClienteCNPJ();
             this.panel17.SuspendLayout();
@@ -268,10 +268,10 @@
         private RadioButton pessoaFisica;
         private UserControl1 ClienteCPF;
         private Panel searchPanel;
-        private Properties.PanelBorderRoundedOnLeft panelSerch;
+        private TemplateComponents.PanelBorderRoundedOnLeft panelSerch;
         private PictureBox pictureBox3;
         private ClienteCNPJ ClienteCNPJ;
-        private Properties.masckedboxTemplete mkBoxCdClientSearch;
+        private Interface.TemplateComponents.MasckedboxTemplete mkBoxCdClientSearch;
         private Label labelTypePerson;
     }
 }

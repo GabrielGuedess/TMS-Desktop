@@ -222,6 +222,17 @@ namespace Interface
             mkCPF.Text = maskInput.Text;
             utils.feedbackColorInput(maskInput, typeData);
         }
-        
+
+        private void mkCPF_Leave(object sender, EventArgs e)
+        {
+
+            ClientCEP clientCEP = new();
+            var result = clientCEP.getCEP(mkCEP.Text);
+            tbBairro.Text = result.Bairro;
+            comboCidade.Text = result.Cidade;
+            comboUF.Text = result.UF;
+            tbLogradouro.Text = result.Logradouro;
+        }
+
     }
 }

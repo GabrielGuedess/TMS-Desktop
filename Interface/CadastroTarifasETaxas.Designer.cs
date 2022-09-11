@@ -30,21 +30,21 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroTarifasETaxas));
             this.searchPanel = new System.Windows.Forms.Panel();
-            this.panelSerch = new Interface.Properties.PanelBorderRoundedOnLeft();
+            this.panelSerch = new Interface.TemplateComponents.PanelBorderRoundedOnLeft();
             this.typeData = new System.Windows.Forms.Label();
-            this.empresaMask = new Interface.Properties.textBoxOnlyNum_Letters();
+            this.empresaMask = new Interface.TemplateComponents.TextBoxOnlyNum_Letters();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.contentTarifas = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panelBorderRounded2 = new Interface.Properties.PanelBorderRounded();
-            this.tbNomeEmpresa = new Interface.Properties.textBoxOnlyNum_Letters();
+            this.panelBorderRounded2 = new Interface.TemplateComponents.PanelBorderRounded();
+            this.tbNomeEmpresa = new Interface.TemplateComponents.TextBoxOnlyNum_Letters();
             this.label1 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.panelDescricao = new Interface.Properties.PanelBorderRounded();
-            this.tbDescricaoTaxa = new Interface.Properties.textBoxOnlyLetters();
+            this.panelDescricao = new Interface.TemplateComponents.PanelBorderRounded();
+            this.tbDescricaoTaxa = new Interface.TemplateComponents.TextBoxOnlyLetters();
             this.label3 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -650,13 +650,13 @@
         #endregion
 
         private Panel searchPanel;
-        private Properties.PanelBorderRoundedOnLeft panelSerch;
+        private TemplateComponents.PanelBorderRoundedOnLeft panelSerch;
         private PictureBox pictureBox3;
         private Panel contentTarifas;
         private TableLayoutPanel tableLayoutPanel2;
         private Panel panel6;
         private Panel panel7;
-        private Properties.PanelBorderRounded panelDescricao;
+        private TemplateComponents.PanelBorderRounded panelDescricao;
         private Label label3;
         private Panel panel8;
         private Panel panel9;
@@ -675,14 +675,14 @@
         private Button button10;
         private Panel panel1;
         private Panel panel2;
-        private Properties.PanelBorderRounded panelBorderRounded2;
+        private TemplateComponents.PanelBorderRounded panelBorderRounded2;
         private Label label1;
         private RadioButton checkTaxa;
         private RadioButton checkTarifa;
         private Button CadastrarTarifaOuTaxa;
-        private Properties.textBoxOnlyNum_Letters tbNomeEmpresa;
-        private Properties.textBoxOnlyLetters tbDescricaoTaxa;
-        private Properties.textBoxOnlyNum_Letters empresaMask;
+        private TemplateComponents.TextBoxOnlyNum_Letters tbNomeEmpresa;
+        private Interface.TemplateComponents.TextBoxOnlyLetters tbDescricaoTaxa;
+        private TemplateComponents.TextBoxOnlyNum_Letters empresaMask;
         private Label typeData;
         private Button buscarEmpresa;
     }

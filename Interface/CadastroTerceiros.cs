@@ -1,5 +1,7 @@
-﻿using Interface.Properties;
+﻿using CorreioService;
+using Interface.Properties;
 using System.Data;
+using System.Runtime.InteropServices;
 
 namespace Interface
 {
@@ -173,7 +175,7 @@ namespace Interface
                 }
 
             }
-            catch (Exception erro)
+            catch (System.Exception erro)
             {
                 MessageBox.Show(erro.Message);
             }
@@ -236,6 +238,18 @@ namespace Interface
             mkCPF.Text = maskCpf.Text;
 
             utils.feedbackColorInput(maskCpf, typeData);
+        }
+
+        
+
+        private void mkCEP_Leave(object sender, EventArgs e)
+        {
+            ClientCEP clientCEP = new();
+            var result = clientCEP.getCEP(mkCEP.Text);
+            tbBairro.Text = result.Bairro;
+            comboCidade.Text = result.Cidade;
+            comboUF.Text = result.UF;
+            tbLogradouro.Text = result.Logradouro;
         }
     }
 }

@@ -43,21 +43,21 @@ namespace Interface
             this.label16 = new System.Windows.Forms.Label();
             this.panel21 = new System.Windows.Forms.Panel();
             this.panel22 = new System.Windows.Forms.Panel();
-            this.panelBorderRounded10 = new Interface.Properties.PanelBorderRounded();
-            this.dateInicioAtividade = new Interface.Properties.EmpDateTimer();
+            this.panelBorderRounded10 = new Interface.TemplateComponents.PanelBorderRounded();
+            this.dateInicioAtividade = new Interface.TemplateComponents.EmpDateTimer();
             this.label17 = new System.Windows.Forms.Label();
             this.panel23 = new System.Windows.Forms.Panel();
             this.panel24 = new System.Windows.Forms.Panel();
-            this.panelFim = new Interface.Properties.PanelBorderRounded();
-            this.dateFimAtividade = new Interface.Properties.EmpDateTimer();
+            this.panelFim = new Interface.TemplateComponents.PanelBorderRounded();
+            this.dateFimAtividade = new Interface.TemplateComponents.EmpDateTimer();
             this.label19 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panelCNH = new Interface.Properties.PanelBorderRounded();
-            this.mkCNH = new Interface.Properties.masckedboxTemplete();
+            this.panelCNH = new Interface.TemplateComponents.PanelBorderRounded();
+            this.mkCNH = new Interface.TemplateComponents.MasckedboxTemplete();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel30 = new System.Windows.Forms.Panel();
@@ -68,18 +68,18 @@ namespace Interface
             this.label3 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.panelBorderRounded3 = new Interface.Properties.PanelBorderRounded();
-            this.dateVencimentoCNH = new Interface.Properties.EmpDateTimer();
+            this.panelBorderRounded3 = new Interface.TemplateComponents.PanelBorderRounded();
+            this.dateVencimentoCNH = new Interface.TemplateComponents.EmpDateTimer();
             this.label4 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.panelBorderRounded1 = new Interface.Properties.PanelBorderRounded();
-            this.mkRNTRC = new Interface.Properties.masckedboxTemplete();
+            this.panelBorderRounded1 = new Interface.TemplateComponents.PanelBorderRounded();
+            this.mkRNTRC = new Interface.TemplateComponents.MasckedboxTemplete();
             this.label6 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.panelBorderRounded4 = new Interface.Properties.PanelBorderRounded();
-            this.dateVencimentoRENTRC = new Interface.Properties.EmpDateTimer();
+            this.panelBorderRounded4 = new Interface.TemplateComponents.PanelBorderRounded();
+            this.dateVencimentoRENTRC = new Interface.TemplateComponents.EmpDateTimer();
             this.label8 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
@@ -90,28 +90,28 @@ namespace Interface
             this.panel27 = new System.Windows.Forms.Panel();
             this.panel28 = new System.Windows.Forms.Panel();
             this.panel29 = new System.Windows.Forms.Panel();
-            this.panelBorderRounded8 = new Interface.Properties.PanelBorderRounded();
-            this.tbComplemento = new Interface.Properties.textBoxOnlyNum_Letters();
+            this.panelBorderRounded8 = new Interface.TemplateComponents.PanelBorderRounded();
+            this.tbComplemento = new Interface.TemplateComponents.TextBoxOnlyNum_Letters();
             this.label22 = new System.Windows.Forms.Label();
             this.panel25 = new System.Windows.Forms.Panel();
             this.panel26 = new System.Windows.Forms.Panel();
-            this.panelBorderRounded2 = new Interface.Properties.PanelBorderRounded();
-            this.tbBairro = new Interface.Properties.textBoxOnlyNum_Letters();
+            this.panelBorderRounded2 = new Interface.TemplateComponents.PanelBorderRounded();
+            this.tbBairro = new Interface.TemplateComponents.TextBoxOnlyNum_Letters();
             this.label20 = new System.Windows.Forms.Label();
             this.panelCPF = new System.Windows.Forms.Panel();
             this.SubpanelCPF = new System.Windows.Forms.Panel();
-            this.panelTextCPFClient = new Interface.Properties.PanelBorderRounded();
-            this.mkCPF = new Interface.Properties.masckedboxTemplete();
+            this.panelTextCPFClient = new Interface.TemplateComponents.PanelBorderRounded();
+            this.mkCPF = new Interface.TemplateComponents.MasckedboxTemplete();
             this.labelCPFClient = new System.Windows.Forms.Label();
             this.panelNomeClient = new System.Windows.Forms.Panel();
             this.subpanelNomeClient = new System.Windows.Forms.Panel();
-            this.panelTextNomeClient = new Interface.Properties.PanelBorderRounded();
-            this.tbNome = new Interface.Properties.textBoxOnlyLetters();
+            this.panelTextNomeClient = new Interface.TemplateComponents.PanelBorderRounded();
+            this.tbNome = new Interface.TemplateComponents.TextBoxOnlyLetters();
             this.labelNomeClient = new System.Windows.Forms.Label();
             this.panelDtNascClient = new System.Windows.Forms.Panel();
             this.subpanelDtNascClient = new System.Windows.Forms.Panel();
-            this.panelDateTimer = new Interface.Properties.PanelBorderRounded();
-            this.dateNascimento = new Interface.Properties.EmpDateTimer();
+            this.panelDateTimer = new Interface.TemplateComponents.PanelBorderRounded();
+            this.dateNascimento = new Interface.TemplateComponents.EmpDateTimer();
             this.label5 = new System.Windows.Forms.Label();
             this.panelGeneroClient = new System.Windows.Forms.Panel();
             this.subpanelGeneroClient = new System.Windows.Forms.Panel();
@@ -119,39 +119,39 @@ namespace Interface
             this.labelGeneroClient = new System.Windows.Forms.Label();
             this.panelRGClient = new System.Windows.Forms.Panel();
             this.subpanelRGClient = new System.Windows.Forms.Panel();
-            this.panelCelular = new Interface.Properties.PanelBorderRounded();
-            this.mkCelular = new Interface.Properties.masckedboxTemplete();
+            this.panelCelular = new Interface.TemplateComponents.PanelBorderRounded();
+            this.mkCelular = new Interface.TemplateComponents.MasckedboxTemplete();
             this.label7 = new System.Windows.Forms.Label();
             this.panelTelefoneClient = new System.Windows.Forms.Panel();
             this.subpanelTelefoneClient = new System.Windows.Forms.Panel();
-            this.panelTelefone = new Interface.Properties.PanelBorderRounded();
-            this.mkTelefone = new Interface.Properties.masckedboxTemplete();
+            this.panelTelefone = new Interface.TemplateComponents.PanelBorderRounded();
+            this.mkTelefone = new Interface.TemplateComponents.MasckedboxTemplete();
             this.labelTelefoneClient = new System.Windows.Forms.Label();
             this.panelEmailClient = new System.Windows.Forms.Panel();
             this.subpanelEmailClient = new System.Windows.Forms.Panel();
-            this.panelEmail = new Interface.Properties.PanelBorderRounded();
-            this.textEmail = new Interface.Properties.textBoxTemplete();
+            this.panelEmail = new Interface.TemplateComponents.PanelBorderRounded();
+            this.textEmail = new Interface.TemplateComponents.TextBoxTemplete();
             this.labelEmailClient = new System.Windows.Forms.Label();
             this.panelCEP = new System.Windows.Forms.Panel();
             this.subpanelCEPClient = new System.Windows.Forms.Panel();
-            this.panelTextCEPClient = new Interface.Properties.PanelBorderRounded();
-            this.mkCEP = new Interface.Properties.masckedboxTemplete();
+            this.panelTextCEPClient = new Interface.TemplateComponents.PanelBorderRounded();
+            this.mkCEP = new Interface.TemplateComponents.MasckedboxTemplete();
             this.label10 = new System.Windows.Forms.Label();
             this.panelCidadeUFClient = new System.Windows.Forms.Panel();
             this.label25 = new System.Windows.Forms.Label();
             this.comboCidade = new System.Windows.Forms.ComboBox();
             this.subpanelCidadeUFClient = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboUF = new System.Windows.Forms.ComboBox();
             this.label24 = new System.Windows.Forms.Label();
             this.panelEndereco = new System.Windows.Forms.Panel();
             this.subpanelEndereco = new System.Windows.Forms.Panel();
             this.panel37 = new System.Windows.Forms.Panel();
-            this.panelBorderRounded11 = new Interface.Properties.PanelBorderRounded();
-            this.tbNumCasa = new Interface.Properties.textBoxOnlyNum_Letters();
-            this.panelBorderRounded9 = new Interface.Properties.PanelBorderRounded();
+            this.panelBorderRounded11 = new Interface.TemplateComponents.PanelBorderRounded();
+            this.tbNumCasa = new Interface.TemplateComponents.TextBoxOnlyNum_Letters();
+            this.panelBorderRounded9 = new Interface.TemplateComponents.PanelBorderRounded();
             this.label23 = new System.Windows.Forms.Label();
-            this.panelTextEndereco = new Interface.Properties.PanelBorderRounded();
-            this.tbLogradouro = new Interface.Properties.textBoxOnlyNum_Letters();
+            this.panelTextEndereco = new Interface.TemplateComponents.PanelBorderRounded();
+            this.tbLogradouro = new Interface.TemplateComponents.TextBoxOnlyNum_Letters();
             this.label13 = new System.Windows.Forms.Label();
             this.panelButton = new System.Windows.Forms.Panel();
             this.buscarCPF = new System.Windows.Forms.Button();
@@ -159,23 +159,22 @@ namespace Interface
             this.panel51 = new System.Windows.Forms.Panel();
             this.button10 = new System.Windows.Forms.Button();
             this.labelUFClient = new System.Windows.Forms.Label();
-            this.comboUF = new System.Windows.Forms.ComboBox();
             this.labelCidadeClient = new System.Windows.Forms.Label();
-            this.panelBorderRounded5 = new Interface.Properties.PanelBorderRounded();
+            this.panelBorderRounded5 = new Interface.TemplateComponents.PanelBorderRounded();
             this.label21 = new System.Windows.Forms.Label();
             this.searchPanel = new System.Windows.Forms.Panel();
-            this.panelSerch = new Interface.Properties.PanelBorderRoundedOnLeft();
+            this.panelSerch = new Interface.TemplateComponents.PanelBorderRoundedOnLeft();
             this.typeData = new System.Windows.Forms.Label();
-            this.maskCpf = new Interface.Properties.masckedboxTemplete();
+            this.maskCpf = new Interface.TemplateComponents.MasckedboxTemplete();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
-            this.panelBorderRounded6 = new Interface.Properties.PanelBorderRounded();
+            this.panelBorderRounded6 = new Interface.TemplateComponents.PanelBorderRounded();
             this.label12 = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
             this.panel16 = new System.Windows.Forms.Panel();
-            this.panelBorderRounded7 = new Interface.Properties.PanelBorderRounded();
+            this.panelBorderRounded7 = new Interface.TemplateComponents.PanelBorderRounded();
             this.label14 = new System.Windows.Forms.Label();
             this.contentTerceiros.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -620,7 +619,7 @@ namespace Interface
             this.mkCNH.Mask = "00000000000";
             this.mkCNH.Name = "mkCNH";
             this.mkCNH.Size = new System.Drawing.Size(228, 22);
-            this.mkCNH.TabIndex = 2;
+            this.mkCNH.TabIndex = 14;
             this.mkCNH.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // label2
@@ -673,7 +672,7 @@ namespace Interface
             this.comboMOPP.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.comboMOPP.Name = "comboMOPP";
             this.comboMOPP.Size = new System.Drawing.Size(118, 29);
-            this.comboMOPP.TabIndex = 6;
+            this.comboMOPP.TabIndex = 16;
             // 
             // label26
             // 
@@ -722,7 +721,7 @@ namespace Interface
             this.comboCategoriaCNH.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.comboCategoriaCNH.Name = "comboCategoriaCNH";
             this.comboCategoriaCNH.Size = new System.Drawing.Size(112, 29);
-            this.comboCategoriaCNH.TabIndex = 5;
+            this.comboCategoriaCNH.TabIndex = 15;
             // 
             // label3
             // 
@@ -779,7 +778,7 @@ namespace Interface
             this.dateVencimentoCNH.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.dateVencimentoCNH.Name = "dateVencimentoCNH";
             this.dateVencimentoCNH.Size = new System.Drawing.Size(228, 23);
-            this.dateVencimentoCNH.TabIndex = 2;
+            this.dateVencimentoCNH.TabIndex = 17;
             // 
             // label4
             // 
@@ -839,7 +838,7 @@ namespace Interface
             this.mkRNTRC.Mask = "000000000";
             this.mkRNTRC.Name = "mkRNTRC";
             this.mkRNTRC.Size = new System.Drawing.Size(228, 22);
-            this.mkRNTRC.TabIndex = 3;
+            this.mkRNTRC.TabIndex = 18;
             this.mkRNTRC.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // label6
@@ -897,7 +896,7 @@ namespace Interface
             this.dateVencimentoRENTRC.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.dateVencimentoRENTRC.Name = "dateVencimentoRENTRC";
             this.dateVencimentoRENTRC.Size = new System.Drawing.Size(228, 23);
-            this.dateVencimentoRENTRC.TabIndex = 2;
+            this.dateVencimentoRENTRC.TabIndex = 19;
             // 
             // label8
             // 
@@ -1074,7 +1073,7 @@ namespace Interface
             this.tbComplemento.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbComplemento.Name = "tbComplemento";
             this.tbComplemento.Size = new System.Drawing.Size(233, 22);
-            this.tbComplemento.TabIndex = 2;
+            this.tbComplemento.TabIndex = 13;
             // 
             // label22
             // 
@@ -1133,7 +1132,7 @@ namespace Interface
             this.tbBairro.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbBairro.Name = "tbBairro";
             this.tbBairro.Size = new System.Drawing.Size(233, 22);
-            this.tbBairro.TabIndex = 1;
+            this.tbBairro.TabIndex = 12;
             // 
             // label20
             // 
@@ -1254,7 +1253,8 @@ namespace Interface
             this.tbNome.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbNome.Name = "tbNome";
             this.tbNome.Size = new System.Drawing.Size(228, 22);
-            this.tbNome.TabIndex = 1;
+            this.tbNome.TabIndex = 2;
+            this.tbNome.Tag = "";
             // 
             // labelNomeClient
             // 
@@ -1312,7 +1312,7 @@ namespace Interface
             this.dateNascimento.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.dateNascimento.Name = "dateNascimento";
             this.dateNascimento.Size = new System.Drawing.Size(228, 23);
-            this.dateNascimento.TabIndex = 1;
+            this.dateNascimento.TabIndex = 3;
             // 
             // label5
             // 
@@ -1426,7 +1426,7 @@ namespace Interface
             this.mkCelular.Mask = "(00) 00000-0000";
             this.mkCelular.Name = "mkCelular";
             this.mkCelular.Size = new System.Drawing.Size(228, 22);
-            this.mkCelular.TabIndex = 3;
+            this.mkCelular.TabIndex = 5;
             this.mkCelular.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // label7
@@ -1487,7 +1487,7 @@ namespace Interface
             this.mkTelefone.Mask = "(00) 0000-0000";
             this.mkTelefone.Name = "mkTelefone";
             this.mkTelefone.Size = new System.Drawing.Size(228, 22);
-            this.mkTelefone.TabIndex = 3;
+            this.mkTelefone.TabIndex = 6;
             this.mkTelefone.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // labelTelefoneClient
@@ -1546,7 +1546,7 @@ namespace Interface
             this.textEmail.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.textEmail.Name = "textEmail";
             this.textEmail.Size = new System.Drawing.Size(225, 22);
-            this.textEmail.TabIndex = 1;
+            this.textEmail.TabIndex = 7;
             // 
             // labelEmailClient
             // 
@@ -1606,8 +1606,9 @@ namespace Interface
             this.mkCEP.Mask = "00000-000";
             this.mkCEP.Name = "mkCEP";
             this.mkCEP.Size = new System.Drawing.Size(228, 22);
-            this.mkCEP.TabIndex = 2;
+            this.mkCEP.TabIndex = 8;
             this.mkCEP.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.mkCEP.Leave += new System.EventHandler(this.mkCEP_Leave);
             // 
             // label10
             // 
@@ -1658,25 +1659,25 @@ namespace Interface
             this.comboCidade.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.comboCidade.Name = "comboCidade";
             this.comboCidade.Size = new System.Drawing.Size(130, 33);
-            this.comboCidade.TabIndex = 12;
+            this.comboCidade.TabIndex = 10;
             // 
             // subpanelCidadeUFClient
             // 
-            this.subpanelCidadeUFClient.Controls.Add(this.comboBox1);
+            this.subpanelCidadeUFClient.Controls.Add(this.comboUF);
             this.subpanelCidadeUFClient.Controls.Add(this.label24);
             this.subpanelCidadeUFClient.Location = new System.Drawing.Point(0, 0);
             this.subpanelCidadeUFClient.Name = "subpanelCidadeUFClient";
             this.subpanelCidadeUFClient.Size = new System.Drawing.Size(140, 100);
             this.subpanelCidadeUFClient.TabIndex = 0;
             // 
-            // comboBox1
+            // comboUF
             // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.comboBox1.ForeColor = System.Drawing.Color.White;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboUF.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.comboUF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
+            this.comboUF.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.comboUF.ForeColor = System.Drawing.Color.White;
+            this.comboUF.FormattingEnabled = true;
+            this.comboUF.Items.AddRange(new object[] {
             "AL",
             "AP",
             "AM",
@@ -1703,11 +1704,11 @@ namespace Interface
             "SP",
             "SE",
             "TO"});
-            this.comboBox1.Location = new System.Drawing.Point(5, 55);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(72, 33);
-            this.comboBox1.TabIndex = 11;
+            this.comboUF.Location = new System.Drawing.Point(5, 55);
+            this.comboUF.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.comboUF.Name = "comboUF";
+            this.comboUF.Size = new System.Drawing.Size(72, 33);
+            this.comboUF.TabIndex = 9;
             // 
             // label24
             // 
@@ -1823,7 +1824,7 @@ namespace Interface
             this.tbLogradouro.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbLogradouro.Name = "tbLogradouro";
             this.tbLogradouro.Size = new System.Drawing.Size(156, 22);
-            this.tbLogradouro.TabIndex = 0;
+            this.tbLogradouro.TabIndex = 11;
             // 
             // label13
             // 
@@ -1932,46 +1933,6 @@ namespace Interface
             this.labelUFClient.Size = new System.Drawing.Size(26, 17);
             this.labelUFClient.TabIndex = 0;
             this.labelUFClient.Text = "UF";
-            // 
-            // comboUF
-            // 
-            this.comboUF.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.comboUF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
-            this.comboUF.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.comboUF.ForeColor = System.Drawing.Color.White;
-            this.comboUF.FormattingEnabled = true;
-            this.comboUF.Items.AddRange(new object[] {
-            "AL",
-            "AP",
-            "AM",
-            "BA",
-            "CE",
-            "DF",
-            "ES",
-            "GO",
-            "MA",
-            "MT",
-            "MS",
-            "MG",
-            "PA",
-            "PB",
-            "PR",
-            "PE",
-            "PI",
-            "RJ",
-            "RN",
-            "RS",
-            "RO",
-            "RR",
-            "SC",
-            "SP",
-            "SE",
-            "TO"});
-            this.comboUF.Location = new System.Drawing.Point(5, 36);
-            this.comboUF.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.comboUF.Name = "comboUF";
-            this.comboUF.Size = new System.Drawing.Size(72, 33);
-            this.comboUF.TabIndex = 5;
             // 
             // labelCidadeClient
             // 
@@ -2324,15 +2285,15 @@ namespace Interface
         private TableLayoutPanel tableLayoutPanel3;
         private Panel panelCPF;
         private Panel SubpanelCPF;
-        private Properties.PanelBorderRounded panelTextCPFClient;
+        private TemplateComponents.PanelBorderRounded panelTextCPFClient;
         private Label labelCPFClient;
         private Panel panelNomeClient;
         private Panel subpanelNomeClient;
-        private Properties.PanelBorderRounded panelTextNomeClient;
+        private TemplateComponents.PanelBorderRounded panelTextNomeClient;
         private Label labelNomeClient;
         private Panel panelDtNascClient;
         private Panel subpanelDtNascClient;
-        private Properties.PanelBorderRounded panelDateTimer;
+        private TemplateComponents.PanelBorderRounded panelDateTimer;
         private Label label5;
         private Panel panelGeneroClient;
         private Panel subpanelGeneroClient;
@@ -2340,34 +2301,33 @@ namespace Interface
         private Label labelGeneroClient;
         private Panel panelRGClient;
         private Panel subpanelRGClient;
-        private Properties.PanelBorderRounded panelCelular;
+        private TemplateComponents.PanelBorderRounded panelCelular;
         private Label label7;
         private Panel panelTelefoneClient;
         private Panel subpanelTelefoneClient;
-        private Properties.PanelBorderRounded panelTelefone;
+        private TemplateComponents.PanelBorderRounded panelTelefone;
         private Label labelTelefoneClient;
         private Panel panelEmailClient;
         private Panel subpanelEmailClient;
-        private Properties.PanelBorderRounded panelEmail;
+        private TemplateComponents.PanelBorderRounded panelEmail;
         private Label labelEmailClient;
         private Panel panelCEP;
         private Panel subpanelCEPClient;
-        private Properties.PanelBorderRounded panelTextCEPClient;
+        private TemplateComponents.PanelBorderRounded panelTextCEPClient;
         private Label label10;
         private Panel panelCidadeUFClient;
         private Panel subpanelCidadeUFClient;
         private Label labelCidadeClient;
-        private ComboBox comboUF;
         private Label labelUFClient;
         private Panel panelEndereco;
         private Panel subpanelEndereco;
-        private Properties.PanelBorderRounded panelTextEndereco;
+        private TemplateComponents.PanelBorderRounded panelTextEndereco;
         private Label label13;
         private Panel panelButton;
         private Panel panel51;
         private Button button10;
         private Panel searchPanel;
-        private Properties.PanelBorderRoundedOnLeft panelSerch;
+        private TemplateComponents.PanelBorderRoundedOnLeft panelSerch;
         private PictureBox pictureBox3;
         private TableLayoutPanel tableLayoutPanel4;
         private Panel panel17;
@@ -2378,7 +2338,7 @@ namespace Interface
         private Label label16;
         private Panel panel21;
         private Panel panel22;
-        private Properties.PanelBorderRounded panelBorderRounded10;
+        private TemplateComponents.PanelBorderRounded panelBorderRounded10;
         private Label label17;
         private Panel panel23;
         private Panel panel24;
@@ -2388,21 +2348,21 @@ namespace Interface
         private TableLayoutPanel tableLayoutPanel1;
         private Panel panel1;
         private Panel panel2;
-        private Properties.PanelBorderRounded panelCNH;
+        private TemplateComponents.PanelBorderRounded panelCNH;
         private Label label2;
         private Panel panel3;
         private Panel panel4;
         private Label label3;
         private Panel panel5;
         private Panel panel6;
-        private Properties.PanelBorderRounded panelBorderRounded3;
+        private TemplateComponents.PanelBorderRounded panelBorderRounded3;
         private Label label4;
         private Panel panel7;
         private Panel panel8;
         private Label label6;
         private Panel panel9;
         private Panel panel10;
-        private Properties.PanelBorderRounded panelBorderRounded4;
+        private TemplateComponents.PanelBorderRounded panelBorderRounded4;
         private Label label8;
         private Panel panel11;
         private Panel panel12;
@@ -2411,50 +2371,50 @@ namespace Interface
         private TableLayoutPanel tableLayoutPanel2;
         private Panel panel13;
         private Panel panel14;
-        private Properties.PanelBorderRounded panelBorderRounded6;
+        private TemplateComponents.PanelBorderRounded panelBorderRounded6;
         private Label label12;
         private Panel panel15;
         private Panel panel16;
-        private Properties.PanelBorderRounded panelBorderRounded7;
+        private TemplateComponents.PanelBorderRounded panelBorderRounded7;
         private Label label14;
-        private Properties.PanelBorderRounded panelFim;
+        private TemplateComponents.PanelBorderRounded panelFim;
         private Button cadastrarTerceiro;
-        private Properties.masckedboxTemplete mkCPF;
-        private Properties.textBoxOnlyLetters tbNome;
-        private Properties.EmpDateTimer dateNascimento;
-        private Properties.masckedboxTemplete mkCelular;
-        private Properties.masckedboxTemplete mkTelefone;
-        private Properties.textBoxTemplete textEmail;
-        private Properties.masckedboxTemplete mkCEP;
+        private TemplateComponents.MasckedboxTemplete mkCPF;
+        private Interface.TemplateComponents.TextBoxOnlyLetters tbNome;
+        private Interface.TemplateComponents.EmpDateTimer dateNascimento;
+        private TemplateComponents.MasckedboxTemplete mkCelular;
+        private TemplateComponents.MasckedboxTemplete mkTelefone;
+        private Interface.TemplateComponents.TextBoxTemplete textEmail;
+        private TemplateComponents.MasckedboxTemplete mkCEP;
         private ComboBox comboTipoContrato;
         private ComboBox comboSituacaoContrato;
-        private Properties.EmpDateTimer dateInicioAtividade;
-        private Properties.EmpDateTimer dateFimAtividade;
-        private Properties.masckedboxTemplete mkCNH;
+        private Interface.TemplateComponents.EmpDateTimer dateInicioAtividade;
+        private Interface.TemplateComponents.EmpDateTimer dateFimAtividade;
+        private TemplateComponents.MasckedboxTemplete mkCNH;
         private ComboBox comboCategoriaCNH;
-        private Properties.EmpDateTimer dateVencimentoCNH;
-        private Properties.PanelBorderRounded panelBorderRounded1;
-        private Properties.masckedboxTemplete mkRNTRC;
-        private Properties.EmpDateTimer dateVencimentoRENTRC;
+        private Interface.TemplateComponents.EmpDateTimer dateVencimentoCNH;
+        private TemplateComponents.PanelBorderRounded panelBorderRounded1;
+        private TemplateComponents.MasckedboxTemplete mkRNTRC;
+        private Interface.TemplateComponents.EmpDateTimer dateVencimentoRENTRC;
         private ComboBox comboTipoVeiculo;
-        private Properties.masckedboxTemplete maskCpf;
+        private TemplateComponents.MasckedboxTemplete maskCpf;
         private Label typeData;
         private Panel panel27;
         private Panel panel28;
         private Panel panel29;
-        private Properties.PanelBorderRounded panelBorderRounded8;
-        private Properties.textBoxOnlyNum_Letters tbComplemento;
+        private TemplateComponents.PanelBorderRounded panelBorderRounded8;
+        private TemplateComponents.TextBoxOnlyNum_Letters tbComplemento;
         private Label label22;
         private Panel panel25;
         private Panel panel26;
-        private Properties.PanelBorderRounded panelBorderRounded2;
-        private Properties.textBoxOnlyNum_Letters tbBairro;
+        private TemplateComponents.PanelBorderRounded panelBorderRounded2;
+        private TemplateComponents.TextBoxOnlyNum_Letters tbBairro;
         private Label label20;
-        private Properties.PanelBorderRounded panelBorderRounded5;
+        private TemplateComponents.PanelBorderRounded panelBorderRounded5;
         private Label label21;
-        private Properties.textBoxOnlyNum_Letters tbLogradouro;
+        private TemplateComponents.TextBoxOnlyNum_Letters tbLogradouro;
         private Button buscarCPF;
-        private ComboBox comboBox1;
+        private ComboBox comboUF;
         private Label label24;
         private Label label25;
         private ComboBox comboCidade;
@@ -2462,9 +2422,9 @@ namespace Interface
         private ComboBox comboMOPP;
         private Label label26;
         private Panel panel37;
-        private Properties.PanelBorderRounded panelBorderRounded9;
+        private TemplateComponents.PanelBorderRounded panelBorderRounded9;
         private Label label23;
-        private Properties.PanelBorderRounded panelBorderRounded11;
-        private Properties.textBoxOnlyNum_Letters tbNumCasa;
+        private TemplateComponents.PanelBorderRounded panelBorderRounded11;
+        private TemplateComponents.TextBoxOnlyNum_Letters tbNumCasa;
     }
 }

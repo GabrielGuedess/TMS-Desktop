@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroSinistros));
             this.searchPanel = new System.Windows.Forms.Panel();
-            this.panelSerch = new Interface.Properties.PanelBorderRoundedOnLeft();
+            this.panelSerch = new Interface.TemplateComponents.PanelBorderRoundedOnLeft();
             this.typeData = new System.Windows.Forms.Label();
-            this.cod = new Interface.Properties.textBoxOnlyNum_Letters();
+            this.cod = new Interface.TemplateComponents.TextBoxOnlyNum_Letters();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.contentSinistros = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -42,14 +42,14 @@
             this.labelCPFClient = new System.Windows.Forms.Label();
             this.panelNomeClient = new System.Windows.Forms.Panel();
             this.subpanelNomeClient = new System.Windows.Forms.Panel();
-            this.panelTextNomeClient = new Interface.Properties.PanelBorderRounded();
-            this.tbCodigdoSinistro = new Interface.Properties.textBoxOnlyNum_Letters();
+            this.panelTextNomeClient = new Interface.TemplateComponents.PanelBorderRounded();
+            this.tbCodigdoSinistro = new Interface.TemplateComponents.TextBoxOnlyNum_Letters();
             this.labelNomeClient = new System.Windows.Forms.Label();
             this.panelDtNascClient = new System.Windows.Forms.Panel();
             this.subpanelDescicaoSinistro = new System.Windows.Forms.Panel();
             this.labelDescricaoSinistro = new System.Windows.Forms.Label();
-            this.panelDateTimerClient = new Interface.Properties.PanelBorderRounded();
-            this.tbDescricaoSinistro = new Interface.Properties.textBoxOnlyNum_Letters();
+            this.panelDateTimerClient = new Interface.TemplateComponents.PanelBorderRounded();
+            this.tbDescricaoSinistro = new Interface.TemplateComponents.TextBoxOnlyNum_Letters();
             this.panelButton = new System.Windows.Forms.Panel();
             this.buscarCodigo = new System.Windows.Forms.Button();
             this.cadastrarSinistro = new System.Windows.Forms.Button();
@@ -478,7 +478,7 @@
         #endregion
 
         private Panel searchPanel;
-        private Properties.PanelBorderRoundedOnLeft panelSerch;
+        private TemplateComponents.PanelBorderRoundedOnLeft panelSerch;
         private PictureBox pictureBox3;
         private Panel contentSinistros;
         private TableLayoutPanel tableLayoutPanel3;
@@ -487,20 +487,20 @@
         private Label labelCPFClient;
         private Panel panelNomeClient;
         private Panel subpanelNomeClient;
-        private Properties.PanelBorderRounded panelTextNomeClient;
+        private TemplateComponents.PanelBorderRounded panelTextNomeClient;
         private Label labelNomeClient;
         private Panel panelDtNascClient;
         private Panel subpanelDescicaoSinistro;
-        private Properties.PanelBorderRounded panelDateTimerClient;
+        private TemplateComponents.PanelBorderRounded panelDateTimerClient;
         private Label labelDescricaoSinistro;
         private Panel panelButton;
         private Panel panel51;
         private Button button10;
         private Button cadastrarSinistro;
-        private Properties.textBoxOnlyNum_Letters tbCodigdoSinistro;
-        private Properties.textBoxOnlyNum_Letters tbDescricaoSinistro;
+        private TemplateComponents.TextBoxOnlyNum_Letters tbCodigdoSinistro;
+        private TemplateComponents.TextBoxOnlyNum_Letters tbDescricaoSinistro;
         private ComboBox comboTipoSinistro;
-        private Properties.textBoxOnlyNum_Letters cod;
+        private TemplateComponents.TextBoxOnlyNum_Letters cod;
         private Label typeData;
         private Button buscarCodigo;
     }

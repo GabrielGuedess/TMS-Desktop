@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroRedesDeTransporte));
             this.searchPanel = new System.Windows.Forms.Panel();
-            this.panelSerch = new Interface.Properties.PanelBorderRoundedOnLeft();
+            this.panelSerch = new Interface.TemplateComponents.PanelBorderRoundedOnLeft();
             this.typeData = new System.Windows.Forms.Label();
-            this.maskRedeID = new Interface.Properties.textBoxOnlyNum_Letters();
+            this.maskRedeID = new Interface.TemplateComponents.TextBoxOnlyNum_Letters();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.contentRedes = new System.Windows.Forms.Panel();
             this.label18 = new System.Windows.Forms.Label();
@@ -49,18 +49,18 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panelBorderRoundedID = new Interface.Properties.PanelBorderRounded();
-            this.numID = new Interface.Properties.textBoxOnlyNum_Letters();
+            this.panelBorderRoundedID = new Interface.TemplateComponents.PanelBorderRounded();
+            this.numID = new Interface.TemplateComponents.TextBoxOnlyNum_Letters();
             this.labelId = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.panelBorderRounded3 = new Interface.Properties.PanelBorderRounded();
-            this.tbTipoRede = new Interface.Properties.textBoxOnlyNum_Letters();
+            this.panelBorderRounded3 = new Interface.TemplateComponents.PanelBorderRounded();
+            this.tbTipoRede = new Interface.TemplateComponents.TextBoxOnlyNum_Letters();
             this.label2 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.panelBorderRounded4 = new Interface.Properties.PanelBorderRounded();
-            this.tbDescricaoRede = new Interface.Properties.textBoxOnlyNum_Letters();
+            this.panelBorderRounded4 = new Interface.TemplateComponents.PanelBorderRounded();
+            this.tbDescricaoRede = new Interface.TemplateComponents.TextBoxOnlyNum_Letters();
             this.label3 = new System.Windows.Forms.Label();
             this.panelButton = new System.Windows.Forms.Panel();
             this.buscarNumId = new System.Windows.Forms.Button();
@@ -681,7 +681,7 @@
         #endregion
 
         private Panel searchPanel;
-        private Properties.PanelBorderRoundedOnLeft panelSerch;
+        private TemplateComponents.PanelBorderRoundedOnLeft panelSerch;
         private PictureBox pictureBox3;
         private Panel contentRedes;
         private Label label18;
@@ -696,26 +696,26 @@
         private TableLayoutPanel tableLayoutPanel1;
         private Panel panel3;
         private Panel panel4;
-        private Properties.PanelBorderRounded panelBorderRoundedID;
+        private TemplateComponents.PanelBorderRounded panelBorderRoundedID;
         private Label labelId;
         private Panel panel5;
         private Panel panel6;
-        private Properties.PanelBorderRounded panelBorderRounded3;
+        private TemplateComponents.PanelBorderRounded panelBorderRounded3;
         private Label label2;
         private Panel panel7;
         private Panel panel8;
-        private Properties.PanelBorderRounded panelBorderRounded4;
+        private TemplateComponents.PanelBorderRounded panelBorderRounded4;
         private Label label3;
         private Panel panelButton;
         private Panel panel51;
         private Button button10;
         private Button cadastrarRede;
-        private Properties.textBoxOnlyNum_Letters numID;
-        private Properties.textBoxOnlyNum_Letters tbTipoRede;
-        private Properties.textBoxOnlyNum_Letters tbDescricaoRede;
+        private TemplateComponents.TextBoxOnlyNum_Letters numID;
+        private TemplateComponents.TextBoxOnlyNum_Letters tbTipoRede;
+        private TemplateComponents.TextBoxOnlyNum_Letters tbDescricaoRede;
         private ComboBox comboCategoriaCNH;
         private ComboBox comboTipoVeiculo;
-        private Properties.textBoxOnlyNum_Letters maskRedeID;
+        private TemplateComponents.TextBoxOnlyNum_Letters maskRedeID;
         private Label typeData;
         private Button buscarNumId;
     }
