@@ -1,4 +1,6 @@
-﻿using Interface.Properties;
+﻿using Interface.ControlValidationAuxiliary;
+using Interface.DataBaseControls;
+using Interface.Utilities;
 using System.Data;
 
 namespace Interface
@@ -135,6 +137,7 @@ namespace Interface
 
                 limpar.CleanControl(contentRedes);
                 limpar.CleanControl(searchPanel);
+                atualizarIDRede();
             }
         }
 

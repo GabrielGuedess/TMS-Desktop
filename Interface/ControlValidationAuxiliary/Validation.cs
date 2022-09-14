@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Interface.Properties
+namespace Interface.ControlValidationAuxiliary
 {
     public class Validation
     {
@@ -43,19 +43,20 @@ namespace Interface.Properties
                 }
                 //esse é o método responsável por fazer a verificação 
                 //dos campos
-                else if (verificarControl(control) == false){
+                else if (verificarControl(control) == false)
+                {
                     return false;
                 }
             }
             return true;
-            }
+        }
 
         // Esse é a Sobrecarga do método validar que permite
         // deixar de verificar alguns campos que não são 
         // Obrigatorios
         public static bool Validar(Control elementPai, List<string> notValidar)
         {
-            
+
             foreach (Control control in elementPai.Controls)
             {
                 //Atraves da List que o método recebe ele 
@@ -172,7 +173,7 @@ namespace Interface.Properties
         //tela do usuário 
         private static bool message(Control control)
         {
-            if (control.Text == String.Empty || control is MasckedboxTemplete || control is EmpDateTimer)
+            if (control.Text == string.Empty || control is MasckedboxTemplete || control is EmpDateTimer)
             {
                 MessageBox.Show($"O campo {nameCampo(control)} é obrigatório estar preenchido corretemente", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 control.Focus();

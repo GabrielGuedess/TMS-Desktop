@@ -1,7 +1,8 @@
 ﻿using System.Data;
 using System.Data.OleDb;
+using Interface.ControlValidationAuxiliary;
 
-namespace Interface.Properties
+namespace Interface.DataBaseControls
 {
     public class ConnectDB
     {

@@ -1,6 +1,6 @@
-﻿using Interface.Properties;
+﻿using Interface.Utilities;
 
-namespace Interface
+namespace Interface.FormsControls
 {
     internal class Navigation
     {

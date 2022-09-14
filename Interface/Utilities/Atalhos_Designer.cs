@@ -2,15 +2,8 @@
 using System.Drawing.Drawing2D;
 using Interface.TemplateComponents;
 
-namespace Interface.Properties
+namespace Interface.Utilities
 {
-
-
-    
-
-
-
-
     public class Utilidades
     {
         public void rePaintWhite(params Button[] buttons)

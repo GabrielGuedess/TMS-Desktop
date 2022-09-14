@@ -1,8 +1,8 @@
 ﻿using System.Data;
 using System.Data.OleDb;
-using Interface.Properties;
+using Interface.FormsControls;
 
-namespace Interface
+namespace Interface.DataBaseControls
 {
     internal class Database
     {

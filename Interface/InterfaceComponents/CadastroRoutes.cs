@@ -4,7 +4,9 @@ using GMap.NET.MapProviders;
 using GMap.NET.WindowsForms;
 using GMap.NET.WindowsForms.Markers;
 using GMap.NET.WindowsForms.ToolTips;
-using Interface.Properties;
+using Interface.ControlValidationAuxiliary;
+using Interface.DataBaseControls;
+using Interface.Utilities;
 using Microsoft.VisualBasic.Logging;
 using System.Data;
 

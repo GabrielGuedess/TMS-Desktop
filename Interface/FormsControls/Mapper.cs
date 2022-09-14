@@ -1,6 +1,6 @@
 ﻿using Interface.TemplateComponents;
 
-namespace Interface.Properties
+namespace Interface.FormsControls
 {
     internal class Mapper
     {

@@ -1,5 +1,8 @@
 ﻿using CorreioService;
+using Interface.ControlValidationAuxiliary;
+using Interface.DataBaseControls;
 using Interface.Properties;
+using Interface.Utilities;
 using System.Data;
 using System.Runtime.InteropServices;
 
