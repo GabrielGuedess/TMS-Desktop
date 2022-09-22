@@ -38,7 +38,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panelCPF = new System.Windows.Forms.Panel();
             this.SubpanelCPF = new System.Windows.Forms.Panel();
-            this.panelBorderRounded5 = new Interface.TemplateComponents.PanelBorderRounded();
+            this.panelTextCNPJClient = new Interface.TemplateComponents.PanelBorderRounded();
             this.mkCNPJ = new Interface.TemplateComponents.MasckedboxTemplete();
             this.panel8 = new System.Windows.Forms.Panel();
             this.comboSituacaoCNPJ = new System.Windows.Forms.ComboBox();
@@ -114,7 +114,7 @@
             this.panelBorderRounded4.SuspendLayout();
             this.panelCPF.SuspendLayout();
             this.SubpanelCPF.SuspendLayout();
-            this.panelBorderRounded5.SuspendLayout();
+            this.panelTextCNPJClient.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panelNomeClient.SuspendLayout();
             this.subpanelNomeClient.SuspendLayout();
@@ -288,7 +288,7 @@
             // SubpanelCPF
             // 
             this.SubpanelCPF.BackColor = System.Drawing.Color.Transparent;
-            this.SubpanelCPF.Controls.Add(this.panelBorderRounded5);
+            this.SubpanelCPF.Controls.Add(this.panelTextCNPJClient);
             this.SubpanelCPF.Controls.Add(this.panel8);
             this.SubpanelCPF.Controls.Add(this.labelCPFClient);
             this.SubpanelCPF.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -298,16 +298,16 @@
             this.SubpanelCPF.Size = new System.Drawing.Size(258, 70);
             this.SubpanelCPF.TabIndex = 7;
             // 
-            // panelBorderRounded5
+            // panelTextCNPJClient
             // 
-            this.panelBorderRounded5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelBorderRounded5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelBorderRounded5.Controls.Add(this.mkCNPJ);
-            this.panelBorderRounded5.Location = new System.Drawing.Point(5, 36);
-            this.panelBorderRounded5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.panelBorderRounded5.Name = "panelBorderRounded5";
-            this.panelBorderRounded5.Size = new System.Drawing.Size(149, 33);
-            this.panelBorderRounded5.TabIndex = 4;
+            this.panelTextCNPJClient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelTextCNPJClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.panelTextCNPJClient.Controls.Add(this.mkCNPJ);
+            this.panelTextCNPJClient.Location = new System.Drawing.Point(5, 36);
+            this.panelTextCNPJClient.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.panelTextCNPJClient.Name = "panelTextCNPJClient";
+            this.panelTextCNPJClient.Size = new System.Drawing.Size(149, 33);
+            this.panelTextCNPJClient.TabIndex = 4;
             // 
             // mkCNPJ
             // 
@@ -1204,8 +1204,8 @@
             this.panelCPF.ResumeLayout(false);
             this.SubpanelCPF.ResumeLayout(false);
             this.SubpanelCPF.PerformLayout();
-            this.panelBorderRounded5.ResumeLayout(false);
-            this.panelBorderRounded5.PerformLayout();
+            this.panelTextCNPJClient.ResumeLayout(false);
+            this.panelTextCNPJClient.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panelNomeClient.ResumeLayout(false);
@@ -1346,7 +1346,7 @@
         private Panel panel8;
         private ComboBox comboUF;
         private Label label24;
-        private TemplateComponents.PanelBorderRounded panelBorderRounded5;
+        private TemplateComponents.PanelBorderRounded panelTextCNPJClient;
         private TemplateComponents.MasckedboxTemplete mkCNPJ;
     }
 }

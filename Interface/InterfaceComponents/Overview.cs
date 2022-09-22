@@ -64,6 +64,8 @@ namespace Interface
                 mapper.mapperForOverview(value, typeData, maskInput, panelContainerRadio, contentOverview, CPF.Checked);
                 mapper.mapperForDatabase(value, CPF.Checked);
 
+                DataGridRequest = null;
+
                 maskInput.Width = 271 - typeData.Width;
                 maskInput.Location = new Point(35 + (typeData.Width + 10), 7);
             }
@@ -214,6 +216,8 @@ namespace Interface
                 dash!.OverviewDataRequest = DataGridRequest!;
 
                 dash.buttonUp_Click(sender, e);
+
+                DataGridRequest = null;
             }
             else
             {
@@ -250,7 +254,7 @@ namespace Interface
 
                 foreach (DataGridViewRow row in dataGridView1.Rows)
                 {
-                    if (row.Cells[mapper.TypeWhereDatabase].Value.ToString()!.Equals(maskInput.Text))
+                    if(CNPJ.Checked ? row.Cells["CNPJ"].Value.ToString()!.Equals(maskInput.Text) : row.Cells[mapper.TypeWhereDatabase].Value.ToString()!.Equals(maskInput.Text))
                     {
                         rowIndex = row.Index;
                         break;
@@ -265,6 +269,10 @@ namespace Interface
 
                     DataGridRequest = dados;
                 }
+            }
+            else
+            {
+                DataGridRequest = null;
             }
         }
     }

@@ -143,7 +143,7 @@ namespace Interface
 
             if (pessoaJuridica.Checked)
             {
-                MasckedboxTemplete? inputMaskCNPJ = ClienteCNPJ.Controls["contentCNPJ"].Controls["tableLayoutPanel3"].Controls["panelCPF"].Controls["SubpanelCPF"].Controls["panelTextCPFClient"].Controls["mkCNPJ"] as MasckedboxTemplete;
+                MasckedboxTemplete? inputMaskCNPJ = ClienteCNPJ.Controls["contentCNPJ"].Controls["tableLayoutPanel3"].Controls["panelCPF"].Controls["SubpanelCPF"].Controls["panelTextCNPJClient"].Controls["mkCNPJ"] as MasckedboxTemplete;
 
                 inputMaskCNPJ!.Text = mkBoxCdClientSearch.Text;
             }
