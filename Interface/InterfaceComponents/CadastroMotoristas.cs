@@ -51,7 +51,7 @@ namespace Interface
 
                 if (value != null)
                 {
-                    tbID.Text = value["ID"].ToString();
+                    tbID.Text = value["NUM_ID"].ToString();
                     tbNome.Text = value["Nome"].ToString();
                     dateNascimento.Text = value["DATA_NASCIMENTO"].ToString();
                     mkCPF.Text = value["CPF"].ToString();
@@ -106,18 +106,25 @@ namespace Interface
             ConnectDB connectDB = new ConnectDB();
             string SQL = "SELECT MAX (NUM_ID) FROM C_Motoristas";
             var dados = connectDB.pesquisar(SQL);
-            string data = (string)dados.Rows[0][0];
-            string IdNota = data.Replace("M", "");
-            int numID = int.Parse(IdNota);
-            numID++;
-            string numIDsg = numID.ToString();
-            if (numIDsg.Length == 1)
+            if (!DBNull.Value.Equals(dados.Rows[0][0]))
             {
-                numIDsg = numIDsg.Insert(numIDsg.Length - 1, "00");
+                string data = (string)dados.Rows[0][0];
+                string IdNota = data.Replace("M", "");
+                int numID = int.Parse(IdNota);
+                numID++;
+                string numIDsg = numID.ToString();
+                if (numIDsg.Length == 1)
+                {
+                    numIDsg = numIDsg.Insert(numIDsg.Length - 1, "00");
+                }
+                else if (numIDsg.Length == 2)
+                    numIDsg = numIDsg.Insert(numIDsg.Length - 2, "0");
+                tbID.Text = "M" + numIDsg;
             }
-            else if (numIDsg.Length == 2)
-                numIDsg = numIDsg.Insert(numIDsg.Length - 2, "0");
-            tbID.Text = "M" + numIDsg;
+            else
+            {
+                tbID.Text = "M01";
+            }
         }
 
         private void cadastrarMotoristas_Click(object sender, EventArgs e)
@@ -174,6 +181,7 @@ namespace Interface
 
                 limpar.CleanControl(contentMotorista);
                 limpar.CleanControl(searchPanel);
+                atualizarIDMotorista();
             }
         }
 

@@ -86,18 +86,25 @@ namespace Interface
             ConnectDB connectDB = new ConnectDB();
             string SQL = "SELECT MAX (ID) FROM tbSinistros";
             var dados = connectDB.pesquisar(SQL);
-            string data = (string)dados!.Rows[0][0];
-            string IdSinistro = data.Replace("R", "");
-            int numID = int.Parse(IdSinistro);
-            numID++;
-            string numIDsg = numID.ToString();
-            if (numIDsg.Length == 1)
+            if (!DBNull.Value.Equals(dados.Rows[0][0]))
             {
-                numIDsg = numIDsg.Insert(numIDsg.Length - 1, "00");
+                string data = (string)dados!.Rows[0][0];
+                string IdSinistro = data.Replace("R", "");
+                int numID = int.Parse(IdSinistro);
+                numID++;
+                string numIDsg = numID.ToString();
+                if (numIDsg.Length == 1)
+                {
+                    numIDsg = numIDsg.Insert(numIDsg.Length - 1, "00");
+                }
+                else if (numIDsg.Length == 2)
+                    numIDsg = numIDsg.Insert(numIDsg.Length - 2, "0");
+                tbCodigdoSinistro.Text = "R" + numIDsg;
             }
-            else if (numIDsg.Length == 2)
-                numIDsg = numIDsg.Insert(numIDsg.Length - 2, "0");
-            tbCodigdoSinistro.Text = "R" + numIDsg;
+            else
+            {
+                tbCodigdoSinistro.Text = "R01";
+            }
         }
 
         private void cadastrarSinistro_Click(object sender, EventArgs e)
@@ -128,6 +135,7 @@ namespace Interface
 
                 limpar.CleanControl(contentSinistros);
                 limpar.CleanControl(searchPanel);
+                atualizarIDSinistro();
             }
         }
 

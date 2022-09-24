@@ -91,18 +91,25 @@ namespace Interface
             ConnectDB connectDB = new ConnectDB();
             string SQL = "SELECT MAX (NUM_ID) FROM C_Nota_Fiscal";
             var dados = connectDB.pesquisar(SQL);
-            string data = (string)dados!.Rows[0][0];
-            string IdNota = data.Replace("F", "");
-            int numID = int.Parse(IdNota);
-            numID++;
-            string numIDsg = numID.ToString();
-            if (numIDsg.Length == 1)
+            if (!DBNull.Value.Equals(dados.Rows[0][0]))
             {
-                numIDsg = numIDsg.Insert(numIDsg.Length - 1, "00");
+                string data = (string)dados!.Rows[0][0];
+                string IdNota = data.Replace("F", "");
+                int numID = int.Parse(IdNota);
+                numID++;
+                string numIDsg = numID.ToString();
+                if (numIDsg.Length == 1)
+                {
+                    numIDsg = numIDsg.Insert(numIDsg.Length - 1, "00");
+                }
+                else if (numIDsg.Length == 2)
+                    numIDsg = numIDsg.Insert(numIDsg.Length - 2, "0");
+                tbIDNotaFiscal.Text = "F" + numIDsg;
             }
-            else if (numIDsg.Length == 2)
-                numIDsg = numIDsg.Insert(numIDsg.Length - 2, "0");
-            tbIDNotaFiscal.Text = "F" + numIDsg;
+            else
+            {
+                tbIDNotaFiscal.Text = "F01";
+            }
         }
 
         private void cadastrarNota_Click(object sender, EventArgs e)

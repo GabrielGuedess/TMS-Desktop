@@ -46,7 +46,7 @@ namespace Interface.ControlValidationAuxiliary
                 }
                 else if (control is ComboBox)
                 {
-                    ((ComboBox)control).SelectedIndex = -1;
+                    ((ComboBox)control).Text="";
                 }
                 else if (control is DateTimePicker)
                 {

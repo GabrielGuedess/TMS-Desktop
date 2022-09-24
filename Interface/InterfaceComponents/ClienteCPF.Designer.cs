@@ -77,11 +77,11 @@
             this.label10 = new System.Windows.Forms.Label();
             this.panelEndereco = new System.Windows.Forms.Panel();
             this.subpanelEndereco = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboCidade = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.comboUF = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.comboCidade = new System.Windows.Forms.ComboBox();
             this.panelTextEnderecoClient = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -754,8 +754,8 @@
             // subpanelEndereco
             // 
             this.subpanelEndereco.BackColor = System.Drawing.Color.Transparent;
-            this.subpanelEndereco.Controls.Add(this.panel1);
             this.subpanelEndereco.Controls.Add(this.label3);
+            this.subpanelEndereco.Controls.Add(this.panel1);
             this.subpanelEndereco.Controls.Add(this.comboCidade);
             this.subpanelEndereco.Dock = System.Windows.Forms.DockStyle.Fill;
             this.subpanelEndereco.Location = new System.Drawing.Point(20, 20);
@@ -763,6 +763,32 @@
             this.subpanelEndereco.Name = "subpanelEndereco";
             this.subpanelEndereco.Size = new System.Drawing.Size(258, 70);
             this.subpanelEndereco.TabIndex = 12;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(116, 3);
+            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(52, 17);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Cidade";
+            // 
+            // comboCidade
+            // 
+            this.comboCidade.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboCidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
+            this.comboCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.comboCidade.ForeColor = System.Drawing.Color.White;
+            this.comboCidade.FormattingEnabled = true;
+            this.comboCidade.Location = new System.Drawing.Point(119, 35);
+            this.comboCidade.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.comboCidade.Name = "comboCidade";
+            this.comboCidade.Size = new System.Drawing.Size(135, 33);
+            this.comboCidade.TabIndex = 10;
             // 
             // panel1
             // 
@@ -824,32 +850,6 @@
             this.comboUF.Name = "comboUF";
             this.comboUF.Size = new System.Drawing.Size(72, 33);
             this.comboUF.TabIndex = 9;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(124, 3);
-            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 17);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Cidade";
-            // 
-            // comboCidade
-            // 
-            this.comboCidade.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboCidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
-            this.comboCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.comboCidade.ForeColor = System.Drawing.Color.White;
-            this.comboCidade.FormattingEnabled = true;
-            this.comboCidade.Location = new System.Drawing.Point(124, 35);
-            this.comboCidade.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.comboCidade.Name = "comboCidade";
-            this.comboCidade.Size = new System.Drawing.Size(130, 33);
-            this.comboCidade.TabIndex = 10;
             // 
             // panelTextEnderecoClient
             // 

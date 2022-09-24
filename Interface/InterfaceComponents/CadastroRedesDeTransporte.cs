@@ -90,21 +90,30 @@ namespace Interface
 
         private void atualizarIDRede()
         {
+            
             ConnectDB connectDB = new ConnectDB();
             string SQL = "SELECT MAX (NUM_ID) FROM C_Redes_de_Transporte";
             var dados = connectDB.pesquisar(SQL);
-            string data = (string)dados!.Rows[0][0];
-            string IdRede = data.Replace("T", "");
-            int numID = int.Parse(IdRede);
-            numID++;
-            string numIDsg = numID.ToString();
-            if (numIDsg.Length == 1)
+            if (!DBNull.Value.Equals(dados.Rows[0][0]))
             {
-                numIDsg = numIDsg.Insert(numIDsg.Length - 1, "00");
+                string data = (string)dados.Rows[0][0];
+                string IdRede = data.Replace("T", "");
+                int numID = int.Parse(IdRede);
+                numID++;
+                string numIDsg = numID.ToString();
+                if (numIDsg.Length == 1)
+                {
+                    numIDsg = numIDsg.Insert(numIDsg.Length - 1, "00");
+                }
+                else if (numIDsg.Length == 2)
+                    numIDsg = numIDsg.Insert(numIDsg.Length - 2, "0");
+                this.numID.Text = "T" + numIDsg;
             }
-            else if (numIDsg.Length == 2)
-                numIDsg = numIDsg.Insert(numIDsg.Length - 2, "0");
-            this.numID.Text = "T" + numIDsg;
+            else {
+                numID.Text = "T01";
+            }
+            
+            
         }
         private void cadastrarRede_Click(object sender, EventArgs e)
         {
