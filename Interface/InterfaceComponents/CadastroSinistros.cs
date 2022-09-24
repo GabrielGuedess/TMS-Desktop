@@ -59,7 +59,7 @@ namespace Interface
         public CadastroSinistros()
         {
             InitializeComponent();
-            atualizarIDSinistro();
+            //atualizarIDSinistro();
         }
 
         private void CadastroSinistros_Resize(object sender, EventArgs e)

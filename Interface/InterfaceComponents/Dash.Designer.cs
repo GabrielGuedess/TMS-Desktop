@@ -69,48 +69,19 @@ namespace Interface
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.textSearch = new System.Windows.Forms.TextBox();
             this.body = new System.Windows.Forms.Panel();
-            this.cadastroRedesDeTransporte1 = new Interface.CadastroRedesDeTransporte();
-            this.cadastroTarifaseTaxas1 = new Interface.CadastroTarifasETaxas();
-            this.cadastroClientes1 = new Interface.CadastroClientes();
-            this.cadastroMotoristas1 = new Interface.CadastroMotoristas();
-            this.overview1 = new Interface.Overview();
-            this.cadastroSinistros1 = new Interface.CadastroSinistros();
-            this.cadastroNotasFicais1 = new Interface.CadastroNotasFicais();
-            this.cadastroTerceiros1 = new Interface.CadastroTerceiros();
             this.cadastroVeiculos1 = new Interface.CadastroVeiculos();
-            this.cadastroRoutes1 = new Interface.CadastroRoutes();
             this.cadastroUsuarios1 = new Interface.CadastroUsuarios();
+            this.cadastroTerceiros1 = new Interface.CadastroTerceiros();
+            this.cadastroTarifaseTaxas1 = new Interface.CadastroTarifasETaxas();
+            this.cadastroSinistros2 = new Interface.CadastroSinistros();
+            this.cadastroRoutes1 = new Interface.CadastroRoutes();
+            this.cadastroRedesDeTransporte2 = new Interface.CadastroRedesDeTransporte();
+            this.cadastroNotasFicais2 = new Interface.CadastroNotasFicais();
+            this.cadastroClientes1 = new Interface.CadastroClientes();
+            this.cadastroMotoristas2 = new Interface.CadastroMotoristas();
+            this.overview1 = new Interface.Overview();
             this.panelScroll = new System.Windows.Forms.Panel();
-            this.panel51 = new System.Windows.Forms.Panel();
-            this.lineRedesDeTransporte = new System.Windows.Forms.Panel();
-            this.buttonRedesDeTransporte = new System.Windows.Forms.Button();
-            this.panel49 = new System.Windows.Forms.Panel();
-            this.lineTarifasETaxas = new System.Windows.Forms.Panel();
-            this.buttonTarifasETaxas = new System.Windows.Forms.Button();
-            this.panel47 = new System.Windows.Forms.Panel();
-            this.lineNotasFicais = new System.Windows.Forms.Panel();
-            this.buttonNotasFicais = new System.Windows.Forms.Button();
-            this.panel45 = new System.Windows.Forms.Panel();
-            this.lineSinistros = new System.Windows.Forms.Panel();
-            this.buttonSinistros = new System.Windows.Forms.Button();
-            this.panel43 = new System.Windows.Forms.Panel();
-            this.lineTerceiros = new System.Windows.Forms.Panel();
-            this.buttonTerceiros = new System.Windows.Forms.Button();
-            this.panel41 = new System.Windows.Forms.Panel();
-            this.lineVeiculos = new System.Windows.Forms.Panel();
-            this.buttonVeiculos = new System.Windows.Forms.Button();
-            this.panel39 = new System.Windows.Forms.Panel();
-            this.lineMotoristas = new System.Windows.Forms.Panel();
-            this.buttonMotoristas = new System.Windows.Forms.Button();
-            this.panel37 = new System.Windows.Forms.Panel();
-            this.lineRotas = new System.Windows.Forms.Panel();
-            this.buttonRotas = new System.Windows.Forms.Button();
-            this.panel33 = new System.Windows.Forms.Panel();
-            this.lineUsuarios = new System.Windows.Forms.Panel();
-            this.buttonUsuarios = new System.Windows.Forms.Button();
-            this.panel35 = new System.Windows.Forms.Panel();
-            this.lineClientes = new System.Windows.Forms.Panel();
-            this.buttonClientes = new System.Windows.Forms.Button();
+            this.navbar1 = new Interface.InterfaceComponents.Navbar();
             this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -130,16 +101,6 @@ namespace Interface
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.body.SuspendLayout();
             this.panelScroll.SuspendLayout();
-            this.panel51.SuspendLayout();
-            this.panel49.SuspendLayout();
-            this.panel47.SuspendLayout();
-            this.panel45.SuspendLayout();
-            this.panel43.SuspendLayout();
-            this.panel41.SuspendLayout();
-            this.panel39.SuspendLayout();
-            this.panel37.SuspendLayout();
-            this.panel33.SuspendLayout();
-            this.panel35.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel2
@@ -164,7 +125,7 @@ namespace Interface
             // 
             // panel4
             // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackColor = System.Drawing.Color.Transparent;
             this.panel4.Location = new System.Drawing.Point(374, 0);
@@ -175,7 +136,7 @@ namespace Interface
             // 
             // button1
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
@@ -199,7 +160,7 @@ namespace Interface
             // 
             // panel9
             // 
-            this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel9.BackColor = System.Drawing.Color.Transparent;
             this.panel9.Location = new System.Drawing.Point(460, 0);
@@ -210,7 +171,7 @@ namespace Interface
             // 
             // button2
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.button2.BackColor = System.Drawing.Color.Transparent;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
@@ -319,7 +280,7 @@ namespace Interface
             // 
             // panel18
             // 
-            this.panel18.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.panel18.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel18.Controls.Add(this.userProfile1);
             this.panel18.Controls.Add(this.button15);
@@ -389,7 +350,7 @@ namespace Interface
             // 
             // buttonOver
             // 
-            this.buttonOver.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.buttonOver.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonOver.BackColor = System.Drawing.Color.Transparent;
             this.buttonOver.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -430,7 +391,7 @@ namespace Interface
             // 
             // buttonCa
             // 
-            this.buttonCa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.buttonCa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCa.BackColor = System.Drawing.Color.Transparent;
             this.buttonCa.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -482,7 +443,7 @@ namespace Interface
             // 
             // buttonUp
             // 
-            this.buttonUp.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.buttonUp.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonUp.BackColor = System.Drawing.Color.Transparent;
             this.buttonUp.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -510,7 +471,7 @@ namespace Interface
             // 
             // button9
             // 
-            this.button9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.button9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button9.FlatAppearance.BorderSize = 0;
@@ -550,7 +511,7 @@ namespace Interface
             // 
             // buttonDel
             // 
-            this.buttonDel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.buttonDel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonDel.BackColor = System.Drawing.Color.Transparent;
             this.buttonDel.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -568,7 +529,7 @@ namespace Interface
             // 
             // button11
             // 
-            this.button11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.button11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button11.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button11.FlatAppearance.BorderSize = 0;
@@ -593,7 +554,7 @@ namespace Interface
             // 
             // button13
             // 
-            this.button13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.button13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button13.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button13.FlatAppearance.BorderSize = 0;
@@ -621,7 +582,7 @@ namespace Interface
             // 
             // textSearch
             // 
-            this.textSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.textSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
             this.textSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -636,22 +597,22 @@ namespace Interface
             // 
             // body
             // 
-            this.body.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.body.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.body.AutoScroll = true;
             this.body.BackColor = System.Drawing.Color.Black;
-            this.body.Controls.Add(this.overview1);
-            this.body.Controls.Add(this.cadastroSinistros1);
-            this.body.Controls.Add(this.cadastroNotasFicais1);
-            this.body.Controls.Add(this.cadastroTerceiros1);
             this.body.Controls.Add(this.cadastroVeiculos1);
-            this.body.Controls.Add(this.cadastroRoutes1);
             this.body.Controls.Add(this.cadastroUsuarios1);
-            this.body.Controls.Add(this.cadastroRedesDeTransporte1);
+            this.body.Controls.Add(this.cadastroTerceiros1);
             this.body.Controls.Add(this.cadastroTarifaseTaxas1);
+            this.body.Controls.Add(this.cadastroSinistros2);
+            this.body.Controls.Add(this.cadastroRoutes1);
+            this.body.Controls.Add(this.cadastroRedesDeTransporte2);
+            this.body.Controls.Add(this.cadastroNotasFicais2);
             this.body.Controls.Add(this.cadastroClientes1);
-            this.body.Controls.Add(this.cadastroMotoristas1);
+            this.body.Controls.Add(this.cadastroMotoristas2);
+            this.body.Controls.Add(this.overview1);
             this.body.Location = new System.Drawing.Point(288, 70);
             this.body.Margin = new System.Windows.Forms.Padding(0);
             this.body.Name = "body";
@@ -660,144 +621,136 @@ namespace Interface
             this.body.TabIndex = 7;
             this.body.Paint += new System.Windows.Forms.PaintEventHandler(this.body_Paint);
             // 
-            // cadastroRedesDeTransporte1
-            // 
-            this.cadastroRedesDeTransporte1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cadastroRedesDeTransporte1.BackColor = System.Drawing.Color.Transparent;
-            this.cadastroRedesDeTransporte1.Location = new System.Drawing.Point(25, 25);
-            this.cadastroRedesDeTransporte1.Margin = new System.Windows.Forms.Padding(0);
-            this.cadastroRedesDeTransporte1.Name = "cadastroRedesDeTransporte1";
-            this.cadastroRedesDeTransporte1.Size = new System.Drawing.Size(941, 608);
-            this.cadastroRedesDeTransporte1.TabIndex = 10;
-            // 
-            // cadastroTarifaseTaxas1
-            // 
-            this.cadastroTarifaseTaxas1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cadastroTarifaseTaxas1.BackColor = System.Drawing.Color.Transparent;
-            this.cadastroTarifaseTaxas1.Location = new System.Drawing.Point(25, 25);
-            this.cadastroTarifaseTaxas1.Margin = new System.Windows.Forms.Padding(0);
-            this.cadastroTarifaseTaxas1.Name = "cadastroTarifaseTaxas1";
-            this.cadastroTarifaseTaxas1.Size = new System.Drawing.Size(969, 465);
-            this.cadastroTarifaseTaxas1.TabIndex = 9;
-            // 
-            // cadastroClientes1
-            // 
-            this.cadastroClientes1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cadastroClientes1.BackColor = System.Drawing.Color.Transparent;
-            this.cadastroClientes1.Location = new System.Drawing.Point(25, 25);
-            this.cadastroClientes1.Margin = new System.Windows.Forms.Padding(0);
-            this.cadastroClientes1.Name = "cadastroClientes1";
-            this.cadastroClientes1.Size = new System.Drawing.Size(958, 820);
-            this.cadastroClientes1.TabIndex = 0;
-            // 
-            // cadastroMotoristas1
-            // 
-            this.cadastroMotoristas1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cadastroMotoristas1.BackColor = System.Drawing.Color.Transparent;
-            this.cadastroMotoristas1.Location = new System.Drawing.Point(25, 25);
-            this.cadastroMotoristas1.Margin = new System.Windows.Forms.Padding(0);
-            this.cadastroMotoristas1.Name = "cadastroMotoristas1";
-            this.cadastroMotoristas1.Size = new System.Drawing.Size(952, 1116);
-            this.cadastroMotoristas1.TabIndex = 3;
-            // 
-            // overview1
-            // 
-            this.overview1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.overview1.BackColor = System.Drawing.Color.Transparent;
-            this.overview1.Location = new System.Drawing.Point(25, 25);
-            this.overview1.Margin = new System.Windows.Forms.Padding(0);
-            this.overview1.Name = "overview1";
-            this.overview1.Size = new System.Drawing.Size(958, 833);
-            this.overview1.TabIndex = 8;
-            // 
-            // cadastroSinistros1
-            // 
-            this.cadastroSinistros1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cadastroSinistros1.BackColor = System.Drawing.Color.Transparent;
-            this.cadastroSinistros1.Location = new System.Drawing.Point(25, 25);
-            this.cadastroSinistros1.Margin = new System.Windows.Forms.Padding(0);
-            this.cadastroSinistros1.Name = "cadastroSinistros1";
-            this.cadastroSinistros1.Size = new System.Drawing.Size(952, 385);
-            this.cadastroSinistros1.TabIndex = 6;
-            // 
-            // cadastroNotasFicais1
-            // 
-            this.cadastroNotasFicais1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cadastroNotasFicais1.BackColor = System.Drawing.Color.Transparent;
-            this.cadastroNotasFicais1.Location = new System.Drawing.Point(25, 25);
-            this.cadastroNotasFicais1.Margin = new System.Windows.Forms.Padding(0);
-            this.cadastroNotasFicais1.Name = "cadastroNotasFicais1";
-            this.cadastroNotasFicais1.Size = new System.Drawing.Size(958, 482);
-            this.cadastroNotasFicais1.TabIndex = 7;
-            // 
-            // cadastroTerceiros1
-            // 
-            this.cadastroTerceiros1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cadastroTerceiros1.BackColor = System.Drawing.Color.Transparent;
-            this.cadastroTerceiros1.Location = new System.Drawing.Point(25, 25);
-            this.cadastroTerceiros1.Margin = new System.Windows.Forms.Padding(0);
-            this.cadastroTerceiros1.Name = "cadastroTerceiros1";
-            this.cadastroTerceiros1.Size = new System.Drawing.Size(958, 1237);
-            this.cadastroTerceiros1.TabIndex = 5;
-            // 
             // cadastroVeiculos1
             // 
-            this.cadastroVeiculos1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.cadastroVeiculos1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cadastroVeiculos1.BackColor = System.Drawing.Color.Transparent;
             this.cadastroVeiculos1.Location = new System.Drawing.Point(25, 25);
             this.cadastroVeiculos1.Margin = new System.Windows.Forms.Padding(0);
             this.cadastroVeiculos1.Name = "cadastroVeiculos1";
-            this.cadastroVeiculos1.Size = new System.Drawing.Size(958, 1117);
-            this.cadastroVeiculos1.TabIndex = 4;
-            // 
-            // cadastroRoutes1
-            // 
-            this.cadastroRoutes1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cadastroRoutes1.BackColor = System.Drawing.Color.Transparent;
-            this.cadastroRoutes1.Location = new System.Drawing.Point(25, 25);
-            this.cadastroRoutes1.Margin = new System.Windows.Forms.Padding(0);
-            this.cadastroRoutes1.Name = "cadastroRoutes1";
-            this.cadastroRoutes1.Size = new System.Drawing.Size(955, 1250);
-            this.cadastroRoutes1.TabIndex = 2;
+            this.cadastroVeiculos1.Size = new System.Drawing.Size(941, 1117);
+            this.cadastroVeiculos1.TabIndex = 10;
             // 
             // cadastroUsuarios1
             // 
-            this.cadastroUsuarios1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.cadastroUsuarios1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cadastroUsuarios1.BackColor = System.Drawing.Color.Transparent;
             this.cadastroUsuarios1.Location = new System.Drawing.Point(25, 25);
             this.cadastroUsuarios1.Margin = new System.Windows.Forms.Padding(0);
             this.cadastroUsuarios1.Name = "cadastroUsuarios1";
             this.cadastroUsuarios1.Size = new System.Drawing.Size(958, 521);
-            this.cadastroUsuarios1.TabIndex = 1;
+            this.cadastroUsuarios1.TabIndex = 9;
+            this.cadastroUsuarios1.TypeControl = "";
+            // 
+            // cadastroTerceiros1
+            // 
+            this.cadastroTerceiros1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cadastroTerceiros1.BackColor = System.Drawing.Color.Transparent;
+            this.cadastroTerceiros1.Location = new System.Drawing.Point(25, 25);
+            this.cadastroTerceiros1.Margin = new System.Windows.Forms.Padding(0);
+            this.cadastroTerceiros1.Name = "cadastroTerceiros1";
+            this.cadastroTerceiros1.Size = new System.Drawing.Size(924, 1237);
+            this.cadastroTerceiros1.TabIndex = 8;
+            // 
+            // cadastroTarifaseTaxas1
+            // 
+            this.cadastroTarifaseTaxas1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cadastroTarifaseTaxas1.BackColor = System.Drawing.Color.Transparent;
+            this.cadastroTarifaseTaxas1.Location = new System.Drawing.Point(25, 25);
+            this.cadastroTarifaseTaxas1.Margin = new System.Windows.Forms.Padding(0);
+            this.cadastroTarifaseTaxas1.Name = "cadastroTarifaseTaxas1";
+            this.cadastroTarifaseTaxas1.Size = new System.Drawing.Size(958, 465);
+            this.cadastroTarifaseTaxas1.TabIndex = 7;
+            // 
+            // cadastroSinistros2
+            // 
+            this.cadastroSinistros2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cadastroSinistros2.BackColor = System.Drawing.Color.Transparent;
+            this.cadastroSinistros2.Location = new System.Drawing.Point(28, 28);
+            this.cadastroSinistros2.Name = "cadastroSinistros2";
+            this.cadastroSinistros2.Size = new System.Drawing.Size(952, 385);
+            this.cadastroSinistros2.TabIndex = 6;
+            // 
+            // cadastroRoutes1
+            // 
+            this.cadastroRoutes1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cadastroRoutes1.BackColor = System.Drawing.Color.Transparent;
+            this.cadastroRoutes1.Location = new System.Drawing.Point(25, 25);
+            this.cadastroRoutes1.Margin = new System.Windows.Forms.Padding(0);
+            this.cadastroRoutes1.Name = "cadastroRoutes1";
+            this.cadastroRoutes1.Size = new System.Drawing.Size(907, 1287);
+            this.cadastroRoutes1.TabIndex = 5;
+            // 
+            // cadastroRedesDeTransporte2
+            // 
+            this.cadastroRedesDeTransporte2.BackColor = System.Drawing.Color.Transparent;
+            this.cadastroRedesDeTransporte2.Location = new System.Drawing.Point(25, 25);
+            this.cadastroRedesDeTransporte2.Margin = new System.Windows.Forms.Padding(0);
+            this.cadastroRedesDeTransporte2.Name = "cadastroRedesDeTransporte2";
+            this.cadastroRedesDeTransporte2.Size = new System.Drawing.Size(958, 514);
+            this.cadastroRedesDeTransporte2.TabIndex = 4;
+            // 
+            // cadastroNotasFicais2
+            // 
+            this.cadastroNotasFicais2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cadastroNotasFicais2.BackColor = System.Drawing.Color.Transparent;
+            this.cadastroNotasFicais2.Location = new System.Drawing.Point(25, 25);
+            this.cadastroNotasFicais2.Margin = new System.Windows.Forms.Padding(0);
+            this.cadastroNotasFicais2.Name = "cadastroNotasFicais2";
+            this.cadastroNotasFicais2.Size = new System.Drawing.Size(958, 482);
+            this.cadastroNotasFicais2.TabIndex = 3;
+            // 
+            // cadastroClientes1
+            // 
+            this.cadastroClientes1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cadastroClientes1.BackColor = System.Drawing.Color.Transparent;
+            this.cadastroClientes1.Location = new System.Drawing.Point(25, 25);
+            this.cadastroClientes1.Margin = new System.Windows.Forms.Padding(0);
+            this.cadastroClientes1.Name = "cadastroClientes1";
+            this.cadastroClientes1.overview = null;
+            this.cadastroClientes1.Size = new System.Drawing.Size(907, 715);
+            this.cadastroClientes1.TabIndex = 2;
+            // 
+            // cadastroMotoristas2
+            // 
+            this.cadastroMotoristas2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cadastroMotoristas2.BackColor = System.Drawing.Color.Transparent;
+            this.cadastroMotoristas2.Location = new System.Drawing.Point(28, 28);
+            this.cadastroMotoristas2.Name = "cadastroMotoristas2";
+            this.cadastroMotoristas2.Size = new System.Drawing.Size(935, 1116);
+            this.cadastroMotoristas2.TabIndex = 0;
+            // 
+            // overview1
+            // 
+            this.overview1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.overview1.BackColor = System.Drawing.Color.Transparent;
+            this.overview1.clientes = null;
+            this.overview1.dash = null;
+            this.overview1.Location = new System.Drawing.Point(25, 25);
+            this.overview1.Margin = new System.Windows.Forms.Padding(0);
+            this.overview1.Name = "overview1";
+            this.overview1.Size = new System.Drawing.Size(958, 806);
+            this.overview1.TabIndex = 1;
+            this.overview1.TypeControl = "Clientes_Fisicos";
             // 
             // panelScroll
             // 
-            this.panelScroll.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.panelScroll.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panelScroll.AutoScroll = true;
             this.panelScroll.AutoScrollMargin = new System.Drawing.Size(0, 50);
             this.panelScroll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(8)))), ((int)(((byte)(11)))));
-            this.panelScroll.Controls.Add(this.panel51);
-            this.panelScroll.Controls.Add(this.panel49);
-            this.panelScroll.Controls.Add(this.panel47);
-            this.panelScroll.Controls.Add(this.panel45);
-            this.panelScroll.Controls.Add(this.panel43);
-            this.panelScroll.Controls.Add(this.panel41);
-            this.panelScroll.Controls.Add(this.panel39);
-            this.panelScroll.Controls.Add(this.panel37);
-            this.panelScroll.Controls.Add(this.panel33);
-            this.panelScroll.Controls.Add(this.panel35);
+            this.panelScroll.Controls.Add(this.navbar1);
             this.panelScroll.Location = new System.Drawing.Point(0, 70);
             this.panelScroll.Margin = new System.Windows.Forms.Padding(0);
             this.panelScroll.Name = "panelScroll";
@@ -805,475 +758,19 @@ namespace Interface
             this.panelScroll.Size = new System.Drawing.Size(288, 608);
             this.panelScroll.TabIndex = 3;
             // 
-            // panel51
+            // navbar1
             // 
-            this.panel51.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.navbar1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel51.BackColor = System.Drawing.Color.Transparent;
-            this.panel51.Controls.Add(this.lineRedesDeTransporte);
-            this.panel51.Controls.Add(this.buttonRedesDeTransporte);
-            this.panel51.Location = new System.Drawing.Point(0, 511);
-            this.panel51.Margin = new System.Windows.Forms.Padding(0, 0, 0, 15);
-            this.panel51.Name = "panel51";
-            this.panel51.Size = new System.Drawing.Size(288, 37);
-            this.panel51.TabIndex = 8;
-            // 
-            // lineRedesDeTransporte
-            // 
-            this.lineRedesDeTransporte.BackColor = System.Drawing.Color.Transparent;
-            this.lineRedesDeTransporte.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lineRedesDeTransporte.Location = new System.Drawing.Point(286, 0);
-            this.lineRedesDeTransporte.Margin = new System.Windows.Forms.Padding(0);
-            this.lineRedesDeTransporte.Name = "lineRedesDeTransporte";
-            this.lineRedesDeTransporte.Size = new System.Drawing.Size(2, 37);
-            this.lineRedesDeTransporte.TabIndex = 5;
-            // 
-            // buttonRedesDeTransporte
-            // 
-            this.buttonRedesDeTransporte.BackColor = System.Drawing.Color.Transparent;
-            this.buttonRedesDeTransporte.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.buttonRedesDeTransporte.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonRedesDeTransporte.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonRedesDeTransporte.FlatAppearance.BorderSize = 0;
-            this.buttonRedesDeTransporte.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonRedesDeTransporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonRedesDeTransporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonRedesDeTransporte.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonRedesDeTransporte.Image = ((System.Drawing.Image)(resources.GetObject("buttonRedesDeTransporte.Image")));
-            this.buttonRedesDeTransporte.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonRedesDeTransporte.Location = new System.Drawing.Point(0, 0);
-            this.buttonRedesDeTransporte.Margin = new System.Windows.Forms.Padding(0, 0, 0, 25);
-            this.buttonRedesDeTransporte.Name = "buttonRedesDeTransporte";
-            this.buttonRedesDeTransporte.Padding = new System.Windows.Forms.Padding(24, 0, 24, 0);
-            this.buttonRedesDeTransporte.Size = new System.Drawing.Size(288, 37);
-            this.buttonRedesDeTransporte.TabIndex = 4;
-            this.buttonRedesDeTransporte.Text = "        Redes de Transporte";
-            this.buttonRedesDeTransporte.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonRedesDeTransporte.UseVisualStyleBackColor = false;
-            this.buttonRedesDeTransporte.Click += new System.EventHandler(this.buttonRedesDeTransporte_Click);
-            // 
-            // panel49
-            // 
-            this.panel49.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel49.BackColor = System.Drawing.Color.Transparent;
-            this.panel49.Controls.Add(this.lineTarifasETaxas);
-            this.panel49.Controls.Add(this.buttonTarifasETaxas);
-            this.panel49.Location = new System.Drawing.Point(0, 459);
-            this.panel49.Margin = new System.Windows.Forms.Padding(0, 0, 0, 15);
-            this.panel49.Name = "panel49";
-            this.panel49.Size = new System.Drawing.Size(288, 37);
-            this.panel49.TabIndex = 8;
-            // 
-            // lineTarifasETaxas
-            // 
-            this.lineTarifasETaxas.BackColor = System.Drawing.Color.Transparent;
-            this.lineTarifasETaxas.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lineTarifasETaxas.Location = new System.Drawing.Point(286, 0);
-            this.lineTarifasETaxas.Margin = new System.Windows.Forms.Padding(0);
-            this.lineTarifasETaxas.Name = "lineTarifasETaxas";
-            this.lineTarifasETaxas.Size = new System.Drawing.Size(2, 37);
-            this.lineTarifasETaxas.TabIndex = 5;
-            // 
-            // buttonTarifasETaxas
-            // 
-            this.buttonTarifasETaxas.BackColor = System.Drawing.Color.Transparent;
-            this.buttonTarifasETaxas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.buttonTarifasETaxas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonTarifasETaxas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonTarifasETaxas.FlatAppearance.BorderSize = 0;
-            this.buttonTarifasETaxas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonTarifasETaxas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonTarifasETaxas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonTarifasETaxas.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonTarifasETaxas.Image = ((System.Drawing.Image)(resources.GetObject("buttonTarifasETaxas.Image")));
-            this.buttonTarifasETaxas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonTarifasETaxas.Location = new System.Drawing.Point(0, 0);
-            this.buttonTarifasETaxas.Margin = new System.Windows.Forms.Padding(0, 0, 0, 25);
-            this.buttonTarifasETaxas.Name = "buttonTarifasETaxas";
-            this.buttonTarifasETaxas.Padding = new System.Windows.Forms.Padding(24, 0, 24, 0);
-            this.buttonTarifasETaxas.Size = new System.Drawing.Size(288, 37);
-            this.buttonTarifasETaxas.TabIndex = 4;
-            this.buttonTarifasETaxas.Text = "        Tarifas e Taxas";
-            this.buttonTarifasETaxas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonTarifasETaxas.UseVisualStyleBackColor = false;
-            this.buttonTarifasETaxas.Click += new System.EventHandler(this.buttonTarifasETaxas_Click);
-            // 
-            // panel47
-            // 
-            this.panel47.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel47.BackColor = System.Drawing.Color.Transparent;
-            this.panel47.Controls.Add(this.lineNotasFicais);
-            this.panel47.Controls.Add(this.buttonNotasFicais);
-            this.panel47.Location = new System.Drawing.Point(0, 407);
-            this.panel47.Margin = new System.Windows.Forms.Padding(0, 0, 0, 15);
-            this.panel47.Name = "panel47";
-            this.panel47.Size = new System.Drawing.Size(288, 37);
-            this.panel47.TabIndex = 8;
-            // 
-            // lineNotasFicais
-            // 
-            this.lineNotasFicais.BackColor = System.Drawing.Color.Transparent;
-            this.lineNotasFicais.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lineNotasFicais.Location = new System.Drawing.Point(286, 0);
-            this.lineNotasFicais.Margin = new System.Windows.Forms.Padding(0);
-            this.lineNotasFicais.Name = "lineNotasFicais";
-            this.lineNotasFicais.Size = new System.Drawing.Size(2, 37);
-            this.lineNotasFicais.TabIndex = 5;
-            // 
-            // buttonNotasFicais
-            // 
-            this.buttonNotasFicais.BackColor = System.Drawing.Color.Transparent;
-            this.buttonNotasFicais.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.buttonNotasFicais.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonNotasFicais.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonNotasFicais.FlatAppearance.BorderSize = 0;
-            this.buttonNotasFicais.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonNotasFicais.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNotasFicais.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonNotasFicais.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonNotasFicais.Image = ((System.Drawing.Image)(resources.GetObject("buttonNotasFicais.Image")));
-            this.buttonNotasFicais.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonNotasFicais.Location = new System.Drawing.Point(0, 0);
-            this.buttonNotasFicais.Margin = new System.Windows.Forms.Padding(0, 0, 0, 25);
-            this.buttonNotasFicais.Name = "buttonNotasFicais";
-            this.buttonNotasFicais.Padding = new System.Windows.Forms.Padding(24, 0, 24, 0);
-            this.buttonNotasFicais.Size = new System.Drawing.Size(288, 37);
-            this.buttonNotasFicais.TabIndex = 4;
-            this.buttonNotasFicais.Text = "        Notas Ficais";
-            this.buttonNotasFicais.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonNotasFicais.UseVisualStyleBackColor = false;
-            this.buttonNotasFicais.Click += new System.EventHandler(this.buttonNotasFicais_Click);
-            // 
-            // panel45
-            // 
-            this.panel45.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel45.BackColor = System.Drawing.Color.Transparent;
-            this.panel45.Controls.Add(this.lineSinistros);
-            this.panel45.Controls.Add(this.buttonSinistros);
-            this.panel45.Location = new System.Drawing.Point(0, 355);
-            this.panel45.Margin = new System.Windows.Forms.Padding(0, 0, 0, 15);
-            this.panel45.Name = "panel45";
-            this.panel45.Size = new System.Drawing.Size(288, 37);
-            this.panel45.TabIndex = 8;
-            // 
-            // lineSinistros
-            // 
-            this.lineSinistros.BackColor = System.Drawing.Color.Transparent;
-            this.lineSinistros.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lineSinistros.Location = new System.Drawing.Point(286, 0);
-            this.lineSinistros.Margin = new System.Windows.Forms.Padding(0);
-            this.lineSinistros.Name = "lineSinistros";
-            this.lineSinistros.Size = new System.Drawing.Size(2, 37);
-            this.lineSinistros.TabIndex = 5;
-            // 
-            // buttonSinistros
-            // 
-            this.buttonSinistros.BackColor = System.Drawing.Color.Transparent;
-            this.buttonSinistros.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.buttonSinistros.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonSinistros.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonSinistros.FlatAppearance.BorderSize = 0;
-            this.buttonSinistros.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonSinistros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSinistros.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonSinistros.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonSinistros.Image = ((System.Drawing.Image)(resources.GetObject("buttonSinistros.Image")));
-            this.buttonSinistros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSinistros.Location = new System.Drawing.Point(0, 0);
-            this.buttonSinistros.Margin = new System.Windows.Forms.Padding(0, 0, 0, 25);
-            this.buttonSinistros.Name = "buttonSinistros";
-            this.buttonSinistros.Padding = new System.Windows.Forms.Padding(24, 0, 24, 0);
-            this.buttonSinistros.Size = new System.Drawing.Size(288, 37);
-            this.buttonSinistros.TabIndex = 4;
-            this.buttonSinistros.Text = "        Sinistros";
-            this.buttonSinistros.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonSinistros.UseVisualStyleBackColor = false;
-            this.buttonSinistros.Click += new System.EventHandler(this.buttonSinistros_Click);
-            // 
-            // panel43
-            // 
-            this.panel43.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel43.BackColor = System.Drawing.Color.Transparent;
-            this.panel43.Controls.Add(this.lineTerceiros);
-            this.panel43.Controls.Add(this.buttonTerceiros);
-            this.panel43.Location = new System.Drawing.Point(0, 300);
-            this.panel43.Margin = new System.Windows.Forms.Padding(0, 0, 0, 15);
-            this.panel43.Name = "panel43";
-            this.panel43.Size = new System.Drawing.Size(288, 37);
-            this.panel43.TabIndex = 8;
-            // 
-            // lineTerceiros
-            // 
-            this.lineTerceiros.BackColor = System.Drawing.Color.Transparent;
-            this.lineTerceiros.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lineTerceiros.Location = new System.Drawing.Point(286, 0);
-            this.lineTerceiros.Margin = new System.Windows.Forms.Padding(0);
-            this.lineTerceiros.Name = "lineTerceiros";
-            this.lineTerceiros.Size = new System.Drawing.Size(2, 37);
-            this.lineTerceiros.TabIndex = 5;
-            // 
-            // buttonTerceiros
-            // 
-            this.buttonTerceiros.BackColor = System.Drawing.Color.Transparent;
-            this.buttonTerceiros.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.buttonTerceiros.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonTerceiros.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonTerceiros.FlatAppearance.BorderSize = 0;
-            this.buttonTerceiros.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonTerceiros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonTerceiros.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonTerceiros.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonTerceiros.Image = ((System.Drawing.Image)(resources.GetObject("buttonTerceiros.Image")));
-            this.buttonTerceiros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonTerceiros.Location = new System.Drawing.Point(0, 0);
-            this.buttonTerceiros.Margin = new System.Windows.Forms.Padding(0, 0, 0, 25);
-            this.buttonTerceiros.Name = "buttonTerceiros";
-            this.buttonTerceiros.Padding = new System.Windows.Forms.Padding(24, 0, 24, 0);
-            this.buttonTerceiros.Size = new System.Drawing.Size(288, 37);
-            this.buttonTerceiros.TabIndex = 4;
-            this.buttonTerceiros.Text = "        Terceiros";
-            this.buttonTerceiros.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonTerceiros.UseVisualStyleBackColor = false;
-            this.buttonTerceiros.Click += new System.EventHandler(this.buttonTerceiros_Click);
-            // 
-            // panel41
-            // 
-            this.panel41.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel41.BackColor = System.Drawing.Color.Transparent;
-            this.panel41.Controls.Add(this.lineVeiculos);
-            this.panel41.Controls.Add(this.buttonVeiculos);
-            this.panel41.Location = new System.Drawing.Point(0, 248);
-            this.panel41.Margin = new System.Windows.Forms.Padding(0, 0, 0, 15);
-            this.panel41.Name = "panel41";
-            this.panel41.Size = new System.Drawing.Size(288, 37);
-            this.panel41.TabIndex = 8;
-            // 
-            // lineVeiculos
-            // 
-            this.lineVeiculos.BackColor = System.Drawing.Color.Transparent;
-            this.lineVeiculos.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lineVeiculos.Location = new System.Drawing.Point(286, 0);
-            this.lineVeiculos.Margin = new System.Windows.Forms.Padding(0);
-            this.lineVeiculos.Name = "lineVeiculos";
-            this.lineVeiculos.Size = new System.Drawing.Size(2, 37);
-            this.lineVeiculos.TabIndex = 5;
-            // 
-            // buttonVeiculos
-            // 
-            this.buttonVeiculos.BackColor = System.Drawing.Color.Transparent;
-            this.buttonVeiculos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.buttonVeiculos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonVeiculos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonVeiculos.FlatAppearance.BorderSize = 0;
-            this.buttonVeiculos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonVeiculos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonVeiculos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonVeiculos.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonVeiculos.Image = ((System.Drawing.Image)(resources.GetObject("buttonVeiculos.Image")));
-            this.buttonVeiculos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonVeiculos.Location = new System.Drawing.Point(0, 0);
-            this.buttonVeiculos.Margin = new System.Windows.Forms.Padding(0, 0, 0, 25);
-            this.buttonVeiculos.Name = "buttonVeiculos";
-            this.buttonVeiculos.Padding = new System.Windows.Forms.Padding(24, 0, 24, 0);
-            this.buttonVeiculos.Size = new System.Drawing.Size(288, 37);
-            this.buttonVeiculos.TabIndex = 4;
-            this.buttonVeiculos.Text = "        Veiculos";
-            this.buttonVeiculos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonVeiculos.UseVisualStyleBackColor = false;
-            this.buttonVeiculos.Click += new System.EventHandler(this.buttonVeiculos_Click);
-            // 
-            // panel39
-            // 
-            this.panel39.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel39.BackColor = System.Drawing.Color.Transparent;
-            this.panel39.Controls.Add(this.lineMotoristas);
-            this.panel39.Controls.Add(this.buttonMotoristas);
-            this.panel39.Location = new System.Drawing.Point(0, 196);
-            this.panel39.Margin = new System.Windows.Forms.Padding(0, 0, 0, 15);
-            this.panel39.Name = "panel39";
-            this.panel39.Size = new System.Drawing.Size(288, 37);
-            this.panel39.TabIndex = 8;
-            // 
-            // lineMotoristas
-            // 
-            this.lineMotoristas.BackColor = System.Drawing.Color.Transparent;
-            this.lineMotoristas.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lineMotoristas.Location = new System.Drawing.Point(286, 0);
-            this.lineMotoristas.Margin = new System.Windows.Forms.Padding(0);
-            this.lineMotoristas.Name = "lineMotoristas";
-            this.lineMotoristas.Size = new System.Drawing.Size(2, 37);
-            this.lineMotoristas.TabIndex = 5;
-            // 
-            // buttonMotoristas
-            // 
-            this.buttonMotoristas.BackColor = System.Drawing.Color.Transparent;
-            this.buttonMotoristas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.buttonMotoristas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonMotoristas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonMotoristas.FlatAppearance.BorderSize = 0;
-            this.buttonMotoristas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonMotoristas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonMotoristas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonMotoristas.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonMotoristas.Image = ((System.Drawing.Image)(resources.GetObject("buttonMotoristas.Image")));
-            this.buttonMotoristas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonMotoristas.Location = new System.Drawing.Point(0, 0);
-            this.buttonMotoristas.Margin = new System.Windows.Forms.Padding(0, 0, 0, 25);
-            this.buttonMotoristas.Name = "buttonMotoristas";
-            this.buttonMotoristas.Padding = new System.Windows.Forms.Padding(24, 0, 24, 0);
-            this.buttonMotoristas.Size = new System.Drawing.Size(288, 37);
-            this.buttonMotoristas.TabIndex = 4;
-            this.buttonMotoristas.Text = "        Motoristas";
-            this.buttonMotoristas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonMotoristas.UseVisualStyleBackColor = false;
-            this.buttonMotoristas.Click += new System.EventHandler(this.buttonMotoristas_Click);
-            // 
-            // panel37
-            // 
-            this.panel37.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel37.BackColor = System.Drawing.Color.Transparent;
-            this.panel37.Controls.Add(this.lineRotas);
-            this.panel37.Controls.Add(this.buttonRotas);
-            this.panel37.Location = new System.Drawing.Point(0, 144);
-            this.panel37.Margin = new System.Windows.Forms.Padding(0, 0, 0, 15);
-            this.panel37.Name = "panel37";
-            this.panel37.Size = new System.Drawing.Size(288, 37);
-            this.panel37.TabIndex = 8;
-            // 
-            // lineRotas
-            // 
-            this.lineRotas.BackColor = System.Drawing.Color.Transparent;
-            this.lineRotas.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lineRotas.Location = new System.Drawing.Point(286, 0);
-            this.lineRotas.Margin = new System.Windows.Forms.Padding(0);
-            this.lineRotas.Name = "lineRotas";
-            this.lineRotas.Size = new System.Drawing.Size(2, 37);
-            this.lineRotas.TabIndex = 5;
-            // 
-            // buttonRotas
-            // 
-            this.buttonRotas.BackColor = System.Drawing.Color.Transparent;
-            this.buttonRotas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.buttonRotas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonRotas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonRotas.FlatAppearance.BorderSize = 0;
-            this.buttonRotas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonRotas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonRotas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonRotas.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonRotas.Image = ((System.Drawing.Image)(resources.GetObject("buttonRotas.Image")));
-            this.buttonRotas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonRotas.Location = new System.Drawing.Point(0, 0);
-            this.buttonRotas.Margin = new System.Windows.Forms.Padding(0, 0, 0, 25);
-            this.buttonRotas.Name = "buttonRotas";
-            this.buttonRotas.Padding = new System.Windows.Forms.Padding(24, 0, 24, 0);
-            this.buttonRotas.Size = new System.Drawing.Size(288, 37);
-            this.buttonRotas.TabIndex = 4;
-            this.buttonRotas.Text = "        Rotas";
-            this.buttonRotas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonRotas.UseVisualStyleBackColor = false;
-            this.buttonRotas.Click += new System.EventHandler(this.buttonRotas_Click_1);
-            // 
-            // panel33
-            // 
-            this.panel33.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel33.BackColor = System.Drawing.Color.Transparent;
-            this.panel33.Controls.Add(this.lineUsuarios);
-            this.panel33.Controls.Add(this.buttonUsuarios);
-            this.panel33.Location = new System.Drawing.Point(0, 92);
-            this.panel33.Margin = new System.Windows.Forms.Padding(0, 0, 0, 15);
-            this.panel33.Name = "panel33";
-            this.panel33.Size = new System.Drawing.Size(288, 37);
-            this.panel33.TabIndex = 8;
-            // 
-            // lineUsuarios
-            // 
-            this.lineUsuarios.BackColor = System.Drawing.Color.Transparent;
-            this.lineUsuarios.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lineUsuarios.Location = new System.Drawing.Point(286, 0);
-            this.lineUsuarios.Margin = new System.Windows.Forms.Padding(0);
-            this.lineUsuarios.Name = "lineUsuarios";
-            this.lineUsuarios.Size = new System.Drawing.Size(2, 37);
-            this.lineUsuarios.TabIndex = 5;
-            // 
-            // buttonUsuarios
-            // 
-            this.buttonUsuarios.BackColor = System.Drawing.Color.Transparent;
-            this.buttonUsuarios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.buttonUsuarios.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonUsuarios.FlatAppearance.BorderSize = 0;
-            this.buttonUsuarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonUsuarios.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonUsuarios.Image = ((System.Drawing.Image)(resources.GetObject("buttonUsuarios.Image")));
-            this.buttonUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonUsuarios.Location = new System.Drawing.Point(0, 0);
-            this.buttonUsuarios.Margin = new System.Windows.Forms.Padding(0, 0, 0, 25);
-            this.buttonUsuarios.Name = "buttonUsuarios";
-            this.buttonUsuarios.Padding = new System.Windows.Forms.Padding(24, 0, 24, 0);
-            this.buttonUsuarios.Size = new System.Drawing.Size(288, 37);
-            this.buttonUsuarios.TabIndex = 4;
-            this.buttonUsuarios.Text = "        Usuários";
-            this.buttonUsuarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonUsuarios.UseVisualStyleBackColor = false;
-            this.buttonUsuarios.Click += new System.EventHandler(this.buttonUsuarios_Click);
-            // 
-            // panel35
-            // 
-            this.panel35.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel35.BackColor = System.Drawing.Color.Transparent;
-            this.panel35.Controls.Add(this.lineClientes);
-            this.panel35.Controls.Add(this.buttonClientes);
-            this.panel35.Location = new System.Drawing.Point(0, 40);
-            this.panel35.Margin = new System.Windows.Forms.Padding(0, 0, 0, 15);
-            this.panel35.Name = "panel35";
-            this.panel35.Size = new System.Drawing.Size(288, 37);
-            this.panel35.TabIndex = 7;
-            // 
-            // lineClientes
-            // 
-            this.lineClientes.BackColor = System.Drawing.Color.Transparent;
-            this.lineClientes.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lineClientes.Location = new System.Drawing.Point(286, 0);
-            this.lineClientes.Margin = new System.Windows.Forms.Padding(0);
-            this.lineClientes.Name = "lineClientes";
-            this.lineClientes.Size = new System.Drawing.Size(2, 37);
-            this.lineClientes.TabIndex = 5;
-            // 
-            // buttonClientes
-            // 
-            this.buttonClientes.BackColor = System.Drawing.Color.Transparent;
-            this.buttonClientes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.buttonClientes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonClientes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonClientes.FlatAppearance.BorderSize = 0;
-            this.buttonClientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonClientes.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonClientes.Image = ((System.Drawing.Image)(resources.GetObject("buttonClientes.Image")));
-            this.buttonClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonClientes.Location = new System.Drawing.Point(0, 0);
-            this.buttonClientes.Margin = new System.Windows.Forms.Padding(0, 0, 0, 25);
-            this.buttonClientes.Name = "buttonClientes";
-            this.buttonClientes.Padding = new System.Windows.Forms.Padding(24, 0, 24, 0);
-            this.buttonClientes.Size = new System.Drawing.Size(288, 37);
-            this.buttonClientes.TabIndex = 4;
-            this.buttonClientes.Text = "        Clientes";
-            this.buttonClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonClientes.UseVisualStyleBackColor = false;
-            this.buttonClientes.Click += new System.EventHandler(this.buttonClientes_Click);
+            this.navbar1.AutoSize = true;
+            this.navbar1.BackColor = System.Drawing.Color.Transparent;
+            this.navbar1.dash = null;
+            this.navbar1.Location = new System.Drawing.Point(0, 40);
+            this.navbar1.Margin = new System.Windows.Forms.Padding(0);
+            this.navbar1.MinimumSize = new System.Drawing.Size(288, 114);
+            this.navbar1.Name = "navbar1";
+            this.navbar1.Size = new System.Drawing.Size(288, 620);
+            this.navbar1.TabIndex = 0;
             // 
             // Dash
             // 
@@ -1311,16 +808,7 @@ namespace Interface
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.body.ResumeLayout(false);
             this.panelScroll.ResumeLayout(false);
-            this.panel51.ResumeLayout(false);
-            this.panel49.ResumeLayout(false);
-            this.panel47.ResumeLayout(false);
-            this.panel45.ResumeLayout(false);
-            this.panel43.ResumeLayout(false);
-            this.panel41.ResumeLayout(false);
-            this.panel39.ResumeLayout(false);
-            this.panel37.ResumeLayout(false);
-            this.panel33.ResumeLayout(false);
-            this.panel35.ResumeLayout(false);
+            this.panelScroll.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1360,50 +848,21 @@ namespace Interface
         private Panel panel9;
         private Button button2;
         private Panel panelScroll;
-        private Panel panel35;
-        private Panel lineClientes;
-        private Button buttonClientes;
-        private Panel panel51;
-        private Panel lineRedesDeTransporte;
-        private Button buttonRedesDeTransporte;
-        private Panel panel49;
-        private Panel lineTarifasETaxas;
-        private Button buttonTarifasETaxas;
-        private Panel panel47;
-        private Panel lineNotasFicais;
-        private Button buttonNotasFicais;
-        private Panel panel45;
-        private Panel lineSinistros;
-        private Button buttonSinistros;
-        private Panel panel43;
-        private Panel lineTerceiros;
-        private Button buttonTerceiros;
-        private Panel panel41;
-        private Panel lineVeiculos;
-        private Button buttonVeiculos;
-        private Panel panel39;
-        private Panel lineMotoristas;
-        private Button buttonMotoristas;
-        private Panel panel37;
-        private Panel lineRotas;
-        private Button buttonRotas;
-        private Panel panel33;
-        private Panel lineUsuarios;
-        private Button buttonUsuarios;
-        private CadastroNotasFicais cadastroNotasFicais1;
-        private CadastroSinistros cadastroSinistros1;
-        private CadastroTerceiros cadastroTerceiros1;
-        private CadastroVeiculos cadastroVeiculos1;
-        private CadastroRoutes cadastroRoutes1;
-        private CadastroUsuarios cadastroUsuarios1;
-        private CadastroClientes cadastroClientes1;
-        private CadastroMotoristas cadastroMotoristas1;
-        private Overview overview1;
         private TemplateComponents.PanelBorderRoundedOnLeft panelSerch;
         private PictureBox pictureBox4;
         private TextBox textBox1;
-        private CadastroTarifasETaxas cadastroTarifaseTaxas1;
-        private CadastroRedesDeTransporte cadastroRedesDeTransporte1;
         private UserProfile userProfile1;
+        private CadastroMotoristas cadastroMotoristas2;
+        private CadastroClientes cadastroClientes1;
+        private Overview overview1;
+        private CadastroNotasFicais cadastroNotasFicais2;
+        private CadastroRoutes cadastroRoutes1;
+        private CadastroRedesDeTransporte cadastroRedesDeTransporte2;
+        private CadastroUsuarios cadastroUsuarios1;
+        private CadastroTerceiros cadastroTerceiros1;
+        private CadastroTarifasETaxas cadastroTarifaseTaxas1;
+        private CadastroVeiculos cadastroVeiculos1;
+        private CadastroSinistros cadastroSinistros2;
+        private InterfaceComponents.Navbar navbar1;
     }
 }

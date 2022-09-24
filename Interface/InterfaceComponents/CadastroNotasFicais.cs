@@ -63,7 +63,7 @@ namespace Interface
         public CadastroNotasFicais()
         {
             InitializeComponent();
-            atualizarIDNota();
+            //atualizarIDNota();
         }
 
         private void CadastroNotasFicais_Resize(object sender, EventArgs e)
