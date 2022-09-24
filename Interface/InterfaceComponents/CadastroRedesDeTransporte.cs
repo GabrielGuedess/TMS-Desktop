@@ -65,7 +65,7 @@ namespace Interface
         public CadastroRedesDeTransporte()
         {
             InitializeComponent();
-            atualizarIDRede();
+            //atualizarIDRede();
         }
 
         private void CadastroRedesDeTransporte_Resize(object sender, EventArgs e)

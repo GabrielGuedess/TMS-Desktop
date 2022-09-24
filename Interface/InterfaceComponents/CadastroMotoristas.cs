@@ -78,7 +78,7 @@ namespace Interface
         public CadastroMotoristas()
         {
             InitializeComponent();
-            atualizarIDMotorista();
+            //atualizarIDMotorista();
         }
 
         private void CadastroMotoristas_Resize(object sender, EventArgs e)
@@ -106,7 +106,7 @@ namespace Interface
             ConnectDB connectDB = new ConnectDB();
             string SQL = "SELECT MAX (NUM_ID) FROM C_Motoristas";
             var dados = connectDB.pesquisar(SQL);
-            string data = (string)dados.Rows[0][0];
+            string data = (string)dados!.Rows[0][0];
             string IdNota = data.Replace("M", "");
             int numID = int.Parse(IdNota);
             numID++;

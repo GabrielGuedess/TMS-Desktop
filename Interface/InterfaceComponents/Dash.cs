@@ -1,4 +1,5 @@
 using Interface.FormsControls;
+using Interface.Properties;
 using Interface.Utilities;
 using System.Data;
 
@@ -8,7 +9,7 @@ namespace Interface
     {
         readonly Utilidades utils = new();
 
-        readonly Navigation navigationDash = new();
+        public Navigation navigationDash = new();
 
         public string RouteDash = "";
 
@@ -16,6 +17,7 @@ namespace Interface
         {
             set
             {
+                
                 if (overview1.CacheType == "Clientes_Fisicos")
                 {
                     cadastroClientes1.Pessoa = "CPF";
@@ -40,7 +42,7 @@ namespace Interface
 
                 if (overview1.CacheType.Contains("Motoristas"))
                 {
-                    cadastroMotoristas1.OverviewDataResponse = value;
+                    cadastroMotoristas2.OverviewDataResponse = value;
                 }
 
                 if (overview1.CacheType.Contains("Veiculos"))
@@ -55,12 +57,12 @@ namespace Interface
 
                 if (overview1.CacheType.Contains("Sinistros"))
                 {
-                    cadastroSinistros1.OverviewDataResponse = value;
+                    cadastroSinistros2.OverviewDataResponse = value;
                 }
 
                 if (overview1.CacheType.Contains("Notas"))
                 {
-                    cadastroNotasFicais1.OverviewDataResponse = value;
+                    cadastroNotasFicais2.OverviewDataResponse = value;
                 }
 
                 if (overview1.CacheType.Contains("Tarifas"))
@@ -70,7 +72,7 @@ namespace Interface
 
                 if (overview1.CacheType.Contains("Redes"))
                 {
-                    cadastroRedesDeTransporte1.OverviewDataResponse = value;
+                    cadastroRedesDeTransporte2.OverviewDataResponse = value;
                 }
 
             }
@@ -81,7 +83,7 @@ namespace Interface
             get => RouteDash;
         }
 
-        private void NavigationController(string dash, string over)
+        public void NavigationController(string dash, string over)
         {
             // Declaração do tipo de Form seja renderizado
             navigationDash.TypeControlDash = dash;
@@ -90,19 +92,21 @@ namespace Interface
             RouteDash = dash;
 
             // Método para realizar a troca de pagina (igual um SPA)
+            
             navigationDash.NavigationRoutes(
                 overview1,
                 cadastroClientes1,
                 cadastroRoutes1,
                 cadastroUsuarios1,
-                cadastroMotoristas1,
+                cadastroMotoristas2,
                 cadastroVeiculos1,
                 cadastroTerceiros1,
-                cadastroSinistros1,
-                cadastroNotasFicais1,
+                cadastroSinistros2,
+                cadastroNotasFicais2,
                 cadastroTarifaseTaxas1,
-                cadastroRedesDeTransporte1
+                cadastroRedesDeTransporte2
               );
+            
 
             // Métodos para mostrar qual a pagina selecionada no momento
 
@@ -111,30 +115,31 @@ namespace Interface
             navigationDash.ColorsNavigationLines(lineOverview, lineCadastro, lineUpdate, lineDelete);
 
             //*Dash
+            
             navigationDash.ColorsNavigationDashButtons(
-                buttonClientes,
-                buttonUsuarios,
-                buttonRotas,
-                buttonMotoristas,
-                buttonVeiculos,
-                buttonTerceiros,
-                buttonSinistros,
-                buttonNotasFicais,
-                buttonTarifasETaxas,
-                buttonRedesDeTransporte
+                (Button) navbar1.Controls["panelDropDown"].Controls["panel33"].Controls["buttonClientes"],
+                (Button) navbar1.Controls["panelDropDown"].Controls["panel1"].Controls["buttonUsuarios"],
+                (Button) navbar1.Controls["panelDropDown"].Controls["panel3"].Controls["buttonRotas"],
+                (Button) navbar1.Controls["panelDropDown"].Controls["panel5"].Controls["buttonMotoristas"],
+                (Button) navbar1.Controls["panelDropDown"].Controls["panel7"].Controls["buttonVeiculos"],
+                (Button) navbar1.Controls["panelDropDown"].Controls["panel9"].Controls["buttonTerceiros"],
+                (Button) navbar1.Controls["panelDropDown"].Controls["panel11"].Controls["buttonSinistros"],
+                (Button) navbar1.Controls["panelDropDown"].Controls["panel13"].Controls["buttonNotasFicais"],
+                (Button) navbar1.Controls["panelDropDown"].Controls["panel15"].Controls["buttonTarifasETaxas"],
+                (Button) navbar1.Controls["panelDropDown"].Controls["panel17"].Controls["buttonRedesDeTransporte"]
               );
 
             navigationDash.ColorsNavigationDashLines(
-                lineClientes,
-                lineUsuarios,
-                lineRotas,
-                lineMotoristas,
-                lineVeiculos,
-                lineTerceiros,
-                lineSinistros,
-                lineNotasFicais,
-                lineTarifasETaxas,
-                lineRedesDeTransporte
+                (Panel) navbar1.Controls["panelDropDown"].Controls["panel33"].Controls["lineClientes"],
+                (Panel) navbar1.Controls["panelDropDown"].Controls["panel1"].Controls["lineUsuarios"],
+                (Panel) navbar1.Controls["panelDropDown"].Controls["panel3"].Controls["lineRotas"],
+                (Panel) navbar1.Controls["panelDropDown"].Controls["panel5"].Controls["lineMotoristas"],
+                (Panel) navbar1.Controls["panelDropDown"].Controls["panel7"].Controls["lineVeiculos"],
+                (Panel) navbar1.Controls["panelDropDown"].Controls["panel9"].Controls["lineTerceiros"],
+                (Panel) navbar1.Controls["panelDropDown"].Controls["panel11"].Controls["lineSinistros"],
+                (Panel) navbar1.Controls["panelDropDown"].Controls["panel13"].Controls["lineNotasFicais"],
+                (Panel) navbar1.Controls["panelDropDown"].Controls["panel15"].Controls["lineTarifasETaxas"],
+                (Panel) navbar1.Controls["panelDropDown"].Controls["panel17"].Controls["lineRedesDeTransporte"]
               );
         }
 
@@ -143,6 +148,8 @@ namespace Interface
             InitializeComponent();
 
             overview1.dash = this;
+            navbar1.dash = this;
+
             overview1.clientes = cadastroClientes1;
 
             cadastroClientes1.overview = overview1;
@@ -164,48 +171,6 @@ namespace Interface
 
         }
 
-        private void buttonClientes_Click(object sender, EventArgs e)
-        {
-            NavigationController("Clientes", navigationDash.TypeControlOver);
-        }
-
-        private void buttonUsuarios_Click(object sender, EventArgs e)
-        {
-            NavigationController("Usuarios", navigationDash.TypeControlOver);
-        }
-
-        private void buttonRotas_Click_1(object sender, EventArgs e)
-        {
-            NavigationController("Rotas", navigationDash.TypeControlOver);
-        }
-        private void buttonMotoristas_Click(object sender, EventArgs e)
-        {
-            NavigationController("Motoristas", navigationDash.TypeControlOver);
-        }
-        private void buttonVeiculos_Click(object sender, EventArgs e)
-        {
-            NavigationController("Veiculos", navigationDash.TypeControlOver);
-        }
-        private void buttonTerceiros_Click(object sender, EventArgs e)
-        {
-            NavigationController("Terceiros", navigationDash.TypeControlOver);
-        }
-        private void buttonSinistros_Click(object sender, EventArgs e)
-        {
-            NavigationController("Sinistros", navigationDash.TypeControlOver);
-        }
-        private void buttonNotasFicais_Click(object sender, EventArgs e)
-        {
-            NavigationController("Notas", navigationDash.TypeControlOver);
-        }
-        private void buttonTarifasETaxas_Click(object sender, EventArgs e)
-        {
-            NavigationController("Tarifas", navigationDash.TypeControlOver);
-        }
-        private void buttonRedesDeTransporte_Click(object sender, EventArgs e)
-        {
-            NavigationController("Redes", navigationDash.TypeControlOver);
-        }
 
         private void buttonOver_Click(object sender, EventArgs e)
         {
@@ -225,6 +190,7 @@ namespace Interface
         {
             NavigationController(navigationDash.TypeControlDash, "Delete");
         }
+
 
         private void panel1_Paint_1(object sender, PaintEventArgs e)
         {
@@ -259,6 +225,11 @@ namespace Interface
         private void body_Paint(object sender, PaintEventArgs e)
         {
             utils.paintTheBorders(e, body, Color.FromArgb(30, 30, 36), true, false, false, false);
+        }
+
+        private void overview1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

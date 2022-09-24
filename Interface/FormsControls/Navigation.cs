@@ -2,7 +2,7 @@
 
 namespace Interface.FormsControls
 {
-    internal class Navigation
+    public class Navigation
     {
         readonly Utilidades utils = new();
 
