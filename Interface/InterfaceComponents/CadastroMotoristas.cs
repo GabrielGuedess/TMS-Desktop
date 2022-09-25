@@ -10,9 +10,9 @@ namespace Interface
     {
         readonly Utilidades utils = new();
 
-        LimparFormularios limpar = new();
+        readonly LimparFormularios limpar = new();
 
-        ConnectDB DBFunctions = new();
+        readonly ConnectDB DBFunctions = new();
 
         private string Type = "";
 
@@ -20,13 +20,14 @@ namespace Interface
         {
             set
             {
-                tbID.Text = DBFunctions.atualizaID("SELECT MAX (NUM_ID) FROM C_Motoristas", "m");
+                
                 Type = value;
 
                 cadastrarMotoristas.Text = value;
 
                 if (value.Contains("Cadastro"))
                 {
+                    tbID.Text = DBFunctions.atualizaID("SELECT MAX (NUM_ID) FROM C_Motoristas", "m");
                     searchPanel.Visible = false;
                     contentMotorista.Location = new Point(0, 0);
 
@@ -120,8 +121,7 @@ namespace Interface
                     $", '{tbComplemento.Text}', '{mkCEP.Text}', '{comboCidade.Text}', '{comboUF.Text}','{mkCNH.Text}', '{comboCNH.Text}'" +
                     $", '{dateVencimentoCNH.Text}', '{comboVeiculoProprio.Text}', '{comboMOPP.Text}')";
 
-                ConnectDB connectDB = new ConnectDB();
-                connectDB.cadastrar(SQL);
+                DBFunctions.cadastrar(SQL);
 
                 limpar.CleanControl(contentMotorista);
                 limpar.CleanControl(searchPanel);
@@ -154,8 +154,7 @@ namespace Interface
                 $"MOPP= '{comboMOPP.Text}' " +
                 $"WHERE CPF = '{maskInput.Text.Replace('.', ',')}'";
 
-                ConnectDB connectDB = new();
-                connectDB.cadastrar(SQLUp);
+                DBFunctions.cadastrar(SQLUp);
 
                 limpar.CleanControl(contentMotorista);
                 limpar.CleanControl(searchPanel);
@@ -167,8 +166,7 @@ namespace Interface
         {
             if (maskInput.MaskCompleted)
             {
-                ConnectDB connectDB = new();
-                DataRow dados = connectDB.pesquisarRow($"SELECT * FROM C_Motoristas WHERE CPF = '{maskInput.Text}'", contentMotorista)!;
+                DataRow dados = DBFunctions.pesquisarRow($"SELECT * FROM C_Motoristas WHERE CPF = '{maskInput.Text}'", contentMotorista)!;
 
                 if (dados != null)
                 {

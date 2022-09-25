@@ -16,7 +16,7 @@ namespace Interface
     {
         readonly Utilidades utils = new();
 
-        LimparFormularios limpar = new();
+        readonly LimparFormularios limpar = new();
 
         private string Type = "";
 

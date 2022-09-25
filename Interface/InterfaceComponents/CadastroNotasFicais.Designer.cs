@@ -247,6 +247,7 @@
             this.tbIDNotaFiscal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tbIDNotaFiscal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
             this.tbIDNotaFiscal.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbIDNotaFiscal.Cursor = System.Windows.Forms.Cursors.No;
             this.tbIDNotaFiscal.Enabled = false;
             this.tbIDNotaFiscal.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tbIDNotaFiscal.ForeColor = System.Drawing.Color.White;

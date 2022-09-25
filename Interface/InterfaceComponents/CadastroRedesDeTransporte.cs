@@ -19,13 +19,14 @@ namespace Interface
         {
             set
             {
-                numID.Text = DBFunctions.atualizaID("SELECT MAX (NUM_ID) FROM C_Redes_de_Transporte", "T");
+               
                 Type = value;
 
                 cadastrarRede.Text = value;
 
                 if (value.Contains("Cadastro"))
                 {
+                    numID.Text = DBFunctions.atualizaID("SELECT MAX (NUM_ID) FROM C_Redes_de_Transporte", "T");
                     searchPanel.Visible = false;
                     contentRedes.Location = new Point(0, 0);
 

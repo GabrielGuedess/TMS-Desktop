@@ -19,13 +19,14 @@ namespace Interface
         {
             set
             {
-                tbIDNotaFiscal.Text = DBFunctions.atualizaID("SELECT MAX (NUM_ID) FROM C_Nota_Fiscal", "F");
+                
                 Type = value;
 
                 cadastrarNota.Text = value;
 
                 if (value.Contains("Cadastro"))
                 {
+                    tbIDNotaFiscal.Text = DBFunctions.atualizaID("SELECT MAX (NUM_ID) FROM C_Nota_Fiscal", "F");
                     searchPanel.Visible = false;
                     contentNotas.Location = new Point(0, 0);
 
@@ -96,8 +97,7 @@ namespace Interface
             {
                 string SQL = "Insert Into C_Nota_Fiscal (NUM_ID, CHAVE_ACESSO,NUMERO,TIPO,SERIE,DESCRICAO) Values";
                 SQL += $"('{tbIDNotaFiscal.Text.TrimStart()} ','{mkChaveAcesso.Text}','{tbNumero.Text}', '{tbTipoNota.Text}', '{tbSerieNota.Text}', '{tbDescricaoNota.Text}')";
-                ConnectDB connectDB = new ConnectDB();
-                connectDB.cadastrar(SQL);
+                DBFunctions.cadastrar(SQL);
 
                 limpar.CleanControl(contentNotas);
                 limpar.CleanControl(searchPanel);
@@ -115,8 +115,7 @@ namespace Interface
                 $"DESCRICAO= '{tbDescricaoNota.Text}' " +
                 $"WHERE CHAVE_ACESSO = '{mkSearchChaveAcesso.Text.Replace('.', ',')}'";
 
-                ConnectDB connectDB = new();
-                connectDB.cadastrar(SQLUp);
+                DBFunctions.cadastrar(SQLUp);
 
                 limpar.CleanControl(contentNotas);
                 limpar.CleanControl(searchPanel);
@@ -128,8 +127,7 @@ namespace Interface
         {
             if (mkSearchChaveAcesso.Text != "")
             {
-                ConnectDB connectDB = new();
-                DataRow dados = connectDB.pesquisarRow($"SELECT * FROM C_Nota_Fiscal WHERE CHAVE_ACESSO = '{mkSearchChaveAcesso.Text}'", contentNotas)!;
+                DataRow dados = DBFunctions.pesquisarRow($"SELECT * FROM C_Nota_Fiscal WHERE CHAVE_ACESSO = '{mkSearchChaveAcesso.Text}'", contentNotas)!;
 
                 if (dados != null)
                 {

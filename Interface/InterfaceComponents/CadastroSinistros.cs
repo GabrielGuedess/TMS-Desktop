@@ -19,13 +19,14 @@ namespace Interface
         {
             set
             {
-                tbCodigdoSinistro.Text = DBFunctions.atualizaID("SELECT MAX (ID) FROM tbSinistros", "r");
+               
                 Type = value;
 
                 cadastrarSinistro.Text = value;
 
                 if (value.Contains("Cadastro"))
                 {
+                    tbCodigdoSinistro.Text = DBFunctions.atualizaID("SELECT MAX (ID) FROM tbSinistros", "r");
                     searchPanel.Visible = false;
                     contentSinistros.Location = new Point(0, 0);
 
@@ -92,8 +93,8 @@ namespace Interface
                 string SQL = "Insert Into tbSinistros(TipoSinistro, DescricaoSinistro, ID) Values";
 
                 SQL += "('" + comboTipoSinistro.Text + "','" + tbDescricaoSinistro.Text + "','" + tbCodigdoSinistro.Text + "')";
-                ConnectDB connectDB = new ConnectDB();
-                connectDB.cadastrar(SQL);
+                
+                DBFunctions.cadastrar(SQL);
 
                 limpar.CleanControl(contentSinistros);
                 limpar.CleanControl(searchPanel);
@@ -107,10 +108,7 @@ namespace Interface
                 $"TipoSinistro= '{comboTipoSinistro.Text}', " +
                 $"DescricaoSinistro= '{tbDescricaoSinistro.Text}' " +
                 $"WHERE ID = '{cod.Text.Replace('.', ',')}'";
-
-                ConnectDB connectDB = new();
-                connectDB.cadastrar(SQLUp);
-
+                DBFunctions.cadastrar(SQLUp);
                 limpar.CleanControl(contentSinistros);
                 limpar.CleanControl(searchPanel);
                 tbCodigdoSinistro.Text = DBFunctions.atualizaID("SELECT MAX (ID) FROM tbSinistros", "r");
@@ -121,8 +119,7 @@ namespace Interface
         {
             if (cod.Text != "")
             {
-                ConnectDB connectDB = new();
-                DataRow dados = connectDB.pesquisarRow($"SELECT * FROM tbSinistros WHERE ID = '{cod.Text}'", contentSinistros)!;
+                DataRow dados = DBFunctions.pesquisarRow($"SELECT * FROM tbSinistros WHERE ID = '{cod.Text}'", contentSinistros)!;
 
                 if (dados != null)
                 {

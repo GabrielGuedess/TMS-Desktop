@@ -276,6 +276,7 @@
             this.tbCodigdoSinistro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tbCodigdoSinistro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
             this.tbCodigdoSinistro.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbCodigdoSinistro.Cursor = System.Windows.Forms.Cursors.No;
             this.tbCodigdoSinistro.Enabled = false;
             this.tbCodigdoSinistro.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tbCodigdoSinistro.ForeColor = System.Drawing.Color.White;

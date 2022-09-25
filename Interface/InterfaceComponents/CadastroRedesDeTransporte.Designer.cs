@@ -408,6 +408,7 @@
             this.numID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.numID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
             this.numID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.numID.Cursor = System.Windows.Forms.Cursors.No;
             this.numID.Enabled = false;
             this.numID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.numID.ForeColor = System.Drawing.Color.White;

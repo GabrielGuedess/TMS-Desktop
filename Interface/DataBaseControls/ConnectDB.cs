@@ -124,7 +124,7 @@ namespace Interface.DataBaseControls
             }
             else
             {
-                return "M01";
+                return letra.ToUpper()+"001";
             }
         }
     }
