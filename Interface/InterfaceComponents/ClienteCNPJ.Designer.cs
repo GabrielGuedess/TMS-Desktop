@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClienteCNPJ));
             this.contentCNPJ = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -77,6 +78,7 @@
             this.panelCEP = new System.Windows.Forms.Panel();
             this.subpanelCEPClient = new System.Windows.Forms.Panel();
             this.panelTextCEPClient = new Interface.TemplateComponents.PanelBorderRounded();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.mkCEP = new Interface.TemplateComponents.MasckedboxTemplete();
             this.label10 = new System.Windows.Forms.Label();
             this.panelCidadeUFClient = new System.Windows.Forms.Panel();
@@ -137,6 +139,7 @@
             this.panelCEP.SuspendLayout();
             this.subpanelCEPClient.SuspendLayout();
             this.panelTextCEPClient.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelCidadeUFClient.SuspendLayout();
             this.subpanelCidadeUFClient.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -761,12 +764,27 @@
             // 
             this.panelTextCEPClient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelTextCEPClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.panelTextCEPClient.Controls.Add(this.pictureBox1);
             this.panelTextCEPClient.Controls.Add(this.mkCEP);
             this.panelTextCEPClient.Location = new System.Drawing.Point(5, 36);
             this.panelTextCEPClient.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelTextCEPClient.Name = "panelTextCEPClient";
             this.panelTextCEPClient.Size = new System.Drawing.Size(248, 33);
             this.panelTextCEPClient.TabIndex = 2;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(223, 9);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0, 9, 10, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(15, 15);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // mkCEP
             // 
@@ -775,14 +793,13 @@
             this.mkCEP.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.mkCEP.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.mkCEP.ForeColor = System.Drawing.Color.White;
-            this.mkCEP.Location = new System.Drawing.Point(10, 5);
+            this.mkCEP.Location = new System.Drawing.Point(5, 6);
             this.mkCEP.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.mkCEP.Mask = "00000-000";
             this.mkCEP.Name = "mkCEP";
-            this.mkCEP.Size = new System.Drawing.Size(228, 22);
-            this.mkCEP.TabIndex = 1;
+            this.mkCEP.Size = new System.Drawing.Size(205, 22);
+            this.mkCEP.TabIndex = 10;
             this.mkCEP.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            this.mkCEP.Leave += new System.EventHandler(this.mkCEP_Leave);
             // 
             // label10
             // 
@@ -1243,6 +1260,7 @@
             this.subpanelCEPClient.PerformLayout();
             this.panelTextCEPClient.ResumeLayout(false);
             this.panelTextCEPClient.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelCidadeUFClient.ResumeLayout(false);
             this.subpanelCidadeUFClient.ResumeLayout(false);
             this.subpanelCidadeUFClient.PerformLayout();
@@ -1319,7 +1337,6 @@
         private TemplateComponents.MasckedboxTemplete mkCelular;
         private TemplateComponents.MasckedboxTemplete mkTelefone;
         private Interface.TemplateComponents.TextBoxTemplete tbEmail;
-        private TemplateComponents.MasckedboxTemplete mkCEP;
         private Panel panel3;
         private Panel panel4;
         private TemplateComponents.PanelBorderRounded panelBorderRounded4;
@@ -1348,5 +1365,7 @@
         private Label label24;
         private TemplateComponents.PanelBorderRounded panelTextCNPJClient;
         private TemplateComponents.MasckedboxTemplete mkCNPJ;
+        private PictureBox pictureBox1;
+        private TemplateComponents.MasckedboxTemplete mkCEP;
     }
 }

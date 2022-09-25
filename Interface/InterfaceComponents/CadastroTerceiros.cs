@@ -56,15 +56,16 @@ namespace Interface
                 {
                     mkCPF.Text = value["CPF"].ToString();
                     tbNome.Text = value["Nome"].ToString();
-                    //dateNascimento.Text = value["*"].ToString();
-                    //comboGenero.Text = value["*"].ToString();
+                    dateNascimento.Format = DateTimePickerFormat.Short;
+                    dateNascimento.Text = value["Data_de_Nascimento"].ToString();
+                    comboGenero.Text = value["Genero"].ToString();
                     mkCelular.Text = value["Celular"].ToString();
                     mkTelefone.Text = value["Telefone"].ToString();
                     textEmail.Text = value["Email"].ToString();
                     mkCEP.Text = value["CEP"].ToString();
                     comboUF.Text = value["Estado"].ToString();
                     comboCidade.Text = value["CIDADE"].ToString();
-                    //tbLogradouro.Text = value["*"].ToString();
+                    tbLogradouro.Text = value["Logradouro"].ToString();
                     tbNumCasa.Text = value["Numero"].ToString();
                     tbBairro.Text = value["Bairro"].ToString();
                     tbComplemento.Text = value["Complemento"].ToString();
@@ -80,7 +81,9 @@ namespace Interface
                     comboTipoContrato.Text = value["TipoContrato"].ToString();
                     comboSituacaoContrato.Text = value["Situacao"].ToString();
                     dateInicioAtividade.Text = value["DataInicioAtividades"].ToString();
-                    dateFimAtividade.Text = value["DataFimAtividades"].ToString();
+                    if(dateFimAtividade.Text == " ") { }
+                    else
+                        dateFimAtividade.Text = value["DataFimAtividades"].ToString();
                 }
             }
         }
@@ -125,12 +128,13 @@ namespace Interface
                         " Celular, CEP, Endereco, Numero, Complemento, Bairro, Cidade," +
                         " Estado, NumeroCNH, CategoriaCNH, VencimentoCNH, NumeroRNTRC, VencimentoRNTRC" +
                         ", TipoVeiculo, CursoMOPP, TipoContrato, Situacao, DataInicioAtividades," +
-                        " DataFimAtividades) Values ";
+                        " DataFimAtividades, Genero, Data_de_Nascimento, Logradouro) Values ";
                     SQL += $"('{mkCPF.Text}', '{tbNome.Text}', '{textEmail.Text}', '{mkTelefone.Text}', '{mkCelular.Text}'" +
                         $", '{mkCEP.Text}', '{tbLogradouro.Text}', '{tbNumCasa.Text}', '{tbComplemento.Text}', '{tbBairro.Text}'" +
                         $", '{comboCidade.Text}', '{comboUF.Text}', '{mkCNH.Text}', '{comboCategoriaCNH.Text}','{dateVencimentoCNH.Text}', '{mkRNTRC.Text}'" +
                         $", '{dateVencimentoRENTRC.Text}', '{comboTipoVeiculo.Text}', '{comboMOPP.Text}'" +
-                        $", '{comboTipoContrato.Text}', '{comboSituacaoContrato.Text}', '{dateInicioAtividade.Text}', '{dateFimAtividade.Text}')";
+                        $", '{comboTipoContrato.Text}', '{comboSituacaoContrato.Text}', '{dateInicioAtividade.Text}', '{dateFimAtividade.Text}'," +
+                        $"'{comboGenero.Text}', '{dateNascimento.Text}', '{tbLogradouro.Text}')";
 
                     ConnectDB connectDB = new ConnectDB();
                     connectDB.cadastrar(SQL);
@@ -243,16 +247,25 @@ namespace Interface
             utils.feedbackColorInput(maskCpf, typeData);
         }
 
-        
-
-        private void mkCEP_Leave(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
-            ClientCEP clientCEP = new();
-            var result = clientCEP.getCEP(mkCEP.Text);
-            tbBairro.Text = result.Bairro;
-            comboCidade.Text = result.Cidade;
-            comboUF.Text = result.UF;
-            tbLogradouro.Text = result.Logradouro;
+            if (mkCEP.MaskCompleted)
+            {
+                ClientCEP clientCEP = new();
+                var result = clientCEP.getCEP(mkCEP.Text);
+                if(result.UF == null)
+                {
+                    return;
+                }
+                tbBairro.Text = result.Bairro;
+                comboCidade.Text = result.Cidade;
+                comboUF.Text = result.UF;
+                tbLogradouro.Text = result.Logradouro;
+            }
+            else
+            {
+                MessageBox.Show($"É necessário preencher o campo CEP corretamente!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

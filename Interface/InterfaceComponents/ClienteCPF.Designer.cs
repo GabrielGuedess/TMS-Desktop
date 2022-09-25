@@ -73,15 +73,16 @@
             this.panelCidadeUFClient = new System.Windows.Forms.Panel();
             this.subpanelCidadeUFClient = new System.Windows.Forms.Panel();
             this.panelTextCEPClient = new Interface.TemplateComponents.PanelBorderRounded();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.mkCEP = new Interface.TemplateComponents.MasckedboxTemplete();
             this.label10 = new System.Windows.Forms.Label();
             this.panelEndereco = new System.Windows.Forms.Panel();
             this.subpanelEndereco = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboCidade = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.comboUF = new System.Windows.Forms.ComboBox();
+            this.comboCidade = new System.Windows.Forms.ComboBox();
             this.panelTextEnderecoClient = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -137,6 +138,7 @@
             this.panelCidadeUFClient.SuspendLayout();
             this.subpanelCidadeUFClient.SuspendLayout();
             this.panelTextCEPClient.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelEndereco.SuspendLayout();
             this.subpanelEndereco.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -246,12 +248,12 @@
             this.mkCPF.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.mkCPF.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.mkCPF.ForeColor = System.Drawing.Color.White;
-            this.mkCPF.Location = new System.Drawing.Point(10, 6);
+            this.mkCPF.Location = new System.Drawing.Point(5, 6);
             this.mkCPF.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.mkCPF.Mask = "000.000.000-00";
             this.mkCPF.Name = "mkCPF";
-            this.mkCPF.Size = new System.Drawing.Size(228, 22);
-            this.mkCPF.TabIndex = 0;
+            this.mkCPF.Size = new System.Drawing.Size(233, 22);
+            this.mkCPF.TabIndex = 10;
             this.mkCPF.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // labelCPFClient
@@ -705,12 +707,27 @@
             // 
             this.panelTextCEPClient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelTextCEPClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.panelTextCEPClient.Controls.Add(this.pictureBox1);
             this.panelTextCEPClient.Controls.Add(this.mkCEP);
             this.panelTextCEPClient.Location = new System.Drawing.Point(6, 35);
             this.panelTextCEPClient.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelTextCEPClient.Name = "panelTextCEPClient";
             this.panelTextCEPClient.Size = new System.Drawing.Size(247, 33);
             this.panelTextCEPClient.TabIndex = 4;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(222, 9);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0, 9, 10, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(15, 15);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // mkCEP
             // 
@@ -719,14 +736,13 @@
             this.mkCEP.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.mkCEP.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.mkCEP.ForeColor = System.Drawing.Color.White;
-            this.mkCEP.Location = new System.Drawing.Point(10, 5);
+            this.mkCEP.Location = new System.Drawing.Point(7, 6);
             this.mkCEP.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.mkCEP.Mask = "00000-000";
             this.mkCEP.Name = "mkCEP";
-            this.mkCEP.Size = new System.Drawing.Size(227, 22);
-            this.mkCEP.TabIndex = 2;
+            this.mkCEP.Size = new System.Drawing.Size(205, 22);
+            this.mkCEP.TabIndex = 12;
             this.mkCEP.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            this.mkCEP.Leave += new System.EventHandler(this.mkCEP_Leave);
             // 
             // label10
             // 
@@ -775,20 +791,6 @@
             this.label3.Size = new System.Drawing.Size(52, 17);
             this.label3.TabIndex = 11;
             this.label3.Text = "Cidade";
-            // 
-            // comboCidade
-            // 
-            this.comboCidade.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboCidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
-            this.comboCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.comboCidade.ForeColor = System.Drawing.Color.White;
-            this.comboCidade.FormattingEnabled = true;
-            this.comboCidade.Location = new System.Drawing.Point(119, 35);
-            this.comboCidade.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.comboCidade.Name = "comboCidade";
-            this.comboCidade.Size = new System.Drawing.Size(135, 33);
-            this.comboCidade.TabIndex = 10;
             // 
             // panel1
             // 
@@ -850,6 +852,20 @@
             this.comboUF.Name = "comboUF";
             this.comboUF.Size = new System.Drawing.Size(72, 33);
             this.comboUF.TabIndex = 9;
+            // 
+            // comboCidade
+            // 
+            this.comboCidade.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboCidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
+            this.comboCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.comboCidade.ForeColor = System.Drawing.Color.White;
+            this.comboCidade.FormattingEnabled = true;
+            this.comboCidade.Location = new System.Drawing.Point(119, 35);
+            this.comboCidade.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.comboCidade.Name = "comboCidade";
+            this.comboCidade.Size = new System.Drawing.Size(135, 33);
+            this.comboCidade.TabIndex = 10;
             // 
             // panelTextEnderecoClient
             // 
@@ -1254,6 +1270,7 @@
             this.subpanelCidadeUFClient.PerformLayout();
             this.panelTextCEPClient.ResumeLayout(false);
             this.panelTextCEPClient.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelEndereco.ResumeLayout(false);
             this.subpanelEndereco.ResumeLayout(false);
             this.subpanelEndereco.PerformLayout();
@@ -1324,7 +1341,6 @@
         private Panel panelCidadeUFClient;
         private Panel panelEndereco;
         private Panel subpanelEndereco;
-        private TemplateComponents.MasckedboxTemplete mkCPF;
         private Interface.TemplateComponents.TextBoxOnlyLetters tbNome;
         private TemplateComponents.MasckedboxTemplete mkRG;
         private TemplateComponents.MasckedboxTemplete mkTelefone;
@@ -1357,7 +1373,6 @@
         private Label label9;
         private Panel subpanelCidadeUFClient;
         private TemplateComponents.PanelBorderRounded panelTextCEPClient;
-        private TemplateComponents.MasckedboxTemplete mkCEP;
         private Label label10;
         private TemplateComponents.PanelBorderRoundedOnRight panelBorderRoundedOnRight1;
         private TemplateComponents.PanelBorderRounded panelBorderRounded1;
@@ -1366,5 +1381,8 @@
         private Button buscarCPF;
         private Panel panel1;
         private Panel panel7;
+        private TemplateComponents.MasckedboxTemplete mkCPF;
+        private PictureBox pictureBox1;
+        private TemplateComponents.MasckedboxTemplete mkCEP;
     }
 }

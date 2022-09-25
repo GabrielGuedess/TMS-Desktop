@@ -27,8 +27,9 @@ namespace Interface.Properties
                 }
                 return CEPModel;
             }
-            catch(System.Exception e)
+            catch(System.Exception)
             {
+                MessageBox.Show($"CEP não encontrado!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return CEPModel;
             }
         }

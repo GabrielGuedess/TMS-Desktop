@@ -12,12 +12,15 @@ namespace Interface
 
         LimparFormularios limpar = new();
 
+        ConnectDB DBFunctions = new();
+
         private string Type = "";
 
         public string TypeControl
         {
             set
             {
+                tbID.Text = DBFunctions.atualizaID("SELECT MAX (NUM_ID) FROM C_Motoristas", "m");
                 Type = value;
 
                 cadastrarMotoristas.Text = value;
@@ -78,7 +81,6 @@ namespace Interface
         public CadastroMotoristas()
         {
             InitializeComponent();
-            //atualizarIDMotorista();
         }
 
         private void CadastroMotoristas_Resize(object sender, EventArgs e)
@@ -101,31 +103,7 @@ namespace Interface
             utils.expansiveButton(10, buscarCPF);
         }
 
-        private void atualizarIDMotorista()
-        {
-            ConnectDB connectDB = new ConnectDB();
-            string SQL = "SELECT MAX (NUM_ID) FROM C_Motoristas";
-            var dados = connectDB.pesquisar(SQL);
-            if (!DBNull.Value.Equals(dados.Rows[0][0]))
-            {
-                string data = (string)dados.Rows[0][0];
-                string IdNota = data.Replace("M", "");
-                int numID = int.Parse(IdNota);
-                numID++;
-                string numIDsg = numID.ToString();
-                if (numIDsg.Length == 1)
-                {
-                    numIDsg = numIDsg.Insert(numIDsg.Length - 1, "00");
-                }
-                else if (numIDsg.Length == 2)
-                    numIDsg = numIDsg.Insert(numIDsg.Length - 2, "0");
-                tbID.Text = "M" + numIDsg;
-            }
-            else
-            {
-                tbID.Text = "M01";
-            }
-        }
+        
 
         private void cadastrarMotoristas_Click(object sender, EventArgs e)
         {
@@ -148,7 +126,7 @@ namespace Interface
                 limpar.CleanControl(contentMotorista);
                 limpar.CleanControl(searchPanel);
 
-                atualizarIDMotorista();
+                tbID.Text = DBFunctions.atualizaID("SELECT MAX (NUM_ID) FROM C_Motoristas", "m");
             }
 
             if (Type.Contains("Update") && Validation.Validar(contentMotorista, notValidar) && Validation.validarTelefone(mkTelefone)) 
@@ -181,7 +159,7 @@ namespace Interface
 
                 limpar.CleanControl(contentMotorista);
                 limpar.CleanControl(searchPanel);
-                atualizarIDMotorista();
+                tbID.Text = DBFunctions.atualizaID("SELECT MAX (NUM_ID) FROM C_Motoristas", "m");
             }
         }
 
@@ -234,16 +212,25 @@ namespace Interface
             utils.feedbackColorInput(maskInput, typeData);
         }
 
-        private void mkCPF_Leave(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
-
-            ClientCEP clientCEP = new();
-            var result = clientCEP.getCEP(mkCEP.Text);
-            tbBairro.Text = result.Bairro;
-            comboCidade.Text = result.Cidade;
-            comboUF.Text = result.UF;
-            tbLogradouro.Text = result.Logradouro;
+            if (mkCEP.MaskCompleted)
+            {
+                ClientCEP clientCEP = new();
+                var result = clientCEP.getCEP(mkCEP.Text);
+                if (result.UF == null)
+                {
+                    return;
+                }
+                tbBairro.Text = result.Bairro;
+                comboCidade.Text = result.Cidade;
+                comboUF.Text = result.UF;
+                tbLogradouro.Text = result.Logradouro;
+            }
+            else
+            {
+                MessageBox.Show($"É necessário preencher o campo CEP corretamente!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
-
     }
 }

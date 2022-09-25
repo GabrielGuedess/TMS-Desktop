@@ -125,7 +125,6 @@
             this.panel19 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelBorderRounded1 = new Interface.TemplateComponents.PanelBorderRounded();
-            this.mkCEP = new Interface.TemplateComponents.MasckedboxTemplete();
             this.label1 = new System.Windows.Forms.Label();
             this.panelButton = new System.Windows.Forms.Panel();
             this.buscarCPF = new System.Windows.Forms.Button();
@@ -141,6 +140,8 @@
             this.typeData = new System.Windows.Forms.Label();
             this.maskInput = new Interface.TemplateComponents.MasckedboxTemplete();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.mkCEP = new Interface.TemplateComponents.MasckedboxTemplete();
             this.contentMotorista.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel25.SuspendLayout();
@@ -202,6 +203,7 @@
             this.searchPanel.SuspendLayout();
             this.panelSerch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // contentMotorista
@@ -961,6 +963,7 @@
             this.tbID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tbID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
             this.tbID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbID.Cursor = System.Windows.Forms.Cursors.No;
             this.tbID.Enabled = false;
             this.tbID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tbID.ForeColor = System.Drawing.Color.White;
@@ -1428,28 +1431,13 @@
             // 
             this.panelBorderRounded1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelBorderRounded1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.panelBorderRounded1.Controls.Add(this.pictureBox1);
             this.panelBorderRounded1.Controls.Add(this.mkCEP);
             this.panelBorderRounded1.Location = new System.Drawing.Point(5, 36);
             this.panelBorderRounded1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelBorderRounded1.Name = "panelBorderRounded1";
             this.panelBorderRounded1.Size = new System.Drawing.Size(249, 33);
             this.panelBorderRounded1.TabIndex = 2;
-            // 
-            // mkCEP
-            // 
-            this.mkCEP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.mkCEP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.mkCEP.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.mkCEP.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.mkCEP.ForeColor = System.Drawing.Color.White;
-            this.mkCEP.Location = new System.Drawing.Point(10, 6);
-            this.mkCEP.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.mkCEP.Mask = "00000-000";
-            this.mkCEP.Name = "mkCEP";
-            this.mkCEP.Size = new System.Drawing.Size(121, 22);
-            this.mkCEP.TabIndex = 3;
-            this.mkCEP.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            this.mkCEP.Leave += new System.EventHandler(this.mkCPF_Leave);
             // 
             // label1
             // 
@@ -1675,6 +1663,35 @@
             this.pictureBox3.TabIndex = 1;
             this.pictureBox3.TabStop = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(224, 9);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0, 9, 10, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(15, 15);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // mkCEP
+            // 
+            this.mkCEP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.mkCEP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.mkCEP.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mkCEP.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.mkCEP.ForeColor = System.Drawing.Color.White;
+            this.mkCEP.Location = new System.Drawing.Point(9, 6);
+            this.mkCEP.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.mkCEP.Mask = "00000-000";
+            this.mkCEP.Name = "mkCEP";
+            this.mkCEP.Size = new System.Drawing.Size(205, 22);
+            this.mkCEP.TabIndex = 12;
+            this.mkCEP.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            // 
             // CadastroMotoristas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1781,6 +1798,7 @@
             this.panelSerch.ResumeLayout(false);
             this.panelSerch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1858,7 +1876,6 @@
         private TemplateComponents.MasckedboxTemplete mkRG;
         private TemplateComponents.MasckedboxTemplete mkTelefone;
         private Interface.TemplateComponents.TextBoxTemplete tbEmail;
-        private TemplateComponents.MasckedboxTemplete mkCEP;
         private TemplateComponents.MasckedboxTemplete mkCelular;
         private ComboBox comboVeiculoProprio;
         private ComboBox comboMOPP;
@@ -1899,5 +1916,7 @@
         private Label label22;
         private Panel panel38;
         private TemplateComponents.TextBoxOnlyNum_Letters tbNumCasa;
+        private PictureBox pictureBox1;
+        private TemplateComponents.MasckedboxTemplete mkCEP;
     }
 }

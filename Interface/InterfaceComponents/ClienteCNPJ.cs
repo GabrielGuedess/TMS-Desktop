@@ -163,15 +163,25 @@ namespace Interface
             }
         }
 
-        private void mkCEP_Leave(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
-
-            ClientCEP clientCEP = new();
-            var result = clientCEP.getCEP(mkCEP.Text);
-            tbBairro.Text = result.Bairro;
-            comboCidade.Text = result.Cidade;
-            comboUF.Text = result.UF;
-            tbLogradouro.Text = result.Logradouro;
+            if (mkCEP.MaskCompleted)
+            {
+                ClientCEP clientCEP = new();
+                var result = clientCEP.getCEP(mkCEP.Text);
+                if (result.UF == null)
+                {
+                    return;
+                }
+                tbBairro.Text = result.Bairro;
+                comboCidade.Text = result.Cidade;
+                comboUF.Text = result.UF;
+                tbLogradouro.Text = result.Logradouro;
+            }
+            else
+            {
+                MessageBox.Show($"É necessário preencher o campo CEP corretamente!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

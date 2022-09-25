@@ -11,12 +11,15 @@ namespace Interface
 
         readonly LimparFormularios limpar = new();
 
+        readonly ConnectDB DBFunctions = new();
+
         private string Type = "";
 
         public string TypeControl
         {
             set
             {
+                tbIDNotaFiscal.Text = DBFunctions.atualizaID("SELECT MAX (NUM_ID) FROM C_Nota_Fiscal", "F");
                 Type = value;
 
                 cadastrarNota.Text = value;
@@ -63,7 +66,6 @@ namespace Interface
         public CadastroNotasFicais()
         {
             InitializeComponent();
-            //atualizarIDNota();
         }
 
         private void CadastroNotasFicais_Resize(object sender, EventArgs e)
@@ -86,31 +88,7 @@ namespace Interface
             utils.expansiveButton(10, buscarCod);
         }
 
-        private void atualizarIDNota()
-        {
-            ConnectDB connectDB = new ConnectDB();
-            string SQL = "SELECT MAX (NUM_ID) FROM C_Nota_Fiscal";
-            var dados = connectDB.pesquisar(SQL);
-            if (!DBNull.Value.Equals(dados.Rows[0][0]))
-            {
-                string data = (string)dados!.Rows[0][0];
-                string IdNota = data.Replace("F", "");
-                int numID = int.Parse(IdNota);
-                numID++;
-                string numIDsg = numID.ToString();
-                if (numIDsg.Length == 1)
-                {
-                    numIDsg = numIDsg.Insert(numIDsg.Length - 1, "00");
-                }
-                else if (numIDsg.Length == 2)
-                    numIDsg = numIDsg.Insert(numIDsg.Length - 2, "0");
-                tbIDNotaFiscal.Text = "F" + numIDsg;
-            }
-            else
-            {
-                tbIDNotaFiscal.Text = "F01";
-            }
-        }
+       
 
         private void cadastrarNota_Click(object sender, EventArgs e)
         {
@@ -124,7 +102,7 @@ namespace Interface
                 limpar.CleanControl(contentNotas);
                 limpar.CleanControl(searchPanel);
 
-                atualizarIDNota();
+                tbIDNotaFiscal.Text = DBFunctions.atualizaID("SELECT MAX (NUM_ID) FROM C_Nota_Fiscal", "F");
             }
 
             if (Type.Contains("Update") && Validation.Validar(contentNotas))
@@ -142,6 +120,7 @@ namespace Interface
 
                 limpar.CleanControl(contentNotas);
                 limpar.CleanControl(searchPanel);
+                tbIDNotaFiscal.Text = DBFunctions.atualizaID("SELECT MAX (NUM_ID) FROM C_Nota_Fiscal", "F");
             }
         }
 
@@ -155,7 +134,7 @@ namespace Interface
                 if (dados != null)
                 {
                     mkSearchChaveAcesso.Text = dados["CHAVE_ACESSO"].ToString();
-
+                    mkChaveAcesso.Text = dados["CHAVE_ACESSO"].ToString();
                     tbIDNotaFiscal.Text = dados["NUM_ID"].ToString();
                     tbNumero.Text = dados["NUMERO"].ToString();
                     tbTipoNota.Text = dados["TIPO"].ToString();
@@ -181,5 +160,7 @@ namespace Interface
 
             utils.feedbackColorInput(mkSearchChaveAcesso, typeData);
         }
+
+     
     }
 }

@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Interface.TemplateComponents;
+using static System.Net.Mime.MediaTypeNames;
+
 namespace Interface.ControlValidationAuxiliary
 {
     public class LimparFormularios
@@ -46,7 +48,8 @@ namespace Interface.ControlValidationAuxiliary
                 }
                 else if (control is ComboBox)
                 {
-                    ((ComboBox)control).Text="";
+                    ((ComboBox)control).Text = "";
+                    ((ComboBox)control).SelectedItem = null;
                 }
                 else if (control is DateTimePicker)
                 {

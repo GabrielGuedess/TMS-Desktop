@@ -101,7 +101,31 @@ namespace Interface.DataBaseControls
 
                 return null;
             }
-
+        }
+        public string atualizaID(string SQL, string letra)
+        {
+            ConnectDB connectDB = new ConnectDB();
+            var dados = connectDB.pesquisar(SQL);
+            if (!DBNull.Value.Equals(dados.Rows[0][0]))
+            {
+                string data = (string)dados.Rows[0][0];
+                string IdNota = data.Replace(letra.ToUpper(), "");
+                int numID = int.Parse(IdNota);
+                numID++;
+                string numIDsg = numID.ToString();
+                if (numIDsg.Length == 1)
+                {
+                    numIDsg = numIDsg.Insert(numIDsg.Length - 1, "00");
+                }
+                else if (numIDsg.Length == 2)
+                    numIDsg = numIDsg.Insert(numIDsg.Length - 2, "0");
+               return letra.ToUpper() + numIDsg;
+               
+            }
+            else
+            {
+                return "M01";
+            }
         }
     }
 }

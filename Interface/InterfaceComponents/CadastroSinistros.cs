@@ -9,14 +9,17 @@ namespace Interface
     {
         readonly Utilidades utils = new();
 
-        LimparFormularios limpar = new();
+        readonly LimparFormularios limpar = new();
 
         private string Type = "";
+
+        readonly ConnectDB DBFunctions = new();
 
         public string TypeControl
         {
             set
             {
+                tbCodigdoSinistro.Text = DBFunctions.atualizaID("SELECT MAX (ID) FROM tbSinistros", "r");
                 Type = value;
 
                 cadastrarSinistro.Text = value;
@@ -59,7 +62,6 @@ namespace Interface
         public CadastroSinistros()
         {
             InitializeComponent();
-            //atualizarIDSinistro();
         }
 
         private void CadastroSinistros_Resize(object sender, EventArgs e)
@@ -81,31 +83,7 @@ namespace Interface
             utils.expansiveButton(10, buscarCodigo);
         }
 
-        private void atualizarIDSinistro()
-        {
-            ConnectDB connectDB = new ConnectDB();
-            string SQL = "SELECT MAX (ID) FROM tbSinistros";
-            var dados = connectDB.pesquisar(SQL);
-            if (!DBNull.Value.Equals(dados.Rows[0][0]))
-            {
-                string data = (string)dados!.Rows[0][0];
-                string IdSinistro = data.Replace("R", "");
-                int numID = int.Parse(IdSinistro);
-                numID++;
-                string numIDsg = numID.ToString();
-                if (numIDsg.Length == 1)
-                {
-                    numIDsg = numIDsg.Insert(numIDsg.Length - 1, "00");
-                }
-                else if (numIDsg.Length == 2)
-                    numIDsg = numIDsg.Insert(numIDsg.Length - 2, "0");
-                tbCodigdoSinistro.Text = "R" + numIDsg;
-            }
-            else
-            {
-                tbCodigdoSinistro.Text = "R01";
-            }
-        }
+       
 
         private void cadastrarSinistro_Click(object sender, EventArgs e)
         {
@@ -120,7 +98,7 @@ namespace Interface
                 limpar.CleanControl(contentSinistros);
                 limpar.CleanControl(searchPanel);
 
-                atualizarIDSinistro();
+                tbCodigdoSinistro.Text = DBFunctions.atualizaID("SELECT MAX (ID) FROM tbSinistros", "r");
             }
 
             if (Type.Contains("Update") && Validation.Validar(contentSinistros))
@@ -135,7 +113,7 @@ namespace Interface
 
                 limpar.CleanControl(contentSinistros);
                 limpar.CleanControl(searchPanel);
-                atualizarIDSinistro();
+                tbCodigdoSinistro.Text = DBFunctions.atualizaID("SELECT MAX (ID) FROM tbSinistros", "r");
             }
         }
 
@@ -167,5 +145,6 @@ namespace Interface
 
             utils.feedbackColorInputNumLetters(cod, typeData);
         }
+
     }
 }

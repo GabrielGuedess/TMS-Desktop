@@ -13,10 +13,13 @@ namespace Interface
 
         private string Type = "";
 
+        ConnectDB DBFunctions = new();
+
         public string TypeControl
         {
             set
             {
+                numID.Text = DBFunctions.atualizaID("SELECT MAX (NUM_ID) FROM C_Redes_de_Transporte", "T");
                 Type = value;
 
                 cadastrarRede.Text = value;
@@ -47,11 +50,11 @@ namespace Interface
         {
             set
             {
-                maskRedeID.Text = value["ID_REDE"].ToString();
+                maskRedeID.Text = value["NUM_ID"].ToString();
 
                 if (value != null)
                 {
-                    maskRedeID.Text = value["ID_REDE"].ToString();
+                    maskRedeID.Text = value["NUM_ID"].ToString();
 
                     numID.Text = value["NUM_ID"].ToString();
                     tbTipoRede.Text = value["TIPO_REDE"].ToString();
@@ -65,7 +68,6 @@ namespace Interface
         public CadastroRedesDeTransporte()
         {
             InitializeComponent();
-            //atualizarIDRede();
         }
 
         private void CadastroRedesDeTransporte_Resize(object sender, EventArgs e)
@@ -88,33 +90,7 @@ namespace Interface
             utils.expansiveButton(10, buscarNumId);
         }
 
-        private void atualizarIDRede()
-        {
-            
-            ConnectDB connectDB = new ConnectDB();
-            string SQL = "SELECT MAX (NUM_ID) FROM C_Redes_de_Transporte";
-            var dados = connectDB.pesquisar(SQL);
-            if (!DBNull.Value.Equals(dados.Rows[0][0]))
-            {
-                string data = (string)dados.Rows[0][0];
-                string IdRede = data.Replace("T", "");
-                int numID = int.Parse(IdRede);
-                numID++;
-                string numIDsg = numID.ToString();
-                if (numIDsg.Length == 1)
-                {
-                    numIDsg = numIDsg.Insert(numIDsg.Length - 1, "00");
-                }
-                else if (numIDsg.Length == 2)
-                    numIDsg = numIDsg.Insert(numIDsg.Length - 2, "0");
-                this.numID.Text = "T" + numIDsg;
-            }
-            else {
-                numID.Text = "T01";
-            }
-            
-            
-        }
+   
         private void cadastrarRede_Click(object sender, EventArgs e)
         {
             if (Type.Contains("Cadastro") && Validation.Validar(contentRedes))
@@ -128,25 +104,24 @@ namespace Interface
                 limpar.CleanControl(contentRedes);
                 limpar.CleanControl(panelSerch);
 
-                atualizarIDRede();
+                numID.Text = DBFunctions.atualizaID("SELECT MAX (NUM_ID) FROM C_Redes_de_Transporte", "T");
             }
 
             if (Type.Contains("Update") && Validation.Validar(contentRedes))
             {
                 string SQLUp = $"UPDATE C_Redes_de_Transporte SET " +
-                $"NUM_ID= '{numID.Text}', " +
                 $"TIPO_REDE= '{tbTipoRede.Text}', " +
                 $"DESCRICAO_REDE= '{tbDescricaoRede.Text}', " +
                 $"TIPO_MOTORISTA= '{comboCategoriaCNH.Text}', " +
                 $"TIPO_VEICULOS= '{comboTipoVeiculo.Text}' " +
-                $"WHERE ID_REDE= {maskRedeID.Text}";
+                $"WHERE NUM_ID = '{maskRedeID.Text}'";
 
                 ConnectDB connectDB = new();
                 connectDB.cadastrar(SQLUp);
 
                 limpar.CleanControl(contentRedes);
                 limpar.CleanControl(searchPanel);
-                atualizarIDRede();
+                numID.Text = DBFunctions.atualizaID("SELECT MAX (NUM_ID) FROM C_Redes_de_Transporte", "T");
             }
         }
 
@@ -159,7 +134,7 @@ namespace Interface
 
                 if (dados != null)
                 {
-                    maskRedeID.Text = dados["ID_REDE"].ToString();
+                    maskRedeID.Text = dados["NUM_ID"].ToString();
 
                     numID.Text = dados["NUM_ID"].ToString();
                     tbTipoRede.Text = dados["TIPO_REDE"].ToString();
@@ -184,5 +159,7 @@ namespace Interface
         {
             utils.feedbackColorInputNumLetters(maskRedeID, typeData);
         }
+
+        
     }
 }
