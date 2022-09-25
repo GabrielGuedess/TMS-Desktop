@@ -26,6 +26,7 @@ namespace Interface.DataBaseControls
             catch (Exception erro)
             {
                 MessageBox.Show(erro.Message);
+                DB.Close();
             }
         }
         public DataTable? pesquisar(string SQL)
@@ -47,16 +48,17 @@ namespace Interface.DataBaseControls
                 }
                 else
                 {
-                    DB.Close();
+                    //DB.Close();
                 }
-
+                DB.Close();
                 return dados!;
+                
 
             }
             catch (Exception erro)
             {
                 MessageBox.Show(erro.Message);
-
+                DB.Close();
                 return null;
             }
 
@@ -98,7 +100,7 @@ namespace Interface.DataBaseControls
             catch (Exception erro)
             {
                 MessageBox.Show(erro.Message);
-
+                DB.Close();
                 return null;
             }
         }
