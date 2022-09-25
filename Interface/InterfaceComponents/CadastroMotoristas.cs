@@ -78,7 +78,7 @@ namespace Interface
         public CadastroMotoristas()
         {
             InitializeComponent();
-            atualizarIDMotorista();
+            //atualizarIDMotorista();
         }
 
         private void CadastroMotoristas_Resize(object sender, EventArgs e)
