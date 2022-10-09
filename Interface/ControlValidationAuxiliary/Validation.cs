@@ -165,6 +165,15 @@ namespace Interface.ControlValidationAuxiliary
                     return false;
                 }
             }
+            else if (control is MkDate)
+            {
+                MkDate maskedBox = (MkDate)control;
+                if (maskedBox.MaskCompleted == false)
+                {
+                    message(control);
+                    return false;
+                }
+            }
             return true;
         }
 
@@ -173,7 +182,7 @@ namespace Interface.ControlValidationAuxiliary
         //tela do usuário 
         private static bool message(Control control)
         {
-            if (control.Text == string.Empty || control is MasckedboxTemplete || control is EmpDateTimer)
+            if (control.Text == string.Empty || control is MasckedboxTemplete || control is EmpDateTimer || control is MkDate)
             {
                 MessageBox.Show($"O campo {nameCampo(control)} é obrigatório estar preenchido corretemente", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 control.Focus();

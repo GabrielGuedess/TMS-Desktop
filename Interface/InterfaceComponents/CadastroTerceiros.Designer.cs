@@ -44,12 +44,12 @@ namespace Interface
             this.panel21 = new System.Windows.Forms.Panel();
             this.panel22 = new System.Windows.Forms.Panel();
             this.panelBorderRounded10 = new Interface.TemplateComponents.PanelBorderRounded();
-            this.dateInicioAtividade = new Interface.TemplateComponents.EmpDateTimer();
+            this.dateInicioAtividade = new Interface.TemplateComponents.MkDate();
             this.label17 = new System.Windows.Forms.Label();
             this.panel23 = new System.Windows.Forms.Panel();
             this.panel24 = new System.Windows.Forms.Panel();
             this.panelFim = new Interface.TemplateComponents.PanelBorderRounded();
-            this.dateFimAtividade = new Interface.TemplateComponents.EmpDateTimer();
+            this.dateFimAtividade = new Interface.TemplateComponents.MkDate();
             this.label19 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -60,16 +60,16 @@ namespace Interface
             this.mkCNH = new Interface.TemplateComponents.MasckedboxTemplete();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel30 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboCategoriaCNH = new System.Windows.Forms.ComboBox();
             this.comboMOPP = new System.Windows.Forms.ComboBox();
             this.label26 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.comboCategoriaCNH = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panelBorderRounded3 = new Interface.TemplateComponents.PanelBorderRounded();
-            this.dateVencimentoCNH = new Interface.TemplateComponents.EmpDateTimer();
+            this.dateVencimentoCNH = new Interface.TemplateComponents.MkDate();
             this.label4 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -79,7 +79,7 @@ namespace Interface
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panelBorderRounded4 = new Interface.TemplateComponents.PanelBorderRounded();
-            this.dateVencimentoRENTRC = new Interface.TemplateComponents.EmpDateTimer();
+            this.dateVencimentoRENTRC = new Interface.TemplateComponents.MkDate();
             this.label8 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
@@ -111,7 +111,7 @@ namespace Interface
             this.panelDtNascClient = new System.Windows.Forms.Panel();
             this.subpanelDtNascClient = new System.Windows.Forms.Panel();
             this.panelDateTimer = new Interface.TemplateComponents.PanelBorderRounded();
-            this.dateNascimento = new Interface.TemplateComponents.EmpDateTimer();
+            this.dateNascimento = new Interface.TemplateComponents.MkDate();
             this.label5 = new System.Windows.Forms.Label();
             this.panelGeneroClient = new System.Windows.Forms.Panel();
             this.subpanelGeneroClient = new System.Windows.Forms.Panel();
@@ -194,8 +194,8 @@ namespace Interface
             this.panel2.SuspendLayout();
             this.panelCNH.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel30.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel30.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panelBorderRounded3.SuspendLayout();
@@ -300,7 +300,7 @@ namespace Interface
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(895, 200);
-            this.tableLayoutPanel4.TabIndex = 21;
+            this.tableLayoutPanel4.TabIndex = 3;
             // 
             // panel17
             // 
@@ -448,13 +448,18 @@ namespace Interface
             // dateInicioAtividade
             // 
             this.dateInicioAtividade.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateInicioAtividade.CustomFormat = " ";
-            this.dateInicioAtividade.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateInicioAtividade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.dateInicioAtividade.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dateInicioAtividade.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dateInicioAtividade.ForeColor = System.Drawing.Color.White;
             this.dateInicioAtividade.Location = new System.Drawing.Point(10, 5);
             this.dateInicioAtividade.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.dateInicioAtividade.Mask = "00/00/0000";
             this.dateInicioAtividade.Name = "dateInicioAtividade";
-            this.dateInicioAtividade.Size = new System.Drawing.Size(228, 23);
-            this.dateInicioAtividade.TabIndex = 2;
+            this.dateInicioAtividade.Size = new System.Drawing.Size(228, 22);
+            this.dateInicioAtividade.TabIndex = 14;
+            this.dateInicioAtividade.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.dateInicioAtividade.ValidatingType = typeof(System.DateTime);
             // 
             // label17
             // 
@@ -505,13 +510,18 @@ namespace Interface
             // dateFimAtividade
             // 
             this.dateFimAtividade.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateFimAtividade.CustomFormat = " ";
-            this.dateFimAtividade.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateFimAtividade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.dateFimAtividade.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dateFimAtividade.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dateFimAtividade.ForeColor = System.Drawing.Color.White;
             this.dateFimAtividade.Location = new System.Drawing.Point(10, 5);
             this.dateFimAtividade.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.dateFimAtividade.Mask = "00/00/0000";
             this.dateFimAtividade.Name = "dateFimAtividade";
-            this.dateFimAtividade.Size = new System.Drawing.Size(228, 23);
-            this.dateFimAtividade.TabIndex = 2;
+            this.dateFimAtividade.Size = new System.Drawing.Size(228, 22);
+            this.dateFimAtividade.TabIndex = 14;
+            this.dateFimAtividade.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.dateFimAtividade.ValidatingType = typeof(System.DateTime);
             // 
             // label19
             // 
@@ -572,7 +582,7 @@ namespace Interface
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(895, 200);
-            this.tableLayoutPanel1.TabIndex = 18;
+            this.tableLayoutPanel1.TabIndex = 2;
             // 
             // panel1
             // 
@@ -639,7 +649,6 @@ namespace Interface
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Transparent;
-            this.panel3.Controls.Add(this.panel30);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(298, 0);
@@ -649,56 +658,39 @@ namespace Interface
             this.panel3.Size = new System.Drawing.Size(298, 100);
             this.panel3.TabIndex = 1;
             // 
-            // panel30
-            // 
-            this.panel30.Controls.Add(this.comboMOPP);
-            this.panel30.Controls.Add(this.label26);
-            this.panel30.Location = new System.Drawing.Point(150, 20);
-            this.panel30.Name = "panel30";
-            this.panel30.Size = new System.Drawing.Size(128, 70);
-            this.panel30.TabIndex = 6;
-            // 
-            // comboMOPP
-            // 
-            this.comboMOPP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboMOPP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
-            this.comboMOPP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboMOPP.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.comboMOPP.ForeColor = System.Drawing.SystemColors.Window;
-            this.comboMOPP.FormattingEnabled = true;
-            this.comboMOPP.Items.AddRange(new object[] {
-            "Sim",
-            "Não"});
-            this.comboMOPP.Location = new System.Drawing.Point(5, 36);
-            this.comboMOPP.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.comboMOPP.Name = "comboMOPP";
-            this.comboMOPP.Size = new System.Drawing.Size(118, 29);
-            this.comboMOPP.TabIndex = 16;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.label26.ForeColor = System.Drawing.Color.White;
-            this.label26.Location = new System.Drawing.Point(5, 5);
-            this.label26.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(84, 17);
-            this.label26.TabIndex = 1;
-            this.label26.Text = "Curso Mopp";
-            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Transparent;
-            this.panel4.Controls.Add(this.comboCategoriaCNH);
-            this.panel4.Controls.Add(this.label3);
+            this.panel4.Controls.Add(this.panel30);
+            this.panel4.Controls.Add(this.comboMOPP);
+            this.panel4.Controls.Add(this.label26);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(20, 20);
             this.panel4.Margin = new System.Windows.Forms.Padding(0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(258, 70);
             this.panel4.TabIndex = 8;
+            // 
+            // panel30
+            // 
+            this.panel30.Controls.Add(this.label3);
+            this.panel30.Controls.Add(this.comboCategoriaCNH);
+            this.panel30.Location = new System.Drawing.Point(0, 0);
+            this.panel30.Name = "panel30";
+            this.panel30.Size = new System.Drawing.Size(127, 70);
+            this.panel30.TabIndex = 6;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(5, 5);
+            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(122, 17);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Categoria da CHN";
             // 
             // comboCategoriaCNH
             // 
@@ -719,23 +711,41 @@ namespace Interface
             "A/C",
             "A/D",
             "A/E"});
-            this.comboCategoriaCNH.Location = new System.Drawing.Point(5, 36);
+            this.comboCategoriaCNH.Location = new System.Drawing.Point(5, 37);
             this.comboCategoriaCNH.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.comboCategoriaCNH.Name = "comboCategoriaCNH";
-            this.comboCategoriaCNH.Size = new System.Drawing.Size(112, 29);
+            this.comboCategoriaCNH.Size = new System.Drawing.Size(111, 29);
             this.comboCategoriaCNH.TabIndex = 15;
             // 
-            // label3
+            // comboMOPP
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(5, 5);
-            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(122, 17);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Categoria da CHN";
+            this.comboMOPP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboMOPP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
+            this.comboMOPP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboMOPP.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.comboMOPP.ForeColor = System.Drawing.SystemColors.Window;
+            this.comboMOPP.FormattingEnabled = true;
+            this.comboMOPP.Items.AddRange(new object[] {
+            "Sim",
+            "Não"});
+            this.comboMOPP.Location = new System.Drawing.Point(135, 36);
+            this.comboMOPP.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.comboMOPP.Name = "comboMOPP";
+            this.comboMOPP.Size = new System.Drawing.Size(118, 29);
+            this.comboMOPP.TabIndex = 16;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.label26.ForeColor = System.Drawing.Color.White;
+            this.label26.Location = new System.Drawing.Point(130, 5);
+            this.label26.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(84, 17);
+            this.label26.TabIndex = 1;
+            this.label26.Text = "Curso Mopp";
             // 
             // panel5
             // 
@@ -774,13 +784,18 @@ namespace Interface
             // dateVencimentoCNH
             // 
             this.dateVencimentoCNH.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateVencimentoCNH.CustomFormat = " ";
-            this.dateVencimentoCNH.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateVencimentoCNH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.dateVencimentoCNH.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dateVencimentoCNH.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dateVencimentoCNH.ForeColor = System.Drawing.Color.White;
             this.dateVencimentoCNH.Location = new System.Drawing.Point(10, 5);
             this.dateVencimentoCNH.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.dateVencimentoCNH.Mask = "00/00/0000";
             this.dateVencimentoCNH.Name = "dateVencimentoCNH";
-            this.dateVencimentoCNH.Size = new System.Drawing.Size(228, 23);
-            this.dateVencimentoCNH.TabIndex = 17;
+            this.dateVencimentoCNH.Size = new System.Drawing.Size(228, 22);
+            this.dateVencimentoCNH.TabIndex = 14;
+            this.dateVencimentoCNH.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.dateVencimentoCNH.ValidatingType = typeof(System.DateTime);
             // 
             // label4
             // 
@@ -883,7 +898,7 @@ namespace Interface
             this.panelBorderRounded4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelBorderRounded4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
             this.panelBorderRounded4.Controls.Add(this.dateVencimentoRENTRC);
-            this.panelBorderRounded4.Location = new System.Drawing.Point(5, 36);
+            this.panelBorderRounded4.Location = new System.Drawing.Point(5, 32);
             this.panelBorderRounded4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelBorderRounded4.Name = "panelBorderRounded4";
             this.panelBorderRounded4.Size = new System.Drawing.Size(248, 33);
@@ -892,13 +907,18 @@ namespace Interface
             // dateVencimentoRENTRC
             // 
             this.dateVencimentoRENTRC.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateVencimentoRENTRC.CustomFormat = " ";
-            this.dateVencimentoRENTRC.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateVencimentoRENTRC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.dateVencimentoRENTRC.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dateVencimentoRENTRC.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dateVencimentoRENTRC.ForeColor = System.Drawing.Color.White;
             this.dateVencimentoRENTRC.Location = new System.Drawing.Point(10, 5);
             this.dateVencimentoRENTRC.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.dateVencimentoRENTRC.Mask = "00/00/0000";
             this.dateVencimentoRENTRC.Name = "dateVencimentoRENTRC";
-            this.dateVencimentoRENTRC.Size = new System.Drawing.Size(228, 23);
-            this.dateVencimentoRENTRC.TabIndex = 19;
+            this.dateVencimentoRENTRC.Size = new System.Drawing.Size(228, 22);
+            this.dateVencimentoRENTRC.TabIndex = 14;
+            this.dateVencimentoRENTRC.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.dateVencimentoRENTRC.ValidatingType = typeof(System.DateTime);
             // 
             // label8
             // 
@@ -958,7 +978,7 @@ namespace Interface
             "Bitrem Articulado",
             "Rodotrem",
             "Outros"});
-            this.comboTipoVeiculo.Location = new System.Drawing.Point(6, 36);
+            this.comboTipoVeiculo.Location = new System.Drawing.Point(6, 31);
             this.comboTipoVeiculo.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.comboTipoVeiculo.Name = "comboTipoVeiculo";
             this.comboTipoVeiculo.Size = new System.Drawing.Size(248, 29);
@@ -1017,7 +1037,7 @@ namespace Interface
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(895, 400);
-            this.tableLayoutPanel3.TabIndex = 12;
+            this.tableLayoutPanel3.TabIndex = 1;
             // 
             // panel27
             // 
@@ -1307,14 +1327,18 @@ namespace Interface
             // dateNascimento
             // 
             this.dateNascimento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateNascimento.CustomFormat = " ";
-            this.dateNascimento.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dateNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateNascimento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.dateNascimento.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dateNascimento.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dateNascimento.ForeColor = System.Drawing.Color.White;
             this.dateNascimento.Location = new System.Drawing.Point(10, 5);
             this.dateNascimento.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.dateNascimento.Mask = "00/00/0000";
             this.dateNascimento.Name = "dateNascimento";
-            this.dateNascimento.Size = new System.Drawing.Size(228, 23);
-            this.dateNascimento.TabIndex = 3;
+            this.dateNascimento.Size = new System.Drawing.Size(228, 22);
+            this.dateNascimento.TabIndex = 14;
+            this.dateNascimento.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.dateNascimento.ValidatingType = typeof(System.DateTime);
             // 
             // label5
             // 
@@ -1684,7 +1708,7 @@ namespace Interface
             this.subpanelCidadeUFClient.Location = new System.Drawing.Point(0, 0);
             this.subpanelCidadeUFClient.Name = "subpanelCidadeUFClient";
             this.subpanelCidadeUFClient.Size = new System.Drawing.Size(140, 100);
-            this.subpanelCidadeUFClient.TabIndex = 0;
+            this.subpanelCidadeUFClient.TabIndex = 7;
             // 
             // comboUF
             // 
@@ -2185,10 +2209,12 @@ namespace Interface
             this.panel22.ResumeLayout(false);
             this.panel22.PerformLayout();
             this.panelBorderRounded10.ResumeLayout(false);
+            this.panelBorderRounded10.PerformLayout();
             this.panel23.ResumeLayout(false);
             this.panel24.ResumeLayout(false);
             this.panel24.PerformLayout();
             this.panelFim.ResumeLayout(false);
+            this.panelFim.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -2196,14 +2222,15 @@ namespace Interface
             this.panelCNH.ResumeLayout(false);
             this.panelCNH.PerformLayout();
             this.panel3.ResumeLayout(false);
-            this.panel30.ResumeLayout(false);
-            this.panel30.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel30.ResumeLayout(false);
+            this.panel30.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panelBorderRounded3.ResumeLayout(false);
+            this.panelBorderRounded3.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
@@ -2213,6 +2240,7 @@ namespace Interface
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
             this.panelBorderRounded4.ResumeLayout(false);
+            this.panelBorderRounded4.PerformLayout();
             this.panel11.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
@@ -2242,6 +2270,7 @@ namespace Interface
             this.subpanelDtNascClient.ResumeLayout(false);
             this.subpanelDtNascClient.PerformLayout();
             this.panelDateTimer.ResumeLayout(false);
+            this.panelDateTimer.PerformLayout();
             this.panelGeneroClient.ResumeLayout(false);
             this.subpanelGeneroClient.ResumeLayout(false);
             this.subpanelGeneroClient.PerformLayout();
@@ -2398,21 +2427,16 @@ namespace Interface
         private Button cadastrarTerceiro;
         private TemplateComponents.MasckedboxTemplete mkCPF;
         private Interface.TemplateComponents.TextBoxOnlyLetters tbNome;
-        private Interface.TemplateComponents.EmpDateTimer dateNascimento;
         private TemplateComponents.MasckedboxTemplete mkCelular;
         private TemplateComponents.MasckedboxTemplete mkTelefone;
         private Interface.TemplateComponents.TextBoxTemplete textEmail;
         private TemplateComponents.MasckedboxTemplete mkCEP;
         private ComboBox comboTipoContrato;
         private ComboBox comboSituacaoContrato;
-        private Interface.TemplateComponents.EmpDateTimer dateInicioAtividade;
-        private Interface.TemplateComponents.EmpDateTimer dateFimAtividade;
         private TemplateComponents.MasckedboxTemplete mkCNH;
         private ComboBox comboCategoriaCNH;
-        private Interface.TemplateComponents.EmpDateTimer dateVencimentoCNH;
         private TemplateComponents.PanelBorderRounded panelBorderRounded1;
         private TemplateComponents.MasckedboxTemplete mkRNTRC;
-        private Interface.TemplateComponents.EmpDateTimer dateVencimentoRENTRC;
         private ComboBox comboTipoVeiculo;
         private TemplateComponents.MasckedboxTemplete maskCpf;
         private Label typeData;
@@ -2444,5 +2468,10 @@ namespace Interface
         private TemplateComponents.PanelBorderRounded panelBorderRounded11;
         private TemplateComponents.TextBoxOnlyNum_Letters tbNumCasa;
         private PictureBox pictureBox1;
+        private TemplateComponents.MkDate dateNascimento;
+        private TemplateComponents.MkDate dateInicioAtividade;
+        private TemplateComponents.MkDate dateFimAtividade;
+        private TemplateComponents.MkDate dateVencimentoCNH;
+        private TemplateComponents.MkDate dateVencimentoRENTRC;
     }
 }

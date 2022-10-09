@@ -152,7 +152,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
             this.panel3.Size = new System.Drawing.Size(298, 100);
-            this.panel3.TabIndex = 14;
+            this.panel3.TabIndex = 1;
             // 
             // panel4
             // 
@@ -270,7 +270,7 @@
             this.panelNomeClient.Name = "panelNomeClient";
             this.panelNomeClient.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
             this.panelNomeClient.Size = new System.Drawing.Size(298, 100);
-            this.panelNomeClient.TabIndex = 1;
+            this.panelNomeClient.TabIndex = 2;
             // 
             // subpanelNomeClient
             // 
@@ -328,7 +328,7 @@
             this.panelDtNascClient.Name = "panelDtNascClient";
             this.panelDtNascClient.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
             this.panelDtNascClient.Size = new System.Drawing.Size(299, 100);
-            this.panelDtNascClient.TabIndex = 2;
+            this.panelDtNascClient.TabIndex = 3;
             // 
             // subpanelDtNascClient
             // 
@@ -389,7 +389,7 @@
             this.panelGeneroClient.Name = "panelGeneroClient";
             this.panelGeneroClient.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
             this.panelGeneroClient.Size = new System.Drawing.Size(298, 100);
-            this.panelGeneroClient.TabIndex = 3;
+            this.panelGeneroClient.TabIndex = 4;
             // 
             // subpanelGeneroClient
             // 
@@ -450,7 +450,7 @@
             this.panelRGClient.Name = "panelRGClient";
             this.panelRGClient.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
             this.panelRGClient.Size = new System.Drawing.Size(299, 100);
-            this.panelRGClient.TabIndex = 4;
+            this.panelRGClient.TabIndex = 6;
             // 
             // subpanelRGClient
             // 

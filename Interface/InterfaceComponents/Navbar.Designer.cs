@@ -154,7 +154,7 @@
             this.buttonCadastro.Name = "buttonCadastro";
             this.buttonCadastro.Padding = new System.Windows.Forms.Padding(24, 0, 24, 0);
             this.buttonCadastro.Size = new System.Drawing.Size(288, 37);
-            this.buttonCadastro.TabIndex = 4;
+            this.buttonCadastro.TabIndex = 10;
             this.buttonCadastro.Text = "Cadastro";
             this.buttonCadastro.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonCadastro.UseVisualStyleBackColor = false;
@@ -1088,7 +1088,7 @@
             this.buttonPlanejamento.Name = "buttonPlanejamento";
             this.buttonPlanejamento.Padding = new System.Windows.Forms.Padding(24, 0, 24, 0);
             this.buttonPlanejamento.Size = new System.Drawing.Size(288, 40);
-            this.buttonPlanejamento.TabIndex = 4;
+            this.buttonPlanejamento.TabIndex = 111;
             this.buttonPlanejamento.Text = "Planejamento";
             this.buttonPlanejamento.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonPlanejamento.UseVisualStyleBackColor = false;

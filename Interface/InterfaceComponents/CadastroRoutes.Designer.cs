@@ -58,7 +58,7 @@ namespace Interface
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelBorderRounded2 = new Interface.TemplateComponents.PanelBorderRounded();
-            this.tbCustoEstimado = new TemplateComponents.TextMoney();
+            this.tbCustoEstimado = new Interface.TemplateComponents.TextMoney();
             this.label1 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -166,7 +166,7 @@ namespace Interface
             // 
             // typeData
             // 
-            this.typeData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.typeData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.typeData.AutoSize = true;
             this.typeData.BackColor = System.Drawing.Color.Transparent;
@@ -191,7 +191,7 @@ namespace Interface
             this.IdRotas.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.IdRotas.Name = "IdRotas";
             this.IdRotas.Size = new System.Drawing.Size(267, 22);
-            this.IdRotas.TabIndex = 2;
+            this.IdRotas.TabIndex = 1;
             this.IdRotas.TextChanged += new System.EventHandler(this.IdRotas_TextChanged);
             // 
             // pictureBox3
@@ -208,7 +208,7 @@ namespace Interface
             // 
             // map
             // 
-            this.map.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.map.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.map.Bearing = 0F;
             this.map.CanDragMap = true;
@@ -249,11 +249,11 @@ namespace Interface
             this.contentRotas.Name = "contentRotas";
             this.contentRotas.Padding = new System.Windows.Forms.Padding(40);
             this.contentRotas.Size = new System.Drawing.Size(975, 1183);
-            this.contentRotas.TabIndex = 17;
+            this.contentRotas.TabIndex = 188;
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33332F));
@@ -278,7 +278,7 @@ namespace Interface
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(895, 400);
-            this.tableLayoutPanel2.TabIndex = 13;
+            this.tableLayoutPanel2.TabIndex = 2;
             // 
             // panel13
             // 
@@ -289,7 +289,7 @@ namespace Interface
             this.panel13.Name = "panel13";
             this.panel13.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
             this.panel13.Size = new System.Drawing.Size(298, 100);
-            this.panel13.TabIndex = 18;
+            this.panel13.TabIndex = 9;
             // 
             // panel14
             // 
@@ -325,7 +325,7 @@ namespace Interface
             this.tbConhecimentoTransporte.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbConhecimentoTransporte.Name = "tbConhecimentoTransporte";
             this.tbConhecimentoTransporte.Size = new System.Drawing.Size(228, 22);
-            this.tbConhecimentoTransporte.TabIndex = 3;
+            this.tbConhecimentoTransporte.TabIndex = 11;
             // 
             // label6
             // 
@@ -348,7 +348,7 @@ namespace Interface
             this.panel5.Name = "panel5";
             this.panel5.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
             this.panel5.Size = new System.Drawing.Size(298, 100);
-            this.panel5.TabIndex = 17;
+            this.panel5.TabIndex = 6;
             // 
             // panel12
             // 
@@ -383,7 +383,7 @@ namespace Interface
             this.tbDistanciaTotal.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbDistanciaTotal.Name = "tbDistanciaTotal";
             this.tbDistanciaTotal.Size = new System.Drawing.Size(225, 22);
-            this.tbDistanciaTotal.TabIndex = 0;
+            this.tbDistanciaTotal.TabIndex = 8;
             // 
             // label5
             // 
@@ -406,7 +406,7 @@ namespace Interface
             this.panel3.Name = "panel3";
             this.panel3.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
             this.panel3.Size = new System.Drawing.Size(298, 100);
-            this.panel3.TabIndex = 16;
+            this.panel3.TabIndex = 7;
             // 
             // panel4
             // 
@@ -442,7 +442,7 @@ namespace Interface
             this.tbProximaEntrega.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbProximaEntrega.Name = "tbProximaEntrega";
             this.tbProximaEntrega.Size = new System.Drawing.Size(228, 22);
-            this.tbProximaEntrega.TabIndex = 3;
+            this.tbProximaEntrega.TabIndex = 9;
             // 
             // label2
             // 
@@ -465,7 +465,7 @@ namespace Interface
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
             this.panel1.Size = new System.Drawing.Size(299, 100);
-            this.panel1.TabIndex = 15;
+            this.panel1.TabIndex = 8;
             // 
             // panel2
             // 
@@ -500,7 +500,7 @@ namespace Interface
             this.tbCustoEstimado.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbCustoEstimado.Name = "tbCustoEstimado";
             this.tbCustoEstimado.Size = new System.Drawing.Size(225, 22);
-            this.tbCustoEstimado.TabIndex = 0;
+            this.tbCustoEstimado.TabIndex = 10;
             // 
             // label1
             // 
@@ -524,7 +524,7 @@ namespace Interface
             this.panel6.Name = "panel6";
             this.panel6.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
             this.panel6.Size = new System.Drawing.Size(298, 100);
-            this.panel6.TabIndex = 14;
+            this.panel6.TabIndex = 0;
             // 
             // panel7
             // 
@@ -560,7 +560,7 @@ namespace Interface
             this.tbIDRota.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbIDRota.Name = "tbIDRota";
             this.tbIDRota.Size = new System.Drawing.Size(228, 22);
-            this.tbIDRota.TabIndex = 0;
+            this.tbIDRota.TabIndex = 2;
             // 
             // label3
             // 
@@ -583,7 +583,7 @@ namespace Interface
             this.panel8.Name = "panel8";
             this.panel8.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
             this.panel8.Size = new System.Drawing.Size(298, 100);
-            this.panel8.TabIndex = 5;
+            this.panel8.TabIndex = 3;
             // 
             // panel9
             // 
@@ -619,7 +619,7 @@ namespace Interface
             this.tbProgresso.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbProgresso.Name = "tbProgresso";
             this.tbProgresso.Size = new System.Drawing.Size(228, 22);
-            this.tbProgresso.TabIndex = 3;
+            this.tbProgresso.TabIndex = 5;
             // 
             // label4
             // 
@@ -666,7 +666,7 @@ namespace Interface
             this.panelEmail.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelEmail.Name = "panelEmail";
             this.panelEmail.Size = new System.Drawing.Size(248, 33);
-            this.panelEmail.TabIndex = 1;
+            this.panelEmail.TabIndex = 2;
             // 
             // tbStatusViagem
             // 
@@ -679,7 +679,7 @@ namespace Interface
             this.tbStatusViagem.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbStatusViagem.Name = "tbStatusViagem";
             this.tbStatusViagem.Size = new System.Drawing.Size(228, 22);
-            this.tbStatusViagem.TabIndex = 2;
+            this.tbStatusViagem.TabIndex = 3;
             // 
             // labelEmail
             // 
@@ -714,7 +714,7 @@ namespace Interface
             this.subpanelDtNascClient.Margin = new System.Windows.Forms.Padding(0);
             this.subpanelDtNascClient.Name = "subpanelDtNascClient";
             this.subpanelDtNascClient.Size = new System.Drawing.Size(259, 70);
-            this.subpanelDtNascClient.TabIndex = 9;
+            this.subpanelDtNascClient.TabIndex = 8;
             // 
             // panelDateTimerClient
             // 
@@ -737,7 +737,7 @@ namespace Interface
             this.tbMotorista.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbMotorista.Name = "tbMotorista";
             this.tbMotorista.Size = new System.Drawing.Size(228, 22);
-            this.tbMotorista.TabIndex = 1;
+            this.tbMotorista.TabIndex = 4;
             // 
             // labelCPF
             // 
@@ -760,7 +760,7 @@ namespace Interface
             this.panelGeneroClient.Name = "panelGeneroClient";
             this.panelGeneroClient.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
             this.panelGeneroClient.Size = new System.Drawing.Size(298, 100);
-            this.panelGeneroClient.TabIndex = 3;
+            this.panelGeneroClient.TabIndex = 4;
             // 
             // subpanelGeneroClient
             // 
@@ -796,7 +796,7 @@ namespace Interface
             this.tbEntrega.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbEntrega.Name = "tbEntrega";
             this.tbEntrega.Size = new System.Drawing.Size(228, 22);
-            this.tbEntrega.TabIndex = 3;
+            this.tbEntrega.TabIndex = 6;
             // 
             // labelCelular
             // 
@@ -819,7 +819,7 @@ namespace Interface
             this.panelRGClient.Name = "panelRGClient";
             this.panelRGClient.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
             this.panelRGClient.Size = new System.Drawing.Size(299, 100);
-            this.panelRGClient.TabIndex = 4;
+            this.panelRGClient.TabIndex = 5;
             // 
             // subpanelRGClient
             // 
@@ -835,7 +835,7 @@ namespace Interface
             // 
             // comboVeiculo
             // 
-            this.comboVeiculo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.comboVeiculo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboVeiculo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
             this.comboVeiculo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -876,7 +876,7 @@ namespace Interface
             // 
             // panelButton
             // 
-            this.panelButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.panelButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelButton.BackColor = System.Drawing.Color.Transparent;
             this.panelButton.Controls.Add(this.buscarRota);
@@ -908,7 +908,7 @@ namespace Interface
             this.buscarRota.Margin = new System.Windows.Forms.Padding(0, 0, 40, 0);
             this.buscarRota.Name = "buscarRota";
             this.buscarRota.Size = new System.Drawing.Size(180, 50);
-            this.buscarRota.TabIndex = 18;
+            this.buscarRota.TabIndex = 12;
             this.buscarRota.Text = "Buscar ID";
             this.buscarRota.UseVisualStyleBackColor = false;
             this.buscarRota.Visible = false;
@@ -928,7 +928,7 @@ namespace Interface
             this.button1.Margin = new System.Windows.Forms.Padding(0, 0, 40, 0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(180, 50);
-            this.button1.TabIndex = 17;
+            this.button1.TabIndex = 13;
             this.button1.Text = "Calcular Rota";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -947,7 +947,7 @@ namespace Interface
             this.button2.Margin = new System.Windows.Forms.Padding(0);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(180, 50);
-            this.button2.TabIndex = 16;
+            this.button2.TabIndex = 14;
             this.button2.Text = "Cadastrar";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -1040,7 +1040,7 @@ namespace Interface
             // 
             // panel51
             // 
-            this.panel51.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.panel51.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel51.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(98)))), ((int)(((byte)(255)))));
             this.panel51.Controls.Add(this.button10);
@@ -1052,7 +1052,7 @@ namespace Interface
             // 
             // button10
             // 
-            this.button10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.button10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button10.BackColor = System.Drawing.Color.Transparent;
             this.button10.FlatAppearance.BorderSize = 0;

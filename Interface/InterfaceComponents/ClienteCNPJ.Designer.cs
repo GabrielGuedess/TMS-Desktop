@@ -41,10 +41,10 @@
             this.SubpanelCPF = new System.Windows.Forms.Panel();
             this.panelTextCNPJClient = new Interface.TemplateComponents.PanelBorderRounded();
             this.mkCNPJ = new Interface.TemplateComponents.MasckedboxTemplete();
+            this.labelCPFClient = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.comboSituacaoCNPJ = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.labelCPFClient = new System.Windows.Forms.Label();
             this.panelNomeClient = new System.Windows.Forms.Panel();
             this.subpanelNomeClient = new System.Windows.Forms.Panel();
             this.panelTextNomeClient = new Interface.TemplateComponents.PanelBorderRounded();
@@ -84,10 +84,10 @@
             this.panelCidadeUFClient = new System.Windows.Forms.Panel();
             this.subpanelCidadeUFClient = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.comboUF = new System.Windows.Forms.ComboBox();
-            this.label24 = new System.Windows.Forms.Label();
             this.labelCidadeClient = new System.Windows.Forms.Label();
             this.comboCidade = new System.Windows.Forms.ComboBox();
+            this.comboUF = new System.Windows.Forms.ComboBox();
+            this.label24 = new System.Windows.Forms.Label();
             this.panelEndereco = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -170,7 +170,7 @@
             this.contentCNPJ.Name = "contentCNPJ";
             this.contentCNPJ.Padding = new System.Windows.Forms.Padding(40);
             this.contentCNPJ.Size = new System.Drawing.Size(975, 618);
-            this.contentCNPJ.TabIndex = 10;
+            this.contentCNPJ.TabIndex = 1;
             // 
             // tableLayoutPanel3
             // 
@@ -202,7 +202,7 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(895, 400);
-            this.tableLayoutPanel3.TabIndex = 14;
+            this.tableLayoutPanel3.TabIndex = 2;
             // 
             // panel3
             // 
@@ -249,7 +249,7 @@
             this.tbComplemento.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbComplemento.Name = "tbComplemento";
             this.tbComplemento.Size = new System.Drawing.Size(229, 22);
-            this.tbComplemento.TabIndex = 1;
+            this.tbComplemento.TabIndex = 0;
             // 
             // textBoxOnlyNum_Letters2
             // 
@@ -292,14 +292,14 @@
             // 
             this.SubpanelCPF.BackColor = System.Drawing.Color.Transparent;
             this.SubpanelCPF.Controls.Add(this.panelTextCNPJClient);
-            this.SubpanelCPF.Controls.Add(this.panel8);
             this.SubpanelCPF.Controls.Add(this.labelCPFClient);
+            this.SubpanelCPF.Controls.Add(this.panel8);
             this.SubpanelCPF.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SubpanelCPF.Location = new System.Drawing.Point(20, 20);
             this.SubpanelCPF.Margin = new System.Windows.Forms.Padding(0);
             this.SubpanelCPF.Name = "SubpanelCPF";
             this.SubpanelCPF.Size = new System.Drawing.Size(258, 70);
-            this.SubpanelCPF.TabIndex = 7;
+            this.SubpanelCPF.TabIndex = 1;
             // 
             // panelTextCNPJClient
             // 
@@ -327,45 +327,6 @@
             this.mkCNPJ.TabIndex = 1;
             this.mkCNPJ.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.comboSituacaoCNPJ);
-            this.panel8.Controls.Add(this.label4);
-            this.panel8.Location = new System.Drawing.Point(162, 0);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(96, 70);
-            this.panel8.TabIndex = 3;
-            // 
-            // comboSituacaoCNPJ
-            // 
-            this.comboSituacaoCNPJ.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.comboSituacaoCNPJ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
-            this.comboSituacaoCNPJ.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.comboSituacaoCNPJ.ForeColor = System.Drawing.Color.White;
-            this.comboSituacaoCNPJ.FormattingEnabled = true;
-            this.comboSituacaoCNPJ.ItemHeight = 25;
-            this.comboSituacaoCNPJ.Items.AddRange(new object[] {
-            "Ativo",
-            "Inativo"});
-            this.comboSituacaoCNPJ.Location = new System.Drawing.Point(10, 36);
-            this.comboSituacaoCNPJ.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.comboSituacaoCNPJ.Name = "comboSituacaoCNPJ";
-            this.comboSituacaoCNPJ.Size = new System.Drawing.Size(84, 33);
-            this.comboSituacaoCNPJ.TabIndex = 6;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(10, 5);
-            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 17);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Situação";
-            // 
             // labelCPFClient
             // 
             this.labelCPFClient.AutoSize = true;
@@ -378,6 +339,45 @@
             this.labelCPFClient.TabIndex = 0;
             this.labelCPFClient.Text = "CNPJ";
             // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.comboSituacaoCNPJ);
+            this.panel8.Controls.Add(this.label4);
+            this.panel8.Location = new System.Drawing.Point(160, 0);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(98, 67);
+            this.panel8.TabIndex = 1;
+            // 
+            // comboSituacaoCNPJ
+            // 
+            this.comboSituacaoCNPJ.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.comboSituacaoCNPJ.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
+            this.comboSituacaoCNPJ.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.comboSituacaoCNPJ.ForeColor = System.Drawing.Color.White;
+            this.comboSituacaoCNPJ.FormattingEnabled = true;
+            this.comboSituacaoCNPJ.ItemHeight = 25;
+            this.comboSituacaoCNPJ.Items.AddRange(new object[] {
+            "Ativo",
+            "Inativo"});
+            this.comboSituacaoCNPJ.Location = new System.Drawing.Point(4, 32);
+            this.comboSituacaoCNPJ.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.comboSituacaoCNPJ.Name = "comboSituacaoCNPJ";
+            this.comboSituacaoCNPJ.Size = new System.Drawing.Size(84, 33);
+            this.comboSituacaoCNPJ.TabIndex = 0;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(12, 5);
+            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(63, 17);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Situação";
+            // 
             // panelNomeClient
             // 
             this.panelNomeClient.BackColor = System.Drawing.Color.Transparent;
@@ -388,7 +388,7 @@
             this.panelNomeClient.Name = "panelNomeClient";
             this.panelNomeClient.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
             this.panelNomeClient.Size = new System.Drawing.Size(298, 100);
-            this.panelNomeClient.TabIndex = 1;
+            this.panelNomeClient.TabIndex = 2;
             // 
             // subpanelNomeClient
             // 
@@ -423,7 +423,7 @@
             this.tbNomeFantasia.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbNomeFantasia.Name = "tbNomeFantasia";
             this.tbNomeFantasia.Size = new System.Drawing.Size(225, 22);
-            this.tbNomeFantasia.TabIndex = 0;
+            this.tbNomeFantasia.TabIndex = 3;
             // 
             // labelNomeClient
             // 
@@ -446,7 +446,7 @@
             this.panelDtNascClient.Name = "panelDtNascClient";
             this.panelDtNascClient.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
             this.panelDtNascClient.Size = new System.Drawing.Size(299, 100);
-            this.panelDtNascClient.TabIndex = 2;
+            this.panelDtNascClient.TabIndex = 3;
             // 
             // subpanelDtNascClient
             // 
@@ -483,7 +483,7 @@
             this.mkInscricaoEstatudal.Mask = "000.000.000.000";
             this.mkInscricaoEstatudal.Name = "mkInscricaoEstatudal";
             this.mkInscricaoEstatudal.Size = new System.Drawing.Size(228, 22);
-            this.mkInscricaoEstatudal.TabIndex = 0;
+            this.mkInscricaoEstatudal.TabIndex = 4;
             this.mkInscricaoEstatudal.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // label5
@@ -507,7 +507,7 @@
             this.panelGeneroClient.Name = "panelGeneroClient";
             this.panelGeneroClient.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
             this.panelGeneroClient.Size = new System.Drawing.Size(298, 100);
-            this.panelGeneroClient.TabIndex = 3;
+            this.panelGeneroClient.TabIndex = 4;
             // 
             // subpanelGeneroClient
             // 
@@ -543,7 +543,7 @@
             this.tbRazaoSocial.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbRazaoSocial.Name = "tbRazaoSocial";
             this.tbRazaoSocial.Size = new System.Drawing.Size(228, 22);
-            this.tbRazaoSocial.TabIndex = 1;
+            this.tbRazaoSocial.TabIndex = 5;
             // 
             // labelGeneroClient
             // 
@@ -566,7 +566,7 @@
             this.panelRGClient.Name = "panelRGClient";
             this.panelRGClient.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
             this.panelRGClient.Size = new System.Drawing.Size(298, 100);
-            this.panelRGClient.TabIndex = 4;
+            this.panelRGClient.TabIndex = 5;
             // 
             // subpanelRGClient
             // 
@@ -603,7 +603,7 @@
             this.mkCelular.Mask = "(00) 00000-0000";
             this.mkCelular.Name = "mkCelular";
             this.mkCelular.Size = new System.Drawing.Size(228, 22);
-            this.mkCelular.TabIndex = 0;
+            this.mkCelular.TabIndex = 6;
             this.mkCelular.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // label7
@@ -627,7 +627,7 @@
             this.panelTelefoneClient.Name = "panelTelefoneClient";
             this.panelTelefoneClient.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
             this.panelTelefoneClient.Size = new System.Drawing.Size(299, 100);
-            this.panelTelefoneClient.TabIndex = 5;
+            this.panelTelefoneClient.TabIndex = 6;
             // 
             // subpanelTelefoneClient
             // 
@@ -664,7 +664,7 @@
             this.mkTelefone.Mask = "(00) 0000-0000";
             this.mkTelefone.Name = "mkTelefone";
             this.mkTelefone.Size = new System.Drawing.Size(228, 22);
-            this.mkTelefone.TabIndex = 1;
+            this.mkTelefone.TabIndex = 7;
             this.mkTelefone.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // labelTelefoneClient
@@ -723,7 +723,7 @@
             this.tbEmail.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(225, 22);
-            this.tbEmail.TabIndex = 0;
+            this.tbEmail.TabIndex = 8;
             // 
             // labelEmailClient
             // 
@@ -798,7 +798,7 @@
             this.mkCEP.Mask = "00000-000";
             this.mkCEP.Name = "mkCEP";
             this.mkCEP.Size = new System.Drawing.Size(205, 22);
-            this.mkCEP.TabIndex = 10;
+            this.mkCEP.TabIndex = 9;
             this.mkCEP.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // label10
@@ -828,8 +828,8 @@
             // 
             this.subpanelCidadeUFClient.BackColor = System.Drawing.Color.Transparent;
             this.subpanelCidadeUFClient.Controls.Add(this.panel7);
-            this.subpanelCidadeUFClient.Controls.Add(this.labelCidadeClient);
-            this.subpanelCidadeUFClient.Controls.Add(this.comboCidade);
+            this.subpanelCidadeUFClient.Controls.Add(this.comboUF);
+            this.subpanelCidadeUFClient.Controls.Add(this.label24);
             this.subpanelCidadeUFClient.Dock = System.Windows.Forms.DockStyle.Fill;
             this.subpanelCidadeUFClient.Location = new System.Drawing.Point(20, 20);
             this.subpanelCidadeUFClient.Margin = new System.Windows.Forms.Padding(0);
@@ -839,12 +839,38 @@
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.comboUF);
-            this.panel7.Controls.Add(this.label24);
-            this.panel7.Location = new System.Drawing.Point(0, 0);
+            this.panel7.Controls.Add(this.labelCidadeClient);
+            this.panel7.Controls.Add(this.comboCidade);
+            this.panel7.Location = new System.Drawing.Point(101, 0);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(104, 70);
+            this.panel7.Size = new System.Drawing.Size(158, 70);
             this.panel7.TabIndex = 8;
+            // 
+            // labelCidadeClient
+            // 
+            this.labelCidadeClient.AutoSize = true;
+            this.labelCidadeClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.labelCidadeClient.ForeColor = System.Drawing.Color.White;
+            this.labelCidadeClient.Location = new System.Drawing.Point(5, 5);
+            this.labelCidadeClient.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
+            this.labelCidadeClient.Name = "labelCidadeClient";
+            this.labelCidadeClient.Size = new System.Drawing.Size(52, 17);
+            this.labelCidadeClient.TabIndex = 7;
+            this.labelCidadeClient.Text = "Cidade";
+            // 
+            // comboCidade
+            // 
+            this.comboCidade.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboCidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
+            this.comboCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.comboCidade.ForeColor = System.Drawing.Color.White;
+            this.comboCidade.FormattingEnabled = true;
+            this.comboCidade.Location = new System.Drawing.Point(5, 32);
+            this.comboCidade.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.comboCidade.Name = "comboCidade";
+            this.comboCidade.Size = new System.Drawing.Size(142, 33);
+            this.comboCidade.TabIndex = 11;
             // 
             // comboUF
             // 
@@ -881,12 +907,12 @@
             "SP",
             "SE",
             "TO"});
-            this.comboUF.Location = new System.Drawing.Point(5, 37);
+            this.comboUF.Location = new System.Drawing.Point(5, 31);
             this.comboUF.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.comboUF.MaxDropDownItems = 5;
             this.comboUF.Name = "comboUF";
-            this.comboUF.Size = new System.Drawing.Size(72, 33);
-            this.comboUF.TabIndex = 15;
+            this.comboUF.Size = new System.Drawing.Size(79, 33);
+            this.comboUF.TabIndex = 10;
             // 
             // label24
             // 
@@ -899,32 +925,6 @@
             this.label24.Size = new System.Drawing.Size(26, 17);
             this.label24.TabIndex = 14;
             this.label24.Text = "UF";
-            // 
-            // labelCidadeClient
-            // 
-            this.labelCidadeClient.AutoSize = true;
-            this.labelCidadeClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.labelCidadeClient.ForeColor = System.Drawing.Color.White;
-            this.labelCidadeClient.Location = new System.Drawing.Point(112, 5);
-            this.labelCidadeClient.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
-            this.labelCidadeClient.Name = "labelCidadeClient";
-            this.labelCidadeClient.Size = new System.Drawing.Size(52, 17);
-            this.labelCidadeClient.TabIndex = 7;
-            this.labelCidadeClient.Text = "Cidade";
-            // 
-            // comboCidade
-            // 
-            this.comboCidade.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboCidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
-            this.comboCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.comboCidade.ForeColor = System.Drawing.Color.White;
-            this.comboCidade.FormattingEnabled = true;
-            this.comboCidade.Location = new System.Drawing.Point(112, 37);
-            this.comboCidade.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.comboCidade.Name = "comboCidade";
-            this.comboCidade.Size = new System.Drawing.Size(142, 33);
-            this.comboCidade.TabIndex = 6;
             // 
             // panelEndereco
             // 
@@ -1016,7 +1016,7 @@
             this.tbLogradouro.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbLogradouro.Name = "tbLogradouro";
             this.tbLogradouro.Size = new System.Drawing.Size(158, 22);
-            this.tbLogradouro.TabIndex = 0;
+            this.tbLogradouro.TabIndex = 12;
             // 
             // label2
             // 
@@ -1074,7 +1074,7 @@
             this.tbBairro.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbBairro.Name = "tbBairro";
             this.tbBairro.Size = new System.Drawing.Size(228, 22);
-            this.tbBairro.TabIndex = 0;
+            this.tbBairro.TabIndex = 13;
             // 
             // label1
             // 
@@ -1102,7 +1102,7 @@
             this.panelButton.Name = "panelButton";
             this.panelButton.Padding = new System.Windows.Forms.Padding(40, 0, 40, 0);
             this.panelButton.Size = new System.Drawing.Size(975, 50);
-            this.panelButton.TabIndex = 7;
+            this.panelButton.TabIndex = 3;
             // 
             // buscarCNPJ
             // 

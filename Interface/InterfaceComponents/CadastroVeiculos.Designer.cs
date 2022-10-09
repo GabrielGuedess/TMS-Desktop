@@ -45,11 +45,12 @@
             this.panel21 = new System.Windows.Forms.Panel();
             this.panel22 = new System.Windows.Forms.Panel();
             this.panelBorderRounded1 = new Interface.TemplateComponents.PanelBorderRounded();
-            this.tbValorPagoHora = new TemplateComponents.TextMoney();
+            this.tbValorPagoHora = new Interface.TemplateComponents.TextMoney();
             this.label15 = new System.Windows.Forms.Label();
             this.panel19 = new System.Windows.Forms.Panel();
             this.panel20 = new System.Windows.Forms.Panel();
             this.panelValor = new Interface.TemplateComponents.PanelBorderRounded();
+            this.tbPgot = new Interface.TemplateComponents.TextMoney();
             this.label14 = new System.Windows.Forms.Label();
             this.panel17 = new System.Windows.Forms.Panel();
             this.panel18 = new System.Windows.Forms.Panel();
@@ -144,7 +145,7 @@
             this.panel15 = new System.Windows.Forms.Panel();
             this.panel16 = new System.Windows.Forms.Panel();
             this.panelBorderRounded9 = new Interface.TemplateComponents.PanelBorderRounded();
-            this.tbValorPagoKM = new TemplateComponents.TextMoney();
+            this.tbValorPagoKM = new Interface.TemplateComponents.TextMoney();
             this.label11 = new System.Windows.Forms.Label();
             this.panelButton = new System.Windows.Forms.Panel();
             this.buscarPlaca = new System.Windows.Forms.Button();
@@ -154,7 +155,6 @@
             this.panel51 = new System.Windows.Forms.Panel();
             this.button10 = new System.Windows.Forms.Button();
             this.labelUFClient = new System.Windows.Forms.Label();
-            this.tbPgot = new TemplateComponents.TextMoney();
             this.searchPanel.SuspendLayout();
             this.panelSerch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -238,7 +238,7 @@
             this.searchPanel.Name = "searchPanel";
             this.searchPanel.Padding = new System.Windows.Forms.Padding(0, 13, 0, 13);
             this.searchPanel.Size = new System.Drawing.Size(975, 62);
-            this.searchPanel.TabIndex = 13;
+            this.searchPanel.TabIndex = 1;
             // 
             // panelSerch
             // 
@@ -312,7 +312,7 @@
             this.contentVeiculos.Name = "contentVeiculos";
             this.contentVeiculos.Padding = new System.Windows.Forms.Padding(40);
             this.contentVeiculos.Size = new System.Drawing.Size(975, 1031);
-            this.contentVeiculos.TabIndex = 14;
+            this.contentVeiculos.TabIndex = 2;
             // 
             // tableLayoutPanel3
             // 
@@ -357,7 +357,7 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(895, 802);
-            this.tableLayoutPanel3.TabIndex = 14;
+            this.tableLayoutPanel3.TabIndex = 3;
             // 
             // panel23
             // 
@@ -405,7 +405,7 @@
             this.tbAdicionalMotorista.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbAdicionalMotorista.Name = "tbAdicionalMotorista";
             this.tbAdicionalMotorista.Size = new System.Drawing.Size(236, 22);
-            this.tbAdicionalMotorista.TabIndex = 1;
+            this.tbAdicionalMotorista.TabIndex = 27;
             // 
             // textBoxOnlyNum_Letters1
             // 
@@ -441,7 +441,7 @@
             this.panel21.Name = "panel21";
             this.panel21.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
             this.panel21.Size = new System.Drawing.Size(298, 100);
-            this.panel21.TabIndex = 20;
+            this.panel21.TabIndex = 18;
             // 
             // panel22
             // 
@@ -476,7 +476,7 @@
             this.tbValorPagoHora.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbValorPagoHora.Name = "tbValorPagoHora";
             this.tbValorPagoHora.Size = new System.Drawing.Size(225, 22);
-            this.tbValorPagoHora.TabIndex = 0;
+            this.tbValorPagoHora.TabIndex = 24;
             // 
             // label15
             // 
@@ -524,6 +524,18 @@
             this.panelValor.Size = new System.Drawing.Size(248, 33);
             this.panelValor.TabIndex = 2;
             // 
+            // tbPgot
+            // 
+            this.tbPgot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.tbPgot.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbPgot.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbPgot.ForeColor = System.Drawing.Color.White;
+            this.tbPgot.Location = new System.Drawing.Point(5, 6);
+            this.tbPgot.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.tbPgot.Name = "tbPgot";
+            this.tbPgot.Size = new System.Drawing.Size(225, 22);
+            this.tbPgot.TabIndex = 25;
+            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -545,7 +557,7 @@
             this.panel17.Name = "panel17";
             this.panel17.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
             this.panel17.Size = new System.Drawing.Size(299, 100);
-            this.panel17.TabIndex = 18;
+            this.panel17.TabIndex = 20;
             // 
             // panel18
             // 
@@ -581,7 +593,7 @@
             this.tbAdiconalCarroceria.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbAdiconalCarroceria.Name = "tbAdiconalCarroceria";
             this.tbAdiconalCarroceria.Size = new System.Drawing.Size(235, 22);
-            this.tbAdiconalCarroceria.TabIndex = 0;
+            this.tbAdiconalCarroceria.TabIndex = 26;
             // 
             // A
             // 
@@ -604,7 +616,7 @@
             this.panel9.Name = "panel9";
             this.panel9.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
             this.panel9.Size = new System.Drawing.Size(298, 100);
-            this.panel9.TabIndex = 14;
+            this.panel9.TabIndex = 12;
             // 
             // panel10
             // 
@@ -641,7 +653,7 @@
             this.mkRNTRC.Mask = "00000000";
             this.mkRNTRC.Name = "mkRNTRC";
             this.mkRNTRC.Size = new System.Drawing.Size(216, 22);
-            this.mkRNTRC.TabIndex = 2;
+            this.mkRNTRC.TabIndex = 18;
             this.mkRNTRC.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // label6
@@ -702,7 +714,7 @@
             this.mkRenavam.Mask = "000000000";
             this.mkRenavam.Name = "mkRenavam";
             this.mkRenavam.Size = new System.Drawing.Size(236, 22);
-            this.mkRenavam.TabIndex = 1;
+            this.mkRenavam.TabIndex = 19;
             this.mkRenavam.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // label4
@@ -726,7 +738,7 @@
             this.panel5.Name = "panel5";
             this.panel5.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
             this.panel5.Size = new System.Drawing.Size(299, 100);
-            this.panel5.TabIndex = 12;
+            this.panel5.TabIndex = 14;
             // 
             // panel6
             // 
@@ -762,7 +774,7 @@
             this.tbCIOT.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbCIOT.Name = "tbCIOT";
             this.tbCIOT.Size = new System.Drawing.Size(235, 22);
-            this.tbCIOT.TabIndex = 1;
+            this.tbCIOT.TabIndex = 20;
             // 
             // label3
             // 
@@ -820,7 +832,7 @@
             this.tbCapacidadeM3.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbCapacidadeM3.Name = "tbCapacidadeM3";
             this.tbCapacidadeM3.Size = new System.Drawing.Size(225, 22);
-            this.tbCapacidadeM3.TabIndex = 0;
+            this.tbCapacidadeM3.TabIndex = 17;
             // 
             // label2
             // 
@@ -878,7 +890,7 @@
             this.tbTara.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbTara.Name = "tbTara";
             this.tbTara.Size = new System.Drawing.Size(225, 22);
-            this.tbTara.TabIndex = 1;
+            this.tbTara.TabIndex = 16;
             // 
             // label1
             // 
@@ -999,7 +1011,7 @@
             this.tbMarca.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbMarca.Name = "tbMarca";
             this.tbMarca.Size = new System.Drawing.Size(213, 22);
-            this.tbMarca.TabIndex = 0;
+            this.tbMarca.TabIndex = 2;
             // 
             // labelNomeClient
             // 
@@ -1058,7 +1070,7 @@
             this.tbModelo.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbModelo.Name = "tbModelo";
             this.tbModelo.Size = new System.Drawing.Size(235, 22);
-            this.tbModelo.TabIndex = 0;
+            this.tbModelo.TabIndex = 3;
             // 
             // label5
             // 
@@ -1123,7 +1135,7 @@
             this.comboTipoVeiculo.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.comboTipoVeiculo.Name = "comboTipoVeiculo";
             this.comboTipoVeiculo.Size = new System.Drawing.Size(244, 33);
-            this.comboTipoVeiculo.TabIndex = 7;
+            this.comboTipoVeiculo.TabIndex = 4;
             // 
             // labelGeneroClient
             // 
@@ -1189,7 +1201,7 @@
             this.comboTipoCarroceria.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.comboTipoCarroceria.Name = "comboTipoCarroceria";
             this.comboTipoCarroceria.Size = new System.Drawing.Size(244, 33);
-            this.comboTipoCarroceria.TabIndex = 8;
+            this.comboTipoCarroceria.TabIndex = 5;
             // 
             // label7
             // 
@@ -1248,7 +1260,7 @@
             this.tbEixo.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbEixo.Name = "tbEixo";
             this.tbEixo.Size = new System.Drawing.Size(235, 22);
-            this.tbEixo.TabIndex = 1;
+            this.tbEixo.TabIndex = 6;
             // 
             // labelTelefoneClient
             // 
@@ -1308,7 +1320,7 @@
             this.mkAnoFabricacao.Mask = "0000";
             this.mkAnoFabricacao.Name = "mkAnoFabricacao";
             this.mkAnoFabricacao.Size = new System.Drawing.Size(236, 22);
-            this.mkAnoFabricacao.TabIndex = 1;
+            this.mkAnoFabricacao.TabIndex = 11;
             this.mkAnoFabricacao.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // labelEmailClient
@@ -1367,7 +1379,7 @@
             this.tbCor.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbCor.Name = "tbCor";
             this.tbCor.Size = new System.Drawing.Size(213, 22);
-            this.tbCor.TabIndex = 0;
+            this.tbCor.TabIndex = 12;
             // 
             // label10
             // 
@@ -1490,7 +1502,7 @@
             this.comboCidade.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.comboCidade.Name = "comboCidade";
             this.comboCidade.Size = new System.Drawing.Size(134, 33);
-            this.comboCidade.TabIndex = 6;
+            this.comboCidade.TabIndex = 14;
             // 
             // panelEndereco
             // 
@@ -1536,7 +1548,7 @@
             this.tbCapacidadeKG.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbCapacidadeKG.Name = "tbCapacidadeKG";
             this.tbCapacidadeKG.Size = new System.Drawing.Size(225, 22);
-            this.tbCapacidadeKG.TabIndex = 0;
+            this.tbCapacidadeKG.TabIndex = 15;
             // 
             // label13
             // 
@@ -1594,7 +1606,7 @@
             this.tbMotorista.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbMotorista.Name = "tbMotorista";
             this.tbMotorista.Size = new System.Drawing.Size(213, 22);
-            this.tbMotorista.TabIndex = 1;
+            this.tbMotorista.TabIndex = 21;
             // 
             // label8
             // 
@@ -1654,7 +1666,7 @@
             this.mkCPF.Mask = "000.000.000-00";
             this.mkCPF.Name = "mkCPF";
             this.mkCPF.Size = new System.Drawing.Size(236, 22);
-            this.mkCPF.TabIndex = 1;
+            this.mkCPF.TabIndex = 22;
             this.mkCPF.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // label9
@@ -1713,7 +1725,7 @@
             this.tbValorPagoKM.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbValorPagoKM.Name = "tbValorPagoKM";
             this.tbValorPagoKM.Size = new System.Drawing.Size(225, 22);
-            this.tbValorPagoKM.TabIndex = 1;
+            this.tbValorPagoKM.TabIndex = 23;
             // 
             // label11
             // 
@@ -1742,7 +1754,7 @@
             this.panelButton.Name = "panelButton";
             this.panelButton.Padding = new System.Windows.Forms.Padding(40, 0, 40, 0);
             this.panelButton.Size = new System.Drawing.Size(975, 50);
-            this.panelButton.TabIndex = 7;
+            this.panelButton.TabIndex = 4;
             // 
             // buscarPlaca
             // 
@@ -1858,18 +1870,6 @@
             this.labelUFClient.Size = new System.Drawing.Size(26, 17);
             this.labelUFClient.TabIndex = 0;
             this.labelUFClient.Text = "UF";
-            // 
-            // tbPgot
-            // 
-            this.tbPgot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.tbPgot.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbPgot.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbPgot.ForeColor = System.Drawing.Color.White;
-            this.tbPgot.Location = new System.Drawing.Point(5, 6);
-            this.tbPgot.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.tbPgot.Name = "tbPgot";
-            this.tbPgot.Size = new System.Drawing.Size(231, 22);
-            this.tbPgot.TabIndex = 1;
             // 
             // CadastroVeiculos
             // 

@@ -770,7 +770,7 @@ namespace Interface
             this.navbar1.MinimumSize = new System.Drawing.Size(288, 114);
             this.navbar1.Name = "navbar1";
             this.navbar1.Size = new System.Drawing.Size(288, 620);
-            this.navbar1.TabIndex = 0;
+            this.navbar1.TabIndex = 10;
             // 
             // Dash
             // 

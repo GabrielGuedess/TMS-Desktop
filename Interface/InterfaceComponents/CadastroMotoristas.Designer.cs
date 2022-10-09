@@ -45,7 +45,7 @@
             this.panel29 = new System.Windows.Forms.Panel();
             this.panel30 = new System.Windows.Forms.Panel();
             this.panelBorderRounded14 = new Interface.TemplateComponents.PanelBorderRounded();
-            this.dateVencimentoCNH = new Interface.TemplateComponents.EmpDateTimer();
+            this.dateVencimentoCNH = new Interface.TemplateComponents.MkDate();
             this.label13 = new System.Windows.Forms.Label();
             this.panel31 = new System.Windows.Forms.Panel();
             this.panel32 = new System.Windows.Forms.Panel();
@@ -78,10 +78,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel20 = new System.Windows.Forms.Panel();
             this.panel38 = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
-            this.comboUF = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.comboCidade = new System.Windows.Forms.ComboBox();
+            this.comboUF = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panelBorderRoundedID = new Interface.TemplateComponents.PanelBorderRounded();
@@ -95,7 +95,7 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panelBorderRounded4 = new Interface.TemplateComponents.PanelBorderRounded();
-            this.dateNascimento = new Interface.TemplateComponents.EmpDateTimer();
+            this.dateNascimento = new Interface.TemplateComponents.MkDate();
             this.label3 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -125,6 +125,8 @@
             this.panel19 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panelBorderRounded1 = new Interface.TemplateComponents.PanelBorderRounded();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.mkCEP = new Interface.TemplateComponents.MasckedboxTemplete();
             this.label1 = new System.Windows.Forms.Label();
             this.panelButton = new System.Windows.Forms.Panel();
             this.buscarCPF = new System.Windows.Forms.Button();
@@ -140,8 +142,6 @@
             this.typeData = new System.Windows.Forms.Label();
             this.maskInput = new Interface.TemplateComponents.MasckedboxTemplete();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.mkCEP = new Interface.TemplateComponents.MasckedboxTemplete();
             this.contentMotorista.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel25.SuspendLayout();
@@ -198,12 +198,12 @@
             this.panel19.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelBorderRounded1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelButton.SuspendLayout();
             this.panel51.SuspendLayout();
             this.searchPanel.SuspendLayout();
             this.panelSerch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // contentMotorista
@@ -320,7 +320,7 @@
             this.mkCNH.Mask = "0000000000";
             this.mkCNH.Name = "mkCNH";
             this.mkCNH.Size = new System.Drawing.Size(228, 22);
-            this.mkCNH.TabIndex = 3;
+            this.mkCNH.TabIndex = 17;
             this.mkCNH.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // label7
@@ -382,7 +382,7 @@
             this.comboCNH.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.comboCNH.Name = "comboCNH";
             this.comboCNH.Size = new System.Drawing.Size(248, 29);
-            this.comboCNH.TabIndex = 6;
+            this.comboCNH.TabIndex = 18;
             // 
             // label10
             // 
@@ -433,13 +433,18 @@
             // dateVencimentoCNH
             // 
             this.dateVencimentoCNH.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateVencimentoCNH.CustomFormat = " ";
-            this.dateVencimentoCNH.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateVencimentoCNH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.dateVencimentoCNH.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dateVencimentoCNH.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dateVencimentoCNH.ForeColor = System.Drawing.Color.White;
             this.dateVencimentoCNH.Location = new System.Drawing.Point(10, 5);
             this.dateVencimentoCNH.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.dateVencimentoCNH.Mask = "00/00/0000";
             this.dateVencimentoCNH.Name = "dateVencimentoCNH";
-            this.dateVencimentoCNH.Size = new System.Drawing.Size(228, 23);
-            this.dateVencimentoCNH.TabIndex = 3;
+            this.dateVencimentoCNH.Size = new System.Drawing.Size(228, 22);
+            this.dateVencimentoCNH.TabIndex = 15;
+            this.dateVencimentoCNH.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.dateVencimentoCNH.ValidatingType = typeof(System.DateTime);
             // 
             // label13
             // 
@@ -492,7 +497,7 @@
             this.comboVeiculoProprio.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.comboVeiculoProprio.Name = "comboVeiculoProprio";
             this.comboVeiculoProprio.Size = new System.Drawing.Size(248, 29);
-            this.comboVeiculoProprio.TabIndex = 5;
+            this.comboVeiculoProprio.TabIndex = 20;
             // 
             // label16
             // 
@@ -545,7 +550,7 @@
             this.comboMOPP.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.comboMOPP.Name = "comboMOPP";
             this.comboMOPP.Size = new System.Drawing.Size(248, 29);
-            this.comboMOPP.TabIndex = 6;
+            this.comboMOPP.TabIndex = 21;
             // 
             // label17
             // 
@@ -636,7 +641,7 @@
             this.tbComplemento.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbComplemento.Name = "tbComplemento";
             this.tbComplemento.Size = new System.Drawing.Size(225, 22);
-            this.tbComplemento.TabIndex = 2;
+            this.tbComplemento.TabIndex = 16;
             // 
             // label19
             // 
@@ -694,7 +699,7 @@
             this.tbBairro.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbBairro.Name = "tbBairro";
             this.tbBairro.Size = new System.Drawing.Size(225, 22);
-            this.tbBairro.TabIndex = 2;
+            this.tbBairro.TabIndex = 15;
             // 
             // label20
             // 
@@ -763,7 +768,7 @@
             this.tbNumCasa.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbNumCasa.Name = "tbNumCasa";
             this.tbNumCasa.Size = new System.Drawing.Size(49, 22);
-            this.tbNumCasa.TabIndex = 0;
+            this.tbNumCasa.TabIndex = 14;
             // 
             // label22
             // 
@@ -798,7 +803,7 @@
             this.tbLogradouro.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbLogradouro.Name = "tbLogradouro";
             this.tbLogradouro.Size = new System.Drawing.Size(225, 22);
-            this.tbLogradouro.TabIndex = 2;
+            this.tbLogradouro.TabIndex = 13;
             // 
             // label15
             // 
@@ -827,8 +832,8 @@
             // 
             this.panel20.BackColor = System.Drawing.Color.Transparent;
             this.panel20.Controls.Add(this.panel38);
-            this.panel20.Controls.Add(this.label12);
-            this.panel20.Controls.Add(this.comboCidade);
+            this.panel20.Controls.Add(this.comboUF);
+            this.panel20.Controls.Add(this.label14);
             this.panel20.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel20.Location = new System.Drawing.Point(20, 20);
             this.panel20.Margin = new System.Windows.Forms.Padding(0);
@@ -838,24 +843,38 @@
             // 
             // panel38
             // 
-            this.panel38.Controls.Add(this.label14);
-            this.panel38.Controls.Add(this.comboUF);
-            this.panel38.Location = new System.Drawing.Point(0, 0);
+            this.panel38.Controls.Add(this.label12);
+            this.panel38.Controls.Add(this.comboCidade);
+            this.panel38.Location = new System.Drawing.Point(96, 0);
             this.panel38.Name = "panel38";
-            this.panel38.Size = new System.Drawing.Size(98, 70);
+            this.panel38.Size = new System.Drawing.Size(162, 70);
             this.panel38.TabIndex = 8;
             // 
-            // label14
+            // label12
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(5, 5);
-            this.label14.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(26, 17);
-            this.label14.TabIndex = 0;
-            this.label14.Text = "UF";
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(2, 4);
+            this.label12.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(52, 17);
+            this.label12.TabIndex = 7;
+            this.label12.Text = "Cidade";
+            // 
+            // comboCidade
+            // 
+            this.comboCidade.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboCidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
+            this.comboCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.comboCidade.ForeColor = System.Drawing.Color.White;
+            this.comboCidade.FormattingEnabled = true;
+            this.comboCidade.Location = new System.Drawing.Point(2, 35);
+            this.comboCidade.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
+            this.comboCidade.Name = "comboCidade";
+            this.comboCidade.Size = new System.Drawing.Size(155, 33);
+            this.comboCidade.TabIndex = 11;
             // 
             // comboUF
             // 
@@ -895,33 +914,19 @@
             this.comboUF.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.comboUF.Name = "comboUF";
             this.comboUF.Size = new System.Drawing.Size(72, 33);
-            this.comboUF.TabIndex = 5;
+            this.comboUF.TabIndex = 7;
             // 
-            // label12
+            // label14
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(125, 5);
-            this.label12.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(52, 17);
-            this.label12.TabIndex = 7;
-            this.label12.Text = "Cidade";
-            // 
-            // comboCidade
-            // 
-            this.comboCidade.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboCidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
-            this.comboCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.comboCidade.ForeColor = System.Drawing.Color.White;
-            this.comboCidade.FormattingEnabled = true;
-            this.comboCidade.Location = new System.Drawing.Point(101, 36);
-            this.comboCidade.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
-            this.comboCidade.Name = "comboCidade";
-            this.comboCidade.Size = new System.Drawing.Size(152, 33);
-            this.comboCidade.TabIndex = 6;
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(5, 4);
+            this.label14.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(26, 17);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "UF";
             // 
             // panel3
             // 
@@ -971,7 +976,7 @@
             this.tbID.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbID.Name = "tbID";
             this.tbID.Size = new System.Drawing.Size(233, 22);
-            this.tbID.TabIndex = 0;
+            this.tbID.TabIndex = 2;
             // 
             // labelId
             // 
@@ -1030,7 +1035,7 @@
             this.tbNome.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbNome.Name = "tbNome";
             this.tbNome.Size = new System.Drawing.Size(228, 22);
-            this.tbNome.TabIndex = 2;
+            this.tbNome.TabIndex = 3;
             // 
             // label2
             // 
@@ -1081,14 +1086,18 @@
             // dateNascimento
             // 
             this.dateNascimento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateNascimento.CustomFormat = " ";
-            this.dateNascimento.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dateNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateNascimento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.dateNascimento.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dateNascimento.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dateNascimento.ForeColor = System.Drawing.Color.White;
             this.dateNascimento.Location = new System.Drawing.Point(10, 5);
             this.dateNascimento.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.dateNascimento.Mask = "00/00/0000";
             this.dateNascimento.Name = "dateNascimento";
-            this.dateNascimento.Size = new System.Drawing.Size(228, 23);
-            this.dateNascimento.TabIndex = 2;
+            this.dateNascimento.Size = new System.Drawing.Size(228, 22);
+            this.dateNascimento.TabIndex = 14;
+            this.dateNascimento.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.dateNascimento.ValidatingType = typeof(System.DateTime);
             // 
             // label3
             // 
@@ -1148,7 +1157,7 @@
             this.mkCPF.Mask = "000.000.000-00";
             this.mkCPF.Name = "mkCPF";
             this.mkCPF.Size = new System.Drawing.Size(233, 22);
-            this.mkCPF.TabIndex = 2;
+            this.mkCPF.TabIndex = 5;
             this.mkCPF.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // label4
@@ -1209,7 +1218,7 @@
             this.mkRG.Mask = "00.000.000-0";
             this.mkRG.Name = "mkRG";
             this.mkRG.Size = new System.Drawing.Size(233, 22);
-            this.mkRG.TabIndex = 2;
+            this.mkRG.TabIndex = 6;
             this.mkRG.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // label6
@@ -1270,7 +1279,7 @@
             this.mkTelefone.Mask = "(00) 0000-0000";
             this.mkTelefone.Name = "mkTelefone";
             this.mkTelefone.Size = new System.Drawing.Size(228, 22);
-            this.mkTelefone.TabIndex = 4;
+            this.mkTelefone.TabIndex = 7;
             this.mkTelefone.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // label8
@@ -1331,7 +1340,7 @@
             this.mkCelular.Mask = "(00) 00000-0000";
             this.mkCelular.Name = "mkCelular";
             this.mkCelular.Size = new System.Drawing.Size(233, 22);
-            this.mkCelular.TabIndex = 5;
+            this.mkCelular.TabIndex = 8;
             this.mkCelular.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // label9
@@ -1390,7 +1399,7 @@
             this.tbEmail.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(225, 22);
-            this.tbEmail.TabIndex = 2;
+            this.tbEmail.TabIndex = 9;
             // 
             // label11
             // 
@@ -1439,6 +1448,35 @@
             this.panelBorderRounded1.Size = new System.Drawing.Size(249, 33);
             this.panelBorderRounded1.TabIndex = 2;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(224, 9);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0, 9, 10, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(15, 15);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // mkCEP
+            // 
+            this.mkCEP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.mkCEP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.mkCEP.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mkCEP.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.mkCEP.ForeColor = System.Drawing.Color.White;
+            this.mkCEP.Location = new System.Drawing.Point(9, 6);
+            this.mkCEP.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.mkCEP.Mask = "00000-000";
+            this.mkCEP.Name = "mkCEP";
+            this.mkCEP.Size = new System.Drawing.Size(205, 22);
+            this.mkCEP.TabIndex = 10;
+            this.mkCEP.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -1481,7 +1519,7 @@
             this.buscarCPF.Margin = new System.Windows.Forms.Padding(0, 0, 40, 0);
             this.buscarCPF.Name = "buscarCPF";
             this.buscarCPF.Size = new System.Drawing.Size(180, 50);
-            this.buscarCPF.TabIndex = 15;
+            this.buscarCPF.TabIndex = 22;
             this.buscarCPF.Text = "Buscar CPF";
             this.buscarCPF.UseVisualStyleBackColor = false;
             this.buscarCPF.Visible = false;
@@ -1501,7 +1539,7 @@
             this.cadastrarMotoristas.Margin = new System.Windows.Forms.Padding(0, 0, 40, 0);
             this.cadastrarMotoristas.Name = "cadastrarMotoristas";
             this.cadastrarMotoristas.Size = new System.Drawing.Size(180, 50);
-            this.cadastrarMotoristas.TabIndex = 13;
+            this.cadastrarMotoristas.TabIndex = 23;
             this.cadastrarMotoristas.Text = "Cadastrar";
             this.cadastrarMotoristas.UseVisualStyleBackColor = false;
             this.cadastrarMotoristas.Click += new System.EventHandler(this.cadastrarMotoristas_Click);
@@ -1647,7 +1685,7 @@
             this.maskInput.Mask = "000.000.000-00";
             this.maskInput.Name = "maskInput";
             this.maskInput.Size = new System.Drawing.Size(222, 22);
-            this.maskInput.TabIndex = 5;
+            this.maskInput.TabIndex = 1;
             this.maskInput.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.maskInput.TextChanged += new System.EventHandler(this.maskInput_TextChanged);
             // 
@@ -1662,35 +1700,6 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 1;
             this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(224, 9);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0, 9, 10, 9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(15, 15);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // mkCEP
-            // 
-            this.mkCEP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.mkCEP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.mkCEP.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.mkCEP.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.mkCEP.ForeColor = System.Drawing.Color.White;
-            this.mkCEP.Location = new System.Drawing.Point(9, 6);
-            this.mkCEP.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.mkCEP.Mask = "00000-000";
-            this.mkCEP.Name = "mkCEP";
-            this.mkCEP.Size = new System.Drawing.Size(205, 22);
-            this.mkCEP.TabIndex = 12;
-            this.mkCEP.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // CadastroMotoristas
             // 
@@ -1717,6 +1726,7 @@
             this.panel30.ResumeLayout(false);
             this.panel30.PerformLayout();
             this.panelBorderRounded14.ResumeLayout(false);
+            this.panelBorderRounded14.PerformLayout();
             this.panel31.ResumeLayout(false);
             this.panel32.ResumeLayout(false);
             this.panel32.PerformLayout();
@@ -1762,6 +1772,7 @@
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panelBorderRounded4.ResumeLayout(false);
+            this.panelBorderRounded4.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
@@ -1792,13 +1803,13 @@
             this.panel2.PerformLayout();
             this.panelBorderRounded1.ResumeLayout(false);
             this.panelBorderRounded1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelButton.ResumeLayout(false);
             this.panel51.ResumeLayout(false);
             this.searchPanel.ResumeLayout(false);
             this.panelSerch.ResumeLayout(false);
             this.panelSerch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1871,7 +1882,6 @@
         private PictureBox pictureBox3;
         private Button cadastrarMotoristas;
         private Interface.TemplateComponents.TextBoxOnlyLetters tbNome;
-        private Interface.TemplateComponents.EmpDateTimer dateNascimento;
         private TemplateComponents.MasckedboxTemplete mkCPF;
         private TemplateComponents.MasckedboxTemplete mkRG;
         private TemplateComponents.MasckedboxTemplete mkTelefone;
@@ -1881,7 +1891,6 @@
         private ComboBox comboMOPP;
         private TemplateComponents.MasckedboxTemplete mkCNH;
         private ComboBox comboCNH;
-        private Interface.TemplateComponents.EmpDateTimer dateVencimentoCNH;
         private TemplateComponents.TextBoxOnlyNum_Letters tbID;
         private Label typeData;
         private TemplateComponents.MasckedboxTemplete maskInput;
@@ -1918,5 +1927,7 @@
         private TemplateComponents.TextBoxOnlyNum_Letters tbNumCasa;
         private PictureBox pictureBox1;
         private TemplateComponents.MasckedboxTemplete mkCEP;
+        private TemplateComponents.MkDate dateNascimento;
+        private TemplateComponents.MkDate dateVencimentoCNH;
     }
 }

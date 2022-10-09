@@ -136,7 +136,7 @@
             this.mkSearchChaveAcesso.Mask = "00-0000-00000000000000-00-000-000000000-00000000-0";
             this.mkSearchChaveAcesso.Name = "mkSearchChaveAcesso";
             this.mkSearchChaveAcesso.Size = new System.Drawing.Size(166, 22);
-            this.mkSearchChaveAcesso.TabIndex = 5;
+            this.mkSearchChaveAcesso.TabIndex = 1;
             this.mkSearchChaveAcesso.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // typeData
@@ -255,7 +255,7 @@
             this.tbIDNotaFiscal.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbIDNotaFiscal.Name = "tbIDNotaFiscal";
             this.tbIDNotaFiscal.Size = new System.Drawing.Size(228, 22);
-            this.tbIDNotaFiscal.TabIndex = 1;
+            this.tbIDNotaFiscal.TabIndex = 2;
             // 
             // labelCPFClient
             // 
@@ -316,7 +316,7 @@
             this.mkChaveAcesso.Mask = "00-0000-00000000000000-00-000-000000000-00000000-0";
             this.mkChaveAcesso.Name = "mkChaveAcesso";
             this.mkChaveAcesso.Size = new System.Drawing.Size(228, 22);
-            this.mkChaveAcesso.TabIndex = 2;
+            this.mkChaveAcesso.TabIndex = 3;
             this.mkChaveAcesso.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // labelNomeClient
@@ -376,7 +376,7 @@
             this.tbNumero.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbNumero.Name = "tbNumero";
             this.tbNumero.Size = new System.Drawing.Size(228, 22);
-            this.tbNumero.TabIndex = 0;
+            this.tbNumero.TabIndex = 4;
             // 
             // label5
             // 
@@ -435,7 +435,7 @@
             this.tbTipoNota.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbTipoNota.Name = "tbTipoNota";
             this.tbTipoNota.Size = new System.Drawing.Size(228, 22);
-            this.tbTipoNota.TabIndex = 1;
+            this.tbTipoNota.TabIndex = 5;
             // 
             // labelGeneroClient
             // 
@@ -494,7 +494,7 @@
             this.tbSerieNota.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbSerieNota.Name = "tbSerieNota";
             this.tbSerieNota.Size = new System.Drawing.Size(228, 22);
-            this.tbSerieNota.TabIndex = 1;
+            this.tbSerieNota.TabIndex = 6;
             // 
             // label7
             // 
@@ -553,7 +553,7 @@
             this.tbDescricaoNota.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbDescricaoNota.Name = "tbDescricaoNota";
             this.tbDescricaoNota.Size = new System.Drawing.Size(228, 22);
-            this.tbDescricaoNota.TabIndex = 1;
+            this.tbDescricaoNota.TabIndex = 7;
             // 
             // labelTelefoneClient
             // 
@@ -595,7 +595,7 @@
             this.buscarCod.Margin = new System.Windows.Forms.Padding(0, 0, 40, 0);
             this.buscarCod.Name = "buscarCod";
             this.buscarCod.Size = new System.Drawing.Size(180, 50);
-            this.buscarCod.TabIndex = 15;
+            this.buscarCod.TabIndex = 8;
             this.buscarCod.Text = "Buscar Código";
             this.buscarCod.UseVisualStyleBackColor = false;
             this.buscarCod.Visible = false;
@@ -615,7 +615,7 @@
             this.cadastrarNota.Margin = new System.Windows.Forms.Padding(0, 0, 40, 0);
             this.cadastrarNota.Name = "cadastrarNota";
             this.cadastrarNota.Size = new System.Drawing.Size(180, 50);
-            this.cadastrarNota.TabIndex = 12;
+            this.cadastrarNota.TabIndex = 9;
             this.cadastrarNota.Text = "Cadastrar";
             this.cadastrarNota.UseVisualStyleBackColor = false;
             this.cadastrarNota.Click += new System.EventHandler(this.cadastrarNota_Click);

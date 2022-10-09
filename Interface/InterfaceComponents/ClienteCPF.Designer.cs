@@ -44,7 +44,7 @@
             this.panelDtNascClient = new System.Windows.Forms.Panel();
             this.subpanelDtNascClient = new System.Windows.Forms.Panel();
             this.panelDateTimerClient = new Interface.TemplateComponents.PanelBorderRounded();
-            this.dateNascimento = new Interface.TemplateComponents.EmpDateTimer();
+            this.dateNascimento = new Interface.TemplateComponents.MkDate();
             this.label5 = new System.Windows.Forms.Label();
             this.panelGeneroClient = new System.Windows.Forms.Panel();
             this.subpanelGeneroClient = new System.Windows.Forms.Panel();
@@ -171,7 +171,7 @@
             this.contentCPF.Name = "contentCPF";
             this.contentCPF.Padding = new System.Windows.Forms.Padding(40);
             this.contentCPF.Size = new System.Drawing.Size(975, 690);
-            this.contentCPF.TabIndex = 9;
+            this.contentCPF.TabIndex = 1;
             // 
             // tableLayoutPanel3
             // 
@@ -204,7 +204,7 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(895, 500);
-            this.tableLayoutPanel3.TabIndex = 12;
+            this.tableLayoutPanel3.TabIndex = 1;
             // 
             // panelCPF
             // 
@@ -253,7 +253,7 @@
             this.mkCPF.Mask = "000.000.000-00";
             this.mkCPF.Name = "mkCPF";
             this.mkCPF.Size = new System.Drawing.Size(233, 22);
-            this.mkCPF.TabIndex = 10;
+            this.mkCPF.TabIndex = 0;
             this.mkCPF.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // labelCPFClient
@@ -313,7 +313,7 @@
             this.tbNome.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbNome.Name = "tbNome";
             this.tbNome.Size = new System.Drawing.Size(228, 22);
-            this.tbNome.TabIndex = 0;
+            this.tbNome.TabIndex = 1;
             // 
             // labelNomeClient
             // 
@@ -364,13 +364,18 @@
             // dateNascimento
             // 
             this.dateNascimento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateNascimento.CustomFormat = " ";
-            this.dateNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateNascimento.Location = new System.Drawing.Point(10, 5);
+            this.dateNascimento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.dateNascimento.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dateNascimento.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dateNascimento.ForeColor = System.Drawing.Color.White;
+            this.dateNascimento.Location = new System.Drawing.Point(10, 6);
             this.dateNascimento.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.dateNascimento.Mask = "00/00/0000";
             this.dateNascimento.Name = "dateNascimento";
-            this.dateNascimento.Size = new System.Drawing.Size(228, 23);
-            this.dateNascimento.TabIndex = 0;
+            this.dateNascimento.Size = new System.Drawing.Size(228, 22);
+            this.dateNascimento.TabIndex = 2;
+            this.dateNascimento.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.dateNascimento.ValidatingType = typeof(System.DateTime);
             // 
             // label5
             // 
@@ -424,7 +429,7 @@
             this.comboGenero.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.comboGenero.Name = "comboGenero";
             this.comboGenero.Size = new System.Drawing.Size(248, 33);
-            this.comboGenero.TabIndex = 4;
+            this.comboGenero.TabIndex = 3;
             // 
             // labelGeneroClient
             // 
@@ -484,7 +489,7 @@
             this.mkRG.Mask = "00.000.000.000";
             this.mkRG.Name = "mkRG";
             this.mkRG.Size = new System.Drawing.Size(228, 22);
-            this.mkRG.TabIndex = 1;
+            this.mkRG.TabIndex = 4;
             this.mkRG.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // label7
@@ -545,7 +550,7 @@
             this.mkTelefone.Mask = "(00) 0000-0000";
             this.mkTelefone.Name = "mkTelefone";
             this.mkTelefone.Size = new System.Drawing.Size(228, 22);
-            this.mkTelefone.TabIndex = 2;
+            this.mkTelefone.TabIndex = 5;
             this.mkTelefone.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // labelTelefoneClient
@@ -592,7 +597,7 @@
             this.panelBorderRounded6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelBorderRounded6.Name = "panelBorderRounded6";
             this.panelBorderRounded6.Size = new System.Drawing.Size(250, 33);
-            this.panelBorderRounded6.TabIndex = 4;
+            this.panelBorderRounded6.TabIndex = 6;
             // 
             // mkCelular
             // 
@@ -606,7 +611,7 @@
             this.mkCelular.Mask = "(00) 00000-0000";
             this.mkCelular.Name = "mkCelular";
             this.mkCelular.Size = new System.Drawing.Size(229, 22);
-            this.mkCelular.TabIndex = 3;
+            this.mkCelular.TabIndex = 6;
             this.mkCelular.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // label11
@@ -666,7 +671,7 @@
             this.tbEmail.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(225, 22);
-            this.tbEmail.TabIndex = 0;
+            this.tbEmail.TabIndex = 7;
             // 
             // label9
             // 
@@ -741,7 +746,7 @@
             this.mkCEP.Mask = "00000-000";
             this.mkCEP.Name = "mkCEP";
             this.mkCEP.Size = new System.Drawing.Size(205, 22);
-            this.mkCEP.TabIndex = 12;
+            this.mkCEP.TabIndex = 8;
             this.mkCEP.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // label10
@@ -770,9 +775,9 @@
             // subpanelEndereco
             // 
             this.subpanelEndereco.BackColor = System.Drawing.Color.Transparent;
-            this.subpanelEndereco.Controls.Add(this.label3);
+            this.subpanelEndereco.Controls.Add(this.comboUF);
             this.subpanelEndereco.Controls.Add(this.panel1);
-            this.subpanelEndereco.Controls.Add(this.comboCidade);
+            this.subpanelEndereco.Controls.Add(this.label8);
             this.subpanelEndereco.Dock = System.Windows.Forms.DockStyle.Fill;
             this.subpanelEndereco.Location = new System.Drawing.Point(20, 20);
             this.subpanelEndereco.Margin = new System.Windows.Forms.Padding(0);
@@ -785,7 +790,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(116, 3);
+            this.label3.Location = new System.Drawing.Point(4, 3);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 17);
@@ -794,11 +799,11 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.comboUF);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.comboCidade);
+            this.panel1.Location = new System.Drawing.Point(119, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(116, 70);
+            this.panel1.Size = new System.Drawing.Size(139, 70);
             this.panel1.TabIndex = 12;
             // 
             // label8
@@ -847,7 +852,7 @@
             "SP",
             "SE",
             "TO"});
-            this.comboUF.Location = new System.Drawing.Point(5, 37);
+            this.comboUF.Location = new System.Drawing.Point(5, 32);
             this.comboUF.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.comboUF.Name = "comboUF";
             this.comboUF.Size = new System.Drawing.Size(72, 33);
@@ -861,10 +866,10 @@
             this.comboCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.comboCidade.ForeColor = System.Drawing.Color.White;
             this.comboCidade.FormattingEnabled = true;
-            this.comboCidade.Location = new System.Drawing.Point(119, 35);
+            this.comboCidade.Location = new System.Drawing.Point(4, 32);
             this.comboCidade.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.comboCidade.Name = "comboCidade";
-            this.comboCidade.Size = new System.Drawing.Size(135, 33);
+            this.comboCidade.Size = new System.Drawing.Size(127, 33);
             this.comboCidade.TabIndex = 10;
             // 
             // panelTextEnderecoClient
@@ -934,7 +939,7 @@
             this.tbNumCasa.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbNumCasa.Name = "tbNumCasa";
             this.tbNumCasa.Size = new System.Drawing.Size(40, 22);
-            this.tbNumCasa.TabIndex = 0;
+            this.tbNumCasa.TabIndex = 12;
             // 
             // panelBorderRounded1
             // 
@@ -957,7 +962,7 @@
             this.tbLogradouro.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbLogradouro.Name = "tbLogradouro";
             this.tbLogradouro.Size = new System.Drawing.Size(158, 22);
-            this.tbLogradouro.TabIndex = 0;
+            this.tbLogradouro.TabIndex = 11;
             // 
             // label1
             // 
@@ -1015,7 +1020,7 @@
             this.tbBairro.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbBairro.Name = "tbBairro";
             this.tbBairro.Size = new System.Drawing.Size(234, 22);
-            this.tbBairro.TabIndex = 1;
+            this.tbBairro.TabIndex = 13;
             // 
             // label2
             // 
@@ -1073,7 +1078,7 @@
             this.tbComplemento.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbComplemento.Name = "tbComplemento";
             this.tbComplemento.Size = new System.Drawing.Size(234, 22);
-            this.tbComplemento.TabIndex = 2;
+            this.tbComplemento.TabIndex = 0;
             // 
             // textBoxOnlyNum_Letters1
             // 
@@ -1113,7 +1118,7 @@
             this.panelButton.Name = "panelButton";
             this.panelButton.Padding = new System.Windows.Forms.Padding(40, 0, 40, 0);
             this.panelButton.Size = new System.Drawing.Size(975, 50);
-            this.panelButton.TabIndex = 5;
+            this.panelButton.TabIndex = 2;
             // 
             // buscarCPF
             // 
@@ -1128,7 +1133,7 @@
             this.buscarCPF.Margin = new System.Windows.Forms.Padding(0, 0, 40, 0);
             this.buscarCPF.Name = "buscarCPF";
             this.buscarCPF.Size = new System.Drawing.Size(180, 50);
-            this.buscarCPF.TabIndex = 12;
+            this.buscarCPF.TabIndex = 1;
             this.buscarCPF.Text = "Buscar CPF";
             this.buscarCPF.UseVisualStyleBackColor = false;
             this.buscarCPF.Visible = false;
@@ -1148,7 +1153,7 @@
             this.cadastrarCPF.Margin = new System.Windows.Forms.Padding(0, 0, 40, 0);
             this.cadastrarCPF.Name = "cadastrarCPF";
             this.cadastrarCPF.Size = new System.Drawing.Size(180, 50);
-            this.cadastrarCPF.TabIndex = 11;
+            this.cadastrarCPF.TabIndex = 2;
             this.cadastrarCPF.Text = "Cadastrar";
             this.cadastrarCPF.UseVisualStyleBackColor = false;
             this.cadastrarCPF.Click += new System.EventHandler(this.cadastrar_Click);
@@ -1242,6 +1247,7 @@
             this.subpanelDtNascClient.ResumeLayout(false);
             this.subpanelDtNascClient.PerformLayout();
             this.panelDateTimerClient.ResumeLayout(false);
+            this.panelDateTimerClient.PerformLayout();
             this.panelGeneroClient.ResumeLayout(false);
             this.subpanelGeneroClient.ResumeLayout(false);
             this.subpanelGeneroClient.PerformLayout();
@@ -1345,7 +1351,6 @@
         private TemplateComponents.MasckedboxTemplete mkRG;
         private TemplateComponents.MasckedboxTemplete mkTelefone;
         private Interface.TemplateComponents.TextBoxTemplete tbEmail;
-        private Interface.TemplateComponents.EmpDateTimer dateNascimento;
         private Panel panelTextEnderecoClient;
         private Panel panel3;
         private Label label1;
@@ -1384,5 +1389,6 @@
         private TemplateComponents.MasckedboxTemplete mkCPF;
         private PictureBox pictureBox1;
         private TemplateComponents.MasckedboxTemplete mkCEP;
+        private TemplateComponents.MkDate dateNascimento;
     }
 }

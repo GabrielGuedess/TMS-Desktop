@@ -56,7 +56,7 @@ namespace Interface
                 {
                     mkCPF.Text = value["CPF"].ToString();
                     tbNome.Text = value["Nome"].ToString();
-                    dateNascimento.Format = DateTimePickerFormat.Short;
+                    //dateNascimento.Format = DateTimePickerFormat.Short;
                     dateNascimento.Text = value["Data_de_Nascimento"].ToString();
                     comboGenero.Text = value["Genero"].ToString();
                     mkCelular.Text = value["Celular"].ToString();
@@ -81,7 +81,7 @@ namespace Interface
                     comboTipoContrato.Text = value["TipoContrato"].ToString();
                     comboSituacaoContrato.Text = value["Situacao"].ToString();
                     dateInicioAtividade.Text = value["DataInicioAtividades"].ToString();
-                    if(dateFimAtividade.Text == " ") { }
+                    if(dateFimAtividade.Text == "") { }
                     else
                         dateFimAtividade.Text = value["DataFimAtividades"].ToString();
                 }

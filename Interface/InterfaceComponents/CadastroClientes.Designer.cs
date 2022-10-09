@@ -96,7 +96,7 @@
             this.pessoaJuridica.Margin = new System.Windows.Forms.Padding(0, 19, 0, 0);
             this.pessoaJuridica.Name = "pessoaJuridica";
             this.pessoaJuridica.Size = new System.Drawing.Size(138, 24);
-            this.pessoaJuridica.TabIndex = 3;
+            this.pessoaJuridica.TabIndex = 2;
             this.pessoaJuridica.Text = "Pessoa Jurídica";
             this.pessoaJuridica.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.pessoaJuridica.UseVisualStyleBackColor = true;
@@ -127,7 +127,7 @@
             this.pessoaFisica.Margin = new System.Windows.Forms.Padding(0, 19, 0, 0);
             this.pessoaFisica.Name = "pessoaFisica";
             this.pessoaFisica.Size = new System.Drawing.Size(125, 24);
-            this.pessoaFisica.TabIndex = 2;
+            this.pessoaFisica.TabIndex = 1;
             this.pessoaFisica.TabStop = true;
             this.pessoaFisica.Text = "Pessoa Física";
             this.pessoaFisica.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -201,7 +201,7 @@
             this.mkBoxCdClientSearch.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.mkBoxCdClientSearch.Name = "mkBoxCdClientSearch";
             this.mkBoxCdClientSearch.Size = new System.Drawing.Size(255, 22);
-            this.mkBoxCdClientSearch.TabIndex = 2;
+            this.mkBoxCdClientSearch.TabIndex = 3;
             this.mkBoxCdClientSearch.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.mkBoxCdClientSearch.TextChanged += new System.EventHandler(this.mkBoxCdClientSearch_TextChanged);
             // 

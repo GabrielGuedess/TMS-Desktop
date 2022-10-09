@@ -143,7 +143,7 @@
             this.maskRedeID.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.maskRedeID.Name = "maskRedeID";
             this.maskRedeID.Size = new System.Drawing.Size(225, 22);
-            this.maskRedeID.TabIndex = 2;
+            this.maskRedeID.TabIndex = 1;
             this.maskRedeID.TextChanged += new System.EventHandler(this.numId_TextChanged);
             // 
             // pictureBox3
@@ -242,7 +242,7 @@
             this.panel26.Margin = new System.Windows.Forms.Padding(0);
             this.panel26.Name = "panel26";
             this.panel26.Size = new System.Drawing.Size(258, 70);
-            this.panel26.TabIndex = 7;
+            this.panel26.TabIndex = 888;
             // 
             // comboCategoriaCNH
             // 
@@ -267,7 +267,7 @@
             this.comboCategoriaCNH.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.comboCategoriaCNH.Name = "comboCategoriaCNH";
             this.comboCategoriaCNH.Size = new System.Drawing.Size(248, 29);
-            this.comboCategoriaCNH.TabIndex = 6;
+            this.comboCategoriaCNH.TabIndex = 5;
             // 
             // label7
             // 
@@ -303,7 +303,7 @@
             this.panel28.Margin = new System.Windows.Forms.Padding(0);
             this.panel28.Name = "panel28";
             this.panel28.Size = new System.Drawing.Size(258, 70);
-            this.panel28.TabIndex = 8;
+            this.panel28.TabIndex = 88;
             // 
             // comboTipoVeiculo
             // 
@@ -332,7 +332,7 @@
             this.comboTipoVeiculo.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.comboTipoVeiculo.Name = "comboTipoVeiculo";
             this.comboTipoVeiculo.Size = new System.Drawing.Size(248, 29);
-            this.comboTipoVeiculo.TabIndex = 7;
+            this.comboTipoVeiculo.TabIndex = 6;
             // 
             // label10
             // 
@@ -390,7 +390,7 @@
             this.panel4.Margin = new System.Windows.Forms.Padding(0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(258, 70);
-            this.panel4.TabIndex = 7;
+            this.panel4.TabIndex = 888;
             // 
             // panelBorderRoundedID
             // 
@@ -416,7 +416,7 @@
             this.numID.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.numID.Name = "numID";
             this.numID.Size = new System.Drawing.Size(231, 22);
-            this.numID.TabIndex = 1;
+            this.numID.TabIndex = 2;
             // 
             // labelId
             // 
@@ -452,7 +452,7 @@
             this.panel6.Margin = new System.Windows.Forms.Padding(0);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(258, 70);
-            this.panel6.TabIndex = 8;
+            this.panel6.TabIndex = 888;
             // 
             // panelBorderRounded3
             // 
@@ -476,7 +476,7 @@
             this.tbTipoRede.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbTipoRede.Name = "tbTipoRede";
             this.tbTipoRede.Size = new System.Drawing.Size(232, 22);
-            this.tbTipoRede.TabIndex = 2;
+            this.tbTipoRede.TabIndex = 3;
             // 
             // label2
             // 
@@ -511,7 +511,7 @@
             this.panel8.Margin = new System.Windows.Forms.Padding(0);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(259, 70);
-            this.panel8.TabIndex = 9;
+            this.panel8.TabIndex = 888;
             // 
             // panelBorderRounded4
             // 
@@ -535,7 +535,7 @@
             this.tbDescricaoRede.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbDescricaoRede.Name = "tbDescricaoRede";
             this.tbDescricaoRede.Size = new System.Drawing.Size(232, 22);
-            this.tbDescricaoRede.TabIndex = 2;
+            this.tbDescricaoRede.TabIndex = 4;
             // 
             // label3
             // 
@@ -577,7 +577,7 @@
             this.buscarNumId.Margin = new System.Windows.Forms.Padding(0, 0, 40, 0);
             this.buscarNumId.Name = "buscarNumId";
             this.buscarNumId.Size = new System.Drawing.Size(180, 50);
-            this.buscarNumId.TabIndex = 15;
+            this.buscarNumId.TabIndex = 7;
             this.buscarNumId.Text = "Buscar Rede ID";
             this.buscarNumId.UseVisualStyleBackColor = false;
             this.buscarNumId.Visible = false;
@@ -597,7 +597,7 @@
             this.cadastrarRede.Margin = new System.Windows.Forms.Padding(0, 0, 40, 0);
             this.cadastrarRede.Name = "cadastrarRede";
             this.cadastrarRede.Size = new System.Drawing.Size(180, 50);
-            this.cadastrarRede.TabIndex = 14;
+            this.cadastrarRede.TabIndex = 8;
             this.cadastrarRede.Text = "Cadastrar";
             this.cadastrarRede.UseVisualStyleBackColor = false;
             this.cadastrarRede.Click += new System.EventHandler(this.cadastrarRede_Click);

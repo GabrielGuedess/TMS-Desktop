@@ -58,7 +58,7 @@ namespace Interface.ControlValidationAuxiliary
 
                 else if (control is MaskedTextBox)
                 {
-                    ((MasckedboxTemplete)control).Text = "";
+                    ((MaskedTextBox)control).Text = "";
                 }
                 else if (control is Panel)
                 {
