@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Interface.TemplateComponents
+﻿namespace Interface.TemplateComponents
 {
-    internal class MkDate: MaskedTextBox
+    internal class MkDate : MaskedTextBox
     {
         protected override void InitLayout()
         {
@@ -23,8 +17,9 @@ namespace Interface.TemplateComponents
         protected override void OnKeyPress(KeyPressEventArgs e)
         {
             base.OnKeyPress(e);
-            if (MaskCompleted) { 
-                int dias = int.Parse( Text.Substring(0,2));
+            if (MaskCompleted)
+            {
+                int dias = int.Parse(Text.Substring(0, 2));
                 int mes = int.Parse(Text.Substring(2, 2));
                 int ano = int.Parse(Text.Substring(4));
                 if (dias > 31 || mes > 12 || ano < 1900)

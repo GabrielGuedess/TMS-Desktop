@@ -1,10 +1,8 @@
-﻿using CorreioService;
-using Interface.ControlValidationAuxiliary;
+﻿using Interface.ControlValidationAuxiliary;
 using Interface.DataBaseControls;
 using Interface.Properties;
 using Interface.Utilities;
 using System.Data;
-using System.Runtime.InteropServices;
 
 namespace Interface
 {
@@ -81,7 +79,7 @@ namespace Interface
                     comboTipoContrato.Text = value["TipoContrato"].ToString();
                     comboSituacaoContrato.Text = value["Situacao"].ToString();
                     dateInicioAtividade.Text = value["DataInicioAtividades"].ToString();
-                    if(dateFimAtividade.Text == "") { }
+                    if (dateFimAtividade.Text == "") { }
                     else
                         dateFimAtividade.Text = value["DataFimAtividades"].ToString();
                 }
@@ -253,7 +251,7 @@ namespace Interface
             {
                 ClientCEP clientCEP = new();
                 var result = clientCEP.getCEP(mkCEP.Text);
-                if(result.UF == null)
+                if (result.UF == null)
                 {
                     return;
                 }
@@ -267,5 +265,7 @@ namespace Interface
                 MessageBox.Show($"É necessário preencher o campo CEP corretamente!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        
     }
 }

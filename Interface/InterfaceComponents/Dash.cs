@@ -1,5 +1,4 @@
 using Interface.FormsControls;
-using Interface.Properties;
 using Interface.Utilities;
 using System.Data;
 
@@ -17,7 +16,7 @@ namespace Interface
         {
             set
             {
-                
+
                 if (overview1.CacheType == "Clientes_Fisicos")
                 {
                     cadastroClientes1.Pessoa = "CPF";
@@ -92,7 +91,7 @@ namespace Interface
             RouteDash = dash;
 
             // Método para realizar a troca de pagina (igual um SPA)
-            
+
             navigationDash.NavigationRoutes(
                 overview1,
                 cadastroClientes1,
@@ -106,7 +105,7 @@ namespace Interface
                 cadastroTarifaseTaxas1,
                 cadastroRedesDeTransporte2
               );
-            
+
 
             // Métodos para mostrar qual a pagina selecionada no momento
 
@@ -115,31 +114,31 @@ namespace Interface
             navigationDash.ColorsNavigationLines(lineOverview, lineCadastro, lineUpdate, lineDelete);
 
             //*Dash
-            
+
             navigationDash.ColorsNavigationDashButtons(
-                (Button) navbar1.Controls["panelDropDown"].Controls["panel33"].Controls["buttonClientes"],
-                (Button) navbar1.Controls["panelDropDown"].Controls["panel1"].Controls["buttonUsuarios"],
-                (Button) navbar1.Controls["panelDropDown"].Controls["panel3"].Controls["buttonRotas"],
-                (Button) navbar1.Controls["panelDropDown"].Controls["panel5"].Controls["buttonMotoristas"],
-                (Button) navbar1.Controls["panelDropDown"].Controls["panel7"].Controls["buttonVeiculos"],
-                (Button) navbar1.Controls["panelDropDown"].Controls["panel9"].Controls["buttonTerceiros"],
-                (Button) navbar1.Controls["panelDropDown"].Controls["panel11"].Controls["buttonSinistros"],
-                (Button) navbar1.Controls["panelDropDown"].Controls["panel13"].Controls["buttonNotasFicais"],
-                (Button) navbar1.Controls["panelDropDown"].Controls["panel15"].Controls["buttonTarifasETaxas"],
-                (Button) navbar1.Controls["panelDropDown"].Controls["panel17"].Controls["buttonRedesDeTransporte"]
+                (Button)navbar1.Controls["panelDropDown"].Controls["panel33"].Controls["buttonClientes"],
+                (Button)navbar1.Controls["panelDropDown"].Controls["panel1"].Controls["buttonUsuarios"],
+                (Button)navbar1.Controls["panelDropDown"].Controls["panel3"].Controls["buttonRotas"],
+                (Button)navbar1.Controls["panelDropDown"].Controls["panel5"].Controls["buttonMotoristas"],
+                (Button)navbar1.Controls["panelDropDown"].Controls["panel7"].Controls["buttonVeiculos"],
+                (Button)navbar1.Controls["panelDropDown"].Controls["panel9"].Controls["buttonTerceiros"],
+                (Button)navbar1.Controls["panelDropDown"].Controls["panel11"].Controls["buttonSinistros"],
+                (Button)navbar1.Controls["panelDropDown"].Controls["panel13"].Controls["buttonNotasFicais"],
+                (Button)navbar1.Controls["panelDropDown"].Controls["panel15"].Controls["buttonTarifasETaxas"],
+                (Button)navbar1.Controls["panelDropDown"].Controls["panel17"].Controls["buttonRedesDeTransporte"]
               );
 
             navigationDash.ColorsNavigationDashLines(
-                (Panel) navbar1.Controls["panelDropDown"].Controls["panel33"].Controls["lineClientes"],
-                (Panel) navbar1.Controls["panelDropDown"].Controls["panel1"].Controls["lineUsuarios"],
-                (Panel) navbar1.Controls["panelDropDown"].Controls["panel3"].Controls["lineRotas"],
-                (Panel) navbar1.Controls["panelDropDown"].Controls["panel5"].Controls["lineMotoristas"],
-                (Panel) navbar1.Controls["panelDropDown"].Controls["panel7"].Controls["lineVeiculos"],
-                (Panel) navbar1.Controls["panelDropDown"].Controls["panel9"].Controls["lineTerceiros"],
-                (Panel) navbar1.Controls["panelDropDown"].Controls["panel11"].Controls["lineSinistros"],
-                (Panel) navbar1.Controls["panelDropDown"].Controls["panel13"].Controls["lineNotasFicais"],
-                (Panel) navbar1.Controls["panelDropDown"].Controls["panel15"].Controls["lineTarifasETaxas"],
-                (Panel) navbar1.Controls["panelDropDown"].Controls["panel17"].Controls["lineRedesDeTransporte"]
+                (Panel)navbar1.Controls["panelDropDown"].Controls["panel33"].Controls["lineClientes"],
+                (Panel)navbar1.Controls["panelDropDown"].Controls["panel1"].Controls["lineUsuarios"],
+                (Panel)navbar1.Controls["panelDropDown"].Controls["panel3"].Controls["lineRotas"],
+                (Panel)navbar1.Controls["panelDropDown"].Controls["panel5"].Controls["lineMotoristas"],
+                (Panel)navbar1.Controls["panelDropDown"].Controls["panel7"].Controls["lineVeiculos"],
+                (Panel)navbar1.Controls["panelDropDown"].Controls["panel9"].Controls["lineTerceiros"],
+                (Panel)navbar1.Controls["panelDropDown"].Controls["panel11"].Controls["lineSinistros"],
+                (Panel)navbar1.Controls["panelDropDown"].Controls["panel13"].Controls["lineNotasFicais"],
+                (Panel)navbar1.Controls["panelDropDown"].Controls["panel15"].Controls["lineTarifasETaxas"],
+                (Panel)navbar1.Controls["panelDropDown"].Controls["panel17"].Controls["lineRedesDeTransporte"]
               );
         }
 

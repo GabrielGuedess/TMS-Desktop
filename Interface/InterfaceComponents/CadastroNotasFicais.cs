@@ -19,14 +19,14 @@ namespace Interface
         {
             set
             {
-                
+
                 Type = value;
 
                 cadastrarNota.Text = value;
 
                 if (value.Contains("Cadastro"))
                 {
-                    tbIDNotaFiscal.Text = DBFunctions.atualizaID("SELECT MAX (NUM_ID) FROM C_Nota_Fiscal", "F");
+                    //tbIDNotaFiscal.Text = DBFunctions.atualizaID("SELECT MAX (NUM_ID) FROM C_Nota_Fiscal", "F");
                     searchPanel.Visible = false;
                     contentNotas.Location = new Point(0, 0);
 
@@ -89,7 +89,7 @@ namespace Interface
             utils.expansiveButton(10, buscarCod);
         }
 
-       
+
 
         private void cadastrarNota_Click(object sender, EventArgs e)
         {
@@ -102,7 +102,7 @@ namespace Interface
                 limpar.CleanControl(contentNotas);
                 limpar.CleanControl(searchPanel);
 
-                tbIDNotaFiscal.Text = DBFunctions.atualizaID("SELECT MAX (NUM_ID) FROM C_Nota_Fiscal", "F");
+                //tbIDNotaFiscal.Text = DBFunctions.atualizaID("SELECT MAX (NUM_ID) FROM C_Nota_Fiscal", "F");
             }
 
             if (Type.Contains("Update") && Validation.Validar(contentNotas))
@@ -119,7 +119,7 @@ namespace Interface
 
                 limpar.CleanControl(contentNotas);
                 limpar.CleanControl(searchPanel);
-                tbIDNotaFiscal.Text = DBFunctions.atualizaID("SELECT MAX (NUM_ID) FROM C_Nota_Fiscal", "F");
+               // tbIDNotaFiscal.Text = DBFunctions.atualizaID("SELECT MAX (NUM_ID) FROM C_Nota_Fiscal", "F");
             }
         }
 
@@ -159,6 +159,6 @@ namespace Interface
             utils.feedbackColorInput(mkSearchChaveAcesso, typeData);
         }
 
-     
+
     }
 }

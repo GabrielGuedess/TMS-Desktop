@@ -1,13 +1,8 @@
-﻿using GMap.NET;
-using GMap.NET.Internals;
-using GMap.NET.MapProviders;
+﻿using GMap.NET.MapProviders;
 using GMap.NET.WindowsForms;
-using GMap.NET.WindowsForms.Markers;
-using GMap.NET.WindowsForms.ToolTips;
 using Interface.ControlValidationAuxiliary;
 using Interface.DataBaseControls;
 using Interface.Utilities;
-using Microsoft.VisualBasic.Logging;
 using System.Data;
 
 namespace Interface

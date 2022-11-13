@@ -1,3 +1,5 @@
+
+
 namespace Interface
 {
     internal static class Program
@@ -7,6 +9,7 @@ namespace Interface
         {
             ApplicationConfiguration.Initialize();
             Application.Run(new Login());
+ 
         }
     }
 }

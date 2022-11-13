@@ -108,7 +108,7 @@ namespace Interface
             List<string> notValidar = new();
             notValidar.Add(tbAdiconalCarroceria.Name);
             notValidar.Add(tbAdicionalMotorista.Name);
-            if (Type.Contains("Cadastro") && Validation.Validar(contentVeiculos,notValidar))
+            if (Type.Contains("Cadastro") && Validation.Validar(contentVeiculos, notValidar))
             {
                 string SQL = "Insert Into tbVeiculos (Placa, Marca, Modelo, TipoVeiculo, TipoCarroceria, QuantidadeEixo, AnoFabricacao," +
                     " Cor, PesoCapacidade, PesoTara, CapacidadeM3, Renavam, RNTRC, CIOT, Nome, CPF, UF, Cidade, ValorHora, ValorKM, FranquiaKm," +

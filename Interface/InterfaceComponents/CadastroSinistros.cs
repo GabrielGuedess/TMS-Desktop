@@ -1,5 +1,7 @@
 ﻿using Interface.ControlValidationAuxiliary;
 using Interface.DataBaseControls;
+using Interface.ModelsDB;
+using Interface.ModelsDB.TMSDataBaseContext;
 using Interface.Utilities;
 using System.Data;
 
@@ -19,19 +21,18 @@ namespace Interface
         {
             set
             {
-               
+
                 Type = value;
 
                 cadastrarSinistro.Text = value;
 
                 if (value.Contains("Cadastro"))
                 {
-                    tbCodigdoSinistro.Text = DBFunctions.atualizaID("SELECT MAX (ID) FROM tbSinistros", "r");
+                   // tbCodigdoSinistro.Text = DBFunctions.atualizaID("SELECT MAX (ID) FROM tbSinistros", "r");
                     searchPanel.Visible = false;
                     contentSinistros.Location = new Point(0, 0);
 
-                    tbCodigdoSinistro.ReadOnly = false;
-                    tbCodigdoSinistro.Cursor = Cursors.IBeam;
+                    
                     buscarCodigo.Visible = false;
                 }
                 if (value.Contains("Update"))
@@ -39,8 +40,6 @@ namespace Interface
                     searchPanel.Visible = true;
                     contentSinistros.Location = new Point(0, 62);
 
-                    tbCodigdoSinistro.ReadOnly = true;
-                    tbCodigdoSinistro.Cursor = Cursors.No;
                     buscarCodigo.Visible = true;
                 }
             }
@@ -53,7 +52,7 @@ namespace Interface
 
                 if (value != null)
                 {
-                    tbCodigdoSinistro.Text = value["ID"].ToString();
+                 
                     comboTipoSinistro.Text = value["TipoSinistro"].ToString();
                     tbDescricaoSinistro.Text = value["DescricaoSinistro"].ToString();
                 }
@@ -63,6 +62,8 @@ namespace Interface
         public CadastroSinistros()
         {
             InitializeComponent();
+            
+
         }
 
         private void CadastroSinistros_Resize(object sender, EventArgs e)
@@ -84,22 +85,30 @@ namespace Interface
             utils.expansiveButton(10, buscarCodigo);
         }
 
-       
+
 
         private void cadastrarSinistro_Click(object sender, EventArgs e)
         {
             if (Type.Contains("Cadastro") && Validation.Validar(contentSinistros))
             {
-                string SQL = "Insert Into tbSinistros(TipoSinistro, DescricaoSinistro, ID) Values";
+                /*string SQL = "Insert Into tbSinistros(TipoSinistro, DescricaoSinistro, ID) Values";
 
                 SQL += "('" + comboTipoSinistro.Text + "','" + tbDescricaoSinistro.Text + "','" + tbCodigdoSinistro.Text + "')";
-                
-                DBFunctions.cadastrar(SQL);
+
+                DBFunctions.cadastrar(SQL);*/
+
+
+                //sinistro.ID_Sinistro = int.Parse(tbCodigdoSinistro.Text);
+                TMSContext db = new TMSContext();
+                sinistro sini = new sinistro();
+                sini.Tipo_sinistro = comboTipoSinistro.Text;
+                sini.Descricao = tbDescricaoSinistro.Text;
+                db.sinistro.Add(sini);
+                db.SaveChanges();
 
                 limpar.CleanControl(contentSinistros);
                 limpar.CleanControl(searchPanel);
-
-                tbCodigdoSinistro.Text = DBFunctions.atualizaID("SELECT MAX (ID) FROM tbSinistros", "r");
+                //tbCodigdoSinistro.Text = DBFunctions.atualizaID("SELECT MAX (ID) FROM tbSinistros", "r");
             }
 
             if (Type.Contains("Update") && Validation.Validar(contentSinistros))
@@ -111,7 +120,7 @@ namespace Interface
                 DBFunctions.cadastrar(SQLUp);
                 limpar.CleanControl(contentSinistros);
                 limpar.CleanControl(searchPanel);
-                tbCodigdoSinistro.Text = DBFunctions.atualizaID("SELECT MAX (ID) FROM tbSinistros", "r");
+               // tbCodigdoSinistro.Text = DBFunctions.atualizaID("SELECT MAX (ID) FROM tbSinistros", "r");
             }
         }
 
@@ -138,7 +147,7 @@ namespace Interface
 
         private void cod_TextChanged(object sender, EventArgs e)
         {
-            tbCodigdoSinistro.Text = cod.Text;
+            
 
             utils.feedbackColorInputNumLetters(cod, typeData);
         }

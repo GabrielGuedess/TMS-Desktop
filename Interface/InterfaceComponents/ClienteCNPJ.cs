@@ -83,7 +83,7 @@ namespace Interface
             List<string> notValidar = new();
             notValidar.Add(mkTelefone.Name);
             notValidar.Add(tbComplemento.Name);
-            if (Type.Contains("Cadastro") && Validation.Validar(contentCNPJ, notValidar ) && Validation.validarTelefone(mkTelefone))
+            if (Type.Contains("Cadastro") && Validation.Validar(contentCNPJ, notValidar) && Validation.validarTelefone(mkTelefone))
             {
                 string SQL = "insert into Pessoa_Juridica (CNPJ, Raz_Soc, Nom_Fan, Ins_Est, Tel, Situacao, Num_Cel, Email," +
                     " CEP, Endereco, Numero, Comple, Bairro, Cidade, UF) values";
@@ -184,6 +184,6 @@ namespace Interface
             }
         }
 
-        
+
     }
 }

@@ -1,9 +1,4 @@
 ﻿using CorreioService;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Interface.Properties
 {
@@ -14,7 +9,7 @@ namespace Interface.Properties
             CEPModel CEPModel = new();
             try
             {
-                
+
                 AtendeClienteClient atendeCliente = new();
                 var consultaCEP = atendeCliente.consultaCEPAsync(CEP).Result;
                 if (consultaCEP != null)
@@ -27,7 +22,7 @@ namespace Interface.Properties
                 }
                 return CEPModel;
             }
-            catch(System.Exception)
+            catch (System.Exception)
             {
                 MessageBox.Show($"CEP não encontrado!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return CEPModel;

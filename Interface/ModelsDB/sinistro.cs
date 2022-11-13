@@ -1,0 +1,12 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace Interface.ModelsDB
+{
+    public partial class sinistro
+    {
+        public int ID_Sinistro { get; set; }
+        public string Tipo_sinistro { get; set; } = null!;
+        public string Descricao { get; set; } = null!;
+    }
+}

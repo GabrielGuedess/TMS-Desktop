@@ -20,14 +20,14 @@ namespace Interface
         {
             set
             {
-                
+
                 Type = value;
 
                 cadastrarMotoristas.Text = value;
 
                 if (value.Contains("Cadastro"))
                 {
-                    tbID.Text = DBFunctions.atualizaID("SELECT MAX (NUM_ID) FROM C_Motoristas", "m");
+                    //tbID.Text = DBFunctions.atualizaID("SELECT MAX (NUM_ID) FROM C_Motoristas", "m");
                     searchPanel.Visible = false;
                     contentMotorista.Location = new Point(0, 0);
 
@@ -104,7 +104,7 @@ namespace Interface
             utils.expansiveButton(10, buscarCPF);
         }
 
-        
+
 
         private void cadastrarMotoristas_Click(object sender, EventArgs e)
         {
@@ -126,10 +126,10 @@ namespace Interface
                 limpar.CleanControl(contentMotorista);
                 limpar.CleanControl(searchPanel);
 
-                tbID.Text = DBFunctions.atualizaID("SELECT MAX (NUM_ID) FROM C_Motoristas", "m");
+                //tbID.Text = DBFunctions.atualizaID("SELECT MAX (NUM_ID) FROM C_Motoristas", "m");
             }
 
-            if (Type.Contains("Update") && Validation.Validar(contentMotorista, notValidar) && Validation.validarTelefone(mkTelefone)) 
+            if (Type.Contains("Update") && Validation.Validar(contentMotorista, notValidar) && Validation.validarTelefone(mkTelefone))
             {
                 string SQLUp = $"UPDATE C_Motoristas SET " +
                 $"NUM_ID= '{tbID.Text}', " +
@@ -158,7 +158,7 @@ namespace Interface
 
                 limpar.CleanControl(contentMotorista);
                 limpar.CleanControl(searchPanel);
-                tbID.Text = DBFunctions.atualizaID("SELECT MAX (NUM_ID) FROM C_Motoristas", "m");
+                //tbID.Text = DBFunctions.atualizaID("SELECT MAX (NUM_ID) FROM C_Motoristas", "m");
             }
         }
 

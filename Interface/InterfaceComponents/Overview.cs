@@ -2,7 +2,6 @@
 using Interface.DataBaseControls;
 using Interface.FormsControls;
 using Interface.Utilities;
-using Newtonsoft.Json.Linq;
 using System.Data;
 
 namespace Interface
@@ -254,7 +253,7 @@ namespace Interface
 
                 foreach (DataGridViewRow row in dataGridView1.Rows)
                 {
-                    if(CNPJ.Checked ? row.Cells["CNPJ"].Value.ToString()!.Equals(maskInput.Text) : row.Cells[mapper.TypeWhereDatabase].Value.ToString()!.Equals(maskInput.Text))
+                    if (CNPJ.Checked ? row.Cells["CNPJ"].Value.ToString()!.Equals(maskInput.Text) : row.Cells[mapper.TypeWhereDatabase].Value.ToString()!.Equals(maskInput.Text))
                     {
                         rowIndex = row.Index;
                         break;

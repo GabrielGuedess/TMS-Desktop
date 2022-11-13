@@ -154,6 +154,9 @@ namespace Interface
             this.panelTextEndereco = new Interface.TemplateComponents.PanelBorderRounded();
             this.tbLogradouro = new Interface.TemplateComponents.TextBoxOnlyNum_Letters();
             this.label13 = new System.Windows.Forms.Label();
+            this.panel31 = new System.Windows.Forms.Panel();
+            this.panel32 = new System.Windows.Forms.Panel();
+            this.panel33 = new System.Windows.Forms.Panel();
             this.panelButton = new System.Windows.Forms.Panel();
             this.buscarCPF = new System.Windows.Forms.Button();
             this.cadastrarTerceiro = new System.Windows.Forms.Button();
@@ -291,7 +294,7 @@ namespace Interface
             this.tableLayoutPanel4.Controls.Add(this.panel19, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.panel21, 2, 0);
             this.tableLayoutPanel4.Controls.Add(this.panel23, 0, 1);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(40, 796);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(40, 866);
             this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(0, 0, 0, 30);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 2;
@@ -540,7 +543,7 @@ namespace Interface
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(40, 764);
+            this.label11.Location = new System.Drawing.Point(40, 834);
             this.label11.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(163, 17);
@@ -552,7 +555,7 @@ namespace Interface
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(40, 502);
+            this.label1.Location = new System.Drawing.Point(36, 591);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(167, 17);
@@ -573,7 +576,7 @@ namespace Interface
             this.tableLayoutPanel1.Controls.Add(this.panel7, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel9, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel11, 2, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(40, 534);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(40, 623);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 30);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
@@ -1028,15 +1031,19 @@ namespace Interface
             this.tableLayoutPanel3.Controls.Add(this.panelCEP, 1, 2);
             this.tableLayoutPanel3.Controls.Add(this.panelCidadeUFClient, 2, 2);
             this.tableLayoutPanel3.Controls.Add(this.panelEndereco, 0, 3);
+            this.tableLayoutPanel3.Controls.Add(this.panel31, 0, 4);
+            this.tableLayoutPanel3.Controls.Add(this.panel32, 1, 4);
+            this.tableLayoutPanel3.Controls.Add(this.panel33, 2, 4);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(40, 72);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0, 0, 0, 30);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 4;
+            this.tableLayoutPanel3.RowCount = 5;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(895, 400);
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(895, 500);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
             // panel27
@@ -1078,10 +1085,10 @@ namespace Interface
             this.panelBorderRounded8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelBorderRounded8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
             this.panelBorderRounded8.Controls.Add(this.tbComplemento);
-            this.panelBorderRounded8.Location = new System.Drawing.Point(5, 36);
+            this.panelBorderRounded8.Location = new System.Drawing.Point(5, 33);
             this.panelBorderRounded8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelBorderRounded8.Name = "panelBorderRounded8";
-            this.panelBorderRounded8.Size = new System.Drawing.Size(249, 33);
+            this.panelBorderRounded8.Size = new System.Drawing.Size(252, 33);
             this.panelBorderRounded8.TabIndex = 2;
             // 
             // tbComplemento
@@ -1094,7 +1101,7 @@ namespace Interface
             this.tbComplemento.Location = new System.Drawing.Point(8, 5);
             this.tbComplemento.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbComplemento.Name = "tbComplemento";
-            this.tbComplemento.Size = new System.Drawing.Size(233, 22);
+            this.tbComplemento.Size = new System.Drawing.Size(240, 22);
             this.tbComplemento.TabIndex = 13;
             // 
             // label22
@@ -1137,10 +1144,10 @@ namespace Interface
             this.panelBorderRounded2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelBorderRounded2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
             this.panelBorderRounded2.Controls.Add(this.tbBairro);
-            this.panelBorderRounded2.Location = new System.Drawing.Point(5, 36);
+            this.panelBorderRounded2.Location = new System.Drawing.Point(15, 36);
             this.panelBorderRounded2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelBorderRounded2.Name = "panelBorderRounded2";
-            this.panelBorderRounded2.Size = new System.Drawing.Size(248, 33);
+            this.panelBorderRounded2.Size = new System.Drawing.Size(238, 33);
             this.panelBorderRounded2.TabIndex = 2;
             // 
             // tbBairro
@@ -1153,7 +1160,7 @@ namespace Interface
             this.tbBairro.Location = new System.Drawing.Point(5, 6);
             this.tbBairro.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbBairro.Name = "tbBairro";
-            this.tbBairro.Size = new System.Drawing.Size(233, 22);
+            this.tbBairro.Size = new System.Drawing.Size(223, 22);
             this.tbBairro.TabIndex = 12;
             // 
             // label20
@@ -1765,7 +1772,6 @@ namespace Interface
             // panelEndereco
             // 
             this.panelEndereco.Controls.Add(this.subpanelEndereco);
-            this.panelEndereco.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelEndereco.Location = new System.Drawing.Point(0, 300);
             this.panelEndereco.Margin = new System.Windows.Forms.Padding(0);
             this.panelEndereco.Name = "panelEndereco";
@@ -1847,7 +1853,7 @@ namespace Interface
             this.panelTextEndereco.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelTextEndereco.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
             this.panelTextEndereco.Controls.Add(this.tbLogradouro);
-            this.panelTextEndereco.Location = new System.Drawing.Point(5, 36);
+            this.panelTextEndereco.Location = new System.Drawing.Point(5, 39);
             this.panelTextEndereco.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelTextEndereco.Name = "panelTextEndereco";
             this.panelTextEndereco.Size = new System.Drawing.Size(174, 33);
@@ -1877,6 +1883,30 @@ namespace Interface
             this.label13.Size = new System.Drawing.Size(82, 17);
             this.label13.TabIndex = 0;
             this.label13.Text = "Logradouro";
+            // 
+            // panel31
+            // 
+            this.panel31.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel31.Location = new System.Drawing.Point(3, 403);
+            this.panel31.Name = "panel31";
+            this.panel31.Size = new System.Drawing.Size(292, 94);
+            this.panel31.TabIndex = 14;
+            // 
+            // panel32
+            // 
+            this.panel32.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel32.Location = new System.Drawing.Point(301, 403);
+            this.panel32.Name = "panel32";
+            this.panel32.Size = new System.Drawing.Size(292, 94);
+            this.panel32.TabIndex = 15;
+            // 
+            // panel33
+            // 
+            this.panel33.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel33.Location = new System.Drawing.Point(599, 403);
+            this.panel33.Name = "panel33";
+            this.panel33.Size = new System.Drawing.Size(293, 94);
+            this.panel33.TabIndex = 16;
             // 
             // panelButton
             // 
@@ -2473,5 +2503,8 @@ namespace Interface
         private TemplateComponents.MkDate dateFimAtividade;
         private TemplateComponents.MkDate dateVencimentoCNH;
         private TemplateComponents.MkDate dateVencimentoRENTRC;
+        private Panel panel31;
+        private Panel panel32;
+        private Panel panel33;
     }
 }

@@ -19,14 +19,14 @@ namespace Interface
         {
             set
             {
-               
+
                 Type = value;
 
                 cadastrarRede.Text = value;
 
                 if (value.Contains("Cadastro"))
                 {
-                    numID.Text = DBFunctions.atualizaID("SELECT MAX (NUM_ID) FROM C_Redes_de_Transporte", "T");
+                    //numID.Text = DBFunctions.atualizaID("SELECT MAX (NUM_ID) FROM C_Redes_de_Transporte", "T");
                     searchPanel.Visible = false;
                     contentRedes.Location = new Point(0, 0);
 
@@ -91,7 +91,7 @@ namespace Interface
             utils.expansiveButton(10, buscarNumId);
         }
 
-   
+
         private void cadastrarRede_Click(object sender, EventArgs e)
         {
             if (Type.Contains("Cadastro") && Validation.Validar(contentRedes))
@@ -105,7 +105,7 @@ namespace Interface
                 limpar.CleanControl(contentRedes);
                 limpar.CleanControl(panelSerch);
 
-                numID.Text = DBFunctions.atualizaID("SELECT MAX (NUM_ID) FROM C_Redes_de_Transporte", "T");
+                //numID.Text = DBFunctions.atualizaID("SELECT MAX (NUM_ID) FROM C_Redes_de_Transporte", "T");
             }
 
             if (Type.Contains("Update") && Validation.Validar(contentRedes))
@@ -122,7 +122,7 @@ namespace Interface
 
                 limpar.CleanControl(contentRedes);
                 limpar.CleanControl(searchPanel);
-                numID.Text = DBFunctions.atualizaID("SELECT MAX (NUM_ID) FROM C_Redes_de_Transporte", "T");
+                //numID.Text = DBFunctions.atualizaID("SELECT MAX (NUM_ID) FROM C_Redes_de_Transporte", "T");
             }
         }
 
@@ -161,6 +161,6 @@ namespace Interface
             utils.feedbackColorInputNumLetters(maskRedeID, typeData);
         }
 
-        
+
     }
 }
