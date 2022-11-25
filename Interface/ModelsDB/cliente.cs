@@ -3,15 +3,15 @@ using System.Collections.Generic;
 
 namespace Interface.ModelsDB
 {
-    public partial class cliente
+    public partial class Cliente
     {
-        public cliente()
+        public Cliente()
         {
-            celularcliente = new HashSet<celularcliente>();
-            emailcliente = new HashSet<emailcliente>();
-            mercadoria = new HashSet<mercadoria>();
-            pedidocliente = new HashSet<pedidocliente>();
-            telefonecliente = new HashSet<telefonecliente>();
+            Celularcliente = new HashSet<Celularcliente>();
+            Emailcliente = new HashSet<Emailcliente>();
+            Mercadoria = new HashSet<Mercadoria>();
+            Pedidocliente = new HashSet<Pedidocliente>();
+            Telefonecliente = new HashSet<Telefonecliente>();
         }
 
         public int ID_cliente { get; set; }
@@ -23,12 +23,12 @@ namespace Interface.ModelsDB
         public string Cidade { get; set; } = null!;
         public string UF { get; set; } = null!;
 
-        public virtual clientefisico? clientefisico { get; set; }
-        public virtual clientejuridico? clientejuridico { get; set; }
-        public virtual ICollection<celularcliente> celularcliente { get; set; }
-        public virtual ICollection<emailcliente> emailcliente { get; set; }
-        public virtual ICollection<mercadoria> mercadoria { get; set; }
-        public virtual ICollection<pedidocliente> pedidocliente { get; set; }
-        public virtual ICollection<telefonecliente> telefonecliente { get; set; }
+        public virtual Clientefisico? Clientefisico { get; set; }
+        public virtual Clientejuridico? clientejuridico { get; set; }
+        public virtual ICollection<Celularcliente> Celularcliente { get; set; }
+        public virtual ICollection<Emailcliente> Emailcliente { get; set; }
+        public virtual ICollection<Mercadoria> Mercadoria { get; set; }
+        public virtual ICollection<Pedidocliente> Pedidocliente { get; set; }
+        public virtual ICollection<Telefonecliente> Telefonecliente { get; set; }
     }
 }

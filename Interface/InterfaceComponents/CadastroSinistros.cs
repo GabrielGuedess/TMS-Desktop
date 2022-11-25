@@ -99,12 +99,7 @@ namespace Interface
 
 
                 //sinistro.ID_Sinistro = int.Parse(tbCodigdoSinistro.Text);
-                TMSContext db = new TMSContext();
-                sinistro sini = new sinistro();
-                sini.Tipo_sinistro = comboTipoSinistro.Text;
-                sini.Descricao = tbDescricaoSinistro.Text;
-                db.sinistro.Add(sini);
-                db.SaveChanges();
+                
 
                 limpar.CleanControl(contentSinistros);
                 limpar.CleanControl(searchPanel);

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Interface.ModelsDB
 {
-    public partial class clientefisico
+    public partial class Clientefisico
     {
         public int ID_for_cliente { get; set; }
         public string Nome { get; set; } = null!;
@@ -12,6 +12,6 @@ namespace Interface.ModelsDB
         public string RG { get; set; } = null!;
         public string CPF { get; set; } = null!;
 
-        public virtual cliente ID_for_clienteNavigation { get; set; } = null!;
+        public virtual Cliente ID_for_clienteNavigation { get; set; } = null!;
     }
 }

@@ -3,13 +3,13 @@ using System.Collections.Generic;
 
 namespace Interface.ModelsDB
 {
-    public partial class pedidocliente
+    public partial class Pedidocliente
     {
-        public pedidocliente()
+        public Pedidocliente()
         {
-            mercadoria = new HashSet<mercadoria>();
-            rota = new HashSet<rota>();
-            rotaretorno = new HashSet<rotaretorno>();
+            Mercadoria = new HashSet<Mercadoria>();
+            Rota = new HashSet<Rota>();
+            Rotaretorno = new HashSet<Rotaretorno>();
         }
 
         public int ID_pedido { get; set; }
@@ -22,9 +22,9 @@ namespace Interface.ModelsDB
         public string Cidade_destino { get; set; } = null!;
         public string UF_destino { get; set; } = null!;
 
-        public virtual cliente ID_for_clienteNavigation { get; set; } = null!;
-        public virtual ICollection<mercadoria> mercadoria { get; set; }
-        public virtual ICollection<rota> rota { get; set; }
-        public virtual ICollection<rotaretorno> rotaretorno { get; set; }
+        public virtual Cliente ID_for_clienteNavigation { get; set; } = null!;
+        public virtual ICollection<Mercadoria> Mercadoria { get; set; }
+        public virtual ICollection<Rota> Rota { get; set; }
+        public virtual ICollection<Rotaretorno> Rotaretorno { get; set; }
     }
 }

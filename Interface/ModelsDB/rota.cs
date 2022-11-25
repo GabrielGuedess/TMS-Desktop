@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Interface.ModelsDB
 {
-    public partial class rota
+    public partial class Rota
     {
         public int ID_rota { get; set; }
         public int ID_for_pedido { get; set; }
@@ -20,6 +20,6 @@ namespace Interface.ModelsDB
         public DateOnly Data_inicio { get; set; }
         public DateOnly Data_fim { get; set; }
 
-        public virtual pedidocliente ID_for_pedidoNavigation { get; set; } = null!;
+        public virtual Pedidocliente ID_for_pedidoNavigation { get; set; } = null!;
     }
 }

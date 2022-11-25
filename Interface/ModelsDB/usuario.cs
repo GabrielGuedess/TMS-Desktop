@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Interface.ModelsDB
 {
-    public partial class usuario
+    public partial class Usuario
     {
         public int ID_usuario { get; set; }
         public string Nome { get; set; } = null!;

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Interface.ModelsDB
 {
-    public partial class veiculoterceiro
+    public partial class Veiculoterceiro
     {
         public int ID_veiculo_terceiro { get; set; }
         public int ID_for_motorista { get; set; }
@@ -23,6 +23,6 @@ namespace Interface.ModelsDB
         public double Capacidade_volumetrican { get; set; }
         public double Capacidade_KG { get; set; }
 
-        public virtual motoristaterceiro ID_for_motoristaNavigation { get; set; } = null!;
+        public virtual Motoristaterceiro ID_for_motoristaNavigation { get; set; } = null!;
     }
 }

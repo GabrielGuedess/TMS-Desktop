@@ -48,5 +48,11 @@
             else
                 e.Handled = true;
         }
+
+        public double returnValue()
+        {
+            double value = double.Parse(Text.Replace("m³", ""));
+            return value;
+        }
     }
 }

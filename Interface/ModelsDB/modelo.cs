@@ -3,11 +3,11 @@ using System.Collections.Generic;
 
 namespace Interface.ModelsDB
 {
-    public partial class modelo
+    public partial class Modelo
     {
-        public modelo()
+        public Modelo()
         {
-            carroceria = new HashSet<carroceria>();
+            Carroceria = new HashSet<Carroceria>();
         }
 
         public int ID_modelo { get; set; }
@@ -16,7 +16,7 @@ namespace Interface.ModelsDB
         public double Massa_modelo { get; set; }
         public uint Eixo_modelo { get; set; }
 
-        public virtual marca ID_for_marcaNavigation { get; set; } = null!;
-        public virtual ICollection<carroceria> carroceria { get; set; }
+        public virtual Marca ID_for_marcaNavigation { get; set; } = null!;
+        public virtual ICollection<Carroceria> Carroceria { get; set; }
     }
 }

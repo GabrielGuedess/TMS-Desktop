@@ -3,14 +3,14 @@ using System.Collections.Generic;
 
 namespace Interface.ModelsDB
 {
-    public partial class motorista
+    public partial class Motorista
     {
-        public motorista()
+        public Motorista()
         {
-            celularfuncionario = new HashSet<celularfuncionario>();
-            emailfuncionario = new HashSet<emailfuncionario>();
-            processopedido = new HashSet<processopedido>();
-            telefonefuncionario = new HashSet<telefonefuncionario>();
+            Celularfuncionario = new HashSet<Celularfuncionario>();
+            Emailfuncionario = new HashSet<Emailfuncionario>();
+            Processopedido = new HashSet<Processopedido>();
+            Telefonefuncionario = new HashSet<Telefonefuncionario>();
         }
 
         public int ID_motorista { get; set; }
@@ -32,9 +32,9 @@ namespace Interface.ModelsDB
         public string Curso_MOPP { get; set; } = null!;
         public string Disponibilidade { get; set; } = null!;
 
-        public virtual ICollection<celularfuncionario> celularfuncionario { get; set; }
-        public virtual ICollection<emailfuncionario> emailfuncionario { get; set; }
-        public virtual ICollection<processopedido> processopedido { get; set; }
-        public virtual ICollection<telefonefuncionario> telefonefuncionario { get; set; }
+        public virtual ICollection<Celularfuncionario> Celularfuncionario { get; set; }
+        public virtual ICollection<Emailfuncionario> Emailfuncionario { get; set; }
+        public virtual ICollection<Processopedido> Processopedido { get; set; }
+        public virtual ICollection<Telefonefuncionario> Telefonefuncionario { get; set; }
     }
 }

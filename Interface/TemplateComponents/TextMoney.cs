@@ -47,5 +47,11 @@
             else
                 e.Handled = true;
         }
+
+        public double returnValue()
+        {
+            double value = double.Parse(Text.Replace("R$", ""));
+            return value;
+        }
     }
 }

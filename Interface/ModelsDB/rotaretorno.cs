@@ -3,11 +3,11 @@ using System.Collections.Generic;
 
 namespace Interface.ModelsDB
 {
-    public partial class rotaretorno
+    public partial class Rotaretorno
     {
-        public rotaretorno()
+        public Rotaretorno()
         {
-            processopedido = new HashSet<processopedido>();
+            Processopedido = new HashSet<Processopedido>();
         }
 
         public int ID_retorno { get; set; }
@@ -19,7 +19,7 @@ namespace Interface.ModelsDB
         public DateOnly Data_inicio { get; set; }
         public DateOnly Data_fim { get; set; }
 
-        public virtual pedidocliente ID_for_pedidoNavigation { get; set; } = null!;
-        public virtual ICollection<processopedido> processopedido { get; set; }
+        public virtual Pedidocliente ID_for_pedidoNavigation { get; set; } = null!;
+        public virtual ICollection<Processopedido> Processopedido { get; set; }
     }
 }

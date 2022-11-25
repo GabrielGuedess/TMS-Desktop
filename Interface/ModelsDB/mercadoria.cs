@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Interface.ModelsDB
 {
-    public partial class mercadoria
+    public partial class Mercadoria
     {
         public int ID_mercadoria { get; set; }
         public int ID_for_pedido { get; set; }
@@ -13,7 +13,7 @@ namespace Interface.ModelsDB
         public double Volume { get; set; }
         public double Valor { get; set; }
 
-        public virtual cliente ID_for_clienteNavigation { get; set; } = null!;
-        public virtual pedidocliente ID_for_pedidoNavigation { get; set; } = null!;
+        public virtual Cliente ID_for_clienteNavigation { get; set; } = null!;
+        public virtual Pedidocliente ID_for_pedidoNavigation { get; set; } = null!;
     }
 }

@@ -3,15 +3,15 @@ using System.Collections.Generic;
 
 namespace Interface.ModelsDB
 {
-    public partial class motoristaterceiro
+    public partial class Motoristaterceiro
     {
-        public motoristaterceiro()
+        public Motoristaterceiro()
         {
-            celularmotoristaterceiro = new HashSet<celularmotoristaterceiro>();
-            contratomotoristaterceiro = new HashSet<contratomotoristaterceiro>();
-            emailmotoristaterceiro = new HashSet<emailmotoristaterceiro>();
-            telefonemotoristaterceiro = new HashSet<telefonemotoristaterceiro>();
-            veiculoterceiro = new HashSet<veiculoterceiro>();
+            Celularmotoristaterceiro = new HashSet<Celularmotoristaterceiro>();
+            Contratomotoristaterceiro = new HashSet<Contratomotoristaterceiro>();
+            Emailmotoristaterceiro = new HashSet<Emailmotoristaterceiro>();
+            Telefonemotoristaterceiro = new HashSet<Telefonemotoristaterceiro>();
+            Veiculoterceiro = new HashSet<Veiculoterceiro>();
         }
 
         public int ID_motorista_terceiro { get; set; }
@@ -33,10 +33,10 @@ namespace Interface.ModelsDB
         public string Curso_MOPP { get; set; } = null!;
         public string Disponibilidade { get; set; } = null!;
 
-        public virtual ICollection<celularmotoristaterceiro> celularmotoristaterceiro { get; set; }
-        public virtual ICollection<contratomotoristaterceiro> contratomotoristaterceiro { get; set; }
-        public virtual ICollection<emailmotoristaterceiro> emailmotoristaterceiro { get; set; }
-        public virtual ICollection<telefonemotoristaterceiro> telefonemotoristaterceiro { get; set; }
-        public virtual ICollection<veiculoterceiro> veiculoterceiro { get; set; }
+        public virtual ICollection<Celularmotoristaterceiro> Celularmotoristaterceiro { get; set; }
+        public virtual ICollection<Contratomotoristaterceiro> Contratomotoristaterceiro { get; set; }
+        public virtual ICollection<Emailmotoristaterceiro> Emailmotoristaterceiro { get; set; }
+        public virtual ICollection<Telefonemotoristaterceiro> Telefonemotoristaterceiro { get; set; }
+        public virtual ICollection<Veiculoterceiro> Veiculoterceiro { get; set; }
     }
 }

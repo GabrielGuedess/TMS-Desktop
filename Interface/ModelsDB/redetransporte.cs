@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Interface.ModelsDB
 {
-    public partial class redetransporte
+    public partial class Redetransporte
     {
         public int ID_rede { get; set; }
         public string Tipo_rede { get; set; } = null!;

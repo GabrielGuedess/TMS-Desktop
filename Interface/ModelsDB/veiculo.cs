@@ -3,11 +3,11 @@ using System.Collections.Generic;
 
 namespace Interface.ModelsDB
 {
-    public partial class veiculo
+    public partial class Veiculo
     {
-        public veiculo()
+        public Veiculo()
         {
-            processopedido = new HashSet<processopedido>();
+            Processopedido = new HashSet<Processopedido>();
         }
 
         public int ID_veiculo { get; set; }
@@ -21,7 +21,7 @@ namespace Interface.ModelsDB
         public string Cod_CIOT { get; set; } = null!;
         public string Disponibilidade { get; set; } = null!;
 
-        public virtual marca ID_for_marcaNavigation { get; set; } = null!;
-        public virtual ICollection<processopedido> processopedido { get; set; }
+        public virtual Marca ID_for_marcaNavigation { get; set; } = null!;
+        public virtual ICollection<Processopedido> Processopedido { get; set; }
     }
 }

@@ -602,8 +602,6 @@ namespace Interface
             | System.Windows.Forms.AnchorStyles.Right)));
             this.body.AutoScroll = true;
             this.body.BackColor = System.Drawing.Color.Black;
-            this.body.Controls.Add(this.cadastroVeiculos1);
-            this.body.Controls.Add(this.cadastroUsuarios1);
             this.body.Controls.Add(this.cadastroTerceiros1);
             this.body.Controls.Add(this.cadastroTarifaseTaxas1);
             this.body.Controls.Add(this.cadastroSinistros2);
@@ -613,6 +611,8 @@ namespace Interface
             this.body.Controls.Add(this.cadastroClientes1);
             this.body.Controls.Add(this.cadastroMotoristas2);
             this.body.Controls.Add(this.overview1);
+            this.body.Controls.Add(this.cadastroVeiculos1);
+            this.body.Controls.Add(this.cadastroUsuarios1);
             this.body.Location = new System.Drawing.Point(288, 70);
             this.body.Margin = new System.Windows.Forms.Padding(0);
             this.body.Name = "body";
@@ -652,7 +652,7 @@ namespace Interface
             this.cadastroTerceiros1.Location = new System.Drawing.Point(25, 25);
             this.cadastroTerceiros1.Margin = new System.Windows.Forms.Padding(0);
             this.cadastroTerceiros1.Name = "cadastroTerceiros1";
-            this.cadastroTerceiros1.Size = new System.Drawing.Size(924, 1237);
+            this.cadastroTerceiros1.Size = new System.Drawing.Size(924, 1800);
             this.cadastroTerceiros1.TabIndex = 8;
             // 
             // cadastroTarifaseTaxas1

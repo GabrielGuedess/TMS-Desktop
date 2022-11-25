@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Interface.ModelsDB
 {
-    public partial class processopedido
+    public partial class Processopedido
     {
         public int ID_processo { get; set; }
         public int ID_for_rota { get; set; }
@@ -15,8 +15,10 @@ namespace Interface.ModelsDB
         public DateOnly Data_inicio { get; set; }
         public DateOnly DATA_fim { get; set; }
 
-        public virtual motorista ID_for_motoristaNavigation { get; set; } = null!;
-        public virtual rotaretorno ID_for_retornoNavigation { get; set; } = null!;
-        public virtual veiculo ID_for_veiculoNavigation { get; set; } = null!;
+ 
+        public virtual Motorista ID_for_motoristaNavigation { get; set; } = null!;
+        public virtual Rotaretorno ID_for_retornoNavigation { get; set; } = null!;
+        public virtual Veiculo ID_for_veiculoNavigation { get; set; } = null!;
+    
     }
 }
