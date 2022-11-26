@@ -1,7 +1,5 @@
 ﻿using Interface.ControlValidationAuxiliary;
 using Interface.DataBaseControls;
-using Interface.ModelsDB;
-using Interface.ModelsDB.TMSDataBaseContext;
 using Interface.Utilities;
 using System.Data;
 
@@ -52,7 +50,6 @@ namespace Interface
 
                 if (value != null)
                 {
-                 
                     comboTipoSinistro.Text = value["TipoSinistro"].ToString();
                     tbDescricaoSinistro.Text = value["DescricaoSinistro"].ToString();
                 }

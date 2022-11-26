@@ -82,11 +82,6 @@
             this.comboCidade = new System.Windows.Forms.ComboBox();
             this.comboUF = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panelBorderRoundedID = new Interface.TemplateComponents.PanelBorderRounded();
-            this.tbID = new Interface.TemplateComponents.TextBoxOnlyNum_Letters();
-            this.labelId = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panelBorderRounded3 = new Interface.TemplateComponents.PanelBorderRounded();
@@ -171,9 +166,6 @@
             this.panel1.SuspendLayout();
             this.panel20.SuspendLayout();
             this.panel38.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panelBorderRoundedID.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panelBorderRounded3.SuspendLayout();
@@ -576,7 +568,6 @@
             this.tableLayoutPanel1.Controls.Add(this.panel23, 2, 3);
             this.tableLayoutPanel1.Controls.Add(this.panel21, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.panel3, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel5, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel7, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel9, 0, 1);
@@ -927,68 +918,6 @@
             this.label14.Size = new System.Drawing.Size(26, 17);
             this.label14.TabIndex = 0;
             this.label14.Text = "UF";
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Transparent;
-            this.panel3.Controls.Add(this.panel4);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(0);
-            this.panel3.Name = "panel3";
-            this.panel3.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.panel3.Size = new System.Drawing.Size(298, 100);
-            this.panel3.TabIndex = 0;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.Transparent;
-            this.panel4.Controls.Add(this.panelBorderRoundedID);
-            this.panel4.Controls.Add(this.labelId);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(20, 20);
-            this.panel4.Margin = new System.Windows.Forms.Padding(0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(258, 70);
-            this.panel4.TabIndex = 7;
-            // 
-            // panelBorderRoundedID
-            // 
-            this.panelBorderRoundedID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelBorderRoundedID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelBorderRoundedID.Controls.Add(this.tbID);
-            this.panelBorderRoundedID.Location = new System.Drawing.Point(5, 37);
-            this.panelBorderRoundedID.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.panelBorderRoundedID.Name = "panelBorderRoundedID";
-            this.panelBorderRoundedID.Size = new System.Drawing.Size(248, 33);
-            this.panelBorderRoundedID.TabIndex = 2;
-            // 
-            // tbID
-            // 
-            this.tbID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.tbID.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbID.Cursor = System.Windows.Forms.Cursors.No;
-            this.tbID.Enabled = false;
-            this.tbID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbID.ForeColor = System.Drawing.Color.White;
-            this.tbID.Location = new System.Drawing.Point(10, 6);
-            this.tbID.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.tbID.Name = "tbID";
-            this.tbID.Size = new System.Drawing.Size(233, 22);
-            this.tbID.TabIndex = 2;
-            // 
-            // labelId
-            // 
-            this.labelId.AutoSize = true;
-            this.labelId.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.labelId.ForeColor = System.Drawing.Color.White;
-            this.labelId.Location = new System.Drawing.Point(5, 5);
-            this.labelId.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
-            this.labelId.Name = "labelId";
-            this.labelId.Size = new System.Drawing.Size(21, 17);
-            this.labelId.TabIndex = 0;
-            this.labelId.Text = "ID";
             // 
             // panel5
             // 
@@ -1758,11 +1687,6 @@
             this.panel20.PerformLayout();
             this.panel38.ResumeLayout(false);
             this.panel38.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panelBorderRoundedID.ResumeLayout(false);
-            this.panelBorderRoundedID.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
@@ -1824,10 +1748,6 @@
         private Button button10;
         private TableLayoutPanel tableLayoutPanel1;
         private Panel panel1;
-        private Panel panel3;
-        private Panel panel4;
-        private Interface.TemplateComponents.PanelBorderRounded panelBorderRoundedID;
-        private Label labelId;
         private Panel panel5;
         private Panel panel6;
         private TemplateComponents.PanelBorderRounded panelBorderRounded3;
@@ -1891,7 +1811,6 @@
         private ComboBox comboMOPP;
         private TemplateComponents.MasckedboxTemplete mkCNH;
         private ComboBox comboCNH;
-        private TemplateComponents.TextBoxOnlyNum_Letters tbID;
         private Label typeData;
         private TemplateComponents.MasckedboxTemplete maskInput;
         private Panel panel21;

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Interface.ModelsDB
+namespace Interface
 {
-    public partial class Processopedido
+    public partial class ProcessoPedido
     {
         public int ID_processo { get; set; }
         public int ID_for_rota { get; set; }
@@ -15,10 +15,8 @@ namespace Interface.ModelsDB
         public DateOnly Data_inicio { get; set; }
         public DateOnly DATA_fim { get; set; }
 
- 
         public virtual Motorista ID_for_motoristaNavigation { get; set; } = null!;
-        public virtual Rotaretorno ID_for_retornoNavigation { get; set; } = null!;
+        public virtual RotaRetorno ID_for_retornoNavigation { get; set; } = null!;
         public virtual Veiculo ID_for_veiculoNavigation { get; set; } = null!;
-    
     }
 }

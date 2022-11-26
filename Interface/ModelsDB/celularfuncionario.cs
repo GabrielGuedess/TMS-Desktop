@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Interface.ModelsDB
+namespace Interface
 {
-    public partial class Celularfuncionario
+    public partial class CelularFuncionario
     {
         public int ID_celular { get; set; }
         public int ID_for_funcionario { get; set; }

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Interface.ModelsDB
+namespace Interface
 {
     public partial class Mercadoria
     {
@@ -14,6 +14,6 @@ namespace Interface.ModelsDB
         public double Valor { get; set; }
 
         public virtual Cliente ID_for_clienteNavigation { get; set; } = null!;
-        public virtual Pedidocliente ID_for_pedidoNavigation { get; set; } = null!;
+        public virtual PedidoCliente ID_for_pedidoNavigation { get; set; } = null!;
     }
 }

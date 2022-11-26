@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Interface.ModelsDB
+namespace Interface
 {
-    public partial class Veiculoterceiro
+    public partial class VeiculoTerceiro
     {
         public int ID_veiculo_terceiro { get; set; }
         public int ID_for_motorista { get; set; }
@@ -23,6 +23,6 @@ namespace Interface.ModelsDB
         public double Capacidade_volumetrican { get; set; }
         public double Capacidade_KG { get; set; }
 
-        public virtual Motoristaterceiro ID_for_motoristaNavigation { get; set; } = null!;
+        public virtual MotoristaTerceiro ID_for_motoristaNavigation { get; set; } = null!;
     }
 }

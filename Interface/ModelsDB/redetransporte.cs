@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Interface.ModelsDB
+namespace Interface
 {
-    public partial class Redetransporte
+    public partial class RedeTransporte
     {
         public int ID_rede { get; set; }
         public string Tipo_rede { get; set; } = null!;

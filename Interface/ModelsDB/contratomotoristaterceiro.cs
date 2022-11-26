@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Interface.ModelsDB
+namespace Interface
 {
-    public partial class Contratomotoristaterceiro
+    public partial class ContratoMotoristaTerceiro
     {
         public int ID_contrato { get; set; }
         public int ID_for_motorista { get; set; }
@@ -13,6 +13,6 @@ namespace Interface.ModelsDB
         public string Situacao_contrato { get; set; } = null!;
         public string Veiculo_proprio { get; set; } = null!;
 
-        public virtual Motoristaterceiro ID_for_motoristaNavigation { get; set; } = null!;
+        public virtual MotoristaTerceiro ID_for_motoristaNavigation { get; set; } = null!;
     }
 }

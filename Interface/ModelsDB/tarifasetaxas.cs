@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Interface.ModelsDB
+namespace Interface
 {
-    public partial class Tarifasetaxas
+    public partial class TarifasETaxas
     {
         public int ID_ta { get; set; }
         public string Descricao { get; set; } = null!;

@@ -53,7 +53,7 @@ namespace Interface
             {
                 maskInput.Text = value["CPF"].ToString();
 
-                if (value != null)
+               /* if (value != null)
                 {
                     tbID.Text = value["NUM_ID"].ToString();
                     tbNome.Text = value["Nome"].ToString();
@@ -76,7 +76,7 @@ namespace Interface
                     dateVencimentoCNH.Text = value["VENCIMENTO_CNH"].ToString();
                     comboVeiculoProprio.Text = value["VEICULO_PROPRIO"].ToString();
                     comboMOPP.SelectedItem = value["MOPP"].ToString();
-                }
+                }*/
             }
         }
         public CadastroMotoristas()
@@ -87,7 +87,7 @@ namespace Interface
         private void CadastroMotoristas_Resize(object sender, EventArgs e)
         {
             utils.alignCenterPanels(panelSerch, searchPanel, true, true);
-            utils.expansivePanels(10, panelBorderRoundedID, panelBorderRoundedCPF, panelBorderRoundedNCNH, panelBorderRoundedEmail, panelBorderRoundedEndereco);
+            utils.expansivePanels(10, panelBorderRoundedCPF, panelBorderRoundedNCNH, panelBorderRoundedEmail, panelBorderRoundedEndereco);
         }
 
         private void panelSerch_Paint(object sender, PaintEventArgs e)
@@ -113,7 +113,7 @@ namespace Interface
             notValidar.Add(mkTelefone.Name);
             if (Type.Contains("Cadastro") && Validation.Validar(contentMotorista, notValidar))
             {
-                string SQL = "Insert Into C_Motoristas (NUM_ID, NOME,RG,CPF,DATA_NASCIMENTO,TELEFONE,CELULAR,EMAIL," +
+               /* string SQL = "Insert Into C_Motoristas (NUM_ID, NOME,RG,CPF,DATA_NASCIMENTO,TELEFONE,CELULAR,EMAIL," +
                 "LOGRADOURO,NUMERO_LOGRADOURO,BAIRRO,COMPLEMENTO,CEP,CIDADE,UF,NUMERO_CNH,CATEGORIA_CNH," +
                 "VENCIMENTO_CNH,VEICULO_PROPRIO,MOPP) Values";
                 SQL += $"('{tbID.Text} ',' {tbNome.Text}', '{mkRG.Text}', '{mkCPF.Text}', '{dateNascimento.Text}', '{mkTelefone.Text}'" +
@@ -158,7 +158,7 @@ namespace Interface
 
                 limpar.CleanControl(contentMotorista);
                 limpar.CleanControl(searchPanel);
-                //tbID.Text = DBFunctions.atualizaID("SELECT MAX (NUM_ID) FROM C_Motoristas", "m");
+                //tbID.Text = DBFunctions.atualizaID("SELECT MAX (NUM_ID) FROM C_Motoristas", "m");*/
             }
         }
 
@@ -168,7 +168,7 @@ namespace Interface
             {
                 DataRow dados = DBFunctions.pesquisarRow($"SELECT * FROM C_Motoristas WHERE CPF = '{maskInput.Text}'", contentMotorista)!;
 
-                if (dados != null)
+                /*if (dados != null)
                 {
                     maskInput.Text = dados["CPF"].ToString();
 
@@ -192,7 +192,7 @@ namespace Interface
                     dateVencimentoCNH.Text = dados["VENCIMENTO_CNH"].ToString();
                     comboVeiculoProprio.Text = dados["VEICULO_PROPRIO"].ToString();
                     comboMOPP.SelectedItem = dados["MOPP"].ToString();
-                }
+                }*/
             }
             else
             {
