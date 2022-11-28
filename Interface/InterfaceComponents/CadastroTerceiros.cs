@@ -95,7 +95,7 @@ namespace Interface
         public CadastroTerceiros()
         {
             InitializeComponent();
-
+            disableFieldsVeiculo(false);
             
         }
 
@@ -128,6 +128,24 @@ namespace Interface
                 notValidar.Add(tbComplemento.Name);
                 notValidar.Add(mkTelefone.Name);
                 notValidar.Add(dateFimAtividade.Name);
+                if(comboVeiculoProprio.SelectedIndex == 0)
+                {
+                    notValidar.Add(tbPlaca.Name);
+                    notValidar.Add(mkAno.Name);
+                    notValidar.Add(mkRNTRC.Name);
+                    notValidar.Add(dateVencimentoRENTRC.Name);
+                    notValidar.Add(tipoVeiculo.Name);
+                    notValidar.Add(mkRenavam.Name);
+                    notValidar.Add(mkCodigoCIOT.Name);
+                    notValidar.Add(tbMarca.Name);
+                    notValidar.Add(tbModelo.Name);
+                    notValidar.Add(comboTipoCarroceria.Name);
+                    notValidar.Add(tbPesoVeiculo.Name);
+                    notValidar.Add(tbQuantEixos.Name);
+                    notValidar.Add(tbQuantiEixosCarroceria.Name);
+                    notValidar.Add(tbCapacidadePesoMax.Name);
+                    notValidar.Add(tbCapacidadeVolumetrica.Name);
+                }
                 if (Type.Contains("Cadastro") && Validation.Validar(contentTerceiros, notValidar) && Validation.validarTelefone(mkTelefone))
                 {
 
@@ -158,11 +176,14 @@ namespace Interface
                     terceiro.Curso_MOPP = comboMOPP.Text;
                     terceiro.Disponibilidade = "ad";
 
-                    Celularmotoristaterceiro celular = new Celularmotoristaterceiro { Celular = mkCelular.Text,
-                        ID_for_motorista = lastID };
+                    Celularmotoristaterceiro celular = new Celularmotoristaterceiro { 
+                        Celular = mkCelular.Text,
+                        ID_for_motorista = lastID 
+                    };
 
                     Telefonemotoristaterceiro telefone = new Telefonemotoristaterceiro { Telefone = mkTelefone.Text, 
-                        ID_for_motorista = lastID };
+                        ID_for_motorista = lastID 
+                    };
 
 
                     Contratomotoristaterceiro contrato = new Contratomotoristaterceiro
@@ -178,29 +199,32 @@ namespace Interface
                     {
                         contrato.Fim_contrato = dateFimAtividade.convertDateOnly();
                     }
+                    if (comboVeiculoProprio.SelectedIndex == 1)
+                    {
+                        Veiculoterceiro veiculo = new Veiculoterceiro
+                        {
+                            //possibilidade de revisão
+                            ID_for_motorista = lastID,
+                            //ID_veiculo_terceiro = lastID,
+                            Ano_fabricao = Convert.ToInt16(mkAno.Text),
+                            Capacidade_KG = tbCapacidadePesoMax.returnValue(),
+                            Capacidade_volumetrican = tbCapacidadeVolumetrica.returnValue(),
+                            Carroceria = comboTipoCarroceria.Text,
+                            Cod_CIOT = mkCodigoCIOT.Text,
+                            Cod_RENAVAM = mkRenavam.Text,
+                            Cod_RNTRC = mkRNTRC.Text,
+                            Eixo_carroceria = int.Parse(tbQuantiEixosCarroceria.Text),
+                            Eixo_modelo = int.Parse(tbQuantEixos.Text),
+                            Marca = tbMarca.Text,
+                            Massa_carroceria = tbPesoCarroceria.returnValue(),
+                            Massa_modelo = tbPesoVeiculo.returnValue(),
+                            Placa = tbPlaca.Text,
+                            Modelo = tbModelo.Text,
+                            Vencimento_RNTRC = dateVencimentoRENTRC.convertDateOnly()
 
-                    Veiculoterceiro veiculo = new Veiculoterceiro {
-                        //possibilidade de revisão
-                        ID_for_motorista = lastID,
-                        ID_veiculo_terceiro = lastID,
-                        Ano_fabricao = short.Parse(mkAno.Text),
-                        Capacidade_KG = tbCapacidadePesoMax.returnValue(),
-                        Capacidade_volumetrican = tbCapacidadeVolumetrica.returnValue(),
-                        Carroceria = comboTipoCarroceria.Text,
-                        Cod_CIOT = mkCodigoCIOT.Text,
-                        Cod_RENAVAM = mkRenavam.Text,
-                        Cod_RNTRC = mkRNTRC.Text,
-                        Eixo_carroceria = int.Parse(tbQuantiEixosCarroceria.Text),
-                        Eixo_modelo = int.Parse(tbQuantEixos.Text),
-                        Marca = tbMarca.Text,
-                        Massa_carroceria = tbPesoCarroceria.returnValue(),
-                        Massa_modelo = tbPesoVeiculo.returnValue(),
-                        Placa = tbPlaca.Text,
-                        Modelo = tbModelo.Text,
-                        Vencimento_RNTRC = dateVencimentoRENTRC.convertDateOnly()
-                        
-                    };
-
+                        };
+                        terceiro.Veiculoterceiro.Add(veiculo);
+                    }
                     Emailmotoristaterceiro email = new Emailmotoristaterceiro
                     {
                         Email = tbEmail.Text,
@@ -210,53 +234,114 @@ namespace Interface
                     terceiro.Telefonemotoristaterceiro.Add(telefone);
                     terceiro.Contratomotoristaterceiro.Add(contrato);
                     terceiro.Emailmotoristaterceiro.Add(email);
-                    terceiro.Veiculoterceiro.Add(veiculo);
+
 
                     db.Motoristaterceiro.Add(terceiro);
                     db.SaveChanges();
 
 
 
-                    /*limpar.CleanControl(contentTerceiros);
-                    limpar.CleanControl(searchPanel);*/
+                    limpar.CleanControl(contentTerceiros);
+                    limpar.CleanControl(searchPanel);
                 }
 
                 if (Type.Contains("Update") && Validation.Validar(contentTerceiros, notValidar) && Validation.validarTelefone(mkTelefone))
                 {
-                   /* string SQLUp = $"UPDATE tbTerceiros SET " +
-                    $"Nome= '{tbNome.Text}', " +
-                    //$"Email= '{dateNascimento.Text}', " +
-                    //$"Num_Cel= '{comboGenero.Text}', " +
-                    $"Celular= '{mkCelular.Text}', " +
-                    $"Telefone= '{mkTelefone.Text}', " +
-                    $"Email= '{textEmail.Text}', " +
-                    $"CEP= '{mkCEP.Text}', " +
-                    $"Estado= '{comboUF.Text}', " +
-                    $"CIDADE= '{comboCidade.Text}', " +
-                    //$"Num_Cel= '{tbLogradouro.Text}', " +
-                    $"Numero= '{tbNumCasa.Text}', " +
-                    $"Bairro= '{tbBairro.Text}', " +
-                    $"Complemento= '{tbComplemento.Text}', " +
+                    TMSContext db = new();
+                    var terceiro = db.Motoristaterceiro.
+                    Include(a => a.Celularmotoristaterceiro).
+                    Include(a => a.Contratomotoristaterceiro).
+                    Include(a => a.Telefonemotoristaterceiro).
+                    Include(a => a.Emailmotoristaterceiro).
+                    Include(a => a.Veiculoterceiro)
+                    .FirstOrDefault(a => a.CPF == maskCpf.Text);
 
-                    $"NumeroCNH= '{mkCNH.Text}', " +
-                    $"CategoriaCNH= '{comboCategoriaCNH.Text}', " +
-                    $"CursoMOPP= '{comboMOPP.Text}', " +
-                    $"VencimentoCNH= '{dateVencimentoCNH.Text}', " +
-                    $"NumeroRNTRC= '{mkRNTRC.Text}', " +
-                    $"VencimentoRNTRC= '{dateVencimentoRENTRC.Text}', " +
-                    $"TipoVeiculo= '{comboTipoVeiculo.Text}', " +
+                    terceiro.CPF = mkCPF.Text;
+                    terceiro.Nome = tbNome.Text;
+                    terceiro.RG = tbRg.Text;
+                    terceiro.Data_nascimento = dateNascimento.convertDateOnly();
+                    terceiro.Genero = comboGenero.Text;
+                    terceiro.CEP = mkCEP.Text;
+                    terceiro.UF = comboUF.Text;
+                    terceiro.Bairro = tbBairro.Text;
+                    terceiro.Cidade = comboCidade.Text;
+                    terceiro.Logradouro = tbLogradouro.Text;
+                    terceiro.Complemento_endereco = tbComplemento.Text;
+                    terceiro.Numero_endereco = tbNumCasa.Text;
+                    terceiro.Numero_CNH = mkCNH.Text;
+                    terceiro.Categoria_CNH = comboCategoriaCNH.Text;
+                    terceiro.Vencimento_CNH = dateVencimentoCNH.convertDateOnly();
+                    terceiro.Curso_MOPP = comboMOPP.Text;
+                    terceiro.Disponibilidade = "ad";
 
-                    $"TipoContrato= '{comboTipoContrato.Text}', " +
-                    $"Situacao= '{comboSituacaoContrato.Text}', " +
-                    $"DataInicioAtividades= '{dateInicioAtividade.Text}', " +
-                    $"DataFimAtividades= '{dateFimAtividade.Text}' " +
-                    $"WHERE CPF = '{maskCpf.Text.Replace('.', ',')}'";
+                    terceiro.Celularmotoristaterceiro.First().Celular = mkCelular.Text;
+                    terceiro.Telefonemotoristaterceiro.First().Telefone = mkTelefone.Text;
 
-                    ConnectDB connectDB = new();
-                    connectDB.cadastrar(SQLUp);
+                    terceiro.Contratomotoristaterceiro.First().Tipo_contrato = comboTipoContrato.Text;
+                    terceiro.Contratomotoristaterceiro.First().Inicio_contrato = dateInicioAtividade.convertDateOnly();
+                    terceiro.Contratomotoristaterceiro.First().Situacao_contrato = comboSituacaoContrato.Text;
+                    terceiro.Contratomotoristaterceiro.First().Veiculo_proprio = comboVeiculoProprio.Text;
+                    if (dateFimAtividade.Text.Length > 0)
+                    {
+                        terceiro.Contratomotoristaterceiro.First().Fim_contrato = dateFimAtividade.convertDateOnly();
+                    }
+                    terceiro.Emailmotoristaterceiro.First().Email = tbEmail.Text;
+                    //caso um terceiro não dirija mais o seu veiculo proprio
+                    if (comboVeiculoProprio.SelectedIndex == 0)
+                    {
+                        db.Veiculoterceiro.Remove(terceiro.Veiculoterceiro.First());
+                    }
+                    //caso o terceiro não tenha um veiculo mas quer add um depois de já cadastrato
+                    else if(terceiro.Veiculoterceiro.Count == 0)
+                    {
+                        Veiculoterceiro veiculo = new Veiculoterceiro
+                        {
+                            ID_for_motorista = terceiro.ID_motorista_terceiro,
+                            Ano_fabricao = Convert.ToInt16(mkAno.Text),
+                            Capacidade_KG = tbCapacidadePesoMax.returnValue(),
+                            Capacidade_volumetrican = tbCapacidadeVolumetrica.returnValue(),
+                            Carroceria = comboTipoCarroceria.Text,
+                            Cod_CIOT = mkCodigoCIOT.Text,
+                            Cod_RENAVAM = mkRenavam.Text,
+                            Cod_RNTRC = mkRNTRC.Text,
+                            Eixo_carroceria = int.Parse(tbQuantiEixosCarroceria.Text),
+                            Eixo_modelo = int.Parse(tbQuantEixos.Text),
+                            Marca = tbMarca.Text,
+                            Massa_carroceria = tbPesoCarroceria.returnValue(),
+                            Massa_modelo = tbPesoVeiculo.returnValue(),
+                            Placa = tbPlaca.Text,
+                            Modelo = tbModelo.Text,
+                            Vencimento_RNTRC = dateVencimentoRENTRC.convertDateOnly()
+                        };
+                        terceiro.Veiculoterceiro.Add(veiculo);
+                    }
+                    //caso o terceiro atualize alguma coisa do seu veiculo
+                    else
+                    {
+                        terceiro.Veiculoterceiro.First().Ano_fabricao = Convert.ToInt16(mkAno.Text);
+                        terceiro.Veiculoterceiro.First().Capacidade_KG = tbCapacidadePesoMax.returnValue();
+                        terceiro.Veiculoterceiro.First().Capacidade_volumetrican = tbCapacidadeVolumetrica.returnValue();
+                        terceiro.Veiculoterceiro.First().Carroceria = comboTipoCarroceria.Text;
+                        terceiro.Veiculoterceiro.First().Cod_CIOT = mkCodigoCIOT.Text;
+                        terceiro.Veiculoterceiro.First().Cod_RENAVAM = mkRenavam.Text;
+                        terceiro.Veiculoterceiro.First().Cod_RNTRC = mkRNTRC.Text;
+                        terceiro.Veiculoterceiro.First().Vencimento_RNTRC = dateVencimentoRENTRC.convertDateOnly();
+                        terceiro.Veiculoterceiro.First().Eixo_carroceria = int.Parse(tbQuantiEixosCarroceria.Text);
+                        terceiro.Veiculoterceiro.First().Eixo_modelo = int.Parse(tbQuantEixos.Text);
+                        terceiro.Veiculoterceiro.First().Marca = tbMarca.Text;
+                        terceiro.Veiculoterceiro.First().Massa_carroceria = tbPesoCarroceria.returnValue();
+                        terceiro.Veiculoterceiro.First().Massa_modelo = tbPesoVeiculo.returnValue();
+                        terceiro.Veiculoterceiro.First().Placa = tbPlaca.Text;
+                        terceiro.Veiculoterceiro.First().Modelo = tbModelo.Text;
+                    }
+
+
+                    db.SaveChanges();
+
+
 
                     limpar.CleanControl(contentTerceiros);
-                    limpar.CleanControl(searchPanel);*/
+                    limpar.CleanControl(searchPanel);
                 }
 
             }
@@ -276,7 +361,7 @@ namespace Interface
                 //esse AsNoTracking faz a consulta ser mais rapida 
                 //porém só pode user usado para casos em que só vai 
                 //ler os dados e não vai manipulalos
-                var terceiro = db.Motoristaterceiro.AsNoTracking().
+                var terceiro = db.Motoristaterceiro.
                     Include(a=> a.Celularmotoristaterceiro).
                     Include(a=>a.Contratomotoristaterceiro).
                     Include(a=>a.Telefonemotoristaterceiro).
@@ -284,7 +369,12 @@ namespace Interface
                     Include(a=>a.Veiculoterceiro)
                     .FirstOrDefault(a=>a.CPF == maskCpf.Text);
 
-               
+                if(terceiro == null)
+                {
+                    MessageBox.Show("Motorista não encontrado");
+                    return;
+                }
+                
                 mkCelular.Text = terceiro.Celularmotoristaterceiro.First().Celular;
                 
 
@@ -294,7 +384,7 @@ namespace Interface
                 comboGenero.Text = terceiro.Genero;
                 mkCelular.Text = terceiro.Celularmotoristaterceiro.First().Celular;
                 mkTelefone.Text = terceiro.Telefonemotoristaterceiro.First().Telefone.ToString();
-                //tbEmail.Text = terceiro.Emailmotoristaterceiro.First().Email;
+                tbEmail.Text = terceiro.Emailmotoristaterceiro.First().Email;
                 mkCEP.Text = terceiro.CEP;
                 comboUF.Text = terceiro.UF;
                 comboCidade.Text = terceiro.Cidade;
@@ -308,29 +398,36 @@ namespace Interface
                 comboMOPP.Text = terceiro.Curso_MOPP;
                 dateVencimentoCNH.Text = terceiro.Vencimento_CNH.ToString();
                 comboVeiculoProprio.Text = terceiro.Contratomotoristaterceiro.First().Veiculo_proprio;
-                tbPlaca.Text = terceiro.Veiculoterceiro.First().Placa;
-                mkAno.Text = terceiro.Veiculoterceiro.First().Ano_fabricao.ToString();
-                mkRNTRC.Text = terceiro.Veiculoterceiro.First().Cod_RNTRC;
-                dateVencimentoRENTRC.Text = terceiro.Veiculoterceiro.First().Vencimento_RNTRC.ToString();
-                comboTipoVeiculo.Text = terceiro.Veiculoterceiro.First().Carroceria;
-                mkRenavam.Text = terceiro.Veiculoterceiro.First().Cod_RENAVAM;
-                mkCodigoCIOT.Text = terceiro.Veiculoterceiro.First().Cod_CIOT;
-                tbMarca.Text = terceiro.Veiculoterceiro.First().Marca;
-                tbModelo.Text = terceiro.Veiculoterceiro.First().Modelo;
-                comboTipoCarroceria.Text = terceiro.Veiculoterceiro.First().Carroceria;
-                tbPesoVeiculo.Text =terceiro.Veiculoterceiro.First().Massa_modelo.ToString() +" Kg";
-                tbQuantEixos.Text = terceiro.Veiculoterceiro.First().Eixo_modelo.ToString();
-                tbPesoCarroceria.Text = terceiro.Veiculoterceiro.First().Massa_carroceria.ToString() +" Kg";
-                tbQuantiEixosCarroceria.Text = terceiro.Veiculoterceiro.First().Eixo_carroceria.ToString();
-                tbCapacidadeVolumetrica.Text = terceiro.Veiculoterceiro.First().Capacidade_volumetrican.ToString() + " m³";
-                tbCapacidadePesoMax.Text = terceiro.Veiculoterceiro.First().Capacidade_KG.ToString() + " Kg";
-                comboTipoContrato.Text = terceiro.Contratomotoristaterceiro.First().Tipo_contrato;
+                if (terceiro.Veiculoterceiro.Count == 0)
+                {
+                }
+                else
+                {
+                    tbPlaca.Text = terceiro.Veiculoterceiro.First().Placa;
+                    mkAno.Text = terceiro.Veiculoterceiro.First().Ano_fabricao.ToString();
+                    mkRNTRC.Text = terceiro.Veiculoterceiro.First().Cod_RNTRC;
+                    dateVencimentoRENTRC.Text = terceiro.Veiculoterceiro.First().Vencimento_RNTRC.ToString();
+                    comboTipoVeiculo.Text = terceiro.Veiculoterceiro.First().Carroceria;
+                    mkRenavam.Text = terceiro.Veiculoterceiro.First().Cod_RENAVAM;
+                    mkCodigoCIOT.Text = terceiro.Veiculoterceiro.First().Cod_CIOT;
+                    tbMarca.Text = terceiro.Veiculoterceiro.First().Marca;
+                    tbModelo.Text = terceiro.Veiculoterceiro.First().Modelo;
+                    comboTipoCarroceria.Text = terceiro.Veiculoterceiro.First().Carroceria;
+                    tbPesoVeiculo.Text = terceiro.Veiculoterceiro.First().Massa_modelo.ToString() + " Kg";
+                    tbQuantEixos.Text = terceiro.Veiculoterceiro.First().Eixo_modelo.ToString();
+                    tbPesoCarroceria.Text = terceiro.Veiculoterceiro.First().Massa_carroceria.ToString() + " Kg";
+                    tbQuantiEixosCarroceria.Text = terceiro.Veiculoterceiro.First().Eixo_carroceria.ToString();
+                    tbCapacidadeVolumetrica.Text = terceiro.Veiculoterceiro.First().Capacidade_volumetrican.ToString() + " m³";
+                    tbCapacidadePesoMax.Text = terceiro.Veiculoterceiro.First().Capacidade_KG.ToString() + " Kg";
+                }
+                
+                comboTipoContrato.Text = terceiro.Contratomotoristaterceiro.First().Tipo_contrato.ToString();
                 comboSituacaoContrato.Text = terceiro.Contratomotoristaterceiro.First().Situacao_contrato;
                 dateInicioAtividade.Text = terceiro.Contratomotoristaterceiro.First().Inicio_contrato.ToString();
                 dateFimAtividade.Text = terceiro.Contratomotoristaterceiro.First().Fim_contrato.ToString();
 
 
-
+             
             }
             else
             {
@@ -375,6 +472,42 @@ namespace Interface
         private void textBoxOnlyNum_Letters3_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void comboVeiculoProprio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(comboVeiculoProprio.SelectedIndex == -1 || comboVeiculoProprio.SelectedIndex == 0)
+            {
+                disableFieldsVeiculo(false);
+                tableInfoVeiculo.Controls.Remove(panelVeiculoProprio);
+                limpar.CleanControl(tableInfoVeiculo);
+                tableInfoVeiculo.Controls.Add(panelVeiculoProprio, 0, 0);
+                tableContrato.Focus();
+            }
+            else
+            {
+                disableFieldsVeiculo(true);
+            }
+        }
+
+        private void disableFieldsVeiculo(bool action){
+            tbPlaca.Enabled = action;
+            mkAno.Enabled = action;
+            mkRNTRC.Enabled = action;
+            dateVencimentoRENTRC.Enabled = action;
+            tipoVeiculo.Enabled = action;
+            mkRenavam.Enabled = action;
+            mkCodigoCIOT.Enabled = action;
+            tbMarca.Enabled = action;
+            tbModelo.Enabled = action;
+            comboTipoCarroceria.Enabled = action;
+            tbPesoVeiculo.Enabled = action;
+            tbQuantEixos.Enabled = action;
+            tbPesoCarroceria.Enabled = action;
+            tipoVeiculo.Enabled = action;
+            tbQuantiEixosCarroceria.Enabled = action;
+            tbCapacidadePesoMax.Enabled = action;
+            tbCapacidadeVolumetrica.Enabled = action;
         }
     }
 }

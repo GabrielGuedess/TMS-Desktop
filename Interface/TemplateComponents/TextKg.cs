@@ -18,8 +18,11 @@
         {
 
             base.OnKeyPress(e);
-
-            if (char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar) || char.IsWhiteSpace(e.KeyChar))
+            if (Text.Length > 4 && this.SelectionStart > (uint)Text.Length - 3)
+            {
+                SelectionStart = TextLength - 4;
+            }
+            else if (char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar) || char.IsWhiteSpace(e.KeyChar))
             {
                 KeyUp += new KeyEventHandler(key);
                 void key(Object o, KeyEventArgs e)
@@ -53,5 +56,6 @@
             double value = double.Parse(Text.Replace("Kg", ""));
             return value;
         }
+       
     }
 }
