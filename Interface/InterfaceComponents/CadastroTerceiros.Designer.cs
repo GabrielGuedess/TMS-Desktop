@@ -32,8 +32,6 @@ namespace Interface
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroTerceiros));
             this.contentTerceiros = new System.Windows.Forms.Panel();
-            this.panelBorderRounded14 = new Interface.TemplateComponents.PanelBorderRounded();
-            this.textBoxOnlyNum_Letters2 = new Interface.TemplateComponents.TextBoxOnlyNum_Letters();
             this.tableContrato = new System.Windows.Forms.TableLayoutPanel();
             this.panelTipoContrato = new System.Windows.Forms.Panel();
             this.panel18 = new System.Windows.Forms.Panel();
@@ -386,8 +384,6 @@ namespace Interface
             this.contentTerceiros.AutoScroll = true;
             this.contentTerceiros.AutoScrollMargin = new System.Drawing.Size(0, 20);
             this.contentTerceiros.BackColor = System.Drawing.Color.Transparent;
-            this.contentTerceiros.Controls.Add(this.panelBorderRounded14);
-            this.contentTerceiros.Controls.Add(this.textBoxOnlyNum_Letters2);
             this.contentTerceiros.Controls.Add(this.tableContrato);
             this.contentTerceiros.Controls.Add(this.label11);
             this.contentTerceiros.Controls.Add(this.label1);
@@ -399,31 +395,8 @@ namespace Interface
             this.contentTerceiros.Margin = new System.Windows.Forms.Padding(0);
             this.contentTerceiros.Name = "contentTerceiros";
             this.contentTerceiros.Padding = new System.Windows.Forms.Padding(40);
-            this.contentTerceiros.Size = new System.Drawing.Size(975, 1704);
+            this.contentTerceiros.Size = new System.Drawing.Size(975, 1731);
             this.contentTerceiros.TabIndex = 10;
-            // 
-            // panelBorderRounded14
-            // 
-            this.panelBorderRounded14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelBorderRounded14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelBorderRounded14.Location = new System.Drawing.Point(332, 752);
-            this.panelBorderRounded14.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.panelBorderRounded14.Name = "panelBorderRounded14";
-            this.panelBorderRounded14.Size = new System.Drawing.Size(241, 33);
-            this.panelBorderRounded14.TabIndex = 22;
-            // 
-            // textBoxOnlyNum_Letters2
-            // 
-            this.textBoxOnlyNum_Letters2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxOnlyNum_Letters2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.textBoxOnlyNum_Letters2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxOnlyNum_Letters2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxOnlyNum_Letters2.ForeColor = System.Drawing.Color.White;
-            this.textBoxOnlyNum_Letters2.Location = new System.Drawing.Point(579, 752);
-            this.textBoxOnlyNum_Letters2.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.textBoxOnlyNum_Letters2.Name = "textBoxOnlyNum_Letters2";
-            this.textBoxOnlyNum_Letters2.Size = new System.Drawing.Size(222, 22);
-            this.textBoxOnlyNum_Letters2.TabIndex = 21;
             // 
             // tableContrato
             // 
@@ -445,7 +418,7 @@ namespace Interface
             this.tableContrato.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableContrato.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableContrato.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableContrato.Size = new System.Drawing.Size(878, 200);
+            this.tableContrato.Size = new System.Drawing.Size(895, 200);
             this.tableContrato.TabIndex = 3;
             // 
             // panelTipoContrato
@@ -457,7 +430,7 @@ namespace Interface
             this.panelTipoContrato.Margin = new System.Windows.Forms.Padding(0);
             this.panelTipoContrato.Name = "panelTipoContrato";
             this.panelTipoContrato.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.panelTipoContrato.Size = new System.Drawing.Size(292, 100);
+            this.panelTipoContrato.Size = new System.Drawing.Size(298, 100);
             this.panelTipoContrato.TabIndex = 0;
             // 
             // panel18
@@ -469,7 +442,7 @@ namespace Interface
             this.panel18.Location = new System.Drawing.Point(20, 20);
             this.panel18.Margin = new System.Windows.Forms.Padding(0);
             this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(252, 70);
+            this.panel18.Size = new System.Drawing.Size(258, 70);
             this.panel18.TabIndex = 7;
             // 
             // comboTipoContrato
@@ -487,7 +460,7 @@ namespace Interface
             this.comboTipoContrato.Location = new System.Drawing.Point(5, 32);
             this.comboTipoContrato.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.comboTipoContrato.Name = "comboTipoContrato";
-            this.comboTipoContrato.Size = new System.Drawing.Size(242, 29);
+            this.comboTipoContrato.Size = new System.Drawing.Size(248, 29);
             this.comboTipoContrato.TabIndex = 5;
             // 
             // label15
@@ -507,11 +480,11 @@ namespace Interface
             this.panelSituacaoContrato.BackColor = System.Drawing.Color.Transparent;
             this.panelSituacaoContrato.Controls.Add(this.panel20);
             this.panelSituacaoContrato.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelSituacaoContrato.Location = new System.Drawing.Point(292, 0);
+            this.panelSituacaoContrato.Location = new System.Drawing.Point(298, 0);
             this.panelSituacaoContrato.Margin = new System.Windows.Forms.Padding(0);
             this.panelSituacaoContrato.Name = "panelSituacaoContrato";
             this.panelSituacaoContrato.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.panelSituacaoContrato.Size = new System.Drawing.Size(292, 100);
+            this.panelSituacaoContrato.Size = new System.Drawing.Size(298, 100);
             this.panelSituacaoContrato.TabIndex = 1;
             // 
             // panel20
@@ -523,7 +496,7 @@ namespace Interface
             this.panel20.Location = new System.Drawing.Point(20, 20);
             this.panel20.Margin = new System.Windows.Forms.Padding(0);
             this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(252, 70);
+            this.panel20.Size = new System.Drawing.Size(258, 70);
             this.panel20.TabIndex = 8;
             // 
             // comboSituacaoContrato
@@ -542,7 +515,7 @@ namespace Interface
             this.comboSituacaoContrato.Location = new System.Drawing.Point(5, 32);
             this.comboSituacaoContrato.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.comboSituacaoContrato.Name = "comboSituacaoContrato";
-            this.comboSituacaoContrato.Size = new System.Drawing.Size(242, 29);
+            this.comboSituacaoContrato.Size = new System.Drawing.Size(248, 29);
             this.comboSituacaoContrato.TabIndex = 6;
             // 
             // label16
@@ -561,11 +534,11 @@ namespace Interface
             // 
             this.panelInicioAtv.Controls.Add(this.panel22);
             this.panelInicioAtv.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelInicioAtv.Location = new System.Drawing.Point(584, 0);
+            this.panelInicioAtv.Location = new System.Drawing.Point(596, 0);
             this.panelInicioAtv.Margin = new System.Windows.Forms.Padding(0);
             this.panelInicioAtv.Name = "panelInicioAtv";
             this.panelInicioAtv.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.panelInicioAtv.Size = new System.Drawing.Size(294, 100);
+            this.panelInicioAtv.Size = new System.Drawing.Size(299, 100);
             this.panelInicioAtv.TabIndex = 2;
             // 
             // panel22
@@ -577,7 +550,7 @@ namespace Interface
             this.panel22.Location = new System.Drawing.Point(20, 20);
             this.panel22.Margin = new System.Windows.Forms.Padding(0);
             this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(254, 70);
+            this.panel22.Size = new System.Drawing.Size(259, 70);
             this.panel22.TabIndex = 9;
             // 
             // panelBorderRounded10
@@ -588,7 +561,7 @@ namespace Interface
             this.panelBorderRounded10.Location = new System.Drawing.Point(6, 37);
             this.panelBorderRounded10.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelBorderRounded10.Name = "panelBorderRounded10";
-            this.panelBorderRounded10.Size = new System.Drawing.Size(242, 33);
+            this.panelBorderRounded10.Size = new System.Drawing.Size(247, 33);
             this.panelBorderRounded10.TabIndex = 2;
             // 
             // dateInicioAtividade
@@ -602,8 +575,9 @@ namespace Interface
             this.dateInicioAtividade.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.dateInicioAtividade.Mask = "00/00/0000";
             this.dateInicioAtividade.Name = "dateInicioAtividade";
-            this.dateInicioAtividade.Size = new System.Drawing.Size(150, 22);
+            this.dateInicioAtividade.Size = new System.Drawing.Size(155, 22);
             this.dateInicioAtividade.TabIndex = 14;
+            this.dateInicioAtividade.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.dateInicioAtividade.ValidatingType = typeof(System.DateTime);
             // 
             // label17
@@ -626,7 +600,7 @@ namespace Interface
             this.panelFimAtv.Margin = new System.Windows.Forms.Padding(0);
             this.panelFimAtv.Name = "panelFimAtv";
             this.panelFimAtv.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.panelFimAtv.Size = new System.Drawing.Size(292, 100);
+            this.panelFimAtv.Size = new System.Drawing.Size(298, 100);
             this.panelFimAtv.TabIndex = 3;
             // 
             // panel24
@@ -638,7 +612,7 @@ namespace Interface
             this.panel24.Location = new System.Drawing.Point(20, 20);
             this.panel24.Margin = new System.Windows.Forms.Padding(0);
             this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(252, 70);
+            this.panel24.Size = new System.Drawing.Size(258, 70);
             this.panel24.TabIndex = 9;
             // 
             // panelFim
@@ -649,7 +623,7 @@ namespace Interface
             this.panelFim.Location = new System.Drawing.Point(5, 37);
             this.panelFim.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelFim.Name = "panelFim";
-            this.panelFim.Size = new System.Drawing.Size(238, 33);
+            this.panelFim.Size = new System.Drawing.Size(244, 33);
             this.panelFim.TabIndex = 3;
             // 
             // dateFimAtividade
@@ -663,8 +637,9 @@ namespace Interface
             this.dateFimAtividade.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.dateFimAtividade.Mask = "00/00/0000";
             this.dateFimAtividade.Name = "dateFimAtividade";
-            this.dateFimAtividade.Size = new System.Drawing.Size(218, 22);
+            this.dateFimAtividade.Size = new System.Drawing.Size(224, 22);
             this.dateFimAtividade.TabIndex = 14;
+            this.dateFimAtividade.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.dateFimAtividade.ValidatingType = typeof(System.DateTime);
             // 
             // label19
@@ -739,7 +714,7 @@ namespace Interface
             this.tableInfoVeiculo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableInfoVeiculo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableInfoVeiculo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.tableInfoVeiculo.Size = new System.Drawing.Size(878, 596);
+            this.tableInfoVeiculo.Size = new System.Drawing.Size(895, 596);
             this.tableInfoVeiculo.TabIndex = 2;
             // 
             // panelRNTRC
@@ -750,8 +725,8 @@ namespace Interface
             this.panelRNTRC.Margin = new System.Windows.Forms.Padding(0);
             this.panelRNTRC.Name = "panelRNTRC";
             this.panelRNTRC.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.panelRNTRC.Size = new System.Drawing.Size(292, 100);
-            this.panelRNTRC.TabIndex = 3;
+            this.panelRNTRC.Size = new System.Drawing.Size(298, 100);
+            this.panelRNTRC.TabIndex = 4;
             // 
             // panel8
             // 
@@ -762,7 +737,7 @@ namespace Interface
             this.panel8.Location = new System.Drawing.Point(20, 20);
             this.panel8.Margin = new System.Windows.Forms.Padding(0);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(252, 70);
+            this.panel8.Size = new System.Drawing.Size(258, 70);
             this.panel8.TabIndex = 9;
             // 
             // panelBorderRounded1
@@ -773,7 +748,7 @@ namespace Interface
             this.panelBorderRounded1.Location = new System.Drawing.Point(5, 31);
             this.panelBorderRounded1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelBorderRounded1.Name = "panelBorderRounded1";
-            this.panelBorderRounded1.Size = new System.Drawing.Size(238, 33);
+            this.panelBorderRounded1.Size = new System.Drawing.Size(244, 33);
             this.panelBorderRounded1.TabIndex = 3;
             // 
             // mkRNTRC
@@ -787,7 +762,7 @@ namespace Interface
             this.mkRNTRC.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.mkRNTRC.Mask = "000000000";
             this.mkRNTRC.Name = "mkRNTRC";
-            this.mkRNTRC.Size = new System.Drawing.Size(223, 22);
+            this.mkRNTRC.Size = new System.Drawing.Size(229, 22);
             this.mkRNTRC.TabIndex = 18;
             this.mkRNTRC.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
@@ -807,12 +782,12 @@ namespace Interface
             // 
             this.panelVenciRNTRC.Controls.Add(this.panel10);
             this.panelVenciRNTRC.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelVenciRNTRC.Location = new System.Drawing.Point(292, 100);
+            this.panelVenciRNTRC.Location = new System.Drawing.Point(298, 100);
             this.panelVenciRNTRC.Margin = new System.Windows.Forms.Padding(0);
             this.panelVenciRNTRC.Name = "panelVenciRNTRC";
             this.panelVenciRNTRC.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.panelVenciRNTRC.Size = new System.Drawing.Size(292, 100);
-            this.panelVenciRNTRC.TabIndex = 4;
+            this.panelVenciRNTRC.Size = new System.Drawing.Size(298, 100);
+            this.panelVenciRNTRC.TabIndex = 5;
             // 
             // panel10
             // 
@@ -823,7 +798,7 @@ namespace Interface
             this.panel10.Location = new System.Drawing.Point(20, 20);
             this.panel10.Margin = new System.Windows.Forms.Padding(0);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(252, 70);
+            this.panel10.Size = new System.Drawing.Size(258, 70);
             this.panel10.TabIndex = 8;
             // 
             // panelBorderRounded4
@@ -834,7 +809,7 @@ namespace Interface
             this.panelBorderRounded4.Location = new System.Drawing.Point(5, 32);
             this.panelBorderRounded4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelBorderRounded4.Name = "panelBorderRounded4";
-            this.panelBorderRounded4.Size = new System.Drawing.Size(237, 33);
+            this.panelBorderRounded4.Size = new System.Drawing.Size(243, 33);
             this.panelBorderRounded4.TabIndex = 2;
             // 
             // dateVencimentoRENTRC
@@ -848,8 +823,9 @@ namespace Interface
             this.dateVencimentoRENTRC.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.dateVencimentoRENTRC.Mask = "00/00/0000";
             this.dateVencimentoRENTRC.Name = "dateVencimentoRENTRC";
-            this.dateVencimentoRENTRC.Size = new System.Drawing.Size(225, 22);
+            this.dateVencimentoRENTRC.Size = new System.Drawing.Size(231, 22);
             this.dateVencimentoRENTRC.TabIndex = 14;
+            this.dateVencimentoRENTRC.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.dateVencimentoRENTRC.ValidatingType = typeof(System.DateTime);
             // 
             // label8
@@ -868,12 +844,12 @@ namespace Interface
             // 
             this.tipoVeiculo.Controls.Add(this.panel12);
             this.tipoVeiculo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tipoVeiculo.Location = new System.Drawing.Point(584, 100);
+            this.tipoVeiculo.Location = new System.Drawing.Point(596, 100);
             this.tipoVeiculo.Margin = new System.Windows.Forms.Padding(0);
             this.tipoVeiculo.Name = "tipoVeiculo";
             this.tipoVeiculo.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.tipoVeiculo.Size = new System.Drawing.Size(294, 100);
-            this.tipoVeiculo.TabIndex = 5;
+            this.tipoVeiculo.Size = new System.Drawing.Size(299, 100);
+            this.tipoVeiculo.TabIndex = 6;
             // 
             // panel12
             // 
@@ -884,7 +860,7 @@ namespace Interface
             this.panel12.Location = new System.Drawing.Point(20, 20);
             this.panel12.Margin = new System.Windows.Forms.Padding(0);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(254, 70);
+            this.panel12.Size = new System.Drawing.Size(259, 70);
             this.panel12.TabIndex = 9;
             // 
             // comboTipoVeiculo
@@ -913,7 +889,7 @@ namespace Interface
             this.comboTipoVeiculo.Location = new System.Drawing.Point(6, 31);
             this.comboTipoVeiculo.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.comboTipoVeiculo.Name = "comboTipoVeiculo";
-            this.comboTipoVeiculo.Size = new System.Drawing.Size(278, 29);
+            this.comboTipoVeiculo.Size = new System.Drawing.Size(283, 29);
             this.comboTipoVeiculo.TabIndex = 6;
             // 
             // label9
@@ -936,8 +912,8 @@ namespace Interface
             this.panelVeiculoProprio.Margin = new System.Windows.Forms.Padding(0);
             this.panelVeiculoProprio.Name = "panelVeiculoProprio";
             this.panelVeiculoProprio.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.panelVeiculoProprio.Size = new System.Drawing.Size(292, 100);
-            this.panelVeiculoProprio.TabIndex = 6;
+            this.panelVeiculoProprio.Size = new System.Drawing.Size(298, 100);
+            this.panelVeiculoProprio.TabIndex = 1;
             // 
             // panel1
             // 
@@ -946,7 +922,7 @@ namespace Interface
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(20, 20);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(252, 70);
+            this.panel1.Size = new System.Drawing.Size(258, 70);
             this.panel1.TabIndex = 7;
             // 
             // label28
@@ -976,19 +952,20 @@ namespace Interface
             this.comboVeiculoProprio.Location = new System.Drawing.Point(5, 37);
             this.comboVeiculoProprio.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.comboVeiculoProprio.Name = "comboVeiculoProprio";
-            this.comboVeiculoProprio.Size = new System.Drawing.Size(238, 29);
+            this.comboVeiculoProprio.Size = new System.Drawing.Size(244, 29);
             this.comboVeiculoProprio.TabIndex = 15;
+            this.comboVeiculoProprio.SelectedIndexChanged += new System.EventHandler(this.comboVeiculoProprio_SelectedIndexChanged);
             // 
             // panelPlacaVeiculo
             // 
             this.panelPlacaVeiculo.Controls.Add(this.panel3);
             this.panelPlacaVeiculo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelPlacaVeiculo.Location = new System.Drawing.Point(292, 0);
+            this.panelPlacaVeiculo.Location = new System.Drawing.Point(298, 0);
             this.panelPlacaVeiculo.Margin = new System.Windows.Forms.Padding(0);
             this.panelPlacaVeiculo.Name = "panelPlacaVeiculo";
             this.panelPlacaVeiculo.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.panelPlacaVeiculo.Size = new System.Drawing.Size(292, 100);
-            this.panelPlacaVeiculo.TabIndex = 7;
+            this.panelPlacaVeiculo.Size = new System.Drawing.Size(298, 100);
+            this.panelPlacaVeiculo.TabIndex = 2;
             // 
             // panel3
             // 
@@ -997,7 +974,7 @@ namespace Interface
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(20, 20);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(252, 70);
+            this.panel3.Size = new System.Drawing.Size(258, 70);
             this.panel3.TabIndex = 8;
             // 
             // panelBorderRounded13
@@ -1008,7 +985,7 @@ namespace Interface
             this.panelBorderRounded13.Location = new System.Drawing.Point(6, 33);
             this.panelBorderRounded13.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelBorderRounded13.Name = "panelBorderRounded13";
-            this.panelBorderRounded13.Size = new System.Drawing.Size(245, 33);
+            this.panelBorderRounded13.Size = new System.Drawing.Size(251, 33);
             this.panelBorderRounded13.TabIndex = 4;
             // 
             // tbPlaca
@@ -1021,7 +998,7 @@ namespace Interface
             this.tbPlaca.Location = new System.Drawing.Point(4, 6);
             this.tbPlaca.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbPlaca.Name = "tbPlaca";
-            this.tbPlaca.Size = new System.Drawing.Size(198, 22);
+            this.tbPlaca.Size = new System.Drawing.Size(204, 22);
             this.tbPlaca.TabIndex = 0;
             // 
             // label29
@@ -1040,12 +1017,12 @@ namespace Interface
             // 
             this.panelAnoVeiculo.Controls.Add(this.panel5);
             this.panelAnoVeiculo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelAnoVeiculo.Location = new System.Drawing.Point(584, 0);
+            this.panelAnoVeiculo.Location = new System.Drawing.Point(596, 0);
             this.panelAnoVeiculo.Margin = new System.Windows.Forms.Padding(0);
             this.panelAnoVeiculo.Name = "panelAnoVeiculo";
             this.panelAnoVeiculo.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.panelAnoVeiculo.Size = new System.Drawing.Size(294, 100);
-            this.panelAnoVeiculo.TabIndex = 8;
+            this.panelAnoVeiculo.Size = new System.Drawing.Size(299, 100);
+            this.panelAnoVeiculo.TabIndex = 3;
             // 
             // panel5
             // 
@@ -1056,7 +1033,7 @@ namespace Interface
             this.panel5.Location = new System.Drawing.Point(20, 20);
             this.panel5.Margin = new System.Windows.Forms.Padding(0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(254, 70);
+            this.panel5.Size = new System.Drawing.Size(259, 70);
             this.panel5.TabIndex = 10;
             // 
             // panelBorderRounded15
@@ -1067,7 +1044,7 @@ namespace Interface
             this.panelBorderRounded15.Location = new System.Drawing.Point(7, 28);
             this.panelBorderRounded15.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelBorderRounded15.Name = "panelBorderRounded15";
-            this.panelBorderRounded15.Size = new System.Drawing.Size(240, 33);
+            this.panelBorderRounded15.Size = new System.Drawing.Size(245, 33);
             this.panelBorderRounded15.TabIndex = 23;
             // 
             // mkAno
@@ -1081,7 +1058,7 @@ namespace Interface
             this.mkAno.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.mkAno.Mask = "0000";
             this.mkAno.Name = "mkAno";
-            this.mkAno.Size = new System.Drawing.Size(119, 22);
+            this.mkAno.Size = new System.Drawing.Size(124, 22);
             this.mkAno.TabIndex = 0;
             this.mkAno.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
@@ -1105,8 +1082,8 @@ namespace Interface
             this.panelRENAVAM.Margin = new System.Windows.Forms.Padding(0);
             this.panelRENAVAM.Name = "panelRENAVAM";
             this.panelRENAVAM.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.panelRENAVAM.Size = new System.Drawing.Size(292, 100);
-            this.panelRENAVAM.TabIndex = 9;
+            this.panelRENAVAM.Size = new System.Drawing.Size(298, 100);
+            this.panelRENAVAM.TabIndex = 7;
             // 
             // panel27
             // 
@@ -1117,7 +1094,7 @@ namespace Interface
             this.panel27.Location = new System.Drawing.Point(20, 20);
             this.panel27.Margin = new System.Windows.Forms.Padding(0);
             this.panel27.Name = "panel27";
-            this.panel27.Size = new System.Drawing.Size(252, 70);
+            this.panel27.Size = new System.Drawing.Size(258, 70);
             this.panel27.TabIndex = 10;
             // 
             // panelBorderRounded16
@@ -1128,7 +1105,7 @@ namespace Interface
             this.panelBorderRounded16.Location = new System.Drawing.Point(6, 27);
             this.panelBorderRounded16.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelBorderRounded16.Name = "panelBorderRounded16";
-            this.panelBorderRounded16.Size = new System.Drawing.Size(274, 33);
+            this.panelBorderRounded16.Size = new System.Drawing.Size(280, 33);
             this.panelBorderRounded16.TabIndex = 23;
             // 
             // mkRenavam
@@ -1142,7 +1119,7 @@ namespace Interface
             this.mkRenavam.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.mkRenavam.Mask = "00000000000";
             this.mkRenavam.Name = "mkRenavam";
-            this.mkRenavam.Size = new System.Drawing.Size(190, 22);
+            this.mkRenavam.Size = new System.Drawing.Size(196, 22);
             this.mkRenavam.TabIndex = 23;
             this.mkRenavam.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
@@ -1162,12 +1139,12 @@ namespace Interface
             // 
             this.panelCIOT.Controls.Add(this.panel28);
             this.panelCIOT.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelCIOT.Location = new System.Drawing.Point(292, 200);
+            this.panelCIOT.Location = new System.Drawing.Point(298, 200);
             this.panelCIOT.Margin = new System.Windows.Forms.Padding(0);
             this.panelCIOT.Name = "panelCIOT";
             this.panelCIOT.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.panelCIOT.Size = new System.Drawing.Size(292, 100);
-            this.panelCIOT.TabIndex = 10;
+            this.panelCIOT.Size = new System.Drawing.Size(298, 100);
+            this.panelCIOT.TabIndex = 8;
             // 
             // panel28
             // 
@@ -1178,7 +1155,7 @@ namespace Interface
             this.panel28.Location = new System.Drawing.Point(20, 20);
             this.panel28.Margin = new System.Windows.Forms.Padding(0);
             this.panel28.Name = "panel28";
-            this.panel28.Size = new System.Drawing.Size(252, 70);
+            this.panel28.Size = new System.Drawing.Size(258, 70);
             this.panel28.TabIndex = 10;
             // 
             // panelBorderRounded17
@@ -1189,7 +1166,7 @@ namespace Interface
             this.panelBorderRounded17.Location = new System.Drawing.Point(5, 27);
             this.panelBorderRounded17.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelBorderRounded17.Name = "panelBorderRounded17";
-            this.panelBorderRounded17.Size = new System.Drawing.Size(242, 33);
+            this.panelBorderRounded17.Size = new System.Drawing.Size(248, 33);
             this.panelBorderRounded17.TabIndex = 23;
             // 
             // mkCodigoCIOT
@@ -1203,7 +1180,7 @@ namespace Interface
             this.mkCodigoCIOT.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.mkCodigoCIOT.Mask = "0000000000000000";
             this.mkCodigoCIOT.Name = "mkCodigoCIOT";
-            this.mkCodigoCIOT.Size = new System.Drawing.Size(158, 22);
+            this.mkCodigoCIOT.Size = new System.Drawing.Size(164, 22);
             this.mkCodigoCIOT.TabIndex = 24;
             this.mkCodigoCIOT.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
@@ -1223,12 +1200,12 @@ namespace Interface
             // 
             this.panelMarca.Controls.Add(this.panel31);
             this.panelMarca.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMarca.Location = new System.Drawing.Point(584, 200);
+            this.panelMarca.Location = new System.Drawing.Point(596, 200);
             this.panelMarca.Margin = new System.Windows.Forms.Padding(0);
             this.panelMarca.Name = "panelMarca";
             this.panelMarca.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.panelMarca.Size = new System.Drawing.Size(294, 100);
-            this.panelMarca.TabIndex = 11;
+            this.panelMarca.Size = new System.Drawing.Size(299, 100);
+            this.panelMarca.TabIndex = 9;
             // 
             // panel31
             // 
@@ -1239,7 +1216,7 @@ namespace Interface
             this.panel31.Location = new System.Drawing.Point(20, 20);
             this.panel31.Margin = new System.Windows.Forms.Padding(0);
             this.panel31.Name = "panel31";
-            this.panel31.Size = new System.Drawing.Size(254, 70);
+            this.panel31.Size = new System.Drawing.Size(259, 70);
             this.panel31.TabIndex = 10;
             // 
             // panelBorderRounded18
@@ -1250,7 +1227,7 @@ namespace Interface
             this.panelBorderRounded18.Location = new System.Drawing.Point(7, 27);
             this.panelBorderRounded18.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelBorderRounded18.Name = "panelBorderRounded18";
-            this.panelBorderRounded18.Size = new System.Drawing.Size(241, 33);
+            this.panelBorderRounded18.Size = new System.Drawing.Size(246, 33);
             this.panelBorderRounded18.TabIndex = 23;
             // 
             // tbMarca
@@ -1263,7 +1240,7 @@ namespace Interface
             this.tbMarca.Location = new System.Drawing.Point(9, 5);
             this.tbMarca.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbMarca.Name = "tbMarca";
-            this.tbMarca.Size = new System.Drawing.Size(223, 22);
+            this.tbMarca.Size = new System.Drawing.Size(228, 22);
             this.tbMarca.TabIndex = 22;
             // 
             // label33
@@ -1286,8 +1263,8 @@ namespace Interface
             this.panelModelo.Margin = new System.Windows.Forms.Padding(0);
             this.panelModelo.Name = "panelModelo";
             this.panelModelo.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.panelModelo.Size = new System.Drawing.Size(292, 100);
-            this.panelModelo.TabIndex = 12;
+            this.panelModelo.Size = new System.Drawing.Size(298, 100);
+            this.panelModelo.TabIndex = 10;
             // 
             // panel7
             // 
@@ -1298,7 +1275,7 @@ namespace Interface
             this.panel7.Location = new System.Drawing.Point(20, 20);
             this.panel7.Margin = new System.Windows.Forms.Padding(0);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(252, 70);
+            this.panel7.Size = new System.Drawing.Size(258, 70);
             this.panel7.TabIndex = 10;
             // 
             // panelBorderRounded19
@@ -1309,7 +1286,7 @@ namespace Interface
             this.panelBorderRounded19.Location = new System.Drawing.Point(0, 36);
             this.panelBorderRounded19.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelBorderRounded19.Name = "panelBorderRounded19";
-            this.panelBorderRounded19.Size = new System.Drawing.Size(252, 33);
+            this.panelBorderRounded19.Size = new System.Drawing.Size(258, 33);
             this.panelBorderRounded19.TabIndex = 23;
             // 
             // tbModelo
@@ -1322,7 +1299,7 @@ namespace Interface
             this.tbModelo.Location = new System.Drawing.Point(10, 5);
             this.tbModelo.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbModelo.Name = "tbModelo";
-            this.tbModelo.Size = new System.Drawing.Size(233, 22);
+            this.tbModelo.Size = new System.Drawing.Size(239, 22);
             this.tbModelo.TabIndex = 22;
             // 
             // label34
@@ -1341,12 +1318,12 @@ namespace Interface
             // 
             this.panelCarroceria.Controls.Add(this.panel9);
             this.panelCarroceria.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelCarroceria.Location = new System.Drawing.Point(292, 300);
+            this.panelCarroceria.Location = new System.Drawing.Point(298, 300);
             this.panelCarroceria.Margin = new System.Windows.Forms.Padding(0);
             this.panelCarroceria.Name = "panelCarroceria";
             this.panelCarroceria.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.panelCarroceria.Size = new System.Drawing.Size(292, 100);
-            this.panelCarroceria.TabIndex = 13;
+            this.panelCarroceria.Size = new System.Drawing.Size(298, 100);
+            this.panelCarroceria.TabIndex = 11;
             // 
             // panel9
             // 
@@ -1357,7 +1334,7 @@ namespace Interface
             this.panel9.Location = new System.Drawing.Point(20, 20);
             this.panel9.Margin = new System.Windows.Forms.Padding(0);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(252, 70);
+            this.panel9.Size = new System.Drawing.Size(258, 70);
             this.panel9.TabIndex = 10;
             // 
             // comboTipoCarroceria
@@ -1386,7 +1363,7 @@ namespace Interface
             this.comboTipoCarroceria.Location = new System.Drawing.Point(10, 36);
             this.comboTipoCarroceria.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.comboTipoCarroceria.Name = "comboTipoCarroceria";
-            this.comboTipoCarroceria.Size = new System.Drawing.Size(237, 29);
+            this.comboTipoCarroceria.Size = new System.Drawing.Size(243, 29);
             this.comboTipoCarroceria.TabIndex = 7;
             // 
             // label35
@@ -1405,12 +1382,12 @@ namespace Interface
             // 
             this.panelPesoVeiculo.Controls.Add(this.panel11);
             this.panelPesoVeiculo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelPesoVeiculo.Location = new System.Drawing.Point(584, 300);
+            this.panelPesoVeiculo.Location = new System.Drawing.Point(596, 300);
             this.panelPesoVeiculo.Margin = new System.Windows.Forms.Padding(0);
             this.panelPesoVeiculo.Name = "panelPesoVeiculo";
             this.panelPesoVeiculo.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.panelPesoVeiculo.Size = new System.Drawing.Size(294, 100);
-            this.panelPesoVeiculo.TabIndex = 14;
+            this.panelPesoVeiculo.Size = new System.Drawing.Size(299, 100);
+            this.panelPesoVeiculo.TabIndex = 12;
             // 
             // panel11
             // 
@@ -1421,7 +1398,7 @@ namespace Interface
             this.panel11.Location = new System.Drawing.Point(20, 20);
             this.panel11.Margin = new System.Windows.Forms.Padding(0);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(254, 70);
+            this.panel11.Size = new System.Drawing.Size(259, 70);
             this.panel11.TabIndex = 10;
             // 
             // panelBorderRounded21
@@ -1432,7 +1409,7 @@ namespace Interface
             this.panelBorderRounded21.Location = new System.Drawing.Point(0, 36);
             this.panelBorderRounded21.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelBorderRounded21.Name = "panelBorderRounded21";
-            this.panelBorderRounded21.Size = new System.Drawing.Size(253, 33);
+            this.panelBorderRounded21.Size = new System.Drawing.Size(258, 33);
             this.panelBorderRounded21.TabIndex = 23;
             // 
             // tbPesoVeiculo
@@ -1467,8 +1444,8 @@ namespace Interface
             this.templatePanel1.Margin = new System.Windows.Forms.Padding(0);
             this.templatePanel1.Name = "templatePanel1";
             this.templatePanel1.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.templatePanel1.Size = new System.Drawing.Size(292, 100);
-            this.templatePanel1.TabIndex = 15;
+            this.templatePanel1.Size = new System.Drawing.Size(298, 100);
+            this.templatePanel1.TabIndex = 16;
             // 
             // panel35
             // 
@@ -1479,7 +1456,7 @@ namespace Interface
             this.panel35.Location = new System.Drawing.Point(20, 20);
             this.panel35.Margin = new System.Windows.Forms.Padding(0);
             this.panel35.Name = "panel35";
-            this.panel35.Size = new System.Drawing.Size(252, 70);
+            this.panel35.Size = new System.Drawing.Size(258, 70);
             this.panel35.TabIndex = 10;
             // 
             // panelBorderRounded25
@@ -1490,7 +1467,7 @@ namespace Interface
             this.panelBorderRounded25.Location = new System.Drawing.Point(5, 36);
             this.panelBorderRounded25.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelBorderRounded25.Name = "panelBorderRounded25";
-            this.panelBorderRounded25.Size = new System.Drawing.Size(241, 33);
+            this.panelBorderRounded25.Size = new System.Drawing.Size(247, 33);
             this.panelBorderRounded25.TabIndex = 23;
             // 
             // tbCapacidadeVolumetrica
@@ -1521,12 +1498,12 @@ namespace Interface
             // 
             this.templatePanel2.Controls.Add(this.panel36);
             this.templatePanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.templatePanel2.Location = new System.Drawing.Point(292, 500);
+            this.templatePanel2.Location = new System.Drawing.Point(298, 500);
             this.templatePanel2.Margin = new System.Windows.Forms.Padding(0);
             this.templatePanel2.Name = "templatePanel2";
             this.templatePanel2.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.templatePanel2.Size = new System.Drawing.Size(292, 100);
-            this.templatePanel2.TabIndex = 16;
+            this.templatePanel2.Size = new System.Drawing.Size(298, 100);
+            this.templatePanel2.TabIndex = 17;
             // 
             // panel36
             // 
@@ -1537,7 +1514,7 @@ namespace Interface
             this.panel36.Location = new System.Drawing.Point(20, 20);
             this.panel36.Margin = new System.Windows.Forms.Padding(0);
             this.panel36.Name = "panel36";
-            this.panel36.Size = new System.Drawing.Size(252, 70);
+            this.panel36.Size = new System.Drawing.Size(258, 70);
             this.panel36.TabIndex = 10;
             // 
             // panelBorderRounded26
@@ -1548,7 +1525,7 @@ namespace Interface
             this.panelBorderRounded26.Location = new System.Drawing.Point(7, 36);
             this.panelBorderRounded26.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelBorderRounded26.Name = "panelBorderRounded26";
-            this.panelBorderRounded26.Size = new System.Drawing.Size(241, 33);
+            this.panelBorderRounded26.Size = new System.Drawing.Size(247, 33);
             this.panelBorderRounded26.TabIndex = 23;
             // 
             // tbCapacidadePesoMax
@@ -1579,12 +1556,12 @@ namespace Interface
             // 
             this.templatePanel3.Controls.Add(this.panel38);
             this.templatePanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.templatePanel3.Location = new System.Drawing.Point(584, 500);
+            this.templatePanel3.Location = new System.Drawing.Point(596, 500);
             this.templatePanel3.Margin = new System.Windows.Forms.Padding(0);
             this.templatePanel3.Name = "templatePanel3";
             this.templatePanel3.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.templatePanel3.Size = new System.Drawing.Size(294, 100);
-            this.templatePanel3.TabIndex = 17;
+            this.templatePanel3.Size = new System.Drawing.Size(299, 100);
+            this.templatePanel3.TabIndex = 18;
             // 
             // panel38
             // 
@@ -1594,7 +1571,7 @@ namespace Interface
             this.panel38.Location = new System.Drawing.Point(20, 20);
             this.panel38.Margin = new System.Windows.Forms.Padding(0);
             this.panel38.Name = "panel38";
-            this.panel38.Size = new System.Drawing.Size(254, 70);
+            this.panel38.Size = new System.Drawing.Size(259, 70);
             this.panel38.TabIndex = 10;
             // 
             // label42
@@ -1617,8 +1594,8 @@ namespace Interface
             this.templatePanel4.Margin = new System.Windows.Forms.Padding(0);
             this.templatePanel4.Name = "templatePanel4";
             this.templatePanel4.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.templatePanel4.Size = new System.Drawing.Size(292, 100);
-            this.templatePanel4.TabIndex = 18;
+            this.templatePanel4.Size = new System.Drawing.Size(298, 100);
+            this.templatePanel4.TabIndex = 13;
             // 
             // panel32
             // 
@@ -1629,7 +1606,7 @@ namespace Interface
             this.panel32.Location = new System.Drawing.Point(20, 20);
             this.panel32.Margin = new System.Windows.Forms.Padding(0);
             this.panel32.Name = "panel32";
-            this.panel32.Size = new System.Drawing.Size(252, 70);
+            this.panel32.Size = new System.Drawing.Size(258, 70);
             this.panel32.TabIndex = 10;
             // 
             // panelBorderRounded22
@@ -1640,7 +1617,7 @@ namespace Interface
             this.panelBorderRounded22.Location = new System.Drawing.Point(5, 36);
             this.panelBorderRounded22.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelBorderRounded22.Name = "panelBorderRounded22";
-            this.panelBorderRounded22.Size = new System.Drawing.Size(241, 33);
+            this.panelBorderRounded22.Size = new System.Drawing.Size(247, 33);
             this.panelBorderRounded22.TabIndex = 23;
             // 
             // tbQuantEixos
@@ -1654,7 +1631,7 @@ namespace Interface
             this.tbQuantEixos.Location = new System.Drawing.Point(10, 7);
             this.tbQuantEixos.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbQuantEixos.Name = "tbQuantEixos";
-            this.tbQuantEixos.Size = new System.Drawing.Size(221, 22);
+            this.tbQuantEixos.Size = new System.Drawing.Size(227, 22);
             this.tbQuantEixos.TabIndex = 0;
             // 
             // label37
@@ -1673,12 +1650,12 @@ namespace Interface
             // 
             this.templatePanel5.Controls.Add(this.panel33);
             this.templatePanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.templatePanel5.Location = new System.Drawing.Point(292, 400);
+            this.templatePanel5.Location = new System.Drawing.Point(298, 400);
             this.templatePanel5.Margin = new System.Windows.Forms.Padding(0);
             this.templatePanel5.Name = "templatePanel5";
             this.templatePanel5.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.templatePanel5.Size = new System.Drawing.Size(292, 100);
-            this.templatePanel5.TabIndex = 19;
+            this.templatePanel5.Size = new System.Drawing.Size(298, 100);
+            this.templatePanel5.TabIndex = 14;
             // 
             // panel33
             // 
@@ -1689,7 +1666,7 @@ namespace Interface
             this.panel33.Location = new System.Drawing.Point(20, 20);
             this.panel33.Margin = new System.Windows.Forms.Padding(0);
             this.panel33.Name = "panel33";
-            this.panel33.Size = new System.Drawing.Size(252, 70);
+            this.panel33.Size = new System.Drawing.Size(258, 70);
             this.panel33.TabIndex = 10;
             // 
             // panelBorderRounded23
@@ -1700,7 +1677,7 @@ namespace Interface
             this.panelBorderRounded23.Location = new System.Drawing.Point(11, 36);
             this.panelBorderRounded23.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelBorderRounded23.Name = "panelBorderRounded23";
-            this.panelBorderRounded23.Size = new System.Drawing.Size(241, 33);
+            this.panelBorderRounded23.Size = new System.Drawing.Size(247, 33);
             this.panelBorderRounded23.TabIndex = 23;
             // 
             // tbPesoCarroceria
@@ -1731,12 +1708,12 @@ namespace Interface
             // 
             this.templatePanel6.Controls.Add(this.panel34);
             this.templatePanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.templatePanel6.Location = new System.Drawing.Point(584, 400);
+            this.templatePanel6.Location = new System.Drawing.Point(596, 400);
             this.templatePanel6.Margin = new System.Windows.Forms.Padding(0);
             this.templatePanel6.Name = "templatePanel6";
             this.templatePanel6.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.templatePanel6.Size = new System.Drawing.Size(294, 100);
-            this.templatePanel6.TabIndex = 20;
+            this.templatePanel6.Size = new System.Drawing.Size(299, 100);
+            this.templatePanel6.TabIndex = 15;
             // 
             // panel34
             // 
@@ -1747,7 +1724,7 @@ namespace Interface
             this.panel34.Location = new System.Drawing.Point(20, 20);
             this.panel34.Margin = new System.Windows.Forms.Padding(0);
             this.panel34.Name = "panel34";
-            this.panel34.Size = new System.Drawing.Size(254, 70);
+            this.panel34.Size = new System.Drawing.Size(259, 70);
             this.panel34.TabIndex = 10;
             // 
             // panelBorderRounded24
@@ -1758,7 +1735,7 @@ namespace Interface
             this.panelBorderRounded24.Location = new System.Drawing.Point(6, 36);
             this.panelBorderRounded24.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelBorderRounded24.Name = "panelBorderRounded24";
-            this.panelBorderRounded24.Size = new System.Drawing.Size(241, 33);
+            this.panelBorderRounded24.Size = new System.Drawing.Size(246, 33);
             this.panelBorderRounded24.TabIndex = 23;
             // 
             // tbQuantiEixosCarroceria
@@ -1771,7 +1748,7 @@ namespace Interface
             this.tbQuantiEixosCarroceria.Location = new System.Drawing.Point(10, 5);
             this.tbQuantiEixosCarroceria.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbQuantiEixosCarroceria.Name = "tbQuantiEixosCarroceria";
-            this.tbQuantiEixosCarroceria.Size = new System.Drawing.Size(221, 22);
+            this.tbQuantiEixosCarroceria.Size = new System.Drawing.Size(226, 22);
             this.tbQuantiEixosCarroceria.TabIndex = 1;
             // 
             // label39
@@ -1832,7 +1809,7 @@ namespace Interface
             this.tableDadosPessoais.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableDadosPessoais.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableDadosPessoais.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.tableDadosPessoais.Size = new System.Drawing.Size(878, 601);
+            this.tableDadosPessoais.Size = new System.Drawing.Size(895, 601);
             this.tableDadosPessoais.TabIndex = 1;
             // 
             // panelNome
@@ -1844,7 +1821,7 @@ namespace Interface
             this.panelNome.Margin = new System.Windows.Forms.Padding(0);
             this.panelNome.Name = "panelNome";
             this.panelNome.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.panelNome.Size = new System.Drawing.Size(292, 100);
+            this.panelNome.Size = new System.Drawing.Size(298, 100);
             this.panelNome.TabIndex = 1;
             // 
             // subpanelNomeClient
@@ -1856,7 +1833,7 @@ namespace Interface
             this.subpanelNomeClient.Location = new System.Drawing.Point(20, 20);
             this.subpanelNomeClient.Margin = new System.Windows.Forms.Padding(0);
             this.subpanelNomeClient.Name = "subpanelNomeClient";
-            this.subpanelNomeClient.Size = new System.Drawing.Size(252, 70);
+            this.subpanelNomeClient.Size = new System.Drawing.Size(258, 70);
             this.subpanelNomeClient.TabIndex = 8;
             // 
             // panelTextNomeClient
@@ -1867,7 +1844,7 @@ namespace Interface
             this.panelTextNomeClient.Location = new System.Drawing.Point(5, 37);
             this.panelTextNomeClient.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelTextNomeClient.Name = "panelTextNomeClient";
-            this.panelTextNomeClient.Size = new System.Drawing.Size(242, 33);
+            this.panelTextNomeClient.Size = new System.Drawing.Size(248, 33);
             this.panelTextNomeClient.TabIndex = 1;
             // 
             // tbNome
@@ -1900,12 +1877,12 @@ namespace Interface
             this.panelCPF.BackColor = System.Drawing.Color.Transparent;
             this.panelCPF.Controls.Add(this.SubpanelCPF);
             this.panelCPF.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelCPF.Location = new System.Drawing.Point(292, 0);
+            this.panelCPF.Location = new System.Drawing.Point(298, 0);
             this.panelCPF.Margin = new System.Windows.Forms.Padding(0);
             this.panelCPF.Name = "panelCPF";
             this.panelCPF.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.panelCPF.Size = new System.Drawing.Size(292, 100);
-            this.panelCPF.TabIndex = 0;
+            this.panelCPF.Size = new System.Drawing.Size(298, 100);
+            this.panelCPF.TabIndex = 2;
             // 
             // SubpanelCPF
             // 
@@ -1916,7 +1893,7 @@ namespace Interface
             this.SubpanelCPF.Location = new System.Drawing.Point(20, 20);
             this.SubpanelCPF.Margin = new System.Windows.Forms.Padding(0);
             this.SubpanelCPF.Name = "SubpanelCPF";
-            this.SubpanelCPF.Size = new System.Drawing.Size(252, 70);
+            this.SubpanelCPF.Size = new System.Drawing.Size(258, 70);
             this.SubpanelCPF.TabIndex = 7;
             // 
             // panelTextCPFClient
@@ -1927,7 +1904,7 @@ namespace Interface
             this.panelTextCPFClient.Location = new System.Drawing.Point(5, 37);
             this.panelTextCPFClient.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelTextCPFClient.Name = "panelTextCPFClient";
-            this.panelTextCPFClient.Size = new System.Drawing.Size(242, 33);
+            this.panelTextCPFClient.Size = new System.Drawing.Size(248, 33);
             this.panelTextCPFClient.TabIndex = 2;
             // 
             // mkCPF
@@ -1941,7 +1918,7 @@ namespace Interface
             this.mkCPF.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.mkCPF.Mask = "000.000.000-00";
             this.mkCPF.Name = "mkCPF";
-            this.mkCPF.Size = new System.Drawing.Size(222, 22);
+            this.mkCPF.Size = new System.Drawing.Size(228, 22);
             this.mkCPF.TabIndex = 1;
             this.mkCPF.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
@@ -1960,12 +1937,12 @@ namespace Interface
             // panelRG
             // 
             this.panelRG.Controls.Add(this.panel25);
-            this.panelRG.Location = new System.Drawing.Point(584, 0);
+            this.panelRG.Location = new System.Drawing.Point(596, 0);
             this.panelRG.Margin = new System.Windows.Forms.Padding(0);
             this.panelRG.Name = "panelRG";
             this.panelRG.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
             this.panelRG.Size = new System.Drawing.Size(294, 100);
-            this.panelRG.TabIndex = 0;
+            this.panelRG.TabIndex = 3;
             // 
             // panel25
             // 
@@ -2025,8 +2002,8 @@ namespace Interface
             this.panelDtNasc.Margin = new System.Windows.Forms.Padding(0);
             this.panelDtNasc.Name = "panelDtNasc";
             this.panelDtNasc.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.panelDtNasc.Size = new System.Drawing.Size(292, 100);
-            this.panelDtNasc.TabIndex = 2;
+            this.panelDtNasc.Size = new System.Drawing.Size(298, 100);
+            this.panelDtNasc.TabIndex = 4;
             // 
             // subpanelDtNascClient
             // 
@@ -2037,7 +2014,7 @@ namespace Interface
             this.subpanelDtNascClient.Location = new System.Drawing.Point(20, 20);
             this.subpanelDtNascClient.Margin = new System.Windows.Forms.Padding(0);
             this.subpanelDtNascClient.Name = "subpanelDtNascClient";
-            this.subpanelDtNascClient.Size = new System.Drawing.Size(252, 70);
+            this.subpanelDtNascClient.Size = new System.Drawing.Size(258, 70);
             this.subpanelDtNascClient.TabIndex = 9;
             // 
             // panelDateTimer
@@ -2048,7 +2025,7 @@ namespace Interface
             this.panelDateTimer.Location = new System.Drawing.Point(5, 37);
             this.panelDateTimer.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelDateTimer.Name = "panelDateTimer";
-            this.panelDateTimer.Size = new System.Drawing.Size(242, 33);
+            this.panelDateTimer.Size = new System.Drawing.Size(248, 33);
             this.panelDateTimer.TabIndex = 2;
             // 
             // dateNascimento
@@ -2063,8 +2040,9 @@ namespace Interface
             this.dateNascimento.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.dateNascimento.Mask = "00/00/0000";
             this.dateNascimento.Name = "dateNascimento";
-            this.dateNascimento.Size = new System.Drawing.Size(221, 22);
+            this.dateNascimento.Size = new System.Drawing.Size(227, 22);
             this.dateNascimento.TabIndex = 14;
+            this.dateNascimento.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.dateNascimento.ValidatingType = typeof(System.DateTime);
             // 
             // label5
@@ -2083,12 +2061,12 @@ namespace Interface
             // 
             this.panelGenero.Controls.Add(this.subpanelGeneroClient);
             this.panelGenero.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelGenero.Location = new System.Drawing.Point(292, 100);
+            this.panelGenero.Location = new System.Drawing.Point(298, 100);
             this.panelGenero.Margin = new System.Windows.Forms.Padding(0);
             this.panelGenero.Name = "panelGenero";
             this.panelGenero.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.panelGenero.Size = new System.Drawing.Size(292, 100);
-            this.panelGenero.TabIndex = 3;
+            this.panelGenero.Size = new System.Drawing.Size(298, 100);
+            this.panelGenero.TabIndex = 5;
             // 
             // subpanelGeneroClient
             // 
@@ -2099,7 +2077,7 @@ namespace Interface
             this.subpanelGeneroClient.Location = new System.Drawing.Point(20, 20);
             this.subpanelGeneroClient.Margin = new System.Windows.Forms.Padding(0);
             this.subpanelGeneroClient.Name = "subpanelGeneroClient";
-            this.subpanelGeneroClient.Size = new System.Drawing.Size(252, 70);
+            this.subpanelGeneroClient.Size = new System.Drawing.Size(258, 70);
             this.subpanelGeneroClient.TabIndex = 9;
             // 
             // comboGenero
@@ -2118,7 +2096,7 @@ namespace Interface
             this.comboGenero.Location = new System.Drawing.Point(5, 36);
             this.comboGenero.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.comboGenero.Name = "comboGenero";
-            this.comboGenero.Size = new System.Drawing.Size(242, 29);
+            this.comboGenero.Size = new System.Drawing.Size(248, 29);
             this.comboGenero.TabIndex = 4;
             // 
             // labelGeneroClient
@@ -2137,12 +2115,12 @@ namespace Interface
             // 
             this.panelCelular1.Controls.Add(this.subpanelRGClient);
             this.panelCelular1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelCelular1.Location = new System.Drawing.Point(584, 100);
+            this.panelCelular1.Location = new System.Drawing.Point(596, 100);
             this.panelCelular1.Margin = new System.Windows.Forms.Padding(0);
             this.panelCelular1.Name = "panelCelular1";
             this.panelCelular1.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.panelCelular1.Size = new System.Drawing.Size(294, 100);
-            this.panelCelular1.TabIndex = 4;
+            this.panelCelular1.Size = new System.Drawing.Size(299, 100);
+            this.panelCelular1.TabIndex = 6;
             // 
             // subpanelRGClient
             // 
@@ -2153,7 +2131,7 @@ namespace Interface
             this.subpanelRGClient.Location = new System.Drawing.Point(20, 20);
             this.subpanelRGClient.Margin = new System.Windows.Forms.Padding(0);
             this.subpanelRGClient.Name = "subpanelRGClient";
-            this.subpanelRGClient.Size = new System.Drawing.Size(254, 70);
+            this.subpanelRGClient.Size = new System.Drawing.Size(259, 70);
             this.subpanelRGClient.TabIndex = 8;
             // 
             // panelCelular
@@ -2164,7 +2142,7 @@ namespace Interface
             this.panelCelular.Location = new System.Drawing.Point(5, 37);
             this.panelCelular.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelCelular.Name = "panelCelular";
-            this.panelCelular.Size = new System.Drawing.Size(244, 33);
+            this.panelCelular.Size = new System.Drawing.Size(249, 33);
             this.panelCelular.TabIndex = 2;
             // 
             // mkCelular
@@ -2178,7 +2156,7 @@ namespace Interface
             this.mkCelular.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.mkCelular.Mask = "(00) 00000-0000";
             this.mkCelular.Name = "mkCelular";
-            this.mkCelular.Size = new System.Drawing.Size(224, 22);
+            this.mkCelular.Size = new System.Drawing.Size(229, 22);
             this.mkCelular.TabIndex = 5;
             this.mkCelular.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
@@ -2202,8 +2180,8 @@ namespace Interface
             this.panelTelefone1.Margin = new System.Windows.Forms.Padding(0);
             this.panelTelefone1.Name = "panelTelefone1";
             this.panelTelefone1.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.panelTelefone1.Size = new System.Drawing.Size(292, 100);
-            this.panelTelefone1.TabIndex = 5;
+            this.panelTelefone1.Size = new System.Drawing.Size(298, 100);
+            this.panelTelefone1.TabIndex = 7;
             // 
             // subpanelTelefoneClient
             // 
@@ -2214,7 +2192,7 @@ namespace Interface
             this.subpanelTelefoneClient.Location = new System.Drawing.Point(20, 20);
             this.subpanelTelefoneClient.Margin = new System.Windows.Forms.Padding(0);
             this.subpanelTelefoneClient.Name = "subpanelTelefoneClient";
-            this.subpanelTelefoneClient.Size = new System.Drawing.Size(252, 70);
+            this.subpanelTelefoneClient.Size = new System.Drawing.Size(258, 70);
             this.subpanelTelefoneClient.TabIndex = 9;
             // 
             // panelTelefone
@@ -2225,7 +2203,7 @@ namespace Interface
             this.panelTelefone.Location = new System.Drawing.Point(5, 36);
             this.panelTelefone.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelTelefone.Name = "panelTelefone";
-            this.panelTelefone.Size = new System.Drawing.Size(242, 33);
+            this.panelTelefone.Size = new System.Drawing.Size(248, 33);
             this.panelTelefone.TabIndex = 2;
             // 
             // mkTelefone
@@ -2239,7 +2217,7 @@ namespace Interface
             this.mkTelefone.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.mkTelefone.Mask = "(00) 0000-0000";
             this.mkTelefone.Name = "mkTelefone";
-            this.mkTelefone.Size = new System.Drawing.Size(221, 22);
+            this.mkTelefone.Size = new System.Drawing.Size(227, 22);
             this.mkTelefone.TabIndex = 6;
             this.mkTelefone.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
@@ -2259,12 +2237,12 @@ namespace Interface
             // 
             this.panelEmail1.Controls.Add(this.subpanelEmailClient);
             this.panelEmail1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelEmail1.Location = new System.Drawing.Point(292, 200);
+            this.panelEmail1.Location = new System.Drawing.Point(298, 200);
             this.panelEmail1.Margin = new System.Windows.Forms.Padding(0);
             this.panelEmail1.Name = "panelEmail1";
             this.panelEmail1.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.panelEmail1.Size = new System.Drawing.Size(292, 100);
-            this.panelEmail1.TabIndex = 6;
+            this.panelEmail1.Size = new System.Drawing.Size(298, 100);
+            this.panelEmail1.TabIndex = 8;
             // 
             // subpanelEmailClient
             // 
@@ -2275,7 +2253,7 @@ namespace Interface
             this.subpanelEmailClient.Location = new System.Drawing.Point(20, 20);
             this.subpanelEmailClient.Margin = new System.Windows.Forms.Padding(0);
             this.subpanelEmailClient.Name = "subpanelEmailClient";
-            this.subpanelEmailClient.Size = new System.Drawing.Size(252, 70);
+            this.subpanelEmailClient.Size = new System.Drawing.Size(258, 70);
             this.subpanelEmailClient.TabIndex = 10;
             // 
             // panelEmail
@@ -2286,7 +2264,7 @@ namespace Interface
             this.panelEmail.Location = new System.Drawing.Point(5, 36);
             this.panelEmail.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelEmail.Name = "panelEmail";
-            this.panelEmail.Size = new System.Drawing.Size(242, 33);
+            this.panelEmail.Size = new System.Drawing.Size(248, 33);
             this.panelEmail.TabIndex = 2;
             // 
             // tbEmail
@@ -2317,12 +2295,12 @@ namespace Interface
             // 
             this.panelCEP.Controls.Add(this.subpanelCEPClient);
             this.panelCEP.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelCEP.Location = new System.Drawing.Point(584, 200);
+            this.panelCEP.Location = new System.Drawing.Point(596, 200);
             this.panelCEP.Margin = new System.Windows.Forms.Padding(0);
             this.panelCEP.Name = "panelCEP";
             this.panelCEP.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.panelCEP.Size = new System.Drawing.Size(294, 100);
-            this.panelCEP.TabIndex = 7;
+            this.panelCEP.Size = new System.Drawing.Size(299, 100);
+            this.panelCEP.TabIndex = 9;
             // 
             // subpanelCEPClient
             // 
@@ -2333,7 +2311,7 @@ namespace Interface
             this.subpanelCEPClient.Location = new System.Drawing.Point(20, 20);
             this.subpanelCEPClient.Margin = new System.Windows.Forms.Padding(0);
             this.subpanelCEPClient.Name = "subpanelCEPClient";
-            this.subpanelCEPClient.Size = new System.Drawing.Size(254, 70);
+            this.subpanelCEPClient.Size = new System.Drawing.Size(259, 70);
             this.subpanelCEPClient.TabIndex = 11;
             // 
             // panelTextCEPClient
@@ -2345,7 +2323,7 @@ namespace Interface
             this.panelTextCEPClient.Location = new System.Drawing.Point(5, 36);
             this.panelTextCEPClient.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelTextCEPClient.Name = "panelTextCEPClient";
-            this.panelTextCEPClient.Size = new System.Drawing.Size(244, 33);
+            this.panelTextCEPClient.Size = new System.Drawing.Size(249, 33);
             this.panelTextCEPClient.TabIndex = 2;
             // 
             // pictureBox1
@@ -2373,7 +2351,7 @@ namespace Interface
             this.mkCEP.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.mkCEP.Mask = "00000-000";
             this.mkCEP.Name = "mkCEP";
-            this.mkCEP.Size = new System.Drawing.Size(201, 22);
+            this.mkCEP.Size = new System.Drawing.Size(206, 22);
             this.mkCEP.TabIndex = 8;
             this.mkCEP.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
@@ -2399,8 +2377,8 @@ namespace Interface
             this.panelCidadeUF.Margin = new System.Windows.Forms.Padding(0);
             this.panelCidadeUF.Name = "panelCidadeUF";
             this.panelCidadeUF.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.panelCidadeUF.Size = new System.Drawing.Size(292, 100);
-            this.panelCidadeUF.TabIndex = 8;
+            this.panelCidadeUF.Size = new System.Drawing.Size(298, 100);
+            this.panelCidadeUF.TabIndex = 12;
             // 
             // label25
             // 
@@ -2425,7 +2403,7 @@ namespace Interface
             this.comboCidade.Location = new System.Drawing.Point(148, 55);
             this.comboCidade.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.comboCidade.Name = "comboCidade";
-            this.comboCidade.Size = new System.Drawing.Size(123, 33);
+            this.comboCidade.Size = new System.Drawing.Size(129, 33);
             this.comboCidade.TabIndex = 10;
             // 
             // subpanelCidadeUFClient
@@ -2435,7 +2413,7 @@ namespace Interface
             this.subpanelCidadeUFClient.Location = new System.Drawing.Point(0, 0);
             this.subpanelCidadeUFClient.Name = "subpanelCidadeUFClient";
             this.subpanelCidadeUFClient.Size = new System.Drawing.Size(140, 100);
-            this.subpanelCidadeUFClient.TabIndex = 7;
+            this.subpanelCidadeUFClient.TabIndex = 11;
             // 
             // comboUF
             // 
@@ -2493,12 +2471,12 @@ namespace Interface
             // 
             this.panelEndereco.Controls.Add(this.subpanelEndereco);
             this.panelEndereco.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelEndereco.Location = new System.Drawing.Point(292, 300);
+            this.panelEndereco.Location = new System.Drawing.Point(298, 300);
             this.panelEndereco.Margin = new System.Windows.Forms.Padding(0);
             this.panelEndereco.Name = "panelEndereco";
             this.panelEndereco.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.panelEndereco.Size = new System.Drawing.Size(292, 100);
-            this.panelEndereco.TabIndex = 9;
+            this.panelEndereco.Size = new System.Drawing.Size(298, 100);
+            this.panelEndereco.TabIndex = 13;
             // 
             // subpanelEndereco
             // 
@@ -2510,7 +2488,7 @@ namespace Interface
             this.subpanelEndereco.Location = new System.Drawing.Point(20, 20);
             this.subpanelEndereco.Margin = new System.Windows.Forms.Padding(0);
             this.subpanelEndereco.Name = "subpanelEndereco";
-            this.subpanelEndereco.Size = new System.Drawing.Size(252, 70);
+            this.subpanelEndereco.Size = new System.Drawing.Size(258, 70);
             this.subpanelEndereco.TabIndex = 12;
             // 
             // panel37
@@ -2577,7 +2555,7 @@ namespace Interface
             this.panelTextEndereco.Location = new System.Drawing.Point(5, 36);
             this.panelTextEndereco.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelTextEndereco.Name = "panelTextEndereco";
-            this.panelTextEndereco.Size = new System.Drawing.Size(168, 33);
+            this.panelTextEndereco.Size = new System.Drawing.Size(174, 33);
             this.panelTextEndereco.TabIndex = 2;
             // 
             // tbLogradouro
@@ -2590,7 +2568,7 @@ namespace Interface
             this.tbLogradouro.Location = new System.Drawing.Point(5, 6);
             this.tbLogradouro.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbLogradouro.Name = "tbLogradouro";
-            this.tbLogradouro.Size = new System.Drawing.Size(150, 22);
+            this.tbLogradouro.Size = new System.Drawing.Size(156, 22);
             this.tbLogradouro.TabIndex = 11;
             // 
             // label13
@@ -2609,12 +2587,12 @@ namespace Interface
             // 
             this.panelBairro.Controls.Add(this.panel26);
             this.panelBairro.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelBairro.Location = new System.Drawing.Point(584, 300);
+            this.panelBairro.Location = new System.Drawing.Point(596, 300);
             this.panelBairro.Margin = new System.Windows.Forms.Padding(0);
             this.panelBairro.Name = "panelBairro";
             this.panelBairro.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.panelBairro.Size = new System.Drawing.Size(294, 100);
-            this.panelBairro.TabIndex = 10;
+            this.panelBairro.Size = new System.Drawing.Size(299, 100);
+            this.panelBairro.TabIndex = 17;
             // 
             // panel26
             // 
@@ -2625,7 +2603,7 @@ namespace Interface
             this.panel26.Location = new System.Drawing.Point(20, 20);
             this.panel26.Margin = new System.Windows.Forms.Padding(0);
             this.panel26.Name = "panel26";
-            this.panel26.Size = new System.Drawing.Size(254, 70);
+            this.panel26.Size = new System.Drawing.Size(259, 70);
             this.panel26.TabIndex = 12;
             // 
             // panelBorderRounded2
@@ -2636,7 +2614,7 @@ namespace Interface
             this.panelBorderRounded2.Location = new System.Drawing.Point(5, 35);
             this.panelBorderRounded2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelBorderRounded2.Name = "panelBorderRounded2";
-            this.panelBorderRounded2.Size = new System.Drawing.Size(243, 33);
+            this.panelBorderRounded2.Size = new System.Drawing.Size(248, 33);
             this.panelBorderRounded2.TabIndex = 2;
             // 
             // tbBairro
@@ -2649,7 +2627,7 @@ namespace Interface
             this.tbBairro.Location = new System.Drawing.Point(5, 6);
             this.tbBairro.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbBairro.Name = "tbBairro";
-            this.tbBairro.Size = new System.Drawing.Size(228, 22);
+            this.tbBairro.Size = new System.Drawing.Size(233, 22);
             this.tbBairro.TabIndex = 12;
             // 
             // label20
@@ -2672,7 +2650,7 @@ namespace Interface
             this.panelComplemento.Name = "panelComplemento";
             this.panelComplemento.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
             this.panelComplemento.Size = new System.Drawing.Size(292, 100);
-            this.panelComplemento.TabIndex = 11;
+            this.panelComplemento.TabIndex = 15;
             // 
             // panel29
             // 
@@ -2727,12 +2705,12 @@ namespace Interface
             this.panelCNH.BackColor = System.Drawing.Color.Transparent;
             this.panelCNH.Controls.Add(this.panel2);
             this.panelCNH.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelCNH.Location = new System.Drawing.Point(292, 400);
+            this.panelCNH.Location = new System.Drawing.Point(298, 400);
             this.panelCNH.Margin = new System.Windows.Forms.Padding(0);
             this.panelCNH.Name = "panelCNH";
             this.panelCNH.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.panelCNH.Size = new System.Drawing.Size(292, 100);
-            this.panelCNH.TabIndex = 0;
+            this.panelCNH.Size = new System.Drawing.Size(298, 100);
+            this.panelCNH.TabIndex = 16;
             // 
             // panel2
             // 
@@ -2743,7 +2721,7 @@ namespace Interface
             this.panel2.Location = new System.Drawing.Point(20, 20);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(252, 70);
+            this.panel2.Size = new System.Drawing.Size(258, 70);
             this.panel2.TabIndex = 7;
             // 
             // panel45
@@ -2754,7 +2732,7 @@ namespace Interface
             this.panel45.Location = new System.Drawing.Point(5, 37);
             this.panel45.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panel45.Name = "panel45";
-            this.panel45.Size = new System.Drawing.Size(300, 33);
+            this.panel45.Size = new System.Drawing.Size(306, 33);
             this.panel45.TabIndex = 2;
             // 
             // mkCNH
@@ -2768,7 +2746,7 @@ namespace Interface
             this.mkCNH.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.mkCNH.Mask = "00000000000";
             this.mkCNH.Name = "mkCNH";
-            this.mkCNH.Size = new System.Drawing.Size(327, 22);
+            this.mkCNH.Size = new System.Drawing.Size(333, 22);
             this.mkCNH.TabIndex = 14;
             this.mkCNH.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
@@ -2789,12 +2767,12 @@ namespace Interface
             this.panelCateMopp.BackColor = System.Drawing.Color.Transparent;
             this.panelCateMopp.Controls.Add(this.panel4);
             this.panelCateMopp.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelCateMopp.Location = new System.Drawing.Point(584, 400);
+            this.panelCateMopp.Location = new System.Drawing.Point(596, 400);
             this.panelCateMopp.Margin = new System.Windows.Forms.Padding(0);
             this.panelCateMopp.Name = "panelCateMopp";
             this.panelCateMopp.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.panelCateMopp.Size = new System.Drawing.Size(294, 100);
-            this.panelCateMopp.TabIndex = 1;
+            this.panelCateMopp.Size = new System.Drawing.Size(299, 100);
+            this.panelCateMopp.TabIndex = 17;
             // 
             // panel4
             // 
@@ -2806,7 +2784,7 @@ namespace Interface
             this.panel4.Location = new System.Drawing.Point(20, 20);
             this.panel4.Margin = new System.Windows.Forms.Padding(0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(254, 70);
+            this.panel4.Size = new System.Drawing.Size(259, 70);
             this.panel4.TabIndex = 8;
             // 
             // panel30
@@ -2870,7 +2848,7 @@ namespace Interface
             this.comboMOPP.Location = new System.Drawing.Point(135, 36);
             this.comboMOPP.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.comboMOPP.Name = "comboMOPP";
-            this.comboMOPP.Size = new System.Drawing.Size(172, 29);
+            this.comboMOPP.Size = new System.Drawing.Size(177, 29);
             this.comboMOPP.TabIndex = 16;
             // 
             // label26
@@ -2893,8 +2871,8 @@ namespace Interface
             this.panelVenciCNH.Margin = new System.Windows.Forms.Padding(0);
             this.panelVenciCNH.Name = "panelVenciCNH";
             this.panelVenciCNH.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.panelVenciCNH.Size = new System.Drawing.Size(292, 101);
-            this.panelVenciCNH.TabIndex = 2;
+            this.panelVenciCNH.Size = new System.Drawing.Size(298, 101);
+            this.panelVenciCNH.TabIndex = 18;
             // 
             // panel6
             // 
@@ -2905,7 +2883,7 @@ namespace Interface
             this.panel6.Location = new System.Drawing.Point(20, 20);
             this.panel6.Margin = new System.Windows.Forms.Padding(0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(252, 71);
+            this.panel6.Size = new System.Drawing.Size(258, 71);
             this.panel6.TabIndex = 9;
             // 
             // panelBorderRounded3
@@ -2916,7 +2894,7 @@ namespace Interface
             this.panelBorderRounded3.Location = new System.Drawing.Point(6, 37);
             this.panelBorderRounded3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelBorderRounded3.Name = "panelBorderRounded3";
-            this.panelBorderRounded3.Size = new System.Drawing.Size(240, 33);
+            this.panelBorderRounded3.Size = new System.Drawing.Size(246, 33);
             this.panelBorderRounded3.TabIndex = 2;
             // 
             // dateVencimentoCNH
@@ -2930,8 +2908,9 @@ namespace Interface
             this.dateVencimentoCNH.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.dateVencimentoCNH.Mask = "00/00/0000";
             this.dateVencimentoCNH.Name = "dateVencimentoCNH";
-            this.dateVencimentoCNH.Size = new System.Drawing.Size(167, 22);
+            this.dateVencimentoCNH.Size = new System.Drawing.Size(173, 22);
             this.dateVencimentoCNH.TabIndex = 14;
+            this.dateVencimentoCNH.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.dateVencimentoCNH.ValidatingType = typeof(System.DateTime);
             // 
             // label4
@@ -2958,7 +2937,7 @@ namespace Interface
             this.panelButton.Margin = new System.Windows.Forms.Padding(0, 100, 0, 0);
             this.panelButton.Name = "panelButton";
             this.panelButton.Padding = new System.Windows.Forms.Padding(40, 0, 40, 0);
-            this.panelButton.Size = new System.Drawing.Size(941, 50);
+            this.panelButton.Size = new System.Drawing.Size(958, 50);
             this.panelButton.TabIndex = 5;
             // 
             // buscarCPF
@@ -2970,7 +2949,7 @@ namespace Interface
             this.buscarCPF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buscarCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.buscarCPF.ForeColor = System.Drawing.Color.White;
-            this.buscarCPF.Location = new System.Drawing.Point(562, 0);
+            this.buscarCPF.Location = new System.Drawing.Point(579, 0);
             this.buscarCPF.Margin = new System.Windows.Forms.Padding(0, 0, 40, 0);
             this.buscarCPF.Name = "buscarCPF";
             this.buscarCPF.Size = new System.Drawing.Size(180, 50);
@@ -2990,7 +2969,7 @@ namespace Interface
             this.cadastrarTerceiro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cadastrarTerceiro.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.cadastrarTerceiro.ForeColor = System.Drawing.Color.White;
-            this.cadastrarTerceiro.Location = new System.Drawing.Point(754, 0);
+            this.cadastrarTerceiro.Location = new System.Drawing.Point(771, 0);
             this.cadastrarTerceiro.Margin = new System.Windows.Forms.Padding(0, 0, 40, 0);
             this.cadastrarTerceiro.Name = "cadastrarTerceiro";
             this.cadastrarTerceiro.Size = new System.Drawing.Size(180, 50);
@@ -3006,7 +2985,7 @@ namespace Interface
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel51.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(98)))), ((int)(((byte)(255)))));
             this.panel51.Controls.Add(this.button10);
-            this.panel51.Location = new System.Drawing.Point(8142, 0);
+            this.panel51.Location = new System.Drawing.Point(8159, 0);
             this.panel51.Margin = new System.Windows.Forms.Padding(0);
             this.panel51.Name = "panel51";
             this.panel51.Size = new System.Drawing.Size(200, 0);
@@ -3628,8 +3607,6 @@ namespace Interface
         private TemplateComponents.MasckedboxTemplete mkRNTRC;
         private TemplateComponents.PanelBorderRounded panelBorderRounded13;
         private TemplateComponents.TextBoxOnlyNum_Letters tbPlaca;
-        private TemplateComponents.PanelBorderRounded panelBorderRounded14;
-        private TemplateComponents.TextBoxOnlyNum_Letters textBoxOnlyNum_Letters2;
         private Panel panel5;
         private TemplateComponents.PanelBorderRounded panelBorderRounded15;
         private Label label30;

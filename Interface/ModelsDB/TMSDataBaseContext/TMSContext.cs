@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace Interface.ModelsDB
+namespace Interface.ModelsDB.TMSDataBaseContext
 {
     public partial class TMSContext : DbContext
     {
