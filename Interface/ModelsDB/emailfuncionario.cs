@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Interface.ModelsDB
 {
-    public partial class Emailfuncionario
+    public partial class EmailFuncionario
     {
         public int ID_email { get; set; }
         public int ID_for_funcionario { get; set; }

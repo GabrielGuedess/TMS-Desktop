@@ -7,11 +7,11 @@ namespace Interface.ModelsDB
     {
         public Cliente()
         {
-            Celularcliente = new HashSet<Celularcliente>();
-            Emailcliente = new HashSet<Emailcliente>();
+            CelularCliente = new HashSet<CelularCliente>();
+            EmailCliente = new HashSet<EmailCliente>();
             Mercadoria = new HashSet<Mercadoria>();
-            Pedidocliente = new HashSet<Pedidocliente>();
-            Telefonecliente = new HashSet<Telefonecliente>();
+            PedidoCliente = new HashSet<PedidoCliente>();
+            TelefoneCliente = new HashSet<TelefoneCliente>();
         }
 
         public int ID_cliente { get; set; }
@@ -23,12 +23,12 @@ namespace Interface.ModelsDB
         public string Cidade { get; set; } = null!;
         public string UF { get; set; } = null!;
 
-        public virtual Clientefisico? Clientefisico { get; set; }
-        public virtual Clientejuridico? clientejuridico { get; set; }
-        public virtual ICollection<Celularcliente> Celularcliente { get; set; }
-        public virtual ICollection<Emailcliente> Emailcliente { get; set; }
+        public virtual ClienteFisico? ClienteFisico { get; set; }
+        public virtual ClienteJuridico? ClienteJuridico { get; set; }
+        public virtual ICollection<CelularCliente> CelularCliente { get; set; }
+        public virtual ICollection<EmailCliente> EmailCliente { get; set; }
         public virtual ICollection<Mercadoria> Mercadoria { get; set; }
-        public virtual ICollection<Pedidocliente> Pedidocliente { get; set; }
-        public virtual ICollection<Telefonecliente> Telefonecliente { get; set; }
+        public virtual ICollection<PedidoCliente> PedidoCliente { get; set; }
+        public virtual ICollection<TelefoneCliente> TelefoneCliente { get; set; }
     }
 }

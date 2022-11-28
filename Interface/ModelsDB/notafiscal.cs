@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Interface.ModelsDB
 {
-    public partial class Notafiscal
+    public partial class NotaFiscal
     {
         public int ID_nota_fiscal { get; set; }
         public string Chave_acesso { get; set; } = null!;

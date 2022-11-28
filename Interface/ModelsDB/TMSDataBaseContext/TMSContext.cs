@@ -1,7 +1,7 @@
-﻿
+﻿using System;
+using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
-using System.Configuration;
-using System.Diagnostics;
+using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace Interface.ModelsDB.TMSDataBaseContext
 {
@@ -9,7 +9,6 @@ namespace Interface.ModelsDB.TMSDataBaseContext
     {
         public TMSContext()
         {
-
         }
 
         public TMSContext(DbContextOptions<TMSContext> options)
@@ -17,45 +16,45 @@ namespace Interface.ModelsDB.TMSDataBaseContext
         {
         }
 
-        public virtual DbSet<Carroceria> carroceria { get; set; } = null!;
-        public virtual DbSet<Celularcliente> celularcliente { get; set; } = null!;
-        public virtual DbSet<Celularfuncionario> Celularfuncionario { get; set; } = null!;
-        public virtual DbSet<Celularmotoristaterceiro> Celularmotoristaterceiro { get; set; } = null!;
-        public virtual DbSet<Cliente> cliente { get; set; } = null!;
-        public virtual DbSet<Clientefisico> Clientefisico { get; set; } = null!;
-        public virtual DbSet<Clientejuridico> Clientejuridico { get; set; } = null!;
-        public virtual DbSet<Contratomotoristaterceiro> Contratomotoristaterceiro { get; set; } = null!;
-        public virtual DbSet<Emailcliente> Emailcliente { get; set; } = null!;
-        public virtual DbSet<Emailfuncionario> Emailfuncionario { get; set; } = null!;
-        public virtual DbSet<Emailmotoristaterceiro> Emailmotoristaterceiro { get; set; } = null!;
+        public virtual DbSet<Carroceria> Carroceria { get; set; } = null!;
+        public virtual DbSet<CelularCliente> CelularCliente { get; set; } = null!;
+        public virtual DbSet<CelularFuncionario> CelularFuncionario { get; set; } = null!;
+        public virtual DbSet<CelularMotoristaTerceiro> CelularMotoristaTerceiro { get; set; } = null!;
+        public virtual DbSet<Cliente> Cliente { get; set; } = null!;
+        public virtual DbSet<ClienteFisico> ClienteFisico { get; set; } = null!;
+        public virtual DbSet<ClienteJuridico> ClienteJuridico { get; set; } = null!;
+        public virtual DbSet<ContratoMotoristaTerceiro> ContratoMotoristaTerceiro { get; set; } = null!;
+        public virtual DbSet<EmailCliente> EmailCliente { get; set; } = null!;
+        public virtual DbSet<EmailFuncionario> EmailFuncionario { get; set; } = null!;
+        public virtual DbSet<EmailMotoristaTerceiro> EmailMotoristaTerceiro { get; set; } = null!;
         public virtual DbSet<Marca> Marca { get; set; } = null!;
         public virtual DbSet<Mercadoria> Mercadoria { get; set; } = null!;
         public virtual DbSet<Modelo> Modelo { get; set; } = null!;
         public virtual DbSet<Motorista> Motorista { get; set; } = null!;
-        public virtual DbSet<Motoristaterceiro> Motoristaterceiro { get; set; } = null!;
-        public virtual DbSet<Notafiscal> Notafiscal { get; set; } = null!;
-        public virtual DbSet<Pedidocliente> Pedidocliente { get; set; } = null!;
-        public virtual DbSet<Pessoajuridica> Pessoajuridica { get; set; } = null!;
-        public virtual DbSet<Processopedido> Processopedido { get; set; } = null!;
-        public virtual DbSet<Redetransporte> Redetransporte { get; set; } = null!;
+        public virtual DbSet<MotoristaTerceiro> MotoristaTerceiro { get; set; } = null!;
+        public virtual DbSet<NotaFiscal> NotaFiscal { get; set; } = null!;
+        public virtual DbSet<PedidoCliente> PedidoCliente { get; set; } = null!;
+        public virtual DbSet<PessoaJuridica> PessoaJuridica { get; set; } = null!;
+        public virtual DbSet<ProcessoPedido> ProcessoPedido { get; set; } = null!;
+        public virtual DbSet<RedeTransporte> RedeTransporte { get; set; } = null!;
         public virtual DbSet<Rota> Rota { get; set; } = null!;
-        public virtual DbSet<Rotaretorno> Rotaretorno { get; set; } = null!;
+        public virtual DbSet<RotaRetorno> RotaRetorno { get; set; } = null!;
         public virtual DbSet<Sinistro> Sinistro { get; set; } = null!;
-        public virtual DbSet<Tarifasetaxas> Tarifasetaxas { get; set; } = null!;
-        public virtual DbSet<Telefonecliente> Telefonecliente { get; set; } = null!;
-        public virtual DbSet<Telefonefuncionario> Telefonefuncionario { get; set; } = null!;
-        public virtual DbSet<Telefonemotoristaterceiro> Telefonemotoristaterceiro { get; set; } = null!;
+        public virtual DbSet<TarifasETaxas> TarifasETaxas { get; set; } = null!;
+        public virtual DbSet<TelefoneCliente> TelefoneCliente { get; set; } = null!;
+        public virtual DbSet<TelefoneFuncionario> TelefoneFuncionario { get; set; } = null!;
+        public virtual DbSet<TelefoneMotoristaTerceiro> TelefoneMotoristaTerceiro { get; set; } = null!;
         public virtual DbSet<Usuario> Usuario { get; set; } = null!;
         public virtual DbSet<Veiculo> Veiculo { get; set; } = null!;
-        public virtual DbSet<Veiculoterceiro> Veiculoterceiro { get; set; } = null!;
+        public virtual DbSet<VeiculoTerceiro> VeiculoTerceiro { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseMySql(ConfigurationManager.ConnectionStrings["ConnectionStringDBTMS"].ConnectionString, ServerVersion.Parse("10.4.22-mariadb"));
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+                optionsBuilder.UseMySql("server=localhost;user=root;database=tms", ServerVersion.Parse("10.4.22-mariadb"));
             }
-            optionsBuilder.LogTo(message => Debug.WriteLine(message)).EnableSensitiveDataLogging().EnableDetailedErrors();
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -91,7 +90,7 @@ namespace Interface.ModelsDB.TMSDataBaseContext
                     .HasConstraintName("FK_modelo");
             });
 
-            modelBuilder.Entity<Celularcliente>(entity =>
+            modelBuilder.Entity<CelularCliente>(entity =>
             {
                 entity.HasKey(e => e.ID_celular)
                     .HasName("PRIMARY");
@@ -108,13 +107,13 @@ namespace Interface.ModelsDB.TMSDataBaseContext
                 entity.Property(e => e.ID_for_cliente).HasColumnType("int(11)");
 
                 entity.HasOne(d => d.ID_for_clienteNavigation)
-                    .WithMany(p => p.Celularcliente)
+                    .WithMany(p => p.CelularCliente)
                     .HasForeignKey(d => d.ID_for_cliente)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_cliente4");
             });
 
-            modelBuilder.Entity<Celularfuncionario>(entity =>
+            modelBuilder.Entity<CelularFuncionario>(entity =>
             {
                 entity.HasKey(e => e.ID_celular)
                     .HasName("PRIMARY");
@@ -131,13 +130,13 @@ namespace Interface.ModelsDB.TMSDataBaseContext
                 entity.Property(e => e.ID_for_funcionario).HasColumnType("int(11)");
 
                 entity.HasOne(d => d.ID_for_funcionarioNavigation)
-                    .WithMany(p => p.Celularfuncionario)
+                    .WithMany(p => p.CelularFuncionario)
                     .HasForeignKey(d => d.ID_for_funcionario)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_funcionario2");
             });
 
-            modelBuilder.Entity<Celularmotoristaterceiro>(entity =>
+            modelBuilder.Entity<CelularMotoristaTerceiro>(entity =>
             {
                 entity.HasKey(e => e.ID_celular)
                     .HasName("PRIMARY");
@@ -154,7 +153,7 @@ namespace Interface.ModelsDB.TMSDataBaseContext
                 entity.Property(e => e.ID_for_motorista).HasColumnType("int(11)");
 
                 entity.HasOne(d => d.ID_for_motoristaNavigation)
-                    .WithMany(p => p.Celularmotoristaterceiro)
+                    .WithMany(p => p.CelularMotoristaTerceiro)
                     .HasForeignKey(d => d.ID_for_motorista)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_terceiro4");
@@ -182,7 +181,7 @@ namespace Interface.ModelsDB.TMSDataBaseContext
                 entity.Property(e => e.UF).HasMaxLength(2);
             });
 
-            modelBuilder.Entity<Clientefisico>(entity =>
+            modelBuilder.Entity<ClienteFisico>(entity =>
             {
                 entity.HasKey(e => e.ID_for_cliente)
                     .HasName("PRIMARY");
@@ -208,13 +207,13 @@ namespace Interface.ModelsDB.TMSDataBaseContext
                 entity.Property(e => e.RG).HasMaxLength(15);
 
                 entity.HasOne(d => d.ID_for_clienteNavigation)
-                    .WithOne(p => p.Clientefisico)
-                    .HasForeignKey<Clientefisico>(d => d.ID_for_cliente)
+                    .WithOne(p => p.ClienteFisico)
+                    .HasForeignKey<ClienteFisico>(d => d.ID_for_cliente)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_cliente2");
             });
 
-            modelBuilder.Entity<Clientejuridico>(entity =>
+            modelBuilder.Entity<ClienteJuridico>(entity =>
             {
                 entity.HasKey(e => e.ID_for_cliente)
                     .HasName("PRIMARY");
@@ -244,13 +243,13 @@ namespace Interface.ModelsDB.TMSDataBaseContext
                 entity.Property(e => e.Razao_social).HasMaxLength(40);
 
                 entity.HasOne(d => d.ID_for_clienteNavigation)
-                    .WithOne(p => p.clientejuridico)
-                    .HasForeignKey<Clientejuridico>(d => d.ID_for_cliente)
+                    .WithOne(p => p.ClienteJuridico)
+                    .HasForeignKey<ClienteJuridico>(d => d.ID_for_cliente)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_cliente");
             });
 
-            modelBuilder.Entity<Contratomotoristaterceiro>(entity =>
+            modelBuilder.Entity<ContratoMotoristaTerceiro>(entity =>
             {
                 entity.HasKey(e => e.ID_contrato)
                     .HasName("PRIMARY");
@@ -268,13 +267,13 @@ namespace Interface.ModelsDB.TMSDataBaseContext
                 entity.Property(e => e.Veiculo_proprio).HasMaxLength(3);
 
                 entity.HasOne(d => d.ID_for_motoristaNavigation)
-                    .WithMany(p => p.Contratomotoristaterceiro)
+                    .WithMany(p => p.ContratoMotoristaTerceiro)
                     .HasForeignKey(d => d.ID_for_motorista)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_terceiro");
             });
 
-            modelBuilder.Entity<Emailcliente>(entity =>
+            modelBuilder.Entity<EmailCliente>(entity =>
             {
                 entity.HasKey(e => e.ID_email)
                     .HasName("PRIMARY");
@@ -291,13 +290,13 @@ namespace Interface.ModelsDB.TMSDataBaseContext
                 entity.Property(e => e.ID_for_cliente).HasColumnType("int(11)");
 
                 entity.HasOne(d => d.ID_for_clienteNavigation)
-                    .WithMany(p => p.Emailcliente)
+                    .WithMany(p => p.EmailCliente)
                     .HasForeignKey(d => d.ID_for_cliente)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_cliente5");
             });
 
-            modelBuilder.Entity<Emailfuncionario>(entity =>
+            modelBuilder.Entity<EmailFuncionario>(entity =>
             {
                 entity.HasKey(e => e.ID_email)
                     .HasName("PRIMARY");
@@ -314,13 +313,13 @@ namespace Interface.ModelsDB.TMSDataBaseContext
                 entity.Property(e => e.ID_for_funcionario).HasColumnType("int(11)");
 
                 entity.HasOne(d => d.ID_for_funcionarioNavigation)
-                    .WithMany(p => p.Emailfuncionario)
+                    .WithMany(p => p.EmailFuncionario)
                     .HasForeignKey(d => d.ID_for_funcionario)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_funcionario3");
             });
 
-            modelBuilder.Entity<Emailmotoristaterceiro>(entity =>
+            modelBuilder.Entity<EmailMotoristaTerceiro>(entity =>
             {
                 entity.HasKey(e => e.ID_email)
                     .HasName("PRIMARY");
@@ -337,7 +336,7 @@ namespace Interface.ModelsDB.TMSDataBaseContext
                 entity.Property(e => e.ID_for_motorista).HasColumnType("int(11)");
 
                 entity.HasOne(d => d.ID_for_motoristaNavigation)
-                    .WithMany(p => p.Emailmotoristaterceiro)
+                    .WithMany(p => p.EmailMotoristaTerceiro)
                     .HasForeignKey(d => d.ID_for_motorista)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_terceiro3");
@@ -469,7 +468,7 @@ namespace Interface.ModelsDB.TMSDataBaseContext
                 entity.Property(e => e.UF).HasMaxLength(2);
             });
 
-            modelBuilder.Entity<Motoristaterceiro>(entity =>
+            modelBuilder.Entity<MotoristaTerceiro>(entity =>
             {
                 entity.HasKey(e => e.ID_motorista_terceiro)
                     .HasName("PRIMARY");
@@ -522,7 +521,7 @@ namespace Interface.ModelsDB.TMSDataBaseContext
                 entity.Property(e => e.UF).HasMaxLength(2);
             });
 
-            modelBuilder.Entity<Notafiscal>(entity =>
+            modelBuilder.Entity<NotaFiscal>(entity =>
             {
                 entity.HasKey(e => e.ID_nota_fiscal)
                     .HasName("PRIMARY");
@@ -540,7 +539,7 @@ namespace Interface.ModelsDB.TMSDataBaseContext
                 entity.Property(e => e.Tipo).HasMaxLength(50);
             });
 
-            modelBuilder.Entity<Pedidocliente>(entity =>
+            modelBuilder.Entity<PedidoCliente>(entity =>
             {
                 entity.HasKey(e => e.ID_pedido)
                     .HasName("PRIMARY");
@@ -566,13 +565,13 @@ namespace Interface.ModelsDB.TMSDataBaseContext
                 entity.Property(e => e.UF_destino).HasMaxLength(2);
 
                 entity.HasOne(d => d.ID_for_clienteNavigation)
-                    .WithMany(p => p.Pedidocliente)
+                    .WithMany(p => p.PedidoCliente)
                     .HasForeignKey(d => d.ID_for_cliente)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_pedido");
             });
 
-            modelBuilder.Entity<Pessoajuridica>(entity =>
+            modelBuilder.Entity<PessoaJuridica>(entity =>
             {
                 entity.HasKey(e => e.ID_usuario)
                     .HasName("PRIMARY");
@@ -629,7 +628,7 @@ namespace Interface.ModelsDB.TMSDataBaseContext
                 entity.Property(e => e.UF).HasMaxLength(2);
             });
 
-            modelBuilder.Entity<Processopedido>(entity =>
+            modelBuilder.Entity<ProcessoPedido>(entity =>
             {
                 entity.HasKey(e => e.ID_processo)
                     .HasName("PRIMARY");
@@ -657,25 +656,25 @@ namespace Interface.ModelsDB.TMSDataBaseContext
                 entity.Property(e => e.KM_total).HasColumnType("double(6,3) unsigned");
 
                 entity.HasOne(d => d.ID_for_motoristaNavigation)
-                    .WithMany(p => p.Processopedido)
+                    .WithMany(p => p.ProcessoPedido)
                     .HasForeignKey(d => d.ID_for_motorista)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_processo4");
 
                 entity.HasOne(d => d.ID_for_retornoNavigation)
-                    .WithMany(p => p.Processopedido)
+                    .WithMany(p => p.ProcessoPedido)
                     .HasForeignKey(d => d.ID_for_retorno)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_processo2");
 
                 entity.HasOne(d => d.ID_for_veiculoNavigation)
-                    .WithMany(p => p.Processopedido)
+                    .WithMany(p => p.ProcessoPedido)
                     .HasForeignKey(d => d.ID_for_veiculo)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_processo3");
             });
 
-            modelBuilder.Entity<Redetransporte>(entity =>
+            modelBuilder.Entity<RedeTransporte>(entity =>
             {
                 entity.HasKey(e => e.ID_rede)
                     .HasName("PRIMARY");
@@ -734,7 +733,7 @@ namespace Interface.ModelsDB.TMSDataBaseContext
                     .HasConstraintName("FK_rota");
             });
 
-            modelBuilder.Entity<Rotaretorno>(entity =>
+            modelBuilder.Entity<RotaRetorno>(entity =>
             {
                 entity.HasKey(e => e.ID_retorno)
                     .HasName("PRIMARY");
@@ -756,7 +755,7 @@ namespace Interface.ModelsDB.TMSDataBaseContext
                 entity.Property(e => e.ID_for_rota).HasColumnType("int(11)");
 
                 entity.HasOne(d => d.ID_for_pedidoNavigation)
-                    .WithMany(p => p.Rotaretorno)
+                    .WithMany(p => p.RotaRetorno)
                     .HasForeignKey(d => d.ID_for_pedido)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_retorno2");
@@ -774,7 +773,7 @@ namespace Interface.ModelsDB.TMSDataBaseContext
                 entity.Property(e => e.Tipo_sinistro).HasMaxLength(30);
             });
 
-            modelBuilder.Entity<Tarifasetaxas>(entity =>
+            modelBuilder.Entity<TarifasETaxas>(entity =>
             {
                 entity.HasKey(e => e.ID_ta)
                     .HasName("PRIMARY");
@@ -788,7 +787,7 @@ namespace Interface.ModelsDB.TMSDataBaseContext
                 entity.Property(e => e.Tarifa_ou_taxa).HasMaxLength(8);
             });
 
-            modelBuilder.Entity<Telefonecliente>(entity =>
+            modelBuilder.Entity<TelefoneCliente>(entity =>
             {
                 entity.HasKey(e => e.ID_telefone)
                     .HasName("PRIMARY");
@@ -805,13 +804,13 @@ namespace Interface.ModelsDB.TMSDataBaseContext
                 entity.Property(e => e.Telefone).HasMaxLength(10);
 
                 entity.HasOne(d => d.ID_for_clienteNavigation)
-                    .WithMany(p => p.Telefonecliente)
+                    .WithMany(p => p.TelefoneCliente)
                     .HasForeignKey(d => d.ID_for_cliente)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_cliente3");
             });
 
-            modelBuilder.Entity<Telefonefuncionario>(entity =>
+            modelBuilder.Entity<TelefoneFuncionario>(entity =>
             {
                 entity.HasKey(e => e.ID_telefone)
                     .HasName("PRIMARY");
@@ -828,13 +827,13 @@ namespace Interface.ModelsDB.TMSDataBaseContext
                 entity.Property(e => e.Telefone).HasMaxLength(10);
 
                 entity.HasOne(d => d.ID_for_funcionarioNavigation)
-                    .WithMany(p => p.Telefonefuncionario)
+                    .WithMany(p => p.TelefoneFuncionario)
                     .HasForeignKey(d => d.ID_for_funcionario)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_funcionario");
             });
 
-            modelBuilder.Entity<Telefonemotoristaterceiro>(entity =>
+            modelBuilder.Entity<TelefoneMotoristaTerceiro>(entity =>
             {
                 entity.HasKey(e => e.ID_telefone)
                     .HasName("PRIMARY");
@@ -851,7 +850,7 @@ namespace Interface.ModelsDB.TMSDataBaseContext
                 entity.Property(e => e.Telefone).HasMaxLength(10);
 
                 entity.HasOne(d => d.ID_for_motoristaNavigation)
-                    .WithMany(p => p.Telefonemotoristaterceiro)
+                    .WithMany(p => p.TelefoneMotoristaTerceiro)
                     .HasForeignKey(d => d.ID_for_motorista)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_terceiro5");
@@ -938,7 +937,7 @@ namespace Interface.ModelsDB.TMSDataBaseContext
                     .HasConstraintName("FK_marca");
             });
 
-            modelBuilder.Entity<Veiculoterceiro>(entity =>
+            modelBuilder.Entity<VeiculoTerceiro>(entity =>
             {
                 entity.HasKey(e => e.ID_veiculo_terceiro)
                     .HasName("PRIMARY");
@@ -990,7 +989,7 @@ namespace Interface.ModelsDB.TMSDataBaseContext
                 entity.Property(e => e.Placa).HasMaxLength(7);
 
                 entity.HasOne(d => d.ID_for_motoristaNavigation)
-                    .WithMany(p => p.Veiculoterceiro)
+                    .WithMany(p => p.VeiculoTerceiro)
                     .HasForeignKey(d => d.ID_for_motorista)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_terceiro2");

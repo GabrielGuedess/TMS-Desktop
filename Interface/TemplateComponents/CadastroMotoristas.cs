@@ -57,30 +57,30 @@ namespace Interface
             {
                 maskInput.Text = value["CPF"].ToString();
 
-               /* if (value != null)
-                {
-                    tbID.Text = value["NUM_ID"].ToString();
-                    tbNome.Text = value["Nome"].ToString();
-                    dateNascimento.Text = value["DATA_NASCIMENTO"].ToString();
-                    mkCPF.Text = value["CPF"].ToString();
-                    mkRG.Text = value["RG"].ToString();
-                    mkTelefone.Text = value["TELEFONE"].ToString();
-                    mkCelular.Text = value["CELULAR"].ToString();
-                    tbEmail.Text = value["EMAIL"].ToString();
-                    mkCEP.Text = value["CEP"].ToString();
-                    comboUF.Text = value["UF"].ToString();
-                    comboCidade.Text = value["CIDADE"].ToString();
-                    tbLogradouro.Text = value["LOGRADOURO"].ToString();
-                    tbNumCasa.Text = value["NUMERO_LOGRADOURO"].ToString();
-                    tbBairro.Text = value["BAIRRO"].ToString();
-                    tbComplemento.Text = value["COMPLEMENTO"].ToString();
+                /* if (value != null)
+                 {
+                     tbID.Text = value["NUM_ID"].ToString();
+                     tbNome.Text = value["Nome"].ToString();
+                     dateNascimento.Text = value["DATA_NASCIMENTO"].ToString();
+                     mkCPF.Text = value["CPF"].ToString();
+                     mkRG.Text = value["RG"].ToString();
+                     mkTelefone.Text = value["TELEFONE"].ToString();
+                     mkCelular.Text = value["CELULAR"].ToString();
+                     tbEmail.Text = value["EMAIL"].ToString();
+                     mkCEP.Text = value["CEP"].ToString();
+                     comboUF.Text = value["UF"].ToString();
+                     comboCidade.Text = value["CIDADE"].ToString();
+                     tbLogradouro.Text = value["LOGRADOURO"].ToString();
+                     tbNumCasa.Text = value["NUMERO_LOGRADOURO"].ToString();
+                     tbBairro.Text = value["BAIRRO"].ToString();
+                     tbComplemento.Text = value["COMPLEMENTO"].ToString();
 
-                    mkCNH.Text = value["NUMERO_CNH"].ToString();
-                    comboCNH.SelectedItem = value["CATEGORIA_CNH"].ToString();
-                    dateVencimentoCNH.Text = value["VENCIMENTO_CNH"].ToString();
-                    comboVeiculoProprio.Text = value["VEICULO_PROPRIO"].ToString();
-                    comboMOPP.SelectedItem = value["MOPP"].ToString();
-                }*/
+                     mkCNH.Text = value["NUMERO_CNH"].ToString();
+                     comboCNH.SelectedItem = value["CATEGORIA_CNH"].ToString();
+                     dateVencimentoCNH.Text = value["VENCIMENTO_CNH"].ToString();
+                     comboVeiculoProprio.Text = value["VEICULO_PROPRIO"].ToString();
+                     comboMOPP.SelectedItem = value["MOPP"].ToString();
+                 }*/
             }
         }
         public CadastroMotoristas()
@@ -147,28 +147,28 @@ namespace Interface
                         Vencimento_CNH = dateVencimentoCNH.convertDateOnly(),
                         Disponibilidade = tbDisponibilidade.Text,
                     };
-                    Telefonefuncionario telefone = new Telefonefuncionario
+                    TelefoneFuncionario telefone = new TelefoneFuncionario
                     {
                         Telefone = mkTelefone.Text,
                         ID_for_funcionario = lastID
                     };
-                    Celularfuncionario celular = new Celularfuncionario
+                    CelularFuncionario celular = new CelularFuncionario
                     {
                         Celular = mkCelular.Text,
                         ID_for_funcionario = lastID
                     };
 
-                    Emailfuncionario email = new Emailfuncionario
+                    EmailFuncionario email = new EmailFuncionario
                     {
                         Email = tbEmail.Text,
                         ID_for_funcionario = lastID
                     };
 
-                    motorista.Celularfuncionario.Add(celular);
-                    motorista.Emailfuncionario.Add(email);
+                    motorista.CelularFuncionario.Add(celular);
+                    motorista.EmailFuncionario.Add(email);
                     if (mkTelefone.Text.Length > 0)
                     {
-                        motorista.Telefonefuncionario.Add(telefone);
+                        motorista.TelefoneFuncionario.Add(telefone);
                     }
                     db.Motorista.Add(motorista);
                     db.SaveChangesAsync();
@@ -176,7 +176,7 @@ namespace Interface
                     limpar.CleanControl(contentMotorista);
                     limpar.CleanControl(searchPanel);
                 }
-                catch(Exception error)
+                catch (Exception error)
                 {
                     MessageBox.Show(error.Message);
                 }
@@ -184,10 +184,10 @@ namespace Interface
             else if (Type.Contains("Update") && Validation.Validar(contentMotorista, notValidar))
             {
                 TMSContext db = new();
-                Motorista motorista = db.Motorista.Include(a => a.Celularfuncionario)
-                    .Include(a => a.Telefonefuncionario)
-                    .Include(a => a.Emailfuncionario).FirstOrDefault(a => a.CPF == mkCPF.Text);
-                if(motorista == null)
+                Motorista motorista = db.Motorista.Include(a => a.CelularFuncionario)
+                    .Include(a => a.TelefoneFuncionario)
+                    .Include(a => a.EmailFuncionario).FirstOrDefault(a => a.CPF == mkCPF.Text);
+                if (motorista == null)
                 {
                     MessageBox.Show("Error");
                     return;
@@ -197,9 +197,9 @@ namespace Interface
                 motorista.RG = mkRG.Text;
                 motorista.Data_nascimento = dateNascimento.convertDateOnly();
                 motorista.Genero = comboGenero.Text;
-                motorista.Telefonefuncionario.First().Telefone = mkTelefone.Text;
-                motorista.Celularfuncionario.First().Celular = mkCelular.Text;
-                motorista.Emailfuncionario.First().Email = tbEmail.Text;
+                motorista.TelefoneFuncionario.First().Telefone = mkTelefone.Text;
+                motorista.CelularFuncionario.First().Celular = mkCelular.Text;
+                motorista.EmailFuncionario.First().Email = tbEmail.Text;
                 motorista.CEP = mkCEP.Text;
                 motorista.UF = comboUF.Text;
                 motorista.Cidade = comboCidade.Text;
@@ -225,10 +225,12 @@ namespace Interface
             if (maskInput.MaskCompleted)
             {
                 TMSContext db = new();
-                Motorista motorista = db.Motorista.Include(a=> a.Celularfuncionario)
-                    .Include(a=>a.Telefonefuncionario)
-                    .Include(a=>a.Emailfuncionario).FirstOrDefault(a=>a.CPF == mkCPF.Text);
-                if(motorista == null)
+
+                Motorista motorista = db.Motorista.Include(a => a.CelularFuncionario)
+                    .Include(a => a.TelefoneFuncionario)
+                    .Include(a => a.EmailFuncionario).FirstOrDefault(a => a.CPF == mkCPF.Text);
+
+                if (motorista == null)
                 {
                     MessageBox.Show("Motorista não encontrado");
                     return;
@@ -237,9 +239,9 @@ namespace Interface
                 mkRG.Text = motorista.RG;
                 dateNascimento.Text = motorista.Data_nascimento.ToString();
                 comboGenero.Text = motorista.Genero;
-                mkTelefone.Text = motorista.Telefonefuncionario.First().Telefone;
-                mkCelular.Text = motorista.Celularfuncionario.First().Celular;
-                tbEmail.Text = motorista.Emailfuncionario.First().Email;
+                mkTelefone.Text = motorista.TelefoneFuncionario.First().Telefone;
+                mkCelular.Text = motorista.CelularFuncionario.First().Celular;
+                tbEmail.Text = motorista.EmailFuncionario.First().Email;
                 mkCEP.Text = motorista.CEP;
                 comboUF.Text = motorista.UF;
                 comboCidade.Text = motorista.Cidade;
