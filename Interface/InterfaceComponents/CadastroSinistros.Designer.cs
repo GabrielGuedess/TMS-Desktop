@@ -35,33 +35,41 @@
             this.cod = new Interface.TemplateComponents.TextBoxOnlyNum_Letters();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.contentSinistros = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableSinistro = new System.Windows.Forms.TableLayoutPanel();
             this.panelCPF = new System.Windows.Forms.Panel();
             this.SubpanelCPF = new System.Windows.Forms.Panel();
             this.comboTipoSinistro = new System.Windows.Forms.ComboBox();
             this.labelCPFClient = new System.Windows.Forms.Label();
+            this.panelNomeClient = new System.Windows.Forms.Panel();
+            this.subpanelNomeClient = new System.Windows.Forms.Panel();
+            this.panelDateTimerClient = new Interface.TemplateComponents.PanelBorderRounded();
+            this.tbDescricaoSinistro = new Interface.TemplateComponents.TextBoxOnlyNum_Letters();
+            this.labelDescricaoSinistro = new System.Windows.Forms.Label();
+            this.templatePanel1 = new Interface.TemplateComponents.TemplatePanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelBorderRounded1 = new Interface.TemplateComponents.PanelBorderRounded();
+            this.tbCod = new Interface.TemplateComponents.TextBoxOnlyNum();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelButton = new System.Windows.Forms.Panel();
             this.buscarCodigo = new System.Windows.Forms.Button();
             this.cadastrarSinistro = new System.Windows.Forms.Button();
             this.panel51 = new System.Windows.Forms.Panel();
             this.button10 = new System.Windows.Forms.Button();
-            this.panelDateTimerClient = new Interface.TemplateComponents.PanelBorderRounded();
-            this.tbDescricaoSinistro = new Interface.TemplateComponents.TextBoxOnlyNum_Letters();
-            this.labelDescricaoSinistro = new System.Windows.Forms.Label();
-            this.panelNomeClient = new System.Windows.Forms.Panel();
-            this.subpanelNomeClient = new System.Windows.Forms.Panel();
             this.searchPanel.SuspendLayout();
             this.panelSerch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.contentSinistros.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
+            this.tableSinistro.SuspendLayout();
             this.panelCPF.SuspendLayout();
             this.SubpanelCPF.SuspendLayout();
-            this.panelButton.SuspendLayout();
-            this.panel51.SuspendLayout();
-            this.panelDateTimerClient.SuspendLayout();
             this.panelNomeClient.SuspendLayout();
             this.subpanelNomeClient.SuspendLayout();
+            this.panelDateTimerClient.SuspendLayout();
+            this.templatePanel1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panelBorderRounded1.SuspendLayout();
+            this.panelButton.SuspendLayout();
+            this.panel51.SuspendLayout();
             this.SuspendLayout();
             // 
             // searchPanel
@@ -138,7 +146,7 @@
             this.contentSinistros.AutoScroll = true;
             this.contentSinistros.AutoScrollMargin = new System.Drawing.Size(0, 20);
             this.contentSinistros.BackColor = System.Drawing.Color.Transparent;
-            this.contentSinistros.Controls.Add(this.tableLayoutPanel3);
+            this.contentSinistros.Controls.Add(this.tableSinistro);
             this.contentSinistros.Controls.Add(this.panelButton);
             this.contentSinistros.Location = new System.Drawing.Point(0, 62);
             this.contentSinistros.Margin = new System.Windows.Forms.Padding(0);
@@ -147,36 +155,35 @@
             this.contentSinistros.Size = new System.Drawing.Size(975, 312);
             this.contentSinistros.TabIndex = 15;
             // 
-            // tableLayoutPanel3
+            // tableSinistro
             // 
-            this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tableSinistro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel3.ColumnCount = 2;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33332F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tableLayoutPanel3.Controls.Add(this.panelCPF, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.panelNomeClient, 1, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(40, 40);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(895, 100);
-            this.tableLayoutPanel3.TabIndex = 12;
+            this.tableSinistro.ColumnCount = 3;
+            this.tableSinistro.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.34444F));
+            this.tableSinistro.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.34446F));
+            this.tableSinistro.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.31111F));
+            this.tableSinistro.Controls.Add(this.panelCPF, 1, 0);
+            this.tableSinistro.Controls.Add(this.panelNomeClient, 2, 0);
+            this.tableSinistro.Controls.Add(this.templatePanel1, 0, 0);
+            this.tableSinistro.Location = new System.Drawing.Point(40, 40);
+            this.tableSinistro.Margin = new System.Windows.Forms.Padding(0);
+            this.tableSinistro.Name = "tableSinistro";
+            this.tableSinistro.RowCount = 1;
+            this.tableSinistro.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableSinistro.Size = new System.Drawing.Size(895, 100);
+            this.tableSinistro.TabIndex = 12;
             // 
             // panelCPF
             // 
             this.panelCPF.BackColor = System.Drawing.Color.Transparent;
             this.panelCPF.Controls.Add(this.SubpanelCPF);
             this.panelCPF.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelCPF.Location = new System.Drawing.Point(0, 0);
+            this.panelCPF.Location = new System.Drawing.Point(298, 0);
             this.panelCPF.Margin = new System.Windows.Forms.Padding(0);
             this.panelCPF.Name = "panelCPF";
             this.panelCPF.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.panelCPF.Size = new System.Drawing.Size(447, 100);
+            this.panelCPF.Size = new System.Drawing.Size(298, 100);
             this.panelCPF.TabIndex = 0;
             // 
             // SubpanelCPF
@@ -188,7 +195,7 @@
             this.SubpanelCPF.Location = new System.Drawing.Point(20, 20);
             this.SubpanelCPF.Margin = new System.Windows.Forms.Padding(0);
             this.SubpanelCPF.Name = "SubpanelCPF";
-            this.SubpanelCPF.Size = new System.Drawing.Size(407, 70);
+            this.SubpanelCPF.Size = new System.Drawing.Size(258, 70);
             this.SubpanelCPF.TabIndex = 7;
             // 
             // comboTipoSinistro
@@ -211,7 +218,7 @@
             this.comboTipoSinistro.Location = new System.Drawing.Point(5, 35);
             this.comboTipoSinistro.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.comboTipoSinistro.Name = "comboTipoSinistro";
-            this.comboTipoSinistro.Size = new System.Drawing.Size(397, 29);
+            this.comboTipoSinistro.Size = new System.Drawing.Size(248, 29);
             this.comboTipoSinistro.TabIndex = 5;
             // 
             // labelCPFClient
@@ -225,6 +232,126 @@
             this.labelCPFClient.Size = new System.Drawing.Size(107, 17);
             this.labelCPFClient.TabIndex = 0;
             this.labelCPFClient.Text = "Tipo de Sinistro";
+            // 
+            // panelNomeClient
+            // 
+            this.panelNomeClient.BackColor = System.Drawing.Color.Transparent;
+            this.panelNomeClient.Controls.Add(this.subpanelNomeClient);
+            this.panelNomeClient.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelNomeClient.Location = new System.Drawing.Point(596, 0);
+            this.panelNomeClient.Margin = new System.Windows.Forms.Padding(0);
+            this.panelNomeClient.Name = "panelNomeClient";
+            this.panelNomeClient.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
+            this.panelNomeClient.Size = new System.Drawing.Size(299, 100);
+            this.panelNomeClient.TabIndex = 1;
+            // 
+            // subpanelNomeClient
+            // 
+            this.subpanelNomeClient.BackColor = System.Drawing.Color.Transparent;
+            this.subpanelNomeClient.Controls.Add(this.panelDateTimerClient);
+            this.subpanelNomeClient.Controls.Add(this.labelDescricaoSinistro);
+            this.subpanelNomeClient.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.subpanelNomeClient.Location = new System.Drawing.Point(20, 20);
+            this.subpanelNomeClient.Margin = new System.Windows.Forms.Padding(0);
+            this.subpanelNomeClient.Name = "subpanelNomeClient";
+            this.subpanelNomeClient.Size = new System.Drawing.Size(259, 70);
+            this.subpanelNomeClient.TabIndex = 8;
+            // 
+            // panelDateTimerClient
+            // 
+            this.panelDateTimerClient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelDateTimerClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.panelDateTimerClient.Controls.Add(this.tbDescricaoSinistro);
+            this.panelDateTimerClient.Location = new System.Drawing.Point(5, 37);
+            this.panelDateTimerClient.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.panelDateTimerClient.Name = "panelDateTimerClient";
+            this.panelDateTimerClient.Size = new System.Drawing.Size(249, 33);
+            this.panelDateTimerClient.TabIndex = 2;
+            // 
+            // tbDescricaoSinistro
+            // 
+            this.tbDescricaoSinistro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbDescricaoSinistro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.tbDescricaoSinistro.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbDescricaoSinistro.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbDescricaoSinistro.ForeColor = System.Drawing.Color.White;
+            this.tbDescricaoSinistro.Location = new System.Drawing.Point(10, 6);
+            this.tbDescricaoSinistro.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.tbDescricaoSinistro.Name = "tbDescricaoSinistro";
+            this.tbDescricaoSinistro.Size = new System.Drawing.Size(229, 22);
+            this.tbDescricaoSinistro.TabIndex = 1;
+            // 
+            // labelDescricaoSinistro
+            // 
+            this.labelDescricaoSinistro.AutoSize = true;
+            this.labelDescricaoSinistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.labelDescricaoSinistro.ForeColor = System.Drawing.Color.White;
+            this.labelDescricaoSinistro.Location = new System.Drawing.Point(5, 5);
+            this.labelDescricaoSinistro.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
+            this.labelDescricaoSinistro.Name = "labelDescricaoSinistro";
+            this.labelDescricaoSinistro.Size = new System.Drawing.Size(142, 17);
+            this.labelDescricaoSinistro.TabIndex = 0;
+            this.labelDescricaoSinistro.Text = "Descrição do Sinistro";
+            // 
+            // templatePanel1
+            // 
+            this.templatePanel1.Controls.Add(this.panel1);
+            this.templatePanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.templatePanel1.Location = new System.Drawing.Point(0, 0);
+            this.templatePanel1.Margin = new System.Windows.Forms.Padding(0);
+            this.templatePanel1.Name = "templatePanel1";
+            this.templatePanel1.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
+            this.templatePanel1.Size = new System.Drawing.Size(298, 100);
+            this.templatePanel1.TabIndex = 2;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.panelBorderRounded1);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(20, 20);
+            this.panel1.Margin = new System.Windows.Forms.Padding(0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(258, 70);
+            this.panel1.TabIndex = 8;
+            // 
+            // panelBorderRounded1
+            // 
+            this.panelBorderRounded1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelBorderRounded1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.panelBorderRounded1.Controls.Add(this.tbCod);
+            this.panelBorderRounded1.Location = new System.Drawing.Point(5, 35);
+            this.panelBorderRounded1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.panelBorderRounded1.Name = "panelBorderRounded1";
+            this.panelBorderRounded1.Size = new System.Drawing.Size(254, 33);
+            this.panelBorderRounded1.TabIndex = 1;
+            // 
+            // tbCod
+            // 
+            this.tbCod.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbCod.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.tbCod.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbCod.Enabled = false;
+            this.tbCod.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbCod.ForeColor = System.Drawing.Color.White;
+            this.tbCod.Location = new System.Drawing.Point(10, 7);
+            this.tbCod.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.tbCod.Name = "tbCod";
+            this.tbCod.Size = new System.Drawing.Size(233, 22);
+            this.tbCod.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(5, 5);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(123, 17);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Código do Sinistro";
             // 
             // panelButton
             // 
@@ -310,66 +437,6 @@
             this.button10.Text = "Salvar";
             this.button10.UseVisualStyleBackColor = false;
             // 
-            // panelDateTimerClient
-            // 
-            this.panelDateTimerClient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelDateTimerClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelDateTimerClient.Controls.Add(this.tbDescricaoSinistro);
-            this.panelDateTimerClient.Location = new System.Drawing.Point(5, 37);
-            this.panelDateTimerClient.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.panelDateTimerClient.Name = "panelDateTimerClient";
-            this.panelDateTimerClient.Size = new System.Drawing.Size(398, 33);
-            this.panelDateTimerClient.TabIndex = 2;
-            // 
-            // tbDescricaoSinistro
-            // 
-            this.tbDescricaoSinistro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbDescricaoSinistro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.tbDescricaoSinistro.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbDescricaoSinistro.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbDescricaoSinistro.ForeColor = System.Drawing.Color.White;
-            this.tbDescricaoSinistro.Location = new System.Drawing.Point(10, 6);
-            this.tbDescricaoSinistro.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.tbDescricaoSinistro.Name = "tbDescricaoSinistro";
-            this.tbDescricaoSinistro.Size = new System.Drawing.Size(378, 22);
-            this.tbDescricaoSinistro.TabIndex = 1;
-            // 
-            // labelDescricaoSinistro
-            // 
-            this.labelDescricaoSinistro.AutoSize = true;
-            this.labelDescricaoSinistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.labelDescricaoSinistro.ForeColor = System.Drawing.Color.White;
-            this.labelDescricaoSinistro.Location = new System.Drawing.Point(5, 5);
-            this.labelDescricaoSinistro.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
-            this.labelDescricaoSinistro.Name = "labelDescricaoSinistro";
-            this.labelDescricaoSinistro.Size = new System.Drawing.Size(142, 17);
-            this.labelDescricaoSinistro.TabIndex = 0;
-            this.labelDescricaoSinistro.Text = "Descrição do Sinistro";
-            // 
-            // panelNomeClient
-            // 
-            this.panelNomeClient.BackColor = System.Drawing.Color.Transparent;
-            this.panelNomeClient.Controls.Add(this.subpanelNomeClient);
-            this.panelNomeClient.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelNomeClient.Location = new System.Drawing.Point(447, 0);
-            this.panelNomeClient.Margin = new System.Windows.Forms.Padding(0);
-            this.panelNomeClient.Name = "panelNomeClient";
-            this.panelNomeClient.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.panelNomeClient.Size = new System.Drawing.Size(448, 100);
-            this.panelNomeClient.TabIndex = 1;
-            // 
-            // subpanelNomeClient
-            // 
-            this.subpanelNomeClient.BackColor = System.Drawing.Color.Transparent;
-            this.subpanelNomeClient.Controls.Add(this.panelDateTimerClient);
-            this.subpanelNomeClient.Controls.Add(this.labelDescricaoSinistro);
-            this.subpanelNomeClient.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.subpanelNomeClient.Location = new System.Drawing.Point(20, 20);
-            this.subpanelNomeClient.Margin = new System.Windows.Forms.Padding(0);
-            this.subpanelNomeClient.Name = "subpanelNomeClient";
-            this.subpanelNomeClient.Size = new System.Drawing.Size(408, 70);
-            this.subpanelNomeClient.TabIndex = 8;
-            // 
             // CadastroSinistros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -385,17 +452,22 @@
             this.panelSerch.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.contentSinistros.ResumeLayout(false);
-            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableSinistro.ResumeLayout(false);
             this.panelCPF.ResumeLayout(false);
             this.SubpanelCPF.ResumeLayout(false);
             this.SubpanelCPF.PerformLayout();
-            this.panelButton.ResumeLayout(false);
-            this.panel51.ResumeLayout(false);
-            this.panelDateTimerClient.ResumeLayout(false);
-            this.panelDateTimerClient.PerformLayout();
             this.panelNomeClient.ResumeLayout(false);
             this.subpanelNomeClient.ResumeLayout(false);
             this.subpanelNomeClient.PerformLayout();
+            this.panelDateTimerClient.ResumeLayout(false);
+            this.panelDateTimerClient.PerformLayout();
+            this.templatePanel1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panelBorderRounded1.ResumeLayout(false);
+            this.panelBorderRounded1.PerformLayout();
+            this.panelButton.ResumeLayout(false);
+            this.panel51.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -406,7 +478,7 @@
         private TemplateComponents.PanelBorderRoundedOnLeft panelSerch;
         private PictureBox pictureBox3;
         private Panel contentSinistros;
-        private TableLayoutPanel tableLayoutPanel3;
+        private TableLayoutPanel tableSinistro;
         private Panel panelCPF;
         private Panel SubpanelCPF;
         private Label labelCPFClient;
@@ -423,5 +495,10 @@
         private TemplateComponents.PanelBorderRounded panelDateTimerClient;
         private TemplateComponents.TextBoxOnlyNum_Letters tbDescricaoSinistro;
         private Label labelDescricaoSinistro;
+        private TemplateComponents.TemplatePanel templatePanel1;
+        private Panel panel1;
+        private TemplateComponents.PanelBorderRounded panelBorderRounded1;
+        private TemplateComponents.TextBoxOnlyNum tbCod;
+        private Label label1;
     }
 }

@@ -1,5 +1,7 @@
 ﻿using Interface.ControlValidationAuxiliary;
 using Interface.DataBaseControls;
+using Interface.ModelsDB;
+using Interface.ModelsDB.TMSDataBaseContext;
 using Interface.Utilities;
 using System.Data;
 
@@ -13,6 +15,8 @@ namespace Interface
 
         private string Type = "";
 
+        private int lastID;
+
         readonly ConnectDB DBFunctions = new();
 
         public string TypeControl
@@ -23,6 +27,18 @@ namespace Interface
                 Type = value;
 
                 cadastrarSinistro.Text = value;
+
+                limpar.CleanControl(contentSinistros);
+                limpar.CleanControl(searchPanel);
+
+                TMSContext db = new();
+
+                if (db.Sinistro.Count() > 0)
+                {
+                    lastID = db.Sinistro.Max(id => id.ID_Sinistro) + 1;
+                }
+
+                tbCod.Text = lastID.ToString();
 
                 if (value.Contains("Cadastro"))
                 {
@@ -39,6 +55,9 @@ namespace Interface
                     contentSinistros.Location = new Point(0, 62);
 
                     buscarCodigo.Visible = true;
+
+                    limpar.CleanControl(contentSinistros);
+                    limpar.CleanControl(searchPanel);
                 }
             }
         }
@@ -59,8 +78,18 @@ namespace Interface
         public CadastroSinistros()
         {
             InitializeComponent();
-            
+            idSinistro();
+        }
 
+        private void idSinistro()
+        {
+            TMSContext db = new();
+            int lastID = 0;
+            if (db.Sinistro.Count() > 0)
+            {
+                lastID = db.Sinistro.Max(id => id.ID_Sinistro) + 1;
+            }
+            tbCod.Text = lastID.ToString();
         }
 
         private void CadastroSinistros_Resize(object sender, EventArgs e)
@@ -86,49 +115,82 @@ namespace Interface
 
         private void cadastrarSinistro_Click(object sender, EventArgs e)
         {
+            idSinistro();
+
             if (Type.Contains("Cadastro") && Validation.Validar(contentSinistros))
             {
-                /*string SQL = "Insert Into tbSinistros(TipoSinistro, DescricaoSinistro, ID) Values";
+                try
+                {
+                   TMSContext db = new();
+                   
+                    /*if (db.Sinistro.Count() > 0)
+                    {
+                        lastID = db.Sinistro.Max(id => id.ID_Sinistro) + 1;
+                    }*/
 
-                SQL += "('" + comboTipoSinistro.Text + "','" + tbDescricaoSinistro.Text + "','" + tbCodigdoSinistro.Text + "')";
+                    Sinistro sinistro = new Sinistro
+                    {
+                        ID_Sinistro = lastID,
+                        Descricao = tbDescricaoSinistro.Text,
+                        Tipo_sinistro = comboTipoSinistro.Text
+                    };
 
-                DBFunctions.cadastrar(SQL);*/
+                    db.Sinistro.Add(sinistro);
+                    db.SaveChanges();
 
+                    limpar.CleanControl(contentSinistros);
+                    limpar.CleanControl(searchPanel);
 
-                //sinistro.ID_Sinistro = int.Parse(tbCodigdoSinistro.Text);
-                
+                    lastID++;
+                    tbCod.Text = lastID.ToString();
 
-                limpar.CleanControl(contentSinistros);
-                limpar.CleanControl(searchPanel);
-                //tbCodigdoSinistro.Text = DBFunctions.atualizaID("SELECT MAX (ID) FROM tbSinistros", "r");
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show(error.Message);
+                }
             }
-
-            if (Type.Contains("Update") && Validation.Validar(contentSinistros))
+            else if (Type.Contains("Update") && Validation.Validar(contentSinistros))
             {
-                string SQLUp = $"UPDATE tbSinistros SET " +
-                $"TipoSinistro= '{comboTipoSinistro.Text}', " +
-                $"DescricaoSinistro= '{tbDescricaoSinistro.Text}' " +
-                $"WHERE ID = '{cod.Text.Replace('.', ',')}'";
-                DBFunctions.cadastrar(SQLUp);
+                TMSContext db = new();
+                Sinistro sinistro = db.Sinistro.FirstOrDefault(a => a.ID_Sinistro == int.Parse(cod.Text));
+                if (sinistro == null)
+                {
+                    MessageBox.Show("Error");
+                    return;
+                }
+
+                sinistro.Descricao = tbDescricaoSinistro.Text;
+                sinistro.Tipo_sinistro = comboTipoSinistro.Text;
+
+                db.SaveChanges();
+
                 limpar.CleanControl(contentSinistros);
                 limpar.CleanControl(searchPanel);
-               // tbCodigdoSinistro.Text = DBFunctions.atualizaID("SELECT MAX (ID) FROM tbSinistros", "r");
             }
         }
 
         private void buscarCodigo_Click(object sender, EventArgs e)
         {
-            if (cod.Text != "")
+            idSinistro();
+
+            if (cod.Text.Length > 0)
             {
-                DataRow dados = DBFunctions.pesquisarRow($"SELECT * FROM tbSinistros WHERE ID = '{cod.Text}'", contentSinistros)!;
+                TMSContext db = new();
 
-                if (dados != null)
+                Sinistro sinistro= db.Sinistro.FirstOrDefault(a => a.ID_Sinistro == int.Parse(cod.Text));
+
+                if (sinistro == null)
                 {
-                    cod.Text = dados["ID"].ToString();
-
-                    comboTipoSinistro.Text = dados["TipoSinistro"].ToString();
-                    tbDescricaoSinistro.Text = dados["DescricaoSinistro"].ToString();
+                    MessageBox.Show("Sinistro não encontrado");
+                    return;
                 }
+
+                tbCod.Text = sinistro.ID_Sinistro.ToString();
+                tbDescricaoSinistro.Text = sinistro.Descricao;
+                comboTipoSinistro.Text = sinistro.Tipo_sinistro;
+                
+                
             }
             else
             {
