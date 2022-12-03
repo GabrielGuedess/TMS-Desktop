@@ -69,8 +69,6 @@ namespace Interface
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.textSearch = new System.Windows.Forms.TextBox();
             this.body = new System.Windows.Forms.Panel();
-            this.cadastroVeiculos1 = new Interface.CadastroVeiculos();
-            this.cadastroUsuarios1 = new Interface.CadastroUsuarios();
             this.cadastroTerceiros1 = new Interface.CadastroTerceiros();
             this.cadastroTarifaseTaxas1 = new Interface.CadastroTarifasETaxas();
             this.cadastroSinistros2 = new Interface.CadastroSinistros();
@@ -80,6 +78,8 @@ namespace Interface
             this.cadastroClientes1 = new Interface.CadastroClientes();
             this.cadastroMotoristas2 = new Interface.CadastroMotoristas();
             this.overview1 = new Interface.Overview();
+            this.cadastroVeiculos1 = new Interface.CadastroVeiculos();
+            this.cadastroUsuarios1 = new Interface.CadastroUsuarios();
             this.panelScroll = new System.Windows.Forms.Panel();
             this.navbar1 = new Interface.InterfaceComponents.Navbar();
             this.flowLayoutPanel2.SuspendLayout();
@@ -602,17 +602,17 @@ namespace Interface
             | System.Windows.Forms.AnchorStyles.Right)));
             this.body.AutoScroll = true;
             this.body.BackColor = System.Drawing.Color.Black;
+            this.body.Controls.Add(this.cadastroClientes1);
+            this.body.Controls.Add(this.cadastroMotoristas2);
+            this.body.Controls.Add(this.overview1);
+            this.body.Controls.Add(this.cadastroVeiculos1);
+            this.body.Controls.Add(this.cadastroUsuarios1);
             this.body.Controls.Add(this.cadastroTerceiros1);
             this.body.Controls.Add(this.cadastroTarifaseTaxas1);
             this.body.Controls.Add(this.cadastroSinistros2);
             this.body.Controls.Add(this.cadastroRoutes1);
             this.body.Controls.Add(this.cadastroRedesDeTransporte2);
             this.body.Controls.Add(this.cadastroNotasFicais2);
-            this.body.Controls.Add(this.cadastroClientes1);
-            this.body.Controls.Add(this.cadastroMotoristas2);
-            this.body.Controls.Add(this.overview1);
-            this.body.Controls.Add(this.cadastroVeiculos1);
-            this.body.Controls.Add(this.cadastroUsuarios1);
             this.body.Location = new System.Drawing.Point(288, 70);
             this.body.Margin = new System.Windows.Forms.Padding(0);
             this.body.Name = "body";
@@ -620,29 +620,6 @@ namespace Interface
             this.body.Size = new System.Drawing.Size(1025, 609);
             this.body.TabIndex = 7;
             this.body.Paint += new System.Windows.Forms.PaintEventHandler(this.body_Paint);
-            // 
-            // cadastroVeiculos1
-            // 
-            this.cadastroVeiculos1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cadastroVeiculos1.BackColor = System.Drawing.Color.Transparent;
-            this.cadastroVeiculos1.Location = new System.Drawing.Point(25, 25);
-            this.cadastroVeiculos1.Margin = new System.Windows.Forms.Padding(0);
-            this.cadastroVeiculos1.Name = "cadastroVeiculos1";
-            this.cadastroVeiculos1.Size = new System.Drawing.Size(941, 1117);
-            this.cadastroVeiculos1.TabIndex = 10;
-            // 
-            // cadastroUsuarios1
-            // 
-            this.cadastroUsuarios1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cadastroUsuarios1.BackColor = System.Drawing.Color.Transparent;
-            this.cadastroUsuarios1.Location = new System.Drawing.Point(25, 25);
-            this.cadastroUsuarios1.Margin = new System.Windows.Forms.Padding(0);
-            this.cadastroUsuarios1.Name = "cadastroUsuarios1";
-            this.cadastroUsuarios1.Size = new System.Drawing.Size(958, 521);
-            this.cadastroUsuarios1.TabIndex = 9;
-            this.cadastroUsuarios1.TypeControl = "";
             // 
             // cadastroTerceiros1
             // 
@@ -716,7 +693,7 @@ namespace Interface
             this.cadastroClientes1.Margin = new System.Windows.Forms.Padding(0);
             this.cadastroClientes1.Name = "cadastroClientes1";
             this.cadastroClientes1.overview = null;
-            this.cadastroClientes1.Size = new System.Drawing.Size(907, 715);
+            this.cadastroClientes1.Size = new System.Drawing.Size(907, 806);
             this.cadastroClientes1.TabIndex = 2;
             // 
             // cadastroMotoristas2
@@ -742,6 +719,29 @@ namespace Interface
             this.overview1.Size = new System.Drawing.Size(958, 806);
             this.overview1.TabIndex = 1;
             this.overview1.TypeControl = "Clientes_Fisicos";
+            // 
+            // cadastroVeiculos1
+            // 
+            this.cadastroVeiculos1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cadastroVeiculos1.BackColor = System.Drawing.Color.Transparent;
+            this.cadastroVeiculos1.Location = new System.Drawing.Point(25, 25);
+            this.cadastroVeiculos1.Margin = new System.Windows.Forms.Padding(0);
+            this.cadastroVeiculos1.Name = "cadastroVeiculos1";
+            this.cadastroVeiculos1.Size = new System.Drawing.Size(941, 1117);
+            this.cadastroVeiculos1.TabIndex = 10;
+            // 
+            // cadastroUsuarios1
+            // 
+            this.cadastroUsuarios1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cadastroUsuarios1.BackColor = System.Drawing.Color.Transparent;
+            this.cadastroUsuarios1.Location = new System.Drawing.Point(25, 25);
+            this.cadastroUsuarios1.Margin = new System.Windows.Forms.Padding(0);
+            this.cadastroUsuarios1.Name = "cadastroUsuarios1";
+            this.cadastroUsuarios1.Size = new System.Drawing.Size(958, 521);
+            this.cadastroUsuarios1.TabIndex = 9;
+            this.cadastroUsuarios1.TypeControl = "";
             // 
             // panelScroll
             // 

@@ -103,7 +103,7 @@ namespace Interface
                 labelTypePerson.Text = "CPF";
 
                 mkBoxCdClientSearch.Text = "";
-                mkBoxCdClientSearch.Height = mkBoxCdClientSearch.Height + 20;
+                mkBoxCdClientSearch.Height += 20;
                 mkBoxCdClientSearch.Mask = "000.000.000-00";
 
                 limpar.CleanControl(ClienteCPF.Controls["contentCPF"]);
