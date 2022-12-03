@@ -168,7 +168,6 @@ namespace Interface
                                 veiculoUpdate.ID_for_carroceria.FirstOrDefault().Eixo_carroceria = carroceria.Eixo_carroceria;
                                 veiculoUpdate.ID_for_carroceria.FirstOrDefault().Massa_carroceria = carroceria.Massa_carroceria;
                                 veiculoUpdate.ID_for_carroceria.FirstOrDefault().Capacidade_volumetrica = carroceria.Massa_carroceria;
-                                veiculoUpdate.ID_for_carroceria.FirstOrDefault().Capacidade_KG = carroceria.Capacidade_KG;
                             }
                             else
                             {
@@ -250,7 +249,7 @@ namespace Interface
                     tbQuantEixoCarroceria.Text = veiculo.ID_for_carroceria.First().Eixo_carroceria.ToString();
                     tbPesoCarroceria.Text = veiculo.ID_for_carroceria.First().Massa_carroceria.ToString();
                     tbCapacidadeVolumetrica.Text = veiculo.ID_for_carroceria.First().Capacidade_volumetrica.ToString();
-                    tpCapacidadePeso.Text = veiculo.ID_for_carroceria.First().Capacidade_KG.ToString();
+
 
                 }
                 else
@@ -321,7 +320,7 @@ namespace Interface
         {
             comboModelo.DataSource = await getModelos(comboTipoVeiculo.Text);
             //comboModelo.SelectedIndex = -1;
-            comboTipoCarroceria.DataSource = await getCarroceriasForTipoCarroceria(comboTipoVeiculo.Text);
+            //comboTipoCarroceria.DataSource = await getCarroceriasForTipoCarroceria(comboTipoVeiculo.Text);
             //comboTipoCarroceria.SelectedIndex = -1;
             TipoVeiculo tipoVeiculo = await getInfoTipoVeiculo(comboTipoVeiculo.Text);
             if (tipoVeiculo == null)
@@ -374,7 +373,7 @@ namespace Interface
                 tbQuantEixoCarroceria.Text = carroceria.Eixo_carroceria.ToString();
                 tbPesoCarroceria.Text = carroceria.Massa_carroceria.ToString();
                 tbCapacidadeVolumetrica.Text = carroceria.Capacidade_volumetrica.ToString();
-                tpCapacidadePeso.Text = carroceria.Capacidade_KG.ToString();
+
             }
         }
 
@@ -431,7 +430,7 @@ namespace Interface
             return null;
         }
 
-        async Task<List<string>> getCarroceriasForTipoCarroceria(string tipoVeiculoDescricao)
+        /*async Task<List<string>> getCarroceriasForTipoCarroceria(string tipoVeiculoDescricao)
         {
             TMSContext db = new();
             TipoVeiculo tipoVeiculo = await db.TipoVeiculo.Include(a => a.ID_for_carroceria)
@@ -452,7 +451,7 @@ namespace Interface
             }
             return null;
 
-        }
+        }*/
 
         async Task<Modelo> getInfoModelo(string nomeModelo)
         {

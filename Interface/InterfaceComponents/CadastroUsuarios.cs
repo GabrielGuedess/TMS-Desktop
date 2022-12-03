@@ -1,5 +1,7 @@
 ﻿using Interface.ControlValidationAuxiliary;
 using Interface.DataBaseControls;
+using Interface.ModelsDB;
+using Interface.ModelsDB.TMSDataBaseContext;
 using Interface.Utilities;
 using System.Data;
 
@@ -95,53 +97,82 @@ namespace Interface
         {
             List<string> notValidar = new();
             notValidar.Add(tbSenhaConfirmacao.Name);
-            if (Type.Contains("Cadastro") && Validation.Validar(contentUsuario, notValidar) && Validation.validarSenha(tbSenha, tbSenhaConfirmacao))
+            if (Type.Contains("Cadastro") && Validation.Validar(contentUsuario, notValidar))
             {
-                string SQL = "insert into Usuario (CPF, Nome, Senha, Num_Cel, Email) values";
-                SQL += "('" + mkCPF.Text + "','" + tbNome.Text + "','" + tbSenha.Text + "','" + mkCelular.Text + "','" + tbEmail.Text + "')";
+                try
+                {
+                    TMSContext db = new();
+                    int lastID = 0;
+                    if (db.Usuario.Count() > 0)
+                    {
+                        lastID = db.Usuario.Max(id => id.ID_usuario) + 1;
+                    }
 
-                ConnectDB connectDB = new ConnectDB();
-                connectDB.cadastrar(SQL);
+                    Usuario usuario = new Usuario
+                    {
+                        ID_usuario = lastID,
+                        Nome = tbNome.Text,
+                        Email = tbEmail.Text,
+                        User_name = "qualquer coisa",
+                        Telefone = "qualquer",
+                        CPF = mkCPF.Text,
+                        Celular = mkCelular.Text
+                        //,Senha = tbSenha.Text
+                    };
+                    
+                    db.Usuario.Add(usuario);
+                    db.SaveChanges();
 
-                LimparFormularios limpar = new();
+                    limpar.CleanControl(contentUsuario);
+                    limpar.CleanControl(searchPanel);
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show(error.Message);
+                }
+            }
+            else if (Type.Contains("Update") && Validation.Validar(contentUsuario, notValidar))
+            {
+                TMSContext db = new();
+                Usuario usuario = db.Usuario.FirstOrDefault(a => a.CPF == mkCPF.Text);
+                if (usuario == null)
+                {
+                    MessageBox.Show("Error");
+                    return;
+                }
+                usuario.Nome = tbNome.Text;
+                usuario.CPF = mkCPF.Text;
+                usuario.Email = tbEmail.Text;
+                usuario.Celular = mkCelular.Text;
+                //usuario.Senha = tbSenha.Text;
+                
+
+                db.SaveChanges();
 
                 limpar.CleanControl(contentUsuario);
                 limpar.CleanControl(searchPanel);
             }
-
-            if (Type.Contains("Update") && Validation.Validar(contentUsuario, notValidar) && Validation.validarSenha(tbSenha, tbSenhaConfirmacao))
-            {
-                string SQLUp = $"UPDATE Usuario SET " +
-                $"Nome= '{tbNome.Text}', " +
-                $"Email= '{tbEmail.Text}', " +
-                $"Num_Cel= '{mkCelular.Text}', " +
-                $"Senha= '{tbSenha.Text}' " +
-                $"WHERE CPF = '{searchUsuario.Text.Replace('.', ',')}'";
-
-                ConnectDB connectDB = new();
-                connectDB.cadastrar(SQLUp);
-
-                limpar.CleanControl(contentUsuario);
-                limpar.CleanControl(searchPanel);
-            }
+        
         }
         private void buscarCPF_Click(object sender, EventArgs e)
         {
             if (searchUsuario.MaskCompleted)
             {
-                ConnectDB connectDB = new();
-                DataRow dados = connectDB.pesquisarRow($"SELECT * FROM Usuario WHERE CPF = '{searchUsuario.Text}'", contentUsuario)!;
+                TMSContext db = new();
 
-                if (dados != null)
+                Usuario usuario= db.Usuario.FirstOrDefault(a => a.CPF == mkCPF.Text);
+
+                if (usuario == null)
                 {
-                    searchUsuario.Text = dados["CPF"].ToString();
-
-                    tbNome.Text = dados["Nome"].ToString();
-                    tbEmail.Text = dados["Email"].ToString();
-                    mkCelular.Text = dados["Num_Cel"].ToString();
-                    tbSenha.Text = dados["Senha"].ToString();
-                    tbSenhaConfirmacao.Text = tbSenha.Text;
+                    MessageBox.Show("Usuário não encontrado");
+                    return;
                 }
+
+                tbNome.Text = usuario.Nome;
+                tbEmail.Text = usuario.Email;
+                mkCPF.Text = usuario.CPF;
+                mkCelular.Text = usuario.Celular;
+                
             }
             else
             {
