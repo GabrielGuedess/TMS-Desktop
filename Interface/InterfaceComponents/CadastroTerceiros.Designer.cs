@@ -1702,7 +1702,7 @@ namespace Interface
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(130, 17);
             this.label38.TabIndex = 0;
-            this.label38.Text = "Peço da Carroceria";
+            this.label38.Text = "Peso da Carroceria";
             // 
             // templatePanel6
             // 

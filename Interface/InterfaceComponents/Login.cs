@@ -45,6 +45,7 @@ namespace Interface
         {
             Dash Form = new Dash();
 
+
             Hide();
 
             Form.ShowDialog();

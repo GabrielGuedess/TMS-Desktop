@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace Interface.ModelsDB.TMSDataBaseContext
+namespace Interface.ModelsDB
 {
-    public partial class TMSContext : DbContext
+    public partial class tmsContext : DbContext
     {
-        public TMSContext()
+        public tmsContext()
         {
         }
 
-        public TMSContext(DbContextOptions<TMSContext> options)
+        public tmsContext(DbContextOptions<tmsContext> options)
             : base(options)
         {
         }

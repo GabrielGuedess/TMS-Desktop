@@ -58,36 +58,6 @@ namespace Interface
                 if (value != null)
                 {
 
-                    /* mkCPF.Text = value["CPF"].ToString();
-                     tbNome.Text = value["Nome"].ToString();
-                     //dateNascimento.Format = DateTimePickerFormat.Short;
-                     dateNascimento.Text = value["Data_de_Nascimento"].ToString();
-                     comboGenero.Text = value["Genero"].ToString();
-                     mkCelular.Text = value["Celular"].ToString();
-                     mkTelefone.Text = value["Telefone"].ToString();
-                     textEmail.Text = value["Email"].ToString();
-                     mkCEP.Text = value["CEP"].ToString();
-                     comboUF.Text = value["Estado"].ToString();
-                     comboCidade.Text = value["CIDADE"].ToString();
-                     tbLogradouro.Text = value["Logradouro"].ToString();
-                     tbNumCasa.Text = value["Numero"].ToString();
-                     tbBairro.Text = value["Bairro"].ToString();
-                     tbComplemento.Text = value["Complemento"].ToString();
-
-                     mkCNH.Text = value["NumeroCNH"].ToString();
-                     comboCategoriaCNH.Text = value["CategoriaCNH"].ToString();
-                     comboMOPP.Text = value["CursoMOPP"].ToString();
-                     dateVencimentoCNH.Text = value["VencimentoCNH"].ToString();
-                     mkRNTRC.Text = value["NumeroRNTRC"].ToString();
-                     dateVencimentoRENTRC.Text = value["VencimentoRNTRC"].ToString();
-                     comboTipoVeiculo.Text = value["TipoVeiculo"].ToString();
-
-                     comboTipoContrato.Text = value["TipoContrato"].ToString();
-                     comboSituacaoContrato.Text = value["Situacao"].ToString();
-                     dateInicioAtividade.Text = value["DataInicioAtividades"].ToString();
-                     if (dateFimAtividade.Text == "") { }
-                     else
-                         dateFimAtividade.Text = value["DataFimAtividades"].ToString();*/
                 }
             }
         }
