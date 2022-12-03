@@ -19,55 +19,55 @@ namespace Interface.FormsControls
             if (route.Contains("Usuarios"))
             {
                 TypeDataDatabase = "Usuario";
-                TypeWhereDatabase = "CPF";
+                TypeWhereDatabase = "ID_usuario";
             }
 
-            if (route.Contains("Rotas"))
+            if (route.Contains("Rota"))
             {
                 TypeDataDatabase = "Rotas";
-                TypeWhereDatabase = "ID_Rota";
+                TypeWhereDatabase = "ID_rota";
             }
 
             if (route.Contains("Motoristas"))
             {
-                TypeDataDatabase = "C_Motoristas";
-                TypeWhereDatabase = "CPF";
+                TypeDataDatabase = "Motorista";
+                TypeWhereDatabase = "ID_motorista";
             }
 
             if (route.Contains("Veiculos"))
             {
-                TypeDataDatabase = "tbVeiculos";
-                TypeWhereDatabase = "Placa";
+                TypeDataDatabase = "Veiculo";
+                TypeWhereDatabase = "ID_veiculo";
             }
 
             if (route.Contains("Terceiros"))
             {
-                TypeDataDatabase = "tbTerceiros";
-                TypeWhereDatabase = "CPF";
+                TypeDataDatabase = "MotoristaTerceiro";
+                TypeWhereDatabase = "ID_motorista_terceiro";
             }
 
             if (route.Contains("Sinistros"))
             {
-                TypeDataDatabase = "tbSinistros";
-                TypeWhereDatabase = "ID";
+                TypeDataDatabase = "Sinistro";
+                TypeWhereDatabase = "ID_Sinistro";
             }
 
             if (route.Contains("Notas"))
             {
-                TypeDataDatabase = "C_Nota_Fiscal";
-                TypeWhereDatabase = "CHAVE_ACESSO";
+                TypeDataDatabase = "NotaFiscal";
+                TypeWhereDatabase = "ID_nota_fiscal";
             }
 
             if (route.Contains("Tarifas"))
             {
-                TypeDataDatabase = "Tarifas_taxas";
-                TypeWhereDatabase = "Nome_Emp";
+                TypeDataDatabase = "TarifasETaxas";
+                TypeWhereDatabase = "ID_ta";
             }
 
             if (route.Contains("Redes"))
             {
-                TypeDataDatabase = "C_Redes_de_Transporte";
-                TypeWhereDatabase = "ID_REDE";
+                TypeDataDatabase = "RedeTransporte";
+                TypeWhereDatabase = "ID_rede";
             }
         }
 

@@ -73,7 +73,7 @@
             // 
             // panelPessoaJuridica
             // 
-            this.panelPessoaJuridica.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panelPessoaJuridica.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelPessoaJuridica.BackColor = System.Drawing.Color.Transparent;
             this.panelPessoaJuridica.Controls.Add(this.pessoaJuridica);
@@ -86,7 +86,7 @@
             // 
             // pessoaJuridica
             // 
-            this.pessoaJuridica.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.pessoaJuridica.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pessoaJuridica.AutoSize = true;
             this.pessoaJuridica.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -116,7 +116,7 @@
             // 
             // pessoaFisica
             // 
-            this.pessoaFisica.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.pessoaFisica.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pessoaFisica.AutoSize = true;
             this.pessoaFisica.Checked = true;
@@ -136,14 +136,13 @@
             // 
             // ClienteCPF
             // 
-            this.ClienteCPF.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.ClienteCPF.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ClienteCPF.BackColor = System.Drawing.Color.Transparent;
             this.ClienteCPF.Location = new System.Drawing.Point(0, 124);
             this.ClienteCPF.Margin = new System.Windows.Forms.Padding(0);
             this.ClienteCPF.Name = "ClienteCPF";
-            this.ClienteCPF.Size = new System.Drawing.Size(975, 653);
+            this.ClienteCPF.Size = new System.Drawing.Size(975, 690);
             this.ClienteCPF.TabIndex = 6;
             this.ClienteCPF.TypeControl = "";
             this.ClienteCPF.Visible = false;
@@ -176,7 +175,7 @@
             // 
             // labelTypePerson
             // 
-            this.labelTypePerson.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.labelTypePerson.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelTypePerson.AutoSize = true;
             this.labelTypePerson.BackColor = System.Drawing.Color.Transparent;
@@ -219,14 +218,14 @@
             // 
             // ClienteCNPJ
             // 
-            this.ClienteCNPJ.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.ClienteCNPJ.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ClienteCNPJ.BackColor = System.Drawing.Color.Transparent;
             this.ClienteCNPJ.Location = new System.Drawing.Point(0, 124);
             this.ClienteCNPJ.Margin = new System.Windows.Forms.Padding(0);
             this.ClienteCNPJ.Name = "ClienteCNPJ";
-            this.ClienteCNPJ.Size = new System.Drawing.Size(975, 653);
+            this.ClienteCNPJ.Size = new System.Drawing.Size(975, 706);
             this.ClienteCNPJ.TabIndex = 4;
             this.ClienteCNPJ.Visible = false;
             // 
