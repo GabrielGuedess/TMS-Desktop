@@ -57,30 +57,7 @@ namespace Interface
             {
                 maskInput.Text = value["CPF"].ToString();
 
-                /* if (value != null)
-                 {
-                     tbID.Text = value["NUM_ID"].ToString();
-                     tbNome.Text = value["Nome"].ToString();
-                     dateNascimento.Text = value["DATA_NASCIMENTO"].ToString();
-                     mkCPF.Text = value["CPF"].ToString();
-                     mkRG.Text = value["RG"].ToString();
-                     mkTelefone.Text = value["TELEFONE"].ToString();
-                     mkCelular.Text = value["CELULAR"].ToString();
-                     tbEmail.Text = value["EMAIL"].ToString();
-                     mkCEP.Text = value["CEP"].ToString();
-                     comboUF.Text = value["UF"].ToString();
-                     comboCidade.Text = value["CIDADE"].ToString();
-                     tbLogradouro.Text = value["LOGRADOURO"].ToString();
-                     tbNumCasa.Text = value["NUMERO_LOGRADOURO"].ToString();
-                     tbBairro.Text = value["BAIRRO"].ToString();
-                     tbComplemento.Text = value["COMPLEMENTO"].ToString();
 
-                     mkCNH.Text = value["NUMERO_CNH"].ToString();
-                     comboCNH.SelectedItem = value["CATEGORIA_CNH"].ToString();
-                     dateVencimentoCNH.Text = value["VENCIMENTO_CNH"].ToString();
-                     comboVeiculoProprio.Text = value["VEICULO_PROPRIO"].ToString();
-                     comboMOPP.SelectedItem = value["MOPP"].ToString();
-                 }*/
             }
         }
         public CadastroMotoristas()

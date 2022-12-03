@@ -3,6 +3,7 @@ using System;
 using Interface.ModelsDB.TMSDataBaseContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Interface.Migrations
 {
     [DbContext(typeof(TMSContext))]
-    partial class TMSContextModelSnapshot : ModelSnapshot
+    [Migration("20221130220717_AddCampoTipoVeiculoInTableModelo")]
+    partial class AddCampoTipoVeiculoInTableModelo
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

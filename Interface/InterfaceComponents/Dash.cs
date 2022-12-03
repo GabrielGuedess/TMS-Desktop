@@ -12,7 +12,6 @@ namespace Interface
 
         public string RouteDash = "";
 
-        private string gg = "";
 
         public DataRow OverviewDataRequest
         {
