@@ -12,8 +12,8 @@ namespace Interface.FormsControls
         {
             if (route.Contains("Clientes"))
             {
-                TypeDataDatabase = CPF ? "Clientes_Fisicos" : "Clientes_Juridicos";
-                TypeWhereDatabase = TypeDataDatabase == "Clientes_Fisicos" ? "CPF" : "CPNJ";
+                TypeDataDatabase = CPF ? "ClienteFisico" : "ClienteJuridico";
+                TypeWhereDatabase = TypeDataDatabase == "ClienteFisico" ? "CPF" : "CPNJ";
             }
 
             if (route.Contains("Usuarios"))

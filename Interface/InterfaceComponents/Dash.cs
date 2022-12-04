@@ -17,7 +17,6 @@ namespace Interface
         {
             set
             {
-
                 if (overview1.CacheType == "Clientes_Fisicos")
                 {
                     cadastroClientes1.Pessoa = "CPF";

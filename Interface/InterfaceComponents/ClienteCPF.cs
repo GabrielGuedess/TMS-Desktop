@@ -51,7 +51,7 @@ namespace Interface
                 {
                     mkCPF.Text = value["CPF"].ToString();
                     tbNome.Text = value["Nome"].ToString();
-                    dateNascimento.Text = value["Data_Nasc"].ToString();
+                    dateNascimento.Text = value["Data_nascimento"].ToString();
                     comboGenero.Text = value["Genero"].ToString();
                     mkRG.Text = value["RG"].ToString();
                     mkTelefone.Text = value["Telefone"].ToString();
@@ -61,9 +61,9 @@ namespace Interface
                     comboUF.Text = value["UF"].ToString();
                     comboCidade.Text = value["Cidade"].ToString();
                     tbLogradouro.Text = value["Logradouro"].ToString();
-                    tbNumCasa.Text = value["Numero"].ToString();
+                    tbNumCasa.Text = value["Numero_endereco"].ToString();
                     tbBairro.Text = value["Bairro"].ToString();
-                    tbComplemento.Text = value["Complemento"].ToString();
+                    tbComplemento.Text = value["Complemento_endereco"].ToString();
                 }
             }
         }

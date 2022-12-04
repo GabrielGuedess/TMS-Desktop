@@ -278,7 +278,7 @@ namespace Interface
         private async void CadastroVeiculos_Load(object sender, EventArgs e)
         {
             comboMarca.DataSource = await getNomeMarcas();
-            comboTipoVeiculo.DataSource = await getTiposVeiculos();
+            //comboTipoVeiculo.DataSource = await getTiposVeiculos();
             comboMarca.SelectedIndex = -1;
             comboTipoVeiculo.SelectedIndex = -1;
         }
@@ -391,7 +391,7 @@ namespace Interface
             return nomeMarcas;
         }
 
-        async static private Task<List<string>> getTiposVeiculos()
+        /*async static private Task<List<string>> getTiposVeiculos()
         {
             TMSContext db = new();
 
@@ -404,7 +404,7 @@ namespace Interface
                 tipoVeiculoNome.Add(tipoVeiculo.Descricao);
             }
             return tipoVeiculoNome;
-        }
+        }*/
 
         async private Task<List<string>> getModelos(string tipoVeiculo)
         {
