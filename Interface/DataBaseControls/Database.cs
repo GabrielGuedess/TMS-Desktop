@@ -1,6 +1,6 @@
 ﻿using Interface.FormsControls;
+using MySqlConnector;
 using System.Data;
-using System.Data.OleDb;
 
 namespace Interface.DataBaseControls
 {
@@ -47,53 +47,86 @@ namespace Interface.DataBaseControls
 
                 if (selectOrDelete.Contains("Select"))
                 {
-                    OleDbConnection conexao = new($@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source={Application.StartupPath + "/bd/Banco de dados V2.mdb"}");
+                    MySqlConnection conexao = new("server=localhost;user=root;database=tms");
 
                     conexao.Open();
 
                     if (maskedTextBox.MaskCompleted == true && maskedTextBox.Text != "")
                     {
-                        OleDbCommand cmdWhere = new($"SELECT * FROM {mapper.TypeDataDatabase} WHERE {mapper.TypeWhereDatabase} = '{maskedTextBox.Text}'", conexao);
+                        MySqlCommand comandoWhere = new($"SELECT * FROM {mapper.TypeDataDatabase} WHERE {mapper.TypeWhereDatabase} = '{maskedTextBox.Text}'", conexao);
 
-                        OleDbDataAdapter sdaWhere = new(cmdWhere);
+                        MySqlDataAdapter mySqlDataAdapterWhere = new(comandoWhere);
 
-                        sdaWhere.Fill(dados);
+                        mySqlDataAdapterWhere.Fill(dados);
 
                         dataGridView.DataSource = dados;
                     }
 
-                    OleDbCommand cmd = new($"SELECT * FROM {mapper.TypeDataDatabase}", conexao);
+                    if (Route!.Contains("Clientes"))
+                    {
+                        MySqlCommand comando = new($"SELECT * FROM {mapper.TypeDataDatabase} " +
+                            $"INNER JOIN Cliente ON {mapper.TypeDataDatabase}.ID_for_cliente = Cliente.ID_cliente " +
+                            $"INNER JOIN TelefoneCliente ON {mapper.TypeDataDatabase}.ID_for_cliente = TelefoneCliente.ID_for_cliente " +
+                            $"INNER JOIN CelularCliente ON {mapper.TypeDataDatabase}.ID_for_cliente = CelularCliente.ID_for_cliente " +
+                            $"INNER JOIN EmailCliente ON {mapper.TypeDataDatabase}.ID_for_cliente = EmailCliente.ID_for_cliente;", conexao);
 
-                    OleDbDataAdapter sda = new(cmd);
+                        MySqlDataAdapter mySqlDataAdapter = new(comando);
 
-                    sda.Fill(dados);
+                        mySqlDataAdapter.Fill(dados);
 
-                    dataGridView.DataSource = dados;
+                        dataGridView.DataSource = dados;
+                    }
+                    else
+                    {
+                        MySqlCommand comando = new($"SELECT * FROM {mapper.TypeDataDatabase}", conexao);
+
+                        MySqlDataAdapter mySqlDataAdapter = new(comando);
+
+                        mySqlDataAdapter.Fill(dados);
+
+                        dataGridView.DataSource = dados;
+                    }
+
 
                     conexao.Close();
                 }
 
                 if (selectOrDelete.Contains("Delete") && maskedTextBox.MaskCompleted == true && maskedTextBox.Text != "")
                 {
-                    OleDbConnection conexao = new($@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source={Application.StartupPath + "/bd/Banco de dados V2.mdb"}");
+                    MySqlConnection conexao = new("server=localhost;user=root;database=tms");
 
                     conexao.Open();
 
-                    string cmdDelete = $"DELETE * FROM {mapper.TypeDataDatabase} WHERE {mapper.TypeWhereDatabase} = '{maskedTextBox.Text}'";
+                    MySqlCommand comandoDelete = new($"DELETE * FROM {mapper.TypeDataDatabase} WHERE {mapper.TypeWhereDatabase} = '{maskedTextBox.Text}'", conexao);
 
-                    OleDbCommand sdaDelte = new(cmdDelete, conexao);
-
-                    sdaDelte.ExecuteNonQuery();
+                    comandoDelete.ExecuteNonQuery();
 
                     MessageBox.Show("Deletado com sucesso!", "Aviso");
 
-                    OleDbCommand cmd = new($"SELECT * FROM {mapper.TypeDataDatabase}", conexao);
+                    if (Route!.Contains("Clientes"))
+                    {
+                        MySqlCommand comandoSelect = new($"SELECT * FROM {mapper.TypeDataDatabase} " +
+                            $"INNER JOIN Cliente ON {mapper.TypeDataDatabase}.ID_for_cliente = Cliente.ID_cliente " +
+                            $"INNER JOIN TelefoneCliente ON {mapper.TypeDataDatabase}.ID_for_cliente = TelefoneCliente.ID_for_cliente " +
+                            $"INNER JOIN CelularCliente ON {mapper.TypeDataDatabase}.ID_for_cliente = CelularCliente.ID_for_cliente " +
+                            $"INNER JOIN EmailCliente ON {mapper.TypeDataDatabase}.ID_for_cliente = EmailCliente.ID_for_cliente;", conexao);
 
-                    OleDbDataAdapter sda = new(cmd);
+                        MySqlDataAdapter mySqlDataAdapter = new(comandoSelect);
 
-                    sda.Fill(dados);
+                        mySqlDataAdapter.Fill(dados);
 
-                    dataGridView.DataSource = dados;
+                        dataGridView.DataSource = dados;
+                    }
+                    else
+                    {
+                        MySqlCommand comandoSelect = new($"SELECT * FROM {mapper.TypeDataDatabase}", conexao);
+
+                        MySqlDataAdapter mySqlDataAdapter = new(comandoSelect);
+
+                        mySqlDataAdapter.Fill(dados);
+
+                        dataGridView.DataSource = dados;
+                    }
 
                     conexao.Close();
                 }

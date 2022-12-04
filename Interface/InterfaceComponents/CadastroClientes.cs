@@ -40,15 +40,15 @@ namespace Interface
         {
             set
             {
-                mkBoxCdClientSearch.Text = value[Pessoa].ToString();
-
                 if (Pessoa != "" && Pessoa.Contains("CPF"))
                 {
+                    mkBoxCdClientSearch.Text = value[Pessoa].ToString();
                     ClienteCPF.DataForUpdate = value;
                 }
 
                 if (Pessoa != "" && Pessoa.Contains("CNPJ"))
                 {
+                    mkBoxCdClientSearch.Text = value[Pessoa].ToString();
                     ClienteCNPJ.DataForUpdate = value;
                 }
             }

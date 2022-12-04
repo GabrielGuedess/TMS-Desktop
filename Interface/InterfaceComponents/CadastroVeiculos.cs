@@ -279,7 +279,7 @@ namespace Interface
         private async void CadastroVeiculos_Load(object sender, EventArgs e)
         {
             comboMarca.DataSource = await getNomeMarcas();
-            comboTipoVeiculo.DataSource = await getTiposVeiculos();
+            //comboTipoVeiculo.DataSource = await getTiposVeiculos();
             comboMarca.SelectedIndex = -1;
             comboTipoVeiculo.SelectedIndex = -1;
         }
@@ -321,7 +321,7 @@ namespace Interface
         {
             comboModelo.DataSource = await getModelos(comboTipoVeiculo.Text);
             //comboModelo.SelectedIndex = -1;
-            comboTipoCarroceria.DataSource = await getCarroceriasForTipoCarroceria(comboTipoVeiculo.Text);
+            //comboTipoCarroceria.DataSource = await getCarroceriasForTipoCarroceria(comboTipoVeiculo.Text);
             //comboTipoCarroceria.SelectedIndex = -1;
             TipoVeiculo tipoVeiculo = await getInfoTipoVeiculo(comboTipoVeiculo.Text);
             if (tipoVeiculo == null)
@@ -392,7 +392,7 @@ namespace Interface
             return nomeMarcas;
         }
 
-        async static private Task<List<string>> getTiposVeiculos()
+        /*async static private Task<List<string>> getTiposVeiculos()
         {
             TMSContext db = new();
 
@@ -405,7 +405,7 @@ namespace Interface
                 tipoVeiculoNome.Add(tipoVeiculo.Descricao);
             }
             return tipoVeiculoNome;
-        }
+        }*/
 
         async private Task<List<string>> getModelos(string tipoVeiculo)
         {
@@ -431,7 +431,7 @@ namespace Interface
             return null;
         }
 
-        async Task<List<string>> getCarroceriasForTipoCarroceria(string tipoVeiculoDescricao)
+        /*async Task<List<string>> getCarroceriasForTipoCarroceria(string tipoVeiculoDescricao)
         {
             TMSContext db = new();
             TipoVeiculo tipoVeiculo = await db.TipoVeiculo.Include(a => a.ID_for_carroceria)
@@ -452,7 +452,7 @@ namespace Interface
             }
             return null;
 
-        }
+        }*/
 
         async Task<Modelo> getInfoModelo(string nomeModelo)
         {
