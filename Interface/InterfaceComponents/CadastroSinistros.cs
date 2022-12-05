@@ -17,8 +17,6 @@ namespace Interface
 
         private int lastID;
 
-        readonly ConnectDB DBFunctions = new();
-
         public string TypeControl
         {
             set
@@ -31,22 +29,13 @@ namespace Interface
                 limpar.CleanControl(contentSinistros);
                 limpar.CleanControl(searchPanel);
 
-                TMSContext db = new();
-
-                if (db.Sinistro.Count() > 0)
-                {
-                    lastID = db.Sinistro.Max(id => id.ID_Sinistro) + 1;
-                }
-
-                tbCod.Text = lastID.ToString();
+                idSinistro();
 
                 if (value.Contains("Cadastro"))
                 {
-                   // tbCodigdoSinistro.Text = DBFunctions.atualizaID("SELECT MAX (ID) FROM tbSinistros", "r");
                     searchPanel.Visible = false;
                     contentSinistros.Location = new Point(0, 0);
 
-                    
                     buscarCodigo.Visible = false;
                 }
                 if (value.Contains("Update"))
@@ -84,11 +73,12 @@ namespace Interface
         private void idSinistro()
         {
             TMSContext db = new();
-            int lastID = 0;
+
             if (db.Sinistro.Count() > 0)
             {
                 lastID = db.Sinistro.Max(id => id.ID_Sinistro) + 1;
             }
+
             tbCod.Text = lastID.ToString();
         }
 
@@ -121,12 +111,7 @@ namespace Interface
             {
                 try
                 {
-                   TMSContext db = new();
-                   
-                    /*if (db.Sinistro.Count() > 0)
-                    {
-                        lastID = db.Sinistro.Max(id => id.ID_Sinistro) + 1;
-                    }*/
+                    TMSContext db = new();
 
                     Sinistro sinistro = new Sinistro
                     {
@@ -153,7 +138,9 @@ namespace Interface
             else if (Type.Contains("Update") && Validation.Validar(contentSinistros))
             {
                 TMSContext db = new();
+
                 Sinistro sinistro = db.Sinistro.FirstOrDefault(a => a.ID_Sinistro == int.Parse(cod.Text));
+
                 if (sinistro == null)
                 {
                     MessageBox.Show("Error");
@@ -178,7 +165,7 @@ namespace Interface
             {
                 TMSContext db = new();
 
-                Sinistro sinistro= db.Sinistro.FirstOrDefault(a => a.ID_Sinistro == int.Parse(cod.Text));
+                Sinistro sinistro = db.Sinistro.FirstOrDefault(a => a.ID_Sinistro == int.Parse(cod.Text));
 
                 if (sinistro == null)
                 {
@@ -189,8 +176,8 @@ namespace Interface
                 tbCod.Text = sinistro.ID_Sinistro.ToString();
                 tbDescricaoSinistro.Text = sinistro.Descricao;
                 comboTipoSinistro.Text = sinistro.Tipo_sinistro;
-                
-                
+
+
             }
             else
             {
@@ -201,8 +188,6 @@ namespace Interface
 
         private void cod_TextChanged(object sender, EventArgs e)
         {
-            
-
             utils.feedbackColorInputNumLetters(cod, typeData);
         }
 
