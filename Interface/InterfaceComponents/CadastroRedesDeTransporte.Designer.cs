@@ -50,7 +50,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panelBorderRoundedID = new Interface.TemplateComponents.PanelBorderRounded();
-            this.numID = new Interface.TemplateComponents.TextBoxOnlyNum_Letters();
+            this.ID_Rede = new Interface.TemplateComponents.TextBoxOnlyNum_Letters();
             this.labelId = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -396,27 +396,27 @@
             // 
             this.panelBorderRoundedID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelBorderRoundedID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelBorderRoundedID.Controls.Add(this.numID);
+            this.panelBorderRoundedID.Controls.Add(this.ID_Rede);
             this.panelBorderRoundedID.Location = new System.Drawing.Point(5, 37);
             this.panelBorderRoundedID.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelBorderRoundedID.Name = "panelBorderRoundedID";
             this.panelBorderRoundedID.Size = new System.Drawing.Size(248, 33);
             this.panelBorderRoundedID.TabIndex = 2;
             // 
-            // numID
+            // ID_Rede
             // 
-            this.numID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.numID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.numID.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.numID.Cursor = System.Windows.Forms.Cursors.No;
-            this.numID.Enabled = false;
-            this.numID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.numID.ForeColor = System.Drawing.Color.White;
-            this.numID.Location = new System.Drawing.Point(7, 5);
-            this.numID.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.numID.Name = "numID";
-            this.numID.Size = new System.Drawing.Size(231, 22);
-            this.numID.TabIndex = 2;
+            this.ID_Rede.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.ID_Rede.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.ID_Rede.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ID_Rede.Cursor = System.Windows.Forms.Cursors.No;
+            this.ID_Rede.Enabled = false;
+            this.ID_Rede.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ID_Rede.ForeColor = System.Drawing.Color.White;
+            this.ID_Rede.Location = new System.Drawing.Point(7, 5);
+            this.ID_Rede.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.ID_Rede.Name = "ID_Rede";
+            this.ID_Rede.Size = new System.Drawing.Size(231, 22);
+            this.ID_Rede.TabIndex = 2;
             // 
             // labelId
             // 
@@ -426,9 +426,9 @@
             this.labelId.Location = new System.Drawing.Point(5, 5);
             this.labelId.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
             this.labelId.Name = "labelId";
-            this.labelId.Size = new System.Drawing.Size(54, 17);
+            this.labelId.Size = new System.Drawing.Size(63, 17);
             this.labelId.TabIndex = 0;
-            this.labelId.Text = "Num ID";
+            this.labelId.Text = "ID_Rede";
             // 
             // panel5
             // 
@@ -711,7 +711,7 @@
         private Panel panel51;
         private Button button10;
         private Button cadastrarRede;
-        private TemplateComponents.TextBoxOnlyNum_Letters numID;
+        private TemplateComponents.TextBoxOnlyNum_Letters ID_Rede;
         private TemplateComponents.TextBoxOnlyNum_Letters tbTipoRede;
         private TemplateComponents.TextBoxOnlyNum_Letters tbDescricaoRede;
         private ComboBox comboCategoriaCNH;

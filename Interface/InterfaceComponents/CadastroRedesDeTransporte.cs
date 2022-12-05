@@ -1,5 +1,7 @@
 ﻿using Interface.ControlValidationAuxiliary;
 using Interface.DataBaseControls;
+using Interface.ModelsDB;
+using Interface.ModelsDB.TMSDataBaseContext;
 using Interface.Utilities;
 using System.Data;
 
@@ -13,7 +15,7 @@ namespace Interface
 
         private string Type = "";
 
-        ConnectDB DBFunctions = new();
+        private int lastID;
 
         public string TypeControl
         {
@@ -24,14 +26,18 @@ namespace Interface
 
                 cadastrarRede.Text = value;
 
+                limpar.CleanControl(contentRedes);
+                limpar.CleanControl(searchPanel);
+
                 if (value.Contains("Cadastro"))
                 {
-                    //numID.Text = DBFunctions.atualizaID("SELECT MAX (NUM_ID) FROM C_Redes_de_Transporte", "T");
                     searchPanel.Visible = false;
                     contentRedes.Location = new Point(0, 0);
 
-                    numID.ReadOnly = false;
-                    numID.Cursor = Cursors.IBeam;
+                    idRedes();
+
+                    ID_Rede.ReadOnly = false;
+                    ID_Rede.Cursor = Cursors.IBeam;
                     buscarNumId.Visible = false;
 
                 }
@@ -40,9 +46,12 @@ namespace Interface
                     searchPanel.Visible = true;
                     contentRedes.Location = new Point(0, 62);
 
-                    numID.ReadOnly = true;
-                    numID.Cursor = Cursors.No;
+                    ID_Rede.ReadOnly = true;
+                    ID_Rede.Cursor = Cursors.No;
                     buscarNumId.Visible = true;
+
+                    limpar.CleanControl(contentRedes);
+                    limpar.CleanControl(searchPanel);
                 }
             }
         }
@@ -57,7 +66,7 @@ namespace Interface
                 {
                     maskRedeID.Text = value["NUM_ID"].ToString();
 
-                    numID.Text = value["NUM_ID"].ToString();
+                    ID_Rede.Text = value["NUM_ID"].ToString();
                     tbTipoRede.Text = value["TIPO_REDE"].ToString();
                     tbDescricaoRede.Text = value["DESCRICAO_REDE"].ToString();
                     comboCategoriaCNH.Text = value["TIPO_MOTORISTA"].ToString();
@@ -69,6 +78,18 @@ namespace Interface
         public CadastroRedesDeTransporte()
         {
             InitializeComponent();
+        }
+
+        private void idRedes()
+        {
+            TMSContext db = new();
+
+            if (db.Sinistro.Count() > 0)
+            {
+                lastID = db.Sinistro.Max(id => id.ID_Sinistro) + 1;
+            }
+
+            ID_Rede.Text = lastID.ToString();
         }
 
         private void CadastroRedesDeTransporte_Resize(object sender, EventArgs e)
@@ -96,53 +117,85 @@ namespace Interface
         {
             if (Type.Contains("Cadastro") && Validation.Validar(contentRedes))
             {
-                string SQL = "Insert Into C_Redes_de_Transporte (NUM_ID, TIPO_REDE, DESCRICAO_REDE, TIPO_MOTORISTA, TIPO_VEICULOS) Values";
-                SQL += "('" + numID.Text + "','" + tbTipoRede.Text + "','" + tbDescricaoRede.Text + "','" + comboCategoriaCNH.Text + "','" + comboTipoVeiculo.Text + "')";
+                try
+                {
 
-                ConnectDB connectDB = new ConnectDB();
-                connectDB.cadastrar(SQL);
+                    TMSContext db = new();
 
-                limpar.CleanControl(contentRedes);
-                limpar.CleanControl(panelSerch);
+                    RedeTransporte redeTransporte = new RedeTransporte
+                    {
+                        ID_rede = lastID,
+                        Descricao = tbDescricaoRede.Text,
+                        Tipo_rede = tbTipoRede.Text,
+                        Categoria_CNH = comboCategoriaCNH.Text,
+                        Tipo_veiculo = comboTipoVeiculo.Text,
+                    };
 
-                //numID.Text = DBFunctions.atualizaID("SELECT MAX (NUM_ID) FROM C_Redes_de_Transporte", "T");
+                    db.RedeTransporte.Add(redeTransporte);
+
+                    db.SaveChanges();
+
+                    limpar.CleanControl(contentRedes);
+                    limpar.CleanControl(searchPanel);
+
+                    lastID++;
+
+                    ID_Rede.Text = lastID.ToString();
+
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show(error.Message);
+                }
             }
 
             if (Type.Contains("Update") && Validation.Validar(contentRedes))
             {
-                string SQLUp = $"UPDATE C_Redes_de_Transporte SET " +
-                $"TIPO_REDE= '{tbTipoRede.Text}', " +
-                $"DESCRICAO_REDE= '{tbDescricaoRede.Text}', " +
-                $"TIPO_MOTORISTA= '{comboCategoriaCNH.Text}', " +
-                $"TIPO_VEICULOS= '{comboTipoVeiculo.Text}' " +
-                $"WHERE NUM_ID = '{maskRedeID.Text}'";
+                TMSContext db = new();
 
-                ConnectDB connectDB = new();
-                connectDB.cadastrar(SQLUp);
+                RedeTransporte redeTransporte = db.RedeTransporte.First(a => a.ID_rede == int.Parse(maskRedeID.Text));
+
+                if (redeTransporte == null)
+                {
+                    MessageBox.Show("Error");
+                    return;
+                }
+
+                redeTransporte.Descricao = tbDescricaoRede.Text;
+                redeTransporte.Tipo_rede = tbTipoRede.Text;
+                redeTransporte.Categoria_CNH = comboCategoriaCNH.Text;
+                redeTransporte.Tipo_veiculo = comboTipoVeiculo.Text;
+
+                db.SaveChanges();
 
                 limpar.CleanControl(contentRedes);
                 limpar.CleanControl(searchPanel);
-                //numID.Text = DBFunctions.atualizaID("SELECT MAX (NUM_ID) FROM C_Redes_de_Transporte", "T");
             }
         }
 
         private void buscarNumId_Click(object sender, EventArgs e)
         {
-            if (maskRedeID.Text != "")
+            idRedes();
+
+            if (maskRedeID.Text.Length > 0)
             {
-                ConnectDB connectDB = new();
-                DataRow dados = connectDB.pesquisarRow($"SELECT * FROM C_Redes_de_Transporte WHERE ID_REDE = {maskRedeID.Text}", contentRedes)!;
+                TMSContext db = new();
 
-                if (dados != null)
+                RedeTransporte redeTransporte = db.RedeTransporte.FirstOrDefault(a => a.ID_rede == int.Parse(maskRedeID.Text));
+
+                if (redeTransporte == null)
                 {
-                    maskRedeID.Text = dados["NUM_ID"].ToString();
+                    ID_Rede.Text = "";
 
-                    numID.Text = dados["NUM_ID"].ToString();
-                    tbTipoRede.Text = dados["TIPO_REDE"].ToString();
-                    tbDescricaoRede.Text = dados["DESCRICAO_REDE"].ToString();
-                    comboCategoriaCNH.Text = dados["TIPO_MOTORISTA"].ToString();
-                    comboTipoVeiculo.Text = dados["TIPO_VEICULOS"].ToString();
+                    MessageBox.Show("Rede de Transporte não encontrado");
+                    return;
                 }
+
+                ID_Rede.Text = redeTransporte.ID_rede.ToString();
+                tbDescricaoRede.Text = redeTransporte.Descricao;
+                tbTipoRede.Text = redeTransporte.Tipo_rede;
+                comboCategoriaCNH.Text = redeTransporte.Categoria_CNH;
+                comboTipoVeiculo.Text = redeTransporte.Tipo_veiculo;
             }
             else
             {
