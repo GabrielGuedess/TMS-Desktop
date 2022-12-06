@@ -1,5 +1,6 @@
 ﻿using Interface.ControlValidationAuxiliary;
-using Interface.DataBaseControls;
+using Interface.ModelsDB;
+using Interface.ModelsDB.TMSDataBaseContext;
 using Interface.Utilities;
 using System.Data;
 
@@ -86,7 +87,56 @@ namespace Interface
         {
             if (Type.Contains("Cadastro") && Validation.Validar(contentTarifas) && validar())
             {
+                try
+                {
+
+                    TMSContext db = new();
+
+                    string selected = string.Empty;
+
+                    if (checkTaxa.Checked)
+                    {
+                        selected = "Taxa";
+                    }
+                    else if (checkTarifa.Checked)
+                    {
+                        selected = "Tarifa";
+                    }
+
+                    TarifasETaxas tarifasETaxas = new TarifasETaxas
+                    {
+                        Descricao = tbDescricaoTaxa.Text,
+                        Nome_empresa = tbNomeEmpresa.Text,
+                        Tarifa_ou_taxa = selected,
+                    };
+
+                    db.TarifasETaxas.Add(tarifasETaxas);
+
+                    db.SaveChanges();
+
+                    limpar.CleanControl(contentTarifas);
+                    limpar.CleanControl(searchPanel);
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show(error.Message);
+                }
+            }
+
+            if (Type.Contains("Update") && Validation.Validar(contentTarifas) && validar())
+            {
+                TMSContext db = new();
+
+                TarifasETaxas tarifasETaxas = db.TarifasETaxas.FirstOrDefault(a => a.Nome_empresa == empresaMask.Text);
+
+                if (tarifasETaxas == null)
+                {
+                    MessageBox.Show("Error");
+                    return;
+                }
+
                 string selected = string.Empty;
+
                 if (checkTaxa.Checked)
                 {
                     selected = "Taxa";
@@ -95,25 +145,12 @@ namespace Interface
                 {
                     selected = "Tarifa";
                 }
-                string SQL = "INSERT INTO Tarifas_Taxas (Taxa_Tarifa, Descricao, Nome_Empresa) VALUES";
-                SQL += "('" + selected + "','" + tbDescricaoTaxa.Text + "','" + tbNomeEmpresa.Text + "')";
 
-                ConnectDB connectDB = new ConnectDB();
-                connectDB.cadastrar(SQL);
+                tarifasETaxas.Descricao = tbDescricaoTaxa.Text;
+                tarifasETaxas.Nome_empresa = tbNomeEmpresa.Text;
+                tarifasETaxas.Tarifa_ou_taxa = selected;
 
-                limpar.CleanControl(contentTarifas);
-                limpar.CleanControl(panelSerch);
-            }
-
-            if (Type.Contains("Update") && Validation.Validar(contentTarifas) && validar())
-            {
-                string SQLUp = $"UPDATE Tarifas_Taxas SET " +
-                $"Taxa_Tarifa= '{(checkTarifa.Checked ? checkTarifa.Text : checkTaxa.Text)}', " +
-                $"Descricao= '{tbDescricaoTaxa.Text}' " +
-                $"WHERE Nome_Empresa = '{empresaMask.Text.Replace('.', ',')}'";
-
-                ConnectDB connectDB = new();
-                connectDB.cadastrar(SQLUp);
+                db.SaveChanges();
 
                 limpar.CleanControl(contentTarifas);
                 limpar.CleanControl(searchPanel);
@@ -124,17 +161,20 @@ namespace Interface
         {
             if (empresaMask.Text != "")
             {
-                ConnectDB connectDB = new();
-                DataRow dados = connectDB.pesquisarRow($"SELECT * FROM Tarifas_Taxas WHERE Nome_Empresa = '{empresaMask.Text}'", contentTarifas)!;
+                TMSContext db = new();
 
-                if (dados != null)
+                TarifasETaxas tarifasETaxas = db.TarifasETaxas.FirstOrDefault(a => a.Nome_empresa == tbNomeEmpresa.Text);
+
+                if (tarifasETaxas == null)
                 {
-                    empresaMask.Text = dados["Nome_Empresa"].ToString();
-
-                    checkTaxa.Text = dados["Taxa_Tarifa"].ToString();
-                    checkTarifa.Checked = dados["Taxa_Tarifa"].ToString() == "Tarifa";
-                    checkTaxa.Checked = dados["Taxa_Tarifa"].ToString() == "Taxa";
+                    MessageBox.Show("Rede de Transporte não encontrado");
+                    return;
                 }
+
+                tbDescricaoTaxa.Text = tarifasETaxas.Descricao;
+                tbNomeEmpresa.Text = tarifasETaxas.Nome_empresa;
+                checkTaxa.Checked = tarifasETaxas.Tarifa_ou_taxa == "Taxa";
+                checkTarifa.Checked = tarifasETaxas.Tarifa_ou_taxa == "Tarifa";
             }
             else
             {
