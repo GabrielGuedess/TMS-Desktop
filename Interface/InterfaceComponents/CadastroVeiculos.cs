@@ -113,7 +113,7 @@ namespace Interface
                     veiculo.ID_veiculo = lastID;
                     veiculo.ID_for_modelo = idModelo;
                     veiculo.ID_for_tipo_veiculo = tipoVeiculo.ID_tipo_veiculo;
-                    if (tipoVeiculo.Possui_carroceria == "s")
+                    if (tipoVeiculo.Possui_carroceria == 1)
                     {
                         Validation.Validar(tableCarroceria);
                         Carroceria carroceriaVeiculo = db.Carroceria.First(a => a.Descricao_carroceira == comboTipoCarroceria.Text);
@@ -127,7 +127,6 @@ namespace Interface
                     veiculo.Cod_RNTRC = mkRNTRC.Text;
                     veiculo.Vencimento_RNTRC = mkVencimentoRNTRC.convertDateOnly();
                     veiculo.Cod_CIOT = tbCIOT.Text;
-                    veiculo.Disponibilidade = tbDisponibilidade.Text;
 
                     db.Veiculo.Add(veiculo);
 
@@ -223,11 +222,10 @@ namespace Interface
                 tbCIOT.Text = veiculo.Cod_CIOT;
                 tbPesoVeiculo.Text = veiculo.ID_for_modeloNavigation.Massa_modelo.ToString();
                 tbQuantEixo.Text = veiculo.ID_for_modeloNavigation.Eixo_modelo.ToString();
-                tbDisponibilidade.Text = veiculo.Disponibilidade;
 
 
 
-                if (veiculo.ID_for_tipo_veiculoNavigation.Possui_carroceria == "s")
+                if (veiculo.ID_for_tipo_veiculoNavigation.Possui_carroceria == 1)
                 {
                     comboPossuiEixo.SelectedIndex = 0;
                     List<string> listaNomesCarrocerias = new List<string>();
@@ -327,7 +325,7 @@ namespace Interface
             {
                 return;
             }
-            else if (tipoVeiculo.Possui_carroceria == "n")
+            else if (tipoVeiculo.Possui_carroceria == 0)
             {
                 comboPossuiEixo.SelectedIndex = 1;
                 enableCamposCarroceria(false);

@@ -144,7 +144,6 @@ namespace Interface
                     terceiro.Categoria_CNH = comboCategoriaCNH.Text;
                     terceiro.Vencimento_CNH = dateVencimentoCNH.convertDateOnly();
                     terceiro.Curso_MOPP = comboMOPP.Text;
-                    terceiro.Disponibilidade = "ad";
 
                     CelularMotoristaTerceiro celular = new CelularMotoristaTerceiro
                     {
@@ -181,13 +180,13 @@ namespace Interface
                             //ID_veiculo_terceiro = lastID,
                             Ano_fabricao = Convert.ToInt16(mkAno.Text),
                             Capacidade_KG = tbCapacidadePesoMax.returnValue(),
-                            Capacidade_volumetrican = tbCapacidadeVolumetrica.returnValue(),
+                            Capacidade_volumetrica = tbCapacidadeVolumetrica.returnValue(),
                             Carroceria = comboTipoCarroceria.Text,
                             Cod_CIOT = mkCodigoCIOT.Text,
                             Cod_RENAVAM = mkRenavam.Text,
                             Cod_RNTRC = mkRNTRC.Text,
-                            Eixo_carroceria = int.Parse(tbQuantiEixosCarroceria.Text),
-                            Eixo_modelo = int.Parse(tbQuantEixos.Text),
+                            Eixo_carroceria = sbyte.Parse(tbQuantiEixosCarroceria.Text),
+                            Eixo_modelo = sbyte.Parse(tbQuantEixos.Text),
                             Marca = tbMarca.Text,
                             Massa_carroceria = tbPesoCarroceria.returnValue(),
                             Massa_modelo = tbPesoVeiculo.returnValue(),
@@ -245,7 +244,6 @@ namespace Interface
                     terceiro.Categoria_CNH = comboCategoriaCNH.Text;
                     terceiro.Vencimento_CNH = dateVencimentoCNH.convertDateOnly();
                     terceiro.Curso_MOPP = comboMOPP.Text;
-                    terceiro.Disponibilidade = "ad";
 
                     terceiro.CelularMotoristaTerceiro.First().Celular = mkCelular.Text;
                     terceiro.TelefoneMotoristaTerceiro.First().Telefone = mkTelefone.Text;
@@ -272,13 +270,13 @@ namespace Interface
                             ID_for_motorista = terceiro.ID_motorista_terceiro,
                             Ano_fabricao = Convert.ToInt16(mkAno.Text),
                             Capacidade_KG = tbCapacidadePesoMax.returnValue(),
-                            Capacidade_volumetrican = tbCapacidadeVolumetrica.returnValue(),
+                            Capacidade_volumetrica = tbCapacidadeVolumetrica.returnValue(),
                             Carroceria = comboTipoCarroceria.Text,
                             Cod_CIOT = mkCodigoCIOT.Text,
                             Cod_RENAVAM = mkRenavam.Text,
                             Cod_RNTRC = mkRNTRC.Text,
-                            Eixo_carroceria = int.Parse(tbQuantiEixosCarroceria.Text),
-                            Eixo_modelo = int.Parse(tbQuantEixos.Text),
+                            Eixo_carroceria = sbyte.Parse(tbQuantiEixosCarroceria.Text),
+                            Eixo_modelo = sbyte.Parse(tbQuantEixos.Text),
                             Marca = tbMarca.Text,
                             Massa_carroceria = tbPesoCarroceria.returnValue(),
                             Massa_modelo = tbPesoVeiculo.returnValue(),
@@ -293,14 +291,14 @@ namespace Interface
                     {
                         terceiro.VeiculoTerceiro.First().Ano_fabricao = Convert.ToInt16(mkAno.Text);
                         terceiro.VeiculoTerceiro.First().Capacidade_KG = tbCapacidadePesoMax.returnValue();
-                        terceiro.VeiculoTerceiro.First().Capacidade_volumetrican = tbCapacidadeVolumetrica.returnValue();
+                        terceiro.VeiculoTerceiro.First().Capacidade_volumetrica = tbCapacidadeVolumetrica.returnValue();
                         terceiro.VeiculoTerceiro.First().Carroceria = comboTipoCarroceria.Text;
                         terceiro.VeiculoTerceiro.First().Cod_CIOT = mkCodigoCIOT.Text;
                         terceiro.VeiculoTerceiro.First().Cod_RENAVAM = mkRenavam.Text;
                         terceiro.VeiculoTerceiro.First().Cod_RNTRC = mkRNTRC.Text;
                         terceiro.VeiculoTerceiro.First().Vencimento_RNTRC = dateVencimentoRENTRC.convertDateOnly();
-                        terceiro.VeiculoTerceiro.First().Eixo_carroceria = int.Parse(tbQuantiEixosCarroceria.Text);
-                        terceiro.VeiculoTerceiro.First().Eixo_modelo = int.Parse(tbQuantEixos.Text);
+                        terceiro.VeiculoTerceiro.First().Eixo_carroceria = sbyte.Parse(tbQuantiEixosCarroceria.Text);
+                        terceiro.VeiculoTerceiro.First().Eixo_modelo = sbyte.Parse(tbQuantEixos.Text);
                         terceiro.VeiculoTerceiro.First().Marca = tbMarca.Text;
                         terceiro.VeiculoTerceiro.First().Massa_carroceria = tbPesoCarroceria.returnValue();
                         terceiro.VeiculoTerceiro.First().Massa_modelo = tbPesoVeiculo.returnValue();
@@ -390,7 +388,7 @@ namespace Interface
                     tbQuantEixos.Text = terceiro.VeiculoTerceiro.First().Eixo_modelo.ToString();
                     tbPesoCarroceria.Text = terceiro.VeiculoTerceiro.First().Massa_carroceria.ToString() + " Kg";
                     tbQuantiEixosCarroceria.Text = terceiro.VeiculoTerceiro.First().Eixo_carroceria.ToString();
-                    tbCapacidadeVolumetrica.Text = terceiro.VeiculoTerceiro.First().Capacidade_volumetrican.ToString() + " m³";
+                    tbCapacidadeVolumetrica.Text = terceiro.VeiculoTerceiro.First().Capacidade_volumetrica.ToString() + " m³";
                     tbCapacidadePesoMax.Text = terceiro.VeiculoTerceiro.First().Capacidade_KG.ToString() + " Kg";
                 }
 

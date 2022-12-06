@@ -14,8 +14,10 @@ namespace Interface.ModelsDB
         public string Nome { get; set; } = null!;
         public int ID_for_marca { get; set; }
         public int ID_for_tipo_veiculo { get; set; }
+        public double Capacidade_KG { get; set; }
+        public double? Capacidade_volumetrica { get; set; }
         public double Massa_modelo { get; set; }
-        public uint Eixo_modelo { get; set; }
+        public byte Eixo_modelo { get; set; }
 
         public virtual Marca ID_for_marcaNavigation { get; set; } = null!;
         public virtual TipoVeiculo ID_for_tipo_veiculoNavigation { get; set; } = null!;

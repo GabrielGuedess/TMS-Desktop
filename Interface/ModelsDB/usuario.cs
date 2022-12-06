@@ -7,7 +7,7 @@ namespace Interface.ModelsDB
     {
         public int ID_usuario { get; set; }
         public string Nome { get; set; } = null!;
-        public string User_name { get; set; } = null!;
+        public string Senha { get; set; } = null!;
         public string CPF { get; set; } = null!;
         public string Celular { get; set; } = null!;
         public string Telefone { get; set; } = null!;

@@ -14,7 +14,7 @@ namespace Interface.ModelsDB
 
         public int ID_tipo_veiculo { get; set; }
         public string Descricao { get; set; } = null!;
-        public string Possui_carroceria { get; set; } = null!;
+        public byte Possui_carroceria { get; set; }
 
         public virtual ICollection<Modelo> Modelo { get; set; }
         public virtual ICollection<Veiculo> Veiculo { get; set; }

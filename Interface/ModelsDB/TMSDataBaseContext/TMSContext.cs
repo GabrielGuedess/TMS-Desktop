@@ -27,6 +27,7 @@ namespace Interface.ModelsDB.TMSDataBaseContext
         public virtual DbSet<EmailCliente> EmailCliente { get; set; } = null!;
         public virtual DbSet<EmailFuncionario> EmailFuncionario { get; set; } = null!;
         public virtual DbSet<EmailMotoristaTerceiro> EmailMotoristaTerceiro { get; set; } = null!;
+        public virtual DbSet<Manutencao> Manutencao { get; set; } = null!;
         public virtual DbSet<Marca> Marca { get; set; } = null!;
         public virtual DbSet<Mercadoria> Mercadoria { get; set; } = null!;
         public virtual DbSet<Modelo> Modelo { get; set; } = null!;
@@ -35,6 +36,7 @@ namespace Interface.ModelsDB.TMSDataBaseContext
         public virtual DbSet<NotaFiscal> NotaFiscal { get; set; } = null!;
         public virtual DbSet<PedidoCliente> PedidoCliente { get; set; } = null!;
         public virtual DbSet<PessoaJuridica> PessoaJuridica { get; set; } = null!;
+        public virtual DbSet<ProcessoManutencao> ProcessoManutencao { get; set; } = null!;
         public virtual DbSet<ProcessoPedido> ProcessoPedido { get; set; } = null!;
         public virtual DbSet<RedeTransporte> RedeTransporte { get; set; } = null!;
         public virtual DbSet<Rota> Rota { get; set; } = null!;
@@ -54,7 +56,7 @@ namespace Interface.ModelsDB.TMSDataBaseContext
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseMySql("server=localhost;user=root;database=tms", Microsoft.EntityFrameworkCore.ServerVersion.Parse("10.4.22-mariadb"));
+                optionsBuilder.UseMySql("server=localhost;user=root;database=tms", ServerVersion.Parse("10.4.22-mariadb"));
             }
         }
 
@@ -70,15 +72,13 @@ namespace Interface.ModelsDB.TMSDataBaseContext
 
                 entity.Property(e => e.ID_carroceria).HasColumnType("int(11)");
 
-                entity.Property(e => e.Capacidade_KG).HasColumnType("double(6,3) unsigned");
-
-                entity.Property(e => e.Capacidade_volumetrica).HasColumnType("double(6,3) unsigned");
+                entity.Property(e => e.Capacidade_volumetrica).HasColumnType("double(9,3) unsigned");
 
                 entity.Property(e => e.Descricao_carroceira).HasMaxLength(30);
 
-                entity.Property(e => e.Eixo_carroceria).HasColumnType("int(10) unsigned");
+                entity.Property(e => e.Eixo_carroceria).HasColumnType("tinyint(3) unsigned");
 
-                entity.Property(e => e.Massa_carroceria).HasColumnType("double(6,3) unsigned");
+                entity.Property(e => e.Massa_carroceria).HasColumnType("double(9,3) unsigned");
             });
 
             modelBuilder.Entity<CelularCliente>(entity =>
@@ -166,6 +166,10 @@ namespace Interface.ModelsDB.TMSDataBaseContext
 
                 entity.Property(e => e.Numero_endereco).HasMaxLength(10);
 
+                entity.Property(e => e.Tipo_cliente)
+                    .HasMaxLength(1)
+                    .IsFixedLength();
+
                 entity.Property(e => e.UF).HasMaxLength(2);
             });
 
@@ -186,9 +190,7 @@ namespace Interface.ModelsDB.TMSDataBaseContext
 
                 entity.Property(e => e.CPF).HasMaxLength(11);
 
-                entity.Property(e => e.Genero)
-                    .HasMaxLength(1)
-                    .IsFixedLength();
+                entity.Property(e => e.Genero).HasMaxLength(9);
 
                 entity.Property(e => e.Nome).HasMaxLength(40);
 
@@ -227,7 +229,7 @@ namespace Interface.ModelsDB.TMSDataBaseContext
 
                 entity.Property(e => e.Nome_fantasia).HasMaxLength(40);
 
-                entity.Property(e => e.Razao_social).HasMaxLength(40);
+                entity.Property(e => e.Razao_social).HasMaxLength(70);
 
                 entity.HasOne(d => d.ID_for_clienteNavigation)
                     .WithOne(p => p.ClienteJuridico)
@@ -246,9 +248,9 @@ namespace Interface.ModelsDB.TMSDataBaseContext
 
                 entity.Property(e => e.ID_for_motorista).HasColumnType("int(11)");
 
-                entity.Property(e => e.Situacao_contrato).HasMaxLength(20);
+                entity.Property(e => e.Situacao_contrato).HasMaxLength(50);
 
-                entity.Property(e => e.Tipo_contrato).HasMaxLength(40);
+                entity.Property(e => e.Tipo_contrato).HasMaxLength(50);
 
                 entity.Property(e => e.Veiculo_proprio).HasMaxLength(3);
 
@@ -324,6 +326,40 @@ namespace Interface.ModelsDB.TMSDataBaseContext
                     .HasConstraintName("FK_terceiro3");
             });
 
+            modelBuilder.Entity<Manutencao>(entity =>
+            {
+                entity.HasKey(e => e.ID_manutencao)
+                    .HasName("PRIMARY");
+
+                entity.HasIndex(e => e.ID_for_empresa, "FK_manutencao");
+
+                entity.HasIndex(e => e.ID_for_processo_manutencao, "FK_manutencao2");
+
+                entity.Property(e => e.ID_manutencao).HasColumnType("int(11)");
+
+                entity.Property(e => e.Detalhamento).HasMaxLength(60);
+
+                entity.Property(e => e.ID_for_empresa).HasColumnType("int(11)");
+
+                entity.Property(e => e.ID_for_processo_manutencao).HasColumnType("int(11)");
+
+                entity.Property(e => e.Tipo_manutencao)
+                    .HasMaxLength(1)
+                    .IsFixedLength();
+
+                entity.Property(e => e.Valor_reais).HasColumnType("double(9,2) unsigned");
+
+                entity.HasOne(d => d.ID_for_empresaNavigation)
+                    .WithMany(p => p.Manutencao)
+                    .HasForeignKey(d => d.ID_for_empresa)
+                    .HasConstraintName("FK_manutencao");
+
+                entity.HasOne(d => d.ID_for_processo_manutencaoNavigation)
+                    .WithMany(p => p.Manutencao)
+                    .HasForeignKey(d => d.ID_for_processo_manutencao)
+                    .HasConstraintName("FK_manutencao2");
+            });
+
             modelBuilder.Entity<Marca>(entity =>
             {
                 entity.HasKey(e => e.ID_marca)
@@ -354,11 +390,11 @@ namespace Interface.ModelsDB.TMSDataBaseContext
 
                 entity.Property(e => e.ID_for_pedido).HasColumnType("int(11)");
 
-                entity.Property(e => e.Massa).HasColumnType("double(6,3) unsigned");
+                entity.Property(e => e.Massa).HasColumnType("double(9,3) unsigned");
 
                 entity.Property(e => e.Valor).HasColumnType("double(9,2) unsigned");
 
-                entity.Property(e => e.Volume).HasColumnType("double(6,3) unsigned");
+                entity.Property(e => e.Volume).HasColumnType("double(9,3) unsigned");
 
                 entity.HasOne(d => d.ID_for_clienteNavigation)
                     .WithMany(p => p.Mercadoria)
@@ -382,15 +418,19 @@ namespace Interface.ModelsDB.TMSDataBaseContext
 
                 entity.Property(e => e.ID_modelo).HasColumnType("int(11)");
 
-                entity.Property(e => e.Eixo_modelo).HasColumnType("int(10) unsigned");
+                entity.Property(e => e.Capacidade_KG).HasColumnType("double(9,3) unsigned");
+
+                entity.Property(e => e.Capacidade_volumetrica).HasColumnType("double(9,3) unsigned");
+
+                entity.Property(e => e.Eixo_modelo).HasColumnType("tinyint(3) unsigned");
 
                 entity.Property(e => e.ID_for_marca).HasColumnType("int(11)");
 
                 entity.Property(e => e.ID_for_tipo_veiculo).HasColumnType("int(11)");
 
-                entity.Property(e => e.Massa_modelo).HasColumnType("double(6,3) unsigned");
+                entity.Property(e => e.Massa_modelo).HasColumnType("double(9,3) unsigned");
 
-                entity.Property(e => e.Nome).HasMaxLength(30);
+                entity.Property(e => e.Nome).HasMaxLength(50);
 
                 entity.HasOne(d => d.ID_for_marcaNavigation)
                     .WithMany(p => p.Modelo)
@@ -435,13 +475,7 @@ namespace Interface.ModelsDB.TMSDataBaseContext
 
                 entity.Property(e => e.Curso_MOPP).HasMaxLength(3);
 
-                entity.Property(e => e.Disponibilidade)
-                    .HasMaxLength(1)
-                    .IsFixedLength();
-
-                entity.Property(e => e.Genero)
-                    .HasMaxLength(1)
-                    .IsFixedLength();
+                entity.Property(e => e.Genero).HasMaxLength(9);
 
                 entity.Property(e => e.Logradouro).HasMaxLength(40);
 
@@ -488,11 +522,7 @@ namespace Interface.ModelsDB.TMSDataBaseContext
 
                 entity.Property(e => e.Curso_MOPP).HasMaxLength(3);
 
-                entity.Property(e => e.Disponibilidade)
-                    .HasMaxLength(1)
-                    .IsFixedLength();
-
-                entity.Property(e => e.Genero).HasMaxLength(8);
+                entity.Property(e => e.Genero).HasMaxLength(9);
 
                 entity.Property(e => e.Logradouro).HasMaxLength(40);
 
@@ -558,7 +588,7 @@ namespace Interface.ModelsDB.TMSDataBaseContext
 
             modelBuilder.Entity<PessoaJuridica>(entity =>
             {
-                entity.HasKey(e => e.ID_usuario)
+                entity.HasKey(e => e.ID_pessoa_juridica)
                     .HasName("PRIMARY");
 
                 entity.HasIndex(e => e.CNPJ, "CNPJ")
@@ -582,7 +612,9 @@ namespace Interface.ModelsDB.TMSDataBaseContext
                 entity.HasIndex(e => e.Telefone, "Telefone")
                     .IsUnique();
 
-                entity.Property(e => e.ID_usuario).HasColumnType("int(11)");
+                entity.Property(e => e.ID_pessoa_juridica).HasColumnType("int(11)");
+
+                entity.Property(e => e.Area_atuacao).HasMaxLength(30);
 
                 entity.Property(e => e.Bairro).HasMaxLength(40);
 
@@ -606,11 +638,34 @@ namespace Interface.ModelsDB.TMSDataBaseContext
 
                 entity.Property(e => e.Numero_endereco).HasMaxLength(10);
 
-                entity.Property(e => e.Razao_social).HasMaxLength(40);
+                entity.Property(e => e.Razao_social).HasMaxLength(70);
 
                 entity.Property(e => e.Telefone).HasMaxLength(10);
 
                 entity.Property(e => e.UF).HasMaxLength(2);
+            });
+
+            modelBuilder.Entity<ProcessoManutencao>(entity =>
+            {
+                entity.HasKey(e => e.ID_processo_manutencao)
+                    .HasName("PRIMARY");
+
+                entity.HasIndex(e => e.Descricao, "Descricao")
+                    .IsUnique();
+
+                entity.Property(e => e.ID_processo_manutencao).HasColumnType("int(11)");
+
+                entity.Property(e => e.Classificacao).HasMaxLength(9);
+
+                entity.Property(e => e.Corretivo)
+                    .HasColumnType("tinyint(3) unsigned")
+                    .HasDefaultValueSql("'1'");
+
+                entity.Property(e => e.Descricao).HasMaxLength(60);
+
+                entity.Property(e => e.Preventivo)
+                    .HasColumnType("tinyint(3) unsigned")
+                    .HasDefaultValueSql("'1'");
             });
 
             modelBuilder.Entity<ProcessoPedido>(entity =>
@@ -628,7 +683,9 @@ namespace Interface.ModelsDB.TMSDataBaseContext
 
                 entity.Property(e => e.ID_processo).HasColumnType("int(11)");
 
-                entity.Property(e => e.Gasto_total).HasColumnType("double(9,2) unsigned");
+                entity.Property(e => e.Gasto_total_litros).HasColumnType("double(15,3) unsigned");
+
+                entity.Property(e => e.Gasto_total_reais).HasColumnType("double(15,2) unsigned");
 
                 entity.Property(e => e.ID_for_motorista).HasColumnType("int(11)");
 
@@ -638,7 +695,7 @@ namespace Interface.ModelsDB.TMSDataBaseContext
 
                 entity.Property(e => e.ID_for_veiculo).HasColumnType("int(11)");
 
-                entity.Property(e => e.KM_total).HasColumnType("double(6,3) unsigned");
+                entity.Property(e => e.KM_total).HasColumnType("double(15,3) unsigned");
 
                 entity.HasOne(d => d.ID_for_motoristaNavigation)
                     .WithMany(p => p.ProcessoPedido)
@@ -696,11 +753,13 @@ namespace Interface.ModelsDB.TMSDataBaseContext
 
                 entity.Property(e => e.Complemento_partida).HasMaxLength(40);
 
-                entity.Property(e => e.Distancia_KM).HasColumnType("double(6,3) unsigned");
+                entity.Property(e => e.Distancia_KM).HasColumnType("double(9,3) unsigned");
+
+                entity.Property(e => e.Gasto_combustivel_litros).HasColumnType("double(9,3) unsigned");
 
                 entity.Property(e => e.Gasto_combustivel_reais).HasColumnType("double(9,2) unsigned");
 
-                entity.Property(e => e.Gasto_pedagio_reais).HasColumnType("double(6,2) unsigned");
+                entity.Property(e => e.Gasto_pedagio_reais).HasColumnType("double(9,2) unsigned");
 
                 entity.Property(e => e.Logradouro_partida).HasMaxLength(40);
 
@@ -725,11 +784,13 @@ namespace Interface.ModelsDB.TMSDataBaseContext
 
                 entity.Property(e => e.ID_retorno).HasColumnType("int(11)");
 
-                entity.Property(e => e.Distancia_KM).HasColumnType("double(6,3) unsigned");
+                entity.Property(e => e.Distancia_KM).HasColumnType("double(9,3) unsigned");
+
+                entity.Property(e => e.Gasto_combustivel_litros).HasColumnType("double(9,3) unsigned");
 
                 entity.Property(e => e.Gasto_combustivel_reais).HasColumnType("double(9,2) unsigned");
 
-                entity.Property(e => e.Gasto_pedagio_reais).HasColumnType("double(6,2) unsigned");
+                entity.Property(e => e.Gasto_pedagio_reais).HasColumnType("double(9,2) unsigned");
 
                 entity.Property(e => e.ID_for_pedido).HasColumnType("int(11)");
 
@@ -845,9 +906,7 @@ namespace Interface.ModelsDB.TMSDataBaseContext
 
                 entity.Property(e => e.Descricao).HasMaxLength(50);
 
-                entity.Property(e => e.Possui_carroceria)
-                    .HasMaxLength(1)
-                    .IsFixedLength();
+                entity.Property(e => e.Possui_carroceria).HasColumnType("tinyint(3) unsigned");
 
                 entity.HasMany(d => d.ID_for_carroceria)
                     .WithMany(p => p.ID_for_tipo_veiculo)
@@ -886,7 +945,7 @@ namespace Interface.ModelsDB.TMSDataBaseContext
                 entity.HasIndex(e => e.Telefone, "Telefone")
                     .IsUnique();
 
-                entity.HasIndex(e => e.User_name, "User_name")
+                entity.HasIndex(e => e.Senha, "User_name")
                     .IsUnique();
 
                 entity.Property(e => e.ID_usuario).HasColumnType("int(11)");
@@ -899,9 +958,9 @@ namespace Interface.ModelsDB.TMSDataBaseContext
 
                 entity.Property(e => e.Nome).HasMaxLength(30);
 
-                entity.Property(e => e.Telefone).HasMaxLength(10);
+                entity.Property(e => e.Senha).HasMaxLength(20);
 
-                entity.Property(e => e.User_name).HasMaxLength(20);
+                entity.Property(e => e.Telefone).HasMaxLength(10);
             });
 
             modelBuilder.Entity<Veiculo>(entity =>
@@ -938,10 +997,6 @@ namespace Interface.ModelsDB.TMSDataBaseContext
                 entity.Property(e => e.Cod_RNTRC).HasMaxLength(14);
 
                 entity.Property(e => e.Cor).HasMaxLength(15);
-
-                entity.Property(e => e.Disponibilidade)
-                    .HasMaxLength(1)
-                    .IsFixedLength();
 
                 entity.Property(e => e.ID_for_marca).HasColumnType("int(11)");
 
@@ -1009,9 +1064,9 @@ namespace Interface.ModelsDB.TMSDataBaseContext
 
                 entity.Property(e => e.Ano_fabricao).HasColumnType("year(4)");
 
-                entity.Property(e => e.Capacidade_KG).HasColumnType("double(6,3)");
+                entity.Property(e => e.Capacidade_KG).HasColumnType("double(9,3)");
 
-                entity.Property(e => e.Capacidade_volumetrican).HasColumnType("double(6,3)");
+                entity.Property(e => e.Capacidade_volumetrica).HasColumnType("double(9,3)");
 
                 entity.Property(e => e.Carroceria).HasMaxLength(30);
 
@@ -1021,21 +1076,23 @@ namespace Interface.ModelsDB.TMSDataBaseContext
 
                 entity.Property(e => e.Cod_RNTRC).HasMaxLength(14);
 
-                entity.Property(e => e.Eixo_carroceria).HasColumnType("int(11)");
+                entity.Property(e => e.Eixo_carroceria).HasColumnType("tinyint(4)");
 
-                entity.Property(e => e.Eixo_modelo).HasColumnType("int(11)");
+                entity.Property(e => e.Eixo_modelo).HasColumnType("tinyint(4)");
 
                 entity.Property(e => e.ID_for_motorista).HasColumnType("int(11)");
 
                 entity.Property(e => e.Marca).HasMaxLength(25);
 
-                entity.Property(e => e.Massa_carroceria).HasColumnType("double(6,3)");
+                entity.Property(e => e.Massa_carroceria).HasColumnType("double(9,3)");
 
-                entity.Property(e => e.Massa_modelo).HasColumnType("double(6,3)");
+                entity.Property(e => e.Massa_modelo).HasColumnType("double(9,3)");
 
                 entity.Property(e => e.Modelo).HasMaxLength(30);
 
                 entity.Property(e => e.Placa).HasMaxLength(7);
+
+                entity.Property(e => e.Tipo_veiculo).HasMaxLength(50);
 
                 entity.HasOne(d => d.ID_for_motoristaNavigation)
                     .WithMany(p => p.VeiculoTerceiro)

@@ -15,6 +15,7 @@ namespace Interface.ModelsDB
         public string Cidade_partida { get; set; } = null!;
         public string UF_partida { get; set; } = null!;
         public double Distancia_KM { get; set; }
+        public double Gasto_combustivel_litros { get; set; }
         public double Gasto_combustivel_reais { get; set; }
         public double Gasto_pedagio_reais { get; set; }
         public DateOnly Data_inicio { get; set; }

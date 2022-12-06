@@ -122,7 +122,6 @@ namespace Interface
                         Curso_MOPP = comboMOPP.Text,
                         Numero_CNH = mkCNH.Text,
                         Vencimento_CNH = dateVencimentoCNH.convertDateOnly(),
-                        Disponibilidade = tbDisponibilidade.Text,
                     };
                     TelefoneFuncionario telefone = new TelefoneFuncionario
                     {
@@ -188,7 +187,6 @@ namespace Interface
                 motorista.Vencimento_CNH = dateVencimentoCNH.convertDateOnly();
                 motorista.Categoria_CNH = comboCNH.Text;
                 motorista.Curso_MOPP = comboMOPP.Text;
-                motorista.Disponibilidade = tbDisponibilidade.Text;
 
                 db.SaveChanges();
 
@@ -230,7 +228,6 @@ namespace Interface
                 comboCNH.Text = motorista.Categoria_CNH;
                 dateVencimentoCNH.Text = motorista.Vencimento_CNH.ToString();
                 mkCNH.Text = motorista.Numero_CNH;
-                tbDisponibilidade.Text = motorista.Disponibilidade;
                 comboMOPP.Text = motorista.Curso_MOPP;
 
             }

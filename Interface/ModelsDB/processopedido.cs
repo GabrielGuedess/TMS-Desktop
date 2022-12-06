@@ -11,7 +11,8 @@ namespace Interface.ModelsDB
         public int ID_for_veiculo { get; set; }
         public int ID_for_motorista { get; set; }
         public double KM_total { get; set; }
-        public double Gasto_total { get; set; }
+        public double Gasto_total_litros { get; set; }
+        public double Gasto_total_reais { get; set; }
         public DateOnly Data_inicio { get; set; }
         public DateOnly DATA_fim { get; set; }
 

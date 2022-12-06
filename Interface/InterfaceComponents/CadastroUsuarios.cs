@@ -113,7 +113,7 @@ namespace Interface
                         ID_usuario = lastID,
                         Nome = tbNome.Text,
                         Email = tbEmail.Text,
-                        User_name = "qualquer coisa",
+                        Senha = tbSenha.Text,
                         Telefone = "qualquer",
                         CPF = mkCPF.Text,
                         Celular = mkCelular.Text

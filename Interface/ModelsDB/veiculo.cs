@@ -22,7 +22,6 @@ namespace Interface.ModelsDB
         public string Cod_RNTRC { get; set; } = null!;
         public DateOnly Vencimento_RNTRC { get; set; }
         public string Cod_CIOT { get; set; } = null!;
-        public string Disponibilidade { get; set; } = null!;
 
         public virtual Marca ID_for_marcaNavigation { get; set; } = null!;
         public virtual Modelo ID_for_modeloNavigation { get; set; } = null!;
