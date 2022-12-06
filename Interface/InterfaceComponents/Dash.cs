@@ -56,7 +56,7 @@ namespace Interface
 
                 if (overview1.CacheType.Contains("Sinistros"))
                 {
-                    cadastroSinistros2.OverviewDataResponse = value;
+                    cadastroSinistros1.OverviewDataResponse = value;
                 }
 
                 if (overview1.CacheType.Contains("Notas"))
@@ -100,7 +100,7 @@ namespace Interface
                 cadastroMotoristas2,
                 cadastroVeiculos1,
                 cadastroTerceiros1,
-                cadastroSinistros2,
+                cadastroSinistros1,
                 cadastroNotasFicais2,
                 cadastroTarifaseTaxas1,
                 cadastroRedesDeTransporte2,

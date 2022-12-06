@@ -83,6 +83,16 @@ namespace Interface.InterfaceComponents
             dash!.NavigationController("Pedidos", dash!.navigationDash.TypeControlOver);
         }
 
+        private void buttonEmpresa_Click(object sender, EventArgs e)
+        {
+            dash!.NavigationController("Empresa", dash!.navigationDash.TypeControlOver);
+        }
+
+        private void buttonProcesso_Click(object sender, EventArgs e)
+        {
+            dash!.NavigationController("Processo", dash!.navigationDash.TypeControlOver);
+        }
+
 
         private void timer1_Tick(object sender, EventArgs e)
         {

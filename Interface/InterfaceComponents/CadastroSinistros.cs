@@ -29,7 +29,7 @@ namespace Interface
                 limpar.CleanControl(contentSinistros);
                 limpar.CleanControl(searchPanel);
 
-                idSinistro();
+                //idSinistro();
 
                 if (value.Contains("Cadastro"))
                 {
@@ -67,7 +67,6 @@ namespace Interface
         public CadastroSinistros()
         {
             InitializeComponent();
-            idSinistro();
         }
 
         private void idSinistro()
