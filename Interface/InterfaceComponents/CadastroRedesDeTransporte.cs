@@ -153,7 +153,7 @@ namespace Interface
             {
                 TMSContext db = new();
 
-                RedeTransporte redeTransporte = db.RedeTransporte.First(a => a.ID_rede == int.Parse(maskRedeID.Text));
+                RedeTransporte redeTransporte = db.RedeTransporte.FirstOrDefault(a => a.ID_rede == int.Parse(maskRedeID.Text));
 
                 if (redeTransporte == null)
                 {
