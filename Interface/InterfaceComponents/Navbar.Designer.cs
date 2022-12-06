@@ -33,6 +33,9 @@
             this.panel35 = new System.Windows.Forms.Panel();
             this.buttonCadastro = new System.Windows.Forms.Button();
             this.panelDropDown = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.linePedidos = new System.Windows.Forms.Panel();
+            this.buttonPedidos = new System.Windows.Forms.Button();
             this.panel17 = new System.Windows.Forms.Panel();
             this.lineRedesDeTransporte = new System.Windows.Forms.Panel();
             this.buttonRedesDeTransporte = new System.Windows.Forms.Button();
@@ -91,7 +94,7 @@
             this.button8 = new System.Windows.Forms.Button();
             this.panel27 = new System.Windows.Forms.Panel();
             this.panel28 = new System.Windows.Forms.Panel();
-            this.buttonPlanejamento = new System.Windows.Forms.Button();
+            this.buttonManutencao = new System.Windows.Forms.Button();
             this.panel29 = new System.Windows.Forms.Panel();
             this.button10 = new System.Windows.Forms.Button();
             this.panel30 = new System.Windows.Forms.Panel();
@@ -101,6 +104,7 @@
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.panel35.SuspendLayout();
             this.panelDropDown.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel17.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel13.SuspendLayout();
@@ -162,6 +166,7 @@
             // 
             // panelDropDown
             // 
+            this.panelDropDown.Controls.Add(this.panel2);
             this.panelDropDown.Controls.Add(this.panel17);
             this.panelDropDown.Controls.Add(this.panel15);
             this.panelDropDown.Controls.Add(this.panel13);
@@ -176,11 +181,58 @@
             this.panelDropDown.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelDropDown.Location = new System.Drawing.Point(0, 0);
             this.panelDropDown.Margin = new System.Windows.Forms.Padding(0, 0, 0, 25);
-            this.panelDropDown.MaximumSize = new System.Drawing.Size(288, 580);
+            this.panelDropDown.MaximumSize = new System.Drawing.Size(288, 640);
             this.panelDropDown.MinimumSize = new System.Drawing.Size(288, 40);
             this.panelDropDown.Name = "panelDropDown";
             this.panelDropDown.Size = new System.Drawing.Size(288, 40);
             this.panelDropDown.TabIndex = 9;
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.linePedidos);
+            this.panel2.Controls.Add(this.buttonPedidos);
+            this.panel2.Location = new System.Drawing.Point(28, 582);
+            this.panel2.Margin = new System.Windows.Forms.Padding(0, 0, 0, 15);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(260, 37);
+            this.panel2.TabIndex = 16;
+            // 
+            // linePedidos
+            // 
+            this.linePedidos.BackColor = System.Drawing.Color.Transparent;
+            this.linePedidos.Dock = System.Windows.Forms.DockStyle.Right;
+            this.linePedidos.Location = new System.Drawing.Point(258, 0);
+            this.linePedidos.Margin = new System.Windows.Forms.Padding(0);
+            this.linePedidos.Name = "linePedidos";
+            this.linePedidos.Size = new System.Drawing.Size(2, 37);
+            this.linePedidos.TabIndex = 9;
+            // 
+            // buttonPedidos
+            // 
+            this.buttonPedidos.BackColor = System.Drawing.Color.Transparent;
+            this.buttonPedidos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.buttonPedidos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonPedidos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonPedidos.FlatAppearance.BorderSize = 0;
+            this.buttonPedidos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonPedidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPedidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonPedidos.ForeColor = System.Drawing.Color.Transparent;
+            this.buttonPedidos.Image = ((System.Drawing.Image)(resources.GetObject("buttonPedidos.Image")));
+            this.buttonPedidos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonPedidos.Location = new System.Drawing.Point(0, 0);
+            this.buttonPedidos.Margin = new System.Windows.Forms.Padding(0, 0, 0, 25);
+            this.buttonPedidos.Name = "buttonPedidos";
+            this.buttonPedidos.Padding = new System.Windows.Forms.Padding(24, 0, 24, 0);
+            this.buttonPedidos.Size = new System.Drawing.Size(260, 37);
+            this.buttonPedidos.TabIndex = 6;
+            this.buttonPedidos.Text = "        Pedidos";
+            this.buttonPedidos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonPedidos.UseVisualStyleBackColor = false;
+            this.buttonPedidos.Click += new System.EventHandler(this.buttonPedidos_Click);
             // 
             // panel17
             // 
@@ -1053,7 +1105,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel27.BackColor = System.Drawing.Color.Transparent;
             this.panel27.Controls.Add(this.panel28);
-            this.panel27.Controls.Add(this.buttonPlanejamento);
+            this.panel27.Controls.Add(this.buttonManutencao);
             this.panel27.Location = new System.Drawing.Point(0, 0);
             this.panel27.Margin = new System.Windows.Forms.Padding(0, 0, 0, 25);
             this.panel27.Name = "panel27";
@@ -1064,35 +1116,35 @@
             // 
             this.panel28.BackColor = System.Drawing.Color.Transparent;
             this.panel28.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel28.Location = new System.Drawing.Point(286, 40);
+            this.panel28.Location = new System.Drawing.Point(286, 37);
             this.panel28.Margin = new System.Windows.Forms.Padding(0);
             this.panel28.Name = "panel28";
             this.panel28.Size = new System.Drawing.Size(2, 0);
             this.panel28.TabIndex = 5;
             // 
-            // buttonPlanejamento
+            // buttonManutencao
             // 
-            this.buttonPlanejamento.BackColor = System.Drawing.Color.Transparent;
-            this.buttonPlanejamento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.buttonPlanejamento.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonPlanejamento.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonPlanejamento.FlatAppearance.BorderSize = 0;
-            this.buttonPlanejamento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonPlanejamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPlanejamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonPlanejamento.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonPlanejamento.Image = global::Interface.Properties.Resources.ep_arrow_right_bold_down;
-            this.buttonPlanejamento.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonPlanejamento.Location = new System.Drawing.Point(0, 0);
-            this.buttonPlanejamento.Margin = new System.Windows.Forms.Padding(0);
-            this.buttonPlanejamento.Name = "buttonPlanejamento";
-            this.buttonPlanejamento.Padding = new System.Windows.Forms.Padding(24, 0, 24, 0);
-            this.buttonPlanejamento.Size = new System.Drawing.Size(288, 40);
-            this.buttonPlanejamento.TabIndex = 111;
-            this.buttonPlanejamento.Text = "Planejamento";
-            this.buttonPlanejamento.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonPlanejamento.UseVisualStyleBackColor = false;
-            this.buttonPlanejamento.Click += new System.EventHandler(this.buttonPlanejamento_Click);
+            this.buttonManutencao.BackColor = System.Drawing.Color.Transparent;
+            this.buttonManutencao.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.buttonManutencao.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonManutencao.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonManutencao.FlatAppearance.BorderSize = 0;
+            this.buttonManutencao.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonManutencao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonManutencao.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonManutencao.ForeColor = System.Drawing.Color.Transparent;
+            this.buttonManutencao.Image = global::Interface.Properties.Resources.ep_arrow_right_bold_down;
+            this.buttonManutencao.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonManutencao.Location = new System.Drawing.Point(0, 0);
+            this.buttonManutencao.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonManutencao.Name = "buttonManutencao";
+            this.buttonManutencao.Padding = new System.Windows.Forms.Padding(24, 0, 24, 0);
+            this.buttonManutencao.Size = new System.Drawing.Size(288, 37);
+            this.buttonManutencao.TabIndex = 111;
+            this.buttonManutencao.Text = "Manutenção";
+            this.buttonManutencao.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonManutencao.UseVisualStyleBackColor = false;
+            this.buttonManutencao.Click += new System.EventHandler(this.buttonPlanejamento_Click);
             // 
             // panel29
             // 
@@ -1201,10 +1253,11 @@
             this.Margin = new System.Windows.Forms.Padding(0);
             this.MinimumSize = new System.Drawing.Size(288, 114);
             this.Name = "Navbar";
-            this.Size = new System.Drawing.Size(288, 114);
+            this.Size = new System.Drawing.Size(288, 680);
             this.Load += new System.EventHandler(this.Navbar_Load);
             this.panel35.ResumeLayout(false);
             this.panelDropDown.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.panel17.ResumeLayout(false);
             this.panel15.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
@@ -1294,7 +1347,7 @@
         private Button button8;
         private Panel panel27;
         private Panel panel28;
-        private Button buttonPlanejamento;
+        private Button buttonManutencao;
         private Panel panel29;
         private Button button10;
         private Panel panel30;
@@ -1302,5 +1355,8 @@
         private Panel panel32;
         private Button button11;
         private System.Windows.Forms.Timer timer2;
+        private Panel panel2;
+        private Panel linePedidos;
+        private Button buttonPedidos;
     }
 }

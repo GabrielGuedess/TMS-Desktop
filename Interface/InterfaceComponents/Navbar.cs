@@ -78,6 +78,11 @@ namespace Interface.InterfaceComponents
             dash!.NavigationController("Redes", dash!.navigationDash.TypeControlOver);
         }
 
+        private void buttonPedidos_Click(object sender, EventArgs e)
+        {
+            dash!.NavigationController("Pedidos", dash!.navigationDash.TypeControlOver);
+        }
+
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -113,8 +118,8 @@ namespace Interface.InterfaceComponents
         {
             if (isCollapsedPlanejamento)
             {
-                buttonPlanejamento.ForeColor = Color.FromArgb(0, 98, 255);
-                buttonPlanejamento.Image = Resources.ep_arrow_right_bold_top;
+                buttonManutencao.ForeColor = Color.FromArgb(0, 98, 255);
+                buttonManutencao.Image = Resources.ep_arrow_right_bold_top;
 
                 panelDropDownPlan.Height += 10;
 
@@ -126,8 +131,8 @@ namespace Interface.InterfaceComponents
             }
             else
             {
-                buttonPlanejamento.ForeColor = Color.White;
-                buttonPlanejamento.Image = Resources.ep_arrow_right_bold_down;
+                buttonManutencao.ForeColor = Color.White;
+                buttonManutencao.Image = Resources.ep_arrow_right_bold_down;
                 panelDropDownPlan.Height -= 10;
 
                 if (panelDropDownPlan.Height == panelDropDownPlan.MinimumSize.Height)

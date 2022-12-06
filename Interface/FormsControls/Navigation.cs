@@ -1,4 +1,5 @@
-﻿using Interface.Utilities;
+﻿using Interface.InterfaceComponents;
+using Interface.Utilities;
 
 namespace Interface.FormsControls
 {
@@ -92,7 +93,8 @@ namespace Interface.FormsControls
             CadastroSinistros cadastroSinistros,
             CadastroNotasFicais cadastroNotasFicais,
             CadastroTarifasETaxas cadastroTarifasETaxas,
-            CadastroRedesDeTransporte cadastroRedesDeTransporte
+            CadastroRedesDeTransporte cadastroRedesDeTransporte,
+            CadastroPedido pedido
             )
         {
             if (activeOver == "Overview" || activeOver == "Delete")
@@ -110,6 +112,7 @@ namespace Interface.FormsControls
                 cadastroNotasFicais.Visible = false;
                 cadastroTarifasETaxas.Visible = false;
                 cadastroRedesDeTransporte.Visible = false;
+                pedido.Visible = false;
             }
 
             if (activeOver == "Cadastro" || activeOver == "Update")
@@ -126,6 +129,7 @@ namespace Interface.FormsControls
                 cadastroNotasFicais.Visible = activeDash == "Notas";
                 cadastroTarifasETaxas.Visible = activeDash == "Tarifas";
                 cadastroRedesDeTransporte.Visible = activeDash == "Redes";
+                pedido.Visible = activeDash == "Pedidos";
 
 
                 cadastroClientes.TypeControl = $"{activeOver}-{activeDash}";
@@ -138,6 +142,7 @@ namespace Interface.FormsControls
                 cadastroNotasFicais.TypeControl = $"{activeOver}-{activeDash}";
                 cadastroTarifasETaxas.TypeControl = $"{activeOver}-{activeDash}";
                 cadastroRedesDeTransporte.TypeControl = $"{activeOver}-{activeDash}";
+                pedido.TypeControl = $"{activeOver}-{activeDash}";
             }
         }
     }
