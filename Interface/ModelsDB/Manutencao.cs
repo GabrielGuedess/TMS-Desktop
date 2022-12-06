@@ -13,8 +13,10 @@ namespace Interface.ModelsDB
         public DateOnly Data_fim { get; set; }
         public double Valor_reais { get; set; }
         public string Detalhamento { get; set; } = null!;
+        public int ID_for_veiculo { get; set; }
 
         public virtual PessoaJuridica ID_for_empresaNavigation { get; set; } = null!;
         public virtual ProcessoManutencao ID_for_processo_manutencaoNavigation { get; set; } = null!;
+        public virtual Veiculo ID_for_veiculoNavigation { get; set; } = null!;
     }
 }

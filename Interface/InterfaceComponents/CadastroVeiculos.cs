@@ -428,14 +428,14 @@ namespace Interface
             return null;
         }
 
-        /*async Task<List<string>> getCarroceriasForTipoCarroceria(string tipoVeiculoDescricao)
+        async Task<List<string>> getCarroceriasForTipoCarroceria(string tipoVeiculoDescricao)
         {
             TMSContext db = new();
             TipoVeiculo tipoVeiculo = await db.TipoVeiculo.Include(a => a.ID_for_carroceria)
                 .Include(a => a.Modelo).FirstOrDefaultAsync(a => a.Descricao == tipoVeiculoDescricao);
             if (tipoVeiculo != null)
             {
-                if (tipoVeiculo.Possui_carroceria == "s")
+                if (tipoVeiculo.Possui_carroceria == 1)
                 {
                     List<string> carrocerias = new();
                     foreach (var item in tipoVeiculo.ID_for_carroceria.ToList())
@@ -449,7 +449,7 @@ namespace Interface
             }
             return null;
 
-        }*/
+        }
 
         async Task<Modelo> getInfoModelo(string nomeModelo)
         {

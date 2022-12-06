@@ -161,7 +161,7 @@ namespace Interface.InterfaceComponents
         private void buscarPedido_Click(object sender, EventArgs e)
         {
             PedidoCliente pedido = db.PedidoCliente
-                .Include(a => a.ID_for_clienteNavigation)
+                .Include(a=> a.ID_for_clienteNavigation)
                 .Include(a => a.ID_for_clienteNavigation.ClienteFisico)
                 .Include(a => a.ID_for_clienteNavigation.ClienteJuridico)
                 .FirstOrDefault(a => a.ID_pedido == int.Parse(mkPedido.Text));
@@ -240,6 +240,28 @@ namespace Interface.InterfaceComponents
             else
             {
                 MessageBox.Show($"É necessário preencher o campo CEP corretamente!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        async private void comboTipoCliente_TextChanged(object sender, EventArgs e)
+        {
+            if(comboTipoCliente.SelectedIndex == 0)
+            {
+                List<ClienteFisico> listClient = await db.ClienteFisico.ToListAsync();
+                foreach(var clienteFisico in listClient)
+                {
+                    comboCPForCNPJCliente.Items.Clear();
+                    comboCPForCNPJCliente.Items.Add(clienteFisico.CPF);
+                }
+            }
+            else if( comboTipoCliente.SelectedIndex == 1)
+            {
+                List<ClienteJuridico> listClient = await db.ClienteJuridico.ToListAsync();
+                foreach (var clienteJuridico in listClient)
+                {
+                    comboCPForCNPJCliente.Items.Clear();
+                    comboCPForCNPJCliente.Items.Add(clienteJuridico.CNPJ);
+                }
             }
         }
     }

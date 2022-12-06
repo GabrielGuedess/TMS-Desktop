@@ -162,7 +162,7 @@
             // 
             // contentPedido
             // 
-            this.contentPedido.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.contentPedido.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.contentPedido.AutoScroll = true;
             this.contentPedido.AutoScrollMargin = new System.Drawing.Size(0, 20);
@@ -203,7 +203,7 @@
             // 
             // tableInfoMercadoria
             // 
-            this.tableInfoMercadoria.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.tableInfoMercadoria.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableInfoMercadoria.ColumnCount = 3;
             this.tableInfoMercadoria.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -259,7 +259,7 @@
             // 
             // tbPeso
             // 
-            this.tbPeso.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.tbPeso.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbPeso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
             this.tbPeso.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -319,7 +319,7 @@
             // 
             // tbVolume
             // 
-            this.tbVolume.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.tbVolume.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbVolume.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
             this.tbVolume.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -379,7 +379,7 @@
             // 
             // tbValor
             // 
-            this.tbValor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.tbValor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbValor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
             this.tbValor.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -439,7 +439,7 @@
             // 
             // tbDescricao
             // 
-            this.tbDescricao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.tbDescricao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbDescricao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
             this.tbDescricao.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -504,16 +504,13 @@
             // 
             // comboMercadoriasAdd
             // 
-            this.comboMercadoriasAdd.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.comboMercadoriasAdd.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboMercadoriasAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
             this.comboMercadoriasAdd.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboMercadoriasAdd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.comboMercadoriasAdd.ForeColor = System.Drawing.Color.White;
             this.comboMercadoriasAdd.FormattingEnabled = true;
-            this.comboMercadoriasAdd.Items.AddRange(new object[] {
-            "Cliente Fisico",
-            "Cliente Juridico"});
             this.comboMercadoriasAdd.Location = new System.Drawing.Point(5, 41);
             this.comboMercadoriasAdd.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.comboMercadoriasAdd.Name = "comboMercadoriasAdd";
@@ -546,7 +543,7 @@
             // 
             // tableInfoPedido
             // 
-            this.tableInfoPedido.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.tableInfoPedido.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableInfoPedido.ColumnCount = 3;
             this.tableInfoPedido.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33443F));
@@ -684,7 +681,7 @@
             // 
             // comboTipoCliente
             // 
-            this.comboTipoCliente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.comboTipoCliente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboTipoCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
             this.comboTipoCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -699,6 +696,7 @@
             this.comboTipoCliente.Name = "comboTipoCliente";
             this.comboTipoCliente.Size = new System.Drawing.Size(248, 29);
             this.comboTipoCliente.TabIndex = 5;
+            this.comboTipoCliente.TextChanged += new System.EventHandler(this.comboTipoCliente_TextChanged);
             // 
             // labelNomeClient
             // 
@@ -737,16 +735,13 @@
             // 
             // comboCPForCNPJCliente
             // 
-            this.comboCPForCNPJCliente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.comboCPForCNPJCliente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboCPForCNPJCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
             this.comboCPForCNPJCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboCPForCNPJCliente.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.comboCPForCNPJCliente.ForeColor = System.Drawing.Color.White;
             this.comboCPForCNPJCliente.FormattingEnabled = true;
-            this.comboCPForCNPJCliente.Items.AddRange(new object[] {
-            "Cliente Fisico",
-            "Cliente Juridico"});
             this.comboCPForCNPJCliente.Location = new System.Drawing.Point(5, 37);
             this.comboCPForCNPJCliente.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.comboCPForCNPJCliente.Name = "comboCPForCNPJCliente";
@@ -868,7 +863,7 @@
             // 
             // comboCidade
             // 
-            this.comboCidade.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.comboCidade.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboCidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
             this.comboCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -1159,7 +1154,7 @@
             // 
             // panelButton
             // 
-            this.panelButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.panelButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelButton.BackColor = System.Drawing.Color.Transparent;
             this.panelButton.Controls.Add(this.buscarPedido);
@@ -1253,7 +1248,7 @@
             // 
             // typeData
             // 
-            this.typeData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.typeData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.typeData.AutoSize = true;
             this.typeData.BackColor = System.Drawing.Color.Transparent;
@@ -1278,7 +1273,7 @@
             this.pictureBox3.TabIndex = 1;
             this.pictureBox3.TabStop = false;
             // 
-            // Pedido
+            // CadastroPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1286,7 +1281,7 @@
             this.Controls.Add(this.contentPedido);
             this.Controls.Add(this.searchPanel);
             this.Margin = new System.Windows.Forms.Padding(0);
-            this.Name = "Pedido";
+            this.Name = "CadastroPedido";
             this.Size = new System.Drawing.Size(975, 862);
             this.contentPedido.ResumeLayout(false);
             this.contentPedido.PerformLayout();
