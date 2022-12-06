@@ -84,7 +84,6 @@
             this.comboCidade = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panelTextEnderecoClient = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.panelBorderRoundedOnRight1 = new Interface.TemplateComponents.PanelBorderRoundedOnRight();
@@ -143,7 +142,6 @@
             this.subpanelEndereco.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelTextEnderecoClient.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panelBorderRoundedOnRight1.SuspendLayout();
             this.panelBorderRounded1.SuspendLayout();
@@ -305,6 +303,8 @@
             // 
             // tbNome
             // 
+            this.tbNome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tbNome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
             this.tbNome.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbNome.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -722,6 +722,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -764,6 +765,7 @@
             // panelEndereco
             // 
             this.panelEndereco.Controls.Add(this.subpanelEndereco);
+            this.panelEndereco.Controls.Add(this.panel1);
             this.panelEndereco.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelEndereco.Location = new System.Drawing.Point(0, 300);
             this.panelEndereco.Margin = new System.Windows.Forms.Padding(0);
@@ -776,13 +778,12 @@
             // 
             this.subpanelEndereco.BackColor = System.Drawing.Color.Transparent;
             this.subpanelEndereco.Controls.Add(this.comboUF);
-            this.subpanelEndereco.Controls.Add(this.panel1);
             this.subpanelEndereco.Controls.Add(this.label8);
-            this.subpanelEndereco.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.subpanelEndereco.Dock = System.Windows.Forms.DockStyle.Left;
             this.subpanelEndereco.Location = new System.Drawing.Point(20, 20);
             this.subpanelEndereco.Margin = new System.Windows.Forms.Padding(0);
             this.subpanelEndereco.Name = "subpanelEndereco";
-            this.subpanelEndereco.Size = new System.Drawing.Size(258, 70);
+            this.subpanelEndereco.Size = new System.Drawing.Size(83, 70);
             this.subpanelEndereco.TabIndex = 12;
             // 
             // comboUF
@@ -827,11 +828,13 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.comboCidade);
-            this.panel1.Location = new System.Drawing.Point(119, 0);
+            this.panel1.Location = new System.Drawing.Point(106, 20);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(139, 70);
+            this.panel1.Size = new System.Drawing.Size(172, 70);
             this.panel1.TabIndex = 12;
             // 
             // label3
@@ -857,7 +860,7 @@
             this.comboCidade.Location = new System.Drawing.Point(4, 32);
             this.comboCidade.Margin = new System.Windows.Forms.Padding(0, 0, 5, 0);
             this.comboCidade.Name = "comboCidade";
-            this.comboCidade.Size = new System.Drawing.Size(127, 33);
+            this.comboCidade.Size = new System.Drawing.Size(160, 33);
             this.comboCidade.TabIndex = 10;
             // 
             // label8
@@ -874,7 +877,9 @@
             // 
             // panelTextEnderecoClient
             // 
-            this.panelTextEnderecoClient.Controls.Add(this.panel3);
+            this.panelTextEnderecoClient.Controls.Add(this.panelBorderRounded1);
+            this.panelTextEnderecoClient.Controls.Add(this.panel7);
+            this.panelTextEnderecoClient.Controls.Add(this.label1);
             this.panelTextEnderecoClient.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelTextEnderecoClient.Location = new System.Drawing.Point(298, 300);
             this.panelTextEnderecoClient.Margin = new System.Windows.Forms.Padding(0);
@@ -883,23 +888,12 @@
             this.panelTextEnderecoClient.Size = new System.Drawing.Size(298, 100);
             this.panelTextEnderecoClient.TabIndex = 10;
             // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.panel7);
-            this.panel3.Controls.Add(this.panelBorderRounded1);
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(20, 20);
-            this.panel3.Margin = new System.Windows.Forms.Padding(0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(258, 70);
-            this.panel3.TabIndex = 0;
-            // 
             // panel7
             // 
             this.panel7.Controls.Add(this.label6);
             this.panel7.Controls.Add(this.panelBorderRoundedOnRight1);
-            this.panel7.Location = new System.Drawing.Point(191, 0);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel7.Location = new System.Drawing.Point(211, 20);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(67, 70);
             this.panel7.TabIndex = 20;
@@ -938,7 +932,7 @@
             this.tbNumCasa.Location = new System.Drawing.Point(5, 6);
             this.tbNumCasa.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbNumCasa.Name = "tbNumCasa";
-            this.tbNumCasa.Size = new System.Drawing.Size(40, 22);
+            this.tbNumCasa.Size = new System.Drawing.Size(47, 22);
             this.tbNumCasa.TabIndex = 12;
             // 
             // panelBorderRounded1
@@ -946,7 +940,7 @@
             this.panelBorderRounded1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelBorderRounded1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
             this.panelBorderRounded1.Controls.Add(this.tbLogradouro);
-            this.panelBorderRounded1.Location = new System.Drawing.Point(5, 35);
+            this.panelBorderRounded1.Location = new System.Drawing.Point(25, 55);
             this.panelBorderRounded1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelBorderRounded1.Name = "panelBorderRounded1";
             this.panelBorderRounded1.Size = new System.Drawing.Size(178, 33);
@@ -954,6 +948,8 @@
             // 
             // tbLogradouro
             // 
+            this.tbLogradouro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tbLogradouro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
             this.tbLogradouro.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbLogradouro.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -969,7 +965,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(5, 3);
+            this.label1.Location = new System.Drawing.Point(25, 23);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 17);
@@ -1077,7 +1073,7 @@
             this.tbComplemento.Location = new System.Drawing.Point(5, 5);
             this.tbComplemento.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbComplemento.Name = "tbComplemento";
-            this.tbComplemento.Size = new System.Drawing.Size(234, 22);
+            this.tbComplemento.Size = new System.Drawing.Size(230, 22);
             this.tbComplemento.TabIndex = 0;
             // 
             // textBoxOnlyNum_Letters1
@@ -1283,8 +1279,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panelTextEnderecoClient.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.panelTextEnderecoClient.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.panelBorderRoundedOnRight1.ResumeLayout(false);
@@ -1352,7 +1347,6 @@
         private TemplateComponents.MasckedboxTemplete mkTelefone;
         private Interface.TemplateComponents.TextBoxTemplete tbEmail;
         private Panel panelTextEnderecoClient;
-        private Panel panel3;
         private Label label1;
         private Panel panel2;
         private Panel panel4;

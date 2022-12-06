@@ -55,9 +55,25 @@ namespace Interface
         {
             set
             {
-                maskInput.Text = value["CPF"].ToString();
-
-
+                if (value != null)
+                {
+                    maskInput.Text = value["CPF"].ToString();
+                    tbNome.Text = value["Nome"].ToString();
+                    mkCPF.Text = value["CPF"].ToString();
+                    mkRG.Text = value["RG"].ToString();
+                    dateNascimento.Text = value["Data_nascimento"].ToString();
+                    comboGenero.Text = value["Genero"].ToString();
+                    mkTelefone.Text = value["Telefone"].ToString();
+                    mkCelular.Text = value["Celular"].ToString();
+                    tbEmail.Text = value["Email"].ToString();
+                    mkCEP.Text = value["CEP"].ToString();
+                    comboUF.Text = value["UF"].ToString();
+                    comboCidade.Text = value["Cidade"].ToString();
+                    tbLogradouro.Text = value["Logradouro"].ToString();
+                    tbNumCasa.Text = value["Numero_endereco"].ToString();
+                    tbBairro.Text = value["Bairro"].ToString();
+                    tbComplemento.Text = value["Complemento_endereco"].ToString();
+                }
             }
         }
         public CadastroMotoristas()
