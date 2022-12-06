@@ -58,6 +58,14 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="buttonPedidos.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAUCAYAAACEYr13AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAIxJREFUOE+tlNENgCAMRBmFzXQUNmUER6gFzpgKxRZ9CTG9o1fDRwMR7XwOPm+k
+        MIKN3HwTfQgMDzIEopc7BMIKLQTFKmkaUCcwKIdoZkSvAJ5gLCrAFkwDUE4x/wHLsbkSbcq3N3iCfnsA
+        7nfAFpgDWHa9QQW98zv4LvNLgGUbaeQSUFaaZytd8GDaTvTcFzWZoy9IAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="buttonRedesDeTransporte.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL

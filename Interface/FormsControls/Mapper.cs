@@ -69,6 +69,12 @@ namespace Interface.FormsControls
                 TypeDataDatabase = "RedeTransporte";
                 TypeWhereDatabase = "ID_rede";
             }
+
+            if (route.Contains("Pedidos"))
+            {
+                TypeDataDatabase = "PedidoCliente";
+                TypeWhereDatabase = "ID_pedido";
+            }
         }
 
         public void mapperForOverview(string route, Label typeData, MasckedboxTemplete maskInput, Panel panelRadio, Panel panelOverview, bool CPF = true)
@@ -141,7 +147,14 @@ namespace Interface.FormsControls
 
             if (route.Contains("Redes"))
             {
-                typeData.Text = "ID REDE";
+                typeData.Text = "ID Rede";
+                maskInput.Text = "";
+                maskInput.Mask = "";
+            }
+
+            if (route.Contains("Pedidos"))
+            {
+                typeData.Text = "ID Pedido";
                 maskInput.Text = "";
                 maskInput.Mask = "";
             }
