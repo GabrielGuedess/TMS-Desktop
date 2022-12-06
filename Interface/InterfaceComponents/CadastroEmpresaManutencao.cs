@@ -39,8 +39,7 @@ namespace Interface.InterfaceComponents
 
                 if (value.Contains("Cadastro"))
                 {
-                    // tbCodigdoSinistro.Text = DBFunctions.atualizaID("SELECT MAX (ID) FROM tbSinistros", "r");
-                    searchEmpresa.Visible = false;
+                    searchPanel.Visible = false;
                     contentCNPJ.Location = new Point(0, 0);
 
 
@@ -48,7 +47,7 @@ namespace Interface.InterfaceComponents
                 }
                 if (value.Contains("Update"))
                 {
-                    searchEmpresa.Visible = true;
+                    searchPanel.Visible = true;
                     contentCNPJ.Location = new Point(0, 62);
 
                     buscarEmpresa.Visible = true;
@@ -98,7 +97,6 @@ namespace Interface.InterfaceComponents
                     empresa.Nome_fantasia = tbNomeFantasia.Text;
                     empresa.Inscricao_estadual = mkInscricaoEstatudal.Text;
                     empresa.Razao_social = tbRazaoSocial.Text;
-//                    empresa.Area_atuacao = tbAreaAtuacao.Text;
                     empresa.Celular = mkCelular.Text;
                     if (mkTelefone.Text.Length > 0)
                     {
@@ -129,7 +127,6 @@ namespace Interface.InterfaceComponents
                     empresa.Nome_fantasia = tbNomeFantasia.Text;
                     empresa.Inscricao_estadual = mkInscricaoEstatudal.Text;
                     empresa.Razao_social = tbRazaoSocial.Text;
-//                    empresa.Area_atuacao = tbAreaAtuacao.Text;
                     empresa.Celular = mkCelular.Text;
                     if (mkTelefone.Text.Length > 0)
                     {
@@ -147,11 +144,11 @@ namespace Interface.InterfaceComponents
                         empresa.Complemento_endereco = tbComplemento.Text;
                     }
                     db.SaveChanges();
-                    
+
                 }
-                
+
             }
-            catch(Exception error)
+            catch (Exception error)
             {
                 MessageBox.Show("Erro ao Atualizar");
             }
@@ -163,7 +160,7 @@ namespace Interface.InterfaceComponents
             {
                 TMSContext db = new TMSContext();
                 PessoaJuridica empresa = db.PessoaJuridica.FirstOrDefault(a => a.CNPJ == searchEmpresa.Text);
-                if(empresa == null)
+                if (empresa == null)
                 {
                     MessageBox.Show("Erro ao Buscar");
                     mkCNPJ.Text = empresa.CNPJ;
@@ -189,6 +186,21 @@ namespace Interface.InterfaceComponents
                 searchEmpresa.Focus();
                 return;
             }
+        }
+
+        private void panelBorderRoundedOnLeft2_Paint(object sender, PaintEventArgs e)
+        {
+            utils.alignCenterPanels(panelSerch, searchPanel, true, true);
+        }
+
+        private void buscarEmpresa_Paint(object sender, PaintEventArgs e)
+        {
+            utils.expansiveButton(10, buscarEmpresa);
+        }
+
+        private void cadastrarEmpresa_Paint(object sender, PaintEventArgs e)
+        {
+            utils.expansiveButton(10, cadastrarEmpresa);
         }
     }
 }

@@ -1,21 +1,15 @@
 ﻿using Interface.ControlValidationAuxiliary;
 using Interface.ModelsDB;
 using Interface.ModelsDB.TMSDataBaseContext;
+using Interface.Utilities;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace Interface.InterfaceComponents
 {
     public partial class ProcessoManutencao : UserControl
     {
+        readonly Utilidades utils = new();
+
         private string Type = "";
         public string TypeControl
         {
@@ -28,7 +22,6 @@ namespace Interface.InterfaceComponents
 
                 if (value.Contains("Cadastro"))
                 {
-                    // tbCodigdoSinistro.Text = DBFunctions.atualizaID("SELECT MAX (ID) FROM tbSinistros", "r");
                     searchManutencao.Visible = false;
                     contentManutencao.Location = new Point(0, 0);
 
@@ -54,7 +47,7 @@ namespace Interface.InterfaceComponents
             TMSContext db = new();
             if (Type.Contains("Cadastro") && Validation.Validar(contentManutencao))
             {
-                
+
                 Manutencao manutencao = new();
 
                 manutencao.ID_for_processo_manutencao = db.ProcessoManutencao.First(a => a.Descricao == comboVeiculo.Text).ID_processo_manutencao;
@@ -72,13 +65,13 @@ namespace Interface.InterfaceComponents
             }
             else if (Type.Contains("Update") && Validation.Validar(contentManutencao))
             {
-                
+
                 Manutencao manutencao = db.Manutencao.Include(a => a.ID_for_processo_manutencao)
                     .Include(a => a.ID_for_empresaNavigation)
                     .Include(a => a.ID_for_veiculoNavigation)
                     .FirstOrDefault(a => a.ID_for_veiculoNavigation.Placa == comboVeiculo.Text);
 
-                if(manutencao == null)
+                if (manutencao == null)
                 {
                     MessageBox.Show("Erro ao atualizar");
                     return;
@@ -108,12 +101,27 @@ namespace Interface.InterfaceComponents
                     .Include(a => a.ID_for_veiculoNavigation)
                     .FirstOrDefault(a => a.ID_for_veiculoNavigation.Placa == comboVeiculo.Text);
 
-            if(manutencao == null)
+            if (manutencao == null)
             {
                 MessageBox.Show("Erro ao Buscar");
                 return;
             }
 
+        }
+
+        private void panelSerch_Paint(object sender, PaintEventArgs e)
+        {
+            utils.alignCenterPanels(panelSerch, searchPanel, true, true);
+        }
+
+        private void buscarManutencao_Paint(object sender, PaintEventArgs e)
+        {
+            utils.expansiveButton(10, buscarManutencao);
+        }
+
+        private void cadastrarManutencao_Paint(object sender, PaintEventArgs e)
+        {
+            utils.expansiveButton(10, cadastrarManutencao);
         }
     }
 }

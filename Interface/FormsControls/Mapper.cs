@@ -75,6 +75,18 @@ namespace Interface.FormsControls
                 TypeDataDatabase = "PedidoCliente";
                 TypeWhereDatabase = "ID_pedido";
             }
+
+            if (route.Contains("Empresa"))
+            {
+                TypeDataDatabase = "PessoaJuridica";
+                TypeWhereDatabase = "CNPJ";
+            }
+
+            if (route.Contains("Processo"))
+            {
+                TypeDataDatabase = "Manutencao";
+                TypeWhereDatabase = "ID_manutencao";
+            }
         }
 
         public void mapperForOverview(string route, Label typeData, MasckedboxTemplete maskInput, Panel panelRadio, Panel panelOverview, bool CPF = true)
@@ -155,6 +167,20 @@ namespace Interface.FormsControls
             if (route.Contains("Pedidos"))
             {
                 typeData.Text = "ID Pedido";
+                maskInput.Text = "";
+                maskInput.Mask = "";
+            }
+
+            if (route.Contains("Empresa"))
+            {
+                typeData.Text = "CNPJ";
+                maskInput.Text = "";
+                maskInput.Mask = "00.000.000/0000-00";
+            }
+
+            if (route.Contains("ProcessoManutencao"))
+            {
+                typeData.Text = "ID Processo";
                 maskInput.Text = "";
                 maskInput.Mask = "";
             }

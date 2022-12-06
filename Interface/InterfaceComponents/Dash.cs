@@ -104,7 +104,9 @@ namespace Interface
                 cadastroNotasFicais2,
                 cadastroTarifaseTaxas1,
                 cadastroRedesDeTransporte2,
-                pedido1
+                pedido1,
+                processoManutencao1,
+                cadastroEmpresaManutencao1
               );
 
 
@@ -127,7 +129,9 @@ namespace Interface
                 (Button)navbar1.Controls["panelDropDown"].Controls["panel13"].Controls["buttonNotasFicais"],
                 (Button)navbar1.Controls["panelDropDown"].Controls["panel15"].Controls["buttonTarifasETaxas"],
                 (Button)navbar1.Controls["panelDropDown"].Controls["panel17"].Controls["buttonRedesDeTransporte"],
-                (Button)navbar1.Controls["panelDropDown"].Controls["panel2"].Controls["buttonPedidos"]
+                (Button)navbar1.Controls["panelDropDown"].Controls["panel2"].Controls["buttonPedidos"],
+                (Button)navbar1.Controls["panelDropDownPlan"].Controls["panel31"].Controls["buttonEmpresa"],
+                (Button)navbar1.Controls["panelDropDownPlan"].Controls["panel29"].Controls["buttonProcesso"]
               );
 
             navigationDash.ColorsNavigationDashLines(
@@ -141,7 +145,9 @@ namespace Interface
                 (Panel)navbar1.Controls["panelDropDown"].Controls["panel13"].Controls["lineNotasFicais"],
                 (Panel)navbar1.Controls["panelDropDown"].Controls["panel15"].Controls["lineTarifasETaxas"],
                 (Panel)navbar1.Controls["panelDropDown"].Controls["panel17"].Controls["lineRedesDeTransporte"],
-                (Panel)navbar1.Controls["panelDropDown"].Controls["panel2"].Controls["linePedidos"]
+                (Panel)navbar1.Controls["panelDropDown"].Controls["panel2"].Controls["linePedidos"],
+                (Panel)navbar1.Controls["panelDropDownPlan"].Controls["panel31"].Controls["lineEmpresa"],
+                (Panel)navbar1.Controls["panelDropDownPlan"].Controls["panel29"].Controls["lineProcesso"]
               );
         }
 

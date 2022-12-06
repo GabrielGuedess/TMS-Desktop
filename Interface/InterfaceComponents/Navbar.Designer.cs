@@ -73,9 +73,9 @@
             this.buttonManutencao = new System.Windows.Forms.Button();
             this.panel29 = new System.Windows.Forms.Panel();
             this.buttonProcesso = new System.Windows.Forms.Button();
-            this.panel30 = new System.Windows.Forms.Panel();
+            this.lineProcesso = new System.Windows.Forms.Panel();
             this.panel31 = new System.Windows.Forms.Panel();
-            this.panel32 = new System.Windows.Forms.Panel();
+            this.lineEmpresa = new System.Windows.Forms.Panel();
             this.buttonEmpresa = new System.Windows.Forms.Button();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.panel35.SuspendLayout();
@@ -157,7 +157,7 @@
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.linePedidos);
@@ -204,7 +204,7 @@
             // 
             // panel17
             // 
-            this.panel17.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.panel17.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel17.BackColor = System.Drawing.Color.Transparent;
             this.panel17.Controls.Add(this.lineRedesDeTransporte);
@@ -251,7 +251,7 @@
             // 
             // panel15
             // 
-            this.panel15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.panel15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel15.BackColor = System.Drawing.Color.Transparent;
             this.panel15.Controls.Add(this.lineTarifasETaxas);
@@ -298,7 +298,7 @@
             // 
             // panel13
             // 
-            this.panel13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.panel13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel13.BackColor = System.Drawing.Color.Transparent;
             this.panel13.Controls.Add(this.lineNotasFicais);
@@ -345,7 +345,7 @@
             // 
             // panel11
             // 
-            this.panel11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.panel11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel11.BackColor = System.Drawing.Color.Transparent;
             this.panel11.Controls.Add(this.buttonSinistros);
@@ -392,7 +392,7 @@
             // 
             // panel9
             // 
-            this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel9.BackColor = System.Drawing.Color.Transparent;
             this.panel9.Controls.Add(this.buttonTerceiros);
@@ -439,7 +439,7 @@
             // 
             // panel7
             // 
-            this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel7.BackColor = System.Drawing.Color.Transparent;
             this.panel7.Controls.Add(this.lineVeiculos);
@@ -486,7 +486,7 @@
             // 
             // panel5
             // 
-            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BackColor = System.Drawing.Color.Transparent;
             this.panel5.Controls.Add(this.lineMotoristas);
@@ -533,7 +533,7 @@
             // 
             // panel3
             // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.Controls.Add(this.lineRotas);
@@ -580,7 +580,7 @@
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.buttonUsuarios);
@@ -627,7 +627,7 @@
             // 
             // panel33
             // 
-            this.panel33.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.panel33.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel33.BackColor = System.Drawing.Color.Transparent;
             this.panel33.Controls.Add(this.lineClientes);
@@ -688,12 +688,12 @@
             this.panelDropDownPlan.MaximumSize = new System.Drawing.Size(288, 163);
             this.panelDropDownPlan.MinimumSize = new System.Drawing.Size(288, 40);
             this.panelDropDownPlan.Name = "panelDropDownPlan";
-            this.panelDropDownPlan.Size = new System.Drawing.Size(288, 163);
+            this.panelDropDownPlan.Size = new System.Drawing.Size(288, 40);
             this.panelDropDownPlan.TabIndex = 10;
             // 
             // panel27
             // 
-            this.panel27.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.panel27.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel27.BackColor = System.Drawing.Color.Transparent;
             this.panel27.Controls.Add(this.panel28);
@@ -740,11 +740,11 @@
             // 
             // panel29
             // 
-            this.panel29.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.panel29.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel29.BackColor = System.Drawing.Color.Transparent;
             this.panel29.Controls.Add(this.buttonProcesso);
-            this.panel29.Controls.Add(this.panel30);
+            this.panel29.Controls.Add(this.lineProcesso);
             this.panel29.Location = new System.Drawing.Point(28, 114);
             this.panel29.Margin = new System.Windows.Forms.Padding(0, 0, 0, 15);
             this.panel29.Name = "panel29";
@@ -774,22 +774,22 @@
             this.buttonProcesso.UseVisualStyleBackColor = false;
             this.buttonProcesso.Click += new System.EventHandler(this.buttonProcesso_Click);
             // 
-            // panel30
+            // lineProcesso
             // 
-            this.panel30.BackColor = System.Drawing.Color.Transparent;
-            this.panel30.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel30.Location = new System.Drawing.Point(258, 0);
-            this.panel30.Margin = new System.Windows.Forms.Padding(0);
-            this.panel30.Name = "panel30";
-            this.panel30.Size = new System.Drawing.Size(2, 37);
-            this.panel30.TabIndex = 8;
+            this.lineProcesso.BackColor = System.Drawing.Color.Transparent;
+            this.lineProcesso.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lineProcesso.Location = new System.Drawing.Point(258, 0);
+            this.lineProcesso.Margin = new System.Windows.Forms.Padding(0);
+            this.lineProcesso.Name = "lineProcesso";
+            this.lineProcesso.Size = new System.Drawing.Size(2, 37);
+            this.lineProcesso.TabIndex = 8;
             // 
             // panel31
             // 
-            this.panel31.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.panel31.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel31.BackColor = System.Drawing.Color.Transparent;
-            this.panel31.Controls.Add(this.panel32);
+            this.panel31.Controls.Add(this.lineEmpresa);
             this.panel31.Controls.Add(this.buttonEmpresa);
             this.panel31.Location = new System.Drawing.Point(28, 62);
             this.panel31.Margin = new System.Windows.Forms.Padding(0, 0, 0, 15);
@@ -797,15 +797,15 @@
             this.panel31.Size = new System.Drawing.Size(260, 37);
             this.panel31.TabIndex = 10;
             // 
-            // panel32
+            // lineEmpresa
             // 
-            this.panel32.BackColor = System.Drawing.Color.Transparent;
-            this.panel32.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel32.Location = new System.Drawing.Point(258, 0);
-            this.panel32.Margin = new System.Windows.Forms.Padding(0);
-            this.panel32.Name = "panel32";
-            this.panel32.Size = new System.Drawing.Size(2, 37);
-            this.panel32.TabIndex = 7;
+            this.lineEmpresa.BackColor = System.Drawing.Color.Transparent;
+            this.lineEmpresa.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lineEmpresa.Location = new System.Drawing.Point(258, 0);
+            this.lineEmpresa.Margin = new System.Windows.Forms.Padding(0);
+            this.lineEmpresa.Name = "lineEmpresa";
+            this.lineEmpresa.Size = new System.Drawing.Size(2, 37);
+            this.lineEmpresa.TabIndex = 7;
             // 
             // buttonEmpresa
             // 
@@ -910,9 +910,9 @@
         private Button buttonManutencao;
         private Panel panel29;
         private Button buttonProcesso;
-        private Panel panel30;
+        private Panel lineProcesso;
         private Panel panel31;
-        private Panel panel32;
+        private Panel lineEmpresa;
         private Button buttonEmpresa;
         private System.Windows.Forms.Timer timer2;
         private Panel panel2;

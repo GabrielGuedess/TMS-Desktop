@@ -69,12 +69,13 @@ namespace Interface
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.textSearch = new System.Windows.Forms.TextBox();
             this.body = new System.Windows.Forms.Panel();
+            this.cadastroSinistros1 = new Interface.CadastroSinistros();
             this.cadastroClientes1 = new Interface.CadastroClientes();
             this.cadastroMotoristas2 = new Interface.CadastroMotoristas();
+            this.processoManutencao1 = new Interface.InterfaceComponents.ProcessoManutencao();
             this.overview1 = new Interface.Overview();
             this.cadastroVeiculos1 = new Interface.CadastroVeiculos();
             this.cadastroUsuarios1 = new Interface.CadastroUsuarios();
-            this.cadastroSinistros1 = new Interface.CadastroSinistros();
             this.cadastroTerceiros1 = new Interface.CadastroTerceiros();
             this.cadastroTarifaseTaxas1 = new Interface.CadastroTarifasETaxas();
             this.cadastroRoutes1 = new Interface.CadastroRoutes();
@@ -83,6 +84,7 @@ namespace Interface
             this.panelScroll = new System.Windows.Forms.Panel();
             this.navbar1 = new Interface.InterfaceComponents.Navbar();
             this.pedido1 = new Interface.InterfaceComponents.CadastroPedido();
+            this.cadastroEmpresaManutencao1 = new Interface.InterfaceComponents.CadastroEmpresaManutencao();
             this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -603,10 +605,12 @@ namespace Interface
             | System.Windows.Forms.AnchorStyles.Right)));
             this.body.AutoScroll = true;
             this.body.BackColor = System.Drawing.Color.Black;
+            this.body.Controls.Add(this.cadastroEmpresaManutencao1);
             this.body.Controls.Add(this.cadastroSinistros1);
             this.body.Controls.Add(this.pedido1);
             this.body.Controls.Add(this.cadastroClientes1);
             this.body.Controls.Add(this.cadastroMotoristas2);
+            this.body.Controls.Add(this.processoManutencao1);
             this.body.Controls.Add(this.overview1);
             this.body.Controls.Add(this.cadastroVeiculos1);
             this.body.Controls.Add(this.cadastroUsuarios1);
@@ -622,6 +626,17 @@ namespace Interface
             this.body.Size = new System.Drawing.Size(1025, 609);
             this.body.TabIndex = 7;
             this.body.Paint += new System.Windows.Forms.PaintEventHandler(this.body_Paint);
+            // 
+            // cadastroSinistros1
+            // 
+            this.cadastroSinistros1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cadastroSinistros1.BackColor = System.Drawing.Color.Transparent;
+            this.cadastroSinistros1.Location = new System.Drawing.Point(25, 25);
+            this.cadastroSinistros1.Margin = new System.Windows.Forms.Padding(0);
+            this.cadastroSinistros1.Name = "cadastroSinistros1";
+            this.cadastroSinistros1.Size = new System.Drawing.Size(958, 385);
+            this.cadastroSinistros1.TabIndex = 11;
             // 
             // cadastroClientes1
             // 
@@ -645,6 +660,17 @@ namespace Interface
             this.cadastroMotoristas2.Name = "cadastroMotoristas2";
             this.cadastroMotoristas2.Size = new System.Drawing.Size(958, 1116);
             this.cadastroMotoristas2.TabIndex = 0;
+            // 
+            // processoManutencao1
+            // 
+            this.processoManutencao1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.processoManutencao1.BackColor = System.Drawing.Color.Transparent;
+            this.processoManutencao1.Location = new System.Drawing.Point(28, 28);
+            this.processoManutencao1.Margin = new System.Windows.Forms.Padding(0);
+            this.processoManutencao1.Name = "processoManutencao1";
+            this.processoManutencao1.Size = new System.Drawing.Size(952, 671);
+            this.processoManutencao1.TabIndex = 12;
             // 
             // overview1
             // 
@@ -789,6 +815,17 @@ namespace Interface
             this.cadastroSinistros1.Size = new System.Drawing.Size(958, 385);
             this.cadastroSinistros1.TabIndex = 11;
             // 
+            // cadastroEmpresaManutencao1
+            // 
+            this.cadastroEmpresaManutencao1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cadastroEmpresaManutencao1.BackColor = System.Drawing.Color.Transparent;
+            this.cadastroEmpresaManutencao1.Location = new System.Drawing.Point(25, 40);
+            this.cadastroEmpresaManutencao1.Margin = new System.Windows.Forms.Padding(0);
+            this.cadastroEmpresaManutencao1.Name = "cadastroEmpresaManutencao1";
+            this.cadastroEmpresaManutencao1.Size = new System.Drawing.Size(958, 749);
+            this.cadastroEmpresaManutencao1.TabIndex = 13;
+            // 
             // Dash
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -882,5 +919,7 @@ namespace Interface
         private CadastroSinistros cadastroSinistros1;
         private InterfaceComponents.Navbar navbar1;
         private InterfaceComponents.CadastroPedido pedido1;
+        private InterfaceComponents.ProcessoManutencao processoManutencao1;
+        private InterfaceComponents.CadastroEmpresaManutencao cadastroEmpresaManutencao1;
     }
 }

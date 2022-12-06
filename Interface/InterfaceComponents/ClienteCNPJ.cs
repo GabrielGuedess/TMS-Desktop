@@ -107,6 +107,7 @@ namespace Interface
                         Bairro = tbBairro.Text,
                         Complemento_endereco = tbComplemento.Text,
                         Cidade = comboCidade.Text,
+                        Tipo_cliente = "J",
                         UF = comboUF.Text,
                     };
 

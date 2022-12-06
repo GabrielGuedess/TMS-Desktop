@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProcessoManutencao));
             this.searchPanel = new System.Windows.Forms.Panel();
             this.panelSerch = new Interface.TemplateComponents.PanelBorderRoundedOnLeft();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.typeData = new System.Windows.Forms.Label();
             this.searchManutencao = new Interface.TemplateComponents.TextBoxOnlyNum_Letters();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.contentManutencao = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.templatePanel8 = new Interface.TemplateComponents.TemplatePanel();
@@ -78,7 +79,7 @@
             this.button10 = new System.Windows.Forms.Button();
             this.searchPanel.SuspendLayout();
             this.panelSerch.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.contentManutencao.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.templatePanel8.SuspendLayout();
@@ -121,14 +122,27 @@
             // 
             this.panelSerch.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.panelSerch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.panelSerch.Controls.Add(this.pictureBox2);
             this.panelSerch.Controls.Add(this.typeData);
             this.panelSerch.Controls.Add(this.searchManutencao);
-            this.panelSerch.Controls.Add(this.pictureBox3);
             this.panelSerch.Location = new System.Drawing.Point(311, 13);
             this.panelSerch.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelSerch.Name = "panelSerch";
             this.panelSerch.Size = new System.Drawing.Size(347, 36);
             this.panelSerch.TabIndex = 2;
+            this.panelSerch.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSerch_Paint);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(10, 10);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(15, 15);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
             // 
             // typeData
             // 
@@ -157,17 +171,6 @@
             this.searchManutencao.Name = "searchManutencao";
             this.searchManutencao.Size = new System.Drawing.Size(232, 22);
             this.searchManutencao.TabIndex = 2;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.pictureBox3.Location = new System.Drawing.Point(10, 12);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(10, 10, 0, 0);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(15, 15);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
             // 
             // contentManutencao
             // 
@@ -236,7 +239,8 @@
             // 
             // comboProcesso
             // 
-            this.comboProcesso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.comboProcesso.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.comboProcesso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
             this.comboProcesso.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.comboProcesso.ForeColor = System.Drawing.Color.White;
@@ -249,7 +253,7 @@
             this.comboProcesso.Margin = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.comboProcesso.MaxDropDownItems = 5;
             this.comboProcesso.Name = "comboProcesso";
-            this.comboProcesso.Size = new System.Drawing.Size(248, 33);
+            this.comboProcesso.Size = new System.Drawing.Size(253, 33);
             this.comboProcesso.TabIndex = 12;
             // 
             // label7
@@ -289,7 +293,8 @@
             // 
             // comboVeiculo
             // 
-            this.comboVeiculo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.comboVeiculo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.comboVeiculo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
             this.comboVeiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.comboVeiculo.ForeColor = System.Drawing.Color.White;
@@ -362,7 +367,7 @@
             this.mkDateFim.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.mkDateFim.Mask = "00/00/0000";
             this.mkDateFim.Name = "mkDateFim";
-            this.mkDateFim.Size = new System.Drawing.Size(100, 22);
+            this.mkDateFim.Size = new System.Drawing.Size(228, 22);
             this.mkDateFim.TabIndex = 1;
             this.mkDateFim.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
@@ -403,7 +408,8 @@
             // 
             // comboEmpresa
             // 
-            this.comboEmpresa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.comboEmpresa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.comboEmpresa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
             this.comboEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.comboEmpresa.ForeColor = System.Drawing.Color.White;
@@ -456,7 +462,8 @@
             // 
             // comboTipo
             // 
-            this.comboTipo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.comboTipo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.comboTipo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
             this.comboTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.comboTipo.ForeColor = System.Drawing.Color.White;
@@ -529,7 +536,7 @@
             this.mkDateInicio.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.mkDateInicio.Mask = "00/00/0000";
             this.mkDateInicio.Name = "mkDateInicio";
-            this.mkDateInicio.Size = new System.Drawing.Size(100, 22);
+            this.mkDateInicio.Size = new System.Drawing.Size(228, 22);
             this.mkDateInicio.TabIndex = 0;
             this.mkDateInicio.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
@@ -695,6 +702,7 @@
             this.buscarManutencao.UseVisualStyleBackColor = false;
             this.buscarManutencao.Visible = false;
             this.buscarManutencao.Click += new System.EventHandler(this.buscarManutencao_Click);
+            this.buscarManutencao.Paint += new System.Windows.Forms.PaintEventHandler(this.buscarManutencao_Paint);
             // 
             // cadastrarManutencao
             // 
@@ -713,6 +721,7 @@
             this.cadastrarManutencao.Text = "Cadastrar";
             this.cadastrarManutencao.UseVisualStyleBackColor = false;
             this.cadastrarManutencao.Click += new System.EventHandler(this.cadastrarManutencao_Click);
+            this.cadastrarManutencao.Paint += new System.Windows.Forms.PaintEventHandler(this.cadastrarManutencao_Paint);
             // 
             // panel51
             // 
@@ -756,7 +765,7 @@
             this.searchPanel.ResumeLayout(false);
             this.panelSerch.ResumeLayout(false);
             this.panelSerch.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.contentManutencao.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.templatePanel8.ResumeLayout(false);
@@ -801,7 +810,6 @@
 
         private Panel searchPanel;
         private TemplateComponents.PanelBorderRoundedOnLeft panelSerch;
-        private PictureBox pictureBox3;
         private Panel contentManutencao;
         private TableLayoutPanel tableLayoutPanel3;
         private Panel panelButton;
@@ -847,6 +855,7 @@
         private Panel panel7;
         private ComboBox comboProcesso;
         private Label label7;
+        private PictureBox pictureBox2;
     }
 }
 

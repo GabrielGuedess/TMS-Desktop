@@ -118,6 +118,7 @@ namespace Interface
                         Complemento_endereco = tbComplemento.Text,
                         Cidade = comboCidade.Text,
                         UF = comboUF.Text,
+                        Tipo_cliente = "F",
                     };
 
                     ClienteFisico clienteFisico = new ClienteFisico

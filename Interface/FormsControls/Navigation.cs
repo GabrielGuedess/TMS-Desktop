@@ -94,7 +94,9 @@ namespace Interface.FormsControls
             CadastroNotasFicais cadastroNotasFicais,
             CadastroTarifasETaxas cadastroTarifasETaxas,
             CadastroRedesDeTransporte cadastroRedesDeTransporte,
-            CadastroPedido pedido
+            CadastroPedido pedido,
+            ProcessoManutencao processoManutencao,
+            CadastroEmpresaManutencao cadastroEmpresaManutencao
             )
         {
             if (activeOver == "Overview" || activeOver == "Delete")
@@ -113,6 +115,8 @@ namespace Interface.FormsControls
                 cadastroTarifasETaxas.Visible = false;
                 cadastroRedesDeTransporte.Visible = false;
                 pedido.Visible = false;
+                processoManutencao.Visible = false;
+                cadastroEmpresaManutencao.Visible = false;
             }
 
             if (activeOver == "Cadastro" || activeOver == "Update")
@@ -130,6 +134,8 @@ namespace Interface.FormsControls
                 cadastroTarifasETaxas.Visible = activeDash == "Tarifas";
                 cadastroRedesDeTransporte.Visible = activeDash == "Redes";
                 pedido.Visible = activeDash == "Pedidos";
+                processoManutencao.Visible = activeDash == "Processo";
+                cadastroEmpresaManutencao.Visible = activeDash == "Empresa";
 
 
                 cadastroClientes.TypeControl = $"{activeOver}-{activeDash}";
@@ -143,6 +149,8 @@ namespace Interface.FormsControls
                 cadastroTarifasETaxas.TypeControl = $"{activeOver}-{activeDash}";
                 cadastroRedesDeTransporte.TypeControl = $"{activeOver}-{activeDash}";
                 pedido.TypeControl = $"{activeOver}-{activeDash}";
+                processoManutencao.TypeControl = $"{activeOver}-{activeDash}";
+                cadastroEmpresaManutencao.TypeControl = $"{activeOver}-{activeDash}";
             }
         }
     }

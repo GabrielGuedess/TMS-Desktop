@@ -31,7 +31,6 @@ namespace Interface
 
                 if (value.Contains("Cadastro"))
                 {
-                    //tbID.Text = DBFunctions.atualizaID("SELECT MAX (NUM_ID) FROM C_Motoristas", "m");
                     searchPanel.Visible = false;
                     contentMotorista.Location = new Point(0, 0);
 
