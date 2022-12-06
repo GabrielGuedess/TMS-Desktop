@@ -237,7 +237,7 @@
             // 
             // typeData
             // 
-            this.typeData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.typeData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.typeData.AutoSize = true;
             this.typeData.BackColor = System.Drawing.Color.Transparent;
@@ -281,7 +281,7 @@
             // 
             // contentVeiculos
             // 
-            this.contentVeiculos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.contentVeiculos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.contentVeiculos.AutoScroll = true;
             this.contentVeiculos.AutoScrollMargin = new System.Drawing.Size(0, 20);
@@ -315,7 +315,7 @@
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(40, 8);
+            this.label18.Location = new System.Drawing.Point(40, 40);
             this.label18.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(119, 17);
@@ -324,6 +324,8 @@
             // 
             // tableCarroceria
             // 
+            this.tableCarroceria.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tableCarroceria.ColumnCount = 3;
             this.tableCarroceria.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableCarroceria.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
@@ -374,11 +376,13 @@
             this.panelBorderRounded20.Location = new System.Drawing.Point(5, 37);
             this.panelBorderRounded20.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelBorderRounded20.Name = "panelBorderRounded20";
-            this.panelBorderRounded20.Size = new System.Drawing.Size(240, 33);
+            this.panelBorderRounded20.Size = new System.Drawing.Size(249, 33);
             this.panelBorderRounded20.TabIndex = 3;
             // 
             // tpCapacidadePeso
             // 
+            this.tpCapacidadePeso.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tpCapacidadePeso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
             this.tpCapacidadePeso.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tpCapacidadePeso.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -448,6 +452,8 @@
             // 
             // tbCapacidadeVolumetrica
             // 
+            this.tbCapacidadeVolumetrica.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tbCapacidadeVolumetrica.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
             this.tbCapacidadeVolumetrica.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbCapacidadeVolumetrica.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -512,11 +518,13 @@
             this.panelBorderRounded16.Location = new System.Drawing.Point(5, 37);
             this.panelBorderRounded16.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelBorderRounded16.Name = "panelBorderRounded16";
-            this.panelBorderRounded16.Size = new System.Drawing.Size(241, 33);
+            this.panelBorderRounded16.Size = new System.Drawing.Size(248, 33);
             this.panelBorderRounded16.TabIndex = 3;
             // 
             // tbPesoCarroceria
             // 
+            this.tbPesoCarroceria.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tbPesoCarroceria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
             this.tbPesoCarroceria.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbPesoCarroceria.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -581,7 +589,7 @@
             this.panelBorderRounded14.Location = new System.Drawing.Point(5, 35);
             this.panelBorderRounded14.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelBorderRounded14.Name = "panelBorderRounded14";
-            this.panelBorderRounded14.Size = new System.Drawing.Size(240, 33);
+            this.panelBorderRounded14.Size = new System.Drawing.Size(249, 33);
             this.panelBorderRounded14.TabIndex = 3;
             // 
             // tbQuantEixoCarroceria
@@ -594,7 +602,7 @@
             this.tbQuantEixoCarroceria.Location = new System.Drawing.Point(10, 5);
             this.tbQuantEixoCarroceria.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbQuantEixoCarroceria.Name = "tbQuantEixoCarroceria";
-            this.tbQuantEixoCarroceria.Size = new System.Drawing.Size(220, 22);
+            this.tbQuantEixoCarroceria.Size = new System.Drawing.Size(229, 22);
             this.tbQuantEixoCarroceria.TabIndex = 0;
             // 
             // panelBorderRounded15
@@ -645,7 +653,7 @@
             // 
             // comboTipoCarroceria
             // 
-            this.comboTipoCarroceria.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.comboTipoCarroceria.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboTipoCarroceria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
             this.comboTipoCarroceria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -707,7 +715,7 @@
             // 
             // comboPossuiEixo
             // 
-            this.comboPossuiEixo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.comboPossuiEixo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboPossuiEixo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
             this.comboPossuiEixo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -748,7 +756,7 @@
             // 
             // tableVeiculo
             // 
-            this.tableVeiculo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.tableVeiculo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableVeiculo.ColumnCount = 3;
             this.tableVeiculo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33332F));
@@ -767,7 +775,7 @@
             this.tableVeiculo.Controls.Add(this.panelPessoVeiculo, 1, 3);
             this.tableVeiculo.Controls.Add(this.panelQuantEixo, 2, 3);
             this.tableVeiculo.Controls.Add(this.templatePanel1, 0, 4);
-            this.tableVeiculo.Location = new System.Drawing.Point(40, 40);
+            this.tableVeiculo.Location = new System.Drawing.Point(40, 72);
             this.tableVeiculo.Margin = new System.Windows.Forms.Padding(0);
             this.tableVeiculo.Name = "tableVeiculo";
             this.tableVeiculo.RowCount = 5;
@@ -867,7 +875,7 @@
             // 
             // comboMarca
             // 
-            this.comboMarca.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.comboMarca.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboMarca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
             this.comboMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -922,7 +930,7 @@
             // 
             // comboTipoVeiculo
             // 
-            this.comboTipoVeiculo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.comboTipoVeiculo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboTipoVeiculo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
             this.comboTipoVeiculo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -983,17 +991,17 @@
             // 
             // comboModelo
             // 
-            this.comboModelo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.comboModelo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.comboModelo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
             this.comboModelo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboModelo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.comboModelo.ForeColor = System.Drawing.Color.White;
             this.comboModelo.FormattingEnabled = true;
-            this.comboModelo.Location = new System.Drawing.Point(5, 34);
+            this.comboModelo.Location = new System.Drawing.Point(5, 41);
             this.comboModelo.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.comboModelo.Name = "comboModelo";
-            this.comboModelo.Size = new System.Drawing.Size(246, 29);
+            this.comboModelo.Size = new System.Drawing.Size(248, 29);
             this.comboModelo.TabIndex = 8;
             this.comboModelo.SelectionChangeCommitted += new System.EventHandler(this.comboModelo_SelectionChangeCommitted);
             // 
@@ -1054,7 +1062,7 @@
             this.mkAnoFabricacao.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.mkAnoFabricacao.Mask = "0000";
             this.mkAnoFabricacao.Name = "mkAnoFabricacao";
-            this.mkAnoFabricacao.Size = new System.Drawing.Size(236, 22);
+            this.mkAnoFabricacao.Size = new System.Drawing.Size(228, 22);
             this.mkAnoFabricacao.TabIndex = 11;
             this.mkAnoFabricacao.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
@@ -1106,6 +1114,8 @@
             // 
             // tbCor
             // 
+            this.tbCor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tbCor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
             this.tbCor.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbCor.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -1113,7 +1123,7 @@
             this.tbCor.Location = new System.Drawing.Point(10, 6);
             this.tbCor.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbCor.Name = "tbCor";
-            this.tbCor.Size = new System.Drawing.Size(213, 22);
+            this.tbCor.Size = new System.Drawing.Size(234, 22);
             this.tbCor.TabIndex = 12;
             // 
             // label10
@@ -1278,7 +1288,7 @@
             this.panelBorderRounded1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelBorderRounded1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
             this.panelBorderRounded1.Controls.Add(this.mkVencimentoRNTRC);
-            this.panelBorderRounded1.Location = new System.Drawing.Point(5, 31);
+            this.panelBorderRounded1.Location = new System.Drawing.Point(6, 36);
             this.panelBorderRounded1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelBorderRounded1.Name = "panelBorderRounded1";
             this.panelBorderRounded1.Size = new System.Drawing.Size(248, 33);
@@ -1407,6 +1417,8 @@
             // 
             // tbPesoVeiculo
             // 
+            this.tbPesoVeiculo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tbPesoVeiculo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
             this.tbPesoVeiculo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbPesoVeiculo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -1456,10 +1468,11 @@
             this.panel5.Controls.Add(this.panelBorderRounded7);
             this.panel5.Controls.Add(this.panelBorderRounded8);
             this.panel5.Controls.Add(this.label9);
-            this.panel5.Location = new System.Drawing.Point(20, 15);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(20, 20);
             this.panel5.Margin = new System.Windows.Forms.Padding(0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(258, 71);
+            this.panel5.Size = new System.Drawing.Size(259, 70);
             this.panel5.TabIndex = 11;
             // 
             // panelBorderRounded7
@@ -1470,7 +1483,7 @@
             this.panelBorderRounded7.Location = new System.Drawing.Point(6, 37);
             this.panelBorderRounded7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelBorderRounded7.Name = "panelBorderRounded7";
-            this.panelBorderRounded7.Size = new System.Drawing.Size(247, 33);
+            this.panelBorderRounded7.Size = new System.Drawing.Size(248, 33);
             this.panelBorderRounded7.TabIndex = 3;
             // 
             // tbQuantEixo
@@ -1483,7 +1496,7 @@
             this.tbQuantEixo.Location = new System.Drawing.Point(10, 5);
             this.tbQuantEixo.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbQuantEixo.Name = "tbQuantEixo";
-            this.tbQuantEixo.Size = new System.Drawing.Size(227, 22);
+            this.tbQuantEixo.Size = new System.Drawing.Size(228, 22);
             this.tbQuantEixo.TabIndex = 0;
             // 
             // panelBorderRounded8
@@ -1493,7 +1506,7 @@
             this.panelBorderRounded8.Location = new System.Drawing.Point(5, -195);
             this.panelBorderRounded8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelBorderRounded8.Name = "panelBorderRounded8";
-            this.panelBorderRounded8.Size = new System.Drawing.Size(368, 33);
+            this.panelBorderRounded8.Size = new System.Drawing.Size(369, 33);
             this.panelBorderRounded8.TabIndex = 2;
             // 
             // label9
@@ -1510,8 +1523,9 @@
             // 
             // templatePanel1
             // 
+            this.templatePanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.templatePanel1.Controls.Add(this.panel4);
-            this.templatePanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.templatePanel1.Location = new System.Drawing.Point(0, 400);
             this.templatePanel1.Margin = new System.Windows.Forms.Padding(0);
             this.templatePanel1.Name = "templatePanel1";
@@ -1525,10 +1539,11 @@
             this.panel4.Controls.Add(this.panelBorderRounded9);
             this.panel4.Controls.Add(this.panelBorderRounded10);
             this.panel4.Controls.Add(this.label8);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(20, 20);
             this.panel4.Margin = new System.Windows.Forms.Padding(0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(259, 71);
+            this.panel4.Size = new System.Drawing.Size(258, 77);
             this.panel4.TabIndex = 11;
             // 
             // panelBorderRounded9
@@ -1536,10 +1551,10 @@
             this.panelBorderRounded9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelBorderRounded9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
             this.panelBorderRounded9.Controls.Add(this.tbDisponibilidade);
-            this.panelBorderRounded9.Location = new System.Drawing.Point(10, 32);
+            this.panelBorderRounded9.Location = new System.Drawing.Point(5, 40);
             this.panelBorderRounded9.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelBorderRounded9.Name = "panelBorderRounded9";
-            this.panelBorderRounded9.Size = new System.Drawing.Size(247, 33);
+            this.panelBorderRounded9.Size = new System.Drawing.Size(248, 33);
             this.panelBorderRounded9.TabIndex = 5;
             // 
             // tbDisponibilidade
@@ -1552,17 +1567,17 @@
             this.tbDisponibilidade.Location = new System.Drawing.Point(11, 5);
             this.tbDisponibilidade.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbDisponibilidade.Name = "tbDisponibilidade";
-            this.tbDisponibilidade.Size = new System.Drawing.Size(228, 22);
+            this.tbDisponibilidade.Size = new System.Drawing.Size(229, 22);
             this.tbDisponibilidade.TabIndex = 0;
             // 
             // panelBorderRounded10
             // 
             this.panelBorderRounded10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelBorderRounded10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelBorderRounded10.Location = new System.Drawing.Point(8, -181);
+            this.panelBorderRounded10.Location = new System.Drawing.Point(8, -178);
             this.panelBorderRounded10.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelBorderRounded10.Name = "panelBorderRounded10";
-            this.panelBorderRounded10.Size = new System.Drawing.Size(305, 33);
+            this.panelBorderRounded10.Size = new System.Drawing.Size(304, 33);
             this.panelBorderRounded10.TabIndex = 2;
             // 
             // label8
@@ -1579,7 +1594,7 @@
             // 
             // panelButton
             // 
-            this.panelButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.panelButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelButton.BackColor = System.Drawing.Color.Transparent;
             this.panelButton.Controls.Add(this.buscarPlaca);
@@ -1669,7 +1684,7 @@
             // 
             // panel51
             // 
-            this.panel51.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.panel51.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel51.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(98)))), ((int)(((byte)(255)))));
             this.panel51.Controls.Add(this.button10);
@@ -1681,7 +1696,7 @@
             // 
             // button10
             // 
-            this.button10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.button10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button10.BackColor = System.Drawing.Color.Transparent;
             this.button10.FlatAppearance.BorderSize = 0;
