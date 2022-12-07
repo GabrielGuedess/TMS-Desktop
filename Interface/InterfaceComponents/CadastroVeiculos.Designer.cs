@@ -119,7 +119,6 @@
             this.panelCodCiot = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panelBorderRounded4 = new Interface.TemplateComponents.PanelBorderRounded();
-            this.tbCIOT = new Interface.TemplateComponents.TextBoxOnlyNum();
             this.label3 = new System.Windows.Forms.Label();
             this.panelPessoVeiculo = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -147,6 +146,7 @@
             this.panel51 = new System.Windows.Forms.Panel();
             this.button10 = new System.Windows.Forms.Button();
             this.labelUFClient = new System.Windows.Forms.Label();
+            this.tbCIOT = new Interface.TemplateComponents.MasckedboxTemplete();
             this.searchPanel.SuspendLayout();
             this.panelSerch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -1355,19 +1355,6 @@
             this.panelBorderRounded4.Size = new System.Drawing.Size(247, 33);
             this.panelBorderRounded4.TabIndex = 2;
             // 
-            // tbCIOT
-            // 
-            this.tbCIOT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbCIOT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.tbCIOT.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbCIOT.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbCIOT.ForeColor = System.Drawing.Color.White;
-            this.tbCIOT.Location = new System.Drawing.Point(5, 6);
-            this.tbCIOT.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.tbCIOT.Name = "tbCIOT";
-            this.tbCIOT.Size = new System.Drawing.Size(234, 22);
-            this.tbCIOT.TabIndex = 20;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -1724,6 +1711,21 @@
             this.labelUFClient.TabIndex = 0;
             this.labelUFClient.Text = "UF";
             // 
+            // tbCIOT
+            // 
+            this.tbCIOT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbCIOT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.tbCIOT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbCIOT.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbCIOT.ForeColor = System.Drawing.Color.White;
+            this.tbCIOT.Location = new System.Drawing.Point(5, 6);
+            this.tbCIOT.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.tbCIOT.Mask = "0000000000000000";
+            this.tbCIOT.Name = "tbCIOT";
+            this.tbCIOT.Size = new System.Drawing.Size(236, 22);
+            this.tbCIOT.TabIndex = 0;
+            this.tbCIOT.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            // 
             // CadastroVeiculos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1888,7 +1890,6 @@
         private TemplateComponents.TextBoxOnlyNum_Letters tbModelo;
         private TemplateComponents.MasckedboxTemplete mkRNTRC;
         private Interface.TemplateComponents.TextBoxOnlyLetters tbCor;
-        private TemplateComponents.TextBoxOnlyNum tbCIOT;
         private TemplateComponents.MasckedboxTemplete searchPlaca;
         private Label typeData;
         private Button buscarPlaca;
@@ -1957,5 +1958,6 @@
         private Label label11;
         private ComboBox comboTipoVeiculo;
         private ComboBox comboModelo;
+        private TemplateComponents.MasckedboxTemplete tbCIOT;
     }
 }

@@ -29,7 +29,7 @@ namespace Interface
                 limpar.CleanControl(contentSinistros);
                 limpar.CleanControl(searchPanel);
 
-                //idSinistro();
+                idSinistro();
 
                 if (value.Contains("Cadastro"))
                 {
@@ -122,8 +122,8 @@ namespace Interface
                     db.Sinistro.Add(sinistro);
                     db.SaveChanges();
 
-                    limpar.CleanControl(contentSinistros);
-                    limpar.CleanControl(searchPanel);
+                   limpar.CleanControl(contentSinistros);
+                   limpar.CleanControl(searchPanel);
 
                     lastID++;
                     tbCod.Text = lastID.ToString();

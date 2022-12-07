@@ -63,7 +63,7 @@ namespace Interface.InterfaceComponents
                 manutencao.Data_fim = mkDateFim.convertDateOnly();
                 manutencao.Data_inicio = mkDateFim.convertDateOnly();
                 manutencao.ID_for_empresa = db.PessoaJuridica.First(a => a.Nome_fantasia == comboEmpresa.Text).ID_pessoa_juridica;
-                manutencao.ID_for_veiculo = db.Veiculo.First(a => a.Placa == comboVeiculo.Text).ID_veiculo;
+               // manutencao.ID_for_veiculo = db.Veiculo.First(a => a.Placa == comboVeiculo.Text).ID_veiculo;
                 db.Manutencao.Add(manutencao);
                 db.SaveChanges();
 
@@ -72,7 +72,7 @@ namespace Interface.InterfaceComponents
             else if (Type.Contains("Update") && Validation.Validar(contentManutencao))
             {
 
-                Manutencao manutencao = db.Manutencao.Include(a => a.ID_for_processo_manutencaoNavigation)
+               /* Manutencao manutencao = db.Manutencao.Include(a => a.ID_for_processo_manutencaoNavigation)
                     .Include(a => a.ID_for_empresaNavigation)
                     .Include(a => a.ID_for_veiculoNavigation)
                     .FirstOrDefault(a => a.ID_for_veiculoNavigation.Placa == comboVeiculo.Text);
@@ -98,13 +98,13 @@ namespace Interface.InterfaceComponents
                     db.SaveChanges();
                     limpar.CleanControl(contentManutencao);
                     limpar.CleanControl(searchPanel);
-                }
+                }*/
             }
         }
 
         private void buscarManutencao_Click(object sender, EventArgs e)
         {
-            TMSContext db = new();
+            /*TMSContext db = new();
             Manutencao manutencao = db.Manutencao.Include(a => a.ID_for_processo_manutencaoNavigation)
                     .Include(a => a.ID_for_empresaNavigation)
                     .Include(a => a.ID_for_veiculoNavigation)
@@ -129,7 +129,7 @@ namespace Interface.InterfaceComponents
             tbValor.Text = manutencao.Valor_reais.ToString();
             tbDetalhamento.Text = manutencao.Detalhamento;
             mkDateInicio.Text = manutencao.Data_inicio.ToString();
-            mkDateFim.Text = manutencao.Data_fim.ToString();
+            mkDateFim.Text = manutencao.Data_fim.ToString();*/
   
 
         }

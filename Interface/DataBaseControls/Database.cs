@@ -97,7 +97,7 @@ namespace Interface.DataBaseControls
 
                     conexao.Open();
 
-                    MySqlCommand comandoDelete = new($"DELETE * FROM {mapper.TypeDataDatabase} WHERE {mapper.TypeWhereDatabase} = '{maskedTextBox.Text}'", conexao);
+                    MySqlCommand comandoDelete = new($"DELETE FROM {mapper.TypeDataDatabase} WHERE {mapper.TypeWhereDatabase} = '{maskedTextBox.Text}'", conexao);
 
                     comandoDelete.ExecuteNonQuery();
 

@@ -116,8 +116,9 @@ namespace Interface
                         Senha = tbSenha.Text,
                         Telefone = "qualquer",
                         CPF = mkCPF.Text,
+                        User_name = "qualquer",
                         Celular = mkCelular.Text
-                        //,Senha = tbSenha.Text
+                        
                     };
                     
                     db.Usuario.Add(usuario);
@@ -144,7 +145,7 @@ namespace Interface
                 usuario.CPF = mkCPF.Text;
                 usuario.Email = tbEmail.Text;
                 usuario.Celular = mkCelular.Text;
-                //usuario.Senha = tbSenha.Text;
+                usuario.Senha = tbSenha.Text;
                 
 
                 db.SaveChanges();
