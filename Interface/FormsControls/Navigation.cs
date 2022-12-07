@@ -95,7 +95,7 @@ namespace Interface.FormsControls
             CadastroTarifasETaxas cadastroTarifasETaxas,
             CadastroRedesDeTransporte cadastroRedesDeTransporte,
             CadastroPedido pedido,
-            ProcessoManutencao processoManutencao,
+            TelaProcessoManutencao processoManutencao,
             CadastroEmpresaManutencao cadastroEmpresaManutencao
             )
         {

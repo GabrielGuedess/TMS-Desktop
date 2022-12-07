@@ -72,7 +72,7 @@ namespace Interface
             this.cadastroSinistros1 = new Interface.CadastroSinistros();
             this.cadastroClientes1 = new Interface.CadastroClientes();
             this.cadastroMotoristas2 = new Interface.CadastroMotoristas();
-            this.processoManutencao1 = new Interface.InterfaceComponents.ProcessoManutencao();
+            this.processoManutencao1 = new Interface.InterfaceComponents.TelaProcessoManutencao();
             this.overview1 = new Interface.Overview();
             this.cadastroVeiculos1 = new Interface.CadastroVeiculos();
             this.cadastroUsuarios1 = new Interface.CadastroUsuarios();
@@ -919,7 +919,7 @@ namespace Interface
         private CadastroSinistros cadastroSinistros1;
         private InterfaceComponents.Navbar navbar1;
         private InterfaceComponents.CadastroPedido pedido1;
-        private InterfaceComponents.ProcessoManutencao processoManutencao1;
+        private InterfaceComponents.TelaProcessoManutencao processoManutencao1;
         private InterfaceComponents.CadastroEmpresaManutencao cadastroEmpresaManutencao1;
     }
 }

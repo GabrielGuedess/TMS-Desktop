@@ -30,13 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroPedido));
             this.contentPedido = new System.Windows.Forms.Panel();
+            this.btnAtualizarMercadoria = new System.Windows.Forms.Button();
             this.buttonAddMercadoria = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.tableInfoMercadoria = new System.Windows.Forms.TableLayoutPanel();
             this.templatePanel10 = new Interface.TemplateComponents.TemplatePanel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panelBorderRounded7 = new Interface.TemplateComponents.PanelBorderRounded();
-            this.tbPeso = new Interface.TemplateComponents.TextM3();
+            this.tbPeso = new Interface.TemplateComponents.TextKg();
             this.label9 = new System.Windows.Forms.Label();
             this.templatePanel9 = new Interface.TemplateComponents.TemplatePanel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -64,7 +65,6 @@
             this.panelNumPedido = new Interface.TemplateComponents.TemplatePanel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panelBorderRounded8 = new Interface.TemplateComponents.PanelBorderRounded();
-            this.masckedboxTemplete1 = new Interface.TemplateComponents.MasckedboxTemplete();
             this.mkPedido = new Interface.TemplateComponents.MasckedboxTemplete();
             this.label11 = new System.Windows.Forms.Label();
             this.panelTipoCliente = new Interface.TemplateComponents.TemplatePanel();
@@ -167,6 +167,7 @@
             this.contentPedido.AutoScroll = true;
             this.contentPedido.AutoScrollMargin = new System.Drawing.Size(0, 20);
             this.contentPedido.BackColor = System.Drawing.Color.Transparent;
+            this.contentPedido.Controls.Add(this.btnAtualizarMercadoria);
             this.contentPedido.Controls.Add(this.buttonAddMercadoria);
             this.contentPedido.Controls.Add(this.label3);
             this.contentPedido.Controls.Add(this.tableInfoMercadoria);
@@ -180,6 +181,16 @@
             this.contentPedido.Size = new System.Drawing.Size(975, 800);
             this.contentPedido.TabIndex = 18;
             // 
+            // btnAtualizarMercadoria
+            // 
+            this.btnAtualizarMercadoria.Location = new System.Drawing.Point(197, 670);
+            this.btnAtualizarMercadoria.Name = "btnAtualizarMercadoria";
+            this.btnAtualizarMercadoria.Size = new System.Drawing.Size(166, 25);
+            this.btnAtualizarMercadoria.TabIndex = 22;
+            this.btnAtualizarMercadoria.Text = "Atualizar  Info Mercadoria";
+            this.btnAtualizarMercadoria.UseVisualStyleBackColor = true;
+            this.btnAtualizarMercadoria.Click += new System.EventHandler(this.btnAtualizarMercadoria_Click);
+            // 
             // buttonAddMercadoria
             // 
             this.buttonAddMercadoria.Location = new System.Drawing.Point(65, 670);
@@ -188,6 +199,7 @@
             this.buttonAddMercadoria.TabIndex = 21;
             this.buttonAddMercadoria.Text = "Add Mercadoria";
             this.buttonAddMercadoria.UseVisualStyleBackColor = true;
+            this.buttonAddMercadoria.Click += new System.EventHandler(this.buttonAddMercadoria_Click);
             // 
             // label3
             // 
@@ -259,17 +271,15 @@
             // 
             // tbPeso
             // 
-            this.tbPeso.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.tbPeso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
             this.tbPeso.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbPeso.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tbPeso.ForeColor = System.Drawing.Color.White;
-            this.tbPeso.Location = new System.Drawing.Point(10, 5);
+            this.tbPeso.Location = new System.Drawing.Point(12, 5);
             this.tbPeso.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbPeso.Name = "tbPeso";
             this.tbPeso.Size = new System.Drawing.Size(225, 22);
-            this.tbPeso.TabIndex = 0;
+            this.tbPeso.TabIndex = 23;
             // 
             // label9
             // 
@@ -516,6 +526,7 @@
             this.comboMercadoriasAdd.Name = "comboMercadoriasAdd";
             this.comboMercadoriasAdd.Size = new System.Drawing.Size(220, 29);
             this.comboMercadoriasAdd.TabIndex = 5;
+            this.comboMercadoriasAdd.SelectedIndexChanged += new System.EventHandler(this.comboMercadoriasAdd_SelectedIndexChanged_1);
             // 
             // label1
             // 
@@ -606,28 +617,12 @@
             // 
             this.panelBorderRounded8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelBorderRounded8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelBorderRounded8.Controls.Add(this.masckedboxTemplete1);
             this.panelBorderRounded8.Controls.Add(this.mkPedido);
             this.panelBorderRounded8.Location = new System.Drawing.Point(5, 37);
             this.panelBorderRounded8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelBorderRounded8.Name = "panelBorderRounded8";
             this.panelBorderRounded8.Size = new System.Drawing.Size(248, 33);
             this.panelBorderRounded8.TabIndex = 1;
-            // 
-            // masckedboxTemplete1
-            // 
-            this.masckedboxTemplete1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.masckedboxTemplete1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.masckedboxTemplete1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.masckedboxTemplete1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.masckedboxTemplete1.ForeColor = System.Drawing.Color.White;
-            this.masckedboxTemplete1.Location = new System.Drawing.Point(5, 6);
-            this.masckedboxTemplete1.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.masckedboxTemplete1.Mask = "00000000000";
-            this.masckedboxTemplete1.Name = "masckedboxTemplete1";
-            this.masckedboxTemplete1.Size = new System.Drawing.Size(233, 22);
-            this.masckedboxTemplete1.TabIndex = 1;
-            this.masckedboxTemplete1.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // mkPedido
             // 
@@ -636,9 +631,9 @@
             this.mkPedido.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.mkPedido.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.mkPedido.ForeColor = System.Drawing.Color.White;
-            this.mkPedido.Location = new System.Drawing.Point(10, -29);
+            this.mkPedido.Location = new System.Drawing.Point(10, 6);
             this.mkPedido.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.mkPedido.Mask = "00000000000";
+            this.mkPedido.Mask = "000000000";
             this.mkPedido.Name = "mkPedido";
             this.mkPedido.Size = new System.Drawing.Size(217, 22);
             this.mkPedido.TabIndex = 0;
@@ -696,7 +691,7 @@
             this.comboTipoCliente.Name = "comboTipoCliente";
             this.comboTipoCliente.Size = new System.Drawing.Size(248, 29);
             this.comboTipoCliente.TabIndex = 5;
-            this.comboTipoCliente.TextChanged += new System.EventHandler(this.comboTipoCliente_TextChanged);
+            this.comboTipoCliente.SelectedIndexChanged += new System.EventHandler(this.comboTipoCliente_TextChanged);
             // 
             // labelNomeClient
             // 
@@ -742,6 +737,7 @@
             this.comboCPForCNPJCliente.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.comboCPForCNPJCliente.ForeColor = System.Drawing.Color.White;
             this.comboCPForCNPJCliente.FormattingEnabled = true;
+            this.comboCPForCNPJCliente.IntegralHeight = false;
             this.comboCPForCNPJCliente.Location = new System.Drawing.Point(5, 37);
             this.comboCPForCNPJCliente.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.comboCPForCNPJCliente.Name = "comboCPForCNPJCliente";
@@ -823,6 +819,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label2
             // 
@@ -1238,12 +1235,12 @@
             this.mkSearchPedido.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.mkSearchPedido.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.mkSearchPedido.ForeColor = System.Drawing.Color.White;
-            this.mkSearchPedido.Location = new System.Drawing.Point(102, 6);
+            this.mkSearchPedido.Location = new System.Drawing.Point(120, 6);
             this.mkSearchPedido.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.mkSearchPedido.Mask = "00000000000";
+            this.mkSearchPedido.Mask = "000000000";
             this.mkSearchPedido.Name = "mkSearchPedido";
-            this.mkSearchPedido.Size = new System.Drawing.Size(235, 22);
-            this.mkSearchPedido.TabIndex = 6;
+            this.mkSearchPedido.Size = new System.Drawing.Size(217, 22);
+            this.mkSearchPedido.TabIndex = 5;
             this.mkSearchPedido.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // typeData
@@ -1368,7 +1365,6 @@
         private TemplateComponents.TemplatePanel templatePanel10;
         private Panel panel8;
         private TemplateComponents.PanelBorderRounded panelBorderRounded7;
-        private TemplateComponents.TextM3 tbPeso;
         private Label label9;
         private TemplateComponents.TemplatePanel templatePanel9;
         private Panel panel7;
@@ -1425,7 +1421,6 @@
         private PictureBox pictureBox3;
         private TemplateComponents.PanelBorderRounded panelBorderRounded8;
         private TemplateComponents.MasckedboxTemplete mkPedido;
-        private TemplateComponents.MasckedboxTemplete masckedboxTemplete1;
         private Button buscarPedido;
         private Button cadastrarPedido;
         private TemplateComponents.MasckedboxTemplete mkCEP;
@@ -1444,6 +1439,8 @@
         private ComboBox comboMercadoriasAdd;
         private Label label1;
         private Panel panel12;
+        private TemplateComponents.TextKg tbPeso;
+        private Button btnAtualizarMercadoria;
         private TemplateComponents.MasckedboxTemplete mkSearchPedido;
     }
 }

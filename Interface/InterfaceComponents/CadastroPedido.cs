@@ -19,6 +19,7 @@ namespace Interface.InterfaceComponents
 
         private List<Mercadoria> mercadorias = new List<Mercadoria>();
 
+
         public string TypeControl
         {
             get { return Type; }
@@ -58,7 +59,7 @@ namespace Interface.InterfaceComponents
 
         private ClienteFisico GetClienteFisico(string CPF)
         {
-            var clienteFisico = db.ClienteFisico.FirstOrDefault(a => a.CPF == CPF);
+            var clienteFisico = db.ClienteFisico.First(a => a.CPF == CPF);
             return clienteFisico;
         }
 
@@ -70,7 +71,9 @@ namespace Interface.InterfaceComponents
 
         private void cadastrarPedido_Click(object sender, EventArgs e)
         {
-            if (Type.Contains("Cadastrar") && Validation.Validar(contentPedido))
+            List<string> notValidar = new();
+            notValidar.Add(comboMercadoriasAdd.Name);
+            if (Type.Contains("Cadastro") && Validation.Validar(contentPedido, notValidar))
             {
                 PedidoCliente pedido = new();
 
@@ -110,7 +113,6 @@ namespace Interface.InterfaceComponents
                 db.PedidoCliente.Add(pedido);
                 db.SaveChanges();
                 limpar.CleanControl(contentPedido);
-                comboMercadoriasAdd.Enabled = false;
                 mercadorias.Clear();
             }
             else if (Type.Contains("Update") && Validation.Validar(contentPedido))
@@ -155,6 +157,11 @@ namespace Interface.InterfaceComponents
                     MessageBox.Show("É necessário cadastrar ao menos uma mercadoria");
                     return;
                 }
+
+                db.SaveChanges();
+
+                limpar.CleanControl(contentPedido);
+                mercadorias.Clear();
             }
         }
 
@@ -164,7 +171,8 @@ namespace Interface.InterfaceComponents
                 .Include(a=> a.ID_for_clienteNavigation)
                 .Include(a => a.ID_for_clienteNavigation.ClienteFisico)
                 .Include(a => a.ID_for_clienteNavigation.ClienteJuridico)
-                .FirstOrDefault(a => a.ID_pedido == int.Parse(mkPedido.Text));
+                .Include(a=> a.Mercadoria)
+                .FirstOrDefault(a => a.ID_pedido == int.Parse(mkSearchPedido.Text));
 
             if (pedido == null)
             {
@@ -172,7 +180,7 @@ namespace Interface.InterfaceComponents
                 return;
             }
             mkPedido.Text = pedido.ID_pedido.ToString();
-            /*if(pedido.ID_for_clienteNavigation. == "Cliente Juridico")
+            if(pedido.ID_for_clienteNavigation.Tipo_cliente == "J")
             {
                 comboTipoCliente.SelectedIndex = 1;
                 comboCPForCNPJCliente.Text = pedido.ID_for_clienteNavigation.ClienteJuridico.CNPJ;
@@ -181,7 +189,7 @@ namespace Interface.InterfaceComponents
             {
                 comboTipoCliente.SelectedIndex = 0;
                 comboCPForCNPJCliente.Text = pedido.ID_for_clienteNavigation.ClienteFisico.CPF;
-            }*/
+            }
             mkCEP.Text = pedido.CEP_destino;
             comboUF.Text = pedido.UF_destino;
             comboCidade.Text = pedido.Cidade_destino;
@@ -189,9 +197,13 @@ namespace Interface.InterfaceComponents
             tbNumCasa.Text = pedido.Numero_destino;
             tbBairro.Text = pedido.Bairro_destino;
             tbComplemento.Text = pedido.Complemento_endereco;
-            comboMercadoriasAdd.DataSource = pedido.Mercadoria.Max().Descricao;
+            comboMercadoriasAdd.Items.Clear();
+            foreach(var item in pedido.Mercadoria)
+            {
+                comboMercadoriasAdd.Items.Add(item.Descricao);
+            }
             mercadorias.Clear();
-            mercadorias.Add(pedido.Mercadoria.Max());
+            mercadorias = pedido.Mercadoria.ToList();
         }
 
         async private void comboMercadoriasAdd_SelectedIndexChanged(object sender, EventArgs e)
@@ -204,6 +216,7 @@ namespace Interface.InterfaceComponents
                 tbValor.Text = "R$" + mercadoria.Valor.ToString();
                 tbVolume.Text = mercadoria.Volume.ToString();
                 tbPeso.Text = mercadoria.Massa.ToString();
+  
             }
         }
 
@@ -224,6 +237,120 @@ namespace Interface.InterfaceComponents
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
+            if (comboMercadoriasAdd.Items.Count > 0 && comboMercadoriasAdd.SelectedIndex > -1)
+            {
+                Mercadoria mercadoria = mercadorias.FirstOrDefault(a => a.Descricao == comboMercadoriasAdd.Text);
+                if (mercadoria != null)
+                {
+                    
+                    mercadorias.Remove(mercadoria);
+                    comboMercadoriasAdd.Items.Remove(comboMercadoriasAdd.SelectedItem);
+                    
+                    limpar.CleanControl(tableInfoMercadoria);
+                }
+                else
+                    MessageBox.Show("Erro ao deletar Mercadoria");
+            }
+            else
+            {
+                MessageBox.Show($"Add ao menos uma mercadoria", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        async private void comboTipoCliente_TextChanged(object sender, EventArgs e)
+        {
+            if(comboTipoCliente.SelectedIndex == 0)
+            {
+                labelNomeTipoCliente.Text = "CPF do Cliente";
+                comboCPForCNPJCliente.Items.Clear();
+                List<ClienteFisico> listClient = await db.ClienteFisico.ToListAsync();
+                foreach(var clienteFisico in listClient)
+                {  
+                    comboCPForCNPJCliente.Items.Add(clienteFisico.CPF);
+                }
+            }
+            else if( comboTipoCliente.SelectedIndex == 1)
+            {
+                labelNomeTipoCliente.Text = "CNPF do Cliente";
+                comboCPForCNPJCliente.Items.Clear();
+                List<ClienteJuridico> listClient = await db.ClienteJuridico.ToListAsync();
+                foreach (var clienteJuridico in listClient)
+                {
+                    comboCPForCNPJCliente.Items.Add(clienteJuridico.CNPJ);
+                }
+            }
+        }
+
+        private void buttonAddMercadoria_Click(object sender, EventArgs e)
+        {
+            Mercadoria mercadoria = new();
+            int lastPedidoID = 0;
+            int lastClient = 0;
+            if (db.PedidoCliente.Count() > 0)
+            {
+                lastPedidoID = db.PedidoCliente.Max(id => id.ID_pedido);
+            }
+            int lastClientID = 0;
+            if (comboTipoCliente.SelectedIndex == 0)
+            {
+                lastClientID = GetClienteFisico(comboCPForCNPJCliente.Text).ID_for_cliente;
+            }
+            else if(comboTipoCliente.SelectedIndex == 1)
+            {
+                lastClientID = GetClienteJuridico(comboCPForCNPJCliente.Text).ID_for_cliente;
+            }
+            else
+            {
+                MessageBox.Show("Preencha as informaçoes sobre o Pedido Primeiro");
+            }
+
+            mercadoria.Descricao = tbDescricao.Text;
+            mercadoria.ID_for_cliente = lastClientID;
+            mercadoria.ID_for_pedido = lastPedidoID;
+            mercadoria.Valor = tbValor.returnValue();
+            mercadoria.Volume = tbVolume.returnValue();
+            mercadoria.Massa = tbPeso.returnValue();
+            mercadorias.Add(mercadoria);
+            comboMercadoriasAdd.Items.Add(mercadoria.Descricao);
+            limpar.CleanControl(tableInfoMercadoria);
+
+        }
+
+        private void comboMercadoriasAdd_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            Mercadoria mercadoria = mercadorias.FirstOrDefault(a => a.Descricao == comboMercadoriasAdd.Text);
+            if(mercadoria == null)
+            {
+                return;
+            }
+
+            tbDescricao.Text = mercadoria.Descricao;
+            tbValor.Text = "R$ " + mercadoria.Valor.ToString();
+            tbPeso.Text = mercadoria.Massa + " Kg";
+            tbVolume.Text = mercadoria.Volume + " m³";
+
+        }
+
+        private void btnAtualizarMercadoria_Click(object sender, EventArgs e)
+        {
+            Mercadoria mercadoria = mercadorias.FirstOrDefault(a => a.Descricao == comboMercadoriasAdd.Text);
+
+            if (mercadoria == null)
+            {
+                MessageBox.Show("Erro ao atualizar mercadoria");
+                return;
+            }
+            comboMercadoriasAdd.Items.Remove(mercadoria.Descricao);
+            mercadoria.Descricao = tbDescricao.Text;
+            mercadoria.Valor = tbValor.returnValue();
+            mercadoria.Volume = tbVolume.returnValue();
+            mercadoria.Massa = tbPeso.returnValue();
+            comboMercadoriasAdd.Items.Add(mercadoria.Descricao);
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
             if (mkCEP.MaskCompleted)
             {
                 ClientCEP clientCEP = new();
@@ -240,28 +367,6 @@ namespace Interface.InterfaceComponents
             else
             {
                 MessageBox.Show($"É necessário preencher o campo CEP corretamente!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
-
-        async private void comboTipoCliente_TextChanged(object sender, EventArgs e)
-        {
-            if(comboTipoCliente.SelectedIndex == 0)
-            {
-                List<ClienteFisico> listClient = await db.ClienteFisico.ToListAsync();
-                foreach(var clienteFisico in listClient)
-                {
-                    comboCPForCNPJCliente.Items.Clear();
-                    comboCPForCNPJCliente.Items.Add(clienteFisico.CPF);
-                }
-            }
-            else if( comboTipoCliente.SelectedIndex == 1)
-            {
-                List<ClienteJuridico> listClient = await db.ClienteJuridico.ToListAsync();
-                foreach (var clienteJuridico in listClient)
-                {
-                    comboCPForCNPJCliente.Items.Clear();
-                    comboCPForCNPJCliente.Items.Add(clienteJuridico.CNPJ);
-                }
             }
         }
     }
