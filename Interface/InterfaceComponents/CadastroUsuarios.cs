@@ -125,7 +125,7 @@ namespace Interface
                     limpar.CleanControl(searchPanel);
 
                 }
-                else if (Type.Contains("Update") && Validation.Validar(contentUsuario, notValidar))
+                else if (Type.Contains("Update") && Validation.Validar(contentUsuario, notValidar) && Validation.validarSenha(tbSenha, tbSenhaConfirmacao))
                 {
                     TMSContext db = new();
                     Usuario usuario = db.Usuario.FirstOrDefault(a => a.CPF == mkCPF.Text);
@@ -185,6 +185,7 @@ namespace Interface
                 tbEmail.Text = usuario.Email;
                 mkCPF.Text = usuario.CPF;
                 mkCelular.Text = usuario.Celular;
+                tbSenha.Text = usuario.Senha;
 
             }
             else

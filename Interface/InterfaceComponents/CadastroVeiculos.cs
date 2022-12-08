@@ -72,7 +72,7 @@ namespace Interface
                     comboTipoCarroceria.Text = value["Eixo_carroceria"].ToString();
                     tbPesoCarroceria.Text = value["Massa_carroceria"].ToString();
                     tbCapacidadeVolumetrica.Text = value["Capacidade_volumetrica"].ToString();
-                    tpCapacidadePeso.Text = value["Capacidade_KG"].ToString();
+                    tbCapacidadePeso.Text = value["Capacidade_KG"].ToString();
                 }
             }
         }
@@ -342,6 +342,7 @@ namespace Interface
             }
             tbQuantEixo.Text = modelo.Eixo_modelo.ToString();
             tbPesoVeiculo.Text = modelo.Massa_modelo.ToString();
+            tbCapacidadePeso.Text = modelo.Capacidade_KG.ToString();
         }
 
         private void comboPossuiEixo_SelectedIndexChanged(object sender, EventArgs e)

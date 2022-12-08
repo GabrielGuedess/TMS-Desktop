@@ -16,12 +16,12 @@ namespace Interface.ModelsDB
         public string Tipo_veiculo { get; set; } = null!;
         public string Marca { get; set; } = null!;
         public string Modelo { get; set; } = null!;
-        public string Carroceria { get; set; } = null!;
+        public string? Carroceria { get; set; }
         public double Massa_modelo { get; set; }
         public sbyte Eixo_modelo { get; set; }
-        public double Massa_carroceria { get; set; }
-        public sbyte Eixo_carroceria { get; set; }
-        public double Capacidade_volumetrica { get; set; }
+        public double? Massa_carroceria { get; set; }
+        public sbyte? Eixo_carroceria { get; set; }
+        public double? Capacidade_volumetrica { get; set; }
         public double Capacidade_KG { get; set; }
 
         public virtual MotoristaTerceiro ID_for_motoristaNavigation { get; set; } = null!;
