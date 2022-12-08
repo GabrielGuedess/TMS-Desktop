@@ -56,12 +56,12 @@ namespace Interface
         {
             set
             {
-                cod.Text = value["ID"].ToString();
-
                 if (value != null)
                 {
-                    comboTipoSinistro.Text = value["TipoSinistro"].ToString();
-                    tbDescricaoSinistro.Text = value["DescricaoSinistro"].ToString();
+                    cod.Text = value["ID_Sinistro"].ToString();
+                    tbCod.Text = value["ID_Sinistro"].ToString();
+                    comboTipoSinistro.Text = value["Tipo_Sinistro"].ToString();
+                    tbDescricaoSinistro.Text = value["Descricao"].ToString();
                 }
             }
         }

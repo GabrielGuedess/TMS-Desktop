@@ -73,6 +73,10 @@ namespace Interface
                     tbNumCasa.Text = value["Numero_endereco"].ToString();
                     tbBairro.Text = value["Bairro"].ToString();
                     tbComplemento.Text = value["Complemento_endereco"].ToString();
+                    comboCNH.Text = value["Categoria_CNH"].ToString();
+                    mkCNH.Text = value["Numero_CNH"].ToString();
+                    dateVencimentoCNH.Text = value["Vencimento_CNH"].ToString();
+                    comboMOPP.Text = value["Curso_MOPP"].ToString();
                 }
             }
         }

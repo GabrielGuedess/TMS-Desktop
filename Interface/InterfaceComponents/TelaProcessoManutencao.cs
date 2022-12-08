@@ -4,6 +4,7 @@ using Interface.ModelsDB.TMSDataBaseContext;
 using Interface.Utilities;
 using Microsoft.EntityFrameworkCore;
 using MySqlConnector;
+using System.Data;
 
 namespace Interface.InterfaceComponents
 {
@@ -41,6 +42,27 @@ namespace Interface.InterfaceComponents
                 }
             }
         }
+
+        public DataRow OverviewDataResponse
+        {
+            set
+            {
+                if (value != null)
+                {
+                    searchManutencao.Text = value["Placa"].ToString();
+                    comboVeiculo.Text = value["Placa"].ToString();
+                    comboTipo.Text = value["Tipo_manutencao"].ToString();
+                    comboClassificacao.Text = value["Classificacao"].ToString();
+                    comboProcesso.Text = value["Corretivo"].ToString() != string.Empty ? "Corretivo" : "Preventivo";
+                    comboEmpresa.Text = value["Nome_fantasia"].ToString();
+                    tbValor.Text = value["Valor_reais"].ToString();
+                    tbDetalhamento.Text = value["Detalhamento"].ToString();
+                    mkDateInicio.Text = value["Data_inicio"].ToString();
+                    mkDateFim.Text = value["Data_fim"].ToString();
+                }
+            }
+        }
+
         public TelaProcessoManutencao()
         {
             InitializeComponent();
@@ -75,33 +97,33 @@ namespace Interface.InterfaceComponents
                 else if (Type.Contains("Update") && Validation.Validar(contentManutencao))
                 {
 
-                     Manutencao manutencao = db.Manutencao.Include(a => a.ID_for_processo_manutencaoNavigation)
-                         .Include(a => a.ID_for_empresaNavigation)
-                         .Include(a => a.ID_for_veiculoNavigation)
-                         .FirstOrDefault(a => a.ID_for_veiculoNavigation.Placa == comboVeiculo.Text);
+                    Manutencao manutencao = db.Manutencao.Include(a => a.ID_for_processo_manutencaoNavigation)
+                        .Include(a => a.ID_for_empresaNavigation)
+                        .Include(a => a.ID_for_veiculoNavigation)
+                        .FirstOrDefault(a => a.ID_for_veiculoNavigation.Placa == comboVeiculo.Text);
 
-                     if (manutencao == null)
-                     {
-                         MessageBox.Show("Erro ao atualizar");
-                         return;
-                     }
-                     else
-                     {
-                         manutencao.ID_for_processo_manutencao = db.ProcessoManutencao.First(a => a.Descricao == comboProcesso.Text).ID_processo_manutencao;
-                         if (comboTipo.SelectedIndex == 0)
-                             manutencao.Tipo_manutencao = "C";
-                         else if (comboTipo.SelectedIndex == 1)
-                             manutencao.Tipo_manutencao = "P";
-                         manutencao.Detalhamento = tbDetalhamento.Text;
-                         manutencao.Valor_reais = tbValor.returnValue();
-                         manutencao.Data_fim = mkDateFim.convertDateOnly();
-                         manutencao.Data_inicio = mkDateFim.convertDateOnly();
-                         manutencao.ID_for_empresa = db.PessoaJuridica.First(a => a.Nome_fantasia == comboEmpresa.Text).ID_pessoa_juridica;
-                         manutencao.ID_for_veiculo = db.Veiculo.First(a => a.Placa == comboVeiculo.Text).ID_veiculo;
-                         db.SaveChanges();
-                         limpar.CleanControl(contentManutencao);
-                         limpar.CleanControl(searchPanel);
-                     }
+                    if (manutencao == null)
+                    {
+                        MessageBox.Show("Erro ao atualizar");
+                        return;
+                    }
+                    else
+                    {
+                        manutencao.ID_for_processo_manutencao = db.ProcessoManutencao.First(a => a.Descricao == comboProcesso.Text).ID_processo_manutencao;
+                        if (comboTipo.SelectedIndex == 0)
+                            manutencao.Tipo_manutencao = "C";
+                        else if (comboTipo.SelectedIndex == 1)
+                            manutencao.Tipo_manutencao = "P";
+                        manutencao.Detalhamento = tbDetalhamento.Text;
+                        manutencao.Valor_reais = tbValor.returnValue();
+                        manutencao.Data_fim = mkDateFim.convertDateOnly();
+                        manutencao.Data_inicio = mkDateFim.convertDateOnly();
+                        manutencao.ID_for_empresa = db.PessoaJuridica.First(a => a.Nome_fantasia == comboEmpresa.Text).ID_pessoa_juridica;
+                        manutencao.ID_for_veiculo = db.Veiculo.First(a => a.Placa == comboVeiculo.Text).ID_veiculo;
+                        db.SaveChanges();
+                        limpar.CleanControl(contentManutencao);
+                        limpar.CleanControl(searchPanel);
+                    }
                 }
             }
             catch (DbUpdateException erro)
@@ -153,7 +175,7 @@ namespace Interface.InterfaceComponents
             tbDetalhamento.Text = manutencao.Detalhamento;
             mkDateInicio.Text = manutencao.Data_inicio.ToString();
             mkDateFim.Text = manutencao.Data_fim.ToString();*/
-  
+
 
         }
 
@@ -179,7 +201,7 @@ namespace Interface.InterfaceComponents
             comboVeiculo.Items.Clear();
             TMSContext db = new TMSContext();
             List<Veiculo> veiculos = await db.Veiculo.ToListAsync();
-            foreach(var item in veiculos)
+            foreach (var item in veiculos)
             {
                 comboVeiculo.Items.Add(item.Placa);
             }
@@ -188,7 +210,7 @@ namespace Interface.InterfaceComponents
             List<PessoaJuridica> empresas = await db.PessoaJuridica.ToListAsync();
             foreach (var item in empresas)
             {
-               comboEmpresa.Items.Add(item.Nome_fantasia);
+                comboEmpresa.Items.Add(item.Nome_fantasia);
             }
 
             List<ProcessoManutencao> processos = db.ProcessoManutencao.ToList();
@@ -199,7 +221,7 @@ namespace Interface.InterfaceComponents
         async private void comboClassificacao_Leave(object sender, EventArgs e)
         {
             TMSContext db = new TMSContext();
-            if(comboTipo.SelectedIndex == 0)
+            if (comboTipo.SelectedIndex == 0)
             {
                 comboProcesso.Items.Clear();
                 List<ProcessoManutencao> processos = await db.ProcessoManutencao.ToListAsync();
@@ -210,7 +232,7 @@ namespace Interface.InterfaceComponents
                 }
                 comboProcesso.MaxDropDownItems = 5;
             }
-            else if(comboTipo.SelectedIndex == 1)
+            else if (comboTipo.SelectedIndex == 1)
             {
                 comboProcesso.Items.Clear();
                 List<ProcessoManutencao> processos = await db.ProcessoManutencao.ToListAsync();

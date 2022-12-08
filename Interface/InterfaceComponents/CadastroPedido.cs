@@ -5,6 +5,7 @@ using Interface.Properties;
 using Interface.Utilities;
 using Microsoft.EntityFrameworkCore;
 using MySqlConnector;
+using System.Data;
 
 namespace Interface.InterfaceComponents
 {
@@ -49,6 +50,27 @@ namespace Interface.InterfaceComponents
                     mkPedido.ReadOnly = true;
                     mkPedido.Cursor = Cursors.No;
                     buscarPedido.Visible = true;
+                }
+            }
+        }
+
+        public DataRow OverviewDataResponse
+        {
+            set
+            {
+                if (value != null)
+                {
+                    mkSearchPedido.Text = value["ID_pedido"].ToString();
+
+                    mkPedido.Text = value["ID_pedido"].ToString();
+                    comboTipoCliente.Text = value["Tipo_Cliente"].ToString() == "F" ? "Cliente Fisico" : "Cliente Juridico";
+                    mkCEP.Text = value["CEP"].ToString();
+                    comboUF.Text = value["UF"].ToString();
+                    comboCidade.Text = value["Cidade"].ToString();
+                    tbLogradouro.Text = value["Logradouro"].ToString();
+                    tbNumCasa.Text = value["Numero_endereco"].ToString();
+                    tbBairro.Text = value["Bairro"].ToString();
+                    tbComplemento.Text = value["Complemento_endereco"].ToString();
                 }
             }
         }
@@ -191,10 +213,10 @@ namespace Interface.InterfaceComponents
         private void buscarPedido_Click(object sender, EventArgs e)
         {
             PedidoCliente pedido = db.PedidoCliente
-                .Include(a=> a.ID_for_clienteNavigation)
+                .Include(a => a.ID_for_clienteNavigation)
                 .Include(a => a.ID_for_clienteNavigation.ClienteFisico)
                 .Include(a => a.ID_for_clienteNavigation.ClienteJuridico)
-                .Include(a=> a.Mercadoria)
+                .Include(a => a.Mercadoria)
                 .FirstOrDefault(a => a.ID_pedido == int.Parse(mkSearchPedido.Text));
 
             if (pedido == null)
@@ -203,7 +225,7 @@ namespace Interface.InterfaceComponents
                 return;
             }
             mkPedido.Text = pedido.ID_pedido.ToString();
-            if(pedido.ID_for_clienteNavigation.Tipo_cliente == "J")
+            if (pedido.ID_for_clienteNavigation.Tipo_cliente == "J")
             {
                 comboTipoCliente.SelectedIndex = 1;
                 comboCPForCNPJCliente.Text = pedido.ID_for_clienteNavigation.ClienteJuridico.CNPJ;
@@ -221,7 +243,7 @@ namespace Interface.InterfaceComponents
             tbBairro.Text = pedido.Bairro_destino;
             tbComplemento.Text = pedido.Complemento_endereco;
             comboMercadoriasAdd.Items.Clear();
-            foreach(var item in pedido.Mercadoria)
+            foreach (var item in pedido.Mercadoria)
             {
                 comboMercadoriasAdd.Items.Add(item.Descricao);
             }
@@ -239,7 +261,7 @@ namespace Interface.InterfaceComponents
                 tbValor.Text = "R$" + mercadoria.Valor.ToString();
                 tbVolume.Text = mercadoria.Volume.ToString();
                 tbPeso.Text = mercadoria.Massa.ToString();
-  
+
             }
         }
 
@@ -265,10 +287,10 @@ namespace Interface.InterfaceComponents
                 Mercadoria mercadoria = mercadorias.FirstOrDefault(a => a.Descricao == comboMercadoriasAdd.Text);
                 if (mercadoria != null)
                 {
-                    
+
                     mercadorias.Remove(mercadoria);
                     comboMercadoriasAdd.Items.Remove(comboMercadoriasAdd.SelectedItem);
-                    
+
                     limpar.CleanControl(tableInfoMercadoria);
                 }
                 else
@@ -282,17 +304,17 @@ namespace Interface.InterfaceComponents
 
         async private void comboTipoCliente_TextChanged(object sender, EventArgs e)
         {
-            if(comboTipoCliente.SelectedIndex == 0)
+            if (comboTipoCliente.SelectedIndex == 0)
             {
                 labelNomeTipoCliente.Text = "CPF do Cliente";
                 comboCPForCNPJCliente.Items.Clear();
                 List<ClienteFisico> listClient = await db.ClienteFisico.ToListAsync();
-                foreach(var clienteFisico in listClient)
-                {  
+                foreach (var clienteFisico in listClient)
+                {
                     comboCPForCNPJCliente.Items.Add(clienteFisico.CPF);
                 }
             }
-            else if( comboTipoCliente.SelectedIndex == 1)
+            else if (comboTipoCliente.SelectedIndex == 1)
             {
                 labelNomeTipoCliente.Text = "CNPF do Cliente";
                 comboCPForCNPJCliente.Items.Clear();
@@ -318,7 +340,7 @@ namespace Interface.InterfaceComponents
             {
                 lastClientID = GetClienteFisico(comboCPForCNPJCliente.Text).ID_for_cliente;
             }
-            else if(comboTipoCliente.SelectedIndex == 1)
+            else if (comboTipoCliente.SelectedIndex == 1)
             {
                 lastClientID = GetClienteJuridico(comboCPForCNPJCliente.Text).ID_for_cliente;
             }
@@ -342,7 +364,7 @@ namespace Interface.InterfaceComponents
         private void comboMercadoriasAdd_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             Mercadoria mercadoria = mercadorias.FirstOrDefault(a => a.Descricao == comboMercadoriasAdd.Text);
-            if(mercadoria == null)
+            if (mercadoria == null)
             {
                 return;
             }

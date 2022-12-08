@@ -7,16 +7,7 @@ using Interface.Properties;
 using Interface.Utilities;
 using Microsoft.EntityFrameworkCore;
 using MySqlConnector;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Exception = System.Exception;
 
 namespace Interface.InterfaceComponents
 {
@@ -27,8 +18,6 @@ namespace Interface.InterfaceComponents
         readonly LimparFormularios limpar = new();
 
         private string Type = "";
-
-        readonly ConnectDB DBFunctions = new();
 
         public string TypeControl
         {
@@ -56,6 +45,32 @@ namespace Interface.InterfaceComponents
                 }
             }
         }
+
+        public DataRow OverviewDataResponse
+        {
+            set
+            {
+                if (value != null)
+                {
+                    searchEmpresa.Text = value["CNPJ"].ToString();
+                    mkCNPJ.Text = value["CNPJ"].ToString();
+                    tbNomeFantasia.Text = value["Nome_fantasia"].ToString();
+                    mkInscricaoEstatudal.Text = value["Inscricao_estadual"].ToString();
+                    tbRazaoSocial.Text = value["Razao_social"].ToString();
+                    tbAreaAtuacao.Text = value["Area_atuacao"].ToString();
+                    mkCelular.Text = value["Celular"].ToString();
+                    mkTelefone.Text = value["Telefone"].ToString();
+                    tbEmail.Text = value["Email"].ToString();
+                    mkCEP.Text = value["CEP"].ToString();
+                    comboUF.Text = value["UF"].ToString();
+                    tbBairro.Text = value["Bairro"].ToString();
+                    tbLogradouro.Text = value["Logradouro"].ToString();
+                    tbNumCasa.Text = value["Numero_endereco"].ToString();
+                    tbComplemento.Text = value["Complemento_endereco"].ToString();
+                }
+            }
+        }
+
         public CadastroEmpresaManutencao()
         {
             InitializeComponent();
@@ -204,7 +219,7 @@ namespace Interface.InterfaceComponents
                 tbComplemento.Text = empresa.Complemento_endereco;
 
             }
-            
+
             else
             {
                 MessageBox.Show("Digite corretamente o CNPJ no campo de busca");

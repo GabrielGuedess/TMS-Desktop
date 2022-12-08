@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
@@ -57,7 +56,7 @@ namespace Interface.ModelsDB.TMSDataBaseContext
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseMySql("server=localhost;user=root;database=tms", ServerVersion.Parse("10.4.27-mariadb")).LogTo(message => Debug.WriteLine(message)).EnableDetailedErrors(true); ;
+                optionsBuilder.UseMySql("server=localhost;user=root;database=tms", ServerVersion.Parse("10.4.27-mariadb"));
             }
         }
 
@@ -367,7 +366,6 @@ namespace Interface.ModelsDB.TMSDataBaseContext
                 entity.HasOne(d => d.ID_for_veiculoNavigation)
                     .WithMany(p => p.Manutencao)
                     .HasForeignKey(d => d.ID_for_veiculo)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_manutencao3");
             });
 
@@ -953,12 +951,6 @@ namespace Interface.ModelsDB.TMSDataBaseContext
                 entity.HasIndex(e => e.Email, "Email")
                     .IsUnique();
 
-                entity.HasIndex(e => e.Telefone, "Telefone")
-                    .IsUnique();
-
-                entity.HasIndex(e => e.User_name, "User_name")
-                    .IsUnique();
-
                 entity.Property(e => e.ID_usuario).HasColumnType("int(11)");
 
                 entity.Property(e => e.CPF).HasMaxLength(11);
@@ -970,10 +962,6 @@ namespace Interface.ModelsDB.TMSDataBaseContext
                 entity.Property(e => e.Nome).HasMaxLength(30);
 
                 entity.Property(e => e.Senha).HasMaxLength(30);
-
-                entity.Property(e => e.Telefone).HasMaxLength(10);
-
-                entity.Property(e => e.User_name).HasMaxLength(20);
             });
 
             modelBuilder.Entity<Veiculo>(entity =>

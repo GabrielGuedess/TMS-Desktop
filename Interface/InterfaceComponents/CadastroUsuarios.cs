@@ -1,5 +1,4 @@
 ﻿using Interface.ControlValidationAuxiliary;
-using Interface.DataBaseControls;
 using Interface.ModelsDB;
 using Interface.ModelsDB.TMSDataBaseContext;
 using Interface.Utilities;
@@ -52,14 +51,11 @@ namespace Interface
         {
             set
             {
-                searchUsuario.Text = value["CPF"].ToString();
-
                 if (value != null)
                 {
                     searchUsuario.Text = value["CPF"].ToString();
-
                     tbNome.Text = value["Nome"].ToString();
-                    mkCelular.Text = value["Num_Cel"].ToString();
+                    mkCelular.Text = value["Celular"].ToString();
                     tbEmail.Text = value["Email"].ToString();
                     tbSenha.Text = value["Senha"].ToString();
                     tbSenhaConfirmacao.Text = tbSenha.Text;
@@ -97,12 +93,13 @@ namespace Interface
 
         private void cadastrarUsuario_Click(object sender, EventArgs e)
         {
-            try { 
+            try
+            {
                 List<string> notValidar = new();
                 notValidar.Add(tbSenhaConfirmacao.Name);
                 if (Type.Contains("Cadastro") && Validation.Validar(contentUsuario, notValidar))
                 {
-               
+
                     TMSContext db = new();
                     int lastID = 0;
                     if (db.Usuario.Count() > 0)
@@ -116,19 +113,17 @@ namespace Interface
                         Nome = tbNome.Text,
                         Email = tbEmail.Text,
                         Senha = tbSenha.Text,
-                        Telefone = "qualquer",
                         CPF = mkCPF.Text,
-                        User_name = "qualquer",
                         Celular = mkCelular.Text
-                        
+
                     };
-                    
+
                     db.Usuario.Add(usuario);
                     db.SaveChanges();
 
                     limpar.CleanControl(contentUsuario);
                     limpar.CleanControl(searchPanel);
-               
+
                 }
                 else if (Type.Contains("Update") && Validation.Validar(contentUsuario, notValidar))
                 {
@@ -144,7 +139,7 @@ namespace Interface
                     usuario.Email = tbEmail.Text;
                     usuario.Celular = mkCelular.Text;
                     usuario.Senha = tbSenha.Text;
-                
+
 
                     db.SaveChanges();
 
@@ -178,7 +173,7 @@ namespace Interface
             {
                 TMSContext db = new();
 
-                Usuario usuario= db.Usuario.FirstOrDefault(a => a.CPF == mkCPF.Text);
+                Usuario usuario = db.Usuario.FirstOrDefault(a => a.CPF == mkCPF.Text);
 
                 if (usuario == null)
                 {
@@ -190,7 +185,7 @@ namespace Interface
                 tbEmail.Text = usuario.Email;
                 mkCPF.Text = usuario.CPF;
                 mkCelular.Text = usuario.Celular;
-                
+
             }
             else
             {

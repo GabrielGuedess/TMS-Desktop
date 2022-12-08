@@ -49,14 +49,13 @@ namespace Interface
         {
             set
             {
-                empresaMask.Text = value["Nome_Empresa"].ToString();
-
                 if (value != null)
                 {
+                    empresaMask.Text = value["Nome_Empresa"].ToString();
                     tbDescricaoTaxa.Text = value["Descricao"].ToString();
                     tbNomeEmpresa.Text = value["Nome_Empresa"].ToString();
-                    checkTarifa.Checked = value["Taxa_Tarifa"].ToString() == "Tarifa";
-                    checkTaxa.Checked = value["Taxa_Tarifa"].ToString() == "Taxa";
+                    checkTarifa.Checked = value["Tarifa_ou_taxa"].ToString() == "Tarifa";
+                    checkTaxa.Checked = value["Tarifa_ou_taxa"].ToString() == "Taxa";
                 }
             }
         }
@@ -114,40 +113,40 @@ namespace Interface
                     limpar.CleanControl(searchPanel);
 
                 }
-            
 
-            if (Type.Contains("Update") && Validation.Validar(contentTarifas) && validar())
-            {
-                TMSContext db = new();
 
-                TarifasETaxas tarifasETaxas = db.TarifasETaxas.FirstOrDefault(a => a.Nome_empresa == empresaMask.Text);
-
-                if (tarifasETaxas == null)
+                if (Type.Contains("Update") && Validation.Validar(contentTarifas) && validar())
                 {
-                    MessageBox.Show("Error");
-                    return;
+                    TMSContext db = new();
+
+                    TarifasETaxas tarifasETaxas = db.TarifasETaxas.FirstOrDefault(a => a.Nome_empresa == empresaMask.Text);
+
+                    if (tarifasETaxas == null)
+                    {
+                        MessageBox.Show("Error");
+                        return;
+                    }
+
+                    string selected = string.Empty;
+
+                    if (checkTaxa.Checked)
+                    {
+                        selected = "Taxa";
+                    }
+                    else if (checkTarifa.Checked)
+                    {
+                        selected = "Tarifa";
+                    }
+
+                    tarifasETaxas.Descricao = tbDescricaoTaxa.Text;
+                    tarifasETaxas.Nome_empresa = tbNomeEmpresa.Text;
+                    tarifasETaxas.Tarifa_ou_taxa = selected;
+
+                    db.SaveChanges();
+
+                    limpar.CleanControl(contentTarifas);
+                    limpar.CleanControl(searchPanel);
                 }
-
-                string selected = string.Empty;
-
-                if (checkTaxa.Checked)
-                {
-                    selected = "Taxa";
-                }
-                else if (checkTarifa.Checked)
-                {
-                    selected = "Tarifa";
-                }
-
-                tarifasETaxas.Descricao = tbDescricaoTaxa.Text;
-                tarifasETaxas.Nome_empresa = tbNomeEmpresa.Text;
-                tarifasETaxas.Tarifa_ou_taxa = selected;
-
-                db.SaveChanges();
-
-                limpar.CleanControl(contentTarifas);
-                limpar.CleanControl(searchPanel);
-            }
             }
             catch (DbUpdateException erro)
             {
