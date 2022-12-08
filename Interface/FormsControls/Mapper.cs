@@ -85,7 +85,7 @@ namespace Interface.FormsControls
             if (route.Contains("Processo"))
             {
                 TypeDataDatabase = "Manutencao";
-                TypeWhereDatabase = "ID_manutencao";
+                TypeWhereDatabase = "Placa";
             }
         }
 

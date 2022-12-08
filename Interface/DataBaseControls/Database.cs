@@ -53,13 +53,28 @@ namespace Interface.DataBaseControls
 
                     if (maskedTextBox.MaskCompleted == true && maskedTextBox.Text != "")
                     {
-                        MySqlCommand comandoWhere = new($"SELECT * FROM {mapper.TypeDataDatabase} WHERE {mapper.TypeWhereDatabase} = '{maskedTextBox.Text}'", conexao);
+                        if (Route!.Contains("Processo"))
+                        {
+                            MySqlCommand comandoWhere = new($"SELECT * FROM {mapper.TypeDataDatabase} INNER JOIN Veiculo ON {mapper.TypeDataDatabase}.ID_for_veiculo = Veiculo.ID_veiculo WHERE {mapper.TypeWhereDatabase} = '{maskedTextBox.Text}'", conexao);
 
-                        MySqlDataAdapter mySqlDataAdapterWhere = new(comandoWhere);
+                            MySqlDataAdapter mySqlDataAdapterWhere = new(comandoWhere);
 
-                        mySqlDataAdapterWhere.Fill(dados);
+                            mySqlDataAdapterWhere.Fill(dados);
 
-                        dataGridView.DataSource = dados;
+                            dataGridView.DataSource = dados;
+
+                        }
+                        else
+                        {
+                            MySqlCommand comandoWhere = new($"SELECT * FROM {mapper.TypeDataDatabase} WHERE {mapper.TypeWhereDatabase} = '{maskedTextBox.Text}'", conexao);
+
+                            MySqlDataAdapter mySqlDataAdapterWhere = new(comandoWhere);
+
+                            mySqlDataAdapterWhere.Fill(dados);
+
+                            dataGridView.DataSource = dados;
+                        }
+
                     }
 
                     if (Route!.Contains("Clientes"))
@@ -134,6 +149,21 @@ namespace Interface.DataBaseControls
                             $"LEFT JOIN ProcessoManutencao ON ProcessoManutencao.ID_processo_manutencao = {mapper.TypeDataDatabase}.ID_manutencao " +
                             $"LEFT JOIN Veiculo ON Veiculo.ID_veiculo = {mapper.TypeDataDatabase}.ID_for_veiculo " +
                             $"LEFT JOIN PessoaJuridica ON PessoaJuridica.Nome_fantasia = {mapper.TypeDataDatabase}.ID_for_empresa;", conexao);
+
+                        MySqlDataAdapter mySqlDataAdapter = new(comando);
+
+                        mySqlDataAdapter.Fill(dados);
+
+                        dataGridView.DataSource = dados;
+                    }
+                    else if (Route!.Contains("Terceiros"))
+                    {
+                        MySqlCommand comando = new($"SELECT * FROM {mapper.TypeDataDatabase} " +
+                            $"LEFT JOIN TelefoneMotoristaTerceiro ON {mapper.TypeDataDatabase}.ID_motorista_terceiro = TelefoneMotoristaTerceiro.ID_for_motorista " +
+                            $"LEFT JOIN CelularMotoristaTerceiro ON {mapper.TypeDataDatabase}.ID_motorista_terceiro = CelularMotoristaTerceiro.ID_for_motorista " +
+                            $"LEFT JOIN EmailMotoristaTerceiro ON {mapper.TypeDataDatabase}.ID_motorista_terceiro = EmailMotoristaTerceiro.ID_for_motorista " +
+                            $"LEFT JOIN ContratoMotoristaTerceiro ON {mapper.TypeDataDatabase}.ID_motorista_terceiro = ContratoMotoristaTerceiro.ID_for_motorista " +
+                            $"LEFT JOIN VeiculoTerceiro ON {mapper.TypeDataDatabase}.ID_motorista_terceiro = VeiculoTerceiro.ID_for_motorista;", conexao);
 
                         MySqlDataAdapter mySqlDataAdapter = new(comando);
 
@@ -162,11 +192,23 @@ namespace Interface.DataBaseControls
 
                     conexao.Open();
 
-                    MySqlCommand comandoDelete = new($"DELETE FROM {mapper.TypeDataDatabase} WHERE {mapper.TypeWhereDatabase} = '{maskedTextBox.Text}'", conexao);
+                    if(Route!.Contains("Processo"))
+                    {
+                        MySqlCommand comandoDelete = new($"DELETE FROM {mapper.TypeDataDatabase} where {mapper.TypeDataDatabase}.ID_for_veiculo in(SELECT Veiculo.ID_veiculo FROM Veiculo " +
+                             $" INNER JOIN {mapper.TypeDataDatabase} on {mapper.TypeDataDatabase}.ID_for_veiculo  = Veiculo.ID_veiculo WHERE Veiculo.Placa = {maskedTextBox.Text});", conexao);
 
-                    comandoDelete.ExecuteNonQuery();
+                        comandoDelete.ExecuteNonQuery();
+                        maskedTextBox.Text = "";
+                        MessageBox.Show("Deletado com sucesso!", "Aviso");
+                    }
+                    else
+                    {
+                        MySqlCommand comandoDelete = new($"DELETE FROM {mapper.TypeDataDatabase} WHERE {mapper.TypeWhereDatabase} = '{maskedTextBox.Text}'", conexao);
 
-                    MessageBox.Show("Deletado com sucesso!", "Aviso");
+                        comandoDelete.ExecuteNonQuery();
+
+                        MessageBox.Show("Deletado com sucesso!", "Aviso");
+                    }
 
                     if (Route!.Contains("Clientes"))
                     {
@@ -240,6 +282,21 @@ namespace Interface.DataBaseControls
                             $"LEFT JOIN ProcessoManutencao ON ProcessoManutencao.ID_processo_manutencao = {mapper.TypeDataDatabase}.ID_manutencao " +
                             $"LEFT JOIN Veiculo ON Veiculo.ID_veiculo = {mapper.TypeDataDatabase}.ID_for_veiculo " +
                             $"LEFT JOIN PessoaJuridica ON PessoaJuridica.Nome_fantasia = {mapper.TypeDataDatabase}.ID_for_empresa;", conexao);
+
+                        MySqlDataAdapter mySqlDataAdapter = new(comando);
+
+                        mySqlDataAdapter.Fill(dados);
+
+                        dataGridView.DataSource = dados;
+                    }
+                    else if (Route!.Contains("Terceiros"))
+                    {
+                        MySqlCommand comando = new($"SELECT * FROM {mapper.TypeDataDatabase} " +
+                            $"LEFT JOIN TelefoneMotoristaTerceiro ON {mapper.TypeDataDatabase}.ID_motorista_terceiro = TelefoneMotoristaTerceiro.ID_for_motorista " +
+                            $"LEFT JOIN CelularMotoristaTerceiro ON {mapper.TypeDataDatabase}.ID_motorista_terceiro = CelularMotoristaTerceiro.ID_for_motorista " +
+                            $"LEFT JOIN EmailMotoristaTerceiro ON {mapper.TypeDataDatabase}.ID_motorista_terceiro = EmailMotoristaTerceiro.ID_for_motorista " +
+                            $"LEFT JOIN ContratoMotoristaTerceiro ON {mapper.TypeDataDatabase}.ID_motorista_terceiro = ContratoMotoristaTerceiro.ID_for_motorista " +
+                            $"LEFT JOIN VeiculoTerceiro ON {mapper.TypeDataDatabase}.ID_motorista_terceiro = VeiculoTerceiro.ID_for_motorista;", conexao);
 
                         MySqlDataAdapter mySqlDataAdapter = new(comando);
 
