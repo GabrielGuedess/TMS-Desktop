@@ -164,7 +164,7 @@ namespace Interface
                         motorista.TelefoneFuncionario.Add(telefone);
                     }
                     db.Motorista.Add(motorista);
-                    db.SaveChangesAsync();
+                    db.SaveChanges();
 
                     limpar.CleanControl(contentMotorista);
                     limpar.CleanControl(searchPanel);

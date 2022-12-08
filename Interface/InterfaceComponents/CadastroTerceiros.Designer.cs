@@ -54,6 +54,32 @@ namespace Interface
             this.label11 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tableInfoVeiculo = new System.Windows.Forms.TableLayoutPanel();
+            this.panelVeiculoProprio = new Interface.TemplateComponents.TemplatePanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label28 = new System.Windows.Forms.Label();
+            this.comboVeiculoProprio = new System.Windows.Forms.ComboBox();
+            this.panelPlacaVeiculo = new Interface.TemplateComponents.TemplatePanel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panelBorderRounded13 = new Interface.TemplateComponents.PanelBorderRounded();
+            this.tbPlaca = new Interface.TemplateComponents.TextBoxOnlyNum_Letters();
+            this.label29 = new System.Windows.Forms.Label();
+            this.panelMarca = new Interface.TemplateComponents.TemplatePanel();
+            this.panel31 = new System.Windows.Forms.Panel();
+            this.comboMarca = new System.Windows.Forms.ComboBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.panelTipoVeiculo = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.comboTipoVeiculo = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.panelModelo = new Interface.TemplateComponents.TemplatePanel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.comboModelo = new System.Windows.Forms.ComboBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.panelAnoVeiculo = new Interface.TemplateComponents.TemplatePanel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panelBorderRounded15 = new Interface.TemplateComponents.PanelBorderRounded();
+            this.mkAno = new Interface.TemplateComponents.MasckedboxTemplete();
+            this.label30 = new System.Windows.Forms.Label();
             this.panelRNTRC = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panelBorderRounded1 = new Interface.TemplateComponents.PanelBorderRounded();
@@ -64,24 +90,6 @@ namespace Interface
             this.panelBorderRounded4 = new Interface.TemplateComponents.PanelBorderRounded();
             this.dateVencimentoRENTRC = new Interface.TemplateComponents.MkDate();
             this.label8 = new System.Windows.Forms.Label();
-            this.tipoVeiculo = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.comboTipoVeiculo = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.panelVeiculoProprio = new Interface.TemplateComponents.TemplatePanel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label28 = new System.Windows.Forms.Label();
-            this.comboVeiculoProprio = new System.Windows.Forms.ComboBox();
-            this.panelPlacaVeiculo = new Interface.TemplateComponents.TemplatePanel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panelBorderRounded13 = new Interface.TemplateComponents.PanelBorderRounded();
-            this.tbPlaca = new Interface.TemplateComponents.TextBoxOnlyNum_Letters();
-            this.label29 = new System.Windows.Forms.Label();
-            this.panelAnoVeiculo = new Interface.TemplateComponents.TemplatePanel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panelBorderRounded15 = new Interface.TemplateComponents.PanelBorderRounded();
-            this.mkAno = new Interface.TemplateComponents.MasckedboxTemplete();
-            this.label30 = new System.Windows.Forms.Label();
             this.panelRENAVAM = new Interface.TemplateComponents.TemplatePanel();
             this.panel27 = new System.Windows.Forms.Panel();
             this.panelBorderRounded16 = new Interface.TemplateComponents.PanelBorderRounded();
@@ -92,53 +100,40 @@ namespace Interface
             this.panelBorderRounded17 = new Interface.TemplateComponents.PanelBorderRounded();
             this.mkCodigoCIOT = new Interface.TemplateComponents.MasckedboxTemplete();
             this.label32 = new System.Windows.Forms.Label();
-            this.panelMarca = new Interface.TemplateComponents.TemplatePanel();
-            this.panel31 = new System.Windows.Forms.Panel();
-            this.panelBorderRounded18 = new Interface.TemplateComponents.PanelBorderRounded();
-            this.tbMarca = new Interface.TemplateComponents.TextBoxOnlyNum_Letters();
-            this.label33 = new System.Windows.Forms.Label();
-            this.panelModelo = new Interface.TemplateComponents.TemplatePanel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panelBorderRounded19 = new Interface.TemplateComponents.PanelBorderRounded();
-            this.tbModelo = new Interface.TemplateComponents.TextBoxOnlyNum_Letters();
-            this.label34 = new System.Windows.Forms.Label();
-            this.panelCarroceria = new Interface.TemplateComponents.TemplatePanel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.comboTipoCarroceria = new System.Windows.Forms.ComboBox();
-            this.label35 = new System.Windows.Forms.Label();
             this.panelPesoVeiculo = new Interface.TemplateComponents.TemplatePanel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panelBorderRounded21 = new Interface.TemplateComponents.PanelBorderRounded();
             this.tbPesoVeiculo = new Interface.TemplateComponents.TextKg();
             this.label36 = new System.Windows.Forms.Label();
-            this.templatePanel1 = new Interface.TemplateComponents.TemplatePanel();
-            this.panel35 = new System.Windows.Forms.Panel();
-            this.panelBorderRounded25 = new Interface.TemplateComponents.PanelBorderRounded();
-            this.tbCapacidadeVolumetrica = new Interface.TemplateComponents.TextM3();
-            this.label40 = new System.Windows.Forms.Label();
-            this.templatePanel2 = new Interface.TemplateComponents.TemplatePanel();
-            this.panel36 = new System.Windows.Forms.Panel();
-            this.panelBorderRounded26 = new Interface.TemplateComponents.PanelBorderRounded();
-            this.tbCapacidadePesoMax = new Interface.TemplateComponents.TextKg();
-            this.label41 = new System.Windows.Forms.Label();
-            this.templatePanel3 = new Interface.TemplateComponents.TemplatePanel();
-            this.panel38 = new System.Windows.Forms.Panel();
-            this.label42 = new System.Windows.Forms.Label();
-            this.templatePanel4 = new Interface.TemplateComponents.TemplatePanel();
+            this.panelQuantEixos = new Interface.TemplateComponents.TemplatePanel();
             this.panel32 = new System.Windows.Forms.Panel();
             this.panelBorderRounded22 = new Interface.TemplateComponents.PanelBorderRounded();
             this.tbQuantEixos = new Interface.TemplateComponents.TextBoxOnlyNum();
             this.label37 = new System.Windows.Forms.Label();
-            this.templatePanel5 = new Interface.TemplateComponents.TemplatePanel();
-            this.panel33 = new System.Windows.Forms.Panel();
-            this.panelBorderRounded23 = new Interface.TemplateComponents.PanelBorderRounded();
-            this.tbPesoCarroceria = new Interface.TemplateComponents.TextKg();
-            this.label38 = new System.Windows.Forms.Label();
-            this.templatePanel6 = new Interface.TemplateComponents.TemplatePanel();
+            this.panelPesoMaximo = new Interface.TemplateComponents.TemplatePanel();
+            this.panel36 = new System.Windows.Forms.Panel();
+            this.panelBorderRounded26 = new Interface.TemplateComponents.PanelBorderRounded();
+            this.tbCapacidadePesoMax = new Interface.TemplateComponents.TextKg();
+            this.label41 = new System.Windows.Forms.Label();
+            this.panelCarroceria = new Interface.TemplateComponents.TemplatePanel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.comboTipoCarroceria = new System.Windows.Forms.ComboBox();
+            this.label35 = new System.Windows.Forms.Label();
+            this.panelQuantidadeEixoCarroceria = new Interface.TemplateComponents.TemplatePanel();
             this.panel34 = new System.Windows.Forms.Panel();
             this.panelBorderRounded24 = new Interface.TemplateComponents.PanelBorderRounded();
             this.tbQuantiEixosCarroceria = new Interface.TemplateComponents.TextBoxOnlyNum();
             this.label39 = new System.Windows.Forms.Label();
+            this.panelCapacidadeVolumetrica = new Interface.TemplateComponents.TemplatePanel();
+            this.panel35 = new System.Windows.Forms.Panel();
+            this.panelBorderRounded25 = new Interface.TemplateComponents.PanelBorderRounded();
+            this.tbCapacidadeVolumetrica = new Interface.TemplateComponents.TextM3();
+            this.label40 = new System.Windows.Forms.Label();
+            this.panelPesoCarroceria = new Interface.TemplateComponents.TemplatePanel();
+            this.panel33 = new System.Windows.Forms.Panel();
+            this.panelBorderRounded23 = new Interface.TemplateComponents.PanelBorderRounded();
+            this.tbPesoCarroceria = new Interface.TemplateComponents.TextKg();
+            this.label38 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.tableDadosPessoais = new System.Windows.Forms.TableLayoutPanel();
             this.panelNome = new System.Windows.Forms.Panel();
@@ -264,56 +259,52 @@ namespace Interface
             this.panel24.SuspendLayout();
             this.panelFim.SuspendLayout();
             this.tableInfoVeiculo.SuspendLayout();
+            this.panelVeiculoProprio.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panelPlacaVeiculo.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panelBorderRounded13.SuspendLayout();
+            this.panelMarca.SuspendLayout();
+            this.panel31.SuspendLayout();
+            this.panelTipoVeiculo.SuspendLayout();
+            this.panel12.SuspendLayout();
+            this.panelModelo.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panelAnoVeiculo.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panelBorderRounded15.SuspendLayout();
             this.panelRNTRC.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panelBorderRounded1.SuspendLayout();
             this.panelVenciRNTRC.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panelBorderRounded4.SuspendLayout();
-            this.tipoVeiculo.SuspendLayout();
-            this.panel12.SuspendLayout();
-            this.panelVeiculoProprio.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panelPlacaVeiculo.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panelBorderRounded13.SuspendLayout();
-            this.panelAnoVeiculo.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panelBorderRounded15.SuspendLayout();
             this.panelRENAVAM.SuspendLayout();
             this.panel27.SuspendLayout();
             this.panelBorderRounded16.SuspendLayout();
             this.panelCIOT.SuspendLayout();
             this.panel28.SuspendLayout();
             this.panelBorderRounded17.SuspendLayout();
-            this.panelMarca.SuspendLayout();
-            this.panel31.SuspendLayout();
-            this.panelBorderRounded18.SuspendLayout();
-            this.panelModelo.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panelBorderRounded19.SuspendLayout();
-            this.panelCarroceria.SuspendLayout();
-            this.panel9.SuspendLayout();
             this.panelPesoVeiculo.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panelBorderRounded21.SuspendLayout();
-            this.templatePanel1.SuspendLayout();
-            this.panel35.SuspendLayout();
-            this.panelBorderRounded25.SuspendLayout();
-            this.templatePanel2.SuspendLayout();
-            this.panel36.SuspendLayout();
-            this.panelBorderRounded26.SuspendLayout();
-            this.templatePanel3.SuspendLayout();
-            this.panel38.SuspendLayout();
-            this.templatePanel4.SuspendLayout();
+            this.panelQuantEixos.SuspendLayout();
             this.panel32.SuspendLayout();
             this.panelBorderRounded22.SuspendLayout();
-            this.templatePanel5.SuspendLayout();
-            this.panel33.SuspendLayout();
-            this.panelBorderRounded23.SuspendLayout();
-            this.templatePanel6.SuspendLayout();
+            this.panelPesoMaximo.SuspendLayout();
+            this.panel36.SuspendLayout();
+            this.panelBorderRounded26.SuspendLayout();
+            this.panelCarroceria.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panelQuantidadeEixoCarroceria.SuspendLayout();
             this.panel34.SuspendLayout();
             this.panelBorderRounded24.SuspendLayout();
+            this.panelCapacidadeVolumetrica.SuspendLayout();
+            this.panel35.SuspendLayout();
+            this.panelBorderRounded25.SuspendLayout();
+            this.panelPesoCarroceria.SuspendLayout();
+            this.panel33.SuspendLayout();
+            this.panelBorderRounded23.SuspendLayout();
             this.tableDadosPessoais.SuspendLayout();
             this.panelNome.SuspendLayout();
             this.subpanelNomeClient.SuspendLayout();
@@ -672,9 +663,9 @@ namespace Interface
             this.label1.Location = new System.Drawing.Point(40, 743);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(167, 17);
+            this.label1.Size = new System.Drawing.Size(232, 17);
             this.label1.TabIndex = 19;
-            this.label1.Text = "Informações do Motorista";
+            this.label1.Text = "Informações do Veiculo do Terceiro";
             // 
             // tableInfoVeiculo
             // 
@@ -684,24 +675,23 @@ namespace Interface
             this.tableInfoVeiculo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33332F));
             this.tableInfoVeiculo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableInfoVeiculo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tableInfoVeiculo.Controls.Add(this.panelRNTRC, 0, 1);
-            this.tableInfoVeiculo.Controls.Add(this.panelVenciRNTRC, 1, 1);
-            this.tableInfoVeiculo.Controls.Add(this.tipoVeiculo, 2, 1);
             this.tableInfoVeiculo.Controls.Add(this.panelVeiculoProprio, 0, 0);
             this.tableInfoVeiculo.Controls.Add(this.panelPlacaVeiculo, 1, 0);
-            this.tableInfoVeiculo.Controls.Add(this.panelAnoVeiculo, 2, 0);
-            this.tableInfoVeiculo.Controls.Add(this.panelRENAVAM, 0, 2);
-            this.tableInfoVeiculo.Controls.Add(this.panelCIOT, 1, 2);
-            this.tableInfoVeiculo.Controls.Add(this.panelMarca, 2, 2);
-            this.tableInfoVeiculo.Controls.Add(this.panelModelo, 0, 3);
-            this.tableInfoVeiculo.Controls.Add(this.panelCarroceria, 1, 3);
-            this.tableInfoVeiculo.Controls.Add(this.panelPesoVeiculo, 2, 3);
-            this.tableInfoVeiculo.Controls.Add(this.templatePanel1, 0, 5);
-            this.tableInfoVeiculo.Controls.Add(this.templatePanel2, 1, 5);
-            this.tableInfoVeiculo.Controls.Add(this.templatePanel3, 2, 5);
-            this.tableInfoVeiculo.Controls.Add(this.templatePanel4, 0, 4);
-            this.tableInfoVeiculo.Controls.Add(this.templatePanel5, 1, 4);
-            this.tableInfoVeiculo.Controls.Add(this.templatePanel6, 2, 4);
+            this.tableInfoVeiculo.Controls.Add(this.panelMarca, 2, 0);
+            this.tableInfoVeiculo.Controls.Add(this.panelTipoVeiculo, 0, 1);
+            this.tableInfoVeiculo.Controls.Add(this.panelModelo, 1, 1);
+            this.tableInfoVeiculo.Controls.Add(this.panelAnoVeiculo, 2, 1);
+            this.tableInfoVeiculo.Controls.Add(this.panelRNTRC, 0, 2);
+            this.tableInfoVeiculo.Controls.Add(this.panelVenciRNTRC, 1, 2);
+            this.tableInfoVeiculo.Controls.Add(this.panelRENAVAM, 2, 2);
+            this.tableInfoVeiculo.Controls.Add(this.panelCIOT, 0, 3);
+            this.tableInfoVeiculo.Controls.Add(this.panelPesoVeiculo, 1, 3);
+            this.tableInfoVeiculo.Controls.Add(this.panelQuantEixos, 2, 3);
+            this.tableInfoVeiculo.Controls.Add(this.panelPesoMaximo, 0, 4);
+            this.tableInfoVeiculo.Controls.Add(this.panelCarroceria, 1, 4);
+            this.tableInfoVeiculo.Controls.Add(this.panelQuantidadeEixoCarroceria, 2, 4);
+            this.tableInfoVeiculo.Controls.Add(this.panelCapacidadeVolumetrica, 0, 5);
+            this.tableInfoVeiculo.Controls.Add(this.panelPesoCarroceria, 1, 5);
             this.tableInfoVeiculo.Location = new System.Drawing.Point(40, 775);
             this.tableInfoVeiculo.Margin = new System.Windows.Forms.Padding(0, 0, 0, 30);
             this.tableInfoVeiculo.Name = "tableInfoVeiculo";
@@ -712,195 +702,8 @@ namespace Interface
             this.tableInfoVeiculo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableInfoVeiculo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableInfoVeiculo.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.tableInfoVeiculo.Size = new System.Drawing.Size(895, 596);
+            this.tableInfoVeiculo.Size = new System.Drawing.Size(895, 603);
             this.tableInfoVeiculo.TabIndex = 2;
-            // 
-            // panelRNTRC
-            // 
-            this.panelRNTRC.Controls.Add(this.panel8);
-            this.panelRNTRC.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelRNTRC.Location = new System.Drawing.Point(0, 100);
-            this.panelRNTRC.Margin = new System.Windows.Forms.Padding(0);
-            this.panelRNTRC.Name = "panelRNTRC";
-            this.panelRNTRC.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.panelRNTRC.Size = new System.Drawing.Size(298, 100);
-            this.panelRNTRC.TabIndex = 4;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.Transparent;
-            this.panel8.Controls.Add(this.panelBorderRounded1);
-            this.panel8.Controls.Add(this.label6);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(20, 20);
-            this.panel8.Margin = new System.Windows.Forms.Padding(0);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(258, 70);
-            this.panel8.TabIndex = 9;
-            // 
-            // panelBorderRounded1
-            // 
-            this.panelBorderRounded1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelBorderRounded1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelBorderRounded1.Controls.Add(this.mkRNTRC);
-            this.panelBorderRounded1.Location = new System.Drawing.Point(5, 31);
-            this.panelBorderRounded1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.panelBorderRounded1.Name = "panelBorderRounded1";
-            this.panelBorderRounded1.Size = new System.Drawing.Size(250, 33);
-            this.panelBorderRounded1.TabIndex = 3;
-            // 
-            // mkRNTRC
-            // 
-            this.mkRNTRC.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.mkRNTRC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.mkRNTRC.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.mkRNTRC.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.mkRNTRC.ForeColor = System.Drawing.Color.White;
-            this.mkRNTRC.Location = new System.Drawing.Point(5, 6);
-            this.mkRNTRC.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.mkRNTRC.Mask = "000000000";
-            this.mkRNTRC.Name = "mkRNTRC";
-            this.mkRNTRC.Size = new System.Drawing.Size(241, 22);
-            this.mkRNTRC.TabIndex = 18;
-            this.mkRNTRC.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(5, 5);
-            this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(97, 17);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Nº Da RNTRC";
-            // 
-            // panelVenciRNTRC
-            // 
-            this.panelVenciRNTRC.Controls.Add(this.panel10);
-            this.panelVenciRNTRC.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelVenciRNTRC.Location = new System.Drawing.Point(298, 100);
-            this.panelVenciRNTRC.Margin = new System.Windows.Forms.Padding(0);
-            this.panelVenciRNTRC.Name = "panelVenciRNTRC";
-            this.panelVenciRNTRC.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.panelVenciRNTRC.Size = new System.Drawing.Size(298, 100);
-            this.panelVenciRNTRC.TabIndex = 5;
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.Transparent;
-            this.panel10.Controls.Add(this.panelBorderRounded4);
-            this.panel10.Controls.Add(this.label8);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(20, 20);
-            this.panel10.Margin = new System.Windows.Forms.Padding(0);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(258, 70);
-            this.panel10.TabIndex = 8;
-            // 
-            // panelBorderRounded4
-            // 
-            this.panelBorderRounded4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelBorderRounded4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelBorderRounded4.Controls.Add(this.dateVencimentoRENTRC);
-            this.panelBorderRounded4.Location = new System.Drawing.Point(5, 32);
-            this.panelBorderRounded4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.panelBorderRounded4.Name = "panelBorderRounded4";
-            this.panelBorderRounded4.Size = new System.Drawing.Size(249, 33);
-            this.panelBorderRounded4.TabIndex = 2;
-            // 
-            // dateVencimentoRENTRC
-            // 
-            this.dateVencimentoRENTRC.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateVencimentoRENTRC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.dateVencimentoRENTRC.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dateVencimentoRENTRC.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dateVencimentoRENTRC.ForeColor = System.Drawing.Color.White;
-            this.dateVencimentoRENTRC.Location = new System.Drawing.Point(10, 5);
-            this.dateVencimentoRENTRC.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.dateVencimentoRENTRC.Mask = "00/00/0000";
-            this.dateVencimentoRENTRC.Name = "dateVencimentoRENTRC";
-            this.dateVencimentoRENTRC.Size = new System.Drawing.Size(243, 22);
-            this.dateVencimentoRENTRC.TabIndex = 14;
-            this.dateVencimentoRENTRC.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            this.dateVencimentoRENTRC.ValidatingType = typeof(System.DateTime);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(5, 5);
-            this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(154, 17);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Vencimento da RNTRC";
-            // 
-            // tipoVeiculo
-            // 
-            this.tipoVeiculo.Controls.Add(this.panel12);
-            this.tipoVeiculo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tipoVeiculo.Location = new System.Drawing.Point(596, 100);
-            this.tipoVeiculo.Margin = new System.Windows.Forms.Padding(0);
-            this.tipoVeiculo.Name = "tipoVeiculo";
-            this.tipoVeiculo.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.tipoVeiculo.Size = new System.Drawing.Size(299, 100);
-            this.tipoVeiculo.TabIndex = 6;
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.Transparent;
-            this.panel12.Controls.Add(this.comboTipoVeiculo);
-            this.panel12.Controls.Add(this.label9);
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel12.Location = new System.Drawing.Point(20, 20);
-            this.panel12.Margin = new System.Windows.Forms.Padding(0);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(259, 70);
-            this.panel12.TabIndex = 9;
-            // 
-            // comboTipoVeiculo
-            // 
-            this.comboTipoVeiculo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboTipoVeiculo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
-            this.comboTipoVeiculo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboTipoVeiculo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.comboTipoVeiculo.ForeColor = System.Drawing.Color.White;
-            this.comboTipoVeiculo.FormattingEnabled = true;
-            this.comboTipoVeiculo.Items.AddRange(new object[] {
-            "Moto",
-            "Vans (VUC)",
-            "Furgões",
-            "Caminhão Toco",
-            "Toco/Caminhão Semipesado",
-            "Truck/Caminhão Pesado",
-            "Bi-truck",
-            "Caminhão Trator",
-            "Carreta com dois eixos",
-            "Carreta com três eixos",
-            "Bitrem Articulado",
-            "Rodotrem",
-            "Outros"});
-            this.comboTipoVeiculo.Location = new System.Drawing.Point(6, 31);
-            this.comboTipoVeiculo.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.comboTipoVeiculo.Name = "comboTipoVeiculo";
-            this.comboTipoVeiculo.Size = new System.Drawing.Size(288, 29);
-            this.comboTipoVeiculo.TabIndex = 6;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(5, 4);
-            this.label9.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(106, 17);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Tipo de Veículo";
             // 
             // panelVeiculoProprio
             // 
@@ -1011,11 +814,178 @@ namespace Interface
             this.label29.TabIndex = 0;
             this.label29.Text = "Placa ";
             // 
+            // panelMarca
+            // 
+            this.panelMarca.Controls.Add(this.panel31);
+            this.panelMarca.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMarca.Location = new System.Drawing.Point(596, 0);
+            this.panelMarca.Margin = new System.Windows.Forms.Padding(0);
+            this.panelMarca.Name = "panelMarca";
+            this.panelMarca.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
+            this.panelMarca.Size = new System.Drawing.Size(299, 100);
+            this.panelMarca.TabIndex = 9;
+            // 
+            // panel31
+            // 
+            this.panel31.BackColor = System.Drawing.Color.Transparent;
+            this.panel31.Controls.Add(this.comboMarca);
+            this.panel31.Controls.Add(this.label33);
+            this.panel31.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel31.Location = new System.Drawing.Point(20, 20);
+            this.panel31.Margin = new System.Windows.Forms.Padding(0);
+            this.panel31.Name = "panel31";
+            this.panel31.Size = new System.Drawing.Size(259, 70);
+            this.panel31.TabIndex = 10;
+            // 
+            // comboMarca
+            // 
+            this.comboMarca.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboMarca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
+            this.comboMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboMarca.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.comboMarca.ForeColor = System.Drawing.Color.White;
+            this.comboMarca.FormattingEnabled = true;
+            this.comboMarca.Location = new System.Drawing.Point(6, 31);
+            this.comboMarca.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.comboMarca.Name = "comboMarca";
+            this.comboMarca.Size = new System.Drawing.Size(251, 29);
+            this.comboMarca.TabIndex = 7;
+            this.comboMarca.SelectedIndexChanged += new System.EventHandler(this.comboMarca_SelectedIndexChanged);
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.label33.ForeColor = System.Drawing.Color.White;
+            this.label33.Location = new System.Drawing.Point(5, 4);
+            this.label33.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(47, 17);
+            this.label33.TabIndex = 0;
+            this.label33.Text = "Marca";
+            // 
+            // panelTipoVeiculo
+            // 
+            this.panelTipoVeiculo.Controls.Add(this.panel12);
+            this.panelTipoVeiculo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelTipoVeiculo.Location = new System.Drawing.Point(0, 100);
+            this.panelTipoVeiculo.Margin = new System.Windows.Forms.Padding(0);
+            this.panelTipoVeiculo.Name = "panelTipoVeiculo";
+            this.panelTipoVeiculo.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
+            this.panelTipoVeiculo.Size = new System.Drawing.Size(298, 100);
+            this.panelTipoVeiculo.TabIndex = 6;
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.Transparent;
+            this.panel12.Controls.Add(this.comboTipoVeiculo);
+            this.panel12.Controls.Add(this.label9);
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel12.Location = new System.Drawing.Point(20, 20);
+            this.panel12.Margin = new System.Windows.Forms.Padding(0);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(258, 70);
+            this.panel12.TabIndex = 9;
+            // 
+            // comboTipoVeiculo
+            // 
+            this.comboTipoVeiculo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboTipoVeiculo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
+            this.comboTipoVeiculo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboTipoVeiculo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.comboTipoVeiculo.ForeColor = System.Drawing.Color.White;
+            this.comboTipoVeiculo.FormattingEnabled = true;
+            this.comboTipoVeiculo.Items.AddRange(new object[] {
+            "Moto",
+            "Vans (VUC)",
+            "Furgões",
+            "Caminhão Toco",
+            "Toco/Caminhão Semipesado",
+            "Truck/Caminhão Pesado",
+            "Bi-truck",
+            "Caminhão Trator",
+            "Carreta com dois eixos",
+            "Carreta com três eixos",
+            "Bitrem Articulado",
+            "Rodotrem",
+            "Outros"});
+            this.comboTipoVeiculo.Location = new System.Drawing.Point(6, 31);
+            this.comboTipoVeiculo.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.comboTipoVeiculo.Name = "comboTipoVeiculo";
+            this.comboTipoVeiculo.Size = new System.Drawing.Size(250, 29);
+            this.comboTipoVeiculo.TabIndex = 6;
+            this.comboTipoVeiculo.SelectedIndexChanged += new System.EventHandler(this.comboTipoVeiculo_SelectedIndexChanged);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(5, 4);
+            this.label9.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(106, 17);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Tipo de Veículo";
+            // 
+            // panelModelo
+            // 
+            this.panelModelo.Controls.Add(this.panel7);
+            this.panelModelo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelModelo.Location = new System.Drawing.Point(298, 100);
+            this.panelModelo.Margin = new System.Windows.Forms.Padding(0);
+            this.panelModelo.Name = "panelModelo";
+            this.panelModelo.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
+            this.panelModelo.Size = new System.Drawing.Size(298, 100);
+            this.panelModelo.TabIndex = 10;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.Transparent;
+            this.panel7.Controls.Add(this.comboModelo);
+            this.panel7.Controls.Add(this.label34);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel7.Location = new System.Drawing.Point(20, 20);
+            this.panel7.Margin = new System.Windows.Forms.Padding(0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(258, 70);
+            this.panel7.TabIndex = 10;
+            // 
+            // comboModelo
+            // 
+            this.comboModelo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboModelo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(18)))));
+            this.comboModelo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboModelo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.comboModelo.ForeColor = System.Drawing.Color.White;
+            this.comboModelo.FormattingEnabled = true;
+            this.comboModelo.Location = new System.Drawing.Point(5, 36);
+            this.comboModelo.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.comboModelo.Name = "comboModelo";
+            this.comboModelo.Size = new System.Drawing.Size(243, 29);
+            this.comboModelo.TabIndex = 8;
+            this.comboModelo.SelectedIndexChanged += new System.EventHandler(this.comboModelo_SelectedIndexChanged);
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.label34.ForeColor = System.Drawing.Color.White;
+            this.label34.Location = new System.Drawing.Point(5, 4);
+            this.label34.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(54, 17);
+            this.label34.TabIndex = 0;
+            this.label34.Text = "Modelo";
+            // 
             // panelAnoVeiculo
             // 
             this.panelAnoVeiculo.Controls.Add(this.panel5);
             this.panelAnoVeiculo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelAnoVeiculo.Location = new System.Drawing.Point(596, 0);
+            this.panelAnoVeiculo.Location = new System.Drawing.Point(596, 100);
             this.panelAnoVeiculo.Margin = new System.Windows.Forms.Padding(0);
             this.panelAnoVeiculo.Name = "panelAnoVeiculo";
             this.panelAnoVeiculo.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
@@ -1072,15 +1042,138 @@ namespace Interface
             this.label30.TabIndex = 0;
             this.label30.Text = "Ano";
             // 
+            // panelRNTRC
+            // 
+            this.panelRNTRC.Controls.Add(this.panel8);
+            this.panelRNTRC.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelRNTRC.Location = new System.Drawing.Point(0, 200);
+            this.panelRNTRC.Margin = new System.Windows.Forms.Padding(0);
+            this.panelRNTRC.Name = "panelRNTRC";
+            this.panelRNTRC.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
+            this.panelRNTRC.Size = new System.Drawing.Size(298, 100);
+            this.panelRNTRC.TabIndex = 4;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.Transparent;
+            this.panel8.Controls.Add(this.panelBorderRounded1);
+            this.panel8.Controls.Add(this.label6);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel8.Location = new System.Drawing.Point(20, 20);
+            this.panel8.Margin = new System.Windows.Forms.Padding(0);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(258, 70);
+            this.panel8.TabIndex = 9;
+            // 
+            // panelBorderRounded1
+            // 
+            this.panelBorderRounded1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelBorderRounded1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.panelBorderRounded1.Controls.Add(this.mkRNTRC);
+            this.panelBorderRounded1.Location = new System.Drawing.Point(5, 31);
+            this.panelBorderRounded1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.panelBorderRounded1.Name = "panelBorderRounded1";
+            this.panelBorderRounded1.Size = new System.Drawing.Size(250, 33);
+            this.panelBorderRounded1.TabIndex = 3;
+            // 
+            // mkRNTRC
+            // 
+            this.mkRNTRC.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.mkRNTRC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.mkRNTRC.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mkRNTRC.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.mkRNTRC.ForeColor = System.Drawing.Color.White;
+            this.mkRNTRC.Location = new System.Drawing.Point(5, 6);
+            this.mkRNTRC.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.mkRNTRC.Mask = "000000000";
+            this.mkRNTRC.Name = "mkRNTRC";
+            this.mkRNTRC.Size = new System.Drawing.Size(241, 22);
+            this.mkRNTRC.TabIndex = 18;
+            this.mkRNTRC.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(5, 5);
+            this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(97, 17);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Nº Da RNTRC";
+            // 
+            // panelVenciRNTRC
+            // 
+            this.panelVenciRNTRC.Controls.Add(this.panel10);
+            this.panelVenciRNTRC.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelVenciRNTRC.Location = new System.Drawing.Point(298, 200);
+            this.panelVenciRNTRC.Margin = new System.Windows.Forms.Padding(0);
+            this.panelVenciRNTRC.Name = "panelVenciRNTRC";
+            this.panelVenciRNTRC.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
+            this.panelVenciRNTRC.Size = new System.Drawing.Size(298, 100);
+            this.panelVenciRNTRC.TabIndex = 5;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.Transparent;
+            this.panel10.Controls.Add(this.panelBorderRounded4);
+            this.panel10.Controls.Add(this.label8);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel10.Location = new System.Drawing.Point(20, 20);
+            this.panel10.Margin = new System.Windows.Forms.Padding(0);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(258, 70);
+            this.panel10.TabIndex = 8;
+            // 
+            // panelBorderRounded4
+            // 
+            this.panelBorderRounded4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelBorderRounded4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.panelBorderRounded4.Controls.Add(this.dateVencimentoRENTRC);
+            this.panelBorderRounded4.Location = new System.Drawing.Point(5, 32);
+            this.panelBorderRounded4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.panelBorderRounded4.Name = "panelBorderRounded4";
+            this.panelBorderRounded4.Size = new System.Drawing.Size(249, 33);
+            this.panelBorderRounded4.TabIndex = 2;
+            // 
+            // dateVencimentoRENTRC
+            // 
+            this.dateVencimentoRENTRC.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.dateVencimentoRENTRC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.dateVencimentoRENTRC.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dateVencimentoRENTRC.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dateVencimentoRENTRC.ForeColor = System.Drawing.Color.White;
+            this.dateVencimentoRENTRC.Location = new System.Drawing.Point(10, 5);
+            this.dateVencimentoRENTRC.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.dateVencimentoRENTRC.Mask = "00/00/0000";
+            this.dateVencimentoRENTRC.Name = "dateVencimentoRENTRC";
+            this.dateVencimentoRENTRC.Size = new System.Drawing.Size(243, 22);
+            this.dateVencimentoRENTRC.TabIndex = 14;
+            this.dateVencimentoRENTRC.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.dateVencimentoRENTRC.ValidatingType = typeof(System.DateTime);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(5, 5);
+            this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(154, 17);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Vencimento da RNTRC";
+            // 
             // panelRENAVAM
             // 
             this.panelRENAVAM.Controls.Add(this.panel27);
             this.panelRENAVAM.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelRENAVAM.Location = new System.Drawing.Point(0, 200);
+            this.panelRENAVAM.Location = new System.Drawing.Point(596, 200);
             this.panelRENAVAM.Margin = new System.Windows.Forms.Padding(0);
             this.panelRENAVAM.Name = "panelRENAVAM";
             this.panelRENAVAM.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.panelRENAVAM.Size = new System.Drawing.Size(298, 100);
+            this.panelRENAVAM.Size = new System.Drawing.Size(299, 100);
             this.panelRENAVAM.TabIndex = 7;
             // 
             // panel27
@@ -1092,7 +1185,7 @@ namespace Interface
             this.panel27.Location = new System.Drawing.Point(20, 20);
             this.panel27.Margin = new System.Windows.Forms.Padding(0);
             this.panel27.Name = "panel27";
-            this.panel27.Size = new System.Drawing.Size(258, 70);
+            this.panel27.Size = new System.Drawing.Size(259, 70);
             this.panel27.TabIndex = 10;
             // 
             // panelBorderRounded16
@@ -1103,7 +1196,7 @@ namespace Interface
             this.panelBorderRounded16.Location = new System.Drawing.Point(6, 27);
             this.panelBorderRounded16.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelBorderRounded16.Name = "panelBorderRounded16";
-            this.panelBorderRounded16.Size = new System.Drawing.Size(286, 33);
+            this.panelBorderRounded16.Size = new System.Drawing.Size(287, 33);
             this.panelBorderRounded16.TabIndex = 23;
             // 
             // mkRenavam
@@ -1117,7 +1210,7 @@ namespace Interface
             this.mkRenavam.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.mkRenavam.Mask = "00000000000";
             this.mkRenavam.Name = "mkRenavam";
-            this.mkRenavam.Size = new System.Drawing.Size(208, 22);
+            this.mkRenavam.Size = new System.Drawing.Size(209, 22);
             this.mkRenavam.TabIndex = 23;
             this.mkRenavam.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
@@ -1137,7 +1230,7 @@ namespace Interface
             // 
             this.panelCIOT.Controls.Add(this.panel28);
             this.panelCIOT.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelCIOT.Location = new System.Drawing.Point(298, 200);
+            this.panelCIOT.Location = new System.Drawing.Point(0, 300);
             this.panelCIOT.Margin = new System.Windows.Forms.Padding(0);
             this.panelCIOT.Name = "panelCIOT";
             this.panelCIOT.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
@@ -1194,129 +1287,190 @@ namespace Interface
             this.label32.TabIndex = 0;
             this.label32.Text = "Codigo CIOT";
             // 
-            // panelMarca
+            // panelPesoVeiculo
             // 
-            this.panelMarca.Controls.Add(this.panel31);
-            this.panelMarca.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMarca.Location = new System.Drawing.Point(596, 200);
-            this.panelMarca.Margin = new System.Windows.Forms.Padding(0);
-            this.panelMarca.Name = "panelMarca";
-            this.panelMarca.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.panelMarca.Size = new System.Drawing.Size(299, 100);
-            this.panelMarca.TabIndex = 9;
+            this.panelPesoVeiculo.Controls.Add(this.panel11);
+            this.panelPesoVeiculo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelPesoVeiculo.Location = new System.Drawing.Point(298, 300);
+            this.panelPesoVeiculo.Margin = new System.Windows.Forms.Padding(0);
+            this.panelPesoVeiculo.Name = "panelPesoVeiculo";
+            this.panelPesoVeiculo.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
+            this.panelPesoVeiculo.Size = new System.Drawing.Size(298, 100);
+            this.panelPesoVeiculo.TabIndex = 12;
             // 
-            // panel31
+            // panel11
             // 
-            this.panel31.BackColor = System.Drawing.Color.Transparent;
-            this.panel31.Controls.Add(this.panelBorderRounded18);
-            this.panel31.Controls.Add(this.label33);
-            this.panel31.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel31.Location = new System.Drawing.Point(20, 20);
-            this.panel31.Margin = new System.Windows.Forms.Padding(0);
-            this.panel31.Name = "panel31";
-            this.panel31.Size = new System.Drawing.Size(259, 70);
-            this.panel31.TabIndex = 10;
+            this.panel11.BackColor = System.Drawing.Color.Transparent;
+            this.panel11.Controls.Add(this.panelBorderRounded21);
+            this.panel11.Controls.Add(this.label36);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel11.Location = new System.Drawing.Point(20, 20);
+            this.panel11.Margin = new System.Windows.Forms.Padding(0);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(258, 70);
+            this.panel11.TabIndex = 10;
             // 
-            // panelBorderRounded18
+            // panelBorderRounded21
             // 
-            this.panelBorderRounded18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelBorderRounded18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelBorderRounded18.Controls.Add(this.tbMarca);
-            this.panelBorderRounded18.Location = new System.Drawing.Point(7, 27);
-            this.panelBorderRounded18.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.panelBorderRounded18.Name = "panelBorderRounded18";
-            this.panelBorderRounded18.Size = new System.Drawing.Size(251, 33);
-            this.panelBorderRounded18.TabIndex = 23;
+            this.panelBorderRounded21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelBorderRounded21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.panelBorderRounded21.Controls.Add(this.tbPesoVeiculo);
+            this.panelBorderRounded21.Location = new System.Drawing.Point(0, 36);
+            this.panelBorderRounded21.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.panelBorderRounded21.Name = "panelBorderRounded21";
+            this.panelBorderRounded21.Size = new System.Drawing.Size(262, 33);
+            this.panelBorderRounded21.TabIndex = 23;
             // 
-            // tbMarca
+            // tbPesoVeiculo
             // 
-            this.tbMarca.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbMarca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.tbMarca.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbMarca.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbMarca.ForeColor = System.Drawing.Color.White;
-            this.tbMarca.Location = new System.Drawing.Point(9, 5);
-            this.tbMarca.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.tbMarca.Name = "tbMarca";
-            this.tbMarca.Size = new System.Drawing.Size(238, 22);
-            this.tbMarca.TabIndex = 22;
+            this.tbPesoVeiculo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.tbPesoVeiculo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbPesoVeiculo.Enabled = false;
+            this.tbPesoVeiculo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbPesoVeiculo.ForeColor = System.Drawing.Color.White;
+            this.tbPesoVeiculo.Location = new System.Drawing.Point(13, 8);
+            this.tbPesoVeiculo.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.tbPesoVeiculo.Name = "tbPesoVeiculo";
+            this.tbPesoVeiculo.Size = new System.Drawing.Size(225, 22);
+            this.tbPesoVeiculo.TabIndex = 0;
             // 
-            // label33
+            // label36
             // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.label33.ForeColor = System.Drawing.Color.White;
-            this.label33.Location = new System.Drawing.Point(5, 4);
-            this.label33.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(47, 17);
-            this.label33.TabIndex = 0;
-            this.label33.Text = "Marca";
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.label36.ForeColor = System.Drawing.Color.White;
+            this.label36.Location = new System.Drawing.Point(5, 4);
+            this.label36.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(110, 17);
+            this.label36.TabIndex = 0;
+            this.label36.Text = "Peso do Veículo";
             // 
-            // panelModelo
+            // panelQuantEixos
             // 
-            this.panelModelo.Controls.Add(this.panel7);
-            this.panelModelo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelModelo.Location = new System.Drawing.Point(0, 300);
-            this.panelModelo.Margin = new System.Windows.Forms.Padding(0);
-            this.panelModelo.Name = "panelModelo";
-            this.panelModelo.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.panelModelo.Size = new System.Drawing.Size(298, 100);
-            this.panelModelo.TabIndex = 10;
+            this.panelQuantEixos.Controls.Add(this.panel32);
+            this.panelQuantEixos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelQuantEixos.Location = new System.Drawing.Point(596, 300);
+            this.panelQuantEixos.Margin = new System.Windows.Forms.Padding(0);
+            this.panelQuantEixos.Name = "panelQuantEixos";
+            this.panelQuantEixos.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
+            this.panelQuantEixos.Size = new System.Drawing.Size(299, 100);
+            this.panelQuantEixos.TabIndex = 13;
             // 
-            // panel7
+            // panel32
             // 
-            this.panel7.BackColor = System.Drawing.Color.Transparent;
-            this.panel7.Controls.Add(this.panelBorderRounded19);
-            this.panel7.Controls.Add(this.label34);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(20, 20);
-            this.panel7.Margin = new System.Windows.Forms.Padding(0);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(258, 70);
-            this.panel7.TabIndex = 10;
+            this.panel32.BackColor = System.Drawing.Color.Transparent;
+            this.panel32.Controls.Add(this.panelBorderRounded22);
+            this.panel32.Controls.Add(this.label37);
+            this.panel32.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel32.Location = new System.Drawing.Point(20, 20);
+            this.panel32.Margin = new System.Windows.Forms.Padding(0);
+            this.panel32.Name = "panel32";
+            this.panel32.Size = new System.Drawing.Size(259, 70);
+            this.panel32.TabIndex = 10;
             // 
-            // panelBorderRounded19
+            // panelBorderRounded22
             // 
-            this.panelBorderRounded19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelBorderRounded19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelBorderRounded19.Controls.Add(this.tbModelo);
-            this.panelBorderRounded19.Location = new System.Drawing.Point(0, 36);
-            this.panelBorderRounded19.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.panelBorderRounded19.Name = "panelBorderRounded19";
-            this.panelBorderRounded19.Size = new System.Drawing.Size(264, 33);
-            this.panelBorderRounded19.TabIndex = 23;
+            this.panelBorderRounded22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelBorderRounded22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.panelBorderRounded22.Controls.Add(this.tbQuantEixos);
+            this.panelBorderRounded22.Location = new System.Drawing.Point(5, 36);
+            this.panelBorderRounded22.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.panelBorderRounded22.Name = "panelBorderRounded22";
+            this.panelBorderRounded22.Size = new System.Drawing.Size(254, 33);
+            this.panelBorderRounded22.TabIndex = 23;
             // 
-            // tbModelo
+            // tbQuantEixos
             // 
-            this.tbModelo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbModelo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.tbModelo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbModelo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbModelo.ForeColor = System.Drawing.Color.White;
-            this.tbModelo.Location = new System.Drawing.Point(10, 5);
-            this.tbModelo.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.tbModelo.Name = "tbModelo";
-            this.tbModelo.Size = new System.Drawing.Size(251, 22);
-            this.tbModelo.TabIndex = 22;
+            this.tbQuantEixos.AcceptsReturn = true;
+            this.tbQuantEixos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbQuantEixos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.tbQuantEixos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbQuantEixos.Enabled = false;
+            this.tbQuantEixos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbQuantEixos.ForeColor = System.Drawing.Color.White;
+            this.tbQuantEixos.Location = new System.Drawing.Point(10, 7);
+            this.tbQuantEixos.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.tbQuantEixos.Name = "tbQuantEixos";
+            this.tbQuantEixos.Size = new System.Drawing.Size(240, 22);
+            this.tbQuantEixos.TabIndex = 0;
             // 
-            // label34
+            // label37
             // 
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.label34.ForeColor = System.Drawing.Color.White;
-            this.label34.Location = new System.Drawing.Point(5, 4);
-            this.label34.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(54, 17);
-            this.label34.TabIndex = 0;
-            this.label34.Text = "Modelo";
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.label37.ForeColor = System.Drawing.Color.White;
+            this.label37.Location = new System.Drawing.Point(5, 4);
+            this.label37.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(139, 17);
+            this.label37.TabIndex = 0;
+            this.label37.Text = "Quantidade de Eixos";
+            // 
+            // panelPesoMaximo
+            // 
+            this.panelPesoMaximo.Controls.Add(this.panel36);
+            this.panelPesoMaximo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelPesoMaximo.Location = new System.Drawing.Point(0, 400);
+            this.panelPesoMaximo.Margin = new System.Windows.Forms.Padding(0);
+            this.panelPesoMaximo.Name = "panelPesoMaximo";
+            this.panelPesoMaximo.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
+            this.panelPesoMaximo.Size = new System.Drawing.Size(298, 100);
+            this.panelPesoMaximo.TabIndex = 17;
+            // 
+            // panel36
+            // 
+            this.panel36.BackColor = System.Drawing.Color.Transparent;
+            this.panel36.Controls.Add(this.panelBorderRounded26);
+            this.panel36.Controls.Add(this.label41);
+            this.panel36.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel36.Location = new System.Drawing.Point(20, 20);
+            this.panel36.Margin = new System.Windows.Forms.Padding(0);
+            this.panel36.Name = "panel36";
+            this.panel36.Size = new System.Drawing.Size(258, 70);
+            this.panel36.TabIndex = 10;
+            // 
+            // panelBorderRounded26
+            // 
+            this.panelBorderRounded26.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelBorderRounded26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.panelBorderRounded26.Controls.Add(this.tbCapacidadePesoMax);
+            this.panelBorderRounded26.Location = new System.Drawing.Point(7, 36);
+            this.panelBorderRounded26.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.panelBorderRounded26.Name = "panelBorderRounded26";
+            this.panelBorderRounded26.Size = new System.Drawing.Size(251, 33);
+            this.panelBorderRounded26.TabIndex = 23;
+            // 
+            // tbCapacidadePesoMax
+            // 
+            this.tbCapacidadePesoMax.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.tbCapacidadePesoMax.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbCapacidadePesoMax.Enabled = false;
+            this.tbCapacidadePesoMax.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbCapacidadePesoMax.ForeColor = System.Drawing.Color.White;
+            this.tbCapacidadePesoMax.Location = new System.Drawing.Point(8, 5);
+            this.tbCapacidadePesoMax.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.tbCapacidadePesoMax.Name = "tbCapacidadePesoMax";
+            this.tbCapacidadePesoMax.Size = new System.Drawing.Size(225, 22);
+            this.tbCapacidadePesoMax.TabIndex = 1;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.label41.ForeColor = System.Drawing.Color.White;
+            this.label41.Location = new System.Drawing.Point(5, 4);
+            this.label41.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(190, 17);
+            this.label41.TabIndex = 0;
+            this.label41.Text = "Capacidade de Peso Maximo";
             // 
             // panelCarroceria
             // 
             this.panelCarroceria.Controls.Add(this.panel9);
             this.panelCarroceria.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelCarroceria.Location = new System.Drawing.Point(298, 300);
+            this.panelCarroceria.Location = new System.Drawing.Point(298, 400);
             this.panelCarroceria.Margin = new System.Windows.Forms.Padding(0);
             this.panelCarroceria.Name = "panelCarroceria";
             this.panelCarroceria.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
@@ -1344,25 +1498,12 @@ namespace Interface
             this.comboTipoCarroceria.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.comboTipoCarroceria.ForeColor = System.Drawing.Color.White;
             this.comboTipoCarroceria.FormattingEnabled = true;
-            this.comboTipoCarroceria.Items.AddRange(new object[] {
-            "Moto",
-            "Vans (VUC)",
-            "Furgões",
-            "Caminhão Toco",
-            "Toco/Caminhão Semipesado",
-            "Truck/Caminhão Pesado",
-            "Bi-truck",
-            "Caminhão Trator",
-            "Carreta com dois eixos",
-            "Carreta com três eixos",
-            "Bitrem Articulado",
-            "Rodotrem",
-            "Outros"});
             this.comboTipoCarroceria.Location = new System.Drawing.Point(10, 36);
             this.comboTipoCarroceria.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.comboTipoCarroceria.Name = "comboTipoCarroceria";
-            this.comboTipoCarroceria.Size = new System.Drawing.Size(249, 29);
+            this.comboTipoCarroceria.Size = new System.Drawing.Size(243, 29);
             this.comboTipoCarroceria.TabIndex = 7;
+            this.comboTipoCarroceria.SelectedIndexChanged += new System.EventHandler(this.comboTipoCarroceria_SelectedIndexChanged);
             // 
             // label35
             // 
@@ -1376,342 +1517,16 @@ namespace Interface
             this.label35.TabIndex = 0;
             this.label35.Text = "Tipo de Carroceria";
             // 
-            // panelPesoVeiculo
+            // panelQuantidadeEixoCarroceria
             // 
-            this.panelPesoVeiculo.Controls.Add(this.panel11);
-            this.panelPesoVeiculo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelPesoVeiculo.Location = new System.Drawing.Point(596, 300);
-            this.panelPesoVeiculo.Margin = new System.Windows.Forms.Padding(0);
-            this.panelPesoVeiculo.Name = "panelPesoVeiculo";
-            this.panelPesoVeiculo.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.panelPesoVeiculo.Size = new System.Drawing.Size(299, 100);
-            this.panelPesoVeiculo.TabIndex = 12;
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.Transparent;
-            this.panel11.Controls.Add(this.panelBorderRounded21);
-            this.panel11.Controls.Add(this.label36);
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel11.Location = new System.Drawing.Point(20, 20);
-            this.panel11.Margin = new System.Windows.Forms.Padding(0);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(259, 70);
-            this.panel11.TabIndex = 10;
-            // 
-            // panelBorderRounded21
-            // 
-            this.panelBorderRounded21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelBorderRounded21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelBorderRounded21.Controls.Add(this.tbPesoVeiculo);
-            this.panelBorderRounded21.Location = new System.Drawing.Point(0, 36);
-            this.panelBorderRounded21.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.panelBorderRounded21.Name = "panelBorderRounded21";
-            this.panelBorderRounded21.Size = new System.Drawing.Size(263, 33);
-            this.panelBorderRounded21.TabIndex = 23;
-            // 
-            // tbPesoVeiculo
-            // 
-            this.tbPesoVeiculo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.tbPesoVeiculo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbPesoVeiculo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbPesoVeiculo.ForeColor = System.Drawing.Color.White;
-            this.tbPesoVeiculo.Location = new System.Drawing.Point(13, 8);
-            this.tbPesoVeiculo.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.tbPesoVeiculo.Name = "tbPesoVeiculo";
-            this.tbPesoVeiculo.Size = new System.Drawing.Size(225, 22);
-            this.tbPesoVeiculo.TabIndex = 0;
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.label36.ForeColor = System.Drawing.Color.White;
-            this.label36.Location = new System.Drawing.Point(5, 4);
-            this.label36.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(110, 17);
-            this.label36.TabIndex = 0;
-            this.label36.Text = "Peso do Veículo";
-            // 
-            // templatePanel1
-            // 
-            this.templatePanel1.Controls.Add(this.panel35);
-            this.templatePanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.templatePanel1.Location = new System.Drawing.Point(0, 500);
-            this.templatePanel1.Margin = new System.Windows.Forms.Padding(0);
-            this.templatePanel1.Name = "templatePanel1";
-            this.templatePanel1.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.templatePanel1.Size = new System.Drawing.Size(298, 100);
-            this.templatePanel1.TabIndex = 16;
-            // 
-            // panel35
-            // 
-            this.panel35.BackColor = System.Drawing.Color.Transparent;
-            this.panel35.Controls.Add(this.panelBorderRounded25);
-            this.panel35.Controls.Add(this.label40);
-            this.panel35.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel35.Location = new System.Drawing.Point(20, 20);
-            this.panel35.Margin = new System.Windows.Forms.Padding(0);
-            this.panel35.Name = "panel35";
-            this.panel35.Size = new System.Drawing.Size(258, 70);
-            this.panel35.TabIndex = 10;
-            // 
-            // panelBorderRounded25
-            // 
-            this.panelBorderRounded25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelBorderRounded25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelBorderRounded25.Controls.Add(this.tbCapacidadeVolumetrica);
-            this.panelBorderRounded25.Location = new System.Drawing.Point(5, 36);
-            this.panelBorderRounded25.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.panelBorderRounded25.Name = "panelBorderRounded25";
-            this.panelBorderRounded25.Size = new System.Drawing.Size(253, 33);
-            this.panelBorderRounded25.TabIndex = 23;
-            // 
-            // tbCapacidadeVolumetrica
-            // 
-            this.tbCapacidadeVolumetrica.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.tbCapacidadeVolumetrica.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbCapacidadeVolumetrica.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbCapacidadeVolumetrica.ForeColor = System.Drawing.Color.White;
-            this.tbCapacidadeVolumetrica.Location = new System.Drawing.Point(10, 5);
-            this.tbCapacidadeVolumetrica.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.tbCapacidadeVolumetrica.Name = "tbCapacidadeVolumetrica";
-            this.tbCapacidadeVolumetrica.Size = new System.Drawing.Size(225, 22);
-            this.tbCapacidadeVolumetrica.TabIndex = 0;
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.label40.ForeColor = System.Drawing.Color.White;
-            this.label40.Location = new System.Drawing.Point(5, 4);
-            this.label40.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(161, 17);
-            this.label40.TabIndex = 0;
-            this.label40.Text = "Capacidade Volumetrica";
-            // 
-            // templatePanel2
-            // 
-            this.templatePanel2.Controls.Add(this.panel36);
-            this.templatePanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.templatePanel2.Location = new System.Drawing.Point(298, 500);
-            this.templatePanel2.Margin = new System.Windows.Forms.Padding(0);
-            this.templatePanel2.Name = "templatePanel2";
-            this.templatePanel2.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.templatePanel2.Size = new System.Drawing.Size(298, 100);
-            this.templatePanel2.TabIndex = 17;
-            // 
-            // panel36
-            // 
-            this.panel36.BackColor = System.Drawing.Color.Transparent;
-            this.panel36.Controls.Add(this.panelBorderRounded26);
-            this.panel36.Controls.Add(this.label41);
-            this.panel36.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel36.Location = new System.Drawing.Point(20, 20);
-            this.panel36.Margin = new System.Windows.Forms.Padding(0);
-            this.panel36.Name = "panel36";
-            this.panel36.Size = new System.Drawing.Size(258, 70);
-            this.panel36.TabIndex = 10;
-            // 
-            // panelBorderRounded26
-            // 
-            this.panelBorderRounded26.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelBorderRounded26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelBorderRounded26.Controls.Add(this.tbCapacidadePesoMax);
-            this.panelBorderRounded26.Location = new System.Drawing.Point(7, 36);
-            this.panelBorderRounded26.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.panelBorderRounded26.Name = "panelBorderRounded26";
-            this.panelBorderRounded26.Size = new System.Drawing.Size(253, 33);
-            this.panelBorderRounded26.TabIndex = 23;
-            // 
-            // tbCapacidadePesoMax
-            // 
-            this.tbCapacidadePesoMax.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.tbCapacidadePesoMax.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbCapacidadePesoMax.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbCapacidadePesoMax.ForeColor = System.Drawing.Color.White;
-            this.tbCapacidadePesoMax.Location = new System.Drawing.Point(8, 5);
-            this.tbCapacidadePesoMax.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.tbCapacidadePesoMax.Name = "tbCapacidadePesoMax";
-            this.tbCapacidadePesoMax.Size = new System.Drawing.Size(225, 22);
-            this.tbCapacidadePesoMax.TabIndex = 1;
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.label41.ForeColor = System.Drawing.Color.White;
-            this.label41.Location = new System.Drawing.Point(5, 4);
-            this.label41.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(190, 17);
-            this.label41.TabIndex = 0;
-            this.label41.Text = "Capacidade de Peso Maximo";
-            // 
-            // templatePanel3
-            // 
-            this.templatePanel3.Controls.Add(this.panel38);
-            this.templatePanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.templatePanel3.Location = new System.Drawing.Point(596, 500);
-            this.templatePanel3.Margin = new System.Windows.Forms.Padding(0);
-            this.templatePanel3.Name = "templatePanel3";
-            this.templatePanel3.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.templatePanel3.Size = new System.Drawing.Size(299, 100);
-            this.templatePanel3.TabIndex = 18;
-            // 
-            // panel38
-            // 
-            this.panel38.BackColor = System.Drawing.Color.Transparent;
-            this.panel38.Controls.Add(this.label42);
-            this.panel38.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel38.Location = new System.Drawing.Point(20, 20);
-            this.panel38.Margin = new System.Windows.Forms.Padding(0);
-            this.panel38.Name = "panel38";
-            this.panel38.Size = new System.Drawing.Size(259, 70);
-            this.panel38.TabIndex = 10;
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.label42.ForeColor = System.Drawing.Color.White;
-            this.label42.Location = new System.Drawing.Point(5, 4);
-            this.label42.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(106, 17);
-            this.label42.TabIndex = 0;
-            this.label42.Text = "Tipo de Veículo";
-            // 
-            // templatePanel4
-            // 
-            this.templatePanel4.Controls.Add(this.panel32);
-            this.templatePanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.templatePanel4.Location = new System.Drawing.Point(0, 400);
-            this.templatePanel4.Margin = new System.Windows.Forms.Padding(0);
-            this.templatePanel4.Name = "templatePanel4";
-            this.templatePanel4.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.templatePanel4.Size = new System.Drawing.Size(298, 100);
-            this.templatePanel4.TabIndex = 13;
-            // 
-            // panel32
-            // 
-            this.panel32.BackColor = System.Drawing.Color.Transparent;
-            this.panel32.Controls.Add(this.panelBorderRounded22);
-            this.panel32.Controls.Add(this.label37);
-            this.panel32.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel32.Location = new System.Drawing.Point(20, 20);
-            this.panel32.Margin = new System.Windows.Forms.Padding(0);
-            this.panel32.Name = "panel32";
-            this.panel32.Size = new System.Drawing.Size(258, 70);
-            this.panel32.TabIndex = 10;
-            // 
-            // panelBorderRounded22
-            // 
-            this.panelBorderRounded22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelBorderRounded22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelBorderRounded22.Controls.Add(this.tbQuantEixos);
-            this.panelBorderRounded22.Location = new System.Drawing.Point(5, 36);
-            this.panelBorderRounded22.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.panelBorderRounded22.Name = "panelBorderRounded22";
-            this.panelBorderRounded22.Size = new System.Drawing.Size(253, 33);
-            this.panelBorderRounded22.TabIndex = 23;
-            // 
-            // tbQuantEixos
-            // 
-            this.tbQuantEixos.AcceptsReturn = true;
-            this.tbQuantEixos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbQuantEixos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.tbQuantEixos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbQuantEixos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbQuantEixos.ForeColor = System.Drawing.Color.White;
-            this.tbQuantEixos.Location = new System.Drawing.Point(10, 7);
-            this.tbQuantEixos.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.tbQuantEixos.Name = "tbQuantEixos";
-            this.tbQuantEixos.Size = new System.Drawing.Size(239, 22);
-            this.tbQuantEixos.TabIndex = 0;
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.label37.ForeColor = System.Drawing.Color.White;
-            this.label37.Location = new System.Drawing.Point(5, 4);
-            this.label37.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(139, 17);
-            this.label37.TabIndex = 0;
-            this.label37.Text = "Quantidade de Eixos";
-            // 
-            // templatePanel5
-            // 
-            this.templatePanel5.Controls.Add(this.panel33);
-            this.templatePanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.templatePanel5.Location = new System.Drawing.Point(298, 400);
-            this.templatePanel5.Margin = new System.Windows.Forms.Padding(0);
-            this.templatePanel5.Name = "templatePanel5";
-            this.templatePanel5.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.templatePanel5.Size = new System.Drawing.Size(298, 100);
-            this.templatePanel5.TabIndex = 14;
-            // 
-            // panel33
-            // 
-            this.panel33.BackColor = System.Drawing.Color.Transparent;
-            this.panel33.Controls.Add(this.panelBorderRounded23);
-            this.panel33.Controls.Add(this.label38);
-            this.panel33.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel33.Location = new System.Drawing.Point(20, 20);
-            this.panel33.Margin = new System.Windows.Forms.Padding(0);
-            this.panel33.Name = "panel33";
-            this.panel33.Size = new System.Drawing.Size(258, 70);
-            this.panel33.TabIndex = 10;
-            // 
-            // panelBorderRounded23
-            // 
-            this.panelBorderRounded23.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelBorderRounded23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelBorderRounded23.Controls.Add(this.tbPesoCarroceria);
-            this.panelBorderRounded23.Location = new System.Drawing.Point(11, 36);
-            this.panelBorderRounded23.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.panelBorderRounded23.Name = "panelBorderRounded23";
-            this.panelBorderRounded23.Size = new System.Drawing.Size(253, 33);
-            this.panelBorderRounded23.TabIndex = 23;
-            // 
-            // tbPesoCarroceria
-            // 
-            this.tbPesoCarroceria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.tbPesoCarroceria.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbPesoCarroceria.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbPesoCarroceria.ForeColor = System.Drawing.Color.White;
-            this.tbPesoCarroceria.Location = new System.Drawing.Point(10, 6);
-            this.tbPesoCarroceria.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.tbPesoCarroceria.Name = "tbPesoCarroceria";
-            this.tbPesoCarroceria.Size = new System.Drawing.Size(225, 22);
-            this.tbPesoCarroceria.TabIndex = 0;
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.label38.ForeColor = System.Drawing.Color.White;
-            this.label38.Location = new System.Drawing.Point(5, 4);
-            this.label38.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(130, 17);
-            this.label38.TabIndex = 0;
-            this.label38.Text = "Peso da Carroceria";
-            // 
-            // templatePanel6
-            // 
-            this.templatePanel6.Controls.Add(this.panel34);
-            this.templatePanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.templatePanel6.Location = new System.Drawing.Point(596, 400);
-            this.templatePanel6.Margin = new System.Windows.Forms.Padding(0);
-            this.templatePanel6.Name = "templatePanel6";
-            this.templatePanel6.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.templatePanel6.Size = new System.Drawing.Size(299, 100);
-            this.templatePanel6.TabIndex = 15;
+            this.panelQuantidadeEixoCarroceria.Controls.Add(this.panel34);
+            this.panelQuantidadeEixoCarroceria.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelQuantidadeEixoCarroceria.Location = new System.Drawing.Point(596, 400);
+            this.panelQuantidadeEixoCarroceria.Margin = new System.Windows.Forms.Padding(0);
+            this.panelQuantidadeEixoCarroceria.Name = "panelQuantidadeEixoCarroceria";
+            this.panelQuantidadeEixoCarroceria.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
+            this.panelQuantidadeEixoCarroceria.Size = new System.Drawing.Size(299, 100);
+            this.panelQuantidadeEixoCarroceria.TabIndex = 15;
             // 
             // panel34
             // 
@@ -1741,6 +1556,7 @@ namespace Interface
             this.tbQuantiEixosCarroceria.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tbQuantiEixosCarroceria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
             this.tbQuantiEixosCarroceria.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbQuantiEixosCarroceria.Enabled = false;
             this.tbQuantiEixosCarroceria.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tbQuantiEixosCarroceria.ForeColor = System.Drawing.Color.White;
             this.tbQuantiEixosCarroceria.Location = new System.Drawing.Point(10, 5);
@@ -1760,6 +1576,124 @@ namespace Interface
             this.label39.Size = new System.Drawing.Size(229, 17);
             this.label39.TabIndex = 0;
             this.label39.Text = "Quantidade de Eixos da Carroceria";
+            // 
+            // panelCapacidadeVolumetrica
+            // 
+            this.panelCapacidadeVolumetrica.Controls.Add(this.panel35);
+            this.panelCapacidadeVolumetrica.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelCapacidadeVolumetrica.Location = new System.Drawing.Point(0, 500);
+            this.panelCapacidadeVolumetrica.Margin = new System.Windows.Forms.Padding(0);
+            this.panelCapacidadeVolumetrica.Name = "panelCapacidadeVolumetrica";
+            this.panelCapacidadeVolumetrica.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
+            this.panelCapacidadeVolumetrica.Size = new System.Drawing.Size(298, 103);
+            this.panelCapacidadeVolumetrica.TabIndex = 16;
+            // 
+            // panel35
+            // 
+            this.panel35.BackColor = System.Drawing.Color.Transparent;
+            this.panel35.Controls.Add(this.panelBorderRounded25);
+            this.panel35.Controls.Add(this.label40);
+            this.panel35.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel35.Location = new System.Drawing.Point(20, 20);
+            this.panel35.Margin = new System.Windows.Forms.Padding(0);
+            this.panel35.Name = "panel35";
+            this.panel35.Size = new System.Drawing.Size(258, 73);
+            this.panel35.TabIndex = 10;
+            // 
+            // panelBorderRounded25
+            // 
+            this.panelBorderRounded25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelBorderRounded25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.panelBorderRounded25.Controls.Add(this.tbCapacidadeVolumetrica);
+            this.panelBorderRounded25.Location = new System.Drawing.Point(5, 37);
+            this.panelBorderRounded25.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.panelBorderRounded25.Name = "panelBorderRounded25";
+            this.panelBorderRounded25.Size = new System.Drawing.Size(253, 33);
+            this.panelBorderRounded25.TabIndex = 23;
+            // 
+            // tbCapacidadeVolumetrica
+            // 
+            this.tbCapacidadeVolumetrica.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.tbCapacidadeVolumetrica.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbCapacidadeVolumetrica.Enabled = false;
+            this.tbCapacidadeVolumetrica.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbCapacidadeVolumetrica.ForeColor = System.Drawing.Color.White;
+            this.tbCapacidadeVolumetrica.Location = new System.Drawing.Point(10, 5);
+            this.tbCapacidadeVolumetrica.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.tbCapacidadeVolumetrica.Name = "tbCapacidadeVolumetrica";
+            this.tbCapacidadeVolumetrica.Size = new System.Drawing.Size(225, 22);
+            this.tbCapacidadeVolumetrica.TabIndex = 0;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.label40.ForeColor = System.Drawing.Color.White;
+            this.label40.Location = new System.Drawing.Point(5, 4);
+            this.label40.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(161, 17);
+            this.label40.TabIndex = 0;
+            this.label40.Text = "Capacidade Volumetrica";
+            // 
+            // panelPesoCarroceria
+            // 
+            this.panelPesoCarroceria.Controls.Add(this.panel33);
+            this.panelPesoCarroceria.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelPesoCarroceria.Location = new System.Drawing.Point(298, 500);
+            this.panelPesoCarroceria.Margin = new System.Windows.Forms.Padding(0);
+            this.panelPesoCarroceria.Name = "panelPesoCarroceria";
+            this.panelPesoCarroceria.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
+            this.panelPesoCarroceria.Size = new System.Drawing.Size(298, 103);
+            this.panelPesoCarroceria.TabIndex = 14;
+            // 
+            // panel33
+            // 
+            this.panel33.BackColor = System.Drawing.Color.Transparent;
+            this.panel33.Controls.Add(this.panelBorderRounded23);
+            this.panel33.Controls.Add(this.label38);
+            this.panel33.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel33.Location = new System.Drawing.Point(20, 20);
+            this.panel33.Margin = new System.Windows.Forms.Padding(0);
+            this.panel33.Name = "panel33";
+            this.panel33.Size = new System.Drawing.Size(258, 73);
+            this.panel33.TabIndex = 10;
+            // 
+            // panelBorderRounded23
+            // 
+            this.panelBorderRounded23.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelBorderRounded23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.panelBorderRounded23.Controls.Add(this.tbPesoCarroceria);
+            this.panelBorderRounded23.Location = new System.Drawing.Point(11, 37);
+            this.panelBorderRounded23.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.panelBorderRounded23.Name = "panelBorderRounded23";
+            this.panelBorderRounded23.Size = new System.Drawing.Size(253, 33);
+            this.panelBorderRounded23.TabIndex = 23;
+            // 
+            // tbPesoCarroceria
+            // 
+            this.tbPesoCarroceria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.tbPesoCarroceria.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbPesoCarroceria.Enabled = false;
+            this.tbPesoCarroceria.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbPesoCarroceria.ForeColor = System.Drawing.Color.White;
+            this.tbPesoCarroceria.Location = new System.Drawing.Point(10, 6);
+            this.tbPesoCarroceria.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.tbPesoCarroceria.Name = "tbPesoCarroceria";
+            this.tbPesoCarroceria.Size = new System.Drawing.Size(225, 22);
+            this.tbPesoCarroceria.TabIndex = 0;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.label38.ForeColor = System.Drawing.Color.White;
+            this.label38.Location = new System.Drawing.Point(5, 4);
+            this.label38.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(130, 17);
+            this.label38.TabIndex = 0;
+            this.label38.Text = "Peso da Carroceria";
             // 
             // label18
             // 
@@ -3260,6 +3194,28 @@ namespace Interface
             this.panelFim.ResumeLayout(false);
             this.panelFim.PerformLayout();
             this.tableInfoVeiculo.ResumeLayout(false);
+            this.panelVeiculoProprio.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panelPlacaVeiculo.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panelBorderRounded13.ResumeLayout(false);
+            this.panelBorderRounded13.PerformLayout();
+            this.panelMarca.ResumeLayout(false);
+            this.panel31.ResumeLayout(false);
+            this.panel31.PerformLayout();
+            this.panelTipoVeiculo.ResumeLayout(false);
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
+            this.panelModelo.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panelAnoVeiculo.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panelBorderRounded15.ResumeLayout(false);
+            this.panelBorderRounded15.PerformLayout();
             this.panelRNTRC.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
@@ -3270,22 +3226,6 @@ namespace Interface
             this.panel10.PerformLayout();
             this.panelBorderRounded4.ResumeLayout(false);
             this.panelBorderRounded4.PerformLayout();
-            this.tipoVeiculo.ResumeLayout(false);
-            this.panel12.ResumeLayout(false);
-            this.panel12.PerformLayout();
-            this.panelVeiculoProprio.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panelPlacaVeiculo.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panelBorderRounded13.ResumeLayout(false);
-            this.panelBorderRounded13.PerformLayout();
-            this.panelAnoVeiculo.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panelBorderRounded15.ResumeLayout(false);
-            this.panelBorderRounded15.PerformLayout();
             this.panelRENAVAM.ResumeLayout(false);
             this.panel27.ResumeLayout(false);
             this.panel27.PerformLayout();
@@ -3296,52 +3236,39 @@ namespace Interface
             this.panel28.PerformLayout();
             this.panelBorderRounded17.ResumeLayout(false);
             this.panelBorderRounded17.PerformLayout();
-            this.panelMarca.ResumeLayout(false);
-            this.panel31.ResumeLayout(false);
-            this.panel31.PerformLayout();
-            this.panelBorderRounded18.ResumeLayout(false);
-            this.panelBorderRounded18.PerformLayout();
-            this.panelModelo.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            this.panelBorderRounded19.ResumeLayout(false);
-            this.panelBorderRounded19.PerformLayout();
-            this.panelCarroceria.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
             this.panelPesoVeiculo.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             this.panelBorderRounded21.ResumeLayout(false);
             this.panelBorderRounded21.PerformLayout();
-            this.templatePanel1.ResumeLayout(false);
-            this.panel35.ResumeLayout(false);
-            this.panel35.PerformLayout();
-            this.panelBorderRounded25.ResumeLayout(false);
-            this.panelBorderRounded25.PerformLayout();
-            this.templatePanel2.ResumeLayout(false);
-            this.panel36.ResumeLayout(false);
-            this.panel36.PerformLayout();
-            this.panelBorderRounded26.ResumeLayout(false);
-            this.panelBorderRounded26.PerformLayout();
-            this.templatePanel3.ResumeLayout(false);
-            this.panel38.ResumeLayout(false);
-            this.panel38.PerformLayout();
-            this.templatePanel4.ResumeLayout(false);
+            this.panelQuantEixos.ResumeLayout(false);
             this.panel32.ResumeLayout(false);
             this.panel32.PerformLayout();
             this.panelBorderRounded22.ResumeLayout(false);
             this.panelBorderRounded22.PerformLayout();
-            this.templatePanel5.ResumeLayout(false);
-            this.panel33.ResumeLayout(false);
-            this.panel33.PerformLayout();
-            this.panelBorderRounded23.ResumeLayout(false);
-            this.panelBorderRounded23.PerformLayout();
-            this.templatePanel6.ResumeLayout(false);
+            this.panelPesoMaximo.ResumeLayout(false);
+            this.panel36.ResumeLayout(false);
+            this.panel36.PerformLayout();
+            this.panelBorderRounded26.ResumeLayout(false);
+            this.panelBorderRounded26.PerformLayout();
+            this.panelCarroceria.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
+            this.panelQuantidadeEixoCarroceria.ResumeLayout(false);
             this.panel34.ResumeLayout(false);
             this.panel34.PerformLayout();
             this.panelBorderRounded24.ResumeLayout(false);
             this.panelBorderRounded24.PerformLayout();
+            this.panelCapacidadeVolumetrica.ResumeLayout(false);
+            this.panel35.ResumeLayout(false);
+            this.panel35.PerformLayout();
+            this.panelBorderRounded25.ResumeLayout(false);
+            this.panelBorderRounded25.PerformLayout();
+            this.panelPesoCarroceria.ResumeLayout(false);
+            this.panel33.ResumeLayout(false);
+            this.panel33.PerformLayout();
+            this.panelBorderRounded23.ResumeLayout(false);
+            this.panelBorderRounded23.PerformLayout();
             this.tableDadosPessoais.ResumeLayout(false);
             this.panelNome.ResumeLayout(false);
             this.subpanelNomeClient.ResumeLayout(false);
@@ -3487,7 +3414,7 @@ namespace Interface
         private Panel panel10;
         private TemplateComponents.PanelBorderRounded panelBorderRounded4;
         private Label label8;
-        private Panel tipoVeiculo;
+        private Panel panelTipoVeiculo;
         private Panel panel12;
         private Label label9;
         private Label label18;
@@ -3615,13 +3542,9 @@ namespace Interface
         private Label label32;
         private TemplateComponents.TemplatePanel panelMarca;
         private Panel panel31;
-        private TemplateComponents.PanelBorderRounded panelBorderRounded18;
-        private TemplateComponents.TextBoxOnlyNum_Letters tbMarca;
         private Label label33;
         private TemplateComponents.TemplatePanel panelModelo;
         private Panel panel7;
-        private TemplateComponents.PanelBorderRounded panelBorderRounded19;
-        private TemplateComponents.TextBoxOnlyNum_Letters tbModelo;
         private Label label34;
         private TemplateComponents.TemplatePanel panelCarroceria;
         private Panel panel9;
@@ -3630,22 +3553,19 @@ namespace Interface
         private Panel panel11;
         private TemplateComponents.PanelBorderRounded panelBorderRounded21;
         private Label label36;
-        private TemplateComponents.TemplatePanel templatePanel1;
+        private TemplateComponents.TemplatePanel panelCapacidadeVolumetrica;
         private Panel panel35;
         private Label label40;
-        private TemplateComponents.TemplatePanel templatePanel2;
+        private TemplateComponents.TemplatePanel panelPesoMaximo;
         private Panel panel36;
         private Label label41;
-        private TemplateComponents.TemplatePanel templatePanel3;
-        private Panel panel38;
-        private Label label42;
-        private TemplateComponents.TemplatePanel templatePanel4;
+        private TemplateComponents.TemplatePanel panelQuantEixos;
         private Panel panel32;
         private Label label37;
-        private TemplateComponents.TemplatePanel templatePanel5;
+        private TemplateComponents.TemplatePanel panelPesoCarroceria;
         private Panel panel33;
         private Label label38;
-        private TemplateComponents.TemplatePanel templatePanel6;
+        private TemplateComponents.TemplatePanel panelQuantidadeEixoCarroceria;
         private Panel panel34;
         private Label label39;
         private TemplateComponents.MasckedboxTemplete mkRenavam;
@@ -3663,5 +3583,7 @@ namespace Interface
         private TemplateComponents.PanelBorderRounded panelBorderRounded24;
         private TemplateComponents.TextBoxOnlyNum tbQuantiEixosCarroceria;
         private TemplateComponents.MasckedboxTemplete mkAno;
+        private ComboBox comboMarca;
+        private ComboBox comboModelo;
     }
 }

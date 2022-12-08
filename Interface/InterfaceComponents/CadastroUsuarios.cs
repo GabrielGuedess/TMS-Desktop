@@ -116,9 +116,7 @@ namespace Interface
                         Nome = tbNome.Text,
                         Email = tbEmail.Text,
                         Senha = tbSenha.Text,
-                        Telefone = "qualquer",
                         CPF = mkCPF.Text,
-                        User_name = "qualquer",
                         Celular = mkCelular.Text
                         
                     };

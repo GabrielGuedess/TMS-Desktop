@@ -105,17 +105,24 @@ namespace Interface
                     notValidar.Add(mkAno.Name);
                     notValidar.Add(mkRNTRC.Name);
                     notValidar.Add(dateVencimentoRENTRC.Name);
-                    notValidar.Add(tipoVeiculo.Name);
+                    notValidar.Add(panelTipoVeiculo.Name);
                     notValidar.Add(mkRenavam.Name);
                     notValidar.Add(mkCodigoCIOT.Name);
-                    notValidar.Add(tbMarca.Name);
-                    notValidar.Add(tbModelo.Name);
+                    notValidar.Add(comboMarca.Name);
+                    notValidar.Add(comboModelo.Name);
                     notValidar.Add(comboTipoCarroceria.Name);
                     notValidar.Add(tbPesoVeiculo.Name);
                     notValidar.Add(tbQuantEixos.Name);
                     notValidar.Add(tbQuantiEixosCarroceria.Name);
                     notValidar.Add(tbCapacidadePesoMax.Name);
                     notValidar.Add(tbCapacidadeVolumetrica.Name);
+                }
+                else if(comboTipoCarroceria.Items.Count == 0)
+                {
+                    notValidar.Add(tbCapacidadeVolumetrica.Name);
+                    notValidar.Add(tbQuantiEixosCarroceria.Name);
+                    notValidar.Add(comboTipoCarroceria.Name);
+                    notValidar.Add(tbPesoCarroceria.Name);
                 }
                 if (Type.Contains("Cadastro") && Validation.Validar(contentTerceiros, notValidar) && Validation.validarTelefone(mkTelefone))
                 {
@@ -188,12 +195,13 @@ namespace Interface
                             Cod_RNTRC = mkRNTRC.Text,
                             Eixo_carroceria = sbyte.Parse(tbQuantiEixosCarroceria.Text),
                             Eixo_modelo = sbyte.Parse(tbQuantEixos.Text),
-                            Marca = tbMarca.Text,
+                            Marca = comboMarca.Text,
                             Massa_carroceria = tbPesoCarroceria.returnValue(),
                             Massa_modelo = tbPesoVeiculo.returnValue(),
                             Placa = tbPlaca.Text,
-                            Modelo = tbModelo.Text,
-                            Vencimento_RNTRC = dateVencimentoRENTRC.convertDateOnly()
+                            Modelo = comboModelo.Text,
+                            Vencimento_RNTRC = dateVencimentoRENTRC.convertDateOnly(),
+                            Tipo_veiculo = comboTipoVeiculo.Text
 
                         };
                         terceiro.VeiculoTerceiro.Add(veiculo);
@@ -278,12 +286,13 @@ namespace Interface
                             Cod_RNTRC = mkRNTRC.Text,
                             Eixo_carroceria = sbyte.Parse(tbQuantiEixosCarroceria.Text),
                             Eixo_modelo = sbyte.Parse(tbQuantEixos.Text),
-                            Marca = tbMarca.Text,
+                            Marca = comboMarca.Text,
                             Massa_carroceria = tbPesoCarroceria.returnValue(),
                             Massa_modelo = tbPesoVeiculo.returnValue(),
                             Placa = tbPlaca.Text,
-                            Modelo = tbModelo.Text,
-                            Vencimento_RNTRC = dateVencimentoRENTRC.convertDateOnly()
+                            Modelo = comboModelo.Text,
+                            Vencimento_RNTRC = dateVencimentoRENTRC.convertDateOnly(),
+                            Tipo_veiculo = comboTipoVeiculo.Text
                         };
                         terceiro.VeiculoTerceiro.Add(veiculo);
                     }
@@ -300,11 +309,12 @@ namespace Interface
                         terceiro.VeiculoTerceiro.First().Vencimento_RNTRC = dateVencimentoRENTRC.convertDateOnly();
                         terceiro.VeiculoTerceiro.First().Eixo_carroceria = sbyte.Parse(tbQuantiEixosCarroceria.Text);
                         terceiro.VeiculoTerceiro.First().Eixo_modelo = sbyte.Parse(tbQuantEixos.Text);
-                        terceiro.VeiculoTerceiro.First().Marca = tbMarca.Text;
+                        terceiro.VeiculoTerceiro.First().Marca = comboMarca.Text;
                         terceiro.VeiculoTerceiro.First().Massa_carroceria = tbPesoCarroceria.returnValue();
                         terceiro.VeiculoTerceiro.First().Massa_modelo = tbPesoVeiculo.returnValue();
                         terceiro.VeiculoTerceiro.First().Placa = tbPlaca.Text;
-                        terceiro.VeiculoTerceiro.First().Modelo = tbModelo.Text;
+                        terceiro.VeiculoTerceiro.First().Modelo = comboModelo.Text;
+                        terceiro.VeiculoTerceiro.First().Tipo_veiculo = comboTipoVeiculo.Text;
                     }
 
 
@@ -335,6 +345,10 @@ namespace Interface
                     }
                 }
             }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message);
+            }
 
         }
 
@@ -344,9 +358,6 @@ namespace Interface
             {
                 TMSContext db = new TMSContext();
 
-                //esse AsNoTracking faz a consulta ser mais rapida 
-                //porém só pode user usado para casos em que só vai 
-                //ler os dados e não vai manipulalos
                 var terceiro = db.MotoristaTerceiro.
                     Include(a => a.CelularMotoristaTerceiro).
                     Include(a => a.ContratoMotoristaTerceiro).
@@ -396,15 +407,18 @@ namespace Interface
                     comboTipoVeiculo.Text = terceiro.VeiculoTerceiro.First().Carroceria;
                     mkRenavam.Text = terceiro.VeiculoTerceiro.First().Cod_RENAVAM;
                     mkCodigoCIOT.Text = terceiro.VeiculoTerceiro.First().Cod_CIOT;
-                    tbMarca.Text = terceiro.VeiculoTerceiro.First().Marca;
-                    tbModelo.Text = terceiro.VeiculoTerceiro.First().Modelo;
-                    comboTipoCarroceria.Text = terceiro.VeiculoTerceiro.First().Carroceria;
-                    tbPesoVeiculo.Text = terceiro.VeiculoTerceiro.First().Massa_modelo.ToString() + " Kg";
-                    tbQuantEixos.Text = terceiro.VeiculoTerceiro.First().Eixo_modelo.ToString();
-                    tbPesoCarroceria.Text = terceiro.VeiculoTerceiro.First().Massa_carroceria.ToString() + " Kg";
-                    tbQuantiEixosCarroceria.Text = terceiro.VeiculoTerceiro.First().Eixo_carroceria.ToString();
-                    tbCapacidadeVolumetrica.Text = terceiro.VeiculoTerceiro.First().Capacidade_volumetrica.ToString() + " m³";
-                    tbCapacidadePesoMax.Text = terceiro.VeiculoTerceiro.First().Capacidade_KG.ToString() + " Kg";
+                    comboMarca.Text = terceiro.VeiculoTerceiro.First().Marca;
+                    comboModelo.Text = terceiro.VeiculoTerceiro.First().Modelo;
+                    if (terceiro.VeiculoTerceiro.First().Carroceria != "")
+                    {
+                        comboTipoCarroceria.Text = terceiro.VeiculoTerceiro.First().Carroceria;
+                        tbPesoVeiculo.Text = terceiro.VeiculoTerceiro.First().Massa_modelo.ToString() + " Kg";
+                        tbQuantEixos.Text = terceiro.VeiculoTerceiro.First().Eixo_modelo.ToString();
+                        tbPesoCarroceria.Text = terceiro.VeiculoTerceiro.First().Massa_carroceria.ToString() + " Kg";
+                        tbQuantiEixosCarroceria.Text = terceiro.VeiculoTerceiro.First().Eixo_carroceria.ToString();
+                        tbCapacidadeVolumetrica.Text = terceiro.VeiculoTerceiro.First().Capacidade_volumetrica.ToString() + " m³";
+                        tbCapacidadePesoMax.Text = terceiro.VeiculoTerceiro.First().Capacidade_KG.ToString() + " Kg";
+                    }
                 }
 
                 comboTipoContrato.Text = terceiro.ContratoMotoristaTerceiro.First().Tipo_contrato.ToString();
@@ -460,7 +474,7 @@ namespace Interface
 
         }
 
-        private void comboVeiculoProprio_SelectedIndexChanged(object sender, EventArgs e)
+        async private void comboVeiculoProprio_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboVeiculoProprio.SelectedIndex == -1 || comboVeiculoProprio.SelectedIndex == 0)
             {
@@ -473,6 +487,25 @@ namespace Interface
             else
             {
                 disableFieldsVeiculo(true);
+                TMSContext db = new();
+
+                List<Marca> marcas = await db.Marca.ToListAsync();
+
+                comboMarca.Items.Clear();
+                foreach (var nomeMarca in marcas)
+                {
+                    comboMarca.Items.Add(nomeMarca.Nome_marca);
+                }
+
+                List<TipoVeiculo> tipoVeiculos = await db.TipoVeiculo.ToListAsync();
+
+                comboTipoVeiculo.Items.Clear();
+                foreach (var tipoVeiculo in tipoVeiculos)
+                {
+                    comboTipoVeiculo.Items.Add(tipoVeiculo.Descricao);
+                }
+                comboMarca.SelectedIndex = -1;
+                comboTipoVeiculo.SelectedIndex = -1;
             }
         }
 
@@ -482,19 +515,107 @@ namespace Interface
             mkAno.Enabled = action;
             mkRNTRC.Enabled = action;
             dateVencimentoRENTRC.Enabled = action;
-            tipoVeiculo.Enabled = action;
+            panelTipoVeiculo.Enabled = action;
             mkRenavam.Enabled = action;
             mkCodigoCIOT.Enabled = action;
-            tbMarca.Enabled = action;
-            tbModelo.Enabled = action;
+            comboMarca.Enabled = action;
+            comboModelo.Enabled = action;
             comboTipoCarroceria.Enabled = action;
-            tbPesoVeiculo.Enabled = action;
-            tbQuantEixos.Enabled = action;
-            tbPesoCarroceria.Enabled = action;
-            tipoVeiculo.Enabled = action;
-            tbQuantiEixosCarroceria.Enabled = action;
-            tbCapacidadePesoMax.Enabled = action;
-            tbCapacidadeVolumetrica.Enabled = action;
+            panelTipoVeiculo.Enabled = action;
+           
+        }
+
+        async private Task UpdateModelosAndCarroceria()
+        {
+
+            if (comboTipoVeiculo.Text == "")
+            {
+                return;
+            }
+            TMSContext db = new();
+
+            TipoVeiculo tipoVeiculo = await db.TipoVeiculo.Include(a => a.ID_for_carroceria).FirstAsync(a => a.Descricao == comboTipoVeiculo.Text);
+            if (db.Modelo.Count(a => a.ID_for_tipo_veiculo == tipoVeiculo.ID_tipo_veiculo) > 0)
+            {
+                List<Modelo> modelos = await db.Modelo.Where(a => a.ID_for_tipo_veiculo == tipoVeiculo.ID_tipo_veiculo && a.ID_for_marcaNavigation.Nome_marca == comboMarca.Text).ToListAsync();
+  
+                foreach (var modelo in modelos)
+                {       
+                     comboModelo.Items.Add(modelo.Nome);
+                }
+            }
+            if (comboModelo.Items.Count > 0)
+            {
+                comboModelo.SelectedIndex = 0;
+            }
+            comboTipoCarroceria.Items.Clear();
+            if (tipoVeiculo != null)
+            {
+           
+                if (tipoVeiculo.Possui_carroceria == 1)
+                {
+
+                    foreach (var item in tipoVeiculo.ID_for_carroceria.ToList())
+                    {
+                        comboTipoCarroceria.Items.Add(item.Descricao_carroceira);
+                    }
+                }
+            }
+            comboTipoCarroceria.SelectedIndex = -1;
+
+        }
+
+        async private void comboTipoCarroceria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboTipoCarroceria.SelectedIndex > -1)
+            {
+                Carroceria carroceria = await getInfoCarroceria(comboTipoCarroceria.Text);
+                tbPesoCarroceria.Text = carroceria.Massa_carroceria.ToString() + " Kg";
+                tbQuantiEixosCarroceria.Text =  carroceria.Eixo_carroceria.ToString();
+                tbCapacidadeVolumetrica.Text = carroceria.Capacidade_volumetrica.ToString() + " m³";
+            }
+        }
+
+        async private void comboTipoVeiculo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            await UpdateModelosAndCarroceria();
+
+        }
+
+        async private void comboMarca_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            await UpdateModelosAndCarroceria();
+        }
+
+        async Task<Modelo> getInfoModelo(string nomeModelo)
+        {
+            TMSContext db = new();
+            Modelo modelo = db.Modelo.FirstOrDefault(a => a.Nome == nomeModelo);
+            if (modelo == null)
+            {
+                return null;
+            }
+            return modelo;
+        }
+        async Task<Carroceria> getInfoCarroceria(string tipoCarroceria)
+        {
+            TMSContext db = new();
+            Carroceria carroceria = db.Carroceria.FirstOrDefault(a => a.Descricao_carroceira == tipoCarroceria);
+            if (carroceria == null)
+                return null;
+            return carroceria;
+        }
+
+        async private void comboModelo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(comboModelo.SelectedIndex > -1)
+            {
+                Modelo modelo = await getInfoModelo(comboModelo.Text);
+                tbCapacidadePesoMax.Text = modelo.Capacidade_KG.ToString() +" Kg";
+                tbQuantEixos.Text = modelo.Eixo_modelo.ToString();
+                tbPesoVeiculo.Text = modelo.Massa_modelo.ToString() + " Kg";
+
+            }
         }
     }
 }

@@ -36,11 +36,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.contentNotas = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.panelCPF = new System.Windows.Forms.Panel();
-            this.SubpanelCPF = new System.Windows.Forms.Panel();
-            this.panelID = new Interface.TemplateComponents.PanelBorderRounded();
-            this.tbIDNotaFiscal = new Interface.TemplateComponents.TextBoxOnlyNum_Letters();
-            this.labelCPFClient = new System.Windows.Forms.Label();
             this.panelNomeClient = new System.Windows.Forms.Panel();
             this.subpanelNomeClient = new System.Windows.Forms.Panel();
             this.panelTextNomeClient = new Interface.TemplateComponents.PanelBorderRounded();
@@ -76,9 +71,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.contentNotas.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            this.panelCPF.SuspendLayout();
-            this.SubpanelCPF.SuspendLayout();
-            this.panelID.SuspendLayout();
             this.panelNomeClient.SuspendLayout();
             this.subpanelNomeClient.SuspendLayout();
             this.panelTextNomeClient.SuspendLayout();
@@ -191,12 +183,11 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33332F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tableLayoutPanel3.Controls.Add(this.panelCPF, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.panelNomeClient, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.panelDtNascClient, 2, 0);
-            this.tableLayoutPanel3.Controls.Add(this.panelGeneroClient, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.panelRGClient, 1, 1);
-            this.tableLayoutPanel3.Controls.Add(this.panelTelefoneClient, 2, 1);
+            this.tableLayoutPanel3.Controls.Add(this.panelNomeClient, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.panelDtNascClient, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.panelGeneroClient, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.panelRGClient, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.panelTelefoneClient, 1, 1);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(40, 40);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -206,68 +197,6 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(895, 200);
             this.tableLayoutPanel3.TabIndex = 12;
-            // 
-            // panelCPF
-            // 
-            this.panelCPF.BackColor = System.Drawing.Color.Transparent;
-            this.panelCPF.Controls.Add(this.SubpanelCPF);
-            this.panelCPF.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelCPF.Location = new System.Drawing.Point(0, 0);
-            this.panelCPF.Margin = new System.Windows.Forms.Padding(0);
-            this.panelCPF.Name = "panelCPF";
-            this.panelCPF.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.panelCPF.Size = new System.Drawing.Size(298, 100);
-            this.panelCPF.TabIndex = 0;
-            // 
-            // SubpanelCPF
-            // 
-            this.SubpanelCPF.BackColor = System.Drawing.Color.Transparent;
-            this.SubpanelCPF.Controls.Add(this.panelID);
-            this.SubpanelCPF.Controls.Add(this.labelCPFClient);
-            this.SubpanelCPF.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SubpanelCPF.Location = new System.Drawing.Point(20, 20);
-            this.SubpanelCPF.Margin = new System.Windows.Forms.Padding(0);
-            this.SubpanelCPF.Name = "SubpanelCPF";
-            this.SubpanelCPF.Size = new System.Drawing.Size(258, 70);
-            this.SubpanelCPF.TabIndex = 7;
-            // 
-            // panelID
-            // 
-            this.panelID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelID.Controls.Add(this.tbIDNotaFiscal);
-            this.panelID.Location = new System.Drawing.Point(5, 37);
-            this.panelID.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.panelID.Name = "panelID";
-            this.panelID.Size = new System.Drawing.Size(248, 33);
-            this.panelID.TabIndex = 2;
-            // 
-            // tbIDNotaFiscal
-            // 
-            this.tbIDNotaFiscal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbIDNotaFiscal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.tbIDNotaFiscal.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbIDNotaFiscal.Cursor = System.Windows.Forms.Cursors.No;
-            this.tbIDNotaFiscal.Enabled = false;
-            this.tbIDNotaFiscal.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbIDNotaFiscal.ForeColor = System.Drawing.Color.White;
-            this.tbIDNotaFiscal.Location = new System.Drawing.Point(10, 5);
-            this.tbIDNotaFiscal.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.tbIDNotaFiscal.Name = "tbIDNotaFiscal";
-            this.tbIDNotaFiscal.Size = new System.Drawing.Size(228, 22);
-            this.tbIDNotaFiscal.TabIndex = 2;
-            // 
-            // labelCPFClient
-            // 
-            this.labelCPFClient.AutoSize = true;
-            this.labelCPFClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.labelCPFClient.ForeColor = System.Drawing.Color.White;
-            this.labelCPFClient.Location = new System.Drawing.Point(5, 5);
-            this.labelCPFClient.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
-            this.labelCPFClient.Name = "labelCPFClient";
-            this.labelCPFClient.Size = new System.Drawing.Size(63, 17);
-            this.labelCPFClient.TabIndex = 0;
-            this.labelCPFClient.Text = "ID da NF";
             // 
             // panelNomeClient
             // 
@@ -668,11 +597,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.contentNotas.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
-            this.panelCPF.ResumeLayout(false);
-            this.SubpanelCPF.ResumeLayout(false);
-            this.SubpanelCPF.PerformLayout();
-            this.panelID.ResumeLayout(false);
-            this.panelID.PerformLayout();
             this.panelNomeClient.ResumeLayout(false);
             this.subpanelNomeClient.ResumeLayout(false);
             this.subpanelNomeClient.PerformLayout();
@@ -711,10 +635,6 @@
         private PictureBox pictureBox3;
         private Panel contentNotas;
         private TableLayoutPanel tableLayoutPanel3;
-        private Panel panelCPF;
-        private Panel SubpanelCPF;
-        private TemplateComponents.PanelBorderRounded panelID;
-        private Label labelCPFClient;
         private Panel panelNomeClient;
         private Panel subpanelNomeClient;
         private TemplateComponents.PanelBorderRounded panelTextNomeClient;
@@ -739,7 +659,6 @@
         private Panel panel51;
         private Button button10;
         private Button cadastrarNota;
-        private TemplateComponents.TextBoxOnlyNum_Letters tbIDNotaFiscal;
         private TemplateComponents.TextBoxOnlyNum tbNumero;
         private TemplateComponents.TextBoxOnlyNum_Letters tbTipoNota;
         private TemplateComponents.TextBoxOnlyNum_Letters tbSerieNota;

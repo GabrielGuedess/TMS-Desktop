@@ -1,7 +1,11 @@
 ﻿using Interface.ControlValidationAuxiliary;
 using Interface.DataBaseControls;
+using Interface.ModelsDB.TMSDataBaseContext;
+using Interface.ModelsDB;
 using Interface.Utilities;
 using System.Data;
+using MySqlConnector;
+using Microsoft.EntityFrameworkCore;
 
 namespace Interface
 {
@@ -54,7 +58,6 @@ namespace Interface
 
                 if (value != null)
                 {
-                    tbIDNotaFiscal.Text = value["NUM_ID"].ToString();
                     mkChaveAcesso.Text = value["CHAVE_ACESSO"].ToString();
                     tbNumero.Text = value["NUMERO"].ToString();
                     tbTipoNota.Text = value["TIPO"].ToString();
@@ -72,7 +75,7 @@ namespace Interface
         private void CadastroNotasFicais_Resize(object sender, EventArgs e)
         {
             utils.alignCenterPanels(panelSerch, searchPanel, true, true);
-            utils.expansivePanels(10, panelID, panelTipo);
+            utils.expansivePanels(10, panelTipo);
         }
 
         private void panelSerch_Paint(object sender, PaintEventArgs e)
@@ -89,56 +92,89 @@ namespace Interface
             utils.expansiveButton(10, buscarCod);
         }
 
-
-
         private void cadastrarNota_Click(object sender, EventArgs e)
         {
-            if (Type.Contains("Cadastro") && Validation.Validar(contentNotas))
+            try
             {
-                string SQL = "Insert Into C_Nota_Fiscal (NUM_ID, CHAVE_ACESSO,NUMERO,TIPO,SERIE,DESCRICAO) Values";
-                SQL += $"('{tbIDNotaFiscal.Text.TrimStart()} ','{mkChaveAcesso.Text}','{tbNumero.Text}', '{tbTipoNota.Text}', '{tbSerieNota.Text}', '{tbDescricaoNota.Text}')";
-                DBFunctions.cadastrar(SQL);
+                if (Type.Contains("Cadastro") && Validation.Validar(contentNotas))
+                {
+                    NotaFiscal notaFiscal = new()
+                    {
+                        Chave_acesso = mkChaveAcesso.Text,
+                        Descricao = tbDescricaoNota.Text,
+                        Numero = tbNumero.Text,
+                        Serie = tbSerieNota.Text,
+                        Tipo = tbTipoNota.Text
+                    };
 
-                limpar.CleanControl(contentNotas);
-                limpar.CleanControl(searchPanel);
+                    TMSContext db = new();
+                    db.NotaFiscal.Add(notaFiscal);
+                    db.SaveChanges();
 
-                //tbIDNotaFiscal.Text = DBFunctions.atualizaID("SELECT MAX (NUM_ID) FROM C_Nota_Fiscal", "F");
+                    limpar.CleanControl(contentNotas);
+                    limpar.CleanControl(searchPanel);
+
+                    //tbIDNotaFiscal.Text = DBFunctions.atualizaID("SELECT MAX (NUM_ID) FROM C_Nota_Fiscal", "F");
+                }
+
+                if (Type.Contains("Update") && Validation.Validar(contentNotas))
+                {
+                    TMSContext db = new();
+                    NotaFiscal nota = db.NotaFiscal.FirstOrDefault(a => a.Chave_acesso == mkSearchChaveAcesso.Text);
+
+                    if (nota == null)
+                    {
+                        MessageBox.Show("Erro ao atualizar Nota");
+                        return;
+                    }
+                    nota.Chave_acesso = mkChaveAcesso.Text;
+                    nota.Numero = tbNumero.Text;
+                    nota.Descricao = tbDescricaoNota.Text;
+                    nota.Serie = tbSerieNota.Text;
+                    nota.Tipo = tbTipoNota.Text;
+
+                    db.SaveChanges();
+                    limpar.CleanControl(contentNotas);
+                    limpar.CleanControl(searchPanel);
+                }
+            }
+            catch (DbUpdateException erro)
+            {
+                if (typeof(MySqlException).IsInstanceOfType(erro.InnerException))
+                {
+                    MySqlException mySqlException = (MySqlException)erro.InnerException;
+                    if (MySqlErrorCode.DuplicateKeyEntry == mySqlException.ErrorCode)
+                    {
+                        string campoDuplicado = mySqlException.Message.Split("'")[3];
+                        string valorDoCampo = mySqlException.Message.Split("'")[1];
+                        MessageBox.Show($"O valor {valorDoCampo} do campo {campoDuplicado} já cadastrado."
+                            + "Adicione um valor que não estaja cadastrado");
+                    }
+                    else if (MySqlErrorCode.DatabaseAccessDenied == mySqlException.ErrorCode)
+                    {
+                        MessageBox.Show("Acesso Bloqueado");
+                    }
+                }
             }
 
-            if (Type.Contains("Update") && Validation.Validar(contentNotas))
-            {
-                string SQLUp = $"UPDATE C_Nota_Fiscal SET " +
-                $"NUM_ID= '{tbIDNotaFiscal.Text}', " +
-                $"NUMERO= '{tbNumero.Text}', " +
-                $"TIPO= '{tbTipoNota.Text}', " +
-                $"SERIE= '{tbSerieNota.Text}', " +
-                $"DESCRICAO= '{tbDescricaoNota.Text}' " +
-                $"WHERE CHAVE_ACESSO = '{mkSearchChaveAcesso.Text.Replace('.', ',')}'";
-
-                DBFunctions.cadastrar(SQLUp);
-
-                limpar.CleanControl(contentNotas);
-                limpar.CleanControl(searchPanel);
-               // tbIDNotaFiscal.Text = DBFunctions.atualizaID("SELECT MAX (NUM_ID) FROM C_Nota_Fiscal", "F");
-            }
         }
 
         private void buscarCod_Click(object sender, EventArgs e)
         {
             if (mkSearchChaveAcesso.Text != "")
             {
-                DataRow dados = DBFunctions.pesquisarRow($"SELECT * FROM C_Nota_Fiscal WHERE CHAVE_ACESSO = '{mkSearchChaveAcesso.Text}'", contentNotas)!;
-
-                if (dados != null)
+                TMSContext db = new();
+                NotaFiscal nota = db.NotaFiscal.FirstOrDefault(a => a.Chave_acesso == mkSearchChaveAcesso.Text);
+                if (nota == null)
                 {
-                    mkSearchChaveAcesso.Text = dados["CHAVE_ACESSO"].ToString();
-                    mkChaveAcesso.Text = dados["CHAVE_ACESSO"].ToString();
-                    tbIDNotaFiscal.Text = dados["NUM_ID"].ToString();
-                    tbNumero.Text = dados["NUMERO"].ToString();
-                    tbTipoNota.Text = dados["TIPO"].ToString();
-                    tbSerieNota.Text = dados["SERIE"].ToString();
-                    tbDescricaoNota.Text = dados["DESCRICAO"].ToString();
+                    MessageBox.Show("Erro ao buscar Nota");
+                    return;
                 }
+                mkChaveAcesso.Text = nota.Chave_acesso;
+                tbNumero.Text = nota.Numero;
+                tbDescricaoNota.Text = nota.Descricao;
+                tbSerieNota.Text = nota.Serie;
+                tbTipoNota.Text = nota.Tipo;
             }
             else
             {

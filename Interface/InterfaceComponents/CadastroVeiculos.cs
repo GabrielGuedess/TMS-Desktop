@@ -1,4 +1,5 @@
 ﻿using Interface.ControlValidationAuxiliary;
+using Interface.ControlValidationAuxiliary;
 using Interface.DataBaseControls;
 using Interface.ModelsDB;
 using Interface.ModelsDB.TMSDataBaseContext;
@@ -239,6 +240,7 @@ namespace Interface
                 tbCIOT.Text = veiculo.Cod_CIOT;
                 tbPesoVeiculo.Text = veiculo.ID_for_modeloNavigation.Massa_modelo.ToString();
                 tbQuantEixo.Text = veiculo.ID_for_modeloNavigation.Eixo_modelo.ToString();
+                tbCapacidadePeso.Text = veiculo.ID_for_modeloNavigation.Capacidade_KG.ToString();
 
 
                 if (veiculo.ID_for_tipo_veiculoNavigation.Possui_carroceria == 1)
@@ -261,7 +263,7 @@ namespace Interface
                     tbQuantEixoCarroceria.Text = veiculo.ID_for_carroceria.First().Eixo_carroceria.ToString();
                     tbPesoCarroceria.Text = veiculo.ID_for_carroceria.First().Massa_carroceria.ToString();
                     tbCapacidadeVolumetrica.Text = veiculo.ID_for_carroceria.First().Capacidade_volumetrica.ToString();
-
+                    tbCapacidadePeso.Text = veiculo.ID_for_modeloNavigation.Capacidade_KG.ToString();
 
                 }
                 else
@@ -270,7 +272,6 @@ namespace Interface
             else
             {
                 MessageBox.Show($"É necessário preencher o campo {typeData.Text} corretamente!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                // mkCPF.Focus();
             }
         }
 
@@ -361,7 +362,10 @@ namespace Interface
                     comboModelo.Items.Add(modelo.Nome);
                 }
             }
-            comboModelo.SelectedIndex = 0;
+            if (comboModelo.Items.Count > 0)
+            {
+                comboModelo.SelectedIndex = 0;
+            }
             if (tipoVeiculo != null)
             {
                 if (tipoVeiculo.Possui_carroceria == 1)
@@ -396,20 +400,11 @@ namespace Interface
             {
                 comboPossuiEixo.Text = "Não";
                 comboTipoCarroceria.Enabled = false;
-                tbQuantEixoCarroceria.Enabled = false;
-                tbPesoCarroceria.Enabled = false;
-                tbCapacidadeVolumetrica.Enabled = false;
-                tpCapacidadePeso.Enabled = false;
-
             }
             else
             {
                 comboPossuiEixo.Enabled = true;
                 comboTipoCarroceria.Enabled = true;
-                tbQuantEixoCarroceria.Enabled = !true;
-                tbPesoCarroceria.Enabled = true;
-                tbCapacidadeVolumetrica.Enabled = true;
-                tpCapacidadePeso.Enabled = true;
             }
         }
 

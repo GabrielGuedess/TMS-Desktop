@@ -176,6 +176,8 @@ namespace Interface.InterfaceComponents
                     if (MySqlErrorCode.DuplicateKeyEntry == mySqlException.ErrorCode)
                     {
                         string campoDuplicado = mySqlException.Message.Split("'")[3];
+                        if (campoDuplicado == "PRIMARY")
+                            campoDuplicado = "N° Pedido";
                         string valorDoCampo = mySqlException.Message.Split("'")[1];
                         MessageBox.Show($"O valor {valorDoCampo} do campo {campoDuplicado} já cadastrado."
                             + "Adicione um valor que não estaja cadastrado");

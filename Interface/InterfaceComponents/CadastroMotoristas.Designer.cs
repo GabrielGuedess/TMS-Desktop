@@ -50,11 +50,6 @@
             this.panelBorderRounded14 = new Interface.TemplateComponents.PanelBorderRounded();
             this.dateVencimentoCNH = new Interface.TemplateComponents.MkDate();
             this.label13 = new System.Windows.Forms.Label();
-            this.templatePanel3 = new Interface.TemplateComponents.TemplatePanel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panelBorderRounded11 = new Interface.TemplateComponents.PanelBorderRounded();
-            this.tbDisponibilidade = new Interface.TemplateComponents.TextBoxTemplete();
-            this.label16 = new System.Windows.Forms.Label();
             this.tableDadosPessoais = new System.Windows.Forms.TableLayoutPanel();
             this.panelNome = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -150,9 +145,6 @@
             this.panelVencimentoCNH.SuspendLayout();
             this.panel30.SuspendLayout();
             this.panelBorderRounded14.SuspendLayout();
-            this.templatePanel3.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panelBorderRounded11.SuspendLayout();
             this.tableDadosPessoais.SuspendLayout();
             this.panelNome.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -254,7 +246,6 @@
             this.tableInfoMotorista.Controls.Add(this.panelCNH, 0, 0);
             this.tableInfoMotorista.Controls.Add(this.panelCategoriaCNH, 1, 0);
             this.tableInfoMotorista.Controls.Add(this.panelVencimentoCNH, 2, 0);
-            this.tableInfoMotorista.Controls.Add(this.templatePanel3, 0, 1);
             this.tableInfoMotorista.Location = new System.Drawing.Point(40, 644);
             this.tableInfoMotorista.Margin = new System.Windows.Forms.Padding(0);
             this.tableInfoMotorista.Name = "tableInfoMotorista";
@@ -263,7 +254,7 @@
             this.tableInfoMotorista.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableInfoMotorista.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableInfoMotorista.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableInfoMotorista.Size = new System.Drawing.Size(895, 200);
+            this.tableInfoMotorista.Size = new System.Drawing.Size(895, 104);
             this.tableInfoMotorista.TabIndex = 15;
             // 
             // panelCNH
@@ -493,66 +484,6 @@
             this.label13.Size = new System.Drawing.Size(115, 17);
             this.label13.TabIndex = 0;
             this.label13.Text = "Vencimento CNH";
-            // 
-            // templatePanel3
-            // 
-            this.templatePanel3.Controls.Add(this.panel1);
-            this.templatePanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.templatePanel3.Location = new System.Drawing.Point(0, 100);
-            this.templatePanel3.Margin = new System.Windows.Forms.Padding(0);
-            this.templatePanel3.Name = "templatePanel3";
-            this.templatePanel3.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.templatePanel3.Size = new System.Drawing.Size(298, 100);
-            this.templatePanel3.TabIndex = 3;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.panelBorderRounded11);
-            this.panel1.Controls.Add(this.label16);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(20, 20);
-            this.panel1.Margin = new System.Windows.Forms.Padding(0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(258, 70);
-            this.panel1.TabIndex = 13;
-            // 
-            // panelBorderRounded11
-            // 
-            this.panelBorderRounded11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelBorderRounded11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.panelBorderRounded11.Controls.Add(this.tbDisponibilidade);
-            this.panelBorderRounded11.Location = new System.Drawing.Point(5, 36);
-            this.panelBorderRounded11.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.panelBorderRounded11.Name = "panelBorderRounded11";
-            this.panelBorderRounded11.Size = new System.Drawing.Size(248, 33);
-            this.panelBorderRounded11.TabIndex = 2;
-            // 
-            // tbDisponibilidade
-            // 
-            this.tbDisponibilidade.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbDisponibilidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.tbDisponibilidade.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbDisponibilidade.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbDisponibilidade.ForeColor = System.Drawing.Color.White;
-            this.tbDisponibilidade.Location = new System.Drawing.Point(12, 5);
-            this.tbDisponibilidade.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.tbDisponibilidade.Name = "tbDisponibilidade";
-            this.tbDisponibilidade.Size = new System.Drawing.Size(225, 22);
-            this.tbDisponibilidade.TabIndex = 17;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(5, 4);
-            this.label16.Margin = new System.Windows.Forms.Padding(5, 0, 0, 15);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(104, 17);
-            this.label16.TabIndex = 0;
-            this.label16.Text = "Disponibilidade";
             // 
             // tableDadosPessoais
             // 
@@ -1341,7 +1272,7 @@
             this.tbLogradouro.Location = new System.Drawing.Point(12, 5);
             this.tbLogradouro.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbLogradouro.Name = "tbLogradouro";
-            this.tbLogradouro.Size = new System.Drawing.Size(148, 22);
+            this.tbLogradouro.Size = new System.Drawing.Size(225, 22);
             this.tbLogradouro.TabIndex = 13;
             // 
             // panel37
@@ -1702,11 +1633,6 @@
             this.panel30.PerformLayout();
             this.panelBorderRounded14.ResumeLayout(false);
             this.panelBorderRounded14.PerformLayout();
-            this.templatePanel3.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panelBorderRounded11.ResumeLayout(false);
-            this.panelBorderRounded11.PerformLayout();
             this.tableDadosPessoais.ResumeLayout(false);
             this.panelNome.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
@@ -1891,10 +1817,5 @@
         private TemplateComponents.TemplatePanel templatePanel1;
         private TemplateComponents.TemplatePanel templatePanel2;
         private ComboBox comboGenero;
-        private TemplateComponents.TemplatePanel templatePanel3;
-        private Panel panel1;
-        private TemplateComponents.PanelBorderRounded panelBorderRounded11;
-        private TemplateComponents.TextBoxTemplete tbDisponibilidade;
-        private Label label16;
     }
 }

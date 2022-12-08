@@ -86,9 +86,9 @@ namespace Interface
         {
             TMSContext db = new();
 
-            if (db.Sinistro.Count() > 0)
+            if (db.RedeTransporte.Count() > 0)
             {
-                lastID = db.Sinistro.Max(id => id.ID_Sinistro) + 1;
+                lastID = db.Sinistro.Max(id => id.ID_Sinistro)+1;
             }
 
             ID_Rede.Text = lastID.ToString();
