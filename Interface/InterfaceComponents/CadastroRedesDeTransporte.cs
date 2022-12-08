@@ -62,17 +62,15 @@ namespace Interface
         {
             set
             {
-                maskRedeID.Text = value["NUM_ID"].ToString();
-
                 if (value != null)
                 {
-                    maskRedeID.Text = value["NUM_ID"].ToString();
+                    maskRedeID.Text = value["ID_rede"].ToString();
 
-                    ID_Rede.Text = value["NUM_ID"].ToString();
-                    tbTipoRede.Text = value["TIPO_REDE"].ToString();
-                    tbDescricaoRede.Text = value["DESCRICAO_REDE"].ToString();
-                    comboCategoriaCNH.Text = value["TIPO_MOTORISTA"].ToString();
-                    comboTipoVeiculo.Text = value["TIPO_VEICULOS"].ToString();
+                    ID_Rede.Text = value["ID_rede"].ToString();
+                    tbTipoRede.Text = value["Tipo_rede"].ToString();
+                    tbDescricaoRede.Text = value["Descricao"].ToString();
+                    comboCategoriaCNH.Text = value["Categoria_CNH"].ToString();
+                    comboTipoVeiculo.Text = value["Tipo_veiculo"].ToString();
                 }
             }
         }

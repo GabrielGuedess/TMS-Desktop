@@ -303,7 +303,7 @@
             this.mkCNH.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.mkCNH.Mask = "0000000000";
             this.mkCNH.Name = "mkCNH";
-            this.mkCNH.Size = new System.Drawing.Size(228, 22);
+            this.mkCNH.Size = new System.Drawing.Size(235, 22);
             this.mkCNH.TabIndex = 17;
             this.mkCNH.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
@@ -390,7 +390,7 @@
             this.templatePanel1.Margin = new System.Windows.Forms.Padding(0);
             this.templatePanel1.Name = "templatePanel1";
             this.templatePanel1.Padding = new System.Windows.Forms.Padding(20, 20, 20, 10);
-            this.templatePanel1.Size = new System.Drawing.Size(126, 70);
+            this.templatePanel1.Size = new System.Drawing.Size(133, 70);
             this.templatePanel1.TabIndex = 1;
             // 
             // comboMOPP
@@ -408,7 +408,7 @@
             this.comboMOPP.Location = new System.Drawing.Point(5, 35);
             this.comboMOPP.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.comboMOPP.Name = "comboMOPP";
-            this.comboMOPP.Size = new System.Drawing.Size(116, 29);
+            this.comboMOPP.Size = new System.Drawing.Size(130, 29);
             this.comboMOPP.TabIndex = 21;
             // 
             // label17
@@ -451,7 +451,7 @@
             this.panelBorderRounded14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panelBorderRounded14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
             this.panelBorderRounded14.Controls.Add(this.dateVencimentoCNH);
-            this.panelBorderRounded14.Location = new System.Drawing.Point(6, 35);
+            this.panelBorderRounded14.Location = new System.Drawing.Point(5, 37);
             this.panelBorderRounded14.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.panelBorderRounded14.Name = "panelBorderRounded14";
             this.panelBorderRounded14.Size = new System.Drawing.Size(249, 33);
@@ -468,7 +468,7 @@
             this.dateVencimentoCNH.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.dateVencimentoCNH.Mask = "00/00/0000";
             this.dateVencimentoCNH.Name = "dateVencimentoCNH";
-            this.dateVencimentoCNH.Size = new System.Drawing.Size(228, 22);
+            this.dateVencimentoCNH.Size = new System.Drawing.Size(236, 22);
             this.dateVencimentoCNH.TabIndex = 15;
             this.dateVencimentoCNH.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.dateVencimentoCNH.ValidatingType = typeof(System.DateTime);

@@ -74,6 +74,21 @@ namespace Interface
                     cadastroRedesDeTransporte2.OverviewDataResponse = value;
                 }
 
+                if (overview1.CacheType.Contains("Pedidos"))
+                {
+                    pedido1.OverviewDataResponse = value;
+                }
+
+                if (overview1.CacheType.Contains("Empresa"))
+                {
+                    cadastroEmpresaManutencao1.OverviewDataResponse = value;
+                }
+
+                if (overview1.CacheType.Contains("Processo"))
+                {
+                    processoManutencao1.OverviewDataResponse = value;
+                }
+
             }
         }
 

@@ -19,7 +19,7 @@ namespace Interface.FormsControls
             if (route.Contains("Usuarios"))
             {
                 TypeDataDatabase = "Usuario";
-                TypeWhereDatabase = "ID_usuario";
+                TypeWhereDatabase = "CPF";
             }
 
             if (route.Contains("Rota"))
@@ -31,13 +31,13 @@ namespace Interface.FormsControls
             if (route.Contains("Motoristas"))
             {
                 TypeDataDatabase = "Motorista";
-                TypeWhereDatabase = "ID_motorista";
+                TypeWhereDatabase = "CPF";
             }
 
             if (route.Contains("Veiculos"))
             {
                 TypeDataDatabase = "Veiculo";
-                TypeWhereDatabase = "ID_veiculo";
+                TypeWhereDatabase = "Placa";
             }
 
             if (route.Contains("Terceiros"))
@@ -61,7 +61,7 @@ namespace Interface.FormsControls
             if (route.Contains("Tarifas"))
             {
                 TypeDataDatabase = "TarifasETaxas";
-                TypeWhereDatabase = "ID_ta";
+                TypeWhereDatabase = "Nome_empresa";
             }
 
             if (route.Contains("Redes"))
@@ -138,7 +138,7 @@ namespace Interface.FormsControls
 
             if (route.Contains("Sinistros"))
             {
-                typeData.Text = "Código";
+                typeData.Text = "ID Sinistro";
                 maskInput.Text = "";
                 maskInput.Mask = "";
             }
@@ -178,11 +178,11 @@ namespace Interface.FormsControls
                 maskInput.Mask = "00.000.000/0000-00";
             }
 
-            if (route.Contains("ProcessoManutencao"))
+            if (route.Contains("Processo"))
             {
-                typeData.Text = "ID Processo";
+                typeData.Text = "Placa";
                 maskInput.Text = "";
-                maskInput.Mask = "";
+                maskInput.Mask = "&&&&&&&";
             }
         }
     }

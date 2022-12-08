@@ -5,12 +5,8 @@ using Interface.ModelsDB;
 using Interface.ModelsDB.TMSDataBaseContext;
 using Interface.Utilities;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.VisualBasic;
 using MySqlConnector;
-using Pomelo.EntityFrameworkCore.MySql.Storage.Internal;
 using System.Data;
-using System.Runtime.CompilerServices;
-using System.Threading.Tasks;
 
 namespace Interface
 {
@@ -55,11 +51,28 @@ namespace Interface
         {
             set
             {
-                searchPlaca.Text = value["Placa"].ToString();
-
                 if (value != null)
                 {
-
+                    searchPlaca.Text = value["Placa"].ToString();
+                    mkPlaca.Text = value["Placa"].ToString();
+                    comboMarca.Text = value["Nome_marca"].ToString();
+                    comboTipoVeiculo.Text = value["Descricao"].ToString();
+                    comboModelo.Text = value["Nome"].ToString();
+                    mkAnoFabricacao.Text = value["Ano_fabricacao"].ToString();
+                    tbCor.Text = value["Cor"].ToString();
+                    mkRenavam.Text = value["Cod_RENAVAM"].ToString();
+                    mkRNTRC.Text = value["Cod_RNTRC"].ToString();
+                    mkVencimentoRNTRC.Text = value["Vencimento_RNTRC"].ToString();
+                    tbCIOT.Text = value["Cod_CIOT"].ToString();
+                    tbPesoVeiculo.Text = value["Massa_modelo"].ToString();
+                    tbQuantEixo.Text = value["Eixo_modelo"].ToString();
+                    comboPossuiEixo.Text = value["Possui_carroceria"].ToString();
+                    comboTipoCarroceria.Text = value["Descricao_carroceira"].ToString();
+                    tbQuantEixo.Text = value["Descricao_carroceira"].ToString();
+                    comboTipoCarroceria.Text = value["Eixo_carroceria"].ToString();
+                    tbPesoCarroceria.Text = value["Massa_carroceria"].ToString();
+                    tbCapacidadeVolumetrica.Text = value["Capacidade_volumetrica"].ToString();
+                    tpCapacidadePeso.Text = value["Capacidade_KG"].ToString();
                 }
             }
         }
@@ -114,7 +127,7 @@ namespace Interface
                     veiculo.ID_veiculo = lastID;
                     veiculo.ID_for_modelo = idModelo;
                     veiculo.ID_for_tipo_veiculo = tipoVeiculo.ID_tipo_veiculo;
-                    if (tipoVeiculo.Possui_carroceria == 1 )
+                    if (tipoVeiculo.Possui_carroceria == 1)
                     {
                         if (Validation.Validar(tableCarroceria))
                         {
@@ -196,9 +209,10 @@ namespace Interface
                         string campoDuplicado = mySqlException.Message.Split("'")[3];
                         string valorDoCampo = mySqlException.Message.Split("'")[1];
                         MessageBox.Show($"O valor {valorDoCampo} do campo {campoDuplicado} já cadastrado."
-                            +"Adicione um valor que não estaja cadastrado");
+                            + "Adicione um valor que não estaja cadastrado");
                     }
-                    else if(MySqlErrorCode.DatabaseAccessDenied == mySqlException.ErrorCode){
+                    else if (MySqlErrorCode.DatabaseAccessDenied == mySqlException.ErrorCode)
+                    {
                         MessageBox.Show("Acesso Bloqueado");
                     }
                 }
@@ -231,7 +245,7 @@ namespace Interface
                 }
                 mkPlaca.Text = veiculo.Placa;
                 comboMarca.Text = veiculo.ID_for_marcaNavigation.Nome_marca;
-                comboTipoVeiculo.Text = veiculo.ID_for_tipo_veiculoNavigation.Descricao;   
+                comboTipoVeiculo.Text = veiculo.ID_for_tipo_veiculoNavigation.Descricao;
                 mkAnoFabricacao.Text = veiculo.Ano_fabricacao.ToString();
                 tbCor.Text = veiculo.Cor;
                 mkRenavam.Text = veiculo.Cod_RENAVAM;
@@ -288,7 +302,7 @@ namespace Interface
         }
 
 
-        async private  void CadastroVeiculos_Enter(object sender, EventArgs e)
+        async private void CadastroVeiculos_Enter(object sender, EventArgs e)
         {
             TMSContext db = new();
 
@@ -345,13 +359,13 @@ namespace Interface
         async private Task UpdateModelosAndCarroceria()
         {
 
-           if(comboTipoVeiculo.Text == "")
+            if (comboTipoVeiculo.Text == "")
             {
                 return;
             }
             TMSContext db = new();
 
-            TipoVeiculo tipoVeiculo = await db.TipoVeiculo.Include(a=>a.ID_for_carroceria).FirstAsync(a => a.Descricao == comboTipoVeiculo.Text);
+            TipoVeiculo tipoVeiculo = await db.TipoVeiculo.Include(a => a.ID_for_carroceria).FirstAsync(a => a.Descricao == comboTipoVeiculo.Text);
 
             if (db.Modelo.Count(a => a.ID_for_tipo_veiculo == tipoVeiculo.ID_tipo_veiculo) > 0)
             {
@@ -362,10 +376,12 @@ namespace Interface
                     comboModelo.Items.Add(modelo.Nome);
                 }
             }
+
             if (comboModelo.Items.Count > 0)
             {
                 comboModelo.SelectedIndex = 0;
             }
+
             if (tipoVeiculo != null)
             {
                 if (tipoVeiculo.Possui_carroceria == 1)
@@ -422,7 +438,7 @@ namespace Interface
             }
         }
 
-    
+
 
         async Task<Modelo> getInfoModelo(string nomeModelo)
         {
@@ -444,13 +460,13 @@ namespace Interface
         }
 
 
-        
+
 
         async private void comboTipoVeiculo_SelectedIndexChanged(object sender, EventArgs e)
         {
             await UpdateModelosAndCarroceria();
         }
 
-  
+
     }
 }
