@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Interface
+namespace Interface.ModelsDB
 {
     public partial class MotoristaTerceiro
     {
@@ -31,7 +31,6 @@ namespace Interface
         public string Categoria_CNH { get; set; } = null!;
         public DateOnly Vencimento_CNH { get; set; }
         public string Curso_MOPP { get; set; } = null!;
-        public string Disponibilidade { get; set; } = null!;
 
         public virtual ICollection<CelularMotoristaTerceiro> CelularMotoristaTerceiro { get; set; }
         public virtual ICollection<ContratoMotoristaTerceiro> ContratoMotoristaTerceiro { get; set; }

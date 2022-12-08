@@ -301,7 +301,7 @@
             this.tbEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbEmail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tbEmail.ForeColor = System.Drawing.Color.White;
-            this.tbEmail.Location = new System.Drawing.Point(12, 5);
+            this.tbEmail.Location = new System.Drawing.Point(13, 6);
             this.tbEmail.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(225, 22);

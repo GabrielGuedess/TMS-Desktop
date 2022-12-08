@@ -1,6 +1,6 @@
 ﻿using Interface.FormsControls;
+using MySqlConnector;
 using System.Data;
-using System.Data.OleDb;
 
 namespace Interface.DataBaseControls
 {
@@ -47,53 +47,273 @@ namespace Interface.DataBaseControls
 
                 if (selectOrDelete.Contains("Select"))
                 {
-                    OleDbConnection conexao = new($@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source={Application.StartupPath + "/bd/Banco de dados V2.mdb"}");
+                    MySqlConnection conexao = new("server=localhost;user=root;database=tms");
 
                     conexao.Open();
 
                     if (maskedTextBox.MaskCompleted == true && maskedTextBox.Text != "")
                     {
-                        OleDbCommand cmdWhere = new($"SELECT * FROM {mapper.TypeDataDatabase} WHERE {mapper.TypeWhereDatabase} = '{maskedTextBox.Text}'", conexao);
+                        if (Route!.Contains("Processo"))
+                        {
+                            MySqlCommand comandoWhere = new($"SELECT * FROM {mapper.TypeDataDatabase} INNER JOIN Veiculo ON {mapper.TypeDataDatabase}.ID_for_veiculo = Veiculo.ID_veiculo WHERE {mapper.TypeWhereDatabase} = '{maskedTextBox.Text}'", conexao);
 
-                        OleDbDataAdapter sdaWhere = new(cmdWhere);
+                            MySqlDataAdapter mySqlDataAdapterWhere = new(comandoWhere);
 
-                        sdaWhere.Fill(dados);
+                            mySqlDataAdapterWhere.Fill(dados);
+
+                            dataGridView.DataSource = dados;
+
+                        }
+                        else
+                        {
+                            MySqlCommand comandoWhere = new($"SELECT * FROM {mapper.TypeDataDatabase} WHERE {mapper.TypeWhereDatabase} = '{maskedTextBox.Text}'", conexao);
+
+                            MySqlDataAdapter mySqlDataAdapterWhere = new(comandoWhere);
+
+                            mySqlDataAdapterWhere.Fill(dados);
+
+                            dataGridView.DataSource = dados;
+                        }
+
+                    }
+
+                    if (Route!.Contains("Clientes"))
+                    {
+                        MySqlCommand comando = new($"SELECT * FROM {mapper.TypeDataDatabase} " +
+                            $"INNER JOIN Cliente ON {mapper.TypeDataDatabase}.ID_for_cliente = Cliente.ID_cliente " +
+                            $"INNER JOIN TelefoneCliente ON {mapper.TypeDataDatabase}.ID_for_cliente = TelefoneCliente.ID_for_cliente " +
+                            $"INNER JOIN CelularCliente ON {mapper.TypeDataDatabase}.ID_for_cliente = CelularCliente.ID_for_cliente " +
+                            $"INNER JOIN EmailCliente ON {mapper.TypeDataDatabase}.ID_for_cliente = EmailCliente.ID_for_cliente;", conexao);
+
+                        MySqlDataAdapter mySqlDataAdapter = new(comando);
+
+                        mySqlDataAdapter.Fill(dados);
+
+                        dataGridView.DataSource = dados;
+                    }
+                    else if (Route!.Contains("Motoristas"))
+                    {
+                        MySqlCommand comando = new($"SELECT * FROM {mapper.TypeDataDatabase} " +
+                            $"INNER JOIN TelefoneFuncionario ON {mapper.TypeDataDatabase}.ID_motorista = TelefoneFuncionario.ID_for_funcionario " +
+                            $"INNER JOIN CelularFuncionario ON {mapper.TypeDataDatabase}.ID_motorista = CelularFuncionario.ID_for_funcionario " +
+                            $"INNER JOIN EmailFuncionario ON {mapper.TypeDataDatabase}.ID_motorista = EmailFuncionario.ID_for_funcionario;", conexao);
+
+                        MySqlDataAdapter mySqlDataAdapter = new(comando);
+
+                        mySqlDataAdapter.Fill(dados);
+
+                        dataGridView.DataSource = dados;
+                    }
+                    else if (Route!.Contains("Veiculos"))
+                    {
+                        MySqlCommand comando = new($"SELECT * FROM {mapper.TypeDataDatabase} " +
+                            $"LEFT JOIN Carroceria ON {mapper.TypeDataDatabase}.ID_veiculo = Carroceria.ID_carroceria " +
+                            $"LEFT JOIN TipoVeiculo ON {mapper.TypeDataDatabase}.ID_veiculo = TipoVeiculo.ID_tipo_veiculo " +
+                            $"LEFT JOIN Modelo ON {mapper.TypeDataDatabase}.ID_veiculo = Modelo.ID_modelo " +
+                            $"LEFT JOIN Marca ON {mapper.TypeDataDatabase}.Placa = Marca.ID_marca " +
+                            $"LEFT JOIN Manutencao ON {mapper.TypeDataDatabase}.ID_veiculo = Manutencao.ID_for_veiculo;", conexao);
+
+                        MySqlDataAdapter mySqlDataAdapter = new(comando);
+
+                        mySqlDataAdapter.Fill(dados);
+
+                        dataGridView.DataSource = dados;
+                    }
+                    else if (Route!.Contains("Pedidos"))
+                    {
+                        MySqlCommand comando = new($"SELECT * FROM {mapper.TypeDataDatabase} " +
+                            $"INNER JOIN Cliente ON {mapper.TypeDataDatabase}.ID_for_cliente = Cliente.ID_cliente " +
+                            $"LEFT JOIN ClienteFisico ON {mapper.TypeDataDatabase}.ID_for_cliente = ClienteFisico.ID_for_cliente " +
+                            $"LEFT JOIN ClienteJuridico ON {mapper.TypeDataDatabase}.ID_for_cliente = ClienteJuridico.ID_for_cliente;", conexao);
+
+                        MySqlDataAdapter mySqlDataAdapter = new(comando);
+
+                        mySqlDataAdapter.Fill(dados);
+
+                        dataGridView.DataSource = dados;
+                    }
+                    else if (Route!.Contains("Empresa"))
+                    {
+                        MySqlCommand comando = new($"SELECT * FROM {mapper.TypeDataDatabase} " +
+                            $"LEFT JOIN Manutencao ON {mapper.TypeDataDatabase}.Nome_fantasia = Manutencao.ID_for_empresa", conexao);
+
+                        MySqlDataAdapter mySqlDataAdapter = new(comando);
+
+                        mySqlDataAdapter.Fill(dados);
+
+                        dataGridView.DataSource = dados;
+                    }
+                    else if (Route!.Contains("Processo"))
+                    {
+                        MySqlCommand comando = new($"SELECT * FROM {mapper.TypeDataDatabase} " +
+                            $"LEFT JOIN ProcessoManutencao ON ProcessoManutencao.ID_processo_manutencao = {mapper.TypeDataDatabase}.ID_manutencao " +
+                            $"LEFT JOIN Veiculo ON Veiculo.ID_veiculo = {mapper.TypeDataDatabase}.ID_for_veiculo " +
+                            $"LEFT JOIN PessoaJuridica ON PessoaJuridica.Nome_fantasia = {mapper.TypeDataDatabase}.ID_for_empresa;", conexao);
+
+                        MySqlDataAdapter mySqlDataAdapter = new(comando);
+
+                        mySqlDataAdapter.Fill(dados);
+
+                        dataGridView.DataSource = dados;
+                    }
+                    else if (Route!.Contains("Terceiros"))
+                    {
+                        MySqlCommand comando = new($"SELECT * FROM {mapper.TypeDataDatabase} " +
+                            $"LEFT JOIN TelefoneMotoristaTerceiro ON {mapper.TypeDataDatabase}.ID_motorista_terceiro = TelefoneMotoristaTerceiro.ID_for_motorista " +
+                            $"LEFT JOIN CelularMotoristaTerceiro ON {mapper.TypeDataDatabase}.ID_motorista_terceiro = CelularMotoristaTerceiro.ID_for_motorista " +
+                            $"LEFT JOIN EmailMotoristaTerceiro ON {mapper.TypeDataDatabase}.ID_motorista_terceiro = EmailMotoristaTerceiro.ID_for_motorista " +
+                            $"LEFT JOIN ContratoMotoristaTerceiro ON {mapper.TypeDataDatabase}.ID_motorista_terceiro = ContratoMotoristaTerceiro.ID_for_motorista " +
+                            $"LEFT JOIN VeiculoTerceiro ON {mapper.TypeDataDatabase}.ID_motorista_terceiro = VeiculoTerceiro.ID_for_motorista;", conexao);
+
+                        MySqlDataAdapter mySqlDataAdapter = new(comando);
+
+                        mySqlDataAdapter.Fill(dados);
+
+                        dataGridView.DataSource = dados;
+                    }
+                    else
+                    {
+                        MySqlCommand comando = new($"SELECT * FROM {mapper.TypeDataDatabase}", conexao);
+
+                        MySqlDataAdapter mySqlDataAdapter = new(comando);
+
+                        mySqlDataAdapter.Fill(dados);
 
                         dataGridView.DataSource = dados;
                     }
 
-                    OleDbCommand cmd = new($"SELECT * FROM {mapper.TypeDataDatabase}", conexao);
-
-                    OleDbDataAdapter sda = new(cmd);
-
-                    sda.Fill(dados);
-
-                    dataGridView.DataSource = dados;
 
                     conexao.Close();
                 }
 
                 if (selectOrDelete.Contains("Delete") && maskedTextBox.MaskCompleted == true && maskedTextBox.Text != "")
                 {
-                    OleDbConnection conexao = new($@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source={Application.StartupPath + "/bd/Banco de dados V2.mdb"}");
+                    MySqlConnection conexao = new("server=localhost;user=root;database=tms");
 
                     conexao.Open();
 
-                    string cmdDelete = $"DELETE * FROM {mapper.TypeDataDatabase} WHERE {mapper.TypeWhereDatabase} = '{maskedTextBox.Text}'";
+                    if(Route!.Contains("Processo"))
+                    {
+                        MySqlCommand comandoDelete = new($"DELETE FROM {mapper.TypeDataDatabase} where {mapper.TypeDataDatabase}.ID_for_veiculo in(SELECT Veiculo.ID_veiculo FROM Veiculo " +
+                             $" INNER JOIN {mapper.TypeDataDatabase} on {mapper.TypeDataDatabase}.ID_for_veiculo  = Veiculo.ID_veiculo WHERE Veiculo.Placa = {maskedTextBox.Text});", conexao);
 
-                    OleDbCommand sdaDelte = new(cmdDelete, conexao);
+                        comandoDelete.ExecuteNonQuery();
+                        maskedTextBox.Text = "";
+                        MessageBox.Show("Deletado com sucesso!", "Aviso");
+                    }
+                    else
+                    {
+                        MySqlCommand comandoDelete = new($"DELETE FROM {mapper.TypeDataDatabase} WHERE {mapper.TypeWhereDatabase} = '{maskedTextBox.Text}'", conexao);
 
-                    sdaDelte.ExecuteNonQuery();
+                        comandoDelete.ExecuteNonQuery();
 
-                    MessageBox.Show("Deletado com sucesso!", "Aviso");
+                        MessageBox.Show("Deletado com sucesso!", "Aviso");
+                    }
 
-                    OleDbCommand cmd = new($"SELECT * FROM {mapper.TypeDataDatabase}", conexao);
+                    if (Route!.Contains("Clientes"))
+                    {
+                        MySqlCommand comando = new($"SELECT * FROM {mapper.TypeDataDatabase} " +
+                            $"INNER JOIN Cliente ON {mapper.TypeDataDatabase}.ID_for_cliente = Cliente.ID_cliente " +
+                            $"INNER JOIN TelefoneCliente ON {mapper.TypeDataDatabase}.ID_for_cliente = TelefoneCliente.ID_for_cliente " +
+                            $"INNER JOIN CelularCliente ON {mapper.TypeDataDatabase}.ID_for_cliente = CelularCliente.ID_for_cliente " +
+                            $"INNER JOIN EmailCliente ON {mapper.TypeDataDatabase}.ID_for_cliente = EmailCliente.ID_for_cliente;", conexao);
 
-                    OleDbDataAdapter sda = new(cmd);
+                        MySqlDataAdapter mySqlDataAdapter = new(comando);
 
-                    sda.Fill(dados);
+                        mySqlDataAdapter.Fill(dados);
 
-                    dataGridView.DataSource = dados;
+                        dataGridView.DataSource = dados;
+                    }
+                    else if (Route!.Contains("Motoristas"))
+                    {
+                        MySqlCommand comando = new($"SELECT * FROM {mapper.TypeDataDatabase} " +
+                            $"INNER JOIN TelefoneFuncionario ON {mapper.TypeDataDatabase}.ID_motorista = TelefoneFuncionario.ID_for_funcionario " +
+                            $"INNER JOIN CelularFuncionario ON {mapper.TypeDataDatabase}.ID_motorista = CelularFuncionario.ID_for_funcionario " +
+                            $"INNER JOIN EmailFuncionario ON {mapper.TypeDataDatabase}.ID_motorista = EmailFuncionario.ID_for_funcionario;", conexao);
+
+                        MySqlDataAdapter mySqlDataAdapter = new(comando);
+
+                        mySqlDataAdapter.Fill(dados);
+
+                        dataGridView.DataSource = dados;
+                    }
+                    else if (Route!.Contains("Veiculos"))
+                    {
+                        MySqlCommand comando = new($"SELECT * FROM {mapper.TypeDataDatabase} " +
+                            $"LEFT JOIN Carroceria ON {mapper.TypeDataDatabase}.ID_veiculo = Carroceria.ID_carroceria " +
+                            $"LEFT JOIN TipoVeiculo ON {mapper.TypeDataDatabase}.ID_veiculo = TipoVeiculo.ID_tipo_veiculo " +
+                            $"LEFT JOIN Modelo ON {mapper.TypeDataDatabase}.ID_veiculo = Modelo.ID_modelo " +
+                            $"LEFT JOIN Marca ON {mapper.TypeDataDatabase}.Placa = Marca.ID_marca " +
+                            $"LEFT JOIN Manutencao ON {mapper.TypeDataDatabase}.ID_veiculo = Manutencao.ID_for_veiculo;", conexao);
+
+                        MySqlDataAdapter mySqlDataAdapter = new(comando);
+
+                        mySqlDataAdapter.Fill(dados);
+
+                        dataGridView.DataSource = dados;
+                    }
+                    else if (Route!.Contains("Pedidos"))
+                    {
+                        MySqlCommand comando = new($"SELECT * FROM {mapper.TypeDataDatabase} " +
+                            $"INNER JOIN Cliente ON {mapper.TypeDataDatabase}.ID_for_cliente = Cliente.ID_cliente " +
+                            $"LEFT JOIN ClienteFisico ON {mapper.TypeDataDatabase}.ID_for_cliente = ClienteFisico.ID_for_cliente " +
+                            $"LEFT JOIN ClienteJuridico ON {mapper.TypeDataDatabase}.ID_for_cliente = ClienteJuridico.ID_for_cliente;", conexao);
+
+                        MySqlDataAdapter mySqlDataAdapter = new(comando);
+
+                        mySqlDataAdapter.Fill(dados);
+
+                        dataGridView.DataSource = dados;
+                    }
+                    else if (Route!.Contains("Empresa"))
+                    {
+                        MySqlCommand comando = new($"SELECT * FROM {mapper.TypeDataDatabase} " +
+                            $"LEFT JOIN Manutencao ON {mapper.TypeDataDatabase}.Nome_fantasia = Manutencao.ID_for_empresa", conexao);
+
+                        MySqlDataAdapter mySqlDataAdapter = new(comando);
+
+                        mySqlDataAdapter.Fill(dados);
+
+                        dataGridView.DataSource = dados;
+                    }
+                    else if (Route!.Contains("Processo"))
+                    {
+                        MySqlCommand comando = new($"SELECT * FROM {mapper.TypeDataDatabase} " +
+                            $"LEFT JOIN ProcessoManutencao ON ProcessoManutencao.ID_processo_manutencao = {mapper.TypeDataDatabase}.ID_manutencao " +
+                            $"LEFT JOIN Veiculo ON Veiculo.ID_veiculo = {mapper.TypeDataDatabase}.ID_for_veiculo " +
+                            $"LEFT JOIN PessoaJuridica ON PessoaJuridica.Nome_fantasia = {mapper.TypeDataDatabase}.ID_for_empresa;", conexao);
+
+                        MySqlDataAdapter mySqlDataAdapter = new(comando);
+
+                        mySqlDataAdapter.Fill(dados);
+
+                        dataGridView.DataSource = dados;
+                    }
+                    else if (Route!.Contains("Terceiros"))
+                    {
+                        MySqlCommand comando = new($"SELECT * FROM {mapper.TypeDataDatabase} " +
+                            $"LEFT JOIN TelefoneMotoristaTerceiro ON {mapper.TypeDataDatabase}.ID_motorista_terceiro = TelefoneMotoristaTerceiro.ID_for_motorista " +
+                            $"LEFT JOIN CelularMotoristaTerceiro ON {mapper.TypeDataDatabase}.ID_motorista_terceiro = CelularMotoristaTerceiro.ID_for_motorista " +
+                            $"LEFT JOIN EmailMotoristaTerceiro ON {mapper.TypeDataDatabase}.ID_motorista_terceiro = EmailMotoristaTerceiro.ID_for_motorista " +
+                            $"LEFT JOIN ContratoMotoristaTerceiro ON {mapper.TypeDataDatabase}.ID_motorista_terceiro = ContratoMotoristaTerceiro.ID_for_motorista " +
+                            $"LEFT JOIN VeiculoTerceiro ON {mapper.TypeDataDatabase}.ID_motorista_terceiro = VeiculoTerceiro.ID_for_motorista;", conexao);
+
+                        MySqlDataAdapter mySqlDataAdapter = new(comando);
+
+                        mySqlDataAdapter.Fill(dados);
+
+                        dataGridView.DataSource = dados;
+                    }
+                    else
+                    {
+                        MySqlCommand comando = new($"SELECT * FROM {mapper.TypeDataDatabase}", conexao);
+
+                        MySqlDataAdapter mySqlDataAdapter = new(comando);
+
+                        mySqlDataAdapter.Fill(dados);
+
+                        dataGridView.DataSource = dados;
+                    }
 
                     conexao.Close();
                 }

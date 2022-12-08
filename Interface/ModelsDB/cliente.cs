@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Interface
+namespace Interface.ModelsDB
 {
     public partial class Cliente
     {
@@ -15,6 +15,7 @@ namespace Interface
         }
 
         public int ID_cliente { get; set; }
+        public string Tipo_cliente { get; set; } = null!;
         public string CEP { get; set; } = null!;
         public string Logradouro { get; set; } = null!;
         public string Numero_endereco { get; set; } = null!;

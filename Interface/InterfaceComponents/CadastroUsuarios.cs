@@ -1,6 +1,9 @@
 ﻿using Interface.ControlValidationAuxiliary;
-using Interface.DataBaseControls;
+using Interface.ModelsDB;
+using Interface.ModelsDB.TMSDataBaseContext;
 using Interface.Utilities;
+using Microsoft.EntityFrameworkCore;
+using MySqlConnector;
 using System.Data;
 
 namespace Interface
@@ -48,14 +51,11 @@ namespace Interface
         {
             set
             {
-                searchUsuario.Text = value["CPF"].ToString();
-
                 if (value != null)
                 {
                     searchUsuario.Text = value["CPF"].ToString();
-
                     tbNome.Text = value["Nome"].ToString();
-                    mkCelular.Text = value["Num_Cel"].ToString();
+                    mkCelular.Text = value["Celular"].ToString();
                     tbEmail.Text = value["Email"].ToString();
                     tbSenha.Text = value["Senha"].ToString();
                     tbSenhaConfirmacao.Text = tbSenha.Text;
@@ -93,55 +93,100 @@ namespace Interface
 
         private void cadastrarUsuario_Click(object sender, EventArgs e)
         {
-            List<string> notValidar = new();
-            notValidar.Add(tbSenhaConfirmacao.Name);
-            if (Type.Contains("Cadastro") && Validation.Validar(contentUsuario, notValidar) && Validation.validarSenha(tbSenha, tbSenhaConfirmacao))
+            try
             {
-                string SQL = "insert into Usuario (CPF, Nome, Senha, Num_Cel, Email) values";
-                SQL += "('" + mkCPF.Text + "','" + tbNome.Text + "','" + tbSenha.Text + "','" + mkCelular.Text + "','" + tbEmail.Text + "')";
+                List<string> notValidar = new();
+                notValidar.Add(tbSenhaConfirmacao.Name);
+                if (Type.Contains("Cadastro") && Validation.Validar(contentUsuario, notValidar))
+                {
 
-                ConnectDB connectDB = new ConnectDB();
-                connectDB.cadastrar(SQL);
+                    TMSContext db = new();
+                    int lastID = 0;
+                    if (db.Usuario.Count() > 0)
+                    {
+                        lastID = db.Usuario.Max(id => id.ID_usuario) + 1;
+                    }
 
-                LimparFormularios limpar = new();
+                    Usuario usuario = new Usuario
+                    {
+                        ID_usuario = lastID,
+                        Nome = tbNome.Text,
+                        Email = tbEmail.Text,
+                        Senha = tbSenha.Text,
+                        CPF = mkCPF.Text,
+                        Celular = mkCelular.Text
 
-                limpar.CleanControl(contentUsuario);
-                limpar.CleanControl(searchPanel);
+                    };
+
+                    db.Usuario.Add(usuario);
+                    db.SaveChanges();
+
+                    limpar.CleanControl(contentUsuario);
+                    limpar.CleanControl(searchPanel);
+
+                }
+                else if (Type.Contains("Update") && Validation.Validar(contentUsuario, notValidar) && Validation.validarSenha(tbSenha, tbSenhaConfirmacao))
+                {
+                    TMSContext db = new();
+                    Usuario usuario = db.Usuario.FirstOrDefault(a => a.CPF == mkCPF.Text);
+                    if (usuario == null)
+                    {
+                        MessageBox.Show("Error");
+                        return;
+                    }
+                    usuario.Nome = tbNome.Text;
+                    usuario.CPF = mkCPF.Text;
+                    usuario.Email = tbEmail.Text;
+                    usuario.Celular = mkCelular.Text;
+                    usuario.Senha = tbSenha.Text;
+
+
+                    db.SaveChanges();
+
+                    limpar.CleanControl(contentUsuario);
+                    limpar.CleanControl(searchPanel);
+                }
+            }
+            catch (DbUpdateException erro)
+            {
+                if (typeof(MySqlException).IsInstanceOfType(erro.InnerException))
+                {
+                    MySqlException mySqlException = (MySqlException)erro.InnerException;
+                    if (MySqlErrorCode.DuplicateKeyEntry == mySqlException.ErrorCode)
+                    {
+                        string campoDuplicado = mySqlException.Message.Split("'")[3];
+                        string valorDoCampo = mySqlException.Message.Split("'")[1];
+                        MessageBox.Show($"O valor {valorDoCampo} do campo {campoDuplicado} já cadastrado."
+                            + "Adicione um valor que não estaja cadastrado");
+                    }
+                    else if (MySqlErrorCode.DatabaseAccessDenied == mySqlException.ErrorCode)
+                    {
+                        MessageBox.Show("Acesso Bloqueado");
+                    }
+                }
             }
 
-            if (Type.Contains("Update") && Validation.Validar(contentUsuario, notValidar) && Validation.validarSenha(tbSenha, tbSenhaConfirmacao))
-            {
-                string SQLUp = $"UPDATE Usuario SET " +
-                $"Nome= '{tbNome.Text}', " +
-                $"Email= '{tbEmail.Text}', " +
-                $"Num_Cel= '{mkCelular.Text}', " +
-                $"Senha= '{tbSenha.Text}' " +
-                $"WHERE CPF = '{searchUsuario.Text.Replace('.', ',')}'";
-
-                ConnectDB connectDB = new();
-                connectDB.cadastrar(SQLUp);
-
-                limpar.CleanControl(contentUsuario);
-                limpar.CleanControl(searchPanel);
-            }
         }
         private void buscarCPF_Click(object sender, EventArgs e)
         {
             if (searchUsuario.MaskCompleted)
             {
-                ConnectDB connectDB = new();
-                DataRow dados = connectDB.pesquisarRow($"SELECT * FROM Usuario WHERE CPF = '{searchUsuario.Text}'", contentUsuario)!;
+                TMSContext db = new();
 
-                if (dados != null)
+                Usuario usuario = db.Usuario.FirstOrDefault(a => a.CPF == mkCPF.Text);
+
+                if (usuario == null)
                 {
-                    searchUsuario.Text = dados["CPF"].ToString();
-
-                    tbNome.Text = dados["Nome"].ToString();
-                    tbEmail.Text = dados["Email"].ToString();
-                    mkCelular.Text = dados["Num_Cel"].ToString();
-                    tbSenha.Text = dados["Senha"].ToString();
-                    tbSenhaConfirmacao.Text = tbSenha.Text;
+                    MessageBox.Show("Usuário não encontrado");
+                    return;
                 }
+
+                tbNome.Text = usuario.Nome;
+                tbEmail.Text = usuario.Email;
+                mkCPF.Text = usuario.CPF;
+                mkCelular.Text = usuario.Celular;
+                tbSenha.Text = usuario.Senha;
+
             }
             else
             {

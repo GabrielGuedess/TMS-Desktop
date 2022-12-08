@@ -111,6 +111,7 @@ namespace Interface
                 CacheType = TypeControl.Contains("Clientes") ? "Clientes_Fisicos" : TypeControl;
 
                 mapper.mapperForDatabase(CacheType, true);
+                DataGridRequest = null;
 
                 database.isCPF = true;
 
@@ -121,6 +122,18 @@ namespace Interface
 
                 database.GetData = database.Route!;
                 database.GetDataGridView(dataGridView1, maskInput);
+
+                for (int i = 0; i < dataGridView1.Columns.Count; i++)
+                {
+                    if (dataGridView1.Columns.Count < 10)
+                    {
+                        dataGridView1.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                    }
+                    else
+                    {
+                        dataGridView1.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+                    }
+                }
             }
         }
 
@@ -136,6 +149,7 @@ namespace Interface
                 CacheType = TypeControl.Contains("Clientes") ? "Clientes_Juridicos" : TypeControl;
 
                 mapper.mapperForDatabase(CacheType, false);
+                DataGridRequest = null;
 
                 database.isCPF = false;
 
@@ -145,6 +159,18 @@ namespace Interface
                 maskInput.Text = "";
 
                 database.GetDataGridView(dataGridView1, maskInput);
+
+                for (int i = 0; i < dataGridView1.Columns.Count; i++)
+                {
+                    if (dataGridView1.Columns.Count < 10)
+                    {
+                        dataGridView1.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                    }
+                    else
+                    {
+                        dataGridView1.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+                    }
+                }
             }
         }
 
@@ -193,7 +219,11 @@ namespace Interface
                 }
                 else
                 {
-                    MessageBox.Show($"{typeData.Text} não encontrado!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (selectOrDelete)
+                    {
+                        MessageBox.Show($"{typeData.Text} não encontrado!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    
                 }
             }
             else

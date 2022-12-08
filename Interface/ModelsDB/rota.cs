@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Interface
+namespace Interface.ModelsDB
 {
     public partial class Rota
     {
@@ -15,6 +15,7 @@ namespace Interface
         public string Cidade_partida { get; set; } = null!;
         public string UF_partida { get; set; } = null!;
         public double Distancia_KM { get; set; }
+        public double Gasto_combustivel_litros { get; set; }
         public double Gasto_combustivel_reais { get; set; }
         public double Gasto_pedagio_reais { get; set; }
         public DateOnly Data_inicio { get; set; }

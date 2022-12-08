@@ -40,15 +40,15 @@ namespace Interface
         {
             set
             {
-                mkBoxCdClientSearch.Text = value[Pessoa].ToString();
-
                 if (Pessoa != "" && Pessoa.Contains("CPF"))
                 {
+                    mkBoxCdClientSearch.Text = value[Pessoa].ToString();
                     ClienteCPF.DataForUpdate = value;
                 }
 
                 if (Pessoa != "" && Pessoa.Contains("CNPJ"))
                 {
+                    mkBoxCdClientSearch.Text = value[Pessoa].ToString();
                     ClienteCNPJ.DataForUpdate = value;
                 }
             }
@@ -103,7 +103,7 @@ namespace Interface
                 labelTypePerson.Text = "CPF";
 
                 mkBoxCdClientSearch.Text = "";
-                mkBoxCdClientSearch.Height = mkBoxCdClientSearch.Height + 20;
+                mkBoxCdClientSearch.Height += 20;
                 mkBoxCdClientSearch.Mask = "000.000.000-00";
 
                 limpar.CleanControl(ClienteCPF.Controls["contentCPF"]);

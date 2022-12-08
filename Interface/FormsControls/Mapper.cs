@@ -12,8 +12,8 @@ namespace Interface.FormsControls
         {
             if (route.Contains("Clientes"))
             {
-                TypeDataDatabase = CPF ? "Clientes_Fisicos" : "Clientes_Juridicos";
-                TypeWhereDatabase = TypeDataDatabase == "Clientes_Fisicos" ? "CPF" : "CPNJ";
+                TypeDataDatabase = CPF ? "ClienteFisico" : "ClienteJuridico";
+                TypeWhereDatabase = TypeDataDatabase == "ClienteFisico" ? "CPF" : "CPNJ";
             }
 
             if (route.Contains("Usuarios"))
@@ -22,52 +22,70 @@ namespace Interface.FormsControls
                 TypeWhereDatabase = "CPF";
             }
 
-            if (route.Contains("Rotas"))
+            if (route.Contains("Rota"))
             {
                 TypeDataDatabase = "Rotas";
-                TypeWhereDatabase = "ID_Rota";
+                TypeWhereDatabase = "ID_rota";
             }
 
             if (route.Contains("Motoristas"))
             {
-                TypeDataDatabase = "C_Motoristas";
+                TypeDataDatabase = "Motorista";
                 TypeWhereDatabase = "CPF";
             }
 
             if (route.Contains("Veiculos"))
             {
-                TypeDataDatabase = "tbVeiculos";
+                TypeDataDatabase = "Veiculo";
                 TypeWhereDatabase = "Placa";
             }
 
             if (route.Contains("Terceiros"))
             {
-                TypeDataDatabase = "tbTerceiros";
+                TypeDataDatabase = "MotoristaTerceiro";
                 TypeWhereDatabase = "CPF";
             }
 
             if (route.Contains("Sinistros"))
             {
-                TypeDataDatabase = "tbSinistros";
-                TypeWhereDatabase = "ID";
+                TypeDataDatabase = "Sinistro";
+                TypeWhereDatabase = "ID_Sinistro";
             }
 
             if (route.Contains("Notas"))
             {
-                TypeDataDatabase = "C_Nota_Fiscal";
-                TypeWhereDatabase = "CHAVE_ACESSO";
+                TypeDataDatabase = "NotaFiscal";
+                TypeWhereDatabase = "Chave_acesso";
             }
 
             if (route.Contains("Tarifas"))
             {
-                TypeDataDatabase = "Tarifas_taxas";
-                TypeWhereDatabase = "Nome_Emp";
+                TypeDataDatabase = "TarifasETaxas";
+                TypeWhereDatabase = "Nome_empresa";
             }
 
             if (route.Contains("Redes"))
             {
-                TypeDataDatabase = "C_Redes_de_Transporte";
-                TypeWhereDatabase = "ID_REDE";
+                TypeDataDatabase = "RedeTransporte";
+                TypeWhereDatabase = "ID_rede";
+            }
+
+            if (route.Contains("Pedidos"))
+            {
+                TypeDataDatabase = "PedidoCliente";
+                TypeWhereDatabase = "ID_pedido";
+            }
+
+            if (route.Contains("Empresa"))
+            {
+                TypeDataDatabase = "PessoaJuridica";
+                TypeWhereDatabase = "CNPJ";
+            }
+
+            if (route.Contains("Processo"))
+            {
+                TypeDataDatabase = "Manutencao";
+                TypeWhereDatabase = "Placa";
             }
         }
 
@@ -120,7 +138,7 @@ namespace Interface.FormsControls
 
             if (route.Contains("Sinistros"))
             {
-                typeData.Text = "Código";
+                typeData.Text = "ID Sinistro";
                 maskInput.Text = "";
                 maskInput.Mask = "";
             }
@@ -141,9 +159,30 @@ namespace Interface.FormsControls
 
             if (route.Contains("Redes"))
             {
-                typeData.Text = "ID REDE";
+                typeData.Text = "ID Rede";
                 maskInput.Text = "";
                 maskInput.Mask = "";
+            }
+
+            if (route.Contains("Pedidos"))
+            {
+                typeData.Text = "ID Pedido";
+                maskInput.Text = "";
+                maskInput.Mask = "";
+            }
+
+            if (route.Contains("Empresa"))
+            {
+                typeData.Text = "CNPJ";
+                maskInput.Text = "";
+                maskInput.Mask = "00.000.000/0000-00";
+            }
+
+            if (route.Contains("Processo"))
+            {
+                typeData.Text = "Placa";
+                maskInput.Text = "";
+                maskInput.Mask = "&&&&&&&";
             }
         }
     }

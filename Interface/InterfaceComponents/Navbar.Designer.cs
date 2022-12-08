@@ -33,6 +33,9 @@
             this.panel35 = new System.Windows.Forms.Panel();
             this.buttonCadastro = new System.Windows.Forms.Button();
             this.panelDropDown = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.linePedidos = new System.Windows.Forms.Panel();
+            this.buttonPedidos = new System.Windows.Forms.Button();
             this.panel17 = new System.Windows.Forms.Panel();
             this.lineRedesDeTransporte = new System.Windows.Forms.Panel();
             this.buttonRedesDeTransporte = new System.Windows.Forms.Button();
@@ -65,42 +68,19 @@
             this.buttonClientes = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panelDropDownPlan = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.panel19 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.panel20 = new System.Windows.Forms.Panel();
-            this.panel21 = new System.Windows.Forms.Panel();
-            this.panel22 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.panel23 = new System.Windows.Forms.Panel();
-            this.panel24 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
-            this.panel25 = new System.Windows.Forms.Panel();
-            this.panel26 = new System.Windows.Forms.Panel();
-            this.button8 = new System.Windows.Forms.Button();
             this.panel27 = new System.Windows.Forms.Panel();
             this.panel28 = new System.Windows.Forms.Panel();
-            this.buttonPlanejamento = new System.Windows.Forms.Button();
+            this.buttonManutencao = new System.Windows.Forms.Button();
             this.panel29 = new System.Windows.Forms.Panel();
-            this.button10 = new System.Windows.Forms.Button();
-            this.panel30 = new System.Windows.Forms.Panel();
+            this.buttonProcesso = new System.Windows.Forms.Button();
+            this.lineProcesso = new System.Windows.Forms.Panel();
             this.panel31 = new System.Windows.Forms.Panel();
-            this.panel32 = new System.Windows.Forms.Panel();
-            this.button11 = new System.Windows.Forms.Button();
+            this.lineEmpresa = new System.Windows.Forms.Panel();
+            this.buttonEmpresa = new System.Windows.Forms.Button();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.panel35.SuspendLayout();
             this.panelDropDown.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel17.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel13.SuspendLayout();
@@ -112,14 +92,6 @@
             this.panel1.SuspendLayout();
             this.panel33.SuspendLayout();
             this.panelDropDownPlan.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel8.SuspendLayout();
-            this.panel12.SuspendLayout();
-            this.panel16.SuspendLayout();
-            this.panel19.SuspendLayout();
-            this.panel21.SuspendLayout();
-            this.panel23.SuspendLayout();
-            this.panel25.SuspendLayout();
             this.panel27.SuspendLayout();
             this.panel29.SuspendLayout();
             this.panel31.SuspendLayout();
@@ -162,6 +134,7 @@
             // 
             // panelDropDown
             // 
+            this.panelDropDown.Controls.Add(this.panel2);
             this.panelDropDown.Controls.Add(this.panel17);
             this.panelDropDown.Controls.Add(this.panel15);
             this.panelDropDown.Controls.Add(this.panel13);
@@ -176,11 +149,58 @@
             this.panelDropDown.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelDropDown.Location = new System.Drawing.Point(0, 0);
             this.panelDropDown.Margin = new System.Windows.Forms.Padding(0, 0, 0, 25);
-            this.panelDropDown.MaximumSize = new System.Drawing.Size(288, 580);
+            this.panelDropDown.MaximumSize = new System.Drawing.Size(288, 640);
             this.panelDropDown.MinimumSize = new System.Drawing.Size(288, 40);
             this.panelDropDown.Name = "panelDropDown";
             this.panelDropDown.Size = new System.Drawing.Size(288, 40);
             this.panelDropDown.TabIndex = 9;
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.linePedidos);
+            this.panel2.Controls.Add(this.buttonPedidos);
+            this.panel2.Location = new System.Drawing.Point(28, 582);
+            this.panel2.Margin = new System.Windows.Forms.Padding(0, 0, 0, 15);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(260, 37);
+            this.panel2.TabIndex = 16;
+            // 
+            // linePedidos
+            // 
+            this.linePedidos.BackColor = System.Drawing.Color.Transparent;
+            this.linePedidos.Dock = System.Windows.Forms.DockStyle.Right;
+            this.linePedidos.Location = new System.Drawing.Point(258, 0);
+            this.linePedidos.Margin = new System.Windows.Forms.Padding(0);
+            this.linePedidos.Name = "linePedidos";
+            this.linePedidos.Size = new System.Drawing.Size(2, 37);
+            this.linePedidos.TabIndex = 9;
+            // 
+            // buttonPedidos
+            // 
+            this.buttonPedidos.BackColor = System.Drawing.Color.Transparent;
+            this.buttonPedidos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.buttonPedidos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonPedidos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonPedidos.FlatAppearance.BorderSize = 0;
+            this.buttonPedidos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonPedidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPedidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonPedidos.ForeColor = System.Drawing.Color.Transparent;
+            this.buttonPedidos.Image = ((System.Drawing.Image)(resources.GetObject("buttonPedidos.Image")));
+            this.buttonPedidos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonPedidos.Location = new System.Drawing.Point(0, 0);
+            this.buttonPedidos.Margin = new System.Windows.Forms.Padding(0, 0, 0, 25);
+            this.buttonPedidos.Name = "buttonPedidos";
+            this.buttonPedidos.Padding = new System.Windows.Forms.Padding(24, 0, 24, 0);
+            this.buttonPedidos.Size = new System.Drawing.Size(260, 37);
+            this.buttonPedidos.TabIndex = 6;
+            this.buttonPedidos.Text = "        Pedidos";
+            this.buttonPedidos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonPedidos.UseVisualStyleBackColor = false;
+            this.buttonPedidos.Click += new System.EventHandler(this.buttonPedidos_Click);
             // 
             // panel17
             // 
@@ -659,393 +679,17 @@
             // 
             // panelDropDownPlan
             // 
-            this.panelDropDownPlan.Controls.Add(this.panel4);
-            this.panelDropDownPlan.Controls.Add(this.panel8);
-            this.panelDropDownPlan.Controls.Add(this.panel12);
-            this.panelDropDownPlan.Controls.Add(this.panel16);
-            this.panelDropDownPlan.Controls.Add(this.panel19);
-            this.panelDropDownPlan.Controls.Add(this.panel21);
-            this.panelDropDownPlan.Controls.Add(this.panel23);
-            this.panelDropDownPlan.Controls.Add(this.panel25);
             this.panelDropDownPlan.Controls.Add(this.panel27);
             this.panelDropDownPlan.Controls.Add(this.panel29);
             this.panelDropDownPlan.Controls.Add(this.panel31);
             this.panelDropDownPlan.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelDropDownPlan.Location = new System.Drawing.Point(0, 40);
             this.panelDropDownPlan.Margin = new System.Windows.Forms.Padding(0);
-            this.panelDropDownPlan.MaximumSize = new System.Drawing.Size(288, 580);
+            this.panelDropDownPlan.MaximumSize = new System.Drawing.Size(288, 163);
             this.panelDropDownPlan.MinimumSize = new System.Drawing.Size(288, 40);
             this.panelDropDownPlan.Name = "panelDropDownPlan";
             this.panelDropDownPlan.Size = new System.Drawing.Size(288, 40);
             this.panelDropDownPlan.TabIndex = 10;
-            // 
-            // panel4
-            // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.BackColor = System.Drawing.Color.Transparent;
-            this.panel4.Controls.Add(this.panel6);
-            this.panel4.Controls.Add(this.button1);
-            this.panel4.Location = new System.Drawing.Point(28, 530);
-            this.panel4.Margin = new System.Windows.Forms.Padding(0, 0, 0, 15);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(348, 37);
-            this.panel4.TabIndex = 15;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.Transparent;
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel6.Location = new System.Drawing.Point(346, 0);
-            this.panel6.Margin = new System.Windows.Forms.Padding(0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(2, 37);
-            this.panel6.TabIndex = 9;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 25);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(24, 0, 24, 0);
-            this.button1.Size = new System.Drawing.Size(348, 37);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "        Redes de Transporte";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // panel8
-            // 
-            this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel8.BackColor = System.Drawing.Color.Transparent;
-            this.panel8.Controls.Add(this.panel10);
-            this.panel8.Controls.Add(this.button2);
-            this.panel8.Location = new System.Drawing.Point(28, 478);
-            this.panel8.Margin = new System.Windows.Forms.Padding(0, 0, 0, 15);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(348, 37);
-            this.panel8.TabIndex = 14;
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.Transparent;
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel10.Location = new System.Drawing.Point(346, 0);
-            this.panel10.Margin = new System.Windows.Forms.Padding(0);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(2, 37);
-            this.panel10.TabIndex = 9;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.Transparent;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 0);
-            this.button2.Margin = new System.Windows.Forms.Padding(0, 0, 0, 25);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(24, 0, 24, 0);
-            this.button2.Size = new System.Drawing.Size(348, 37);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "        Tarifas e Taxas";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // panel12
-            // 
-            this.panel12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel12.BackColor = System.Drawing.Color.Transparent;
-            this.panel12.Controls.Add(this.panel14);
-            this.panel12.Controls.Add(this.button3);
-            this.panel12.Location = new System.Drawing.Point(28, 426);
-            this.panel12.Margin = new System.Windows.Forms.Padding(0, 0, 0, 15);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(348, 37);
-            this.panel12.TabIndex = 13;
-            // 
-            // panel14
-            // 
-            this.panel14.BackColor = System.Drawing.Color.Transparent;
-            this.panel14.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel14.Location = new System.Drawing.Point(346, 0);
-            this.panel14.Margin = new System.Windows.Forms.Padding(0);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(2, 37);
-            this.panel14.TabIndex = 9;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button3.ForeColor = System.Drawing.Color.Transparent;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 0);
-            this.button3.Margin = new System.Windows.Forms.Padding(0, 0, 0, 25);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(24, 0, 24, 0);
-            this.button3.Size = new System.Drawing.Size(348, 37);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "        Notas Ficais";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // panel16
-            // 
-            this.panel16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel16.BackColor = System.Drawing.Color.Transparent;
-            this.panel16.Controls.Add(this.button4);
-            this.panel16.Controls.Add(this.panel18);
-            this.panel16.Location = new System.Drawing.Point(28, 374);
-            this.panel16.Margin = new System.Windows.Forms.Padding(0, 0, 0, 15);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(348, 37);
-            this.panel16.TabIndex = 9;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button4.ForeColor = System.Drawing.Color.Transparent;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(0, 0);
-            this.button4.Margin = new System.Windows.Forms.Padding(0, 0, 0, 25);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(24, 0, 24, 0);
-            this.button4.Size = new System.Drawing.Size(346, 37);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "        Sinistros";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // panel18
-            // 
-            this.panel18.BackColor = System.Drawing.Color.Transparent;
-            this.panel18.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel18.Location = new System.Drawing.Point(346, 0);
-            this.panel18.Margin = new System.Windows.Forms.Padding(0);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(2, 37);
-            this.panel18.TabIndex = 8;
-            // 
-            // panel19
-            // 
-            this.panel19.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel19.BackColor = System.Drawing.Color.Transparent;
-            this.panel19.Controls.Add(this.button5);
-            this.panel19.Controls.Add(this.panel20);
-            this.panel19.Location = new System.Drawing.Point(28, 322);
-            this.panel19.Margin = new System.Windows.Forms.Padding(0, 0, 0, 15);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(348, 37);
-            this.panel19.TabIndex = 9;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.Transparent;
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button5.ForeColor = System.Drawing.Color.Transparent;
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(0, 0);
-            this.button5.Margin = new System.Windows.Forms.Padding(0, 0, 0, 25);
-            this.button5.Name = "button5";
-            this.button5.Padding = new System.Windows.Forms.Padding(24, 0, 24, 0);
-            this.button5.Size = new System.Drawing.Size(346, 37);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "        Terceiros";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // panel20
-            // 
-            this.panel20.BackColor = System.Drawing.Color.Transparent;
-            this.panel20.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel20.Location = new System.Drawing.Point(346, 0);
-            this.panel20.Margin = new System.Windows.Forms.Padding(0);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(2, 37);
-            this.panel20.TabIndex = 8;
-            // 
-            // panel21
-            // 
-            this.panel21.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel21.BackColor = System.Drawing.Color.Transparent;
-            this.panel21.Controls.Add(this.panel22);
-            this.panel21.Controls.Add(this.button6);
-            this.panel21.Location = new System.Drawing.Point(28, 270);
-            this.panel21.Margin = new System.Windows.Forms.Padding(0, 0, 0, 15);
-            this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(348, 37);
-            this.panel21.TabIndex = 12;
-            // 
-            // panel22
-            // 
-            this.panel22.BackColor = System.Drawing.Color.Transparent;
-            this.panel22.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel22.Location = new System.Drawing.Point(346, 0);
-            this.panel22.Margin = new System.Windows.Forms.Padding(0);
-            this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(2, 37);
-            this.panel22.TabIndex = 8;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.Transparent;
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button6.ForeColor = System.Drawing.Color.Transparent;
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(0, 0);
-            this.button6.Margin = new System.Windows.Forms.Padding(0, 0, 0, 25);
-            this.button6.Name = "button6";
-            this.button6.Padding = new System.Windows.Forms.Padding(24, 0, 24, 0);
-            this.button6.Size = new System.Drawing.Size(348, 37);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "        Veiculos";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.UseVisualStyleBackColor = false;
-            // 
-            // panel23
-            // 
-            this.panel23.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel23.BackColor = System.Drawing.Color.Transparent;
-            this.panel23.Controls.Add(this.panel24);
-            this.panel23.Controls.Add(this.button7);
-            this.panel23.Location = new System.Drawing.Point(28, 218);
-            this.panel23.Margin = new System.Windows.Forms.Padding(0, 0, 0, 15);
-            this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(348, 37);
-            this.panel23.TabIndex = 11;
-            // 
-            // panel24
-            // 
-            this.panel24.BackColor = System.Drawing.Color.Transparent;
-            this.panel24.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel24.Location = new System.Drawing.Point(346, 0);
-            this.panel24.Margin = new System.Windows.Forms.Padding(0);
-            this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(2, 37);
-            this.panel24.TabIndex = 8;
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.Transparent;
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button7.ForeColor = System.Drawing.Color.Transparent;
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(0, 0);
-            this.button7.Margin = new System.Windows.Forms.Padding(0, 0, 0, 25);
-            this.button7.Name = "button7";
-            this.button7.Padding = new System.Windows.Forms.Padding(24, 0, 24, 0);
-            this.button7.Size = new System.Drawing.Size(348, 37);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "        Motoristas";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.UseVisualStyleBackColor = false;
-            // 
-            // panel25
-            // 
-            this.panel25.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel25.BackColor = System.Drawing.Color.Transparent;
-            this.panel25.Controls.Add(this.panel26);
-            this.panel25.Controls.Add(this.button8);
-            this.panel25.Location = new System.Drawing.Point(28, 166);
-            this.panel25.Margin = new System.Windows.Forms.Padding(0, 0, 0, 15);
-            this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(348, 37);
-            this.panel25.TabIndex = 9;
-            // 
-            // panel26
-            // 
-            this.panel26.BackColor = System.Drawing.Color.Transparent;
-            this.panel26.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel26.Location = new System.Drawing.Point(346, 0);
-            this.panel26.Margin = new System.Windows.Forms.Padding(0);
-            this.panel26.Name = "panel26";
-            this.panel26.Size = new System.Drawing.Size(2, 37);
-            this.panel26.TabIndex = 8;
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.Transparent;
-            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button8.ForeColor = System.Drawing.Color.Transparent;
-            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(0, 0);
-            this.button8.Margin = new System.Windows.Forms.Padding(0, 0, 0, 25);
-            this.button8.Name = "button8";
-            this.button8.Padding = new System.Windows.Forms.Padding(24, 0, 24, 0);
-            this.button8.Size = new System.Drawing.Size(348, 37);
-            this.button8.TabIndex = 6;
-            this.button8.Text = "        Rotas";
-            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.UseVisualStyleBackColor = false;
             // 
             // panel27
             // 
@@ -1053,7 +697,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel27.BackColor = System.Drawing.Color.Transparent;
             this.panel27.Controls.Add(this.panel28);
-            this.panel27.Controls.Add(this.buttonPlanejamento);
+            this.panel27.Controls.Add(this.buttonManutencao);
             this.panel27.Location = new System.Drawing.Point(0, 0);
             this.panel27.Margin = new System.Windows.Forms.Padding(0, 0, 0, 25);
             this.panel27.Name = "panel27";
@@ -1064,127 +708,127 @@
             // 
             this.panel28.BackColor = System.Drawing.Color.Transparent;
             this.panel28.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel28.Location = new System.Drawing.Point(286, 40);
+            this.panel28.Location = new System.Drawing.Point(286, 37);
             this.panel28.Margin = new System.Windows.Forms.Padding(0);
             this.panel28.Name = "panel28";
             this.panel28.Size = new System.Drawing.Size(2, 0);
             this.panel28.TabIndex = 5;
             // 
-            // buttonPlanejamento
+            // buttonManutencao
             // 
-            this.buttonPlanejamento.BackColor = System.Drawing.Color.Transparent;
-            this.buttonPlanejamento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.buttonPlanejamento.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonPlanejamento.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonPlanejamento.FlatAppearance.BorderSize = 0;
-            this.buttonPlanejamento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.buttonPlanejamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPlanejamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonPlanejamento.ForeColor = System.Drawing.Color.Transparent;
-            this.buttonPlanejamento.Image = global::Interface.Properties.Resources.ep_arrow_right_bold_down;
-            this.buttonPlanejamento.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonPlanejamento.Location = new System.Drawing.Point(0, 0);
-            this.buttonPlanejamento.Margin = new System.Windows.Forms.Padding(0);
-            this.buttonPlanejamento.Name = "buttonPlanejamento";
-            this.buttonPlanejamento.Padding = new System.Windows.Forms.Padding(24, 0, 24, 0);
-            this.buttonPlanejamento.Size = new System.Drawing.Size(288, 40);
-            this.buttonPlanejamento.TabIndex = 111;
-            this.buttonPlanejamento.Text = "Planejamento";
-            this.buttonPlanejamento.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonPlanejamento.UseVisualStyleBackColor = false;
-            this.buttonPlanejamento.Click += new System.EventHandler(this.buttonPlanejamento_Click);
+            this.buttonManutencao.BackColor = System.Drawing.Color.Transparent;
+            this.buttonManutencao.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.buttonManutencao.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonManutencao.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonManutencao.FlatAppearance.BorderSize = 0;
+            this.buttonManutencao.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonManutencao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonManutencao.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonManutencao.ForeColor = System.Drawing.Color.Transparent;
+            this.buttonManutencao.Image = global::Interface.Properties.Resources.ep_arrow_right_bold_down;
+            this.buttonManutencao.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonManutencao.Location = new System.Drawing.Point(0, 0);
+            this.buttonManutencao.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonManutencao.Name = "buttonManutencao";
+            this.buttonManutencao.Padding = new System.Windows.Forms.Padding(24, 0, 24, 0);
+            this.buttonManutencao.Size = new System.Drawing.Size(288, 37);
+            this.buttonManutencao.TabIndex = 111;
+            this.buttonManutencao.Text = "Manutenção";
+            this.buttonManutencao.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonManutencao.UseVisualStyleBackColor = false;
+            this.buttonManutencao.Click += new System.EventHandler(this.buttonPlanejamento_Click);
             // 
             // panel29
             // 
             this.panel29.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel29.BackColor = System.Drawing.Color.Transparent;
-            this.panel29.Controls.Add(this.button10);
-            this.panel29.Controls.Add(this.panel30);
+            this.panel29.Controls.Add(this.buttonProcesso);
+            this.panel29.Controls.Add(this.lineProcesso);
             this.panel29.Location = new System.Drawing.Point(28, 114);
             this.panel29.Margin = new System.Windows.Forms.Padding(0, 0, 0, 15);
             this.panel29.Name = "panel29";
-            this.panel29.Size = new System.Drawing.Size(348, 37);
+            this.panel29.Size = new System.Drawing.Size(260, 37);
             this.panel29.TabIndex = 9;
             // 
-            // button10
+            // buttonProcesso
             // 
-            this.button10.BackColor = System.Drawing.Color.Transparent;
-            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button10.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button10.ForeColor = System.Drawing.Color.Transparent;
-            this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
-            this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button10.Location = new System.Drawing.Point(0, 0);
-            this.button10.Margin = new System.Windows.Forms.Padding(0, 0, 0, 25);
-            this.button10.Name = "button10";
-            this.button10.Padding = new System.Windows.Forms.Padding(24, 0, 24, 0);
-            this.button10.Size = new System.Drawing.Size(346, 37);
-            this.button10.TabIndex = 4;
-            this.button10.Text = "        Usuários";
-            this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button10.UseVisualStyleBackColor = false;
+            this.buttonProcesso.BackColor = System.Drawing.Color.Transparent;
+            this.buttonProcesso.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.buttonProcesso.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonProcesso.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonProcesso.FlatAppearance.BorderSize = 0;
+            this.buttonProcesso.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonProcesso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonProcesso.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonProcesso.ForeColor = System.Drawing.Color.Transparent;
+            this.buttonProcesso.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonProcesso.Location = new System.Drawing.Point(0, 0);
+            this.buttonProcesso.Margin = new System.Windows.Forms.Padding(0, 0, 0, 25);
+            this.buttonProcesso.Name = "buttonProcesso";
+            this.buttonProcesso.Padding = new System.Windows.Forms.Padding(24, 0, 24, 0);
+            this.buttonProcesso.Size = new System.Drawing.Size(258, 37);
+            this.buttonProcesso.TabIndex = 4;
+            this.buttonProcesso.Text = "Processo";
+            this.buttonProcesso.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonProcesso.UseVisualStyleBackColor = false;
+            this.buttonProcesso.Click += new System.EventHandler(this.buttonProcesso_Click);
             // 
-            // panel30
+            // lineProcesso
             // 
-            this.panel30.BackColor = System.Drawing.Color.Transparent;
-            this.panel30.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel30.Location = new System.Drawing.Point(346, 0);
-            this.panel30.Margin = new System.Windows.Forms.Padding(0);
-            this.panel30.Name = "panel30";
-            this.panel30.Size = new System.Drawing.Size(2, 37);
-            this.panel30.TabIndex = 8;
+            this.lineProcesso.BackColor = System.Drawing.Color.Transparent;
+            this.lineProcesso.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lineProcesso.Location = new System.Drawing.Point(258, 0);
+            this.lineProcesso.Margin = new System.Windows.Forms.Padding(0);
+            this.lineProcesso.Name = "lineProcesso";
+            this.lineProcesso.Size = new System.Drawing.Size(2, 37);
+            this.lineProcesso.TabIndex = 8;
             // 
             // panel31
             // 
             this.panel31.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel31.BackColor = System.Drawing.Color.Transparent;
-            this.panel31.Controls.Add(this.panel32);
-            this.panel31.Controls.Add(this.button11);
+            this.panel31.Controls.Add(this.lineEmpresa);
+            this.panel31.Controls.Add(this.buttonEmpresa);
             this.panel31.Location = new System.Drawing.Point(28, 62);
             this.panel31.Margin = new System.Windows.Forms.Padding(0, 0, 0, 15);
             this.panel31.Name = "panel31";
-            this.panel31.Size = new System.Drawing.Size(348, 37);
+            this.panel31.Size = new System.Drawing.Size(260, 37);
             this.panel31.TabIndex = 10;
             // 
-            // panel32
+            // lineEmpresa
             // 
-            this.panel32.BackColor = System.Drawing.Color.Transparent;
-            this.panel32.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel32.Location = new System.Drawing.Point(346, 0);
-            this.panel32.Margin = new System.Windows.Forms.Padding(0);
-            this.panel32.Name = "panel32";
-            this.panel32.Size = new System.Drawing.Size(2, 37);
-            this.panel32.TabIndex = 7;
+            this.lineEmpresa.BackColor = System.Drawing.Color.Transparent;
+            this.lineEmpresa.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lineEmpresa.Location = new System.Drawing.Point(258, 0);
+            this.lineEmpresa.Margin = new System.Windows.Forms.Padding(0);
+            this.lineEmpresa.Name = "lineEmpresa";
+            this.lineEmpresa.Size = new System.Drawing.Size(2, 37);
+            this.lineEmpresa.TabIndex = 7;
             // 
-            // button11
+            // buttonEmpresa
             // 
-            this.button11.BackColor = System.Drawing.Color.Transparent;
-            this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button11.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button11.ForeColor = System.Drawing.Color.Transparent;
-            this.button11.Image = ((System.Drawing.Image)(resources.GetObject("button11.Image")));
-            this.button11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button11.Location = new System.Drawing.Point(0, 0);
-            this.button11.Margin = new System.Windows.Forms.Padding(0, 0, 0, 25);
-            this.button11.Name = "button11";
-            this.button11.Padding = new System.Windows.Forms.Padding(24, 0, 24, 0);
-            this.button11.Size = new System.Drawing.Size(348, 37);
-            this.button11.TabIndex = 6;
-            this.button11.Text = "        Clientes";
-            this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button11.UseVisualStyleBackColor = false;
+            this.buttonEmpresa.BackColor = System.Drawing.Color.Transparent;
+            this.buttonEmpresa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.buttonEmpresa.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonEmpresa.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonEmpresa.FlatAppearance.BorderSize = 0;
+            this.buttonEmpresa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.buttonEmpresa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonEmpresa.ForeColor = System.Drawing.Color.Transparent;
+            this.buttonEmpresa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonEmpresa.Location = new System.Drawing.Point(0, 0);
+            this.buttonEmpresa.Margin = new System.Windows.Forms.Padding(0, 0, 0, 25);
+            this.buttonEmpresa.Name = "buttonEmpresa";
+            this.buttonEmpresa.Padding = new System.Windows.Forms.Padding(24, 0, 24, 0);
+            this.buttonEmpresa.Size = new System.Drawing.Size(260, 37);
+            this.buttonEmpresa.TabIndex = 6;
+            this.buttonEmpresa.Text = "Empresa";
+            this.buttonEmpresa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonEmpresa.UseVisualStyleBackColor = false;
+            this.buttonEmpresa.Click += new System.EventHandler(this.buttonEmpresa_Click);
             // 
             // timer2
             // 
@@ -1201,10 +845,11 @@
             this.Margin = new System.Windows.Forms.Padding(0);
             this.MinimumSize = new System.Drawing.Size(288, 114);
             this.Name = "Navbar";
-            this.Size = new System.Drawing.Size(288, 114);
+            this.Size = new System.Drawing.Size(288, 680);
             this.Load += new System.EventHandler(this.Navbar_Load);
             this.panel35.ResumeLayout(false);
             this.panelDropDown.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.panel17.ResumeLayout(false);
             this.panel15.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
@@ -1216,14 +861,6 @@
             this.panel1.ResumeLayout(false);
             this.panel33.ResumeLayout(false);
             this.panelDropDownPlan.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel8.ResumeLayout(false);
-            this.panel12.ResumeLayout(false);
-            this.panel16.ResumeLayout(false);
-            this.panel19.ResumeLayout(false);
-            this.panel21.ResumeLayout(false);
-            this.panel23.ResumeLayout(false);
-            this.panel25.ResumeLayout(false);
             this.panel27.ResumeLayout(false);
             this.panel29.ResumeLayout(false);
             this.panel31.ResumeLayout(false);
@@ -1268,39 +905,18 @@
         private Panel lineTarifasETaxas;
         private Panel lineNotasFicais;
         private Panel panelDropDownPlan;
-        private Panel panel4;
-        private Panel panel6;
-        private Button button1;
-        private Panel panel8;
-        private Panel panel10;
-        private Button button2;
-        private Panel panel12;
-        private Panel panel14;
-        private Button button3;
-        private Panel panel16;
-        private Button button4;
-        private Panel panel18;
-        private Panel panel19;
-        private Button button5;
-        private Panel panel20;
-        private Panel panel21;
-        private Panel panel22;
-        private Button button6;
-        private Panel panel23;
-        private Panel panel24;
-        private Button button7;
-        private Panel panel25;
-        private Panel panel26;
-        private Button button8;
         private Panel panel27;
         private Panel panel28;
-        private Button buttonPlanejamento;
+        private Button buttonManutencao;
         private Panel panel29;
-        private Button button10;
-        private Panel panel30;
+        private Button buttonProcesso;
+        private Panel lineProcesso;
         private Panel panel31;
-        private Panel panel32;
-        private Button button11;
+        private Panel lineEmpresa;
+        private Button buttonEmpresa;
         private System.Windows.Forms.Timer timer2;
+        private Panel panel2;
+        private Panel linePedidos;
+        private Button buttonPedidos;
     }
 }

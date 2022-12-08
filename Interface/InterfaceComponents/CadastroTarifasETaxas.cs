@@ -1,6 +1,9 @@
 ﻿using Interface.ControlValidationAuxiliary;
-using Interface.DataBaseControls;
+using Interface.ModelsDB;
+using Interface.ModelsDB.TMSDataBaseContext;
 using Interface.Utilities;
+using Microsoft.EntityFrameworkCore;
+using MySqlConnector;
 using System.Data;
 
 namespace Interface
@@ -46,14 +49,13 @@ namespace Interface
         {
             set
             {
-                empresaMask.Text = value["Nome_Empresa"].ToString();
-
                 if (value != null)
                 {
+                    empresaMask.Text = value["Nome_Empresa"].ToString();
                     tbDescricaoTaxa.Text = value["Descricao"].ToString();
                     tbNomeEmpresa.Text = value["Nome_Empresa"].ToString();
-                    checkTarifa.Checked = value["Taxa_Tarifa"].ToString() == "Tarifa";
-                    checkTaxa.Checked = value["Taxa_Tarifa"].ToString() == "Taxa";
+                    checkTarifa.Checked = value["Tarifa_ou_taxa"].ToString() == "Tarifa";
+                    checkTaxa.Checked = value["Tarifa_ou_taxa"].ToString() == "Taxa";
                 }
             }
         }
@@ -84,39 +86,85 @@ namespace Interface
 
         private void CadastrarTarifaOuTaxa_Click(object sender, EventArgs e)
         {
-            if (Type.Contains("Cadastro") && Validation.Validar(contentTarifas) && validar())
+            try
             {
-                string selected = string.Empty;
-                if (checkTaxa.Checked)
+                if (Type.Contains("Cadastro") && Validation.Validar(contentTarifas) && validar())
                 {
-                    selected = "Taxa";
+                    TMSContext db = new();
+                    string selected = string.Empty;
+                    if (checkTaxa.Checked)
+                    {
+                        selected = "Taxa";
+                    }
+                    else if (checkTarifa.Checked)
+                    {
+                        selected = "Tarifa";
+                    }
+
+                    TarifasETaxas tarifasETaxas = new TarifasETaxas
+                    {
+                        Descricao = tbDescricaoTaxa.Text,
+                        Nome_empresa = tbNomeEmpresa.Text,
+                        Tarifa_ou_taxa = selected,
+                    };
+                    db.TarifasETaxas.Add(tarifasETaxas);
+                    db.SaveChanges();
+                    limpar.CleanControl(contentTarifas);
+                    limpar.CleanControl(searchPanel);
+
                 }
-                else if (checkTarifa.Checked)
+
+
+                if (Type.Contains("Update") && Validation.Validar(contentTarifas) && validar())
                 {
-                    selected = "Tarifa";
+                    TMSContext db = new();
+
+                    TarifasETaxas tarifasETaxas = db.TarifasETaxas.FirstOrDefault(a => a.Nome_empresa == empresaMask.Text);
+
+                    if (tarifasETaxas == null)
+                    {
+                        MessageBox.Show("Error");
+                        return;
+                    }
+
+                    string selected = string.Empty;
+
+                    if (checkTaxa.Checked)
+                    {
+                        selected = "Taxa";
+                    }
+                    else if (checkTarifa.Checked)
+                    {
+                        selected = "Tarifa";
+                    }
+
+                    tarifasETaxas.Descricao = tbDescricaoTaxa.Text;
+                    tarifasETaxas.Nome_empresa = tbNomeEmpresa.Text;
+                    tarifasETaxas.Tarifa_ou_taxa = selected;
+
+                    db.SaveChanges();
+
+                    limpar.CleanControl(contentTarifas);
+                    limpar.CleanControl(searchPanel);
                 }
-                string SQL = "INSERT INTO Tarifas_Taxas (Taxa_Tarifa, Descricao, Nome_Empresa) VALUES";
-                SQL += "('" + selected + "','" + tbDescricaoTaxa.Text + "','" + tbNomeEmpresa.Text + "')";
-
-                ConnectDB connectDB = new ConnectDB();
-                connectDB.cadastrar(SQL);
-
-                limpar.CleanControl(contentTarifas);
-                limpar.CleanControl(panelSerch);
             }
-
-            if (Type.Contains("Update") && Validation.Validar(contentTarifas) && validar())
+            catch (DbUpdateException erro)
             {
-                string SQLUp = $"UPDATE Tarifas_Taxas SET " +
-                $"Taxa_Tarifa= '{(checkTarifa.Checked ? checkTarifa.Text : checkTaxa.Text)}', " +
-                $"Descricao= '{tbDescricaoTaxa.Text}' " +
-                $"WHERE Nome_Empresa = '{empresaMask.Text.Replace('.', ',')}'";
-
-                ConnectDB connectDB = new();
-                connectDB.cadastrar(SQLUp);
-
-                limpar.CleanControl(contentTarifas);
-                limpar.CleanControl(searchPanel);
+                if (typeof(MySqlException).IsInstanceOfType(erro.InnerException))
+                {
+                    MySqlException mySqlException = (MySqlException)erro.InnerException;
+                    if (MySqlErrorCode.DuplicateKeyEntry == mySqlException.ErrorCode)
+                    {
+                        string campoDuplicado = mySqlException.Message.Split("'")[3];
+                        string valorDoCampo = mySqlException.Message.Split("'")[1];
+                        MessageBox.Show($"O valor {valorDoCampo} do campo {campoDuplicado} já cadastrado."
+                            + "Adicione um valor que não estaja cadastrado");
+                    }
+                    else if (MySqlErrorCode.DatabaseAccessDenied == mySqlException.ErrorCode)
+                    {
+                        MessageBox.Show("Acesso Bloqueado");
+                    }
+                }
             }
         }
 
@@ -124,17 +172,20 @@ namespace Interface
         {
             if (empresaMask.Text != "")
             {
-                ConnectDB connectDB = new();
-                DataRow dados = connectDB.pesquisarRow($"SELECT * FROM Tarifas_Taxas WHERE Nome_Empresa = '{empresaMask.Text}'", contentTarifas)!;
+                TMSContext db = new();
 
-                if (dados != null)
+                TarifasETaxas tarifasETaxas = db.TarifasETaxas.FirstOrDefault(a => a.Nome_empresa == tbNomeEmpresa.Text);
+
+                if (tarifasETaxas == null)
                 {
-                    empresaMask.Text = dados["Nome_Empresa"].ToString();
-
-                    checkTaxa.Text = dados["Taxa_Tarifa"].ToString();
-                    checkTarifa.Checked = dados["Taxa_Tarifa"].ToString() == "Tarifa";
-                    checkTaxa.Checked = dados["Taxa_Tarifa"].ToString() == "Taxa";
+                    MessageBox.Show("Rede de Transporte não encontrado");
+                    return;
                 }
+
+                tbDescricaoTaxa.Text = tarifasETaxas.Descricao;
+                tbNomeEmpresa.Text = tarifasETaxas.Nome_empresa;
+                checkTaxa.Checked = tarifasETaxas.Tarifa_ou_taxa == "Taxa";
+                checkTarifa.Checked = tarifasETaxas.Tarifa_ou_taxa == "Tarifa";
             }
             else
             {

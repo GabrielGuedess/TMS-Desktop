@@ -12,11 +12,11 @@ namespace Interface
 
         public string RouteDash = "";
 
+
         public DataRow OverviewDataRequest
         {
             set
             {
-
                 if (overview1.CacheType == "Clientes_Fisicos")
                 {
                     cadastroClientes1.Pessoa = "CPF";
@@ -56,7 +56,7 @@ namespace Interface
 
                 if (overview1.CacheType.Contains("Sinistros"))
                 {
-                    cadastroSinistros2.OverviewDataResponse = value;
+                    cadastroSinistros1.OverviewDataResponse = value;
                 }
 
                 if (overview1.CacheType.Contains("Notas"))
@@ -72,6 +72,21 @@ namespace Interface
                 if (overview1.CacheType.Contains("Redes"))
                 {
                     cadastroRedesDeTransporte2.OverviewDataResponse = value;
+                }
+
+                if (overview1.CacheType.Contains("Pedidos"))
+                {
+                    pedido1.OverviewDataResponse = value;
+                }
+
+                if (overview1.CacheType.Contains("Empresa"))
+                {
+                    cadastroEmpresaManutencao1.OverviewDataResponse = value;
+                }
+
+                if (overview1.CacheType.Contains("Processo"))
+                {
+                    processoManutencao1.OverviewDataResponse = value;
                 }
 
             }
@@ -100,10 +115,13 @@ namespace Interface
                 cadastroMotoristas2,
                 cadastroVeiculos1,
                 cadastroTerceiros1,
-                cadastroSinistros2,
+                cadastroSinistros1,
                 cadastroNotasFicais2,
                 cadastroTarifaseTaxas1,
-                cadastroRedesDeTransporte2
+                cadastroRedesDeTransporte2,
+                pedido1,
+                processoManutencao1,
+                cadastroEmpresaManutencao1
               );
 
 
@@ -125,7 +143,10 @@ namespace Interface
                 (Button)navbar1.Controls["panelDropDown"].Controls["panel11"].Controls["buttonSinistros"],
                 (Button)navbar1.Controls["panelDropDown"].Controls["panel13"].Controls["buttonNotasFicais"],
                 (Button)navbar1.Controls["panelDropDown"].Controls["panel15"].Controls["buttonTarifasETaxas"],
-                (Button)navbar1.Controls["panelDropDown"].Controls["panel17"].Controls["buttonRedesDeTransporte"]
+                (Button)navbar1.Controls["panelDropDown"].Controls["panel17"].Controls["buttonRedesDeTransporte"],
+                (Button)navbar1.Controls["panelDropDown"].Controls["panel2"].Controls["buttonPedidos"],
+                (Button)navbar1.Controls["panelDropDownPlan"].Controls["panel31"].Controls["buttonEmpresa"],
+                (Button)navbar1.Controls["panelDropDownPlan"].Controls["panel29"].Controls["buttonProcesso"]
               );
 
             navigationDash.ColorsNavigationDashLines(
@@ -138,7 +159,10 @@ namespace Interface
                 (Panel)navbar1.Controls["panelDropDown"].Controls["panel11"].Controls["lineSinistros"],
                 (Panel)navbar1.Controls["panelDropDown"].Controls["panel13"].Controls["lineNotasFicais"],
                 (Panel)navbar1.Controls["panelDropDown"].Controls["panel15"].Controls["lineTarifasETaxas"],
-                (Panel)navbar1.Controls["panelDropDown"].Controls["panel17"].Controls["lineRedesDeTransporte"]
+                (Panel)navbar1.Controls["panelDropDown"].Controls["panel17"].Controls["lineRedesDeTransporte"],
+                (Panel)navbar1.Controls["panelDropDown"].Controls["panel2"].Controls["linePedidos"],
+                (Panel)navbar1.Controls["panelDropDownPlan"].Controls["panel31"].Controls["lineEmpresa"],
+                (Panel)navbar1.Controls["panelDropDownPlan"].Controls["panel29"].Controls["lineProcesso"]
               );
         }
 
