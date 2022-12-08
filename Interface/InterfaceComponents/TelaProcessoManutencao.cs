@@ -3,6 +3,7 @@ using Interface.ModelsDB;
 using Interface.ModelsDB.TMSDataBaseContext;
 using Interface.Utilities;
 using Microsoft.EntityFrameworkCore;
+using MySqlConnector;
 
 namespace Interface.InterfaceComponents
 {
@@ -47,59 +48,81 @@ namespace Interface.InterfaceComponents
 
         private void cadastrarManutencao_Click(object sender, EventArgs e)
         {
-            TMSContext db = new();
-            if (Type.Contains("Cadastro") && Validation.Validar(contentManutencao))
+            try
             {
-
-                Manutencao manutencao = new();
-
-                manutencao.ID_for_processo_manutencao = db.ProcessoManutencao.First(a => a.Descricao == comboProcesso.Text).ID_processo_manutencao;
-                if (comboTipo.SelectedIndex == 0)
-                    manutencao.Tipo_manutencao = "c";
-                else if (comboTipo.SelectedIndex == 1)
-                    manutencao.Tipo_manutencao = "p";
-                manutencao.Detalhamento = tbDetalhamento.Text;
-                manutencao.Valor_reais = tbValor.returnValue();
-                manutencao.Data_fim = mkDateFim.convertDateOnly();
-                manutencao.Data_inicio = mkDateFim.convertDateOnly();
-                manutencao.ID_for_empresa = db.PessoaJuridica.First(a => a.Nome_fantasia == comboEmpresa.Text).ID_pessoa_juridica;
-               // manutencao.ID_for_veiculo = db.Veiculo.First(a => a.Placa == comboVeiculo.Text).ID_veiculo;
-                db.Manutencao.Add(manutencao);
-                db.SaveChanges();
-
-
-            }
-            else if (Type.Contains("Update") && Validation.Validar(contentManutencao))
-            {
-
-               /* Manutencao manutencao = db.Manutencao.Include(a => a.ID_for_processo_manutencaoNavigation)
-                    .Include(a => a.ID_for_empresaNavigation)
-                    .Include(a => a.ID_for_veiculoNavigation)
-                    .FirstOrDefault(a => a.ID_for_veiculoNavigation.Placa == comboVeiculo.Text);
-
-                if (manutencao == null)
+                TMSContext db = new();
+                if (Type.Contains("Cadastro") && Validation.Validar(contentManutencao))
                 {
-                    MessageBox.Show("Erro ao atualizar");
-                    return;
-                }
-                else
-                {
+
+                    Manutencao manutencao = new();
+
                     manutencao.ID_for_processo_manutencao = db.ProcessoManutencao.First(a => a.Descricao == comboProcesso.Text).ID_processo_manutencao;
                     if (comboTipo.SelectedIndex == 0)
-                        manutencao.Tipo_manutencao = "C";
+                        manutencao.Tipo_manutencao = "c";
                     else if (comboTipo.SelectedIndex == 1)
-                        manutencao.Tipo_manutencao = "P";
+                        manutencao.Tipo_manutencao = "p";
                     manutencao.Detalhamento = tbDetalhamento.Text;
                     manutencao.Valor_reais = tbValor.returnValue();
                     manutencao.Data_fim = mkDateFim.convertDateOnly();
                     manutencao.Data_inicio = mkDateFim.convertDateOnly();
                     manutencao.ID_for_empresa = db.PessoaJuridica.First(a => a.Nome_fantasia == comboEmpresa.Text).ID_pessoa_juridica;
-                    manutencao.ID_for_veiculo = db.Veiculo.First(a => a.Placa == comboVeiculo.Text).ID_veiculo;
+                    // manutencao.ID_for_veiculo = db.Veiculo.First(a => a.Placa == comboVeiculo.Text).ID_veiculo;
+                    db.Manutencao.Add(manutencao);
                     db.SaveChanges();
-                    limpar.CleanControl(contentManutencao);
-                    limpar.CleanControl(searchPanel);
-                }*/
+
+
+                }
+                else if (Type.Contains("Update") && Validation.Validar(contentManutencao))
+                {
+
+                     Manutencao manutencao = db.Manutencao.Include(a => a.ID_for_processo_manutencaoNavigation)
+                         .Include(a => a.ID_for_empresaNavigation)
+                         .Include(a => a.ID_for_veiculoNavigation)
+                         .FirstOrDefault(a => a.ID_for_veiculoNavigation.Placa == comboVeiculo.Text);
+
+                     if (manutencao == null)
+                     {
+                         MessageBox.Show("Erro ao atualizar");
+                         return;
+                     }
+                     else
+                     {
+                         manutencao.ID_for_processo_manutencao = db.ProcessoManutencao.First(a => a.Descricao == comboProcesso.Text).ID_processo_manutencao;
+                         if (comboTipo.SelectedIndex == 0)
+                             manutencao.Tipo_manutencao = "C";
+                         else if (comboTipo.SelectedIndex == 1)
+                             manutencao.Tipo_manutencao = "P";
+                         manutencao.Detalhamento = tbDetalhamento.Text;
+                         manutencao.Valor_reais = tbValor.returnValue();
+                         manutencao.Data_fim = mkDateFim.convertDateOnly();
+                         manutencao.Data_inicio = mkDateFim.convertDateOnly();
+                         manutencao.ID_for_empresa = db.PessoaJuridica.First(a => a.Nome_fantasia == comboEmpresa.Text).ID_pessoa_juridica;
+                         manutencao.ID_for_veiculo = db.Veiculo.First(a => a.Placa == comboVeiculo.Text).ID_veiculo;
+                         db.SaveChanges();
+                         limpar.CleanControl(contentManutencao);
+                         limpar.CleanControl(searchPanel);
+                     }
+                }
             }
+            catch (DbUpdateException erro)
+            {
+                if (typeof(MySqlException).IsInstanceOfType(erro.InnerException))
+                {
+                    MySqlException mySqlException = (MySqlException)erro.InnerException;
+                    if (MySqlErrorCode.DuplicateKeyEntry == mySqlException.ErrorCode)
+                    {
+                        string campoDuplicado = mySqlException.Message.Split("'")[3];
+                        string valorDoCampo = mySqlException.Message.Split("'")[1];
+                        MessageBox.Show($"O valor {valorDoCampo} do campo {campoDuplicado} já cadastrado."
+                            + "Adicione um valor que não estaja cadastrado");
+                    }
+                    else if (MySqlErrorCode.DatabaseAccessDenied == mySqlException.ErrorCode)
+                    {
+                        MessageBox.Show("Acesso Bloqueado");
+                    }
+                }
+            }
+
         }
 
         private void buscarManutencao_Click(object sender, EventArgs e)

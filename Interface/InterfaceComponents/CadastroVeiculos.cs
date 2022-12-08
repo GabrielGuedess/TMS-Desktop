@@ -95,7 +95,7 @@ namespace Interface
             notValidar.Add(tableCarroceria.Name);
             try
             {
-                if (Type.Contains("Cadastro") && Validation.Validar(contentVeiculos, notValidar))
+                if (Type.Contains("Cadastro") && Validation.Validar(tableVeiculo, notValidar) == true)
                 {
                     TMSContext db = new();
                     int idMarca = db.Marca.First(a => a.Nome_marca == comboMarca.Text).ID_marca;
@@ -113,15 +113,21 @@ namespace Interface
                     veiculo.ID_veiculo = lastID;
                     veiculo.ID_for_modelo = idModelo;
                     veiculo.ID_for_tipo_veiculo = tipoVeiculo.ID_tipo_veiculo;
-                    if (tipoVeiculo.Possui_carroceria == 1)
+                    if (tipoVeiculo.Possui_carroceria == 1 )
                     {
-                        Validation.Validar(tableCarroceria);
-                        Carroceria carroceriaVeiculo = db.Carroceria.First(a => a.Descricao_carroceira == comboTipoCarroceria.Text);
-                        veiculo.ID_for_carroceria.Add(carroceriaVeiculo);
+                        if (Validation.Validar(tableCarroceria))
+                        {
+                            Carroceria carroceriaVeiculo = db.Carroceria.First(a => a.Descricao_carroceira == comboTipoCarroceria.Text);
+                            veiculo.ID_for_carroceria.Add(carroceriaVeiculo);
+                        }
+                        else
+                        {
+                            return;
+                        }
                     }
 
                     veiculo.Placa = mkPlaca.Text;
-                    veiculo.Ano_fabricacao = short.Parse(mkAnoFabricacao.Text);
+                    veiculo.Ano_fabricacao = Int16.Parse(mkAnoFabricacao.Text);
                     veiculo.Cor = tbCor.Text;
                     veiculo.Cod_RENAVAM = mkRenavam.Text;
                     veiculo.Cod_RNTRC = mkRNTRC.Text;
@@ -137,7 +143,7 @@ namespace Interface
 
                 }
 
-                if (Type.Contains("Update") && Validation.Validar(contentVeiculos, notValidar))
+                if (Type.Contains("Update") && Validation.Validar(tableVeiculo, notValidar))
                 {
                     TMSContext db = new();
                     Veiculo veiculoUpdate = db.Veiculo.Include(a => a.ID_for_carroceria).
@@ -146,7 +152,7 @@ namespace Interface
                     veiculoUpdate.Placa = mkPlaca.Text;
                     veiculoUpdate.ID_for_marca = db.Marca.First(a => a.Nome_marca == comboMarca.Text).ID_marca;
                     veiculoUpdate.ID_for_modelo = getInfoModelo(comboModelo.Text).Result.ID_modelo;
-                    veiculoUpdate.ID_for_tipo_veiculo = getInfoTipoVeiculo(comboTipoVeiculo.Text).Result.ID_tipo_veiculo;
+                    veiculoUpdate.ID_for_tipo_veiculo = db.TipoVeiculo.FirstOrDefault(a => a.Descricao == comboTipoVeiculo.Text).ID_tipo_veiculo;
                     veiculoUpdate.Ano_fabricacao = Int16.Parse(mkAnoFabricacao.Text);
                     veiculoUpdate.Cor = tbCor.Text;
                     veiculoUpdate.Cod_RENAVAM = mkRenavam.Text;
@@ -179,14 +185,29 @@ namespace Interface
                     limpar.CleanControl(searchPanel);
                 }
             }
-            catch (MySqlException erro)
+            catch (DbUpdateException erro)
             {
-                if (MySqlErrorCode.DuplicateKeyEntry == erro.ErrorCode)
+                if (typeof(MySqlException).IsInstanceOfType(erro.InnerException))
                 {
-                    MessageBox.Show(erro.Message, erro.InnerException.Message);
+                    MySqlException mySqlException = (MySqlException)erro.InnerException;
+                    if (MySqlErrorCode.DuplicateKeyEntry == mySqlException.ErrorCode)
+                    {
+                        string campoDuplicado = mySqlException.Message.Split("'")[3];
+                        string valorDoCampo = mySqlException.Message.Split("'")[1];
+                        MessageBox.Show($"O valor {valorDoCampo} do campo {campoDuplicado} já cadastrado."
+                            +"Adicione um valor que não estaja cadastrado");
+                    }
+                    else if(MySqlErrorCode.DatabaseAccessDenied == mySqlException.ErrorCode){
+                        MessageBox.Show("Acesso Bloqueado");
+                    }
                 }
-                else
-                    MessageBox.Show(erro.Message);
+            }
+
+            catch (Exception erro)
+            {
+
+                MessageBox.Show(erro.Message);
+
             }
 
         }
@@ -201,7 +222,6 @@ namespace Interface
                     Include(a => a.ID_for_modeloNavigation).Include(a => a.ID_for_carroceria).FirstOrDefault(a => a.Placa == searchPlaca.Text);
 
 
-                var blob = db.Database.GetDbConnection().CreateCommand();
 
                 if (veiculo == null)
                 {
@@ -210,10 +230,7 @@ namespace Interface
                 }
                 mkPlaca.Text = veiculo.Placa;
                 comboMarca.Text = veiculo.ID_for_marcaNavigation.Nome_marca;
-                comboTipoVeiculo.Text = veiculo.ID_for_tipo_veiculoNavigation.Descricao;
-                string[] nomeVeiculo = { veiculo.ID_for_modeloNavigation.Nome };
-                comboModelo.DataSource = nomeVeiculo;
-                comboModelo.Text = veiculo.ID_for_modeloNavigation.Nome;
+                comboTipoVeiculo.Text = veiculo.ID_for_tipo_veiculoNavigation.Descricao;   
                 mkAnoFabricacao.Text = veiculo.Ano_fabricacao.ToString();
                 tbCor.Text = veiculo.Cor;
                 mkRenavam.Text = veiculo.Cod_RENAVAM;
@@ -224,12 +241,10 @@ namespace Interface
                 tbQuantEixo.Text = veiculo.ID_for_modeloNavigation.Eixo_modelo.ToString();
 
 
-
                 if (veiculo.ID_for_tipo_veiculoNavigation.Possui_carroceria == 1)
                 {
                     comboPossuiEixo.SelectedIndex = 0;
                     List<string> listaNomesCarrocerias = new List<string>();
-                    Carroceria carroceria = new();
                     var tipoVeiculos = db.TipoVeiculo.Include(a => a.ID_for_carroceria)
                         .ToList();
                     foreach (var item in tipoVeiculos)
@@ -239,10 +254,9 @@ namespace Interface
                             {
                                 listaNomesCarrocerias.Add(tiposCarroceria.Descricao_carroceira);
                                 if (tiposCarroceria.Descricao_carroceira == veiculo.ID_for_tipo_veiculoNavigation.Descricao)
-                                    carroceria = tiposCarroceria;
+                                    comboTipoCarroceria.Items.Add(tiposCarroceria);
                             }
                     }
-                    comboTipoCarroceria.DataSource = listaNomesCarrocerias;
                     comboTipoCarroceria.Text = veiculo.ID_for_tipo_veiculoNavigation.Descricao;
                     tbQuantEixoCarroceria.Text = veiculo.ID_for_carroceria.First().Eixo_carroceria.ToString();
                     tbPesoCarroceria.Text = veiculo.ID_for_carroceria.First().Massa_carroceria.ToString();
@@ -273,19 +287,32 @@ namespace Interface
         }
 
 
-        private async void CadastroVeiculos_Load(object sender, EventArgs e)
+        async private  void CadastroVeiculos_Enter(object sender, EventArgs e)
         {
-            comboMarca.DataSource = await getNomeMarcas();
-            //comboTipoVeiculo.DataSource = await getTiposVeiculos();
+            TMSContext db = new();
+
+            List<Marca> marcas = await db.Marca.ToListAsync();
+
+            comboMarca.Items.Clear();
+            foreach (var nomeMarca in marcas)
+            {
+                comboMarca.Items.Add(nomeMarca.Nome_marca);
+            }
+
+            List<TipoVeiculo> tipoVeiculos = await db.TipoVeiculo.ToListAsync();
+
+            comboTipoVeiculo.Items.Clear();
+            foreach (var tipoVeiculo in tipoVeiculos)
+            {
+                comboTipoVeiculo.Items.Add(tipoVeiculo.Descricao);
+            }
             comboMarca.SelectedIndex = -1;
             comboTipoVeiculo.SelectedIndex = -1;
         }
 
         async private void comboMarca_SelectedIndexChanged(object sender, EventArgs e)
         {
-
             await UpdateModelosAndCarroceria();
-
         }
 
 
@@ -316,16 +343,41 @@ namespace Interface
 
         async private Task UpdateModelosAndCarroceria()
         {
-            comboModelo.DataSource = await getModelos(comboTipoVeiculo.Text);
-            //comboModelo.SelectedIndex = -1;
-            //comboTipoCarroceria.DataSource = await getCarroceriasForTipoCarroceria(comboTipoVeiculo.Text);
-            //comboTipoCarroceria.SelectedIndex = -1;
-            TipoVeiculo tipoVeiculo = await getInfoTipoVeiculo(comboTipoVeiculo.Text);
-            if (tipoVeiculo == null)
+
+           if(comboTipoVeiculo.Text == "")
             {
                 return;
             }
-            else if (tipoVeiculo.Possui_carroceria == 0)
+            TMSContext db = new();
+
+            TipoVeiculo tipoVeiculo = await db.TipoVeiculo.Include(a=>a.ID_for_carroceria).FirstAsync(a => a.Descricao == comboTipoVeiculo.Text);
+
+            if (db.Modelo.Count(a => a.ID_for_tipo_veiculo == tipoVeiculo.ID_tipo_veiculo) > 0)
+            {
+                List<Modelo> modelos = await db.Modelo.Where(a => a.ID_for_tipo_veiculo == tipoVeiculo.ID_tipo_veiculo && a.ID_for_marcaNavigation.Nome_marca == comboMarca.Text).ToListAsync();
+                comboModelo.Items.Clear();
+                foreach (var modelo in modelos)
+                {
+                    comboModelo.Items.Add(modelo.Nome);
+                }
+            }
+            comboModelo.SelectedIndex = 0;
+            if (tipoVeiculo != null)
+            {
+                if (tipoVeiculo.Possui_carroceria == 1)
+                {
+                    comboTipoCarroceria.Items.Clear();
+                    foreach (var item in tipoVeiculo.ID_for_carroceria.ToList())
+                    {
+                        comboTipoCarroceria.Items.Add(item.Descricao_carroceira);
+                    }
+
+                }
+            }
+
+
+            comboTipoCarroceria.SelectedIndex = -1;
+            if (tipoVeiculo.Possui_carroceria == 0)
             {
                 comboPossuiEixo.SelectedIndex = 1;
                 enableCamposCarroceria(false);
@@ -375,81 +427,7 @@ namespace Interface
             }
         }
 
-        async static private Task<List<string>> getNomeMarcas()
-        {
-            TMSContext db = new();
-
-            List<Marca> marcas = await db.Marca.ToListAsync();
-
-            List<string> nomeMarcas = new();
-            foreach (var nomeMarca in marcas)
-            {
-                nomeMarcas.Add(nomeMarca.Nome_marca);
-            }
-            return nomeMarcas;
-        }
-
-        /*async static private Task<List<string>> getTiposVeiculos()
-        {
-            TMSContext db = new();
-
-            List<TipoVeiculo> tipoVeiculos = await db.TipoVeiculo.ToListAsync();
-
-            List<string> tipoVeiculoNome = new();
-
-            foreach (var tipoVeiculo in tipoVeiculos)
-            {
-                tipoVeiculoNome.Add(tipoVeiculo.Descricao);
-            }
-            return tipoVeiculoNome;
-        }*/
-
-        async private Task<List<string>> getModelos(string tipoVeiculo)
-        {
-            if (tipoVeiculo == "")
-            {
-                return null;
-            }
-            TMSContext db = new();
-
-            TipoVeiculo tipo = await db.TipoVeiculo.FirstAsync(a => a.Descricao == tipoVeiculo);
-            if (db.Modelo.Count(a => a.ID_for_tipo_veiculo == tipo.ID_tipo_veiculo) > 0)
-            {
-                List<Modelo> modelos = await db.Modelo.Where(a => a.ID_for_tipo_veiculo == tipo.ID_tipo_veiculo && a.ID_for_marcaNavigation.Nome_marca == comboMarca.Text).ToListAsync();
-
-                List<string> nomeMoelos = new();
-
-                foreach (var modelo in modelos)
-                {
-                    nomeMoelos.Add(modelo.Nome);
-                }
-                return nomeMoelos;
-            }
-            return null;
-        }
-
-        async Task<List<string>> getCarroceriasForTipoCarroceria(string tipoVeiculoDescricao)
-        {
-            TMSContext db = new();
-            TipoVeiculo tipoVeiculo = await db.TipoVeiculo.Include(a => a.ID_for_carroceria)
-                .Include(a => a.Modelo).FirstOrDefaultAsync(a => a.Descricao == tipoVeiculoDescricao);
-            if (tipoVeiculo != null)
-            {
-                if (tipoVeiculo.Possui_carroceria == 1)
-                {
-                    List<string> carrocerias = new();
-                    foreach (var item in tipoVeiculo.ID_for_carroceria.ToList())
-                    {
-                        carrocerias.Add(item.Descricao_carroceira);
-                    }
-
-                    return carrocerias;
-
-                }
-            }
-            return null;
-
-        }
+    
 
         async Task<Modelo> getInfoModelo(string nomeModelo)
         {
@@ -470,16 +448,14 @@ namespace Interface
             return carroceria;
         }
 
-        async Task<TipoVeiculo> getInfoTipoVeiculo(string nomeTipoVeiculo)
-        {
-            TMSContext db = new();
-            TipoVeiculo tipoVeiculo = db.TipoVeiculo.FirstOrDefault(a => a.Descricao == nomeTipoVeiculo);
-            return tipoVeiculo;
-        }
+
+        
 
         async private void comboTipoVeiculo_SelectedIndexChanged(object sender, EventArgs e)
         {
             await UpdateModelosAndCarroceria();
         }
+
+  
     }
 }

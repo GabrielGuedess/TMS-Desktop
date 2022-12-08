@@ -5,6 +5,8 @@ using Interface.ModelsDB;
 using Interface.ModelsDB.TMSDataBaseContext;
 using Interface.Properties;
 using Interface.Utilities;
+using Microsoft.EntityFrameworkCore;
+using MySqlConnector;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -106,6 +108,7 @@ namespace Interface.InterfaceComponents
                     empresa.CEP = mkCEP.Text;
                     empresa.UF = comboUF.Text;
                     empresa.Cidade = comboCidade.Text;
+                    empresa.Area_atuacao = tbAreaAtuacao.Text;
                     empresa.Bairro = tbBairro.Text;
                     empresa.Logradouro = tbLogradouro.Text;
                     empresa.Numero_endereco = tbNumCasa.Text;
@@ -113,6 +116,10 @@ namespace Interface.InterfaceComponents
                     {
                         empresa.Complemento_endereco = tbComplemento.Text;
                     }
+                    db.PessoaJuridica.Add(empresa);
+                    db.SaveChanges();
+                    limpar.CleanControl(contentCNPJ);
+                    limpar.CleanControl(searchPanel);
                 }
                 else if (Type.Contains("Update") && Validation.Validar(contentCNPJ, notValidar) && Validation.validarTelefone(mkTelefone))
                 {
@@ -144,13 +151,28 @@ namespace Interface.InterfaceComponents
                         empresa.Complemento_endereco = tbComplemento.Text;
                     }
                     db.SaveChanges();
-
+                    limpar.CleanControl(contentCNPJ);
+                    limpar.CleanControl(searchPanel);
                 }
 
             }
-            catch (Exception error)
+            catch (DbUpdateException erro)
             {
-                MessageBox.Show("Erro ao Atualizar");
+                if (typeof(MySqlException).IsInstanceOfType(erro.InnerException))
+                {
+                    MySqlException mySqlException = (MySqlException)erro.InnerException;
+                    if (MySqlErrorCode.DuplicateKeyEntry == mySqlException.ErrorCode)
+                    {
+                        string campoDuplicado = mySqlException.Message.Split("'")[3];
+                        string valorDoCampo = mySqlException.Message.Split("'")[1];
+                        MessageBox.Show($"O valor {valorDoCampo} do campo {campoDuplicado} já cadastrado."
+                            + "Adicione um valor que não estaja cadastrado");
+                    }
+                    else if (MySqlErrorCode.DatabaseAccessDenied == mySqlException.ErrorCode)
+                    {
+                        MessageBox.Show("Acesso Bloqueado");
+                    }
+                }
             }
         }
 
@@ -163,23 +185,26 @@ namespace Interface.InterfaceComponents
                 if (empresa == null)
                 {
                     MessageBox.Show("Erro ao Buscar");
-                    mkCNPJ.Text = empresa.CNPJ;
-                    tbNomeFantasia.Text = empresa.Nome_fantasia;
-                    mkInscricaoEstatudal.Text = empresa.Inscricao_estadual;
-                    tbRazaoSocial.Text = empresa.Razao_social;
-                    mkCelular.Text = empresa.Celular;
-                    mkTelefone.Text = empresa.Telefone;
-                    tbEmail.Text = empresa.Email;
-                    mkCEP.Text = empresa.CEP;
-                    comboUF.Text = empresa.UF;
-                    comboCidade.Text = empresa.Cidade;
-                    tbBairro.Text = empresa.Bairro;
-                    tbLogradouro.Text = empresa.Logradouro;
-                    tbNumCasa.Text = empresa.Numero_endereco;
-                    tbComplemento.Text = empresa.Complemento_endereco;
-
+                    return;
                 }
+                mkCNPJ.Text = empresa.CNPJ;
+                tbNomeFantasia.Text = empresa.Nome_fantasia;
+                mkInscricaoEstatudal.Text = empresa.Inscricao_estadual;
+                tbRazaoSocial.Text = empresa.Razao_social;
+                mkCelular.Text = empresa.Celular;
+                mkTelefone.Text = empresa.Telefone;
+                tbAreaAtuacao.Text = empresa.Area_atuacao;
+                tbEmail.Text = empresa.Email;
+                mkCEP.Text = empresa.CEP;
+                comboUF.Text = empresa.UF;
+                comboCidade.Text = empresa.Cidade;
+                tbBairro.Text = empresa.Bairro;
+                tbLogradouro.Text = empresa.Logradouro;
+                tbNumCasa.Text = empresa.Numero_endereco;
+                tbComplemento.Text = empresa.Complemento_endereco;
+
             }
+            
             else
             {
                 MessageBox.Show("Digite corretamente o CNPJ no campo de busca");

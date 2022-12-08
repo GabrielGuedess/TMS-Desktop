@@ -3,6 +3,8 @@ using Interface.DataBaseControls;
 using Interface.ModelsDB;
 using Interface.ModelsDB.TMSDataBaseContext;
 using Interface.Utilities;
+using Microsoft.EntityFrameworkCore;
+using MySqlConnector;
 using System.Data;
 
 namespace Interface
@@ -115,9 +117,9 @@ namespace Interface
 
         private void cadastrarRede_Click(object sender, EventArgs e)
         {
-            if (Type.Contains("Cadastro") && Validation.Validar(contentRedes))
+            try
             {
-                try
+                if (Type.Contains("Cadastro") && Validation.Validar(contentRedes))
                 {
 
                     TMSContext db = new();
@@ -130,24 +132,35 @@ namespace Interface
                         Categoria_CNH = comboCategoriaCNH.Text,
                         Tipo_veiculo = comboTipoVeiculo.Text,
                     };
-
                     db.RedeTransporte.Add(redeTransporte);
 
                     db.SaveChanges();
 
                     limpar.CleanControl(contentRedes);
                     limpar.CleanControl(searchPanel);
-
                     lastID++;
-
                     ID_Rede.Text = lastID.ToString();
-
-                }
-                catch (Exception error)
-                {
-                    MessageBox.Show(error.Message);
                 }
             }
+            catch (DbUpdateException erro)
+            {
+                if (typeof(MySqlException).IsInstanceOfType(erro.InnerException))
+                {
+                    MySqlException mySqlException = (MySqlException)erro.InnerException;
+                    if (MySqlErrorCode.DuplicateKeyEntry == mySqlException.ErrorCode)
+                    {
+                        string campoDuplicado = mySqlException.Message.Split("'")[3];
+                        string valorDoCampo = mySqlException.Message.Split("'")[1];
+                        MessageBox.Show($"O valor {valorDoCampo} do campo {campoDuplicado} já cadastrado."
+                            + "Adicione um valor que não estaja cadastrado");
+                    }
+                    else if (MySqlErrorCode.DatabaseAccessDenied == mySqlException.ErrorCode)
+                    {
+                        MessageBox.Show("Acesso Bloqueado");
+                    }
+                }
+            }
+
 
             if (Type.Contains("Update") && Validation.Validar(contentRedes))
             {

@@ -5,6 +5,7 @@ using Interface.ModelsDB.TMSDataBaseContext;
 using Interface.Properties;
 using Interface.Utilities;
 using Microsoft.EntityFrameworkCore;
+using MySqlConnector;
 using System.Data;
 using System.Globalization;
 using System.Linq;
@@ -316,9 +317,23 @@ namespace Interface
                 }
 
             }
-            catch (System.Exception erro)
+            catch (DbUpdateException erro)
             {
-                MessageBox.Show(erro.Message);
+                if (typeof(MySqlException).IsInstanceOfType(erro.InnerException))
+                {
+                    MySqlException mySqlException = (MySqlException)erro.InnerException;
+                    if (MySqlErrorCode.DuplicateKeyEntry == mySqlException.ErrorCode)
+                    {
+                        string campoDuplicado = mySqlException.Message.Split("'")[3];
+                        string valorDoCampo = mySqlException.Message.Split("'")[1];
+                        MessageBox.Show($"O valor {valorDoCampo} do campo {campoDuplicado} já cadastrado."
+                            + "Adicione um valor que não estaja cadastrado");
+                    }
+                    else if (MySqlErrorCode.DatabaseAccessDenied == mySqlException.ErrorCode)
+                    {
+                        MessageBox.Show("Acesso Bloqueado");
+                    }
+                }
             }
 
         }

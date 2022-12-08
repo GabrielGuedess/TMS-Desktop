@@ -119,6 +119,7 @@
             this.panelCodCiot = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panelBorderRounded4 = new Interface.TemplateComponents.PanelBorderRounded();
+            this.tbCIOT = new Interface.TemplateComponents.MasckedboxTemplete();
             this.label3 = new System.Windows.Forms.Label();
             this.panelPessoVeiculo = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -146,7 +147,6 @@
             this.panel51 = new System.Windows.Forms.Panel();
             this.button10 = new System.Windows.Forms.Button();
             this.labelUFClient = new System.Windows.Forms.Label();
-            this.tbCIOT = new Interface.TemplateComponents.MasckedboxTemplete();
             this.searchPanel.SuspendLayout();
             this.panelSerch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -1003,7 +1003,7 @@
             this.comboModelo.Name = "comboModelo";
             this.comboModelo.Size = new System.Drawing.Size(248, 29);
             this.comboModelo.TabIndex = 8;
-            this.comboModelo.SelectionChangeCommitted += new System.EventHandler(this.comboModelo_SelectionChangeCommitted);
+            this.comboModelo.SelectedIndexChanged += new System.EventHandler(this.comboModelo_SelectionChangeCommitted);
             // 
             // label5
             // 
@@ -1354,6 +1354,21 @@
             this.panelBorderRounded4.Name = "panelBorderRounded4";
             this.panelBorderRounded4.Size = new System.Drawing.Size(247, 33);
             this.panelBorderRounded4.TabIndex = 2;
+            // 
+            // tbCIOT
+            // 
+            this.tbCIOT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbCIOT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
+            this.tbCIOT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbCIOT.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbCIOT.ForeColor = System.Drawing.Color.White;
+            this.tbCIOT.Location = new System.Drawing.Point(5, 6);
+            this.tbCIOT.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
+            this.tbCIOT.Mask = "0000000000000000";
+            this.tbCIOT.Name = "tbCIOT";
+            this.tbCIOT.Size = new System.Drawing.Size(236, 22);
+            this.tbCIOT.TabIndex = 0;
+            this.tbCIOT.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // label3
             // 
@@ -1711,21 +1726,6 @@
             this.labelUFClient.TabIndex = 0;
             this.labelUFClient.Text = "UF";
             // 
-            // tbCIOT
-            // 
-            this.tbCIOT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbCIOT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(19)))));
-            this.tbCIOT.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbCIOT.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbCIOT.ForeColor = System.Drawing.Color.White;
-            this.tbCIOT.Location = new System.Drawing.Point(5, 6);
-            this.tbCIOT.Margin = new System.Windows.Forms.Padding(10, 6, 10, 5);
-            this.tbCIOT.Mask = "0000000000000000";
-            this.tbCIOT.Name = "tbCIOT";
-            this.tbCIOT.Size = new System.Drawing.Size(236, 22);
-            this.tbCIOT.TabIndex = 0;
-            this.tbCIOT.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            // 
             // CadastroVeiculos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1736,7 +1736,7 @@
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "CadastroVeiculos";
             this.Size = new System.Drawing.Size(975, 1117);
-            this.Load += new System.EventHandler(this.CadastroVeiculos_Load);
+            this.Enter += new System.EventHandler(this.CadastroVeiculos_Enter);
             this.Resize += new System.EventHandler(this.CadastroVeiculos_Resize);
             this.searchPanel.ResumeLayout(false);
             this.panelSerch.ResumeLayout(false);

@@ -5,7 +5,8 @@ using Interface.Properties;
 using Interface.TemplateComponents;
 using Interface.Utilities;
 using System.Data;
-using System.Data.Entity;
+using MySqlConnector;
+using Microsoft.EntityFrameworkCore;
 
 namespace Interface
 {
@@ -92,14 +93,15 @@ namespace Interface
 
         private void cadastrar_Click(object sender, EventArgs e)
         {
-            List<string> notValidar = new();
-            notValidar.Add(mkTelefone.Name);
-            notValidar.Add(tbComplemento.Name);
-
-            if (Type.Contains("Cadastro") && Validation.Validar(contentCPF, notValidar))
+            try
             {
-                try
+                List<string> notValidar = new();
+                notValidar.Add(mkTelefone.Name);
+                notValidar.Add(tbComplemento.Name);
+
+                if (Type.Contains("Cadastro") && Validation.Validar(contentCPF, notValidar))
                 {
+
                     TMSContext db = new();
                     int lastID = 0;
 
@@ -167,59 +169,73 @@ namespace Interface
 
                     limpar.CleanControl(contentCPF);
                 }
-                catch (Exception error)
+
+                if (Type.Contains("Update") && Validation.Validar(contentCPF, notValidar))
                 {
-                    MessageBox.Show(error.Message);
+                    TMSContext db = new();
+
+                    ClienteFisico clienteFisico = db.ClienteFisico
+                        .Include(a => a.ID_for_clienteNavigation)
+                        .First(a => a.CPF == mkCPF.Text);
+
+                    TelefoneCliente telefoneCliente = db.TelefoneCliente.First(a => a.ID_for_cliente == clienteFisico.ID_for_cliente);
+                    CelularCliente celularCliente = db.CelularCliente.First(a => a.ID_for_cliente == clienteFisico.ID_for_cliente);
+                    EmailCliente emailCliente = db.EmailCliente.First(a => a.ID_for_cliente == clienteFisico.ID_for_cliente);
+
+
+                    if (clienteFisico == null)
+                    {
+                        MessageBox.Show("Error");
+                        return;
+                    }
+
+                    if (mkTelefone.Text.Length > 0)
+                    {
+                        telefoneCliente.Telefone = mkTelefone.Text;
+                    }
+                    else
+                    {
+                        clienteFisico.ID_for_clienteNavigation.TelefoneCliente.Clear();
+                    }
+
+                    clienteFisico.Nome = tbNome.Text;
+                    clienteFisico.CPF = mkCPF.Text;
+                    clienteFisico.RG = mkRG.Text;
+                    clienteFisico.Data_nascimento = dateNascimento.convertDateOnly();
+                    clienteFisico.Genero = comboGenero.Text;
+                    celularCliente.Celular = mkCelular.Text;
+                    emailCliente.Email = tbEmail.Text;
+                    clienteFisico.ID_for_clienteNavigation.CEP = mkCEP.Text;
+                    clienteFisico.ID_for_clienteNavigation.UF = comboUF.Text;
+                    clienteFisico.ID_for_clienteNavigation.Cidade = comboCidade.Text;
+                    clienteFisico.ID_for_clienteNavigation.Bairro = tbBairro.Text;
+                    clienteFisico.ID_for_clienteNavigation.Logradouro = tbLogradouro.Text;
+                    clienteFisico.ID_for_clienteNavigation.Numero_endereco = tbNumCasa.Text;
+                    clienteFisico.ID_for_clienteNavigation.Complemento_endereco = tbComplemento.Text;
+
+                    db.SaveChanges();
+
+                    limpar.CleanControl(contentCPF);
+                    limpar.CleanControl(Parent.Controls["searchPanel"].Controls["panelSerch"]);
                 }
             }
-
-            if (Type.Contains("Update") && Validation.Validar(contentCPF, notValidar))
+            catch (DbUpdateException erro)
             {
-                TMSContext db = new();
-
-                ClienteFisico clienteFisico = db.ClienteFisico
-                    .Include(a => a.ID_for_clienteNavigation.CEP)
-                    .First(a => a.CPF == mkCPF.Text);
-
-                TelefoneCliente telefoneCliente = db.TelefoneCliente.First(a => a.ID_for_cliente == clienteFisico.ID_for_cliente);
-                CelularCliente celularCliente = db.CelularCliente.First(a => a.ID_for_cliente == clienteFisico.ID_for_cliente);
-                EmailCliente emailCliente = db.EmailCliente.First(a => a.ID_for_cliente == clienteFisico.ID_for_cliente);
-
-
-                if (clienteFisico == null)
+                if (typeof(MySqlException).IsInstanceOfType(erro.InnerException))
                 {
-                    MessageBox.Show("Error");
-                    return;
+                    MySqlException mySqlException = (MySqlException)erro.InnerException;
+                    if (MySqlErrorCode.DuplicateKeyEntry == mySqlException.ErrorCode)
+                    {
+                        string campoDuplicado = mySqlException.Message.Split("'")[3];
+                        string valorDoCampo = mySqlException.Message.Split("'")[1];
+                        MessageBox.Show($"O valor {valorDoCampo} do campo {campoDuplicado} já cadastrado."
+                            + "Adicione um valor que não estaja cadastrado");
+                    }
+                    else if (MySqlErrorCode.DatabaseAccessDenied == mySqlException.ErrorCode)
+                    {
+                        MessageBox.Show("Acesso Bloqueado");
+                    }
                 }
-
-                if (mkTelefone.Text.Length > 0)
-                {
-                    telefoneCliente.Telefone = mkTelefone.Text;
-                }
-                else
-                {
-                    clienteFisico.ID_for_clienteNavigation.TelefoneCliente.Clear();
-                }
-
-                clienteFisico.Nome = tbNome.Text;
-                clienteFisico.CPF = mkCPF.Text;
-                clienteFisico.RG = mkRG.Text;
-                clienteFisico.Data_nascimento = dateNascimento.convertDateOnly();
-                clienteFisico.Genero = comboGenero.Text;
-                celularCliente.Celular = mkCelular.Text;
-                emailCliente.Email = tbEmail.Text;
-                clienteFisico.ID_for_clienteNavigation.CEP = mkCEP.Text;
-                clienteFisico.ID_for_clienteNavigation.UF = comboUF.Text;
-                clienteFisico.ID_for_clienteNavigation.Cidade = comboCidade.Text;
-                clienteFisico.ID_for_clienteNavigation.Bairro = tbBairro.Text;
-                clienteFisico.ID_for_clienteNavigation.Logradouro = tbLogradouro.Text;
-                clienteFisico.ID_for_clienteNavigation.Numero_endereco = tbNumCasa.Text;
-                clienteFisico.ID_for_clienteNavigation.Complemento_endereco = tbComplemento.Text;
-
-                db.SaveChanges();
-
-                limpar.CleanControl(contentCPF);
-                limpar.CleanControl(Parent.Controls["searchPanel"].Controls["panelSerch"]);
             }
         }
         private void buscarCPF_Click(object sender, EventArgs e)
@@ -231,7 +247,7 @@ namespace Interface
                 TMSContext db = new();
 
                 ClienteFisico clienteFisico = db.ClienteFisico
-                    .Include(a => a.ID_for_clienteNavigation.CEP)
+                    .Include(a => a.ID_for_clienteNavigation)
                     .First(a => a.CPF == mkCPF.Text);
 
                 Cliente cliente = db.Cliente.First(a => a.ClienteFisico.CPF == clienteFisico.CPF);

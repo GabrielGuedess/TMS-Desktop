@@ -2,6 +2,8 @@
 using Interface.ModelsDB;
 using Interface.ModelsDB.TMSDataBaseContext;
 using Interface.Utilities;
+using Microsoft.EntityFrameworkCore;
+using MySqlConnector;
 using System.Data;
 
 namespace Interface
@@ -85,15 +87,12 @@ namespace Interface
 
         private void CadastrarTarifaOuTaxa_Click(object sender, EventArgs e)
         {
-            if (Type.Contains("Cadastro") && Validation.Validar(contentTarifas) && validar())
+            try
             {
-                try
+                if (Type.Contains("Cadastro") && Validation.Validar(contentTarifas) && validar())
                 {
-
                     TMSContext db = new();
-
                     string selected = string.Empty;
-
                     if (checkTaxa.Checked)
                     {
                         selected = "Taxa";
@@ -109,19 +108,13 @@ namespace Interface
                         Nome_empresa = tbNomeEmpresa.Text,
                         Tarifa_ou_taxa = selected,
                     };
-
                     db.TarifasETaxas.Add(tarifasETaxas);
-
                     db.SaveChanges();
-
                     limpar.CleanControl(contentTarifas);
                     limpar.CleanControl(searchPanel);
+
                 }
-                catch (Exception error)
-                {
-                    MessageBox.Show(error.Message);
-                }
-            }
+            
 
             if (Type.Contains("Update") && Validation.Validar(contentTarifas) && validar())
             {
@@ -154,6 +147,25 @@ namespace Interface
 
                 limpar.CleanControl(contentTarifas);
                 limpar.CleanControl(searchPanel);
+            }
+            }
+            catch (DbUpdateException erro)
+            {
+                if (typeof(MySqlException).IsInstanceOfType(erro.InnerException))
+                {
+                    MySqlException mySqlException = (MySqlException)erro.InnerException;
+                    if (MySqlErrorCode.DuplicateKeyEntry == mySqlException.ErrorCode)
+                    {
+                        string campoDuplicado = mySqlException.Message.Split("'")[3];
+                        string valorDoCampo = mySqlException.Message.Split("'")[1];
+                        MessageBox.Show($"O valor {valorDoCampo} do campo {campoDuplicado} já cadastrado."
+                            + "Adicione um valor que não estaja cadastrado");
+                    }
+                    else if (MySqlErrorCode.DatabaseAccessDenied == mySqlException.ErrorCode)
+                    {
+                        MessageBox.Show("Acesso Bloqueado");
+                    }
+                }
             }
         }
 

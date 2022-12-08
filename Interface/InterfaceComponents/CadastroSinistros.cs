@@ -3,6 +3,8 @@ using Interface.DataBaseControls;
 using Interface.ModelsDB;
 using Interface.ModelsDB.TMSDataBaseContext;
 using Interface.Utilities;
+using Microsoft.EntityFrameworkCore;
+using MySqlConnector;
 using System.Data;
 
 namespace Interface
@@ -104,55 +106,76 @@ namespace Interface
 
         private void cadastrarSinistro_Click(object sender, EventArgs e)
         {
-            idSinistro();
-
-            if (Type.Contains("Cadastro") && Validation.Validar(contentSinistros))
+            try
             {
-                try
+                idSinistro();
+
+                if (Type.Contains("Cadastro") && Validation.Validar(contentSinistros))
+                {
+                    try
+                    {
+                        TMSContext db = new();
+
+                        Sinistro sinistro = new Sinistro
+                        {
+                            ID_Sinistro = lastID,
+                            Descricao = tbDescricaoSinistro.Text,
+                            Tipo_sinistro = comboTipoSinistro.Text
+                        };
+
+                        db.Sinistro.Add(sinistro);
+                        db.SaveChanges();
+
+                        limpar.CleanControl(contentSinistros);
+                        limpar.CleanControl(searchPanel);
+
+                        lastID++;
+                        tbCod.Text = lastID.ToString();
+
+                    }
+                    catch (Exception error)
+                    {
+                        MessageBox.Show(error.Message);
+                    }
+                }
+                else if (Type.Contains("Update") && Validation.Validar(contentSinistros))
                 {
                     TMSContext db = new();
 
-                    Sinistro sinistro = new Sinistro
-                    {
-                        ID_Sinistro = lastID,
-                        Descricao = tbDescricaoSinistro.Text,
-                        Tipo_sinistro = comboTipoSinistro.Text
-                    };
+                    Sinistro sinistro = db.Sinistro.FirstOrDefault(a => a.ID_Sinistro == int.Parse(cod.Text));
 
-                    db.Sinistro.Add(sinistro);
+                    if (sinistro == null)
+                    {
+                        MessageBox.Show("Error");
+                        return;
+                    }
+
+                    sinistro.Descricao = tbDescricaoSinistro.Text;
+                    sinistro.Tipo_sinistro = comboTipoSinistro.Text;
+
                     db.SaveChanges();
 
-                   limpar.CleanControl(contentSinistros);
-                   limpar.CleanControl(searchPanel);
-
-                    lastID++;
-                    tbCod.Text = lastID.ToString();
-
-                }
-                catch (Exception error)
-                {
-                    MessageBox.Show(error.Message);
+                    limpar.CleanControl(contentSinistros);
+                    limpar.CleanControl(searchPanel);
                 }
             }
-            else if (Type.Contains("Update") && Validation.Validar(contentSinistros))
+            catch (DbUpdateException erro)
             {
-                TMSContext db = new();
-
-                Sinistro sinistro = db.Sinistro.FirstOrDefault(a => a.ID_Sinistro == int.Parse(cod.Text));
-
-                if (sinistro == null)
+                if (typeof(MySqlException).IsInstanceOfType(erro.InnerException))
                 {
-                    MessageBox.Show("Error");
-                    return;
+                    MySqlException mySqlException = (MySqlException)erro.InnerException;
+                    if (MySqlErrorCode.DuplicateKeyEntry == mySqlException.ErrorCode)
+                    {
+                        string campoDuplicado = mySqlException.Message.Split("'")[3];
+                        string valorDoCampo = mySqlException.Message.Split("'")[1];
+                        MessageBox.Show($"O valor {valorDoCampo} do campo {campoDuplicado} já cadastrado."
+                            + "Adicione um valor que não estaja cadastrado");
+                    }
+                    else if (MySqlErrorCode.DatabaseAccessDenied == mySqlException.ErrorCode)
+                    {
+                        MessageBox.Show("Acesso Bloqueado");
+                    }
                 }
-
-                sinistro.Descricao = tbDescricaoSinistro.Text;
-                sinistro.Tipo_sinistro = comboTipoSinistro.Text;
-
-                db.SaveChanges();
-
-                limpar.CleanControl(contentSinistros);
-                limpar.CleanControl(searchPanel);
             }
         }
 

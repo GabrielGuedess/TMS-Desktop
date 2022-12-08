@@ -5,6 +5,7 @@ using Interface.Properties;
 using Interface.TemplateComponents;
 using Interface.Utilities;
 using Microsoft.EntityFrameworkCore;
+using MySqlConnector;
 using System.Data;
 
 namespace Interface
@@ -81,86 +82,82 @@ namespace Interface
 
         private void cadastrarCNPJ_Click(object sender, EventArgs e)
         {
+            try { 
             List<string> notValidar = new();
             notValidar.Add(mkTelefone.Name);
             notValidar.Add(tbComplemento.Name);
 
             if (Type.Contains("Cadastro") && Validation.Validar(contentCNPJ, notValidar) && Validation.validarTelefone(mkTelefone))
             {
-                try
+
+                TMSContext db = new();
+
+                int lastID = 0;
+
+                if (db.ClienteJuridico.Count() > 0)
                 {
-                    TMSContext db = new();
-
-                    int lastID = 0;
-
-                    if (db.ClienteJuridico.Count() > 0)
-                    {
-                        lastID = db.ClienteJuridico.Max(id => id.ID_for_cliente) + 1;
-                    }
-
-                    Cliente cliente = new Cliente
-                    {
-                        ID_cliente = lastID,
-                        CEP = mkCEP.Text,
-                        Logradouro = tbLogradouro.Text,
-                        Numero_endereco = tbNumCasa.Text,
-                        Bairro = tbBairro.Text,
-                        Complemento_endereco = tbComplemento.Text,
-                        Cidade = comboCidade.Text,
-                        Tipo_cliente = "J",
-                        UF = comboUF.Text,
-                    };
-
-                    ClienteJuridico clienteJuridico = new ClienteJuridico
-                    {
-                        ID_for_cliente = lastID,
-                        Nome_fantasia = tbNomeFantasia.Text,
-                        Inscricao_estadual = mkInscricaoEstatudal.Text,
-                        Razao_social = tbRazaoSocial.Text,
-                        CNPJ = mkCNPJ.Text,
-                        ID_for_clienteNavigation = cliente
-                    };
-
-
-                    CelularCliente celular = new CelularCliente
-                    {
-                        Celular = mkCelular.Text,
-                        ID_for_cliente = lastID
-                    };
-
-                    EmailCliente email = new EmailCliente
-                    {
-                        Email = tbEmail.Text,
-                        ID_for_cliente = lastID
-                    };
-
-
-                    TelefoneCliente telefone = new TelefoneCliente
-                    {
-                        Telefone = mkTelefone.Text,
-                        ID_for_cliente = lastID
-                    };
-
-                    cliente.CelularCliente.Add(celular);
-                    cliente.EmailCliente.Add(email);
-
-                    if (mkTelefone.Text.Length > 0)
-                    {
-                        cliente.TelefoneCliente.Add(telefone);
-                    }
-
-                    db.Cliente.Add(cliente);
-                    db.ClienteJuridico.Add(clienteJuridico);
-
-                    db.SaveChanges();
-
-                    limpar.CleanControl(contentCNPJ);
-                    limpar.CleanControl(Parent.Controls["searchPanel"].Controls["panelSerch"]);
+                    lastID = db.ClienteJuridico.Max(id => id.ID_for_cliente) + 1;
                 }
-                catch (Exception error)
+
+                Cliente cliente = new Cliente
                 {
-                    MessageBox.Show(error.Message);
+                    ID_cliente = lastID,
+                    CEP = mkCEP.Text,
+                    Logradouro = tbLogradouro.Text,
+                    Numero_endereco = tbNumCasa.Text,
+                    Bairro = tbBairro.Text,
+                    Complemento_endereco = tbComplemento.Text,
+                    Cidade = comboCidade.Text,
+                    Tipo_cliente = "J",
+                    UF = comboUF.Text,
+                };
+
+                ClienteJuridico clienteJuridico = new ClienteJuridico
+                {
+                    ID_for_cliente = lastID,
+                    Nome_fantasia = tbNomeFantasia.Text,
+                    Inscricao_estadual = mkInscricaoEstatudal.Text,
+                    Razao_social = tbRazaoSocial.Text,
+                    CNPJ = mkCNPJ.Text,
+                    ID_for_clienteNavigation = cliente
+                };
+
+
+                CelularCliente celular = new CelularCliente
+                {
+                    Celular = mkCelular.Text,
+                    ID_for_cliente = lastID
+                };
+
+                EmailCliente email = new EmailCliente
+                {
+                    Email = tbEmail.Text,
+                    ID_for_cliente = lastID
+                };
+
+
+                TelefoneCliente telefone = new TelefoneCliente
+                {
+                    Telefone = mkTelefone.Text,
+                    ID_for_cliente = lastID
+                };
+
+                cliente.CelularCliente.Add(celular);
+                cliente.EmailCliente.Add(email);
+
+                if (mkTelefone.Text.Length > 0)
+                {
+                    cliente.TelefoneCliente.Add(telefone);
                 }
+
+                db.Cliente.Add(cliente);
+                db.ClienteJuridico.Add(clienteJuridico);
+
+                db.SaveChanges();
+
+                limpar.CleanControl(contentCNPJ);
+                limpar.CleanControl(Parent.Controls["searchPanel"].Controls["panelSerch"]);
+               
             }
 
             if (Type.Contains("Update") && Validation.Validar(contentCNPJ, notValidar) && Validation.validarTelefone(mkTelefone))
@@ -209,6 +206,25 @@ namespace Interface
 
                 limpar.CleanControl(contentCNPJ);
                 limpar.CleanControl(Parent.Controls["searchPanel"].Controls["panelSerch"]);
+            }
+            }
+            catch (DbUpdateException erro)
+            {
+                if (typeof(MySqlException).IsInstanceOfType(erro.InnerException))
+                {
+                    MySqlException mySqlException = (MySqlException)erro.InnerException;
+                    if (MySqlErrorCode.DuplicateKeyEntry == mySqlException.ErrorCode)
+                    {
+                        string campoDuplicado = mySqlException.Message.Split("'")[3];
+                        string valorDoCampo = mySqlException.Message.Split("'")[1];
+                        MessageBox.Show($"O valor {valorDoCampo} do campo {campoDuplicado} já cadastrado."
+                            + "Adicione um valor que não estaja cadastrado");
+                    }
+                    else if (MySqlErrorCode.DatabaseAccessDenied == mySqlException.ErrorCode)
+                    {
+                        MessageBox.Show("Acesso Bloqueado");
+                    }
+                }
             }
 
         }

@@ -6,6 +6,7 @@ using Interface.ModelsDB.TMSDataBaseContext;
 using Interface.Properties;
 using Interface.Utilities;
 using Microsoft.EntityFrameworkCore;
+using MySqlConnector;
 using System.Data;
 
 namespace Interface
@@ -107,10 +108,11 @@ namespace Interface
             List<string> notValidar = new();
             notValidar.Add(tbComplemento.Name);
             notValidar.Add(mkTelefone.Name);
-            if (Type.Contains("Cadastro") && Validation.Validar(contentMotorista, notValidar))
+            try
             {
-                try
+                if (Type.Contains("Cadastro") && Validation.Validar(contentMotorista, notValidar))
                 {
+
                     TMSContext db = new();
                     int lastID = 0;
                     if (db.Motorista.Count() > 0)
@@ -167,46 +169,62 @@ namespace Interface
                     limpar.CleanControl(contentMotorista);
                     limpar.CleanControl(searchPanel);
                 }
-                catch (Exception error)
+
+
+                else if (Type.Contains("Update") && Validation.Validar(contentMotorista, notValidar))
                 {
-                    MessageBox.Show(error.Message);
+                    TMSContext db = new();
+                    Motorista motorista = db.Motorista.Include(a => a.CelularFuncionario)
+                        .Include(a => a.TelefoneFuncionario)
+                        .Include(a => a.EmailFuncionario).FirstOrDefault(a => a.CPF == mkCPF.Text);
+                    if (motorista == null)
+                    {
+                        MessageBox.Show("Error");
+                        return;
+                    }
+                    motorista.Nome = tbNome.Text;
+                    motorista.CPF = mkCPF.Text;
+                    motorista.RG = mkRG.Text;
+                    motorista.Data_nascimento = dateNascimento.convertDateOnly();
+                    motorista.Genero = comboGenero.Text;
+                    motorista.TelefoneFuncionario.First().Telefone = mkTelefone.Text;
+                    motorista.CelularFuncionario.First().Celular = mkCelular.Text;
+                    motorista.EmailFuncionario.First().Email = tbEmail.Text;
+                    motorista.CEP = mkCEP.Text;
+                    motorista.UF = comboUF.Text;
+                    motorista.Cidade = comboCidade.Text;
+                    motorista.Bairro = tbBairro.Text;
+                    motorista.Logradouro = tbLogradouro.Text;
+                    motorista.Numero_endereco = tbNumCasa.Text;
+                    motorista.Complemento_endereco = tbComplemento.Text;
+                    motorista.Numero_endereco = tbNumCasa.Text;
+                    motorista.Vencimento_CNH = dateVencimentoCNH.convertDateOnly();
+                    motorista.Categoria_CNH = comboCNH.Text;
+                    motorista.Curso_MOPP = comboMOPP.Text;
+
+                    db.SaveChanges();
+
+                    limpar.CleanControl(contentMotorista);
+                    limpar.CleanControl(searchPanel);
                 }
             }
-            else if (Type.Contains("Update") && Validation.Validar(contentMotorista, notValidar))
+            catch (DbUpdateException erro)
             {
-                TMSContext db = new();
-                Motorista motorista = db.Motorista.Include(a => a.CelularFuncionario)
-                    .Include(a => a.TelefoneFuncionario)
-                    .Include(a => a.EmailFuncionario).FirstOrDefault(a => a.CPF == mkCPF.Text);
-                if (motorista == null)
+                if (typeof(MySqlException).IsInstanceOfType(erro.InnerException))
                 {
-                    MessageBox.Show("Error");
-                    return;
+                    MySqlException mySqlException = (MySqlException)erro.InnerException;
+                    if (MySqlErrorCode.DuplicateKeyEntry == mySqlException.ErrorCode)
+                    {
+                        string campoDuplicado = mySqlException.Message.Split("'")[3];
+                        string valorDoCampo = mySqlException.Message.Split("'")[1];
+                        MessageBox.Show($"O valor {valorDoCampo} do campo {campoDuplicado} já cadastrado."
+                            + "Adicione um valor que não estaja cadastrado");
+                    }
+                    else if (MySqlErrorCode.DatabaseAccessDenied == mySqlException.ErrorCode)
+                    {
+                        MessageBox.Show("Acesso Bloqueado");
+                    }
                 }
-                motorista.Nome = tbNome.Text;
-                motorista.CPF = mkCPF.Text;
-                motorista.RG = mkRG.Text;
-                motorista.Data_nascimento = dateNascimento.convertDateOnly();
-                motorista.Genero = comboGenero.Text;
-                motorista.TelefoneFuncionario.First().Telefone = mkTelefone.Text;
-                motorista.CelularFuncionario.First().Celular = mkCelular.Text;
-                motorista.EmailFuncionario.First().Email = tbEmail.Text;
-                motorista.CEP = mkCEP.Text;
-                motorista.UF = comboUF.Text;
-                motorista.Cidade = comboCidade.Text;
-                motorista.Bairro = tbBairro.Text;
-                motorista.Logradouro = tbLogradouro.Text;
-                motorista.Numero_endereco = tbNumCasa.Text;
-                motorista.Complemento_endereco = tbComplemento.Text;
-                motorista.Numero_endereco = tbNumCasa.Text;
-                motorista.Vencimento_CNH = dateVencimentoCNH.convertDateOnly();
-                motorista.Categoria_CNH = comboCNH.Text;
-                motorista.Curso_MOPP = comboMOPP.Text;
-
-                db.SaveChanges();
-
-                limpar.CleanControl(contentMotorista);
-                limpar.CleanControl(searchPanel);
             }
         }
 

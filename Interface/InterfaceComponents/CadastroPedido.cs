@@ -4,6 +4,7 @@ using Interface.ModelsDB.TMSDataBaseContext;
 using Interface.Properties;
 using Interface.Utilities;
 using Microsoft.EntityFrameworkCore;
+using MySqlConnector;
 
 namespace Interface.InterfaceComponents
 {
@@ -71,97 +72,119 @@ namespace Interface.InterfaceComponents
 
         private void cadastrarPedido_Click(object sender, EventArgs e)
         {
-            List<string> notValidar = new();
-            notValidar.Add(comboMercadoriasAdd.Name);
-            if (Type.Contains("Cadastro") && Validation.Validar(contentPedido, notValidar))
+            try
             {
-                PedidoCliente pedido = new();
-
-                pedido.ID_pedido = int.Parse(mkPedido.Text);
-
-                if (comboTipoCliente.SelectedIndex == 0)
+                List<string> notValidar = new();
+                notValidar.Add(comboMercadoriasAdd.Name);
+                notValidar.Add(tbComplemento.Name);
+                if (Type.Contains("Cadastro") && Validation.Validar(tableInfoPedido, notValidar))
                 {
-                    pedido.ID_for_cliente = GetClienteFisico(comboCPForCNPJCliente.Text).ID_for_cliente;
-                }
-                else if (comboTipoCliente.SelectedIndex == 1)
-                {
-                    pedido.ID_for_cliente = GetClienteJuridico(comboCPForCNPJCliente.Text).ID_for_cliente;
-                }
+                    PedidoCliente pedido = new();
 
-                pedido.CEP_destino = mkCEP.Text;
-                pedido.UF_destino = comboUF.Text;
-                pedido.Cidade_destino = comboCidade.Text;
-                pedido.Logradouro_destino = tbLogradouro.Text;
-                pedido.Numero_destino = tbNumCasa.Text;
-                pedido.Bairro_destino = tbBairro.Text;
-                pedido.Complemento_endereco = tbComplemento.Text;
+                    pedido.ID_pedido = int.Parse(mkPedido.Text);
 
-                if (mercadorias.Count > 0)
-                {
-                    foreach (var mercadoria in mercadorias)
+                    if (comboTipoCliente.SelectedIndex == 0)
                     {
-                        pedido.Mercadoria.Add(mercadoria);
+                        pedido.ID_for_cliente = GetClienteFisico(comboCPForCNPJCliente.Text).ID_for_cliente;
                     }
-                }
+                    else if (comboTipoCliente.SelectedIndex == 1)
+                    {
+                        pedido.ID_for_cliente = GetClienteJuridico(comboCPForCNPJCliente.Text).ID_for_cliente;
+                    }
 
-                else
+                    pedido.CEP_destino = mkCEP.Text;
+                    pedido.UF_destino = comboUF.Text;
+                    pedido.Cidade_destino = comboCidade.Text;
+                    pedido.Logradouro_destino = tbLogradouro.Text;
+                    pedido.Numero_destino = tbNumCasa.Text;
+                    pedido.Bairro_destino = tbBairro.Text;
+                    pedido.Complemento_endereco = tbComplemento.Text;
+
+                    if (mercadorias.Count > 0)
+                    {
+                        foreach (var mercadoria in mercadorias)
+                        {
+                            pedido.Mercadoria.Add(mercadoria);
+                        }
+                    }
+
+                    else
+                    {
+                        MessageBox.Show("É necessário cadastrar ao menos uma mercadoria");
+                        return;
+                    }
+
+                    db.PedidoCliente.Add(pedido);
+                    db.SaveChanges();
+                    limpar.CleanControl(contentPedido);
+                    mercadorias.Clear();
+                }
+                else if (Type.Contains("Update") && Validation.Validar(contentPedido))
                 {
-                    MessageBox.Show("É necessário cadastrar ao menos uma mercadoria");
-                    return;
-                }
+                    PedidoCliente pedido = db.PedidoCliente.FirstOrDefault(a => a.ID_pedido == int.Parse(mkPedido.Text));
 
-                db.PedidoCliente.Add(pedido);
-                db.SaveChanges();
-                limpar.CleanControl(contentPedido);
-                mercadorias.Clear();
+                    if (pedido == null)
+                    {
+                        MessageBox.Show("Erro no Update");
+                        return;
+                    }
+
+                    pedido.ID_pedido = int.Parse(mkPedido.Text);
+
+                    if (comboTipoCliente.SelectedIndex == 0)
+                    {
+                        pedido.ID_for_cliente = GetClienteFisico(comboCPForCNPJCliente.Text).ID_for_cliente;
+                    }
+                    else if (comboTipoCliente.SelectedIndex == 1)
+                    {
+                        pedido.ID_for_cliente = GetClienteJuridico(comboCPForCNPJCliente.Text).ID_for_cliente;
+                    }
+
+                    pedido.CEP_destino = mkCEP.Text;
+                    pedido.UF_destino = comboUF.Text;
+                    pedido.Cidade_destino = comboCidade.Text;
+                    pedido.Logradouro_destino = tbLogradouro.Text;
+                    pedido.Numero_destino = tbNumCasa.Text;
+                    pedido.Bairro_destino = tbBairro.Text;
+                    pedido.Complemento_endereco = tbComplemento.Text;
+
+                    if (mercadorias.Count > 0)
+                    {
+                        foreach (var mercadoria in mercadorias)
+                        {
+                            pedido.Mercadoria.Add(mercadoria);
+                        }
+                    }
+
+                    else
+                    {
+                        MessageBox.Show("É necessário cadastrar ao menos uma mercadoria");
+                        return;
+                    }
+
+                    db.SaveChanges();
+
+                    limpar.CleanControl(contentPedido);
+                    mercadorias.Clear();
+                }
             }
-            else if (Type.Contains("Update") && Validation.Validar(contentPedido))
+            catch (DbUpdateException erro)
             {
-                PedidoCliente pedido = db.PedidoCliente.FirstOrDefault(a => a.ID_pedido == int.Parse(mkPedido.Text));
-
-                if (pedido == null)
+                if (typeof(MySqlException).IsInstanceOfType(erro.InnerException))
                 {
-                    MessageBox.Show("Erro no Update");
-                    return;
-                }
-
-                pedido.ID_pedido = int.Parse(mkPedido.Text);
-
-                if (comboTipoCliente.SelectedIndex == 0)
-                {
-                    pedido.ID_for_cliente = GetClienteFisico(comboCPForCNPJCliente.Text).ID_for_cliente;
-                }
-                else if (comboTipoCliente.SelectedIndex == 1)
-                {
-                    pedido.ID_for_cliente = GetClienteJuridico(comboCPForCNPJCliente.Text).ID_for_cliente;
-                }
-
-                pedido.CEP_destino = mkCEP.Text;
-                pedido.UF_destino = comboUF.Text;
-                pedido.Cidade_destino = comboCidade.Text;
-                pedido.Logradouro_destino = tbLogradouro.Text;
-                pedido.Numero_destino = tbNumCasa.Text;
-                pedido.Bairro_destino = tbBairro.Text;
-                pedido.Complemento_endereco = tbComplemento.Text;
-
-                if (mercadorias.Count > 0)
-                {
-                    foreach (var mercadoria in mercadorias)
+                    MySqlException mySqlException = (MySqlException)erro.InnerException;
+                    if (MySqlErrorCode.DuplicateKeyEntry == mySqlException.ErrorCode)
                     {
-                        pedido.Mercadoria.Add(mercadoria);
+                        string campoDuplicado = mySqlException.Message.Split("'")[3];
+                        string valorDoCampo = mySqlException.Message.Split("'")[1];
+                        MessageBox.Show($"O valor {valorDoCampo} do campo {campoDuplicado} já cadastrado."
+                            + "Adicione um valor que não estaja cadastrado");
+                    }
+                    else if (MySqlErrorCode.DatabaseAccessDenied == mySqlException.ErrorCode)
+                    {
+                        MessageBox.Show("Acesso Bloqueado");
                     }
                 }
-
-                else
-                {
-                    MessageBox.Show("É necessário cadastrar ao menos uma mercadoria");
-                    return;
-                }
-
-                db.SaveChanges();
-
-                limpar.CleanControl(contentPedido);
-                mercadorias.Clear();
             }
         }
 
