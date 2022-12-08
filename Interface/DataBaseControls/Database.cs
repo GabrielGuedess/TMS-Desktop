@@ -141,6 +141,21 @@ namespace Interface.DataBaseControls
 
                         dataGridView.DataSource = dados;
                     }
+                    else if (Route!.Contains("Terceiros"))
+                    {
+                        MySqlCommand comando = new($"SELECT * FROM {mapper.TypeDataDatabase} " +
+                            $"LEFT JOIN TelefoneMotoristaTerceiro ON {mapper.TypeDataDatabase}.ID_motorista_terceiro = TelefoneMotoristaTerceiro.ID_for_motorista " +
+                            $"LEFT JOIN CelularMotoristaTerceiro ON {mapper.TypeDataDatabase}.ID_motorista_terceiro = CelularMotoristaTerceiro.ID_for_motorista " +
+                            $"LEFT JOIN EmailMotoristaTerceiro ON {mapper.TypeDataDatabase}.ID_motorista_terceiro = EmailMotoristaTerceiro.ID_for_motorista " +
+                            $"LEFT JOIN ContratoMotoristaTerceiro ON {mapper.TypeDataDatabase}.ID_motorista_terceiro = ContratoMotoristaTerceiro.ID_for_motorista " +
+                            $"LEFT JOIN VeiculoTerceiro ON {mapper.TypeDataDatabase}.ID_motorista_terceiro = VeiculoTerceiro.ID_for_motorista;", conexao);
+
+                        MySqlDataAdapter mySqlDataAdapter = new(comando);
+
+                        mySqlDataAdapter.Fill(dados);
+
+                        dataGridView.DataSource = dados;
+                    }
                     else
                     {
                         MySqlCommand comando = new($"SELECT * FROM {mapper.TypeDataDatabase}", conexao);
@@ -240,6 +255,21 @@ namespace Interface.DataBaseControls
                             $"LEFT JOIN ProcessoManutencao ON ProcessoManutencao.ID_processo_manutencao = {mapper.TypeDataDatabase}.ID_manutencao " +
                             $"LEFT JOIN Veiculo ON Veiculo.ID_veiculo = {mapper.TypeDataDatabase}.ID_for_veiculo " +
                             $"LEFT JOIN PessoaJuridica ON PessoaJuridica.Nome_fantasia = {mapper.TypeDataDatabase}.ID_for_empresa;", conexao);
+
+                        MySqlDataAdapter mySqlDataAdapter = new(comando);
+
+                        mySqlDataAdapter.Fill(dados);
+
+                        dataGridView.DataSource = dados;
+                    }
+                    else if (Route!.Contains("Terceiros"))
+                    {
+                        MySqlCommand comando = new($"SELECT * FROM {mapper.TypeDataDatabase} " +
+                            $"LEFT JOIN TelefoneMotoristaTerceiro ON {mapper.TypeDataDatabase}.ID_motorista_terceiro = TelefoneMotoristaTerceiro.ID_for_motorista " +
+                            $"LEFT JOIN CelularMotoristaTerceiro ON {mapper.TypeDataDatabase}.ID_motorista_terceiro = CelularMotoristaTerceiro.ID_for_motorista " +
+                            $"LEFT JOIN EmailMotoristaTerceiro ON {mapper.TypeDataDatabase}.ID_motorista_terceiro = EmailMotoristaTerceiro.ID_for_motorista " +
+                            $"LEFT JOIN ContratoMotoristaTerceiro ON {mapper.TypeDataDatabase}.ID_motorista_terceiro = ContratoMotoristaTerceiro.ID_for_motorista " +
+                            $"LEFT JOIN VeiculoTerceiro ON {mapper.TypeDataDatabase}.ID_motorista_terceiro = VeiculoTerceiro.ID_for_motorista;", conexao);
 
                         MySqlDataAdapter mySqlDataAdapter = new(comando);
 

@@ -9,6 +9,7 @@ using MySqlConnector;
 using System.Data;
 using System.Globalization;
 using System.Linq;
+using System.Numerics;
 
 namespace Interface
 {
@@ -54,11 +55,52 @@ namespace Interface
         {
             set
             {
-                maskCpf.Text = value["CPF"].ToString();
 
                 if (value != null)
                 {
+                    maskCpf.Text = value["CPF"].ToString();
 
+                    mkCPF.Text = value["CPF"].ToString();
+                    tbNome.Text = value["Nome"].ToString();
+                    tbRg.Text = value["RG"].ToString();
+                    dateNascimento.Text = value["Data_nascimento"].ToString();
+                    comboGenero.Text = value["Genero"].ToString();
+                    mkCelular.Text = value["Celular"].ToString();
+                    mkTelefone.Text = value["Telefone"].ToString();
+                    tbEmail.Text = value["Email"].ToString();
+                    mkCEP.Text = value["CEP"].ToString();
+                    comboUF.Text = value["UF"].ToString();
+                    tbBairro.Text = value["Bairro"].ToString();
+                    comboCidade.Text = value["Cidade"].ToString();
+                    tbLogradouro.Text = value["Logradouro"].ToString();
+                    tbComplemento.Text = value["Complemento_endereco"].ToString();
+                    tbNumCasa.Text = value["Numero_endereco"].ToString();
+                    mkCNH.Text = value["Numero_CNH"].ToString();
+                    comboCategoriaCNH.Text = value["Categoria_CNH"].ToString();
+                    dateVencimentoCNH.Text = value["Vencimento_CNH"].ToString();
+                    comboMOPP.Text = value["Curso_MOPP"].ToString();
+
+                    comboVeiculoProprio.Text = value["Veiculo_proprio"].ToString();
+                    tbPlaca.Text = value["Placa"].ToString();
+                    comboMarca.Text = value["Marca"].ToString();
+                    comboTipoVeiculo.Text = value["Tipo_veiculo"].ToString();
+                    comboModelo.Text = value["Modelo"].ToString();
+                    mkAno.Text = value["Ano_fabricao"].ToString();
+                    mkRNTRC.Text = value["Cod_RNTRC"].ToString();
+                    dateVencimentoRENTRC.Text = value["Vencimento_RNTRC"].ToString();
+                    mkRenavam.Text = value["Cod_RENAVAM"].ToString();
+                    mkCodigoCIOT.Text = value["Cod_CIOT"].ToString();
+                    tbPesoVeiculo.Text = value["Massa_modelo"].ToString();
+                    tbQuantEixos.Text = value["Eixo_modelo"].ToString();
+                    tbCapacidadePesoMax.Text = value["Capacidade_KG"].ToString();
+                    comboTipoCarroceria.Text = value["Carroceria"].ToString();
+                    tbCapacidadeVolumetrica.Text = value["Capacidade_volumetrica"].ToString();
+                    tbPesoCarroceria.Text = value["Massa_carroceria"].ToString();
+
+                    comboTipoContrato.Text = value["Tipo_contrato"].ToString();
+                    comboSituacaoContrato.Text = value["Situacao_contrato"].ToString();
+                    dateInicioAtividade.Text = value["Inicio_contrato"].ToString();
+                    dateFimAtividade.Text = value["Fim_contrato"].ToString();
                 }
             }
         }
@@ -117,7 +159,7 @@ namespace Interface
                     notValidar.Add(tbCapacidadePesoMax.Name);
                     notValidar.Add(tbCapacidadeVolumetrica.Name);
                 }
-                else if(comboTipoCarroceria.Items.Count == 0)
+                else if (comboTipoCarroceria.Items.Count == 0)
                 {
                     notValidar.Add(tbCapacidadeVolumetrica.Name);
                     notValidar.Add(tbQuantiEixosCarroceria.Name);
@@ -200,9 +242,9 @@ namespace Interface
                             Massa_modelo = tbPesoVeiculo.returnValue(),
                             Placa = tbPlaca.Text,
                             Modelo = comboModelo.Text,
-                            Vencimento_RNTRC = dateVencimentoRENTRC.convertDateOnly()                         
+                            Vencimento_RNTRC = dateVencimentoRENTRC.convertDateOnly()
                         };
-                        if(comboTipoCarroceria.Text != "" && comboTipoCarroceria.Enabled == true)
+                        if (comboTipoCarroceria.Text != "" && comboTipoCarroceria.Enabled == true)
                         {
                             veiculo.Eixo_carroceria = sbyte.Parse(tbQuantiEixosCarroceria.Text);
                             veiculo.Massa_carroceria = tbPesoCarroceria.returnValue();
@@ -412,7 +454,7 @@ namespace Interface
                     mkRenavam.Text = terceiro.VeiculoTerceiro.First().Cod_RENAVAM;
                     mkCodigoCIOT.Text = terceiro.VeiculoTerceiro.First().Cod_CIOT;
                     comboMarca.Text = terceiro.VeiculoTerceiro.First().Marca;
-                    foreach(var item in comboTipoVeiculo.Items)
+                    foreach (var item in comboTipoVeiculo.Items)
                     {
                         if (item.ToString() == terceiro.VeiculoTerceiro.First().Tipo_veiculo)
                             comboTipoVeiculo.Text = terceiro.VeiculoTerceiro.First().Tipo_veiculo;
@@ -426,11 +468,11 @@ namespace Interface
                     if (terceiro.VeiculoTerceiro.First().Carroceria != "")
                     {
                         comboTipoCarroceria.Text = terceiro.VeiculoTerceiro.First().Carroceria;
-                       
+
                         tbPesoCarroceria.Text = terceiro.VeiculoTerceiro.First().Massa_carroceria.ToString() + " Kg";
                         tbQuantiEixosCarroceria.Text = terceiro.VeiculoTerceiro.First().Eixo_carroceria.ToString();
                         tbCapacidadeVolumetrica.Text = terceiro.VeiculoTerceiro.First().Capacidade_volumetrica.ToString() + " m³";
-                       
+
                     }
                     else
                     {
@@ -542,7 +584,7 @@ namespace Interface
             comboModelo.Enabled = action;
             comboTipoCarroceria.Enabled = action;
             panelTipoVeiculo.Enabled = action;
-           
+
         }
 
         async private Task UpdateModelosAndCarroceria()
@@ -550,7 +592,7 @@ namespace Interface
 
             if (comboTipoVeiculo.Text == "")
             {
-                return; 
+                return;
             }
             TMSContext db = new();
 
@@ -561,20 +603,20 @@ namespace Interface
             {
                 comboModelo.Items.Clear();
                 List<Modelo> modelos = await db.Modelo.Where(a => a.ID_for_tipo_veiculo == tipoVeiculo.ID_tipo_veiculo && a.ID_for_marcaNavigation.Nome_marca == comboMarca.Text).ToListAsync();
-  
+
                 foreach (var modelo in modelos)
-                {       
-                     comboModelo.Items.Add(modelo.Nome);
+                {
+                    comboModelo.Items.Add(modelo.Nome);
                 }
             }
             if (comboModelo.Items.Count > 0)
             {
                 comboModelo.SelectedIndex = 0;
             }
-            
+
             if (tipoVeiculo != null)
             {
-                
+
                 if (tipoVeiculo.Possui_carroceria == 1)
                 {
                     comboTipoCarroceria.Items.Clear();
@@ -607,7 +649,7 @@ namespace Interface
             {
                 Carroceria carroceria = await getInfoCarroceria(comboTipoCarroceria.Text);
                 tbPesoCarroceria.Text = carroceria.Massa_carroceria.ToString() + " Kg";
-                tbQuantiEixosCarroceria.Text =  carroceria.Eixo_carroceria.ToString();
+                tbQuantiEixosCarroceria.Text = carroceria.Eixo_carroceria.ToString();
                 tbCapacidadeVolumetrica.Text = carroceria.Capacidade_volumetrica.ToString() + " m³";
             }
         }
@@ -644,10 +686,10 @@ namespace Interface
 
         async private void comboModelo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(comboModelo.SelectedIndex > -1)
+            if (comboModelo.SelectedIndex > -1)
             {
                 Modelo modelo = await getInfoModelo(comboModelo.Text);
-                tbCapacidadePesoMax.Text = modelo.Capacidade_KG.ToString() +" Kg";
+                tbCapacidadePesoMax.Text = modelo.Capacidade_KG.ToString() + " Kg";
                 tbQuantEixos.Text = modelo.Eixo_modelo.ToString();
                 tbPesoVeiculo.Text = modelo.Massa_modelo.ToString() + " Kg";
 
