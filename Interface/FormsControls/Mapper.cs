@@ -55,7 +55,7 @@ namespace Interface.FormsControls
             if (route.Contains("Notas"))
             {
                 TypeDataDatabase = "NotaFiscal";
-                TypeWhereDatabase = "ID_nota_fiscal";
+                TypeWhereDatabase = "Chave_acesso";
             }
 
             if (route.Contains("Tarifas"))
