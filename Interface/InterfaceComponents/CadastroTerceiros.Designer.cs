@@ -3173,6 +3173,7 @@ namespace Interface
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "CadastroTerceiros";
             this.Size = new System.Drawing.Size(975, 1800);
+            this.Enter += new System.EventHandler(this.CadastroDetTerceiros_Enter);
             this.Resize += new System.EventHandler(this.CadastroTerceiros_Resize);
             this.contentTerceiros.ResumeLayout(false);
             this.contentTerceiros.PerformLayout();

@@ -20,6 +20,13 @@ namespace Interface
 
         private string Type = "";
 
+        //serve para guadar o modelo do veiculo
+        //quando o usuario busca um terceiro para depois seta-lo
+        //no médodo UpdateModelosAndCarroceria
+        private string modeloVeiculoBusca = "";
+
+        private string carroceriaVeiculoBusca = "";
+
         public string TypeControl
         {
             set
@@ -30,6 +37,7 @@ namespace Interface
 
                 if (value.Contains("Cadastro"))
                 {
+                    
                     searchPanel.Visible = false;
                     contentTerceiros.Location = new Point(0, 0);
 
@@ -357,7 +365,7 @@ namespace Interface
 
         }
 
-        private void buscarCPF_Click(object sender, EventArgs e)
+        async private void buscarCPF_Click(object sender, EventArgs e)
         {
             if (maskCpf.MaskCompleted)
             {
@@ -370,6 +378,9 @@ namespace Interface
                     Include(a => a.EmailMotoristaTerceiro).
                     Include(a => a.VeiculoTerceiro)
                     .FirstOrDefault(a => a.CPF == maskCpf.Text);
+
+                modeloVeiculoBusca = terceiro.VeiculoTerceiro.First().Modelo;
+                carroceriaVeiculoBusca = terceiro.VeiculoTerceiro.First().Tipo_veiculo;
 
                 if (terceiro == null)
                 {
@@ -412,12 +423,17 @@ namespace Interface
                     mkRenavam.Text = terceiro.VeiculoTerceiro.First().Cod_RENAVAM;
                     mkCodigoCIOT.Text = terceiro.VeiculoTerceiro.First().Cod_CIOT;
                     comboMarca.Text = terceiro.VeiculoTerceiro.First().Marca;
-                    foreach(var item in comboTipoVeiculo.Items)
+
+ 
+                    comboTipoVeiculo.Text = terceiro.VeiculoTerceiro.First().Tipo_veiculo;
+
+                    foreach (var item in comboModelo.Items)
                     {
-                        if (item.ToString() == terceiro.VeiculoTerceiro.First().Tipo_veiculo)
-                            comboTipoVeiculo.Text = terceiro.VeiculoTerceiro.First().Tipo_veiculo;
+                        if (item.ToString() == terceiro.VeiculoTerceiro.First().Modelo)
+                            comboTipoVeiculo.Text = terceiro.VeiculoTerceiro.First().Modelo;
                     }
-                    comboTipoVeiculo.Text = terceiro.VeiculoTerceiro.First().Carroceria;
+
+
                     comboModelo.Text = terceiro.VeiculoTerceiro.First().Modelo;
                     tbPesoVeiculo.Text = terceiro.VeiculoTerceiro.First().Massa_modelo.ToString() + " Kg";
                     tbQuantEixos.Text = terceiro.VeiculoTerceiro.First().Eixo_modelo.ToString();
@@ -489,44 +505,30 @@ namespace Interface
             }
         }
 
-        private void textBoxOnlyNum_Letters3_TextChanged(object sender, EventArgs e)
+
+        async private void CadastroDetTerceiros_Enter(object sender, EventArgs e)
         {
+         
+            TMSContext db = new();
 
-        }
+            List<Marca> marcas = await db.Marca.ToListAsync();
 
-        async private void comboVeiculoProprio_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (comboVeiculoProprio.SelectedIndex == -1 || comboVeiculoProprio.SelectedIndex == 0)
+            comboMarca.Items.Clear();
+            foreach (var nomeMarca in marcas)
             {
-                disableFieldsVeiculo(false);
-                tableInfoVeiculo.Controls.Remove(panelVeiculoProprio);
-                limpar.CleanControl(tableInfoVeiculo);
-                tableInfoVeiculo.Controls.Add(panelVeiculoProprio, 0, 0);
-                tableContrato.Focus();
+                comboMarca.Items.Add(nomeMarca.Nome_marca);
             }
-            else
+
+            List<TipoVeiculo> tipoVeiculos = await db.TipoVeiculo.ToListAsync();
+
+            comboTipoVeiculo.Items.Clear();
+            foreach (var tipoVeiculo in tipoVeiculos)
             {
-                disableFieldsVeiculo(true);
-                TMSContext db = new();
-
-                List<Marca> marcas = await db.Marca.ToListAsync();
-
-                comboMarca.Items.Clear();
-                foreach (var nomeMarca in marcas)
-                {
-                    comboMarca.Items.Add(nomeMarca.Nome_marca);
-                }
-
-                List<TipoVeiculo> tipoVeiculos = await db.TipoVeiculo.ToListAsync();
-
-                comboTipoVeiculo.Items.Clear();
-                foreach (var tipoVeiculo in tipoVeiculos)
-                {
-                    comboTipoVeiculo.Items.Add(tipoVeiculo.Descricao);
-                }
-                comboMarca.SelectedIndex = -1;
-                comboTipoVeiculo.SelectedIndex = -1;
+                comboTipoVeiculo.Items.Add(tipoVeiculo.Descricao);
             }
+            comboMarca.SelectedIndex = -1;
+            comboTipoVeiculo.SelectedIndex = -1;
+            
         }
 
         private void disableFieldsVeiculo(bool action)
@@ -566,10 +568,18 @@ namespace Interface
                 {       
                      comboModelo.Items.Add(modelo.Nome);
                 }
-            }
-            if (comboModelo.Items.Count > 0)
-            {
-                comboModelo.SelectedIndex = 0;
+                if (modeloVeiculoBusca != "")
+                {
+                    foreach (var modelo in comboModelo.Items)
+                    {
+                        if (modeloVeiculoBusca == modelo.ToString())
+                        {
+                            comboModelo.Text = modelo.ToString();
+                            modeloVeiculoBusca = "";
+                            return;
+                        }
+                    }
+                }
             }
             
             if (tipoVeiculo != null)
@@ -582,6 +592,17 @@ namespace Interface
                     foreach (var item in tipoVeiculo.ID_for_carroceria.ToList())
                     {
                         comboTipoCarroceria.Items.Add(item.Descricao_carroceira);
+                    }
+                    if (carroceriaVeiculoBusca != "") {
+                        foreach (var tipo in comboTipoCarroceria.Items)
+                        {
+                            if (tipo.ToString() == carroceriaVeiculoBusca)
+                            {
+                                comboTipoCarroceria.Text = tipo.ToString();
+                                carroceriaVeiculoBusca == "";
+                                return;
+                            }
+                        }
                     }
                 }
                 else
@@ -651,6 +672,18 @@ namespace Interface
                 tbQuantEixos.Text = modelo.Eixo_modelo.ToString();
                 tbPesoVeiculo.Text = modelo.Massa_modelo.ToString() + " Kg";
 
+            }
+        }
+
+        private void comboVeiculoProprio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(comboVeiculoProprio.SelectedIndex == 0)
+            {
+                disableFieldsVeiculo(false);
+            }
+            else if(comboVeiculoProprio.SelectedIndex == 1)
+            {
+                disableFieldsVeiculo(true);
             }
         }
     }

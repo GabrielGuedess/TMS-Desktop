@@ -43,7 +43,7 @@ namespace Interface.FormsControls
             if (route.Contains("Terceiros"))
             {
                 TypeDataDatabase = "MotoristaTerceiro";
-                TypeWhereDatabase = "ID_motorista_terceiro";
+                TypeWhereDatabase = "CPF";
             }
 
             if (route.Contains("Sinistros"))

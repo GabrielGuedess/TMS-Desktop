@@ -219,7 +219,11 @@ namespace Interface
                 }
                 else
                 {
-                    MessageBox.Show($"{typeData.Text} não encontrado!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (selectOrDelete)
+                    {
+                        MessageBox.Show($"{typeData.Text} não encontrado!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    
                 }
             }
             else
